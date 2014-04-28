@@ -48,8 +48,6 @@ Related sites:
 * [Calibrating and updating XML configuration files](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Calibration)
 * [Running provided examples](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Examples)
 * [E-STOP](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ESTOP)
-* [Head Sensor](/jhu-dvrk/sawIntuitiveResearchKit/wiki/HeadSensor)
-* [Frequently Asked Questions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FAQ)
 
 ### 3.2. Advanced 
 
@@ -58,4 +56,6 @@ Related sites:
 
 ## 4. Miscellaneous
 
-[JHU DVRK Hardware Status](JHU-DVRK-Hardware-Status)
+* [Frequently Asked Questions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FAQ)
+* [Head Sensor](/jhu-dvrk/sawIntuitiveResearchKit/wiki/HeadSensor)
+* [JHU DVRK Hardware Status](JHU-DVRK-Hardware-Status)
