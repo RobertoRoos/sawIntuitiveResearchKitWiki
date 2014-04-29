@@ -42,7 +42,7 @@ sawRobotIO1394QtConsole -c sawRobotIO1394-PSM1-12345.xml
 
 This program relies on two Qt widgets, one for all the digital inputs and one for the IO per axis.
 
-[[Image(dvrk-gui-buttons.png)]]
+![Digital IO GUI](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-gui-buttons.png)
 
 The "buttons" widget shows all the digital inputs as defined in the XML configuration files.  For each button, the widget provides:
 * The digital input name which also corresponds to the IO component interface name.
@@ -50,7 +50,7 @@ The "buttons" widget shows all the digital inputs as defined in the XML configur
 * The total number of events received so far
 * Time of last event received
 
-[[Image(dvrk-gui-io.png)]]
+![Robot IO GUI](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-gui-io.png)
 
 The top sections of the IO widget are:
 * Power.  The power on the QLA boards is controlled at two levels, per board and per actuator.  You can either `Power all` to power both the boards and actuators or use `Power boards` to power the boards only.  You can then enable or disable power per actuator using the check boxes `Actuator power`.
@@ -115,7 +115,7 @@ Assuming that you have set your path correctly and you are in the directory that
 
 This program uses the IO, Buttons and PID widgets.
 
-[[Image(dvrk-gui-pid.png)]]
+![PID GUI](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-gui-pid.png)
 
 The PID Widget doesn't provide any direct access to all the IO features.   Before you enable the PID, make sure you use the IO widget to:
 * Power the boards.
@@ -153,15 +153,15 @@ The file `two-arms.json` contains a description of the different pairs (master/s
 
 The application introduces a few new widgets.   Please note that all the homing logic is implemented in the high level components so the IO and PID widgets should only be used for monitoring and debugging.   You do not need to use the IO widget to power the boards, reset the encoders or bias the current based on current feedback.   These steps are all triggered in sequence when you hit the `Home` button on the console widget.      
 
-[[Image(dvrk-gui-console-messages.png)]]
+![Console messages GUI](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-gui-console-messages.png)
 
 The console widget is a light weight widget that aggregates all the error messages from the different arms and allows to home all arms in one click.
 
-[[Image(dvrk-gui-arm.png)]]
+![Arm GUI](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-gui-arm.png)
 
 The arm widget can be used to monitor messages specific to an arm, current 3D position (you can right click on the 3D view to change the orientation widget) and timing of the underlying component (homing, kinematics, ...).
 
-[[Image(dvrk-gui-teleop.png)]]
+![Tele operation GUI](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-gui-teleop.png)
 
 ### 4.3. Instructions
 
@@ -177,4 +177,4 @@ Once the adapter is engaged, you can insert the tool.  At that point:
 
 To start the tele-operation, you will first need to push the tool down.  Since the PID controller is already running, you will need to press the `Tool clutch` button (this is the physical white button on top of the PSM, not a Qt GUI Button!).  While pressing the tool clutch button, move the tool tip down (away from the RCM).   You can now used the `enable` check box in the `MTMx-PSMy` tab to enable the tele-op controller.  If you have multiple pairs, you will have to enable in each tab (we plan to improve this soon).  Check the log messages in the first tab to make sure everything went as planned.
 
-Once the tele-operation controller is running, press the `coag` (or `mono`) foot pedal continuously with your right foot to indicate the operator's presence.  The foot pedal acts as a dead-man switch and replace the optical system used in the real daVinci system to detected the presence of the operator's head.  You can then tele-operate and use the clutch to re-position the master arms.
+Once the tele-operation controller is running, press the `coag` (or `mono`) foot pedal continuously with your right foot to indicate the operator's presence.  The foot pedal acts as a dead-man switch and replace the optical system used in the real daVinci system to detected the presence of the operator's head.  If you've added a different sensor to detect the operator you obviously don't need to use the `coag` pedal (see [Head Sensor](/jhu-dvrk/sawIntuitiveResearchKit/wiki/HeadSensor)).  You can then tele-operate and use the clutch to re-position the master arms.
