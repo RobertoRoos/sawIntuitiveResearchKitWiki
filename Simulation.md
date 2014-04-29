@@ -62,7 +62,7 @@ roslaunch irk_teleop test_teleop.launch
 
 3. Screenshot
 
-  [[Image(teleop.png, 1000px)]]
+  ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/teleop.png)
 
 ## 3. Packages details
 
@@ -73,7 +73,7 @@ roslaunch irk_teleop test_teleop.launch
 * *irk_teleop*: the irk_teleop package has teleoperation control logic and a GUI as input device, it also displays MTM and PSM end effector position. 
 
 Control diagram: 
-  [[Image(block_diagram.png, 400px)]]
+  ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/block_diagram.png)
 
 ## 6. Others
 
