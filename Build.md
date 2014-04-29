@@ -148,7 +148,7 @@ For the research kit, the basic steps are:
 
 To compile a bit faster, you can change the  `Build Settings` and add the command line option `-j4` or whatever number of core you have.
 
-[[Image(qt-creator-build-settings.png)]]
+![Build settings screenshot](/jhu-dvrk/sawIntuitiveResearchKit/wiki/qt-creator-build-settings.png)
 
 
 To run and debug programs from QtCreator, go to `Run Settings`:
@@ -156,4 +156,4 @@ To run and debug programs from QtCreator, go to `Run Settings`:
 * Add the command line options
 * Change the working directory to whatever location you have used to store your configurations file
 
-[[Image(qt-creator-run-settings.png)]]
+![Run settings screenshot](/jhu-dvrk/sawIntuitiveResearchKit/wiki/qt-creator-run-settings.png)
