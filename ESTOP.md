@@ -8,7 +8,7 @@ To enable the motor power supply, the 12V power needs to be connected to RELAY 3
 * The E-STOP provides a mechanism for the operator to shut down the system when the software or FPGA firmware fails. 
 * Relays controlled by the FPGA are serially chained, which will shut down the motor power if the FPGA power system goes down. 
 
-[[Image(estop_relay.jpg, 400px)]] 
+![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/estop_relay.jpg) 
 
 Figure 1: Controller box relay and power supply
 
@@ -18,14 +18,14 @@ Figure 1: Controller box relay and power supply
 ## 2.1. Serial Connection (WPI)
 When you receive your controllers, this should be your default setup. Each e-stop cable is made to connect two controller boxes (e.g., 1 MTM and 1 PSM). The cable has to be redone to support fewer or more controllers.
 
-[[Image(daVinci-Estop_2Controllers-1.png, 300px)]]
+![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/daVinci-Estop_2Controllers-1.png)
 
 ## 2.2. Parallel Connection (Not Recommended)
 
 The advantage is that the connection is parallel, so it can be used for any number of controller boxes. For example, the figure below shows an e-stop cable connected to two controller boxes. But, you can also use it to control just one controller box (i.e., it still works if the second connector is not used).  But, there is a **major drawback** to this wiring strategy.
 The drawback is that the 12V power supplies in the boxes will all be connected together when the QLA safety relays are closed.  It is generally not a good practice to connect power supplies, since the power supply with the highest output voltage will source all the current, until the high load current causes its output voltage to drop below the output of one of the other power supplies (note that the load current will be high because the 12V supply also provides the logic power for the FPGA boards).  Even worse, the current that flows from one box to the others all flows through the contacts of the QLA safety relay. If this current is too high, it will permanently weld the relay contacts, destroying the relay (which is not easy to replace). This has actually happened at JHU, destroying the relays on 9 QLA boards.  At JHU, the problem was exacerbated by the fact that one of the "12V" power supplies in the controller box was actually a 24V supply, so when the safety relays were closed, this power supply provided current to all controllers (thereby powering all FPGAs). But, this problem could potentially happen in systems that only have 12V supplies, since their output voltages will not be exactly equal. It is easy to test whether the relay contacts have been fused by checking continuity (it should be normally-open, so if there is continuity when the system is powered off, it has been fused).
 
-[[Image(estop_current.jpg, 400px)]]
+![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/estop_current.jpg)
 
 ## 2.3. Configurable Serial Connection (JHU)
 
@@ -40,7 +40,7 @@ Note that the GND connection is not needed for the e-stop functionality, but it 
 
 We have implemented this at JHU using mini-DIN connectors.  The female connectors are Digikey P/N CP-2140-ND (free hanging) or CP-2540-ND (panel mount). The male connector is Digikey P/N CP-2040-ND (free hanging). For the extension cable, it is possible to use an S-Video cable IF the pin carrying the 12V is cut (pin 1 in the drawing below). Otherwise, you would also connect the 12V supplies together, as in the Parallel Connection above, though at least the current would not flow through the safety relays.
 
-[[Image(estop_proposed.png, 600px)]]
+![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/estop_proposed.png)
 
 **Implementation Guide**
 
@@ -72,18 +72,24 @@ NOTE: we do recommend you order 2 more male and 2 more female connectors in case
  * Pin 2 - YELLOW  S
  * Pin 3 - GREEN  EN
  * Pin 4 - BLACK GND
-  [[Image(estop_svideo_0.jpg, 150px)]] [[Image(estop_svideo_1.jpg, 150px)]] [[Image(estop_svideo_2.jpg, 150px)]] [[Image(estop_svideo_3.jpg, 150px)]] [[Image(estop_svideo_5.jpg, 150px)]]
+
+  ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/estop_svideo_0.jpg)
+  ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/estop_svideo_1.jpg)
+  ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/estop_svideo_2.jpg)
+  ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/estop_svideo_3.jpg)
+  ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/estop_svideo_5.jpg)
+
  * Step 4: S-Video Cable. Modification on the S-Video cable is required to prevent connecting 12 V power supply. Bend pin 1 at both ends of the S-Video cable, as shown in the following figure. 
 
-[[Image(estop_svideo_cable.jpg, 150px)]]
+  ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/estop_svideo_cable.jpg)
 
 Reference: S-Video Pinout:
 
-[[Image(estop_svideo_male.png)]]
+  ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/estop_svideo_male.png)
 
 Male connector
 
-[[Image(estop_svideo_female.png)]]
+  ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/estop_svideo_female.png)
 
 Female connector
 
@@ -108,7 +114,7 @@ Connect the modified connector to the controller box you want to debug and run t
  #   - if not, check the power system physical connections
 ```
 
-[[Image(estop_bypass_one.jpg, 300px)]]  
+  ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/estop_bypass_one.jpg)
 
 
 ## 3.2. Test single controller box with QLA relays in the loop
@@ -127,7 +133,7 @@ After confirming that the power system is working, we start to add relays inside
  #   - if not, check the DEBUG section
 ```
 
-[[Image(estop_one.jpg, 300px)]]  
+![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/estop_one.jpg)
 
 **DEBUG**  
 
@@ -144,7 +150,7 @@ Assume we test board 0 first:
 1. Do a continuity test between T1 and T2. Now they should be shorted; if not, contact us. 
 REPEAT the same process for board 1. 
 
-[[Image(estop_relay_debug.png, 300px)]]  
+![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/estop_relay_debug.png)
 
 Now, you have two working relays. Please check the wire connection, make sure:
 1. they are serially connected
@@ -173,4 +179,4 @@ NOTE: when you receive your controller box, you might also have received 4 setup
 * 2 controller boxes bypassing internal relays
 * 4 controller boxes bypassing internal relays 
 
-[[Image(daVinci-Estop_2Controllers-1.png, 300px)]]  [[Image(daVinci-Estop_4Controllers-1.png, 300px)]]
+![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/daVinci-Estop_2Controllers-1.png) ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/daVinci-Estop_4Controllers-1.png)
