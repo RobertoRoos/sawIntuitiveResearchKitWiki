@@ -26,14 +26,14 @@ Notes:
 
 # 4. Setup
 
-[[Image(wiki:sawIntuitiveResearchKitTutorial/HeadSensor:dvrk-head-sensor-base.jpg, 300px)]]
-Setup option 1: base
+* Setup option 1: base
+  ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-head-sensor-base.jpg)
 
-[[Image(wiki:sawIntuitiveResearchKitTutorial/HeadSensor:dvrk-head-sensor-side.jpg, 300px)]]  
-Setup option 2: side
+* Setup option 2: side
+  ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-head-sensor-side.jpg)  
 
-[[Image(wiki:sawIntuitiveResearchKitTutorial/HeadSensor:dvrk-head-sensor-controller.jpg, 300px)]]
-Connection to controller box
+* Connection to controller box
+  ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-head-sensor-controller.jpg)
 
 #. 5 Software
  * Rerun MATLAB XML config generator to make sure the digital input is renamed "HEAD"
