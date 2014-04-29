@@ -24,11 +24,11 @@ For a specific da Vinci manipulator, Intuitive Surgical provides manipulator-spe
 
  * To make sure the board IDs are set properly, you will have to open the controller enclosures.  The board ID can be changed by turning the rotary switch with a flat head screw driver.
 
-[[Image(wiki:sawIntuitiveResearchKitTutorial/XMLConfig:board-id-selector.jpg, 400px)]]
+![Board ID selector](/jhu-dvrk/sawIntuitiveResearchKit/wiki/board-id-selector.jpg)
 
  * Looking from the front of the enclosure, the first board is on the left and the second is on the right.  While you have the enclosure open, you should check that the QLA-FPGA sets are properly connected to the dMIB on the back of the controller: first board connected to bottom connectors, second board to top connectors.
 
-[[Image(wiki:sawIntuitiveResearchKitTutorial/XMLConfig:controller-layout.jpg, 400px)]]
+![Controller layout](/jhu-dvrk/sawIntuitiveResearchKit/wiki/controller-layout.jpg)
 
  * If your configuration is unusual, you can overwrite the default IDs and specify the board IDs manually using the drop down menu to choose the board ID.  Make sure these two board IDs are different, otherwise the configuration file will not be generated. Also, if you plan to daisy chain multiple controllers, make sure you don't have two boards with the same ID on a single firewire port. 
 
@@ -38,7 +38,7 @@ For a specific da Vinci manipulator, Intuitive Surgical provides manipulator-spe
 
 1. Generate: click the generate button to generate XML configuration file. 
 
-[[Image(wiki:sawIntuitiveResearchKitTutorial:configGUI_tutorial.png, 1000px)]]
+![XML config generator screenshot](/jhu-dvrk/sawIntuitiveResearchKit/wiki/configGUI_tutorial.png)
 
 
 ## 2. Config Generator
