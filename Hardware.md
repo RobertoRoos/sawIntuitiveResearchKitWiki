@@ -12,8 +12,7 @@ Please read the unboxing instructions provided by ISI at http://research.intusur
 
 Make sure you place the wire to short the two pins as deep as possible and keep the extremities of the pins as clean as possible.   If the tip of the pins are covered with soldering, you might have issues with the electric contact when inserting the adapter.
 
-[[Image(wiki:sawIntuitiveResearchKitTutorial:modified-sterile-adapter.jpg, 300px, right, title=Modified Sterile Adapter)]]
-
+![Modified sterile adapter](/jhu-dvrk/sawIntuitiveResearchKit/wiki/modified-sterile-adapter.jpg)
 
 ### 1.2. Controllers
 
@@ -53,7 +52,7 @@ qladisp 3
 ```
 You can monitor up to two boards.  Here is a screen shot for `qladisp` using boards 0 and 1:
 
-[[Image(qladisp-2-boards.png)]]
+![Using qladisp for 2 boards](/jhu-dvrk/sawIntuitiveResearchKit/wiki/qladisp-2-boards.png)
 
 
 ### 2.3. Testing the connections
