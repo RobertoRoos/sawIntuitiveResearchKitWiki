@@ -13,13 +13,13 @@ There are three ways to run the software.  The first one is the most common, the
  * `sawIntuitiveResearchKitQtPID` -- requires several command-line parameters
  * `sawIntuitiveResearchKitQtTeleOperation` -- requires several command-line parameters
 
-1. Using the `cisstComponentManager` to process a [source:trunk/saw/applications/sawIntuitiveResearchKit/share/sawIntuitiveResearchKitQtPID.cisst script file] that creates and connects the components (requires shared libraries):
+1. Using the `cisstComponentManager` to process a [script file](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/blob/master/share/sawIntuitiveResearchKitQtPID.cisst) that creates and connects the components (requires shared libraries):
  * `cisstComponentManager -e sawIntuitiveResearchKitQtPID.cisst`
 
-1. Using Python to process a [source:trunk/saw/applications/sawIntuitiveResearchKit/share/sawIntuitiveResearchKitQtPID.py script file] that creates and connects the components (requires shared libraries and Python wrapping):
+1. Using Python to process a [script file](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/blob/master/share/sawIntuitiveResearchKitQtPID.py) that creates and connects the components (requires shared libraries and Python wrapping):
  * `python -i sawIntuitiveResearchKitQtPID.py`
 
-The latter two options require the software to be built using `shared` libraries (see CMake options). The last option also requires that cisst be built with Python support, which adds a dependency on SWIG, Python, and numpy. Note that the script files and the XML files are in the [source:trunk/saw/applications/sawIntuitiveResearchKit/share share sub-directory].
+The latter two options require the software to be built using `shared` libraries (see CMake options). The last option also requires that cisst be built with Python support, which adds a dependency on SWIG, Python, and numpy. Note that the script files and the XML files are in the https://github.com/jhu-dvrk/sawIntuitiveResearchKit/tree/master/share share sub-directory.
 
 # 2. sawRobotIO1394QtConsole
 
