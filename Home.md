@@ -51,7 +51,7 @@ Related sites:
 
 ### 3.2. Advanced 
 
-* [wiki:/sawROSTutorial Build with ROS]
+* [Build with ROS](/jhu-dvrk/dvrk-ros)
 * [Simulate MTM/PSM with ROS](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Simulation)
 
 ## 4. Miscellaneous
