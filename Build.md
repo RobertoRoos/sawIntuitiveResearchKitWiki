@@ -14,7 +14,8 @@ These instructions are specific to Ubuntu Linux.  The low level software is Linu
 * flite: for some experimental text to speech
 
 ```bash
-sudo apt-get install libxml2-dev libraw1394-dev libncurses5-dev qtcreator flite cmake-curses-gui cmake-qt-gui libopencv-dev git
+sudo apt-get install libxml2-dev libraw1394-dev libncurses5-dev qtcreator
+sudo apt-get flite cmake-curses-gui cmake-qt-gui libopencv-dev git subversion
 ```
 
 ## 2. cisst/saw
