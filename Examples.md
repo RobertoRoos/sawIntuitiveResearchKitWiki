@@ -1,11 +1,11 @@
 # 1. How to run the examples
 
 The following sections assumes that you performed every step in:
-* [https://github.com/jhu-cisst/mechatronics-software/wiki/Development-Environment Setting up development environment]
-* [wiki:/sawIntuitiveResearchKitTutorial/Build Software build instructions]
-* [wiki:/sawIntuitiveResearchKitTutorial/XMLConfig Generating XML configuration files]
-* [wiki:/sawIntuitiveResearchKitTutorial/Hardware Hardware setup and testing]
-* [wiki:/sawIntuitiveResearchKitTutorial/Calibration Calibrating and updating XML configuration files]
+* [Setting up development environment](https://github.com/jhu-cisst/mechatronics-software/wiki/Development-Environment)
+* [Software build instructions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Build)
+* [Generating XML configuration files](/jhu-dvrk/sawIntuitiveResearchKit/wiki/XMLConfig)
+* [Hardware setup and testing](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Hardware)
+* [Calibrating and updating XML configuration files](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Calibration)
 
 There are three ways to run the software.  The first one is the most common, the later two are script based:
 
@@ -33,7 +33,7 @@ sawRobotIO1394QtConsole:
  -n <value>, --name <value> : robot name (optional)
 ```
 
-The only required parameter is the `sawRobotIO1394` XML configuration file generated from the `.cal` file provided by Intuitive Surgical Inc and updated using the different calibration procedures in [wiki:/sawIntuitiveResearchKitTutorial/Calibration Calibrating and updating XML configuration files].  Assuming that you have set your path correctly and you are in the directory that contains your configuration file, you can start the program using something like:
+The only required parameter is the `sawRobotIO1394` XML configuration file generated from the `.cal` file provided by Intuitive Surgical Inc and updated using the different calibration procedures in [Calibrating and updating XML configuration files](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Calibration).  Assuming that you have set your path correctly and you are in the directory that contains your configuration file, you can start the program using something like:
 ```
 sawRobotIO1394QtConsole -c sawRobotIO1394-PSM1-12345.xml
 ```
@@ -70,7 +70,7 @@ The top sections of the IO widget are:
 1. PSM buttons.  There are 4 digital inputs configured per PSM arm:
  * `SUJClutch`.  White button on side of top horizontal link.
  * `ManipClutch`.  White button on top of vertical link (translation for tool insertion)
- * `Adapter`.  Triggered when the sterile adapter is engaged or removed.  Make sure you have shorted the two first pins as described in [wiki:/sawIntuitiveResearchKitTutorial/Hardware#a1.2Sterileadapter]
+ * `Adapter`.  Triggered when the sterile adapter is engaged or removed.  Make sure you have shorted the two first pins as described in [the hardware page](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Hardware)
  * `Tool`.  Triggered when the tool is inserted or removed.   Please note that the tool can NOT be inserted until the sterile adapter's gears are matched with the arm's gears.   DO NOT force the tool in the sterile adapter!
 
 ## 2.4. Testing sensors
@@ -90,7 +90,7 @@ The top sections of the IO widget are:
 
 Once everything has been checked all the sensors, you can power the controllers.  When you hit "Power/ Enable all", all the power indicators on the Qt widget should turn green.   Please keep an eye on the current feedback and a hand on the e-stop button.  There is a couple more things to check:
 1. Check the box "Current - Direct control".  This allows you to use the IO Widget to set the required currents.
-1. You should see all current feedback values hovering close to zero.  If not, you might have to redo the current calibration as described in [wiki:/sawIntuitiveResearchKitTutorial/Calibration Calibrating and updating XML configuration files].
+1. You should see all current feedback values hovering close to zero.  If not, you might have to redo the current calibration as described in [Calibrating and updating XML configuration files](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Calibration).
 1. Joint by joint, apply a very small current (in GUI request current), something in the order of 100 mA.   You should feel a torque/force on the arm AND the current feedback should match the requested current value.  Make sure each joint moves in the correct direction, i.e. if you apply a positive current the joint position increases and if you apply a negative current the joint position decreases.
 
 # 3. sawIntuitiveResearchKitQtPID
