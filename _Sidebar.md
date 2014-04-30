@@ -11,7 +11,7 @@ Getting Started
 * [E-STOP](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ESTOP)
 
 Advanced 
-* [wiki:/sawROSTutorial Build with ROS]
+* [Build with ROS](/jhu-dvrk/dvrk-ros)
 * [Simulation with ROS](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Simulation)
 
 Miscellaneous
