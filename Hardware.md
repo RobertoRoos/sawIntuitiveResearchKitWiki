@@ -18,7 +18,7 @@ Make sure you place the wire to short the two pins as deep as possible and keep 
 
 1. There are two types of controllers, MTM (Master Manipulators) and PSM (Patient Side Manipulator).  It is important not to mix them as the Master controllers use a 24V power supply for the first 4 actuators and a 12V power supply for the last 3 actuators while the Slave controllers use a 24V power supply for all 7 actuators.  You can verify which one is which by opening the controllers.
 
-1. We strongly recommend to label the controllers with the name of the arm you plan to control along with the board IDs.   The board IDs should follow the convention described in the [wiki:/sawIntuitiveResearchKitTutorial/XMLConfig XML configuration page].   Each controller contains two sets of boards.    Each set is composed of a lower board (aka QLA for quad linear amps) and the upper board (FPGA + firewire connections).   The upper board (FPGA) has a rotary dial to set the board ID.   Using a small screw driver you can change the Id for each board. For example, the controller dedicated to the MTM Right should have a label with:
+1. We strongly recommend to label the controllers with the name of the arm you plan to control along with the board IDs.   The board IDs should follow the convention described in the [XML configuration page](/jhu-dvrk/sawIntuitiveResearchKit/wiki/XMLConfig).   Each controller contains two sets of boards.    Each set is composed of a lower board (aka QLA for quad linear amps) and the upper board (FPGA + firewire connections).   The upper board (FPGA) has a rotary dial to set the board ID.   Using a small screw driver you can change the Id for each board. For example, the controller dedicated to the MTM Right should have a label with:
 
   ```
   MTMR (board IDs 2 - 3) 
@@ -42,7 +42,7 @@ For the Rev 1 controllers, there is a minor issue with the controllers and power
 
 ### 2.2. Testing with `qladisp`
 
-To test the firewire connections, the simplest solution is to use the command line tool `qladisp`.   Assuming that you have built [wiki:sawIntuitiveResearchKitTutorial/Build the software], `qladisp` can be found in the cisst build tree, subdirectory `build/bin`.  The program requires one or more board IDs.  The user can optionally specify a port number:
+To test the firewire connections, the simplest solution is to use the command line tool `qladisp`.   Assuming that you have [built the software](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Build), `qladisp` can be found in the cisst build tree, subdirectory `build/bin`.  The program requires one or more board IDs.  The user can optionally specify a port number:
 ```
 qladisp b1 [b2] [-pP]
 ```
@@ -123,11 +123,11 @@ Pressing buttons and inserting sterile adapter or tool:
 
 ***NOTE:*** you should perform these tests with the arms unplugged.
 
-***NOTE*** To test individual board, you need to bypass relay, FOLLOW instruction on the [wiki:sawIntuitiveResearchKitTutorial/ESTOP#a3Debugging ESTOP] page.
+***NOTE*** To test individual board, you need to bypass relay, FOLLOW instruction on the [ESTOP](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ESTOP) page.
 
-Motor power can be disabled by hardware interlocks (relays, e-stop) or by software, so it is necessary to first inspect the hardware setup. Specifically, the e-stop cable harness is usually designed to daisy-chain the safety circuit between multiple controllers. Thus, if you wish to individually test controllers, you may need to temporarily modify your e-stop cable harness. See [wiki:sawIntuitiveResearchKitTutorial/ESTOP this page] for further instructions.
+Motor power can be disabled by hardware interlocks (relays, e-stop) or by software, so it is necessary to first inspect the hardware setup. Specifically, the e-stop cable harness is usually designed to daisy-chain the safety circuit between multiple controllers. Thus, if you wish to individually test controllers, you may need to temporarily modify your e-stop cable harness. See [this page](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ESTOP) for further instructions.
 
-Once the e-stop cable harness is suitably modified, the simplest solution is to use the QLA utility `qladisp` ([https://github.com/jhu-cisst/mechatronics-software/wiki/Example-Programs Mechatronics Examples]) for each board on your hardware and try to enable/disable power(press `p` key) with and without your wired E-stop engaged.
+Once the e-stop cable harness is suitably modified, the simplest solution is to use the QLA utility `qladisp` ([Mechatronics Examples](https://github.com/jhu-cisst/mechatronics-software/wiki/Example-Programs)) for each board on your hardware and try to enable/disable power(press `p` key) with and without your wired E-stop engaged.
 
 * When the power is ON you should have:
  * `MV` LED should be green (MV stands for motor voltage)
@@ -135,4 +135,4 @@ Once the e-stop cable harness is suitably modified, the simplest solution is to 
 
 ## 4. Testing your XML configuration files
 
-Once you have checked the overall hardware, you can [wiki:/sawIntuitiveResearchKitTutorial/Calibration calibrate and update XML configuration files].  To test the configuration files, please use the example `sawRobotIO1394QtConsole` as described in the [wiki:/sawIntuitiveResearchKitTutorial/Examples examples page].
+Once you have checked the overall hardware, you can [wiki:/sawIntuitiveResearchKitTutorial/Calibration calibrate and update XML configuration files].  To test the configuration files, please use the example `sawRobotIO1394QtConsole` as described in the [examples page](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Examples).
