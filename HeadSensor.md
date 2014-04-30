@@ -15,10 +15,11 @@ The page documents how to make a head sensor for da Vinci Research Kit.  The goa
 
 # 3. Wiring
 
-| Senor | Cable | Controller (J18)     |
-| VIN   | Red   | Pin 8 (VCC-CON-A 5V) |
-| GND   | White | Pin 6 (GND)          |
-| OUT   |Yellow | Pin 7 (HOME4)        |
+| Sensor | Cable | Controller (J18)     |
+|--------|-------|----------------------|
+| VIN    | Red   | Pin 8 (VCC-CON-A 5V) |
+| GND    | White | Pin 6 (GND)          |
+| OUT    |Yellow | Pin 7 (HOME4)        |
 
 Notes:
 * J18 is a 15-pin connector labelled DOF 4 on the back of the dVRK controller
@@ -27,12 +28,15 @@ Notes:
 # 4. Setup
 
 * Setup option 1: base
+
   ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-head-sensor-base.jpg)
 
 * Setup option 2: side
+
   ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-head-sensor-side.jpg)  
 
 * Connection to controller box
+
   ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-head-sensor-controller.jpg)
 
 #. 5 Software
