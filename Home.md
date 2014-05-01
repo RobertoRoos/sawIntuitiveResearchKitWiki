@@ -8,7 +8,7 @@ https://github.com/jhu-cisst/mechatronics-firmware/wiki/FPGA-Program
 
 ![Controller with Patient Side Manipulators (PSMs)](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ControllerWithPSM.jpg)
 
-The sawIntuitiveResearchKit folder provides several example applications for controlling the Research Kit for da Vinci System using the [mechatronics:wiki IEEE-1394 (Firewire) controller]. The picture to the right shows two Controllers connected to two da Vinci Patient Side Manipulators (PSMs) at Worcester Polytechnic Institute (WPI).
+The sawIntuitiveResearchKit folder provides several example applications for controlling the Research Kit for da Vinci System using the [IEEE-1394 (Firewire) controller](http://jhu-cisst.github.io/mechatronics/). The picture to the right shows two Controllers connected to two da Vinci Patient Side Manipulators (PSMs) at Worcester Polytechnic Institute (WPI).
 
 The software applications use some or all of the following SAW components:
 * mtsRobotIO1394 (sawRobotIO1394 folder) - interface to IEEE-1394 (Firewire) controller boards
