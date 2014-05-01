@@ -8,7 +8,7 @@ Getting Started
 * [Hardware setup](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Hardware)
 * [Calibration](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Calibration)
 * [Examples](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Examples)
-* [E-STOP](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ESTOP)
+* [E-STOP wiring](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ESTOP)
 
 Advanced 
 * [Build with ROS](/jhu-dvrk/dvrk-ros)
