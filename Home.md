@@ -5,11 +5,11 @@
 - [sawIntuitiveResearchKit Documentation](#sawintuitiveresearchkit-documentation)
 - [**Firmware**](#firmware)
 - [1. Introduction](#1-introduction)
-  - [2. Updates](#2-updates)
-  - [3. Tutorials](#3-tutorials)
-    - [3.1. Getting Started](#31-getting-started)
-    - [3.2. Advanced](#32-advanced)
-  - [4. Miscellaneous](#4-miscellaneous)
+- [2. Updates](#2-updates)
+- [3. Tutorials](#3-tutorials)
+  - [3.1. Getting Started](#31-getting-started)
+  - [3.2. Advanced](#32-advanced)
+- [4. Miscellaneous](#4-miscellaneous)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -47,14 +47,14 @@ Related sites:
 * Video introduction on YouTube http://www.youtube.com/watch?v=0n_9CgNSx6Y
 * [Google map](https://mapsengine.google.com/map/embed?mid=z14AfgTT1a9w.ktOc3SMAsVF4) with current and future sites 
 
-## 2. Updates
+# 2. Updates
 
 * *May 2013*: Initial Public Release
 * *April 2014*: Moved to GitHub
 
-## 3. Tutorials
+# 3. Tutorials
 
-### 3.1. Getting Started
+## 3.1. Getting Started
 
 * [First Steps](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FirstSteps)
 * [Setting up development environment](/jhu-cisst/mechatronics-software/wiki/Development-Environment)
@@ -65,12 +65,12 @@ Related sites:
 * [Running provided examples](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Examples)
 * [E-STOP wiring](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ESTOP)
 
-### 3.2. Advanced 
+## 3.2. Advanced 
 
 * [Build with ROS](/jhu-dvrk/dvrk-ros)
 * [Simulate MTM/PSM with ROS](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Simulation)
 
-## 4. Miscellaneous
+# 4. Miscellaneous
 
 * [Frequently Asked Questions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FAQ)
 * [Head Sensor](/jhu-dvrk/sawIntuitiveResearchKit/wiki/HeadSensor)
