@@ -1,3 +1,19 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+
+- [1. General Info](#1-general-info)
+- [2. E-STOP Setup](#2-e-stop-setup)
+  - [2.1. Serial Connection (WPI)](#21-serial-connection-wpi)
+  - [2.2. Parallel Connection (Not Recommended)](#22-parallel-connection-not-recommended)
+  - [2.3. Configurable Serial Connection (JHU)](#23-configurable-serial-connection-jhu)
+- [3. Debugging](#3-debugging)
+  - [3.1. Test single FPGA-QLA board set (bypassing relays on QLA boards)](#31-test-single-fpga-qla-board-set-bypassing-relays-on-qla-boards)
+  - [3.2. Test single controller box with QLA relays in the loop](#32-test-single-controller-box-with-qla-relays-in-the-loop)
+  - [3.3. Test full system](#33-test-full-system)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # 1. General Info
 
 Each controller box contains 3 relays, as shown in Figure 1: 

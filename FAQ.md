@@ -1,3 +1,21 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+
+- [What does ISI, Classic, S, Si, PSM, MTM, ECM, SUJ, HSRV, ... mean?](#what-does-isi-classic-s-si-psm-mtm-ecm-suj-hsrv--mean)
+- [What does QLA-FPGA, qladisp, ... mean?](#what-does-qla-fpga-qladisp--mean)
+- [What PC configuration do you suggest?](#what-pc-configuration-do-you-suggest)
+- [The PSMs aren't moving](#the-psms-arent-moving)
+- [All signals freeze for a couple seconds](#all-signals-freeze-for-a-couple-seconds)
+- [Some intermittent signals](#some-intermittent-signals)
+- [Power Issue](#power-issue)
+- [Firewire Connection](#firewire-connection)
+  - [Symptom](#symptom)
+  - [Firewire Cables](#firewire-cables)
+- [I plugged my PC to the stereo display but I get no image?](#i-plugged-my-pc-to-the-stereo-display-but-i-get-no-image)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## What does ISI, Classic, S, Si, PSM, MTM, ECM, SUJ, HSRV, ... mean?
 
 Some ISI acronyms:

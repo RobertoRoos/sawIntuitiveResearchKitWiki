@@ -1,3 +1,16 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+
+- [1. Calibration](#1-calibration)
+- [2. Current offsets](#2-current-offsets)
+  - [2.1. Introduction](#21-introduction)
+  - [2.2. Procedure](#22-procedure)
+  - [+-+++++----++++++++++-----------------------------------------------------------------------------------------------------------](#----------------------------------------------------------------------------------------------------------------)
+  - [--------------------------------------------------------------------------------------------------------------------------------](#--------------------------------------------------------------------------------------------------------------------------------)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # 1. Calibration
 
 The following sections assumes that you performed every step in: 

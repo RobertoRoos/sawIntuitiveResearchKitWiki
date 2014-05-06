@@ -1,3 +1,15 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+
+- [Hardware setup and testing](#hardware-setup-and-testing)
+  - [1. Unboxing](#1-unboxing)
+    - [1.1. Arms](#11-arms)
+    - [1.2. Sterile adapter](#12-sterile-adapter)
+    - [1.2. Controllers](#12-controllers)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Hardware setup and testing
 
 ## 1. Unboxing

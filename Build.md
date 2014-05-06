@@ -1,3 +1,24 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+
+- [Building the software](#building-the-software)
+  - [1. Dependencies](#1-dependencies)
+  - [2. cisst/saw](#2-cisstsaw)
+    - [2.1. Automatic build](#21-automatic-build)
+    - [2.2. Manual build](#22-manual-build)
+- [create folder: here we use ~/dev/cisst](#create-folder-here-we-use-~devcisst)
+- [create source & build directories](#create-source-&-build-directories)
+- [go to build dir](#go-to-build-dir)
+- [set cmake settings](#set-cmake-settings)
+  - [3. Compile in Release mode.](#3-compile-in-release-mode)
+  - [4. Setting up some environment variables](#4-setting-up-some-environment-variables)
+  - [5. Using Qt Creator](#5-using-qt-creator)
+    - [5.1. Step by step instructions](#51-step-by-step-instructions)
+    - [5.2. Settings](#52-settings)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Building the software
 
 These instructions are specific to Ubuntu Linux.  The low level software is Linux specific (i.e. it won't run on other OSs) but should run on any Linux distribution.  High level components (all but `sawRobotIO1394`) can be compiled on Linux, Windows, MacOS and used in separate processes using cisstMultiTask with ICE.

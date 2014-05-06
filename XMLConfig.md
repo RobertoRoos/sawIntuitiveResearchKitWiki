@@ -1,3 +1,13 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+
+- [XML configuration file](#xml-configuration-file)
+  - [1. How to generate XML configuration file](#1-how-to-generate-xml-configuration-file)
+  - [2. Config Generator](#2-config-generator)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # XML configuration file
 
 The software requires XML files with configuration parameters for the various manipulators.

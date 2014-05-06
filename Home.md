@@ -1,3 +1,18 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+
+- [sawIntuitiveResearchKit Documentation](#sawintuitiveresearchkit-documentation)
+- [**Firmware**](#firmware)
+- [1. Introduction](#1-introduction)
+  - [2. Updates](#2-updates)
+  - [3. Tutorials](#3-tutorials)
+    - [3.1. Getting Started](#31-getting-started)
+    - [3.2. Advanced](#32-advanced)
+  - [4. Miscellaneous](#4-miscellaneous)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # sawIntuitiveResearchKit Documentation
 
 # **Firmware**

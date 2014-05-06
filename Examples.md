@@ -1,3 +1,24 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+
+- [1. How to run the examples](#1-how-to-run-the-examples)
+- [2. sawRobotIO1394QtConsole](#2-sawrobotio1394qtconsole)
+  - [2.1. Usage](#21-usage)
+  - [2.2. Widgets](#22-widgets)
+  - [2.3. Testing the digital inputs](#23-testing-the-digital-inputs)
+  - [2.4. Testing sensors](#24-testing-sensors)
+  - [2.5. Testing motor current](#25-testing-motor-current)
+- [3. sawIntuitiveResearchKitQtPID](#3-sawintuitiveresearchkitqtpid)
+  - [3.1. Usage](#31-usage)
+  - [3.2. Widgets](#32-widgets)
+- [4. sawIntuitiveResearchKitQtTeleOperationJSON](#4-sawintuitiveresearchkitqtteleoperationjson)
+  - [4.1. Usage](#41-usage)
+  - [4.2. Widgets](#42-widgets)
+    - [4.3. Instructions](#43-instructions)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # 1. How to run the examples
 
 The following sections assumes that you performed every step in:
