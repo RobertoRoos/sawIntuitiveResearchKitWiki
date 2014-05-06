@@ -6,7 +6,7 @@
 - [2. Hardware](#2-hardware)
 - [3. Wiring](#3-wiring)
 - [4. Setup](#4-setup)
-- [. 5 Software](#-5-software)
+- [5. Software](#5-software)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -51,6 +51,6 @@ Notes:
 
   ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-head-sensor-controller.jpg)
 
-#. 5 Software
+# 5. Software
  * Rerun MATLAB XML config generator to make sure the digital input is renamed "HEAD"
  * Update JSON config file to set the presence sensor

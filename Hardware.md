@@ -7,6 +7,13 @@
     - [1.1. Arms](#11-arms)
     - [1.2. Sterile adapter](#12-sterile-adapter)
     - [1.2. Controllers](#12-controllers)
+  - [2. Firewire](#2-firewire)
+    - [2.1. FPGA Power](#21-fpga-power)
+    - [2.2. Testing with `qladisp`](#22-testing-with-qladisp)
+    - [2.3. Testing the connections](#23-testing-the-connections)
+    - [2.4. Testing the digital inputs using `qladisp`](#24-testing-the-digital-inputs-using-qladisp)
+  - [3. Motor Power](#3-motor-power)
+  - [4. Testing your XML configuration files](#4-testing-your-xml-configuration-files)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -34,7 +41,7 @@ Make sure you place the wire to short the two pins as deep as possible and keep 
 
   ```
   MTMR (board IDs 2 - 3) 
-```
+  ```
 
 1. When you will first unbox the controllers, check the internal connections.  If you find a cable with a loose end or partially unplugged you'll have to plug it back.
 
@@ -48,20 +55,26 @@ Make sure you place the wire to short the two pins as deep as possible and keep 
 ### 2.1. FPGA Power
 
 For the Rev 1 controllers, there is a minor issue with the controllers and power provided via the Firewire cable.  If there are too many controllers on the daisy chain, there won't be enough power the FPGA boards properly and they might get stuck in an unstable state.  This is due to the fact that the Rev 1.1 FPGA boards (inside the Rev 1 controller box) can obtain power from the 6-pin Firewire cable or from its internal power supply -- specifically, the boards will use whichever voltage is higher. If the Firewire cable is connected to a box that is switched off, the FPGA boards will draw power from the PC via the Firewire cable.  This problem does not occur with the Rev 2 controllers, which contain Rev 1.2 FPGA boards, because those boards have a jumper (J10) to enable/disable power from  the 6-pin Firewire connector. By default, this jumper is not installed, so the FPGA boards cannot obtain power from the Firewire cable.
+
 * For the Rev 1 controllers, if you are using a 6 pin firewire A cable, we strongly recommend to unplug the firewire cable from the PC, power on the controllers and then re-plug the firewire cable on the PC.  This way, the controllers start using their own power supplies.
+
 * If you are using a 4 pin firewire A cable (this is often the case on PC laptops), you won't have any issue since these cables don't provide power over firewire.
+
 * This is also not an issue with the Rev 2 controllers, unless you install jumper J10 on the FPGA boards.
 
 ### 2.2. Testing with `qladisp`
 
 To test the firewire connections, the simplest solution is to use the command line tool `qladisp`.   Assuming that you have [built the software](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Build), `qladisp` can be found in the cisst build tree, subdirectory `build/bin`.  The program requires one or more board IDs.  The user can optionally specify a port number:
-```
-qladisp b1 [b2] [-pP]
-```
+
+  ```
+  qladisp b1 [b2] [-pP]
+  ```
+
 For example, to display basic informations related to the board with Id 3 on firewire port 0, launch:
-```
-qladisp 3
-```
+
+  ```
+  qladisp 3
+  ```
 You can monitor up to two boards.  Here is a screen shot for `qladisp` using boards 0 and 1:
 
 ![Using qladisp for 2 boards](/jhu-dvrk/sawIntuitiveResearchKit/wiki/qladisp-2-boards.png)
@@ -95,18 +108,22 @@ The simplest way to test these inputs is to use qladisp and make sure all digita
 
 On the master side, all inputs are related to the foot pedal so only one of the controllers will display any information:
 using if the foot pedal is connected to MTMR controller:
-```
-qladisp 2 3
-```
+
+  ```
+  qladisp 2 3
+  ```
+
 If the foot pedal is connected to MTML controller:
-```
-qladisp 0 1
-```
+
+  ```
+  qladisp 0 1
+  ```
 
 You should have the following default values (no pedal pressed)
-```
+
+  ```
   NegLim1: 0xF  PosLim1: 0xF  Home1: 0xF  NegLim2: 0x7  PosLim2: 0xF  Home2: 0xF
-```
+  ```
 
 Pressing foot pedal:
 * Clutch -> Home2: 0xE
@@ -116,14 +133,16 @@ Pressing foot pedal:
 * Coag -> Home2: 0x7 (note COAG is sometimes labeled "Mono", first pedal on the right)
 
 For the PSM:
-```
-qladisp 6 7
-```
+
+  ```
+  qladisp 6 7
+  ```
 
 You should have the following default values (no button pressed, no sterile adapter, no tool, ...)
-```
-NegLim1: 0xF  PosLim1: 0xF  Home1: 0xD  NegLim2: 0x7  PosLim2: 0xF  Home2: 0xF
-```
+
+  ```
+  NegLim1: 0xF  PosLim1: 0xF  Home1: 0xD  NegLim2: 0x7  PosLim2: 0xF  Home2: 0xF
+  ```
 
 Pressing buttons and inserting sterile adapter or tool:
 * SUJ clutch button (white button horizontal bar on the side) -> Home1: 0xE

@@ -7,10 +7,6 @@
   - [2. cisst/saw](#2-cisstsaw)
     - [2.1. Automatic build](#21-automatic-build)
     - [2.2. Manual build](#22-manual-build)
-- [create folder: here we use ~/dev/cisst](#create-folder-here-we-use-~devcisst)
-- [create source & build directories](#create-source-&-build-directories)
-- [go to build dir](#go-to-build-dir)
-- [set cmake settings](#set-cmake-settings)
   - [3. Compile in Release mode.](#3-compile-in-release-mode)
   - [4. Setting up some environment variables](#4-setting-up-some-environment-variables)
   - [5. Using Qt Creator](#5-using-qt-creator)
@@ -59,16 +55,17 @@ Essentially, the `autocisst.sh` file performs all the steps described in the man
 
 ### 2.1. Automatic build
 
-To use autocisst.sh to automatically download and build the cisst library and sawIntuitiveResearchKit, please create a directory for the library, download the script file and run the script. 
-```bash
-# create folder: here we use ~/dev/cisst 
-mkdir -p ~/dev/cisst
-cd ~/dev/cisst
-# download autocisst.sh
-wget https://raw.githubusercontent.com/jhu-dvrk/sawIntuitiveResearchKit/master/share/autocisst.sh
-# run script 
-bash ./autocisst.sh
-```
+To use autocisst.sh to automatically download and build the cisst library and sawIntuitiveResearchKit, please create a directory for the library, download the script file and run the script.
+
+  ```bash
+  # create folder: here we use ~/dev/cisst 
+  mkdir -p ~/dev/cisst
+  cd ~/dev/cisst
+  # download autocisst.sh
+  wget https://raw.githubusercontent.com/jhu-dvrk/sawIntuitiveResearchKit/master/share/autocisst.sh
+  # run script 
+  bash ./autocisst.sh
+  ```
 
 Now under the `~/dev/cisst directory`, there are three folders: `cisst-saw`, `cisstNetlib-Linux` and `build`. If you have `sawIntuitiveResearchKitQtPID` under the `build/bin directory`, the build is successful. 
 
@@ -79,25 +76,27 @@ These instructions allow you to go step by step if you are running into issues w
 1. Create folder, source, build
 
   ```bash 
-# create folder: here we use ~/dev/cisst 
-mkdir -p ~/dev/cisst
-cd ~/dev/cisst
-# create source & build directories
-mkdir build
+  # create folder: here we use ~/dev/cisst 
+  mkdir -p ~/dev/cisst
+  cd ~/dev/cisst
+  # create source & build directories
+  mkdir build
   ```
 2. Check out code
 
   ```bash
-git clone https://github.com/jhu-cisst/cisst-saw.git --recursive
+  git clone https://github.com/jhu-cisst/cisst-saw.git --recursive
   ```
+
 3. CMake and build
 
   ```bash
-# go to build dir 
-cd build
-# set cmake settings
-ccmake ../cisst-saw
+  # go to build dir 
+  cd build
+  # set cmake settings
+  ccmake ../cisst-saw
   ```
+
 4. CMake settings
   * Type `[c]` to configure and check error
   * Press `[e]` to exit messages view
@@ -118,30 +117,37 @@ ccmake ../cisst-saw
   * Type `[g]` to generate
 
 Once you're done with the CMake configuration, you can now compile the code using the command line:
-```bash
-make -j4 -l
-```
+
+  ```bash
+  make -j4 -l
+  ```
+
 The number 4 corresponds to the number of parallel compilations, replace it by whatever number of cores you have to compile faster.
 
 ## 3. Compile in Release mode.
 
 Compiling in Release mode can greatly improve performances.  To make sure your build is configured to use the Release mode (telling the compiler to optimize the code), go to your build directory and start CMake using:
-```bash
-   cmake -gui .
-```
+
+  ```bash
+  cmake -gui .
+  ```
+
 Alternatively, you can also use the CMake text based program using:
-```bash
-   ccmake .
-```
+
+  ```bash
+  ccmake .
+  ```
 Once CMake is started, look for the variable `CMAKE_BUILD_TYPE` and make sure it is set to `Release`.  By default, the variable is empty.
 
 
 ## 4. Setting up some environment variables
 
-cisst/saw uses a few environment variables, standard ones such as `PATH` (see http://www.linfo.org/path_env_var.html) and `LD_LIBRARY_PATH` (see http://tldp.org/HOWTO/Program-Library-HOWTO/shared-libraries.html).  To simplify the user's life, we provide scripts to set these environment variables based on individual setups.   To set your environment variables with `bash`, go in your build tree and type:
-```bash
-    . cisst/cisstvars.sh
-```
+cisst/saw uses a few environment variables, standard ones such as `PATH` (see http://www.linfo.org/path_env_var.html) and `LD_LIBRARY_PATH` (see http://tldp.org/HOWTO/Program-Library-HOWTO/shared-libraries.html).  To simplify the user's life, we provide scripts to set these environment variables based on individual setups.  To set your environment variables with `bash`, go in your build tree and type:
+
+  ```bash
+  . cisst/cisstvars.sh
+  ```
+
 Notes:
 
 * The environment variables are set per shell, i.e. if you open a new terminal, you need to "source" the `cisstvars.sh` script again.
