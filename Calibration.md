@@ -15,8 +15,8 @@
 # 1. Calibration
 
 The following sections assumes that you performed every step in: 
-* [wiki:/sawIntuitiveResearchKitTutorial/XMLConfig Generating XML configuration files]
-* [wiki:/sawIntuitiveResearchKitTutorial/Hardware Hardware setup and testing]
+* [Generating XML configuration files](/jhu-dvrk/sawIntuitiveResearchKit/wiki/XMLConfig)
+* [Hardware setup and testing](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Hardware)
 
 The calibration steps are required to fine tune the XML configuration file generated from the `.cal` file provided by ISI.  It also requires a fully functional controller, i.e. the arm must be connected to the controller and the controller must be connected to the PC.  You must also make sure that you can power on/off the actuator amplifiers as described in the [wiki:/sawIntuitiveResearchKitTutorial/Hardware Hardware setup and testing] page.
 
