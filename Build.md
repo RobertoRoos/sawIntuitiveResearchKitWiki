@@ -154,7 +154,7 @@ Notes:
 
 * If you want to set the cisst variables once and for all, you can modify your `.bashrc` or `.profile` configuration files.
 
-* More info can be found on the [cisst wiki](/jhu-cisst/wiki/UsingCMake#Runningcisstandsawprograms)
+* More info can be found on the [cisst wiki](/jhu-cisst/cisst/wiki/Compiling-cisst-and-SAW-with-CMake)
 
 * If you still have some issues with your firewire permissions and need to use `sudo` to start any dVRK program, the `cisstvars.sh` won't work since `sudo` starts a new shell that won't inherit the current shell's variables.   So, fix the firewire permissions first (see https://github.com/jhu-cisst/mechatronics-software/wiki/Development-Environment)
 
