@@ -13,13 +13,11 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# sawIntuitiveResearchKit Documentation
-
 # **Firmware**
 Firmware version 3.0 is now required, please upgrade.
 https://github.com/jhu-cisst/mechatronics-firmware/wiki/FPGA-Program 
 
-# 1. Introduction
+# Introduction
 
 ![Controller with Patient Side Manipulators (PSMs)](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ControllerWithPSM.jpg)
 
@@ -48,14 +46,14 @@ Related sites:
 * Video introduction on YouTube http://www.youtube.com/watch?v=0n_9CgNSx6Y
 * [Google map](https://mapsengine.google.com/map/embed?mid=z14AfgTT1a9w.ktOc3SMAsVF4) with current and future sites 
 
-# 2. Updates
+# Updates
 
 * *May 2013*: Initial Public Release
 * *April 2014*: Moved to GitHub
 
-# 3. Tutorials
+# Tutorials
 
-## 3.1. Getting Started
+## Getting Started
 
 * [First Steps](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FirstSteps)
 * [Setting up development environment](/jhu-cisst/mechatronics-software/wiki/Development-Environment)
@@ -66,13 +64,18 @@ Related sites:
 * [Running provided examples](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Examples)
 * [E-STOP wiring](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ESTOP)
 
-## 3.2. Advanced 
+## Advanced 
 
 * [Build with ROS](/jhu-dvrk/dvrk-ros)
 * [Simulate MTM/PSM with ROS](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Simulation)
 
-# 4. Miscellaneous
+# Miscellaneous
 
 * [Frequently Asked Questions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FAQ)
 * [Head Sensor](/jhu-dvrk/sawIntuitiveResearchKit/wiki/HeadSensor)
 * [JHU DVRK Hardware Status](JHU-DVRK-Hardware-Status)
+
+
+# Acknowledgments
+
+The cisst software has been developed with the support of the National Science Foundation, EEC 9731748, EEC 0646678, and MRI 0722943.
