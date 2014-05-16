@@ -32,7 +32,7 @@ These instructions are specific to Ubuntu Linux.  The low level software is Linu
 
 ```bash
 sudo apt-get install libxml2-dev libraw1394-dev libncurses5-dev qtcreator
-sudo apt-get flite cmake-curses-gui cmake-qt-gui libopencv-dev git subversion
+sudo apt-get install flite cmake-curses-gui cmake-qt-gui libopencv-dev git subversion
 ```
 
 ## 2. cisst/saw
