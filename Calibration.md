@@ -138,7 +138,7 @@ For the calibration procedure, we use the fully opened position and the closed-b
 The gripper calibration program used the same parameters as the current calibration program.  A typical run looks like:
 
    ```
-  > sawIntuitiveResearchGripperCalibration -c sawRobotIO1394-MTML-22723.xml 
+  > sawIntuitiveResearchKitGripperCalibration -c sawRobotIO1394-MTML-22723.xml 
   Configuration file: sawRobotIO1394-MTML-22723.xml
   Port: 0
   Make sure:
