@@ -5,9 +5,10 @@
 - [**Firmware**](#firmware)
 - [Introduction](#introduction)
 - [Updates](#updates)
-- [Tutorials](#tutorials)
+- [Documentation](#documentation)
   - [Getting Started](#getting-started)
   - [Advanced](#advanced)
+  - [Publications](#publications)
 - [Miscellaneous](#miscellaneous)
 - [Acknowledgments](#acknowledgments)
 
@@ -51,7 +52,7 @@ Related sites:
 * *May 2013*: Initial Public Release
 * *April 2014*: Moved to GitHub
 
-# Tutorials
+# Documentation
 
 ## Getting Started
 
@@ -68,6 +69,8 @@ Related sites:
 
 * [Build with ROS](/jhu-dvrk/dvrk-ros)
 * [Simulate MTM/PSM with ROS](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Simulation)
+
+## Publications
 
 # Miscellaneous
 
