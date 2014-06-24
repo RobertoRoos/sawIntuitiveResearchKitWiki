@@ -140,8 +140,7 @@ This program uses the IO, Buttons and PID widgets.
 
 The PID Widget doesn't provide any direct access to all the IO features.   Before you enable the PID, make sure you use the IO widget to:
 * Power the boards.
-* Bias the encoders based on potentiometers.   Important note re. the PSM joint 7:  place the last joint near the middle before you set the encoders based on potentiometers!
-* Bias current based on current feedback.   
+* Bias the encoders based on potentiometers.   Important note re. the PSM joint 7:  place the last joint near the middle before you set the encoders based on potentiometers!  Please note that the full tele-operation examples performs this step during homing. 
 
 Once you have configure the IO, you can enable the PID.
 * `Maintain position` is the safest option.  This triggers a read of the current position and uses it as target position for the controller.  Ideally, you should hold the arm close to it's home position and then click the `Maintain position` button.
