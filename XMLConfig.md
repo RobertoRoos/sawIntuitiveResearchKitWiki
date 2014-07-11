@@ -19,6 +19,9 @@ For a specific da Vinci manipulator, Intuitive Surgical provides manipulator-spe
 
 1. Choose the calibration file provided by Intuitive Surgical, mXXXX.cal or pXXXX.cal. The naming convention is that the first letter indicates device type with 'm' for master tool manipulator and 'p' for patient-side manipulator (slave), followed by the device serial number. The serial number can be found on the mechanical arm itself, on a silver label with multiple bar codes.   Look for the 'TRK ID'.
 
+![TRK ID on MTL](/jhu-dvrk/sawIntuitiveResearchKit/wiki/trk-id-mtm.jpg)
+![TRK ID on PSM](/jhu-dvrk/sawIntuitiveResearchKit/wiki/trk-id-psm.jpg)
+
 1. Choose device type under 
  * MTML: master left
  * MTMR: master right
