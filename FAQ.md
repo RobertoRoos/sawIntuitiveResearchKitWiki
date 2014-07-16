@@ -76,18 +76,15 @@ All manipulators should be completely back drivable when not powered.  If your P
  * Make sure you don't have two programs trying to access the firewire controllers simultaneously.   The low-level API provided by JHU performs a check but you might have found a way to defeat it.
  * Make sure you don't have any other firewire devices on the same firewire controller.  For example, don't connect an external firewire hard drive or camera on the same firewire chain.   Please note that PC that comes with a built-in firewire controller might provide multiple external connectors that are managed by a single firewire chip.
  * Make sure your firewire "chain" is good from your computer to the last FPGA-QLA board set.  See Firewire below.
- 
 
 ## Some intermittent signals
 
  * Make sure you don't have any loose ITT Cannon cable from your manipulator to the controller.
  * Make sure the SCSI and RS cables between the dMIB and QLA boards inside the enclosure are not loose.
- 
 
 ## Power Issue
- 
-ESTOP
 
+Most power issues are related to the emergency stop: [E-Stop](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ESTOP)
 
 ## Firewire Connection
 
