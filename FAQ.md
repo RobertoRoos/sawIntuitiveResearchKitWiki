@@ -2,7 +2,7 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
 
-- [What does ISI, Classic, S, Si, PSM, MTM, ECM, SUJ, HSRV, ... mean?](#what-does-isi-classic-s-si-psm-mtm-ecm-suj-hsrv--mean)
+- [What does ISI, Classic, S, Si, Xi, PSM, MTM, ECM, SUJ, HSRV, ... mean?](#what-does-isi-classic-s-si-psm-mtm-ecm-suj-hsrv--mean)
 - [What does QLA-FPGA, qladisp, ... mean?](#what-does-qla-fpga-qladisp--mean)
 - [What PC configuration do you suggest?](#what-pc-configuration-do-you-suggest)
 - [The PSMs aren't moving](#the-psms-arent-moving)
@@ -16,18 +16,19 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## What does ISI, Classic, S, Si, PSM, MTM, ECM, SUJ, HSRV, ... mean?
+## What does ISI, Classic, S, Si, Xi, PSM, MTM, ECM, SUJ, HSRV, ... mean?
 
 Some ISI acronyms:
  * ISI: Intuitive Surgical Inc.
  * Classic: refers to first generation da Vinci.  The research kit is based on the Classic.
  * S: second generation da Vinci.  New slaves, master arms are similar to first generation.
  * Si: third generation da Vinci. New masters, dual console, new stereo display, slave arms are similar to second generation.
+ * Xi: fourth generation da Vinci.  New setup joints, new slaves can be used to hold tools or camera.  Master console and stereo display similar to Si. 
  * PSM: Patient Side Manipulator, 2 to 3 on a full da Vinci system, 2 included in Research Kit: PSM1 and PSM2 - Mechanically identical. 
- * MTM: Master Tool Manipulator, 2 on a full da Vinci system (4 with dual console on SI system): 2 included in Research Kit: MTML and MTMR - Not mechanically identical, last joints are different for left and right arms.
+ * MTM: Master Tool Manipulator, 2 on a full da Vinci system (4 with dual console on Si/Xi system): 2 included in Research Kit: MTML and MTMR - Not mechanically identical, last joints are different for left and right arms.
  * ECM: Endoscopic Camera Manipulator, 1 on real da Vinci system.  Not included in Research Kit
  * SUJ: Setup Joints, 3 to 4 on a  da Vinci system.  Not included in Research Kit
- * HSRV: High Resolution Stereo Viewer.  At least 3 versions exist, CRT 640x480 (Standard and S), CRT 1024x720 (S HD), LCD (Si).  The Research Kit comes with the CRT 640x480.
+ * HSRV: High Resolution Stereo Viewer.  At least 3 versions exist, CRT 640x480 (Standard and S), CRT 1024x720 (S HD), LCD (Si/Xi).  The Research Kit comes with the CRT 640x480.
  * Tray, foot pedal tray: foot pedals including clutch, camera, camera focus, bi and mono (or coag).  One is included in Research Kit.
 
 Please read the Research Kit user manual: http://research.intusurg.com/dvrkwiki/index.php?title=DVRK:Docs:Main (ISI private wiki)
