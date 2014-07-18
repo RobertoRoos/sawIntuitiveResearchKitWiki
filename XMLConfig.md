@@ -11,7 +11,7 @@
 # XML configuration file
 
 The software requires XML files with configuration parameters for the various manipulators.
-Sample files with nominal values are in the [share sub-directory](/sawIntuitiveResearchKit/tree/master/share).
+Sample files with nominal values are in the [share sub-directory](/jhu-dvrk/sawIntuitiveResearchKit/tree/master/share).
 
 For a specific da Vinci manipulator, Intuitive Surgical provides manipulator-specific calibration data in a `cal` file.  The sample files in the repository can be used to get started but the calibrations values are quite different between systems so it is important to generate a configuration file per arm using the `cal` file provided by Intuitive Surgical.  We provide a MATLAB-based GUI to read the `cal` file and generate the corresponding XML file.
 
@@ -61,4 +61,4 @@ This configuration generator consists of three files:
 * configGUI.fig: GUI design file
 * configGenerator.m: xml file generator with real computation
 
-If you want to know how values in the XML file are computed, please check [configGenerator.m](/sawIntuitiveResearchKit/tree/master/share) for more information.
+If you want to know how values in the XML file are computed, please check [configGenerator.m](/jhu-dvrk/sawIntuitiveResearchKit/tree/master/share) for more information.
