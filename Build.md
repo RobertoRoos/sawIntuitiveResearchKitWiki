@@ -21,12 +21,13 @@ These instructions are specific to Ubuntu Linux.  The low level software is Linu
 
 ## 1. Dependencies
 
+* Linux for IEEE-1394 (Firewire) - Ubuntu 12.04 preferably, Ubuntu 14.04 should work  
 * git
 * CMake for build and configuration
 * C++ compiler, either gcc or clang
 * libraw1394: IEEE-1394 API
 * libxml2: for parsing XML config files
-* Qt 4: GUI
+* Qt: GUI, version 4 on Ubuntu 12.04, 5 on Ubuntu 14.04
 * libncurses5-dev: curses based test GUI for 1394
 * flite: for some experimental text to speech
 
