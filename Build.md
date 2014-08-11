@@ -115,6 +115,7 @@ These instructions allow you to go step by step if you are running into issues w
   * Set `SAW_sawTextToSpeech` to `ON`
   * Type `[c]` to configure and then type `[e]` to exit help
   * Type `[c]` to configure and then type `[e]` to exit help (you have to do it twice!)
+  * Set `CMAKE_BUILD_TYPE` to `Release`
   * Type `[g]` to generate
 
 Once you're done with the CMake configuration, you can now compile the code using the command line:
