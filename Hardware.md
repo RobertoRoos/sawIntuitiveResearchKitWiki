@@ -70,7 +70,7 @@ To test the firewire connections, the simplest solution is to use the command li
   qladisp b1 [b2] [-pP]
   ```
 
-For example, to display basic informations related to the board with Id 3 on firewire port 0, launch:
+For example, to display basic information related to the board with Id 3 on firewire port 0, launch:
 
   ```
   qladisp 3
@@ -147,7 +147,7 @@ You should have the following default values (no button pressed, no sterile adap
 Pressing buttons and inserting sterile adapter or tool:
 * SUJ clutch button (white button horizontal bar on the side) -> Home1: 0xE
 * Tool clutch button (white button on top) -> Home1: 0x9
-* Sterile adapter (modifed) -> NegLim2: 0x3
+* Sterile adapter (modified) -> NegLim2: 0x3
 * Tool -> PosLim2: 0x7 (tool adapter should still be in so NegLim2 should still be 0x3)
 
 ## 3. Motor Power
@@ -166,4 +166,4 @@ Once the e-stop cable harness is suitably modified, the simplest solution is to 
 
 ## 4. Testing your XML configuration files
 
-Once you have checked the overall hardware, you can [wiki:/sawIntuitiveResearchKitTutorial/Calibration calibrate and update XML configuration files].  To test the configuration files, please use the example `sawRobotIO1394QtConsole` as described in the [examples page](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Examples).
+Once you have checked the overall hardware, you can [calibrate and update XML configuration files](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Calibration).  To test the configuration files, please use the example `sawRobotIO1394QtConsole` as described in the [examples page](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Examples).
