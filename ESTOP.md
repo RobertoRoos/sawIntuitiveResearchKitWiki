@@ -20,6 +20,8 @@ Each controller box contains 3 relays, as shown in Figure 1:
 * 1 relay on each of the two QLA boards 
 * 1 relay to control the motor power supply 
 
+**IMPORTANT**: Later versions of the controller box have a 5-pin safety connector, rather than the 4-pin connector shown here.  The pinout is the same, except that pin #2 is GND, which shifts the signals from pins 2-4 on the old (4-pin) connector to pins 3-5 on the new (5-pin) connector.
+
 To enable the motor power supply, the 12V power needs to be connected to RELAY 3. Relay and E-Stop are two main components in the system's safety module. 
 * The E-STOP provides a mechanism for the operator to shut down the system when the software or FPGA firmware fails. 
 * Relays controlled by the FPGA are serially chained, which will shut down the motor power if the FPGA power system goes down. 
@@ -52,7 +54,7 @@ The single safety connector (on each box) is brought out to two 4-pin safety con
 
 This design is intended to enable quick reconfiguration of the safety circuit. For example, a complete DVRK setup (4 daisy-chained controller boxes) would have 1 E-Stop Cable, 3 Extension Cables, and 1 Termination Plug. To split this into two separate systems (e.g., MTMR+PSM1 and MTML+PSM2), each system would use 1 E-Stop Cable, 1 Extension Cable, and 1 Termination Plug.
 
-Note that the GND connection is not needed for the e-stop functionality, but it is included because it is a good way to make sure that all controller boxes share a common GND. Since the safety connector does not include a GND pin, this GND connection could be obtained by attaching to a screw on the enclosure.
+Note that the GND connection is not needed for the e-stop functionality, but it is included because it is a good way to make sure that all controller boxes share a common GND. Since the 4-pin safety connector does not include a GND pin, this GND connection could be obtained by attaching to a screw on the enclosure.  On the 5-pin safety connector, the GND is available on pin 2.
 
 We have implemented this at JHU using mini-DIN connectors.  The female connectors are Digikey P/N CP-2140-ND (free hanging) or CP-2540-ND (panel mount). The male connector is Digikey P/N CP-2040-ND (free hanging). For the extension cable, it is possible to use an S-Video cable IF the pin carrying the 12V is cut (pin 1 in the drawing below). Otherwise, you would also connect the 12V supplies together, as in the Parallel Connection above, though at least the current would not flow through the safety relays.
 
