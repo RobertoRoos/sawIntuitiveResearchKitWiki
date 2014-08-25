@@ -28,9 +28,9 @@ For a specific da Vinci manipulator, Intuitive Surgical provides manipulator-spe
  * PSM1: slave 1
  * PSM2: slave 2
 
-1. Choose board ID: the board ID is the rotary switch value (4-bit from 0 to F), which should be unique among daisy-chained controller boards. The board ID should be set based on the following convention.  Not all Research Kit come with the ECM and the PSM3 but the board Id should be reserved nevertheless:
+1. Choose board ID: the board ID is the rotary switch value (4-bit from 0 to F), which should be unique among daisy-chained controller boards. The board ID should be set based on the following convention.  Not all Research Kit come with the ECM and the PSM3 but the board Id should be reserved nevertheless.  PSM on da Vinci come with color stickers, i.e. yellow, green and red.
 
-  |            | MTML | MTMR | ECM | PSM1 | PSM2 | PSM3   |
+  |            | MTML | MTMR | ECM | PSM1 yellow | PSM2 green | PSM3 red |
   |------------|------|------|-----|------|------|--------|
   | Board ID 1 | 0    | 2    | 4   | 6    | 8    | 10 (A) |
   | Board ID 2 | 1    | 3    | 5   | 7    | 9    | 11 (B) |
