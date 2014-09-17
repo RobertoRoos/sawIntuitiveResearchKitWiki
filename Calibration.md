@@ -47,7 +47,9 @@ The program to calibrate the requested current is called `sawRobotIO1394CurrentC
   sawRobotIO1394CurrentCalibration:
    -c <value>, --config <value> : configuration file (required)
    -p <value>, --port <value> : firewire port number(s) (optional)
+   -b, --brakes : calibrate current feedback on brakes instead of actuators (optional)
   ```
+The `--brakes` option is used to calibrate the brakes on the ECM arm only.  For the ECM, the procedure needs to be executed twice, once for the brakes (with `-b`) and once for the actuators (without `-b`).
 
 For most users, the default firewire port (0) should work so you should be able to run the program using something like (but with your combination of MTML/MTMR and serial numbers):
 
