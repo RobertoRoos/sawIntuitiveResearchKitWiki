@@ -103,8 +103,8 @@ You should be able to modify the dMIB without removing it from the enclosure.  U
 * Wire pin N3 to back of spare digital input on side of board (see photo).
 
 Please note that some dMIB have the letter labels (A, B, C, E, ...) off by one.  So make sure you rely on the photos to identify the proper pins.
-* ![Hacked board at JHU](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dMIB-ecm-jhu.jpg)
-* ![Hacked board at ISI](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dMIB-ecm-isi.jpg)
+* ![Hacked board at JHU](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dmib-ecm-jhu.jpg)
+* ![Hacked board at ISI](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dmib-ecm-isi.jpg)
  
 # Setup joints
 
