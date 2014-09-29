@@ -9,7 +9,7 @@ Getting Started
 * [Calibration](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Calibration)
 * [Examples](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Examples)
 * [E-STOP wiring](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ESTOP)
-* [Full da Vinci](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Full-da-Vinci)
+* [Full da Vinci system](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Full-da-Vinci)
 
 Advanced 
 * [Build with ROS](/jhu-dvrk/dvrk-ros)
