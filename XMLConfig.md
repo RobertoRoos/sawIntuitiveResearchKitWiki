@@ -53,7 +53,7 @@ For a specific da Vinci manipulator, Intuitive Surgical provides manipulator-spe
 
 1. Generate: click the generate button to generate XML configuration file. 
 
-    ![XML config generator screenshot](/jhu-dvrk/sawIntuitiveResearchKit/wiki/configGUI_tutorial.png)
+    ![XML config generator screenshot](/jhu-dvrk/sawIntuitiveResearchKit/wiki/matlab-config-generator.png)
 
 
 ## 2. Config Generator
