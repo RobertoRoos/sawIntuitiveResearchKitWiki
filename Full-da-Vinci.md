@@ -52,13 +52,27 @@ Current calibration needs to be performed for both the actuators and the brakes.
 
 ### Adjusting brake settings
 
-This is a **VERY IMPORTANT STEP**.  At that point, we don't have a utility program the automatically adjust the parameters specific to the brakes, namely the 4 following values in the XML file:
+This is a **VERY IMPORTANT PROCEDURE**.  At that point, we don't have a utility program the automatically adjust the parameters specific to the brakes, namely the 4 following values in the XML file:
 * `ReleaseCurrent` and `ReleaseTime`
 * `ReleasedCurrent`
 * `EngageCurrent`, though this one is easy, it should be set to 0.
 
+For this procedure we will use the [sawRobotIO1394QtConsole](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Examples#2-sawrobotio1394qtconsole) program along with the ECM XML configuration file for your arm.  You will need to manually edit the XML file and between changes, test using the `sawRobotIO1394QtConsole` program.
+
+1. The first step is to determine the `ReleaseCurrent`.
+   * In the XML file, set all the `ReleasedCurrent` (NOTE: release**D** current) to zero and the `ReleaseTime` to 60 seconds.  Start from a low value for the 3 `ReleaseCurrent` values (~0.1 for 100 mA).
+   * Start the `sawRobotIO1394QtConsole` and `Enable All` to power the actuators and brakes.
+   * Press the `Release` button for the brakes.  You should see the requested current move to the value set in the XML file and a current feedback close to it.  After 60 seconds (or whatever `ReleaseTime` you've set in the XML file), current should go back to `ReleasedCurrent` value (i.e. 0 for now).
+   * During these 60 seconds, try to move the ECM, joint by joint.  If you stand close to the arm, you shouldn't even hear a click if the brakes get released.
+   * If a given brake is not released, quit the application, increase the value of `ReleaseCurrent` for the corresponding joint in the XML file and try again.
+
+2. Once you've found the proper values for `ReleaseCurrent`, you can decrease the `ReleaseTime` value to 2.0.
+
+3. The last step is to find the lowest possible for `ReleasedCurrent`.  This is the current applied `ReleaseTime` seconds after `ReleaseCurrent` to keep the brakes from re-engaging.  It's **IMPORTANT** to find the lowest possible value.  Again, start from a low value and increase progressively until you find settings such that the brakes stay released.
  
 ### dMIB modification for setup joints switch
+
+The setup joint switch/button on the ECM is not using the same digital input as the setup joint switch on the PSMs.  This was unfortunately discovered after the dMIB were designed.  In other words, you need to hack the dMIB to short a couple pins.  You will need someone in house who can do some soldering.
  
 ## Setup joints
 
