@@ -87,6 +87,24 @@ For this procedure we will use the [sawRobotIO1394QtConsole](/jhu-dvrk/sawIntuit
 ## dMIB modification for setup joints switch
 
 The setup joint switch/button on the ECM is not using the same digital input as the setup joint switch on the PSMs.  This was unfortunately discovered after the dMIB were designed.  In other words, you need to hack the dMIB to short a couple pins.  You will need someone in house who can do some soldering.
+
+Using the `sawRobotIO1394QtConsole` you should be able to monitor the switch events, i.e. press and release the different buttons on the ECM arm for a little bit and monitor the changes in the "Buttons" widget/window.
+
+* Arm switch ![ECM Arm switch](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ecm-arm-switch.jpg)
+
+* SUJ switch ![ECM Arm switch](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ecm-suj-switch.jpg)
+
+The Arm switch should work and the SUJ won't until you hack the dMIB.   The dMIB is located on the back on the controller enclosure:
+
+![dMID in enclosure](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dmib-in-enclosure.jpg).
+
+You should be able to modify the dMIB without removing it from the enclosure.  Unscrew the cables connected to the dMIB and set it up vertically resting on its back panel.  The modifications required are:
+* Wire (short) pin K3 to R3
+* Wire pin N3 to back of spare digital input on side of board (see photo).
+
+Please note that some dMIB have the letter labels (A, B, C, E, ...) off by one.  So make sure you rely on the photos to identify the proper pins.
+* ![Hacked board at JHU](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dMIB-ecm-jhu.jpg)
+* ![Hacked board at ISI](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dMIB-ecm-isi.jpg)
  
 # Setup joints
 
