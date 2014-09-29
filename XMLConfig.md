@@ -30,6 +30,14 @@ For a specific da Vinci manipulator, Intuitive Surgical provides manipulator-spe
  * PSM3: slave 3 (for users with full da Vinci)
  * ECM: endoscope arm (for users with full da Vinci)
 
+ **Important note:** the foot pedal can be connected to any controller.  If you are generating the configuration file for the controller attached to the foot pedal, click the "Default Footpedal" button.
+
+1. Generate: click the generate button to generate XML configuration file. 
+
+    ![XML config generator screenshot](/jhu-dvrk/sawIntuitiveResearchKit/wiki/matlab-config-generator.png)
+
+You can also set advanced parameters or overwrite the default settings using:
+
 1. Choose board ID: the board ID is the rotary switch value (4-bit from 0 to F), which should be unique among daisy-chained controller boards. The board ID should be set automatically based on the arm type using the following convention.  Not all Research Kit come with the ECM and the PSM3 but the board Id should be reserved nevertheless.  PSM on da Vinci come with color stickers, i.e. yellow, green and red.
 
   |            | MTML | MTMR | ECM | PSM1 yellow | PSM2 green | PSM3 red |
@@ -50,11 +58,6 @@ For a specific da Vinci manipulator, Intuitive Surgical provides manipulator-spe
 1. Choose digital input settings.  For all PSMs, the defaults shouldn't be modified unless you are using some digital inputs for a specific application.  For the MTMs, you need to select 'Default Footpedal' for the controller box you plan to connect the foot pedal to.   If you plan to daisy chain multiple controllers, make sure the digital input names are unique.  As a direct consequence, make sure only one of the MTMs is configured with the digital inputs for the foot pedal.
 
 1. Choose drive direction.  You can hit the 'Default' button to restore the default values.  This multipliers (1 or -1) allow to change the direction of each axis.  This flag is used to make sure that the software uses the axis directions as defined in the Intuitive Research Kit User Manual.  It is important check the direction of each axis for each arm to make sure it corresponds to the documentation using the `sawIntuitiveResearchKitQtPID` or any other applications that allows you to monitor the potentiometers and encoder directions as well as torque directions.  If you find that the default directions don't match your hardware, please let us know. 
-
-1. Generate: click the generate button to generate XML configuration file. 
-
-    ![XML config generator screenshot](/jhu-dvrk/sawIntuitiveResearchKit/wiki/matlab-config-generator.png)
-
 
 ## 2. Config Generator
 
