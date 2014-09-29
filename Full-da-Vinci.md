@@ -1,3 +1,17 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+
+- [Introduction](#introduction)
+  - [ECM](#ecm)
+    - [XML configuration](#xml-configuration)
+    - [Current feedback calibration](#current-feedback-calibration)
+    - [Adjusting brake settings](#adjusting-brake-settings)
+    - [dMIB modification for setup joints switch](#dmib-modification-for-setup-joints-switch)
+  - [Setup joints](#setup-joints)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Introduction
 
 Acronyms used in this page are defined in [Frequently Asked Questions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FAQ).
