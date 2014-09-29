@@ -3,12 +3,12 @@
 **Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
 
 - [Introduction](#introduction)
-  - [ECM](#ecm)
-    - [XML configuration](#xml-configuration)
-    - [Current feedback calibration](#current-feedback-calibration)
-    - [Adjusting brake settings](#adjusting-brake-settings)
-    - [dMIB modification for setup joints switch](#dmib-modification-for-setup-joints-switch)
-  - [Setup joints](#setup-joints)
+- [ECM](#ecm)
+  - [XML configuration](#xml-configuration)
+  - [Current feedback calibration](#current-feedback-calibration)
+  - [Adjusting brake settings](#adjusting-brake-settings)
+  - [dMIB modification for setup joints switch](#dmib-modification-for-setup-joints-switch)
+- [Setup joints](#setup-joints)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
