@@ -19,8 +19,8 @@ For a specific da Vinci manipulator, Intuitive Surgical provides manipulator-spe
 
 1. Choose the calibration file provided by Intuitive Surgical, mXXXX.cal or pXXXX.cal. The naming convention is that the first letter indicates device type with 'm' for master tool manipulator and 'p' for patient-side manipulator (slave), followed by the device serial number. The serial number can be found on the mechanical arm itself, on a silver label with multiple bar codes.   Look for the 'TRK ID'.
 
-![TRK ID on MTL](/jhu-dvrk/sawIntuitiveResearchKit/wiki/trk-id-mtm.jpg)
-![TRK ID on PSM](/jhu-dvrk/sawIntuitiveResearchKit/wiki/trk-id-psm.jpg)
+    ![TRK ID on MTL](/jhu-dvrk/sawIntuitiveResearchKit/wiki/trk-id-mtm.jpg)
+    ![TRK ID on PSM](/jhu-dvrk/sawIntuitiveResearchKit/wiki/trk-id-psm.jpg)
 
 1. Choose device type under 
  * MTML: master left
@@ -37,15 +37,15 @@ For a specific da Vinci manipulator, Intuitive Surgical provides manipulator-spe
   | Board ID 1 | 0    | 2    | 4   | 6    | 8    | 10 (A) |
   | Board ID 2 | 1    | 3    | 5   | 7    | 9    | 11 (B) |
 
- * To make sure the board IDs are physically set properly, you will have to open the controller enclosures.  The board ID can be changed by turning the rotary switch with a flat head screw driver.
+    * To make sure the board IDs are physically set properly, you will have to open the controller enclosures.  The board ID can be changed by turning the rotary switch with a flat head screw driver.
 
-![Board ID selector](/jhu-dvrk/sawIntuitiveResearchKit/wiki/board-id-selector.jpg)
+      ![Board ID selector](/jhu-dvrk/sawIntuitiveResearchKit/wiki/board-id-selector.jpg)
 
- * Looking from the front of the enclosure, the first board is on the left and the second is on the right.  While you have the enclosure open, you should check that the QLA-FPGA sets are properly connected to the dMIB on the back of the controller: first board connected to bottom connectors, second board to top connectors.
+    * Looking from the front of the enclosure, the first board is on the left and the second is on the right.  While you have the enclosure open, you should check that the QLA-FPGA sets are properly connected to the dMIB on the back of the controller: first board connected to bottom connectors, second board to top connectors.
 
-![Controller layout](/jhu-dvrk/sawIntuitiveResearchKit/wiki/controller-layout.jpg)
+      ![Controller layout](/jhu-dvrk/sawIntuitiveResearchKit/wiki/controller-layout.jpg)
 
- * If your configuration is unusual, you can overwrite the default IDs and specify the board IDs manually using the drop down menu to choose the board ID.  Make sure these two board IDs are different, otherwise the configuration file will not be generated. Also, if you plan to daisy chain multiple controllers, make sure you don't have two boards with the same ID on a single firewire port. 
+    * If your configuration is unusual, you can overwrite the default IDs and specify the board IDs manually using the drop down menu to choose the board ID.  Make sure these two board IDs are different, otherwise the configuration file will not be generated. Also, if you plan to daisy chain multiple controllers, make sure you don't have two boards with the same ID on a single firewire port. 
 
 1. Choose digital input settings.  For all PSMs, the defaults shouldn't be modified unless you are using some digital inputs for a specific application.  For the MTMs, you need to select 'Default Footpedal' for the controller box you plan to connect the foot pedal to.   If you plan to daisy chain multiple controllers, make sure the digital input names are unique.  As a direct consequence, make sure only one of the MTMs is configured with the digital inputs for the foot pedal.
 
@@ -53,7 +53,7 @@ For a specific da Vinci manipulator, Intuitive Surgical provides manipulator-spe
 
 1. Generate: click the generate button to generate XML configuration file. 
 
-![XML config generator screenshot](/jhu-dvrk/sawIntuitiveResearchKit/wiki/configGUI_tutorial.png)
+    ![XML config generator screenshot](/jhu-dvrk/sawIntuitiveResearchKit/wiki/configGUI_tutorial.png)
 
 
 ## 2. Config Generator
