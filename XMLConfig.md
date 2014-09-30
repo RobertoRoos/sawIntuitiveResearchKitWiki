@@ -40,10 +40,10 @@ You can also set advanced parameters or overwrite the default settings using:
 
 1. Choose board ID: the board ID is the rotary switch value (4-bit from 0 to F), which should be unique among daisy-chained controller boards. The board ID should be set automatically based on the arm type using the following convention.  Not all Research Kit come with the ECM and the PSM3 but the board Id should be reserved nevertheless.  PSM on da Vinci come with color stickers, i.e. yellow, green and red.
 
-  |            | MTML | MTMR | ECM | PSM1 yellow | PSM2 green | PSM3 red |
-  |------------|------|------|-----|------|------|--------|
-  | Board ID 1 | 0    | 2    | 4   | 6    | 8    | 10 (A) |
-  | Board ID 2 | 1    | 3    | 5   | 7    | 9    | 11 (B) |
+  |            | MTML | MTMR | ECM | PSM1 yellow | PSM2 green | PSM3 red | SUJ |
+  |------------|------|------|-----|------|------|--------|--------|
+  | Board ID 1 | 0    | 2    | 4   | 6    | 8    | 10 (A) | 12 (C) |
+  | Board ID 2 | 1    | 3    | 5   | 7    | 9    | 11 (B) |        |
 
     * To make sure the board IDs are physically set properly, you will have to open the controller enclosures.  The board ID can be changed by turning the rotary switch with a flat head screw driver.
 
