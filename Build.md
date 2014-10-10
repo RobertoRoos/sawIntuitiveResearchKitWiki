@@ -111,6 +111,7 @@ These instructions allow you to go step by step if you are running into issues w
   * Set `CISST_cisstRobot` to `ON`
   * Set `SAW_sawRobotIO1394` to `ON`
   * Set `SAW_sawControllers` to `ON`
+  * Set `SAW_sawConstraintControllers` to `ON`
   * Set `SAW_sawIntuitiveResearchKit` to `ON`
   * Set `SAW_sawTextToSpeech` to `ON`
   * Type `[c]` to configure and then type `[e]` to exit help
