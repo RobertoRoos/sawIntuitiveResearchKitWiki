@@ -149,7 +149,24 @@ You should be able to modify the dMIB without removing it from the enclosure.  U
 Please note that some dMIB have the letter labels (A, B, C, E, ...) off by one.  So make sure you rely on the photos to identify the proper pins.
 * dMIB modified at JHU ![Hacked board at JHU](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dmib-ecm-jhu.jpg)
 * dMIB modified at ISI ![Hacked board at ISI](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dmib-ecm-isi.jpg)
- 
+
+## Testing the whole arm
+
+At that point you should be able to test the whole arm, including PIDs, homing, kinematics and manipulator clutch using the application `sawIntuitiveResearchKitQtArm`.  The command lines syntax is:
+```bash
+sawIntuitiveResearchKitQtArm:
+ -i <value>, --io <value> : configuration file for robot IO (see sawRobotIO1394) (required)
+ -p <value>, --pid <value> : configuration file for PID controller (see sawControllers, mtsPID) (required)
+ -k <value>, --kinematic <value> : configuration file for kinematic (see cisstRobot, robManipulator) (required)
+ -n <value>, --arm-name <value> : arm name, i.e. PSM1, ... as found in sawRobotIO configuration file (required)
+ -f <value>, --firewire <value> : firewire port number(s) (optional)
+ -g <value>, --gcmip <value> : global component manager IP address (optional)
+```
+
+For the `--arm-name` or `-n` option, use the string `ECM`.  For the `-k` option, use the file `dvecm.rob`.  For the `-p` option, use the file `sawControllersPID-ECM.xml`.  For the `-i` option, **make sure** you use the `sawRobotIO` XML file you generated for your system.
+
+Once the application is started, hit the `home` button.   The ECM should power properly, release the brakes and go to the zero position.  You can then use the different widgets to make sure everything properly.  You can press the manipulator clutch button to move the arm manually.
+
 # Setup joints
 
 **TBD**
