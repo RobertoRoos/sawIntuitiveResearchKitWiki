@@ -124,7 +124,7 @@ We are not totally sure how much variability there is between systems.  In order
 
 |System|1 Release (A)|1 Release (s)|1 Released (A)|2 Release(A)|2 Release (s)|2 Released (A)|3 Release(A)|3 Release (s)|3 Released (A)| 
 |-----|-----|-----|-----|-----|-----|-----|-----|-----|-----| 
-| JHU |0.240|0.2  |0.080|0.210|0.2  |0.070|0.900|0.2  |0.200|
+| JHU |0.250|0.2  |0.080|0.220|0.2  |0.070|0.900|0.2  |0.200|
 | ISI |0.250|0.2  |0.100|0.210|0.2  |0.100|0.600|0.2  |0.150|
 
  
