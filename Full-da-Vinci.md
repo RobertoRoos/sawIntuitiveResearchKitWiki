@@ -8,6 +8,7 @@
   - [Current feedback calibration](#current-feedback-calibration)
   - [Adjusting brake settings](#adjusting-brake-settings)
   - [dMIB modification for setup joints switch](#dmib-modification-for-setup-joints-switch)
+  - [Testing the whole arm](#testing-the-whole-arm)
 - [Setup joints](#setup-joints)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
