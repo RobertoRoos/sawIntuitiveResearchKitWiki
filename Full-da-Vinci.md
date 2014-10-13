@@ -153,7 +153,7 @@ Please note that some dMIB have the letter labels (A, B, C, E, ...) off by one. 
 
 ## Testing the whole arm
 
-At that point you should be able to test the whole arm, including PIDs, homing, kinematics and manipulator clutch using the application `sawIntuitiveResearchKitQtArm`.  The command lines syntax is:
+If you are **absolutely** sure the brakes are working (i.e. get released and stay released), you should be able to test the whole arm, including PIDs, homing, kinematics and manipulator clutch using the application `sawIntuitiveResearchKitQtArm`.  The command lines syntax is:
 ```bash
 sawIntuitiveResearchKitQtArm:
  -i <value>, --io <value> : configuration file for robot IO (see sawRobotIO1394) (required)
