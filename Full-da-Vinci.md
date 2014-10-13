@@ -121,7 +121,7 @@ For this procedure we will use the [sawRobotIO1394QtConsole](/jhu-dvrk/sawIntuit
 
 We are not totally sure how much variability there is between systems.  In order to get a sense for it, please update the following table after you calibrated your brakes:
 
-|System|1 High|1 High Time|1 Medium|2 High|2 High Time|2 Medium|3 High|3 High Time|3 Medium| 
+|System|1 Release (A)|1 Release (s)|1 Released (A)|2 Release(A)|2 Release (s)|2 Released (A)|3 Release(A)|3 Release (s)|3 Released (A)| 
 |-----|-----|-----|-----|-----|-----|-----|-----|-----|-----| 
 | JHU |0.300|0.2  |0.080|0.300|0.2  |0.070|0.900|0.2  |0.200|
 | ISI |0.250|0.2  |0.100|0.210|0.2  |0.100|0.600|0.2  |0.150|
