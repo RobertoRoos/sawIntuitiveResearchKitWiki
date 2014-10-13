@@ -112,6 +112,14 @@ For this procedure we will use the [sawRobotIO1394QtConsole](/jhu-dvrk/sawIntuit
 2. Once you've found the proper values for `ReleaseCurrent`, you can decrease the `ReleaseTime` value to 2.0.
 
 3. The last step is to find the lowest possible for `ReleasedCurrent`.  This is the current applied `ReleaseTime` seconds after `ReleaseCurrent` to keep the brakes from re-engaging.  It's **IMPORTANT** to find the lowest possible value.  Again, start from a low value and increase progressively until you find settings such that the brakes stay released.
+
+We are not totally sure how much variability there is between systems.  In order to get a sense for it, please update the following table after you calibrated your brakes:
+
+|System|1 High|1 High Time|1 Medium|2 High|2 High Time|2 Medium|3 High|3 High Time|3 Medium| 
+|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----| 
+| JHU |0.300|0.2  |0.080|0.300|0.2  |0.070|0.900|0.2  |0.200|
+| ISI |0.250|0.2  |0.100|0.210|0.2  |0.100|0.600|0.2  |0.150|
+
  
 ## dMIB modification for setup joints switch
 
