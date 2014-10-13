@@ -89,7 +89,12 @@ Please note that the values provided on this page are hardware specific and you 
 
 ## Current feedback calibration
 
-Current calibration needs to be performed for both the actuators and the brakes.  Once you have generated the ECM XML configuration files, follow instructions from [Calibration](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Calibration).  The main difference for the ECM is that you need to follow the procedure twice, once without the `-b` option and once with the `-b` option.
+Current calibration needs to be performed for both the actuators and the brakes.  Once you have generated the ECM XML configuration files, follow instructions from [Calibration](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Calibration).  The main difference for the ECM is that you need to follow the procedure twice, once without the `-b` option and once with the `-b` option.   Overall, the process is:
+* `sawRobotIO1394CurrentCalibration -c file.xml` for the initial motor current calibration
+* `sawRobotIO1394CurrentCalibration -c file.xml-new` to verify motor current calibration
+* `sawRobotIO1394CurrentCalibration -b -c file.xml-new-new` for the initial brake current calibration
+* `sawRobotIO1394CurrentCalibration -b -c file.xml-new-new-new` to verify brake current calibration
+* `mv file.xml-new-new-new-new file.xml` to save the fully calibrated file
 
 ## Adjusting brake settings
 
