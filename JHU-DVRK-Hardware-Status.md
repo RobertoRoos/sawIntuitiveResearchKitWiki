@@ -31,7 +31,7 @@ Email: zihan dot chen at jhu dot edu
 | S/N     |   Status   |   Location    |   Comment                              |
 | ------- | ---------- | ------------- | -------------------------------------- |
 | 3116-01 |  GOOD      |   JHU         |  FireWire Port Issue (Fixed)           | 
-| 3116-02 |  GOOD      |   JHU         |                                        | 
+| 3116-02 |  GOOD      |   JHU         |  Ethernet                              | 
 | 3116-03 |  GOOD      |   JHU         |                                        | 
 | 3116-04 |  FAIL      |   JHU         |  Power Issue                           | 
 | 3116-05 |  GOOD      |   JHU         |                                        | 
@@ -41,16 +41,16 @@ Email: zihan dot chen at jhu dot edu
 
 | S/N     |   Status   |   Location    |   Comment                              |
 | ------- | ---------- | ------------- | -------------------------------------- |
-| 3792-21 |  GOOD      |   JHU         |                                        | 
-| 3792-41 |  GOOD      |   JHU         |                                        | 
-| 3792-22 |  GOOD      |   JHU         |                                        | 
-| 3792-43 |  GOOD      |   JHU         |                                        | 
+| 3792-21 |  GOOD      |   JHU         |  DVRK BOX ???                          | 
+| 3792-41 |  GOOD      |   JHU         |  DVRK BOX ???                          | 
+| 3792-22 |  GOOD      |   JHU         |  DVRK BOX ???                          | 
+| 3792-43 |  GOOD      |   JHU         |  DVRK BOX ???                          | 
 | 3792-12 |  GOOD      |   JHU         |                                        | 
 | 3792-37 |  GOOD      |   JHU         |  Power issue when mated with QLA       | 
 | 3792-40 |  GOOD      |   JHU         |                                        | 
 | 3792-27 |  GOOD      |   JHU         |                                        | 
 | 3792-42 |  GOOD      |   AVCOM       |  Test firmware for AVCOM               | 
-| 3792-39 |  GOOD      |   JHU         |                                        | 
+| 3792-39 |  GOOD      |   JHU         |  Ethernet                              | 
 
 **Batch 2**
 
@@ -58,6 +58,12 @@ Email: zihan dot chen at jhu dot edu
 | ------- | ---------- | ------------- | -------------------------------------- |
 | 3985-66 |  GOOD      |   JHU         |                                        | 
 
+
+**Batch 3**   
+
+| S/N     | Status | Location | Comment     |
+|---------|--------|----------|-------------|
+| 4266-17 | BAD    | JHU      | Power Issue |
 
 ### QLA boards 
 
@@ -91,6 +97,9 @@ Email: zihan dot chen at jhu dot edu
 | S/N     |   Status   |   Location    |   Comment                              |
 | ------- | ---------- | ------------- | -------------------------------------- |
 | 3984-13 |  GOOD      |   JHU         |                                        | 
+
+**Batch 3**
+
 
 ### Log 
 
