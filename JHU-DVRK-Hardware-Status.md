@@ -34,7 +34,7 @@ Email: zihan dot chen at jhu dot edu
 | 3116-02 |  GOOD      |   JHU         |  Ethernet                              | 
 | 3116-03 |  GOOD      |   JHU         |                                        | 
 | 3116-04 |  FAIL      |   JHU         |  Power Issue                           | 
-| 3116-05 |  GOOD      |   JHU         |                                        | 
+| 3116-05 |  GOOD      |   JHU         |  SUJ Development Anton                 | 
 
 
 **Batch 1**
@@ -75,7 +75,7 @@ Email: zihan dot chen at jhu dot edu
 | 3174-02 |  GOOD      |   JHU         |                                        | 
 | 3174-03 |  GOOD      |   JHU         |                                        | 
 | 3174-04 |  FAIL      |   JHU         |  Axis 4 no power feedback (bool)       | 
-| 3174-05 |  GOOD      |   JHU         |                                        | 
+| 3174-05 |  GOOD      |   JHU         |  SUJ Development Anton                 | 
 
 **Batch 1**
 
