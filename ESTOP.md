@@ -49,7 +49,7 @@ This design is intended to enable quick reconfiguration of the safety circuit. F
 
 Note that the GND connection is not needed for the e-stop functionality, but it is included because it is a good way to make sure that all controller boxes share a common GND. Since the 4-pin safety connector does not include a GND pin, this GND connection could be obtained by attaching to a screw on the enclosure.  On the 5-pin safety connector, the GND is available on pin 2.
 
-We have implemented this at JHU using mini-DIN connectors.  The female connectors are Digikey P/N CP-2140-ND (free hanging) or CP-2540-ND (panel mount). The male connector is Digikey P/N CP-2040-ND (free hanging). For the extension cable, it is possible to use an S-Video cable IF the pin carrying the 12V is cut (pin 1 in the drawing below). Otherwise, you would also connect the 12V supplies together, as in the Parallel Connection above, though at least the current would not flow through the safety relays.
+We have implemented this at JHU using mini-DIN connectors.  The female connectors are Digikey P/N CP-2140-ND (free hanging) or CP-2540-ND (panel mount). The male connector is Digikey P/N CP-2040-ND (free hanging). For the extension cable, it is possible to use an S-Video cable IF the pin carrying the 12V is cut (pin 1 in the drawing below). Otherwise, you would also connect the 12V supplies together, as in the Parallel Connection below, though at least the current would not flow through the safety relays.
 
 ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/estop_proposed.png)
 
