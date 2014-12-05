@@ -5,8 +5,8 @@
 - [1. General Info](#1-general-info)
 - [2. E-STOP Setup](#2-e-stop-setup)
   - [2.1. Serial Connection (WPI)](#21-serial-connection-wpi)
-  - [2.2. Parallel Connection (Not Recommended)](#22-parallel-connection-not-recommended)
-  - [2.3. Configurable Serial Connection (JHU)](#23-configurable-serial-connection-jhu)
+  - [2.2. Configurable Serial Connection (JHU)](#22-configurable-serial-connection-jhu)
+  - [2.3. Parallel Connection (Not Recommended)](#23-parallel-connection-not-recommended)
 - [3. Debugging](#3-debugging)
   - [3.1. Test single FPGA-QLA board set (bypassing relays on QLA boards)](#31-test-single-fpga-qla-board-set-bypassing-relays-on-qla-boards)
   - [3.2. Test single controller box with QLA relays in the loop](#32-test-single-controller-box-with-qla-relays-in-the-loop)
@@ -38,14 +38,7 @@ When you receive your controllers, this should be your default setup. Each e-sto
 
 ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/daVinci-Estop_2Controllers-1.png)
 
-## 2.2. Parallel Connection (Not Recommended)
-
-The advantage is that the connection is parallel, so it can be used for any number of controller boxes. For example, the figure below shows an e-stop cable connected to two controller boxes. But, you can also use it to control just one controller box (i.e., it still works if the second connector is not used).  But, there is a **major drawback** to this wiring strategy.
-The drawback is that the 12V power supplies in the boxes will all be connected together when the QLA safety relays are closed.  It is generally not a good practice to connect power supplies, since the power supply with the highest output voltage will source all the current, until the high load current causes its output voltage to drop below the output of one of the other power supplies (note that the load current will be high because the 12V supply also provides the logic power for the FPGA boards).  Even worse, the current that flows from one box to the others all flows through the contacts of the QLA safety relay. If this current is too high, it will permanently weld the relay contacts, destroying the relay (which is not easy to replace). This has actually happened at JHU, destroying the relays on 9 QLA boards.  At JHU, the problem was exacerbated by the fact that one of the "12V" power supplies in the controller box was actually a 24V supply, so when the safety relays were closed, this power supply provided current to all controllers (thereby powering all FPGAs). But, this problem could potentially happen in systems that only have 12V supplies, since their output voltages will not be exactly equal. It is easy to test whether the relay contacts have been fused by checking continuity (it should be normally-open, so if there is continuity when the system is powered off, it has been fused).
-
-![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/estop_current.jpg)
-
-## 2.3. Configurable Serial Connection (JHU)
+## 2.2. Configurable Serial Connection (JHU)
 
 The single safety connector (on each box) is brought out to two 4-pin safety connectors, as shown in the diagram below. There are three different types of cables:
 * E-Stop Cable: connects the e-stop button to pins 1 and 2; there should only be one of these cables in a single setup
@@ -111,6 +104,13 @@ Male connector
 
 Female connector
 
+
+## 2.3. Parallel Connection (Not Recommended)
+
+The advantage is that the connection is parallel, so it can be used for any number of controller boxes. For example, the figure below shows an e-stop cable connected to two controller boxes. But, you can also use it to control just one controller box (i.e., it still works if the second connector is not used).  But, there is a **major drawback** to this wiring strategy.
+The drawback is that the 12V power supplies in the boxes will all be connected together when the QLA safety relays are closed.  It is generally not a good practice to connect power supplies, since the power supply with the highest output voltage will source all the current, until the high load current causes its output voltage to drop below the output of one of the other power supplies (note that the load current will be high because the 12V supply also provides the logic power for the FPGA boards).  Even worse, the current that flows from one box to the others all flows through the contacts of the QLA safety relay. If this current is too high, it will permanently weld the relay contacts, destroying the relay (which is not easy to replace). This has actually happened at JHU, destroying the relays on 9 QLA boards.  At JHU, the problem was exacerbated by the fact that one of the "12V" power supplies in the controller box was actually a 24V supply, so when the safety relays were closed, this power supply provided current to all controllers (thereby powering all FPGAs). But, this problem could potentially happen in systems that only have 12V supplies, since their output voltages will not be exactly equal. It is easy to test whether the relay contacts have been fused by checking continuity (it should be normally-open, so if there is continuity when the system is powered off, it has been fused).
+
+![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/estop_current.jpg)
 
 # 3. Debugging
 
