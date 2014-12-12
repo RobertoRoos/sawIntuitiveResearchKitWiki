@@ -127,7 +127,8 @@ We are not totally sure how much variability there is between systems.  In order
 | JHU |0.250|0.2  |0.080|0.220|0.2  |0.070|0.900|0.2  |0.200|
 | ISI |0.250|0.2  |0.100|0.210|0.2  |0.100|0.600|0.2  |0.150|
 
- 
+** Important note: ** We found that the power requirements are close to the maximum amount of power a 24V power supply can deliver.  There is some variability between different systems and brakes so you might need to upgrade the power supply to 36V in the controller enclosure.  To check if you have reached the maximum deliverable power, keep an eye on the current feedback.  These values should be close to the required current.  If the current feedback seems to plateau while you increase the requested current, you'll likely need to upgrade your power supply.
+
 ## dMIB modification for setup joints switch
 
 The setup joint switch/button on the ECM is not using the same digital input as the setup joint switch on the PSMs.  This was unfortunately discovered after the dMIB were designed.  In other words, you need to hack the dMIB to short a couple pins.  You will need someone in house who can do some soldering.
