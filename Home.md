@@ -71,6 +71,11 @@ Related sites:
 * [Build with ROS](/jhu-dvrk/dvrk-ros)
 * [Simulate MTM/PSM with ROS](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Simulation)
 
+## Controller
+
+* [MTM Gravity Compensation](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Control-Gravity-Compensation)
+
+
 ## Publications
 
 * Kazanzides P, Chen Z, Deguet A, Fischer GS, Taylor RH, DiMaio SP, [An Open-Source Research Kit for the da Vinci Surgical System, International Conference on Robotics and Automation](/jhu-dvrk/sawIntuitiveResearchKit/wiki/kazanzides-chen-etal-icra-2014.pdf) - ICRA 2014, May 2014.
