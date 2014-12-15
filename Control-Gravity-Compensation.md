@@ -17,7 +17,7 @@ See:
 
 ### DH Parameters 
 
-![rrbot_dh](./asset/mtm/rrbot_dh.png) 
+![rrbot_dh](./assets/mtm/rrbot_dh.png) 
 
 Table: Standard DH for RRBot  
 
@@ -109,7 +109,7 @@ if (q[3] < 0.05) tau[3] += ((q[3] - 0.05) * 0.1 - 0.07);  // cable
 ```
 
 ### Parallel Mechanism
-![mtm_parallel](./asset/mtm/mtm_parallel.png)  
+![mtm_parallel](./assets/mtm/mtm_parallel.png)  
 
 
 **Link 2: Outer Pitch 1 (Shoulder)**
@@ -144,7 +144,7 @@ NOTE:
 
 ## Demo Video 
 
-[![ScreenShot](./asset/mtm/mtm_video.png)](http://youtu.be/jWGB_uCqjmg) 
+[![ScreenShot](./assets/mtm/mtm_video.png)](http://youtu.be/jWGB_uCqjmg) 
 
 
 ### Other Approaches 
@@ -158,7 +158,7 @@ Atkeson, Christopher G., Chae H. An, and John M. Hollerbach. "Estimation of iner
 
 **Standard DH Parameters**
 
-![mtm_dh](./asset/mtm/mtm_dh.png)  
+![mtm_dh](./assets/mtm/mtm_dh.png)  
 Image from Adnan Munawar (WPI)
 
 
@@ -181,7 +181,7 @@ Table 1: Standard DH for MTM
 **Modified DH Parameters**
 
 
-![mtm_dh_modified](./asset/mtm/mtm_dh_modified.png)  
+![mtm_dh_modified](./assets/mtm/mtm_dh_modified.png)  
 Image from ISI da Vinci Research Kit Manual 
 
 
