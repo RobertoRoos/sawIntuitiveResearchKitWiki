@@ -4,6 +4,7 @@
 
 - [1. Calibration](#1-calibration)
 - [2. Current offsets](#2-current-offsets)
+  - [2.0. Prerequisite](#20-prerequisite)
   - [2.1. Introduction](#21-introduction)
   - [2.2. Procedure](#22-procedure)
 - [3. Gripper on MTMs](#3-gripper-on-mtms)
@@ -21,6 +22,10 @@ The following sections assumes that you performed every step in:
 The calibration steps are required to fine tune the XML configuration file generated from the `.cal` file provided by ISI.  It also requires a fully functional controller, i.e. the arm must be connected to the controller and the controller must be connected to the PC.  You must also make sure that you can power on/off the actuator amplifiers as described in the [wiki:/sawIntuitiveResearchKitTutorial/Hardware Hardware setup and testing] page.
 
 # 2. Current offsets
+
+## 2.0 Prerequisite
+Please read the [ESTOP debugging](wiki/ESTOP#3-debugging) section before you start.   
+When you are calibrating motor current, ONLY have 1 controller box in ESTOP chain. (i.e. Setup 3.2)
 
 ## 2.1. Introduction
 
