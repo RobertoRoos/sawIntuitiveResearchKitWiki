@@ -12,7 +12,8 @@ Getting Started
 * [Full da Vinci system](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Full-da-Vinci)
 
 Advanced 
-* [Build with ROS](/jhu-dvrk/dvrk-ros)
+* [Build with ROS catkin_make](/jhu-dvrk/dvrk-ros)
+* [Build cisst, dVRK and ROS components with catkin build tools](/jhu-dvrk/sawIntuitiveResearchKit/wiki/CatkinBuild)
 * [Simulation with ROS](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Simulation)
 
 Controller
