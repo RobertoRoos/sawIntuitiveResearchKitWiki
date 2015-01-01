@@ -26,11 +26,6 @@ cd ~/catkin_ws
 catkin init
 ```
 
-To setup your environment to use your newly created workspace:
-```bash                      
-source ~/catkin_ws/devel/setup.sh
-```
-
 # Packages
 
 ## cisstNetlib
