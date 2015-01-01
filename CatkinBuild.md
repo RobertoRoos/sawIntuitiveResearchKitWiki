@@ -46,7 +46,7 @@ sudo apt-get install gfortran
 
 ```bash
 cd ~/catkin_ws
-catkin build cisst_netlib --cmake-args -DCISSTNETLIB_LANGUAGE=Fortran -DCISSTNETLIB_ARCHITECTURE=x86_64 -DCMAKE_BUILD_TYPE=Release
+catkin build cisst_netlib --cmake-args -DCMAKE_BUILD_TYPE=Release
 cd ~/catkin_ws/build/cisst_netlib
 make install
 ```
