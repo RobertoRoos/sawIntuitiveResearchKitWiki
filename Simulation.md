@@ -1,4 +1,5 @@
-# intuitive_research_kit_ros Documentation
+# intuitive_research_kit_ros Documentation (deprecated)
+Please refer to https://github.com/jhu-dvrk/dvrk-ros
 
 ## 1. About
 A ROS based simulation stack has been developed to give Robot visualization and simulation.
