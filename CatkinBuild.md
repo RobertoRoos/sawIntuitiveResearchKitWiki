@@ -28,13 +28,21 @@ catkin init
 
 # Packages
 
-## cisstNetlib
+## cisstNetlib, cisst, SAW components and cisst-ros bridge
 
 ### Get the source
 
 ```bash
 cd ~/catkin_ws/src
-git clone https://github.com/jhu-cisst/cisstNetlib
+git clone https://github.com/jhu-cisst/cisst-saw --recursive
+```
+
+As of January 2015, the master branch doesn't have the catkin/ROS build support.   You need to use the devel branch:
+```bash
+cd ~/catkin_ws/src/cisst-saw
+git checkout devel
+git submodule init
+git submodule update
 ```
 
 ### Configure, build and install
@@ -46,29 +54,15 @@ sudo apt-get install gfortran
 
 ```bash
 cd ~/catkin_ws
-catkin build cisst_netlib --cmake-args -DCMAKE_BUILD_TYPE=Release
-cd ~/catkin_ws/build/cisst_netlib
-make install
+catkin build
 ```
 
-## cisst
+## dvrk-ros
 
-### Get the source
+This package is not part of the cisst-saw yet as it contains many CAD files that are of no use for most cisst-saw users and we can't really justify 30MB of data.  Once we removed all the sldprt files, we can add the dvrk-ros as a submodule in cisst-saw and save that extra step:
 
 ```bash
 cd ~/catkin_ws/src
-git clone https://github.com/jhu-cisst/cisst
-```
-
-The default cisst branch is `master`.  If you need to use checkout a different branch:
-```bash
-cd ~/catkin/src/cisst
-git checkout devel # or whatever branch you need
-```
-
-### Configure and build
-
-```bash
-cd ~/catkin_ws
-catkin build cisst --cmake-args -DCISST_HAS_CISSTNETLIB=ON -DCISST_cisstRobot=ON -DCMAKE_BUILD_TYPE=Release
+git clone https://github.com/jhu-dvrk/dvrk-ros
+catkin build
 ```
