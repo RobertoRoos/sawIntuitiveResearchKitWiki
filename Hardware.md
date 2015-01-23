@@ -6,7 +6,7 @@
   - [1. Unboxing](#1-unboxing)
     - [1.1. Arms](#11-arms)
     - [1.2. Sterile adapter](#12-sterile-adapter)
-    - [1.2. Controllers](#12-controllers)
+    - [1.3. Controllers](#13-controllers)
   - [2. Firewire](#2-firewire)
     - [2.1. FPGA Power](#21-fpga-power)
     - [2.2. Testing with `qladisp`](#22-testing-with-qladisp)
@@ -33,7 +33,7 @@ Make sure you place the wire to short the two pins as deep as possible and keep 
 
 ![Modified sterile adapter](/jhu-dvrk/sawIntuitiveResearchKit/wiki/modified-sterile-adapter.jpg)
 
-### 1.2. Controllers
+### 1.3. Controllers
 
 1. There are two types of controllers, MTM (Master Manipulators) and PSM (Patient Side Manipulator).  It is important not to mix them as the Master controllers use a 24V power supply for the first 4 actuators and a 12V power supply for the last 3 actuators while the Slave controllers use a 24V power supply for all 7 actuators.  You can verify which one is which by opening the controllers.
 
@@ -46,6 +46,8 @@ Make sure you place the wire to short the two pins as deep as possible and keep 
 1. When you will first unbox the controllers, check the internal connections.  If you find a cable with a loose end or partially unplugged you'll have to plug it back.
 
 1. We recommend plugging all your controllers to a single power strip with a switch.  This will ensure that all controllers can be turned on or off using a single button.
+
+1. One group has reported that floating ground can cause issues during current calibration procedure. So if you are using WPI ESTOP setup with 4-pin ESTOP connector, we recommend you to put all boxes to a common ground. See also [ESTOP](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ESTOP#21-serial-connection-wpi) page. 
 
 
 ## 2. Firewire
