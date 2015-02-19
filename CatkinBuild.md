@@ -1,61 +1,11 @@
 # Introduction
 
 These instructions are provided for those who want to build the whole cisst/SAW stack using catkin tools only.  This is an alternative to using `catkin_make`.
-
-## Links
-
-* [catkin tools](http://catkin-tools.readthedocs.org/en/latest/index.html)
-
-## Initializing your catkin workspace to work with catkin tools
-
-Assuming you have already installed ROS and you're using Ubuntu, you can install the catkin build tools using:
-```bash
-sudo apt-get install python-catkin-tools
-```
-
-To make sure your path includes the ROS directories:
-```bash
-source /opt/ros/indigo/setup.sh
-```
-
-Then you should be able to create your catkin workspace.  Please note that existing workspaces used in combination with `catkin_make` are not compatible with the catkin build tools.
-
-```bash
-mkdir -p ~/catkin_ws/src
-cd ~/catkin_ws
-catkin init
-```
-
 # Packages
 
 ## cisstNetlib, cisst, SAW components and cisst-ros bridge
 
-### Get the source
-
-```bash
-cd ~/catkin_ws/src
-git clone https://github.com/jhu-cisst/cisst-saw --recursive
-```
-
-As of January 2015, the master branch doesn't have the catkin/ROS build support.   You need to use the devel branch:
-```bash
-cd ~/catkin_ws/src/cisst-saw
-git checkout devel
-git submodule init
-git submodule update
-```
-
-### Configure, build and install
-
-We recommend to compile the Fortran version.  In case you don't have a Fortran compiler, you will need to install it:
-```bash
-sudo apt-get install gfortran
-```
-
-```bash
-cd ~/catkin_ws
-catkin build
-```
+See [cisst/SAW catkin instructions](https://github.com/jhu-cisst/cisst/wiki/Compiling-cisst-and-SAW-with-CMake#13-building-using-catkin-build-tools-for-ros)
 
 ## dvrk-ros
 
