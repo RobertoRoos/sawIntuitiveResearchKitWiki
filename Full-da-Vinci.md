@@ -27,18 +27,18 @@ It is important to notice that there are a few hardware features from the full d
 * Head sensor
 * ...
 
-On the other hand, the dVRK mechatronics and software support the camera manipulator (ECM) and setup joints:
+On the other hand, the dVRK mechatronics and software support the camera manipulator (ECM) and will soon support the setup joints:
 * For the ECM, we use a FPGA-QLA based PSM controller with a special configuration (XML file) to support the brakes.
-* For the setup joints, we use the a single FPGA-QLA board connected to a board designed by Intuitive Surgical (dSIB) which can interface with all 4 setup joints.
+* For the setup joints, we use a single FPGA-QLA board connected to a board designed by Intuitive Surgical (dSIB) which can interface with all 4 setup joints.  This board has been designed and is being tested at JHU.
  
 You will be able to switch back and forth between the mechatronics from ISI and the dVRK controllers but this requires to unplug and replug a few cables.  The user has to connect the arms, setup joints and foot pedal directly to the dVRK controllers:
 * MTM cables can be found on the back of the master console, grey plastic covers need to be removed.
 * Foot pedal cable can be found on the front of the master console, under the stereo display and the cover needs to be removed.  This cable is rather short so one might consider investing in an extension cable.
-* On the patient side, both setup joints and arms need to be unplugged from the back of the cart to be connected to the controllers.  The long cables normally used to connect the patient cart to the master console are not used.
+* On the patient side, both setup joints and arms need to be unplugged from the back of the cart to be connected to the dVRK controllers.  The long cables normally used to connect the patient cart to the master console are not used.
 
 # ECM
 
-The main difference between the ECM and the PSM is the active brakes on the first 3 joints.  Make sure you use a PSM controller, i.e. a controller with a single 24V motor power supply for both FPGA-QLA.  Controllers for the MTMs have two power supplies for the motors, a 24V for the first 4 axis and a 12V for the last 4 axis.  On your controller, set the board IDs to 4 and 5 (see [XML configuration](/jhu-dvrk/sawIntuitiveResearchKit/wiki/XMLConfig)).
+Make sure you use an ECM controller, i.e. a controller with a single 36V motor power supply for both FPGA-QLA sets.  Controllers for the MTMs have two power supplies for the motors, a 24V for the first 4 axis and a 12V for the last 4 axis.  Controllers for the PSMs have a single power supply for all axis but it is only 24V.  On your controller, set the board IDs to 4 and 5 (see [XML configuration](/jhu-dvrk/sawIntuitiveResearchKit/wiki/XMLConfig)).
 
 ## XML configuration
 
@@ -127,11 +127,11 @@ We are not totally sure how much variability there is between systems.  In order
 | JHU |0.300|0.2  |0.090|0.300|0.2  |0.070|0.900|0.2  |0.200|
 | ISI |0.250|0.2  |0.100|0.210|0.2  |0.100|0.600|0.2  |0.150|
 
-**Important note:** We found that the power requirements are close to the maximum amount of power a 24V power supply can deliver.  There is some variability between different systems and brakes so you might need to upgrade the power supply to 36V in the controller enclosure.  To check if you have reached the maximum deliverable power, keep an eye on the current feedback.  These values should be close to the required current.  If the current feedback seems to plateau while you increase the requested current, you'll likely need to upgrade your power supply.
+**Important note for older dVRK controllers:** We found that the power requirements are close to the maximum amount of power a 24V power supply can deliver.  There is some variability between different systems and brakes so you might need to upgrade the power supply to 36V in the controller enclosure.  To check if you have reached the maximum deliverable power, keep an eye on the current feedback.  These values should be close to the required current.  If the current feedback seems to plateau while you increase the requested current, you'll likely need to upgrade your power supply.
 
 ## dMIB modification for setup joints switch
 
-The setup joint switch/button on the ECM is not using the same digital input as the setup joint switch on the PSMs.  This was unfortunately discovered after the dMIB were designed.  In other words, you need to hack the dMIB to short a couple pins.  You will need someone in house who can do some soldering.
+The setup joint switch/button on the ECM is not using the same digital input as the setup joint switch on the PSMs.  This was unfortunately discovered after the dMIB were designed (pre 2015 revisions).  In other words, you need to hack the dMIB to short a couple pins.  You will need someone in house who can do some soldering.
 
 Using the `sawRobotIO1394QtConsole` you should be able to monitor the switch events, i.e. press and release the different buttons on the ECM arm for a little bit and monitor the changes in the "Buttons" widget/window.
 
@@ -172,4 +172,4 @@ Once the application is started, hit the `home` button.   The ECM should power p
 
 # Setup joints
 
-**TBD**
+**TBD**  Hardware is not yet available for setup joints.
