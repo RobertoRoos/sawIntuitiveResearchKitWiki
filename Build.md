@@ -104,6 +104,7 @@ These instructions allow you to go step by step if you are running into issues w
   * Press `[t]` to show advanced settings
   * Set `CISST_HAS_JSON` to `ON`
   * Set `CISST_HAS_CISSTNETLIB` to `ON`
+  * Set `CISST_USE_SI_UNITS` to `ON` (for master branch released April 28th 2015)
   * Type `[c]` to configure and then type `[e]` to exit help
   * Set `CISSTNETLIB_DOWNLOAD_NOW` to `ON`
   * Type `[c]` to configure and then type `[e]` to exit help
