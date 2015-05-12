@@ -15,7 +15,7 @@
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 # **Firmware**
-Firmware version 3.0 is now required, please upgrade.
+Firmware version 3.0 or 4.0 is now required, please upgrade.  Version 4.0 adds support for FireWire broadcasts, which enables faster I/O performance.
 https://github.com/jhu-cisst/mechatronics-firmware/wiki/FPGA-Program 
 
 # Introduction
