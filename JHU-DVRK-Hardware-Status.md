@@ -100,6 +100,9 @@ Email: zihan dot chen at jhu dot edu
 
 **Batch 3**
 
+| S/N     | Status | Location | Comment     |
+|---------|--------|----------|-------------|
+| 4265-14 | GOOD   | JHU      | Short under J3 (Enc/Din) Fixed    |
 
 ### Log 
 
