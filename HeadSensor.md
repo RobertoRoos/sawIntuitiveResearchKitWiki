@@ -42,15 +42,15 @@ Notes:
 
 * Setup option 1: base
 
-  ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-head-sensor-base.jpg)
+  ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/head/dvrk-head-sensor-base.jpg)
 
 * Setup option 2: side
 
-  ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-head-sensor-side.jpg)  
+  ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/head/dvrk-head-sensor-side.jpg)  
 
 * Connection to controller box
 
-  ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-head-sensor-controller.jpg)
+  ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/head/dvrk-head-sensor-controller.jpg)
 
 # 5. Software
  * Rerun MATLAB XML config generator to make sure the digital input is renamed "HEAD"
@@ -115,4 +115,5 @@ subplot(3,1,3); plot(v);
 title('Present'); axis([0 1000 -0.1 1.1]);
 ```
 
-![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-head-sensor-algorithm.jpg)
+**Sample Result:**  
+![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/head/dvrk-head-sensor-algorithm.jpg)
