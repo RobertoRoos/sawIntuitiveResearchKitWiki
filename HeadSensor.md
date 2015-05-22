@@ -7,7 +7,7 @@
 - [3. Wiring](#3-wiring)
 - [4. Setup](#4-setup)
 - [5. Software](#5-software)
-- [6. Debouncing Algorithm](#5-debouncing-algorithm)
+- [6. Debouncing Algorithm](#6-debouncing-algorithm)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
