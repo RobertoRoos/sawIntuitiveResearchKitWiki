@@ -72,7 +72,7 @@ Now under the `~/dev/cisst directory`, there are three folders: `cisst-saw`, `ci
 
 ### 2.2. Manual build
 
-These instructions allow you to go step by step if you are running into issues with the automatic build.
+These instructions allow you to go step by step if you are running into issues with the automatic build. These instructions will automatically set it in release mode.
  
 1. Create folder, source, build
 
@@ -102,18 +102,18 @@ These instructions allow you to go step by step if you are running into issues w
   * Type `[c]` to configure and check error
   * Press `[e]` to exit messages view
   * Press `[t]` to show advanced settings
-  * Set `CISST_HAS_JSON` to `ON`
   * Set `CISST_HAS_CISSTNETLIB` to `ON`
+  * Set `CISST_HAS_JSON` to `ON`
   * Set `CISST_USE_SI_UNITS` to `ON` (for master branch released April 28th 2015)
   * Type `[c]` to configure and then type `[e]` to exit help
   * Set `CISSTNETLIB_DOWNLOAD_NOW` to `ON`
   * Type `[c]` to configure and then type `[e]` to exit help
   * Set `CISSTNETLIB_DOWNLOAD_ARCHITECT` to `i686` for 32-bit system or `x86_64` for 64-bit system
   * Set `CISST_cisstRobot` to `ON`
-  * Set `SAW_sawRobotIO1394` to `ON`
-  * Set `SAW_sawControllers` to `ON`
   * Set `SAW_sawConstraintController` to `ON`
+  * Set `SAW_sawControllers` to `ON`
   * Set `SAW_sawIntuitiveResearchKit` to `ON`
+  * Set `SAW_sawRobotIO1394` to `ON`
   * Set `SAW_sawTextToSpeech` to `ON`
   * Type `[c]` to configure and then type `[e]` to exit help
   * Type `[c]` to configure and then type `[e]` to exit help (you have to do it twice!)
