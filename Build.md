@@ -108,8 +108,9 @@ These instructions allow you to go step by step if you are running into issues w
   * Type `[c]` to configure and then type `[e]` to exit help
   * Set `CISSTNETLIB_DOWNLOAD_NOW` to `ON`
   * Type `[c]` to configure and then type `[e]` to exit help
-  * Set `CISSTNETLIB_DOWNLOAD_ARCHITECT` to `i686` for 32-bit system or `x86_64` for 64-bit system
+  * Set `CISSTNETLIB_DOWNLOAD_ARCHITECT` to `i686` for 32-bit system or `x86_64` for 64-bit system (you can figure out your system architecture using the command line `uname -i`)
   * Set `CISST_cisstRobot` to `ON`
+  * Set `CISST_cisstStereoVision` to `OFF` unless you want to use cisst for your video pipeline
   * Set `SAW_sawConstraintController` to `ON`
   * Set `SAW_sawControllers` to `ON`
   * Set `SAW_sawIntuitiveResearchKit` to `ON`
