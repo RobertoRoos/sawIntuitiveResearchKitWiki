@@ -107,8 +107,8 @@ These instructions allow you to go step by step if you are running into issues w
   cmake-gui ../cisst-saw
   ```
 
-4. CMake settings
-    Instructions for gui are written within the parenthesis)
+4. Instructions are made for cmake if you want to use cmake-gui follow the instructions inside parenthesis
+  CMake settings:
   * Type `[c]` to configure and check error (click configure and use default native compilers)
   * Press `[e]` to exit messages view
   * Press `[t]` to show advanced settings 
