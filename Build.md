@@ -54,6 +54,8 @@ We provide two ways to build the software:
 
 Essentially, the `autocisst.sh` file performs all the steps described in the manual build section.
 
+Please note that both of these ways will automatically set the code in release mode.
+
 ### 2.1. Automatic build
 
 To use autocisst.sh to automatically download and build the cisst library and sawIntuitiveResearchKit, please create a directory for the library, download the script file and run the script.
@@ -68,11 +70,11 @@ To use autocisst.sh to automatically download and build the cisst library and sa
   bash ./autocisst.sh
   ```
 
-Now under the `~/dev/cisst directory`, there are three folders: `cisst-saw`, `cisstNetlib-Linux` and `build`. If you have `sawIntuitiveResearchKitQtPID` under the `build/bin directory`, the build is successful. 
+Now under the `~/dev/cisst directory`, there are three folders: `cisst-saw`, `cisstNetlib-Linux` and `build`. If you have `sawIntuitiveResearchKitQtPID` under the `dev/cisst/build/cisst/bin directory`, the build is successful. 
 
 ### 2.2. Manual build
 
-These instructions allow you to go step by step if you are running into issues with the automatic build. These instructions will automatically set it in release mode.
+These instructions allow you to go step by step if you are running into issues with the automatic build.
  
 1. Create folder, source, build
 
@@ -126,8 +128,7 @@ Once you're done with the CMake configuration, you can now compile the code usin
   ```bash
   make -j4 -l
   ```
-
-The number 4 corresponds to the number of parallel compilations, replace it by whatever number of cores you have to compile faster.
+Please Note that the number 4 corresponds to the number of parallel compilations, replace it by whatever number of cores you have to compile faster.
 
 ## 3. Compile in Release mode.
 
@@ -146,6 +147,7 @@ Once CMake is started, look for the variable `CMAKE_BUILD_TYPE` and make sure it
 
 
 ## 4. Setting up some environment variables
+If you intend to do some C ++ development or coding this is a nicer environment(IDE).
 
 cisst/saw uses a few environment variables, standard ones such as `PATH` (see http://www.linfo.org/path_env_var.html) and `LD_LIBRARY_PATH` (see http://tldp.org/HOWTO/Program-Library-HOWTO/shared-libraries.html).  To simplify the user's life, we provide scripts to set these environment variables based on individual setups.  To set your environment variables with `bash`, go in your build tree and type:
 
