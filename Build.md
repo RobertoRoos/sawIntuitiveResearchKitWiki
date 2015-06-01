@@ -186,7 +186,7 @@ To compile a bit faster, you can change the  `Build Settings` and add the comman
 ![Build settings screenshot](/jhu-dvrk/sawIntuitiveResearchKit/wiki/qt-creator-build-settings.png)
 
 
-To run and debug programs from QtCreator, go to `Run Settings`:
+To run and debug programs from QtCreator, go to `Run Settings` or in some cases it should be under desktop and `Run`:
 * Select an executable target (i.e. program)
 * Add the command line options
 * Change the working directory to whatever location you have used to store your configurations file
