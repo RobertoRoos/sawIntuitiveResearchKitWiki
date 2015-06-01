@@ -99,29 +99,39 @@ These instructions allow you to go step by step if you are running into issues w
   # set cmake settings
   ccmake ../cisst-saw
   ```
+  If you want to use gui for this step:
+  ```bash
+  # go to build dir 
+  cd build
+  # set cmake settings
+  cmake-gui ../cisst-saw
+  ```
 
-4. CMake settings
-  * Type `[c]` to configure and check error
+4. CMake settings (if you are using gui the steps are written within the parenthesis)
+  * Type `[c]` to configure and check error (click configure and use default native compilers)
   * Press `[e]` to exit messages view
-  * Press `[t]` to show advanced settings
-  * Set `CISST_HAS_CISSTNETLIB` to `ON`
-  * Set `CISST_HAS_JSON` to `ON`
-  * Set `CISST_USE_SI_UNITS` to `ON` (for master branch released April 28th 2015)
+  * Press `[t]` to show advanced settings 
+  * Set `CISST_HAS_CISSTNETLIB` to `ON`(This should be under CISST, check the box next to it)
+  * Set `CISST_HAS_JSON` to `ON`(This should be under CISST, check the box next to it)
+  * Set `CISST_USE_SI_UNITS` to `ON` (This should be under CISST, check the box next to it)
+      Note: this is for master branch released April 28th 2015 
+  * Type `[c]` to configure and then type `[e]` to exit help 
+  * Set `CISSTNETLIB_DOWNLOAD_NOW` to `ON` (This should be under CISSTNETLIB, check the box next to it)
   * Type `[c]` to configure and then type `[e]` to exit help
-  * Set `CISSTNETLIB_DOWNLOAD_NOW` to `ON`
-  * Type `[c]` to configure and then type `[e]` to exit help
-  * Set `CISSTNETLIB_DOWNLOAD_ARCHITECT` to `i686` for 32-bit system or `x86_64` for 64-bit system (you can figure out your system architecture using the command line `uname -i`)
-  * Set `CISST_cisstRobot` to `ON`
+  * Set `CISSTNETLIB_DOWNLOAD_ARCHITECT` to `i686` for 32-bit system or `x86_64` for 64-bit system (This should be under Ungrouped entries, check the box next to it)
+      Note : you can figure out your system architecture using the command line `uname -i
+  * Set `CISST_cisstRobot` to `ON`(Under CISST turn on `CISST_cisstRobot`)
   * Set `CISST_cisstStereoVision` to `OFF` unless you want to use cisst for your video pipeline
-  * Set `SAW_sawConstraintController` to `ON`
-  * Set `SAW_sawControllers` to `ON`
-  * Set `SAW_sawIntuitiveResearchKit` to `ON`
-  * Set `SAW_sawRobotIO1394` to `ON`
-  * Set `SAW_sawTextToSpeech` to `ON`
-  * Type `[c]` to configure and then type `[e]` to exit help
-  * Type `[c]` to configure and then type `[e]` to exit help (you have to do it twice!)
-  * Set `CMAKE_BUILD_TYPE` to `Release`
-  * Type `[g]` to generate
+  * Set `SAW_sawConstraintController` to `ON` (Under SAW turn on `SAW_sawConstraintController`)
+  * Set `SAW_sawControllers` to `ON` (Under SAW turn on `SAW_sawControllers`)
+  * Set `SAW_sawIntuitiveResearchKit` to `ON` (Under SAW turn on `SAW_sawIntuitiveResearchKit`)
+  * Set `SAW_sawRobotIO1394` to `ON` (Under SAW turn on `SAW_sawRobotIO1394`)
+  * Set `SAW_sawTextToSpeech` to `ON` (Under SAW turn on `SAW_sawTextToSpeech`)
+  * Type `[c]` to configure and then type `[e]` to exit help (click configure and use default native compilers)
+  * Type `[c]` to configure and then type `[e]` to exit help (click configure and use default native compilers)
+      Note: you will have to do it twice
+  * Set `CMAKE_BUILD_TYPE` to `Release` (`CMAKE_BUILD_TYPE` should be under CMake, type Release)
+  * Type `[g]` to generate (click Generate and under select exit)
 
 Once you're done with the CMake configuration, you can now compile the code using the command line:
 
