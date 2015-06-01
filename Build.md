@@ -177,7 +177,7 @@ For the research kit, the basic steps are:
 * Once you have a working source and build tree (i.e. you've followed instructions above and can compile), start QtCreator and:
  * In menu `File`, `Open File or Project`, go to source directory to locate the top `cisst-saw/CMakeLists.txt`
   * Replace the build directory suggested by QtCreator by your own (e.g. `~/dev/cisst/build`)
-  * Hit `Run CMake`
+  * Hit `Run CMake` (or depending on your software `Configure Project)
 
 ### 5.2. Settings
 
