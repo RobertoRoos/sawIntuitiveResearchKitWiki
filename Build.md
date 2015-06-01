@@ -107,7 +107,8 @@ These instructions allow you to go step by step if you are running into issues w
   cmake-gui ../cisst-saw
   ```
 
-4. CMake settings (if you are using gui the steps are written within the parenthesis)
+4. CMake settings
+    Instructions for gui are written within the parenthesis)
   * Type `[c]` to configure and check error (click configure and use default native compilers)
   * Press `[e]` to exit messages view
   * Press `[t]` to show advanced settings 
@@ -115,12 +116,12 @@ These instructions allow you to go step by step if you are running into issues w
   * Set `CISST_HAS_JSON` to `ON`(This should be under CISST, check the box next to it)
   * Set `CISST_USE_SI_UNITS` to `ON` (This should be under CISST, check the box next to it)
       Note: this is for master branch released April 28th 2015 
-  * Type `[c]` to configure and then type `[e]` to exit help 
+  * Type `[c]` to configure and then type `[e]` to exit help (click configure and use default native compilers)
   * Set `CISSTNETLIB_DOWNLOAD_NOW` to `ON` (This should be under CISSTNETLIB, check the box next to it)
   * Type `[c]` to configure and then type `[e]` to exit help
-  * Set `CISSTNETLIB_DOWNLOAD_ARCHITECT` to `i686` for 32-bit system or `x86_64` for 64-bit system (This should be under Ungrouped entries, check the box next to it)
+  * Set `CISSTNETLIB_DOWNLOAD_ARCHITECT` to `i686` for 32-bit system or `x86_64` for 64-bit system (This should be under Ungrouped Entries, check the box next to it)
       Note : you can figure out your system architecture using the command line `uname -i
-  * Set `CISST_cisstRobot` to `ON`(Under CISST turn on `CISST_cisstRobot`)
+  * Set `CISST_cisstRobot` to `ON`(This should be under CISST turn on `CISST_cisstRobot`)
   * Set `CISST_cisstStereoVision` to `OFF` unless you want to use cisst for your video pipeline
   * Set `SAW_sawConstraintController` to `ON` (Under SAW turn on `SAW_sawConstraintController`)
   * Set `SAW_sawControllers` to `ON` (Under SAW turn on `SAW_sawControllers`)
