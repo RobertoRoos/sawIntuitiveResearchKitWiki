@@ -110,6 +110,7 @@ The top sections of the IO widget are:
 ***IMPORTANT:*** as soon as you have verified that the current direction is correct for a given joint, turn the requested current back to zero.
 
 Once everything has been checked all the sensors, you can power the controllers.  When you hit "Power/ Enable all", all the power indicators on the Qt widget should turn green.   Please keep an eye on the current feedback and a hand on the e-stop button.  There is a couple more things to check:
+
 1. Check the box "Current - Direct control".  This allows you to use the IO Widget to set the required currents.
 1. You should see all current feedback values hovering close to zero.  If not, you might have to redo the current calibration as described in [Calibrating and updating XML configuration files](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Calibration).
 1. Joint by joint, apply a very small current (in GUI request current), something in the order of 100 mA.   You should feel a torque/force on the arm AND the current feedback should match the requested current value.  Make sure each joint moves in the correct direction, i.e. if you apply a positive current the joint position increases and if you apply a negative current the joint position decreases.
