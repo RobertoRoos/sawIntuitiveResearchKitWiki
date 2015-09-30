@@ -3,7 +3,8 @@
 Getting Started
 * [First Steps](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FirstSteps)
 * [Setting up environment](/jhu-cisst/mechatronics-software/wiki/Development-Environment)
-* [Build instructions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Build)
+* [Build with ROS](/jhu-dvrk/sawIntuitiveResearchKit/wiki/CatkinBuild)
+* [Build instructions w/o ROS](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Build)
 * [XML configuration](/jhu-dvrk/sawIntuitiveResearchKit/wiki/XMLConfig)
 * [Hardware setup](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Hardware)
 * [Calibration](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Calibration)
@@ -12,8 +13,7 @@ Getting Started
 * [Full da Vinci system](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Full-da-Vinci)
 
 Advanced 
-* [Build with ROS catkin_make](/jhu-dvrk/dvrk-ros)
-* [Build cisst, dVRK and ROS components with catkin build tools](/jhu-dvrk/sawIntuitiveResearchKit/wiki/CatkinBuild)
+* [Build with ROS catkin_make (deprecated)](/jhu-dvrk/dvrk-ros)
 * [Simulation with ROS](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Simulation)
 
 Controller
