@@ -4,8 +4,7 @@ These instructions are provided for those who want to build the whole cisst/SAW 
 # Packages
 
 ## cisstNetlib, cisst, SAW components and cisst-ros bridge
-
-See [cisst/SAW catkin instructions](https://github.com/jhu-cisst/cisst/wiki/Compiling-cisst-and-SAW-with-CMake#13-building-using-catkin-build-tools-for-ros)
+You will first need to build cisst and its dependencies, see [cisst/SAW catkin instructions](https://github.com/jhu-cisst/cisst/wiki/Compiling-cisst-and-SAW-with-CMake#13-building-using-catkin-build-tools-for-ros)
 
 ## dvrk-ros
 
