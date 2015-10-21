@@ -58,7 +58,6 @@ Related sites:
   * [sawRobotIO1394](https://github.com/jhu-saw/sawRobotIO1394/blob/master/CHANGELOG.md)
   * [sawControllers](https://github.com/jhu-saw/sawControllers/blob/master/CHANGELOG.md)
   * [mechatronics software](https://github.com/jhu-cisst/mechatronics-software/blob/master/CHANGELOG.md)
-
 * *April 2015*: Version 1.1.0 released
 * *April 2014*: Moved to GitHub
 * *May 2013*: Initial Public Release
