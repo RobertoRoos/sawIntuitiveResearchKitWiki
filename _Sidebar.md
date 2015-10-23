@@ -13,7 +13,7 @@ Getting Started
 * [Full da Vinci system](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Full-da-Vinci)
 
 Advanced
-* [Software architecture](/jhu-dvrk/software-architecture)
+* [Software architecture](/jhu-dvrk/Software-Architecture)
 * [Build with ROS catkin_make (deprecated)](/jhu-dvrk/dvrk-ros)
 * [Simulation with ROS](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Simulation)
 
