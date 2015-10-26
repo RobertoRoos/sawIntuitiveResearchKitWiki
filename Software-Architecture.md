@@ -19,6 +19,27 @@
 
 # Overview
 
+The dVRK hardware and software stack is composed of:
+* FPGA/QLA boards: the embedded firmware performs:
+  * Collect data from digital inputs data (limit/home switches)
+  * Control digital outputs (ON/OFF/PWM)
+  * Compute encoder positions and velocities, including detecting overflow and preload
+  * Perform basic safety checks on motor current (consistency between requested and measured)
+  * Implement subset of FireWire protocol to communicate with a computer
+  * Maintain a watchdog to make sure the PC is still connected and communicating with the controller
+  * See:
+    * http://jhu-cisst.github.io/mechatronics
+    * https://github.com/jhu-cisst/mechatronics-firmware
+* C low level library
+  * Runs on the PC sides on top of Linux/libraw1394
+  * Pack/unpack data to/from FPGA, i.e. convert bits to usable numbers (integers)
+  * Handles multiple FPGA and treat them as single controller (
+  * Simple text based programs to test hardware (`qladisp`, `qlatest`, `qlacloserelays`, ...)
+  * See:
+    * https://github.com/jhu-cisst/mechatronics-software/wiki
+    * https://github.com/jhu-dvrk/sawIntuitiveResearchKit/wiki/Hardware
+
+
 # C++
 
 ## IO level
