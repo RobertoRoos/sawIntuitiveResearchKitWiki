@@ -2,21 +2,21 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
 
-- [1 Overview](#1-overview)
-- [2 Low level](#2-low-level)
-  - [2.1 FPGA/QLA boards](#21-fpgaqla-boards)
-  - [2.2 AmpIO library](#22-ampio-library)
-- [3 C++](#3-c)
-  - [3.1 IO level](#31-io-level)
-  - [3.2 PID controller](#32-pid-controller)
-  - [3.3 Arm classes](#33-arm-classes)
-  - [3.4 Tele-operation](#34-tele-operation)
-  - [3.5 Console](#35-console)
-- [4 Qt](#4-qt)
-- [5 ROS](#5-ros)
-  - [5.1 Topics](#51-topics)
-  - [5.2 Python](#52-python)
-  - [5.3 Matlab](#53-matlab)
+- [1. Overview](#1-overview)
+- [2. Low level](#2-low-level)
+  - [2.1. FPGA/QLA boards](#21-fpgaqla-boards)
+  - [2.2. AmpIO library](#22-ampio-library)
+- [3. C++](#3-c)
+  - [3.1. IO level](#31-io-level)
+  - [3.2. PID controller](#32-pid-controller)
+  - [3.3. Arm classes](#33-arm-classes)
+  - [3.4. Tele-operation](#34-tele-operation)
+  - [3.5. Console](#35-console)
+- [4. Qt](#4-qt)
+- [5. ROS](#5-ros)
+  - [5.1. Topics](#51-topics)
+  - [5.2. Python](#52-python)
+  - [5.3. Matlab](#53-matlab)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 

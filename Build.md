@@ -2,16 +2,16 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
 
-- [Building the software](#building-the-software)
-  - [1. Dependencies](#1-dependencies)
-  - [2. cisst/saw](#2-cisstsaw)
-    - [2.1. Automatic build](#21-automatic-build)
-    - [2.2. Manual build](#22-manual-build)
-  - [3. Compile in Release mode.](#3-compile-in-release-mode)
-  - [4. Setting up some environment variables](#4-setting-up-some-environment-variables)
-  - [5. Using Qt Creator](#5-using-qt-creator)
-    - [5.1. Step by step instructions](#51-step-by-step-instructions)
-    - [5.2. Settings](#52-settings)
+- [1. Building the software](#1-building-the-software)
+- [2. Dependencies](#2-dependencies)
+- [3. cisst/saw](#3-cisstsaw)
+  - [3.1. Automatic build](#31-automatic-build)
+  - [3.2. Manual build](#32-manual-build)
+- [4. Compile in Release mode.](#4-compile-in-release-mode)
+- [5. Setting up some environment variables](#5-setting-up-some-environment-variables)
+- [6. Using Qt Creator](#6-using-qt-creator)
+  - [6.1. Step by step instructions](#61-step-by-step-instructions)
+  - [6.2. Settings](#62-settings)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
