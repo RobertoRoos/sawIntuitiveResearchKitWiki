@@ -60,7 +60,7 @@ All C++ components are based on the cisst/SAW libraries, more specifically the c
   * Tutorial: https://github.com/jhu-cisst/cisst/wiki/cisstMultiTask-tutorial
   * Concepts: https://github.com/jhu-cisst/cisst/wiki/cisstMultiTask-concepts
 
-## 3.1. IO level
+## 3.1. Robot IOs
 
 ## 3.2. PID controller
 
@@ -70,7 +70,17 @@ All C++ components are based on the cisst/SAW libraries, more specifically the c
 
 ## 3.5. Console
 
-# 4. Qt
+# 4. Qt widgets
+
+## 4.1. Robot IOs
+
+## 4.2. PID controller
+
+## 4.3. Arm classes
+
+## 4.4. Tele-operation
+
+## 4.5. Console
 
 # 5. ROS
 
