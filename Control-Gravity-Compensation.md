@@ -1,3 +1,21 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+
+- [Gravity Compensation](#gravity-compensation)
+    - [DH Parameters](#dh-parameters)
+    - [Simulation](#simulation)
+    - [Summary](#summary)
+  - [MTM Dynamatics](#mtm-dynamatics)
+    - [Parallel Mechanism](#parallel-mechanism)
+  - [Demo Video](#demo-video)
+    - [Other Approaches](#other-approaches)
+  - [Appendix I: MTM DH Parameters](#appendix-i-mtm-dh-parameters)
+  - [Appendix II: KDL with DH parameters](#appendix-ii-kdl-with-dh-parameters)
+  - [Appendix III: Matlab Toolbox](#appendix-iii-matlab-toolbox)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Gravity Compensation
 
 In ideal case, given robot link mass and center of mass, Recursive Newton Euler (RNE) algorithm can be used to compute gravity compensation terms. To get this correct, we need two things:

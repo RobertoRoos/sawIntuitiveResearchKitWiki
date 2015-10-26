@@ -4,7 +4,7 @@
 
 - [1. Calibration](#1-calibration)
 - [2. Current offsets](#2-current-offsets)
-  - [2.0. Prerequisite](#20-prerequisite)
+  - [2.0 Prerequisite](#20-prerequisite)
   - [2.1. Introduction](#21-introduction)
   - [2.2. Procedure](#22-procedure)
 - [3. Gripper on MTMs](#3-gripper-on-mtms)

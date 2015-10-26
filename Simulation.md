@@ -1,3 +1,21 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+
+- [intuitive_research_kit_ros Documentation (deprecated)](#intuitive_research_kit_ros-documentation-deprecated)
+  - [1. About](#1-about)
+  - [2. Dependency](#2-dependency)
+  - [3. Download and Build](#3-download-and-build)
+- [to ros workspace](#to-ros-workspace)
+- [clone repository](#clone-repository)
+- [add to ros workspace](#add-to-ros-workspace)
+- [resource](#resource)
+- [build irk_kinematics](#build-irk_kinematics)
+- [build irk_teleop](#build-irk_teleop)
+- [One MTM + PSM teleoperation](#one-mtm--psm-teleoperation)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # intuitive_research_kit_ros Documentation (deprecated)
 Please refer to https://github.com/jhu-dvrk/dvrk-ros
 

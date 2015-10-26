@@ -8,6 +8,7 @@
 - [Documentation](#documentation)
   - [Getting Started](#getting-started)
   - [Advanced](#advanced)
+  - [Controller](#controller)
   - [Publications](#publications)
 - [Miscellaneous](#miscellaneous)
 - [Acknowledgments](#acknowledgments)

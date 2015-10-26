@@ -1,3 +1,15 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+
+- [Current Setup](#current-setup)
+- [Manufacture Batch](#manufacture-batch)
+- [FPGA boards](#fpga-boards)
+- [QLA boards](#qla-boards)
+- [Log](#log)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 This page documents all FPGA/QLA boards and DVRK setup and status in JHU. 
 
 Maintainer: Zihan Chen   

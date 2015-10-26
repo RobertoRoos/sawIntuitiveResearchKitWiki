@@ -2,7 +2,7 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
 
-- [What does ISI, Classic, S, Si, Xi, PSM, MTM, ECM, SUJ, HSRV, ... mean?](#what-does-isi-classic-s-si-psm-mtm-ecm-suj-hsrv--mean)
+- [What does ISI, Classic, S, Si, Xi, PSM, MTM, ECM, SUJ, HSRV, ... mean?](#what-does-isi-classic-s-si-xi-psm-mtm-ecm-suj-hsrv--mean)
 - [What does QLA-FPGA, qladisp, ... mean?](#what-does-qla-fpga-qladisp--mean)
 - [What PC configuration do you suggest?](#what-pc-configuration-do-you-suggest)
 - [The PSMs aren't moving](#the-psms-arent-moving)
