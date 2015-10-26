@@ -15,11 +15,11 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# Building the software
+# 1. Building the software
 
 These instructions are specific to Ubuntu Linux.  The low level software is Linux specific (i.e. it won't run on other OSs) but should run on any Linux distribution.  High level components (all but `sawRobotIO1394`) can be compiled on Linux, Windows, MacOS and used in separate processes using cisstMultiTask with ICE.
 
-## 1. Dependencies
+# 2. Dependencies
 
 * Linux for IEEE-1394 (Firewire) - Ubuntu 12.04 preferably, Ubuntu 14.04 should work  
 * git
@@ -36,7 +36,7 @@ sudo apt-get install libxml2-dev libraw1394-dev libncurses5-dev qtcreator
 sudo apt-get install flite cmake-curses-gui cmake-qt-gui libopencv-dev git subversion
 ```
 
-## 2. cisst/saw
+# 3. cisst/saw
 
 The main repositories for the dVRK project are:
 * http://github.com/jhu-cisst/cisst-saw.git - equivalent of the cisst SVN repository - you need to checkout this first.  It uses submodules to clone all cisst libraries and SAW components
@@ -56,7 +56,7 @@ Essentially, the `autocisst.sh` file performs all the steps described in the man
 
 Please note that both of these ways will automatically set the code in release mode.
 
-### 2.1. Automatic build
+## 3.1. Automatic build
 
 To use autocisst.sh to automatically download and build the cisst library and sawIntuitiveResearchKit, please create a directory for the library, download the script file and run the script.
 
@@ -72,7 +72,7 @@ To use autocisst.sh to automatically download and build the cisst library and sa
 
 Now under the `~/dev/cisst directory`, there are three folders: `cisst-saw`, `cisstNetlib-Linux` and `build`. If you have `sawIntuitiveResearchKitQtPID` under the `dev/cisst/build/cisst/bin directory`, the build is successful. 
 
-### 2.2. Manual build
+## 3.2. Manual build
 
 These instructions allow you to go step by step if you are running into issues with the automatic build.
  
@@ -141,7 +141,7 @@ Once you're done with the CMake configuration, you can now compile the code usin
   ```
 Please Note that the number 4 corresponds to the number of parallel compilations, replace it by whatever number of cores you have to compile faster.
 
-## 3. Compile in Release mode.
+# 4. Compile in Release mode.
 
 Compiling in Release mode can greatly improve performances.  To make sure your build is configured to use the Release mode (telling the compiler to optimize the code), go to your build directory and start CMake using:
 
@@ -157,7 +157,7 @@ Alternatively, you can also use the CMake text based program using:
 Once CMake is started, look for the variable `CMAKE_BUILD_TYPE` and make sure it is set to `Release`.  By default, the variable is empty.
 
 
-## 4. Setting up some environment variables
+# 5. Setting up some environment variables
 If you intend to do some C ++ development or coding this is a nicer environment(IDE).
 
 cisst/saw uses a few environment variables, standard ones such as `PATH` (see http://www.linfo.org/path_env_var.html) and `LD_LIBRARY_PATH` (see http://tldp.org/HOWTO/Program-Library-HOWTO/shared-libraries.html).  To simplify the user's life, we provide scripts to set these environment variables based on individual setups.  To set your environment variables with `bash`, go in your build tree and type:
@@ -176,13 +176,13 @@ Notes:
 
 * If you still have some issues with your firewire permissions and need to use `sudo` to start any dVRK program, the `cisstvars.sh` won't work since `sudo` starts a new shell that won't inherit the current shell's variables.   So, fix the firewire permissions first (see https://github.com/jhu-cisst/mechatronics-software/wiki/Development-Environment)
 
-## 5. Using Qt Creator
+# 6. Using Qt Creator
 
 Qt Creator is a nice IDE (Integrated Development Environment) that works well with CMake.   There are many pages describing the process:
 * http://qt-project.org/doc/qtcreator-2.8/creator-project-cmake.html (skip the Windows specifics)
 * http://www.youtube.com/watch?v=I208-iVEpwk (youtube video)
 
-### 5.1. Step by step instructions
+## 6.1. Step by step instructions
 For the research kit, the basic steps are:
 * First setup your build tree manually.  Starting with an empty build tree from QtCreator won't work as you need to set some CMake options first.
 * Once you have a working source and build tree (i.e. you've followed instructions above and can compile), start QtCreator and:
@@ -190,7 +190,7 @@ For the research kit, the basic steps are:
   * Replace the build directory suggested by QtCreator by your own (e.g. `~/dev/cisst/build`)
   * Hit `Run CMake` (or depending on your software `Configure Project)
 
-### 5.2. Settings
+## 6.2. Settings
 
 To compile a bit faster, you can change the  `Build Settings` and add the command line option `-j4` or whatever number of core you have.
 
