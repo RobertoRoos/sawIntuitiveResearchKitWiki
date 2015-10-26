@@ -20,7 +20,7 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# 1 Overview
+# 1. Overview
 
 The dVRK hardware and software stack is composed of:
 * Firmware on FPGA/QLA interfacing IO with FireWire
@@ -28,9 +28,9 @@ The dVRK hardware and software stack is composed of:
 * C++ components using the cisst/SAW libraries to implement IOs, controllers (PID, tele-operation), console, GUI, bridges to ROS, ...
 * ROS wrapper around dVRK topics
 
-# 2 Low level
+# 2. Low level
 
-## 2.1 FPGA/QLA boards
+## 2.1. FPGA/QLA boards
 The embedded firmware performs:
   * Collect data from digital inputs data (limit/home switches)
   * Control digital outputs (ON/OFF/PWM)
@@ -42,7 +42,7 @@ The embedded firmware performs:
     * http://jhu-cisst.github.io/mechatronics
     * https://github.com/jhu-cisst/mechatronics-firmware
 
-## 2.2 AmpIO library
+## 2.2. AmpIO library
 C low level library:
   * Runs on the PC sides on top of Linux/libraw1394
   * Pack/unpack data to/from FPGA, i.e. convert bits to usable numbers (integers)
@@ -52,7 +52,7 @@ C low level library:
     * https://github.com/jhu-cisst/mechatronics-software/wiki
     * https://github.com/jhu-dvrk/sawIntuitiveResearchKit/wiki/Hardware
 
-# 3 C++
+# 3. C++
 
 All C++ components are based on the cisst/SAW libraries, more specifically the cisstMultiTask framework:
 * cisst libraries: https://github.com/jhu-cisst/cisst/wiki
@@ -60,22 +60,22 @@ All C++ components are based on the cisst/SAW libraries, more specifically the c
   * Tutorial: https://github.com/jhu-cisst/cisst/wiki/cisstMultiTask-tutorial
   * Concepts: https://github.com/jhu-cisst/cisst/wiki/cisstMultiTask-concepts
 
-## 3.1 IO level
+## 3.1. IO level
 
-## 3.2 PID controller
+## 3.2. PID controller
 
-## 3.3 Arm classes
+## 3.3. Arm classes
 
-## 3.4 Tele-operation
+## 3.4. Tele-operation
 
-## 3.5 Console
+## 3.5. Console
 
-# 4 Qt
+# 4. Qt
 
-# 5 ROS
+# 5. ROS
 
-## 5.1 Topics
+## 5.1. Topics
 
-## 5.2 Python
+## 5.2. Python
 
-## 5.3 Matlab
+## 5.3. Matlab
