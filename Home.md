@@ -77,7 +77,7 @@ Related sites:
 
 ## Advanced 
 
-* [Software architecture](/jhu-dvrk/software-architecture)
+* [Software architecture](/jhu-dvrk/sawIntuitiveResearchKit/wiki/software-architecture)
 * [Build with ROS](/jhu-dvrk/dvrk-ros)
 * [Simulate MTM/PSM with ROS](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Simulation)
 
