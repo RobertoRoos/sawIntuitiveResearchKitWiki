@@ -1,4 +1,5 @@
 [Main](/jhu-dvrk/sawIntuitiveResearchKit/wiki)
+
 Getting Started
 * [First Steps](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FirstSteps)
 * [Setting up environment](/jhu-cisst/mechatronics-software/wiki/Development-Environment)
@@ -10,12 +11,15 @@ Getting Started
 * [Examples](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Examples)
 * [E-STOP wiring](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ESTOP)
 * [Full da Vinci system](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Full-da-Vinci)
+
 Advanced
 * [Software architecture](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Software-Architecture)
 * [Build with ROS catkin_make (deprecated)](/jhu-dvrk/dvrk-ros)
 * [Simulation with ROS](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Simulation)
+
 Controller
 * [MTM Gravity Compensation](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Control-Gravity-Compensation)
+
 Miscellaneous
 * [cisst](/jhu-cisst/cisst/wiki)
 * [Head Sensor](/jhu-dvrk/sawIntuitiveResearchKit/wiki/HeadSensor)
