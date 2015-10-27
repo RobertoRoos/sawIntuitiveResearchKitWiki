@@ -124,7 +124,7 @@ Each of these instantiates some virtual methods to reflect each arm characterist
 * kinematics
 * homing procedure including different states (e.g. sterile adapter and tool for PSMs)
 
-All arm classes currently use a text based configuration file which defines the DH parameters, see dv*.rob files in sawIntuitiveResearchKit [shared directory](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/tree/master/share).
+All arm classes currently use a text based configuration file which defines the DH parameters, see `dv*.rob` files in sawIntuitiveResearchKit [shared directory](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/tree/master/share).
 
 Most application should communicate with the arm classes to make sure that state of the system is consistent.  IO and PID components should be used in "read only" mode.
 
