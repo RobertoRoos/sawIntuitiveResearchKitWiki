@@ -60,6 +60,8 @@ All C++ components are based on the cisst/SAW libraries, more specifically the c
   * Tutorial: https://github.com/jhu-cisst/cisst/wiki/cisstMultiTask-tutorial
   * Concepts: https://github.com/jhu-cisst/cisst/wiki/cisstMultiTask-concepts
 
+![Overview](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dVRK-component-thread-view.png)
+
 ## 3.1. Robot IOs
 
 ## 3.2. PID controller
