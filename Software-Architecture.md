@@ -31,19 +31,19 @@
 The dVRK hardware and software stack is composed of:
 * Firmware on FPGA/QLA interfacing IO with FireWire
 * Lightweight C library on PC side to interface to FPGA via FireWire
-* C++ components using the cisst/SAW libraries to implement IOs, controllers (PID, tele-operation), console, GUI, bridges to ROS, ...
+* C++ components using the _cisst_/_SAW_ libraries to implement IOs, controllers (PID, tele-operation), console, GUI, bridges to ROS, ...
 * ROS wrapper around dVRK topics
 
 # 2. Low level
 
 ## 2.1. FPGA/QLA boards
-The embedded firmware performs:
-  * Collect data from digital inputs data (limit/home switches)
-  * Control digital outputs (ON/OFF/PWM)
-  * Compute encoder positions and velocities, including detecting overflow and preload
-  * Perform basic safety checks on motor current (consistency between requested and measured)
-  * Implement subset of FireWire protocol to communicate with a computer
-  * Maintain a watchdog to make sure the PC is still connected and communicating with the controller
+Embedded firmware:
+  * Collects data from digital inputs data (limit/home switches)
+  * Controls digital outputs (ON/OFF/PWM)
+  * Computes encoder positions and velocities, including detecting overflow and preload
+  * Performs basic safety checks on motor current (consistency between requested and measured)
+  * Implements subset of FireWire protocol to communicate with a computer
+  * Maintains a watchdog to make sure the PC is still connected and communicating with the controller
   * See:
     * http://jhu-cisst.github.io/mechatronics
     * https://github.com/jhu-cisst/mechatronics-firmware
@@ -51,7 +51,7 @@ The embedded firmware performs:
 ## 2.2. AmpIO library
 C low level library:
   * Runs on the PC sides on top of Linux/libraw1394
-  * Pack/unpack data to/from FPGA, i.e. convert bits to usable numbers (integers)
+  * Packs/unpacks data to/from FPGA, i.e. convert bits to usable numbers (integers)
   * Handles multiple FPGA and treat them as single controller (
   * Simple text based programs to test hardware (`qladisp`, `qlatest`, `qlacloserelays`, ...)
   * See:
@@ -60,20 +60,18 @@ C low level library:
 
 # 3. C++
 
-All C++ components are based on the cisst/SAW libraries, more specifically the cisstMultiTask framework:
-* cisst libraries: https://github.com/jhu-cisst/cisst/wiki
-* cisstMultiTask: [tutorial](https://github.com/jhu-cisst/cisst/wiki/cisstMultiTask-tutorial) and [concepts](https://github.com/jhu-cisst/cisst/wiki/cisstMultiTask-concepts)
+All C++ components are based on the _cisst_/_SAW_ libraries, more specifically the _cisstMultiTask_ framework:
+* _cisst_ libraries: https://github.com/jhu-cisst/cisst/wiki
+* _cisstMultiTask_: [tutorial](https://github.com/jhu-cisst/cisst/wiki/cisstMultiTask-tutorial) and [concepts](https://github.com/jhu-cisst/cisst/wiki/cisstMultiTask-concepts)
 
 The overall architecture is described in this picture:
 ![Overview](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dVRK-component-thread-view.png)
-
-The core components are colored in blue.
 
 ## 3.1. Threads
 
 In general, each component owns a thread and can run at its own frequency.  There are a few notable exceptions:
  * There is a single IO component with multiple interfaces (one per arm connected).  This is required to avoid simultaneous accesses to the FireWire port (FireWire read/write are thread safe but processes can hang for a couple seconds).
- * The PID components could run in separate threads but this would introduce a fair amount of latency since the thread safe communication mechanisms in cisstMultiTask are based on queues.   Assuming a 1 millisecond period for both IO and PID, the PID would read some cached data (position and velocity) from the IO (between 0+ and 1 millisecond old) and then request a new effort.  This request being queued will be acted on between 0+ and 1 millisecond later.  Overall, the time between read and write could be as high as 2 milliseconds.  Instead, we used the cisstMultiTask ExecIn/ExecOut feature (see [cisstMultiTask concepts](https://github.com/jhu-cisst/cisst/wiki/cisstMultiTask-concepts) which allows to attach a component to another.  Effectively, the parent thread now runs the child's computation whenever needed.  In pseudo code:
+ * The PID components could run in separate threads but this would introduce a fair amount of latency since the thread safe communication mechanisms in _cisstMultiTask_ are based on queues.   Assuming a 1 millisecond period for both IO and PID, the PID would read some cached data (position and velocity) from the IO (between 0+ and 1 millisecond old) and then request a new effort.  This request being queued will be acted on between 0+ and 1 millisecond later.  Overall, the time between read and write could be as high as 2 milliseconds.  Instead, we used the _cisstMultiTask_ ExecIn/ExecOut feature (see [cisstMultiTask concepts](https://github.com/jhu-cisst/cisst/wiki/cisstMultiTask-concepts) which allows to attach a component to another.  Effectively, the parent thread now runs the child's computation whenever needed.  In pseudo code:
 
    ```c++
   IO::Run(void) {
@@ -89,25 +87,55 @@ In general, each component owns a thread and can run at its own frequency.  Ther
 
 ## 3.2. Robot IOs
 
-The class mtsRobotIO1394 is part of the [sawRobotIO1394](https://github.com/jhu-saw/sawRobotIO1394) library.  It provides:
+The class `mtsRobotIO1394` is part of the [sawRobotIO1394](https://github.com/jhu-saw/sawRobotIO1394) library.  It provides:
 * conversion to from integer from SI units
+* velocity estimation based on encoder counts and time since last change
 * actuator/joint coupling for positions and efforts
 * extra safety checks (consistency between potentiometers and encoders, compare required and measured current)
-* configuration using XML, see sawRobotIO*.xml files in sawIntuitiveResearchKit [shared directory](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/tree/master/share/jhu-daVinci)
+* configuration using XML, see `sawRobotIO*.xml` files in sawIntuitiveResearchKit [shared directory](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/tree/master/share/jhu-daVinci)
 * support for motors and brakes (e.g. dVRK ECM)
+* _cisstMultiTask_ interfaces
 
 ## 3.3. PID controller
 
-The class mtsPID is part of the [sawControllers](https://github.com/jhu-saw/sawControllers) library.  It provides:
-* a simple PID controller
+The class `mtsPID` is part of the [sawControllers](https://github.com/jhu-saw/sawControllers) library.  It provides:
+* a PID controller
 * clamp requested position within joint limits
 * check for PID tracking errors
-* configuration using XML, see sawControllersPID*.xml files in sawIntuitiveResearchKit [shared directory](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/tree/master/share)
-* cisstMultiTask interfaces
+* configuration using XML, see `sawControllersPID*.xml` files in sawIntuitiveResearchKit [shared directory](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/tree/master/share)
+* _cisstMultiTask_ interfaces
 
 ## 3.4. Arm classes
 
+All the arm classes are part of the [sawIntuitiveResearchKit](https://github.com/jhu-dvrk/sawIntuitiveResearchKit) library.  There is a base class (`mtsIntuitiveResearchKitArm`) for:
+* powering
+* getting data from the PID and IO components
+* joint and cartesian motions
+* _cisstMultiTask_ interfaces
+
+Since each arm is slightly different, there are three classes derived from the base class:
+* `mtsIntuitiveResearchKitPSM`
+* `mtsIntuitiveResearchKitECM`
+* `mtsIntuitiveResearchKitMTM`
+
+Each of these instantiates some virtual methods to reflect each arm characteristics:
+* number of joints and actuators
+* arm specific parameters (encoders/potentiometers tolerance, PID tracking error)
+* kinematics
+* homing procedure including different states (e.g. sterile adapter and tool for PSMs)
+
+All arm classes currently use a text based configuration file which defines the DH parameters, see dv*.rob files in sawIntuitiveResearchKit [shared directory](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/tree/master/share).
+
+Most application should communicate with the arm classes to make sure that state of the system is consistent.  IO and PID components should be used in "read only" mode.
+
 ## 3.5. Tele-operation
+
+The class `mtsTeleOperation` is part of the [sawControllers](https://github.com/jhu-saw/sawControllers) library.  It provides:
+* a naive position based tele-operation
+* API to set orientation between master and slave
+* handles operator present and clutch
+* options to lock position or orientation of slave arm
+* _cisstMultiTask_ interfaces
 
 ## 3.6. Console
 
