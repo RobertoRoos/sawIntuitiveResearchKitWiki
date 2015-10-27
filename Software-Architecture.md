@@ -8,6 +8,21 @@
   - [2.2. AmpIO library](#22-ampio-library)
 - [3. C++](#3-c)
   - [3.1. Threads](#31-threads)
+  - [3.2. Robot IOs](#32-robot-ios)
+  - [3.3. PID controller](#33-pid-controller)
+  - [3.4. Arm classes](#34-arm-classes)
+  - [3.5. Tele-operation](#35-tele-operation)
+  - [3.6. Console](#36-console)
+- [4. Qt widgets](#4-qt-widgets)
+  - [4.1. Robot IOs](#41-robot-ios)
+  - [4.2. PID controller](#42-pid-controller)
+  - [4.3. Arm classes](#43-arm-classes)
+  - [4.4. Tele-operation](#44-tele-operation)
+  - [4.5. Console](#45-console)
+- [5. ROS](#5-ros)
+  - [5.1. Topics](#51-topics)
+  - [5.2. Python](#52-python)
+  - [5.3. Matlab](#53-matlab)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -69,9 +84,10 @@ In general, each component owns a thread and can run at its own frequency.  Ther
      ExecOut(); // trigger PID.Run() for all PID components attached to this IO
      ProcessQueuedCommands(); // dequeue all commands, including those from PID
   }
-```
+   ```
+
  * Qt manages its own thread(s)
- * The ROS bridges (cisst-ros) can be configured based on the user's needs (see below) 
+ * The ROS bridges (cisst-ros) can be configured based on the user's needs (see below)
 
 ## 3.2. Robot IOs
 
