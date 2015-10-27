@@ -62,9 +62,7 @@ C low level library:
 
 All C++ components are based on the cisst/SAW libraries, more specifically the cisstMultiTask framework:
 * cisst libraries: https://github.com/jhu-cisst/cisst/wiki
-* cisstMultiTask:
-  * Tutorial: https://github.com/jhu-cisst/cisst/wiki/cisstMultiTask-tutorial
-  * Concepts: https://github.com/jhu-cisst/cisst/wiki/cisstMultiTask-concepts
+* cisstMultiTask: [tutorial](https://github.com/jhu-cisst/cisst/wiki/cisstMultiTask-tutorial) and [concepts](https://github.com/jhu-cisst/cisst/wiki/cisstMultiTask-concepts)
 
 The overall architecture is described in this picture:
 ![Overview](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dVRK-component-thread-view.png)
@@ -75,7 +73,7 @@ The core components are colored in blue.
 
 In general, each component owns a thread and can run at its own frequency.  There are a few notable exceptions:
  * There is a single IO component with multiple interfaces (one per arm connected).  This is required to avoid simultaneous accesses to the FireWire port (FireWire read/write are thread safe but processes can hang for a couple seconds).
- * The PID components could run in separate threads but this would introduce a fair amount of latency since the thread safe communication mechanisms in cisstMultiTask are based on queues.   Assuming a 1 millisecond period for both IO and PID, the PID would read some cached data (position and velocity) from the IO (between 0+ and 1 millisecond old) and then request a new effort.  This request being queued will be acted on between 0+ and 1 millisecond later.  Overall, the time between read and write could be as high as 2 milliseconds.  Instead, we used the cisstMultiTask ExecIn/ExecOut feature which allows to attach a component to another.  Effectively, the parent thread now runs the child's computation whenever needed.  In pseudo code:
+ * The PID components could run in separate threads but this would introduce a fair amount of latency since the thread safe communication mechanisms in cisstMultiTask are based on queues.   Assuming a 1 millisecond period for both IO and PID, the PID would read some cached data (position and velocity) from the IO (between 0+ and 1 millisecond old) and then request a new effort.  This request being queued will be acted on between 0+ and 1 millisecond later.  Overall, the time between read and write could be as high as 2 milliseconds.  Instead, we used the cisstMultiTask ExecIn/ExecOut feature (see [cisstMultiTask concepts](https://github.com/jhu-cisst/cisst/wiki/cisstMultiTask-concepts) which allows to attach a component to another.  Effectively, the parent thread now runs the child's computation whenever needed.  In pseudo code:
 
    ```c++
   IO::Run(void) {
@@ -91,20 +89,20 @@ In general, each component owns a thread and can run at its own frequency.  Ther
 
 ## 3.2. Robot IOs
 
-The class mtsRobotIO1394 is part of the sawRobotIO1394 library (see https://github.com/jhu-saw/sawRobotIO1394).  It provides:
+The class mtsRobotIO1394 is part of the [sawRobotIO1394](https://github.com/jhu-saw/sawRobotIO1394) library.  It provides:
 * conversion to from integer from SI units
 * actuator/joint coupling for positions and efforts
 * extra safety checks (consistency between potentiometers and encoders, compare required and measured current)
-* configuration using XML files (see sawRobotIO*.xml files in https://github.com/jhu-dvrk/sawIntuitiveResearchKit/tree/master/share/jhu-daVinci)
+* configuration using XML, see sawRobotIO*.xml files in sawIntuitiveResearchKit [shared directory](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/tree/master/share/jhu-daVinci)
 * support for motors and brakes (e.g. dVRK ECM)
 
 ## 3.3. PID controller
 
-The class mtsPID is part of the sawControllers library (see https://github.com/jhu-saw/sawControllers).  It provides:
+The class mtsPID is part of the [sawControllers](https://github.com/jhu-saw/sawControllers) library.  It provides:
 * a simple PID controller
 * clamp requested position within joint limits
 * check for PID tracking errors
-* configuration using XML files (see sawControllersPID*.xml files in https://github.com/jhu-dvrk/sawIntuitiveResearchKit/tree/master/share)
+* configuration using XML, see sawControllersPID*.xml files in sawIntuitiveResearchKit [shared directory](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/tree/master/share)
 * cisstMultiTask interfaces
 
 ## 3.4. Arm classes
