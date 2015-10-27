@@ -139,6 +139,24 @@ The class `mtsTeleOperation` is part of the [sawControllers](https://github.com/
 
 ## 3.6. Console
 
+The console class, `mtsIntuitiveResearchKitConsole` is part of the [sawIntuitiveResearchKit](https://github.com/jhu-dvrk/sawIntuitiveResearchKit) library.  The main goals of the console are:
+* ease of deployment using a lightweight configuration file to describe the components of the system:
+  * firewire port
+  * periodicity for different components
+  * types of arms (MTM, PSM, ECM, derived types...)
+  * configurations files for IO, PID, arms with relative paths
+  * teleoperation components (optional)
+  * setup joints configuration
+* maintaining runtime consistency between the different components
+  * collect messages from components
+  * centralized error handling
+  * manage state of arms and controllers
+  * handle and dispatch foot pedal events to arms and controllers
+ 
+The console class also manages all the connections between the _cisstMultiTask_ components which can be tedious when done manually.  The console class is used in `sawIntuitiveResearchKitQtConsoleJSON` and in the ROS application `dvrk_robot/dvrk_console_json`.  Using one of these two applications and a custom console configuration file, one should be able to configure pretty much any system without any C++ programming nor compilation; e.g. just one arm, one pair of arms with or without tele-operation, all arms...
+
+The configuration files are JSON based, see `console*.json` files in sawIntuitiveResearchKit [shared directory](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/tree/master/share).  The subdirectory `jhu-dVRK` contains files for a research kit (i.e. just MTMs and PSMs) while the directory `jhu-daVinci` contains examples for a full system, including setup joints and ECM.
+
 # 4. Qt widgets
 
 ## 4.1. Robot IOs
