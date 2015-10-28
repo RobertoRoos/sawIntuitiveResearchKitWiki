@@ -201,6 +201,8 @@ The class `mtsIntuitiveResearchKitConsoleQtWidget` is part of the [sawIntuitiveR
 
 ## Topics
 
+https://github.com/jhu-dvrk/dvrk-ros/blob/master/dvrk_robot/src/dvrk_add_topics_functions.cpp
+
 ## Python
 
 ## Matlab
