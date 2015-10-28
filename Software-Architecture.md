@@ -161,11 +161,21 @@ The configuration files are JSON based, see `console*.json` files in sawIntuitiv
 
 ## 4.1. Robot IOs
 
+![IO GUI without brakes](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-gui-io.png)
+![IO GUI with brakes](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-gui-ecm-console.png)
+![IO GUI buttons](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-gui-buttons.png)
+
 ## 4.2. PID controller
+
+![PID GUI](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-gui-pid.png)
 
 ## 4.3. Arm classes
 
+![Arm GUI](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-gui-arm.png)
+
 ## 4.4. Tele-operation
+
+![Teleop GUI](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-gui-teleop.png)
 
 ## 4.5. Console
 
