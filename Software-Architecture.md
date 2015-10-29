@@ -205,6 +205,8 @@ To interface with ROS, we use the `mtsROSBridge` class from the _cisst_ros_bridg
 
 To standardize the ROS topics for the dVRK components (io, arms, foot pedal, tele-operation), one should use the helper functions from the _dvrk_ros_ repository, _dvrk_robot_ package, [dvrk_add_topics_functions](https://github.com/jhu-dvrk/dvrk-ros/blob/master/dvrk_robot/src/dvrk_add_topics_functions.cpp).  To configure a whole system, i.e. multiple arms, tele-operations... one should use the `dvrk_console` class.  This class can be configured using the `mtsIntuitiveResearchKitConsole` component to figure out which bridges are required.
 
+These classes are used for the executable `dvrk_console_json`, part of the _dvrk_ros_/_dvrk_robot_ ROS package.  This simple program uses the `mtsIntuitiveResearchKitConsole` and `dvrk_console` class to configure an application (with Qt Widgets optional) from a JSON console configuration file (see [code](https://github.com/jhu-dvrk/dvrk-ros/blob/master/dvrk_robot/src/dvrk_console_json.cpp).
+
 ## Python
 
 ## Matlab
