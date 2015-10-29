@@ -205,8 +205,12 @@ To interface with ROS, we use the `mtsROSBridge` class from the _cisst_ros_bridg
 
 To standardize the ROS topics for the dVRK components (io, arms, foot pedal, tele-operation), one should use the helper functions from the _dvrk_ros_ repository, _dvrk_robot_ package, [dvrk_add_topics_functions](https://github.com/jhu-dvrk/dvrk-ros/blob/master/dvrk_robot/src/dvrk_add_topics_functions.cpp).  To configure a whole system, i.e. multiple arms, tele-operations... one should use the `dvrk_console` class.  This class can be configured using the `mtsIntuitiveResearchKitConsole` component to figure out which bridges are required.
 
-These classes are used for the executable `dvrk_console_json`, part of the _dvrk_ros_/_dvrk_robot_ ROS package.  This simple program uses the `mtsIntuitiveResearchKitConsole` and `dvrk_console` class to configure an application (with Qt Widgets optional) from a JSON console configuration file (see [code](https://github.com/jhu-dvrk/dvrk-ros/blob/master/dvrk_robot/src/dvrk_console_json.cpp).
+These classes are used for the executable `dvrk_console_json`, part of the _dvrk_ros_/_dvrk_robot_ ROS package.  This simple program uses the `mtsIntuitiveResearchKitConsole` and `dvrk_console` class to configure an application (with Qt Widgets optional) from a JSON console configuration file (see [code](https://github.com/jhu-dvrk/dvrk-ros/blob/master/dvrk_robot/src/dvrk_console_json.cpp)).
 
 ## Python
 
+One can use the dVRK ROS topics directly from Python using the ROS Python package.  For simple applications, we also provide a lightweight wrapper with high level methods.  This wrapper hides some of the details of implementation (specially event handling) and convert the (idiotic) ROS messages to usable data types (e.g. KDL frames).   The source code and examples are provided in _dvrk_ros_ in the [`dvrk_python/src`](https://github.com/jhu-dvrk/dvrk-ros/tree/master/dvrk_python/src) directory.
+
 ## Matlab
+
+One can use the dVRK ROS topics directly from Matlab using the Robotics System Toolbox for Matlab 2015a or later.   You need to buy this toolbox from MathWorks if you don't already have it.   One nice aspect of this approach is that you can develop your application on any OS supported by Matlab, including Linux, Windows, Mac OS.  For simple applications, we also provide a lightweight wrapper with high level methods.  This wrapper hides some of the details of implementation (specially event handling) and convert the (idiotic) ROS messages to usable data types (e.g. 4x4 homogeneous matrix).   The source code is provided in _dvrk_ros_ in the [`dvrk_matlab`](https://github.com/jhu-dvrk/dvrk-ros/tree/master/dvrk_matlab) directory.
