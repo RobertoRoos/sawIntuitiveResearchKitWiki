@@ -199,6 +199,8 @@ The class `mtsIntuitiveResearchKitConsoleQtWidget` is part of the [sawIntuitiveR
 
 # ROS
 
+To interface with ROS, we use the `mtsROSBridge` class from the _cisst_ros_bridge_ library (part of the [dvrk_ros](https://github.com/jhu-cisst/cisst-ros) package.  This class allows to interface ROS topics (subscribers and publishers) to _cisstMultiTask_ commands and events.  This library also provides conversion methods between _cisst_ data types and ROS messages.  Finally, we can forward the dVRK messages (status, warning and errors) to the ROS log system.
+  
 ## Topics
 
 https://github.com/jhu-dvrk/dvrk-ros/blob/master/dvrk_robot/src/dvrk_add_topics_functions.cpp
