@@ -199,11 +199,11 @@ The class `mtsIntuitiveResearchKitConsoleQtWidget` is part of the [sawIntuitiveR
 
 # ROS
 
-To interface with ROS, we use the `mtsROSBridge` class from the _cisst_ros_bridge_ library (part of the [dvrk_ros](https://github.com/jhu-cisst/cisst-ros) package.  This class allows to interface ROS topics (subscribers and publishers) to _cisstMultiTask_ commands and events.  This library also provides conversion methods between _cisst_ data types and ROS messages.  Finally, we can forward the dVRK messages (status, warning and errors) to the ROS log system.
+To interface with ROS, we use the `mtsROSBridge` class from the _cisst_ros_bridge_ library (part of the [dvrk_ros](https://github.com/jhu-cisst/cisst-ros) package).  This class allows to interface ROS topics (subscribers and publishers) to _cisstMultiTask_ commands and events.  This library also provides conversion methods between _cisst_ data types and ROS messages.  Finally, we can forward the dVRK messages (status, warning and errors) to the ROS log system.
   
 ## Topics
 
-https://github.com/jhu-dvrk/dvrk-ros/blob/master/dvrk_robot/src/dvrk_add_topics_functions.cpp
+To standardize the ROS topics for the dVRK components (io, arms, foot pedal, tele-operation), one should use the helper functions from the _dvrk_ros_ repository, _dvrk_robot_ package, [dvrk_add_topics_functions](https://github.com/jhu-dvrk/dvrk-ros/blob/master/dvrk_robot/src/dvrk_add_topics_functions.cpp).  To configure a whole system, i.e. multiple arms, tele-operations... one should use the `dvrk_console` class.  This class can be configured using the `mtsIntuitiveResearchKitConsole` component to figure out which bridges are required.
 
 ## Python
 
