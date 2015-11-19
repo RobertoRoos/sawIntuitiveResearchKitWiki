@@ -112,7 +112,7 @@ For this procedure we will use the [sawRobotIO1394QtConsole](/jhu-dvrk/sawIntuit
    * In the XML file, set all the `ReleasedCurrent` (NOTE: **releaseD** current) to zero and the `ReleaseTime` to 60 seconds.  Start from a low value for the 3 `ReleaseCurrent` values (~0.1 for 100 mA).
    * Start the `sawRobotIO1394QtConsole` and `Enable All` to power the actuators and brakes.
    * Press the `Release` button for the brakes.  You should see the requested current move to the value set in the XML file and a current feedback close to it.  After 60 seconds (or whatever `ReleaseTime` you've set in the XML file), current should go back to `ReleasedCurrent` value (i.e. 0 for now).
-   * During these 60 seconds, try to move the ECM, joint by joint.  If you stand close to the arm, you shouldn't even hear a click if the brakes get released.
+   * During these 60 seconds, try to move the ECM, joint by joint.  If you stand close to the arm, you should even hear a click if the brakes get released.
    * If a given brake is not released, quit the application, increase the value of `ReleaseCurrent` (and `MaximumCurrent`) for the corresponding joint in the XML file and try again.
    * You can increase the requested current to an extent, i.e. the hardware is limited by the power supply so make sure you always check the current feedback.  If the current feedback doesn't increase as you're increasing the requested current (and software maximum current), it means that you have reach the maximum possible with your power supply.
 
