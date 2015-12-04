@@ -4,7 +4,7 @@
 
 - [1. Calibration](#1-calibration)
 - [2. Current offsets](#2-current-offsets)
-  - [2.0 Prerequisite](#20-prerequisite)
+  - [2.0. Prerequisite](#20-prerequisite)
   - [2.1. Introduction](#21-introduction)
   - [2.2. Procedure](#22-procedure)
 - [3. Gripper on MTMs](#3-gripper-on-mtms)
@@ -198,3 +198,22 @@ Notes:
 * As for the current calibration, don't forget to rename the '-new' file to replace the original configuration file.
 * To verify your calibration file, re-run the program and it should display a found range from 0 to the maximum value you provided (suggested is 60).
 * Since the closed-but-not-tight position depends on the user, it is not perfectly repeatable.  You will need some trials and errors to fine tune the calibration.
+
+
+# 4. Potentiometers
+
+## 4.1. Introduction
+
+The potentiometers on the dVRK are used for:
+* Homing, i.e. they provide an absolute reference to define the zero position
+* Safety, i.e. by reading both encoders and potentiometers continuously one can detect discrepencies
+
+The potentiometer values are read as voltages and converted to SI positions (radians for revolute joints and meters for prismatic joints).  The conversion is a linear function based on an offset and a scale, i.e. `position = offset + scale * voltage`.  Intuitive Surgical performed an initial calibration for all arms and can provide these values in a `.cal` file.  Using these `.cal` file and the dVRK config generator, we get the `sawRobotIO1394-xyz.xml` files used for the dVRK.  See [config generator](/dvrk/sawIntuitiveResearchKit/wiki/XMLConfig).
+
+The problem is that these values are partially based on the electronics used during the calibration.  As such, they are a bit off.   We developed two different strategies to calibrate the scales and offsets.
+ * For the scales, the simplest solution is to rely on the encoders.  We generate a large motion on each actuator and collect both the encoder and potentiometer values.
+ * For the offsets, it is a bit more challenging since we need to identify a zero position based on mechanical properties.
+
+## 4.2. Requirements
+
+As for the other calibration steps, you need to have all the configuration files generated, the C++ code compiled and the current calibration performed.  Furthermore, the current implementation requires the ROS bridges and Python.  Make sure you compiled your dVRK software stack using `catkin build`.  See [build with ROS](/jhu-dvrk/sawIntuitiveResearchKit/wiki/CatkinBuild).
