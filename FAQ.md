@@ -60,12 +60,17 @@ See JHU Mechatronics for more details: http://jhu-cisst.github.io/mechatronics r
 ## What PC configuration do you suggest?
 
 You will need a PC running Linux:
- * 4 to 8 cores
- * 4 GB RAM
- * A dedicated firewire controller for each chain of controllers - you can hook 4 controllers in a single chain so 1 firewire controller is fine for most users.
-  * we've heard good thing re. SIIG !FireWire adapter NN-E20012-S2 (uses a TI chipset)
- * Ubuntu 12.04 LTS.  Our code is portable and should run well on other systems but we only tested 12.04 LTS.
-
+ * 4 cores minimum, 8 recommended (Intel i7)
+ * 4 GB RAM minimum, 8 recommended
+ * FireWire
+  * A dedicated firewire controller for each chain of controllers - you can hook 8 controllers (16 FPGA/QLA boards) in a single chain so 1 firewire controller is fine for most users.
+  * Early dVRK users have tested different cards and the SIIG FireWire adapter NN-E20012-S2 works well (uses a TI chipset)
+ * Graphic adapters
+  * If you plan to send images to the stereo display, you will need two extra VGA outputs for the standard CRTs or two DVI outputs for the flat panels ([see ISI private Wiki](http://research.intusurg.com/dvrkwiki/index.php?title=DVRK:Topics:StereoViewerLCD))
+  * In General Nvidia cards work fine on Linux.  If you have multiple cards, try to match them (use same model for all cards)
+ * Software
+  * Ubuntu 12.04 LTS or 14.04 LTS
+  * ROS Hydro or Indigo, Jade might work as well but hasn't been extensively tested
 
 ## The PSMs aren't moving
 
