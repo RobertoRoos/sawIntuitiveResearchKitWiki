@@ -217,3 +217,14 @@ The problem is that these values are partially based on the electronics used dur
 ## 4.2. Requirements
 
 As for the other calibration steps, you need to have all the configuration files generated, the C++ code compiled and the current calibration performed.  Furthermore, the current implementation requires the ROS bridges and Python.  Make sure you compiled your dVRK software stack using `catkin build`.  See [build with ROS](/jhu-dvrk/sawIntuitiveResearchKit/wiki/CatkinBuild).
+
+For the offsets, we need a physical mechanism to maintain the arm in zero position (or any known position).  We currently have a fairly easy solution for the last 4 joints of the PSM.  The four metal bars are in zero positions when perfectly vertical.  We tried different methods and got similar results.  The first calibration template is a plexiglass plate with holes for the pins on the 4 wheels.  We also tried two vertical bars pushing on the sides using Lego pieces.
+
+![Lego bars to calibrate PSM pots](/jhu-dvrk/sawIntuitiveResearchKit/wiki/psm-pot-calib-lego-in-place.jpg)
+
+![Plexi plate to calibrate PSM pots](/jhu-dvrk/sawIntuitiveResearchKit/wiki/psm-pot-calib-plate-in-place.jpg)
+
+## 4.3. Calibrating scales
+
+## 4.3. Calibrating offsets
+
