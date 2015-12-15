@@ -4,12 +4,17 @@
 
 - [1. Calibration](#1-calibration)
 - [2. Current offsets](#2-current-offsets)
-  - [2.0. Prerequisite](#20-prerequisite)
+  - [2.0 Prerequisite](#20-prerequisite)
   - [2.1. Introduction](#21-introduction)
   - [2.2. Procedure](#22-procedure)
 - [3. Gripper on MTMs](#3-gripper-on-mtms)
   - [3.1. Introduction](#31-introduction)
   - [3.2. Procedure](#32-procedure)
+- [4. Potentiometers](#4-potentiometers)
+  - [4.1. Introduction](#41-introduction)
+  - [4.2. Requirements](#42-requirements)
+  - [4.3. Calibrating scales](#43-calibrating-scales)
+  - [4.3. Calibrating offsets](#43-calibrating-offsets)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
