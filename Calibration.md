@@ -223,17 +223,15 @@ The problem is that these values are partially based on the electronics used dur
 
 As for the other calibration steps, you need to have all the configuration files generated, the C++ code compiled and the current calibration performed.  Furthermore, the current implementation requires the ROS bridges and Python.  Make sure you compiled your dVRK software stack using `catkin build`.  See [build with ROS](/jhu-dvrk/sawIntuitiveResearchKit/wiki/CatkinBuild).
 
-For the offsets, we need a physical mechanism to maintain the arm in zero position (or any known position).  We currently have a fairly easy solution for the last 4 joints of the PSM.  The four metal bars/gears are in zero positions when aligned.  We tried different methods and got similar results:
+For the offsets, we need a physical mechanism to maintain the arm in zero position (or any known position).  We currently have a fairly easy solution for the last 4 joints of the PSM.  The four metal bars/gears are in zero positions when aligned.  We tried different methods and got similar results so you should use whatever is the most convenient for you:
  * Calibration template made of plexiglass plate with holes for the pins on the 4 wheels.
+  ![Plexiglass plate to calibrate PSM pots](/jhu-dvrk/sawIntuitiveResearchKit/wiki/psm-pot-calib-plate-in-place.jpg)
  * Two vertical bars pushing on the sides using Lego pieces.  One can probably use a rubber band to pull the two vertical bars against the gears.
-
-![Lego bars to calibrate PSM pots](/jhu-dvrk/sawIntuitiveResearchKit/wiki/psm-pot-calib-lego-in-place.jpg)
-
-![Plexiglass plate to calibrate PSM pots](/jhu-dvrk/sawIntuitiveResearchKit/wiki/psm-pot-calib-plate-in-place.jpg)
+  ![Lego bars to calibrate PSM pots](/jhu-dvrk/sawIntuitiveResearchKit/wiki/psm-pot-calib-lego-in-place.jpg)
 
 ## 4.3. Calibrating scales
 
-For the calibration, one needs to start the `dvrk_console_json` application for the arm to be calibrated.  Since we also need the low level data (potentiometer values), we also need to provide the `-i` option.  For example, to calibrate a PSM2, command line options for `dvrk_console_json` should look like:
+For the calibration, one needs to start the `dvrk_console_json` application for the arm to be calibrated.  Since we also need the low level data (potentiometer values), we have to provide the `-i` option.  For example, to calibrate a PSM2, command line options for `dvrk_console_json` should look like:
 ```sh
 # In directory ~/catkin_ws/src/cisst-saw/sawIntuitiveResearchKit/share
 rosrun  dvrk_robot dvrk_console_json -j jhu-dVRK/console-PSM2.json -i ros-io-PSM2.json
@@ -272,9 +270,8 @@ index | old scale  | new scale  | correction
  6    | -79.427331 | -79.140566 |  1.003623
 ```
 
-In this case you can see corrections as high as 2% on the third joint (index 2).  Press `y[enter]` to save the results.  You can review the changes with `meld` or your preferred diff tool.  If the changes make sense, replace your default XML configuration file with the new one:
-```
-sh
+In this case you can see corrections as high as 2% on the third joint (index 2).  Press `y[enter]` to save the results in a new XML file.  You can review the changes with `meld` or your preferred diff tool.  If the changes make sense, replace your default XML configuration file with the new one:
+```sh
 # In directory ~/catkin_ws/src/cisst-saw/sawIntuitiveResearchKit/share/jhu-dVRK
 mv sawRobotIO1394-PSM2-27374.xml-new sawRobotIO1394-PSM2-27374.xml
 ```
@@ -294,9 +291,9 @@ There is usually no point to save the results of the second pass.
 
 ## 4.3. Calibrating offsets
 
-These instructions are **PSMs only**
+These instructions are for **PSMs only**.  If you need to calibrate offsets on different arms (MTM, ECM), please create a ticket (issue in github).
 
-As for the scale calibration, you first need to start the console application and home the arm.
+As for the scales calibration, you first need to start the console application and home the arm.
 
 In a separate shell, start the calibration script using the command line:
 ```sh
@@ -305,10 +302,10 @@ rosrun dvrk_robot dvrk_calibrate_potentiometers.py offsets PSM2 sawRobotIO1394-P
 ```
 Follow the instructions and place the calibration template (either Lego bars or plexiglass plate) when prompted to.  The result should look like:
 ```
-index | old offset  | new offset | correction
- 0    |  99.441352 |  99.441352 |  0.000000 
- 1    |  68.032665 |  68.032665 |  0.000000 
- 2    | -14.153006 | -14.153006 |  0.000000 
+index | old offset  | new offset  | correction
+ 0    |   99.441352 |   99.441352 |  0.000000 
+ 1    |   68.032665 |   68.032665 |  0.000000 
+ 2    |  -14.153006 |  -14.153006 |  0.000000 
  3    |  176.339392 |  177.817309 | -1.477917 
  4    |  176.606849 |  176.959943 | -0.353094 
  5    |  174.920864 |  175.741625 | -0.820761 
@@ -317,10 +314,10 @@ index | old offset  | new offset | correction
 Note that the first 3 offsets are not "corrected" since we don't have a way to constrain them to zero position.
 In this case you can see corrections as high as 1.47 degree on the fourth joint (index 3).  Press `y[enter]` to save the results.  Then stop the console application, make sure you restart it with the updated XML file and re-run the calibration script.  The results should improve:
 ```
-index | old offset  | new offset | correction
- 0    |  99.441352 |  99.441352 |  0.000000 
- 1    |  68.032665 |  68.032665 |  0.000000 
- 2    | -14.153006 | -14.153006 |  0.000000 
+index | old offset  | new offset  | correction
+ 0    |   99.441352 |   99.441352 |  0.000000 
+ 1    |   68.032665 |   68.032665 |  0.000000 
+ 2    |  -14.153006 |  -14.153006 |  0.000000 
  3    |  177.817309 |  177.817577 | -0.000269 
  4    |  176.959943 |  176.986576 | -0.026634 
  5    |  175.741625 |  175.801207 | -0.059582 
