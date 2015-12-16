@@ -216,7 +216,7 @@ The potentiometers on the dVRK are used for:
 The potentiometer values are read as voltages and converted to SI positions (radians for revolute joints and meters for prismatic joints).  The conversion is a linear function based on an offset and a scale, i.e. `position = offset + scale * voltage`.  Intuitive Surgical performed an initial calibration for all arms and can provide these values in a `.cal` file.  Using these `.cal` file and the dVRK config generator, we get the `sawRobotIO1394-xyz.xml` files used for the dVRK.  See [config generator](/dvrk/sawIntuitiveResearchKit/wiki/XMLConfig).
 
 The problem is that these values are partially based on the electronics used during the calibration.  As such, they are a bit off.   We developed two different strategies to calibrate the scales and offsets.
- * For the scales, the simplest solution is to rely on the encoders.  We generate a large motion on each actuator and collect both the encoder and potentiometer values.
+ * For the scales, the simplest solution is to rely on the encoders.  We generate a large motion on each actuator and collect both the encoder and potentiometer values. 
  * For the offsets, it is a bit more challenging since we need to identify a zero position based on mechanical properties.
 
 ## 4.2. Requirements
@@ -323,4 +323,4 @@ index | old offset  | new offset  | correction
  5    |  175.741625 |  175.801207 | -0.059582 
  6    |  179.851204 |  179.858797 | -0.007594 
 ```
-As for the scales, there is usually no point to save the results of the second pass.
+Similar to the scales, there is usually no point to save the results of the second pass for the offsets.
