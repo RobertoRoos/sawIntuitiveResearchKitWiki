@@ -25,20 +25,15 @@ https://github.com/jhu-cisst/mechatronics-firmware/wiki/FPGA-Program
 
 The sawIntuitiveResearchKit folder provides several example applications for controlling the Research Kit for the da Vinci System using the [IEEE-1394 (FireWire) controller](http://jhu-cisst.github.io/mechatronics/). The picture above shows two Controllers connected to two da Vinci Patient Side Manipulators (PSMs) at Worcester Polytechnic Institute (WPI).
 
-The software applications use some or all of the following SAW components:
-* mtsRobotIO1394 (sawRobotIO1394 folder) - interface to IEEE-1394 (FireWire) controller boards
-* mtsPID (sawControllers folder) - PID controller used for MTM and PSM robots
-* mtsTeleoperation (sawControllers folder) - Teleoperation component
-* mtsTextToSpeech (sawTextToSpeech folder) - Text to speech component (used for warning and error messages)
-
-The applications contain graphical user interfaces written in Qt, and make use of the following SAW Qt components:
-* mtsRobotIO1394QtWidget (sawRobotIO1394 folder)
-* mtsPIDQtWidget (sawControllers folder)
-* mtsTeleoperationQtWidget (sawControllers folder)
+The software applications use some or all of the following SAW components (and Qt widgets):
+* [mtsRobotIO1394](https://github.com/jhu-saw/sawRobotIO1394) - interface to IEEE-1394 (FireWire) controller boards
+* [mtsPID](https://github.com/jhu-saw/sawControllers) - PID controller used for MTM and PSM robots
+* [mtsTeleoperation] (https://github.com/jhu-saw/sawControllers) - Teleoperation component
+* [mtsTextToSpeech] (https://github.com/jhu-saw/sawTextToSpeech) - Text to speech component (for warning and error messages)
 
 The components are cross-platform, except for mtsRobotIO1394, which relies on a low-level IEEE-1394 interface library (`libraw1394`) that is primarily available on Linux. Thus, the build instructions focus on Linux. For setting up the FireWire interface on Linux, see [this page](/jhu-cisst/mechatronics-software/wiki/Development-Environment).
 
-A ROS interface is available via mtsROSBridge (sawROS folder).
+A ROS interface is available via [mtsROSBridge](https://github.com/jhu-cisst/cisst-ros) base class and [dVRK programs and files](https://github.com/jhu-dvrk/dvrk-ros).
 
 Related sites:
 * Google group https://groups.google.com/d/forum/research-kit-for-davinci and research-kit-for-davinci@googlegroups.com
