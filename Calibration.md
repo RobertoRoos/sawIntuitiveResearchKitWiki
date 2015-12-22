@@ -64,17 +64,17 @@ The `--brakes` option is used to calibrate the brakes on the ECM arm only.  For 
 For most users, the default firewire port (0) should work so you should be able to run the program using something like (but with your combination of MTML/MTMR and serial numbers):
 
   ```bash
-  sawRobotIO1394CurrentCalibration -c sawRobotIO1394-MTML-12345.xml
+  sawRobotIO1394CurrentCalibration -c sawRobotIO1394-MTML-00000.xml
   ````
 
 The program takes only a few seconds to run and the expected output is something like:
 
   ```
-  Configuration file: sawRobotIO1394-MTML-22723.xml
+  Configuration file: sawRobotIO1394-MTML-00000.xml
   Port: 0
   Make sure:
    - your computer is connected to the firewire controller.
-   - the arm corresponding to the configuration file "sawRobotIO1394-MTML-22723.xml" is connected to the controller.
+   - the arm corresponding to the configuration file "sawRobotIO1394-MTML-00000.xml" is connected to the controller.
    - the E-Stop is closed, i.e. will let the controller power on.
    - you have no other device connected to the firewire chain.
    - you have no other program trying to communicate with the controller.
@@ -110,7 +110,7 @@ The program takes only a few seconds to run and the expected output is something
   Status: new current offsets:                            32812.0      32941.9      32706.9      32858.2      32822.5      32857.0      32907.5      32724.3
 
   Do you want to save these values? [S/s]
-  Status: new configuration file is "sawRobotIO1394-MTML-22723.xml-new"
+  Status: new configuration file is "sawRobotIO1394-MTML-00000.xml-new"
   ```
 
 Steps:
@@ -150,12 +150,12 @@ For the calibration procedure, we use the fully opened position and the closed-b
 The gripper calibration program used the same parameters as the current calibration program.  A typical run looks like:
 
    ```
-  > sawIntuitiveResearchKitGripperCalibration -c sawRobotIO1394-MTML-22723.xml 
-  Configuration file: sawRobotIO1394-MTML-22723.xml
+  > sawIntuitiveResearchKitGripperCalibration -c sawRobotIO1394-MTML-00000.xml 
+  Configuration file: sawRobotIO1394-MTML-00000.xml
   Port: 0
   Make sure:
    - your computer is connected to the firewire controller.
-   - the MTM arm corresponding to the configuration file "sawRobotIO1394-MTML-22723.xml" is connected to the controller.
+   - the MTM arm corresponding to the configuration file "sawRobotIO1394-MTML-00000.xml" is connected to the controller.
    - the E-Stop is opened, this program doesn't require powered actuators.
    - you have no other device connected to the firewire chain.
    - you have no other program trying to communicate with the controller.
@@ -194,7 +194,7 @@ The gripper calibration program used the same parameters as the current calibrat
   Status: new offset and scale:                       475.469 -154.164
 
   Do you want to save these values? [S/s]
-  Status: new config file is "sawRobotIO1394-MTML-22723.xml-new"
+  Status: new config file is "sawRobotIO1394-MTML-00000.xml-new"
   ```
 
 Notes:
@@ -213,7 +213,7 @@ The potentiometers on the dVRK are used for:
 * Homing, i.e. they provide an absolute reference to define the zero position
 * Safety, i.e. by reading both encoders and potentiometers continuously one can detect discrepencies
 
-The potentiometer values are read as voltages and converted to SI positions (radians for revolute joints and meters for prismatic joints).  The conversion is a linear function based on an offset and a scale, i.e. `position = offset + scale * voltage`.  Intuitive Surgical performed an initial calibration for all arms and can provide these values in a `.cal` file.  Using these `.cal` file and the dVRK config generator, we get the `sawRobotIO1394-xyz.xml` files used for the dVRK.  See [config generator](/dvrk/sawIntuitiveResearchKit/wiki/XMLConfig).
+The potentiometer values are read as voltages and converted to SI positions (radians for revolute joints and meters for prismatic joints).  The conversion is a linear function based on an offset and a scale, i.e. `position = offset + scale * voltage`.  Intuitive Surgical performed an initial calibration for all arms and can provide these values in a `.cal` file.  Using these `.cal` file and the dVRK config generator, we get the `sawRobotIO1394-00000.xml` files used for the dVRK.  See [config generator](/dvrk/sawIntuitiveResearchKit/wiki/XMLConfig).
 
 The problem is that these values are partially based on the electronics used during the calibration.  As such, they are a bit off.   We developed two different strategies to calibrate the scales and offsets.
  * For the scales, the simplest solution is to rely on the encoders.  We generate a large motion on each actuator and collect both the encoder and potentiometer values. 
@@ -234,7 +234,8 @@ For the offsets, we need a physical mechanism to maintain the arm in zero positi
 For the calibration, one needs to start the `dvrk_console_json` application for the arm to be calibrated.  Since we also need the low level data (potentiometer values), we have to provide the `-i` option.  For example, to calibrate a PSM2, command line options for `dvrk_console_json` should look like:
 ```sh
 # In directory ~/catkin_ws/src/cisst-saw/sawIntuitiveResearchKit/share
-rosrun  dvrk_robot dvrk_console_json -j jhu-dVRK/console-PSM2.json -i ros-io-PSM2.json
+# <my-config-dir> is the directory with your sawRobotIO1394-PSM2-00000.xml configuration files 
+rosrun dvrk_robot dvrk_console_json -j <my-config-dir>/console-PSM2.json -i ros-io-PSM2.json
 ```
 The file `console-PSM2.json` is specific to each system since it points to your `sawRobotIO1394-PSM2-00000.xml` file.  On the other hand, the file `ros-io-PSM2.json` can be found in the `sawIntuitiveResearchKit/share` directory since it isn't system specific.
 
@@ -242,15 +243,15 @@ Once `dvrk_console_json` is started, make sure you can home the arm.  If you hav
 
 In a separate shell, start the calibration script using the command line:
 ```sh
-# In directory ~/catkin_ws/src/cisst-saw/sawIntuitiveResearchKit/share/jhu-dVRK
-rosrun dvrk_robot dvrk_calibrate_potentiometers.py scales PSM2 sawRobotIO1394-PSM2-27374.xml
+# In directory ~/catkin_ws/src/cisst-saw/sawIntuitiveResearchKit/share/<my-config-dir>
+rosrun dvrk_robot dvrk_calibrate_potentiometers.py scales PSM2 sawRobotIO1394-PSM2-00000.xml
 ```
-Make sure you use the same `sawRobotIO1394-XXX-00000.xml` for the calibration script and the console application!
+Make sure you use the same `sawRobotIO1394-XXX-00000.xml` for the calibration script and the console application!  The file name can be found in the console-PSM2.json file you're using.
 
 You will have to acknowledge a few prompt messages:
 ```
 Calibrating scales using encoders as reference
-Values will be saved in:  pot_calib_scales_sawRobotIO1394-PSM2-27374.csv
+Values will be saved in:  pot_calib_scales_sawRobotIO1394-PSM2-00000.csv
 To start with some initial values, you first need to "home" the robot.  When homed, press [enter]
 Since you are calibrating a PSM, make sure there is no tool inserted.  Please remove tool or calibration plate if any and press [enter]
 The robot will make LARGE MOVEMENTS, please hit [enter] to continue once it is safe to proceed
@@ -272,8 +273,8 @@ index | old scale  | new scale  | correction
 
 In this case you can see corrections as high as 2% on the third joint (index 2).  Press `y[enter]` to save the results in a new XML file.  You can review the changes with `meld` or your preferred diff tool.  If the changes make sense, replace your default XML configuration file with the new one:
 ```sh
-# In directory ~/catkin_ws/src/cisst-saw/sawIntuitiveResearchKit/share/jhu-dVRK
-mv sawRobotIO1394-PSM2-27374.xml-new sawRobotIO1394-PSM2-27374.xml
+# In directory ~/catkin_ws/src/cisst-saw/sawIntuitiveResearchKit/share/<my-config-dir>
+mv sawRobotIO1394-PSM2-00000.xml-new sawRobotIO1394-PSM2-00000.xml
 ```
 
 Then stop the console application, make sure you restart it with the updated XML file and re-run the calibration script.  The results should improve:
@@ -298,7 +299,7 @@ As for the scales calibration, you first need to start the console application a
 In a separate shell, start the calibration script using the command line:
 ```sh
 # In directory ~/catkin_ws/src/cisst-saw/sawIntuitiveResearchKit/share/jhu-dVRK
-rosrun dvrk_robot dvrk_calibrate_potentiometers.py offsets PSM2 sawRobotIO1394-PSM2-27374.xml
+rosrun dvrk_robot dvrk_calibrate_potentiometers.py offsets PSM2 sawRobotIO1394-PSM2-00000.xml
 ```
 Follow the instructions and place the calibration template (either Lego bars or plexiglass plate) when prompted to.  The result should look like:
 ```
