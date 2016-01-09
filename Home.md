@@ -46,14 +46,14 @@ Related sites:
 
 # Updates
 
-* *October 2015*: Version 1.2.0 released, see latest change logs:
+* *January 2016*: Version 1.3.0 released, see latest change logs:
   * [sawIntuitiveResearchKit](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/blob/master/CHANGELOG.md)
   * [dvrk-ros](https://github.com/jhu-dvrk/dvrk-ros/blob/master/CHANGELOG.md)
   * [cisst](https://github.com/jhu-cisst/cisst/blob/master/CHANGELOG.md)
   * [cisst-ros](https://github.com/jhu-cisst/cisst-ros/blob/master/CHANGELOG.md)
   * [sawRobotIO1394](https://github.com/jhu-saw/sawRobotIO1394/blob/master/CHANGELOG.md)
   * [sawControllers](https://github.com/jhu-saw/sawControllers/blob/master/CHANGELOG.md)
-  * [mechatronics software](https://github.com/jhu-cisst/mechatronics-software/blob/master/CHANGELOG.md)
+* *October 2015*: Version 1.2.0 released
 * *April 2015*: Version 1.1.0 released
 * *April 2014*: Moved to GitHub
 * *May 2013*: Initial Public Release
