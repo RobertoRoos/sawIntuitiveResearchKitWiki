@@ -248,6 +248,8 @@ rosrun dvrk_robot dvrk_calibrate_potentiometers.py scales PSM2 sawRobotIO1394-PS
 ```
 Make sure you use the same `sawRobotIO1394-XXX-00000.xml` for the calibration script and the console application!  The file name can be found in the console-PSM2.json file you're using.
 
+The calibration script will query the arm serial number from the XML file and will display it.  The console application will do the same and display the serial number in the IO Qt widget.  This ensures that both applications are using an XML file specific to the arm you are trying to calibrate.  But, if you happen to use different copies of the configuration file for your arm, the current system has no way to detect it.  So, make sure you are using the same file for both applications (console and calibration script).
+
 You will have to acknowledge a few prompt messages:
 ```
 Calibrating scales using encoders as reference
