@@ -15,6 +15,13 @@ Sample files with nominal values are in the [share sub-directory](/jhu-dvrk/sawI
 
 For a specific da Vinci manipulator, Intuitive Surgical provides manipulator-specific calibration data in a `cal` file.  The sample files in the repository can be used to get started but the calibrations values are quite different between systems so it is important to generate a configuration file per arm using the `cal` file provided by Intuitive Surgical.  We provide a MATLAB-based GUI to read the `cal` file and generate the corresponding XML file.
 
+To start the config generator, open Matlab and then type:
+```
+>> cd ~/catkin/src/cisst-saw/sawIntuitiveResearchKit/share/
+>> configGUI
+```
+The previous example assumes you are building the code with [ROS/catkin python tool](/jhu-dvrk/sawIntuitiveResearchKit/wiki/CatkinBuild).  The first command will differ if you checked out the cisst/SAW code in a different directory (i.e. not `~/catkin/src`).  You can also browse through your directories using the `Current Folder` panel in Matlab.  Once you're in the `sawIntuitiveResearchKit/share` folder, right click on `configGUI.m` and select `Run`.  Do not open the `configGUI.fig` file.
+
 ## 1. How to generate XML configuration file
 
 1. Choose the calibration file provided by Intuitive Surgical, mXXXX.cal or pXXXX.cal. The naming convention is that the first letter indicates device type with 'm' for master tool manipulator and 'p' for patient-side manipulator (slave), followed by the device serial number. The serial number can be found on the mechanical arm itself, on a silver label with multiple bar codes.   Look for the 'TRK ID'.
