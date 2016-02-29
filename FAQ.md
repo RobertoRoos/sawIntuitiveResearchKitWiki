@@ -28,7 +28,7 @@ Some ISI acronyms:
  * **MTM**: Master Tool Manipulator, 2 on a full da Vinci system (4 with dual console on Si/Xi system): 2 included in Research Kit: MTML and MTMR - Not mechanically identical, last joints are different for left and right arms.
  * **ECM**: Endoscopic Camera Manipulator, 1 on real da Vinci system.
  * **SUJ**: Setup Joints, 3 to 4 on a  da Vinci system.  Not included in Research Kit yet.
- * **HSRV**: High Resolution Stereo Viewer.  At least 3 versions exist, CRT 640x480 (Standard and S), CRT 1024x720 (S HD), LCD (Si/Xi).  The Research Kit comes with the CRT 640x480.
+ * **HRSV**: High Resolution Stereo Viewer.  At least 3 versions exist, CRT 640x480 (Standard and S), CRT 1024x720 (S HD), LCD (Si/Xi).  The Research Kit comes with the CRT 640x480.
  * Tray, foot pedal tray: foot pedals including clutch, camera, camera focus, bi and mono (or coag).  One is included in Research Kit.
 
 Please read the Research Kit user manual: http://research.intusurg.com/dvrkwiki/index.php?title=DVRK:Docs:Main (ISI private wiki)
