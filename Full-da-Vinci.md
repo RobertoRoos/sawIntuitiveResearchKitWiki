@@ -174,3 +174,13 @@ Once the application is started, hit the `home` button.   The ECM should power p
 # Setup joints
 
 **TBD**  Hardware is not yet available for setup joints.
+
+Joints diameters:
+* PSM1:
+  * 0: Translation, where's the origin?
+  * 1: Rotation, vertical axis, diameter 147.5 cm
+  * 2: Rotation, vertical axis, diameter 133.5 cm
+  * 3: Rotation, vertical axis, diameter 
+  * 4: Rotation, horizontal axis, diameter 93.3 cm
+  * 5: Rotation, 
+
