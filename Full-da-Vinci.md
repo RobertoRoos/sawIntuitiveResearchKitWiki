@@ -190,11 +190,21 @@ Joints diameters:
   * Back of endoscope focus controller, male DSUB 15 pins
   * Focus +, short pin 1 with any other pin except 4, power comes from pin 1 (floating high, 5V)
   * Focus -, short pin 4 with any other pin except 1, power comes from pin 4 (floating high, 5V)
-  * All pins are 0V expect 1 and 4 at 5V
+  * All pins are 0V expect 1 and 4 at 5V, ground
 
 * dVRK controller
   * Using digital outs on first QLA FPGA
   * Digital out 3 connected to DB 15 on DOF 1:
      * Pin 13: on: 5V, off: 0V
-     * Pin 14: on: 0V, off: 5V.   We should use this pin for focus control, off by default 
+     * dMIB Pin 14: on: 0V, off: 5V.   We should use this pin for focus + control, off by default
+     * dMIB pin 10 are grounded
+  * Digital out 2 connected to DB 15 on DOF 2:
+     * Pin 13: on: 5V, off: 0V
+     * Pin 14: on: 0V, off: 5V.   We should use this pin for focus + control, off by default 
+
+* Cable wiring:
+  * Focus + signal: dMIB DOF 1 pin 14 <-> Focus controller pin 1
+  * Focus - signal: dMIB DOF 2 pin 14 <-> Focus controller pin 4
+  * Ground: dMIB DOF 1 pin 10 <-> Focus controller pin 9 (dMIB share ground between DOF 1 and 2)
+
 
