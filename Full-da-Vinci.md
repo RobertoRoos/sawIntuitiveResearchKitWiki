@@ -196,11 +196,12 @@ Joints diameters:
   * Using digital outs on first QLA FPGA
   * Digital out 3 connected to DB 15 on DOF 1:
      * Pin 13: on: 5V, off: 0V
-     * dMIB Pin 14: on: 0V, off: 5V.   We should use this pin for focus + control, off by default
-     * dMIB pin 10 are grounded
+     * Pin 14: on: 0V, off: 5V.   We should use this pin for focus + control, off by default
+     * Pin 10 is grounded
   * Digital out 2 connected to DB 15 on DOF 2:
      * Pin 13: on: 5V, off: 0V
      * Pin 14: on: 0V, off: 5V.   We should use this pin for focus - control, off by default 
+     * Pin 10 is grounded
 
 * Cable wiring
   * Focus + signal: dMIB DOF 1 pin 14 <-> Focus controller pin 4
