@@ -52,7 +52,7 @@ Some JHU acronyms:
     * 24 V for all actuators on PSM
     * 24 V for first 3 actuators and 12 V for last 4 actuators on MTM
   * Safety relays
- * `qladisp`: text based application used to test up to 2 QLA-FPGA boards.  See [wiki:/sawIntuitiveResearchKitTutorial/Hardware#a2.2Testingwithqladisp]
+ * `qladisp`: text based application used to test up to 2 QLA-FPGA boards.  See [testing hardware with `qladisp`](/jhu-dvrk/sawIntuitiveResearchKit/wiki//Hardware#22-testing-with-qladisp)
 
 See JHU Mechatronics for more details: http://jhu-cisst.github.io/mechatronics regarding the QLA-FPGA (JHU public page).
 
