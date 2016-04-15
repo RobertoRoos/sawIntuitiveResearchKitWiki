@@ -143,17 +143,9 @@ Using the `sawRobotIO1394QtConsole` you should be able to monitor the switch eve
 
 * IO Widget ![sawRobotIO1394QtConsole IO](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-gui-ecm-io.png)
 
-The Arm (aka manipulator) switch should work and the SUJ shouldn't until you hack the dMIB.  The dMIB is located on the back on the controller enclosure:
+The Arm (aka manipulator) switch should work and the SUJ shouldn't until you hack the dMIB.
 
-![dMID in enclosure](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dmib-in-enclosure.jpg).
-
-You should be able to modify the dMIB without removing it from the enclosure.  Unscrew the cables connected to the dMIB and set it up vertically resting on its back panel.  The modifications required are:
-* Wire (short) pin K3 to R3
-* Wire pin N3 to back of spare digital input on side of board (see photo).
-
-Please note that some dMIB have the letter labels (A, B, C, E, ...) off by one.  So make sure you rely on the photos to identify the proper pins.
-* dMIB modified at JHU ![Hacked board at JHU](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dmib-ecm-jhu.jpg)
-* dMIB modified at ISI ![Hacked board at ISI](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dmib-ecm-isi.jpg)
+To modify the dMIB, follow [these instructions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Full-da-Vinci-dMID-pre-2015))
 
 ## Testing the whole arm
 
@@ -194,18 +186,18 @@ Joints diameters:
 
 * dVRK controller
   * Using digital outs on first QLA FPGA
-  * Digital out 3 connected to DB 15 on DOF 1:
-     * Pin 13: on: 5V, off: 0V
+  * Digital out 3 connected to DB 15 on `DOF 1`:
      * Pin 14: on: 0V, off: 5V.   We should use this pin for focus + control, off by default
      * Pin 10 is grounded
-  * Digital out 2 connected to DB 15 on DOF 2:
-     * Pin 13: on: 5V, off: 0V
+  * Digital out 2 connected to DB 15 on `DOF 2`:
      * Pin 14: on: 0V, off: 5V.   We should use this pin for focus - control, off by default 
      * Pin 10 is grounded
 
 * Cable wiring
-  * Focus + signal: dMIB DOF 1 pin 14 <-> Focus controller pin 4
-  * Focus - signal: dMIB DOF 2 pin 14 <-> Focus controller pin 1
-  * Ground: dMIB DOF 1 pin 10 <-> Focus controller pin 9 (dMIB share ground between DOF 1 and 2)
+  * The cable is "Y" shaped, on the dVRK controller side you will need two male DB 15 connectors (3 rows of 5 pins).  On the ISI focus controller side, you need a single male DB 15 connector (1 row of 8 pins, 1 row of 7 pins).
+  * Focus + signal: dMIB `DOF 1` pin 14 <-> Focus controller pin 4
+  * Focus - signal: dMIB `DOF 2` pin 14 <-> Focus controller pin 1
+  * Ground: dMIB `DOF 1` pin 10 and/or `DOF 2` pin 10 <-> Focus controller pin 9 (dMIB share ground between `DOF 1` and `DOF2`)
 
+![dVRK focus controller cable](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-focus-control-cable.jpg)
 
