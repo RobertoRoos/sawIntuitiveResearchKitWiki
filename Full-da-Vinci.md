@@ -10,6 +10,7 @@
   - [dMIB modification for setup joints switch](#dmib-modification-for-setup-joints-switch)
   - [Testing the whole arm](#testing-the-whole-arm)
 - [Setup joints](#setup-joints)
+- [Endoscope focus controller](#endoscope-focus-controller)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
