@@ -192,10 +192,10 @@ Joints diameters:
      * Pin 10 is grounded
 
 * Cable wiring
-  * The cable is "Y" shaped, on the dVRK controller side you will need two male DB 15 connectors (3 rows of 5 pins).  On the ISI focus controller side, you need a single male DB 15 connector (1 row of 8 pins, 1 row of 7 pins).
-  * Focus + signal: dMIB `DOF 1` pin 14 <-> Focus controller pin 4
-  * Focus - signal: dMIB `DOF 2` pin 14 <-> Focus controller pin 1
-  * Ground: dMIB `DOF 1` pin 10 and/or `DOF 2` pin 10 <-> Focus controller pin 9 (dMIB share ground between `DOF 1` and `DOF2`)
+  * The cable is "Y" shaped, on the dVRK controller side you will need two male DB 15 connectors (3 rows of 5 pins) which will plug in the connector labeled `DOF 1` and `DOF 2` on the back of the dVRK controller.  On the ISI focus controller side, you need a single male DB 15 connector (1 row of 8 pins, 1 row of 7 pins).
+  * You need 3 wires in your cable:
+    * Focus + signal: dMIB `DOF 1` pin 14 <-> Focus controller pin 4
+    * Focus - signal: dMIB `DOF 2` pin 14 <-> Focus controller pin 1
+    * Ground: dMIB `DOF 1` pin 10 and/or `DOF 2` pin 10 <-> Focus controller pin 9 (dMIB share ground between `DOF 1` and `DOF2`)
 
 ![dVRK focus controller cable](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-focus-control-cable.jpg)
-
