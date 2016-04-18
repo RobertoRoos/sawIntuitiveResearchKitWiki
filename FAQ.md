@@ -76,6 +76,12 @@ You will need a PC running Linux:
 
 All manipulators should be completely back drivable when not powered.  If your PSMs are stiff and you can't move all the joints by hand, make sure you have removed all the brackets and zip ties used to protect the arm during transportation.   Please read the unpacking guide: [ISI private wiki](http://research.intusurg.com/dvrkwiki/index.php?title=DVRK:Docs:Main).
 
+## Where are `qladisp` and `qlacloserelays`, everything else has been compiled
+
+You're probably missing the curses development libraries.  Install them, re-run CMake or just `catkin build` if you're a ROS user.   To install on Ubuntu:
+```sh
+  sudo apt-get install libncurses5-dev
+```
 
 ## All signals freeze for a couple seconds
 
