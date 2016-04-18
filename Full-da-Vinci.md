@@ -169,11 +169,11 @@ Once the application is started, hit the `home` button.   The ECM should power p
 Joints diameters:
 * PSM1:
   * 0: Translation, where's the origin?
-  * 1: Rotation, vertical axis, diameter 147.5 cm
-  * 2: Rotation, vertical axis, diameter 133.5 cm
-  * 3: Rotation, vertical axis, diameter 
-  * 4: Rotation, horizontal axis, diameter 93.3 cm
-  * 5: Rotation, 
+  * 1: Rotation, vertical axis, diameter 147.5 mm
+  * 2: Rotation, vertical axis, diameter 133.5 mm
+  * 3: Rotation, vertical axis, diameter 107.5 mm
+  * 4: Rotation, horizontal axis, diameter 93.3 mm
+  * 5: Rotation, "vertical" axis, diameter 89.4 mm
 
 # Endoscope focus controller
 
