@@ -231,7 +231,7 @@ For the offsets, we need a physical mechanism to maintain the arm in zero positi
 
 ## 4.3. Calibrating scales
 
-For the calibration, one needs to start the `dvrk_console_json` application for the arm to be calibrated.  Since we also need the low level data (potentiometer values), we have to provide the `-i` option.  For example, to calibrate a PSM2, command line options for `dvrk_console_json` should look like:
+These instructions are for all arms, PSMs, MTMs and ECM.  For the calibration, one needs to start the `dvrk_console_json` application for the arm to be calibrated.  Since we also need the low level data (potentiometer values), we have to provide the `-i` option.  For example, to calibrate a PSM2, command line options for `dvrk_console_json` should look like:
 ```sh
 # In directory ~/catkin_ws/src/cisst-saw/sawIntuitiveResearchKit/share
 # <my-config-dir> is the directory with your sawRobotIO1394-PSM2-00000.xml configuration files 
