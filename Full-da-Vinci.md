@@ -175,6 +175,8 @@ Joints diameters:
   * 4: Rotation, horizontal axis, diameter 93.3 mm (PSMs only -135/+135)
   * 5: Rotation, "vertical" axis, diameter 89.4 mm (PSMs only -135/+135)
 
+You can download a document to print on letter paper: [dVRK labels for SUJ](/jhu-dvrk/sawIntuitiveResearchKit/wiki/suj-labels.svg).  The `.svg` file can be opened, modified and printed using `inkscape` on Linux.
+
 # Endoscope focus controller
 
 * Focus controller
