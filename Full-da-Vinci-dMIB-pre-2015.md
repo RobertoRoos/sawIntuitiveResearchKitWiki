@@ -6,7 +6,7 @@ These instructions are only needed if you need to support the SUJ and your dVRK 
 
 The dMIB is located on the back on the controller enclosure:
 
-![dMID in enclosure](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dmib-in-enclosure.jpg).
+![dMIB in enclosure](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dmib-in-enclosure.jpg).
 
 You should be able to modify the dMIB without removing it from the enclosure.  Unscrew the cables connected to the dMIB and set it up vertically resting on its back panel.  The modifications required are:
 * Wire (short) pin K3 to R3
