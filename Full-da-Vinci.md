@@ -143,7 +143,7 @@ Using the `sawRobotIO1394QtConsole` you should be able to monitor the switch eve
 
 * IO Widget ![sawRobotIO1394QtConsole IO](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-gui-ecm-io.png)
 
-The Arm (aka manipulator) switch should work and the SUJ shouldn't until you hack the dMIB.  To modify the dMIB, follow [these instructions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Full-da-Vinci-dMID-pre-2015).
+The Arm (aka manipulator) switch should work and the SUJ shouldn't until you hack the dMIB.  To modify the dMIB, follow [these instructions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Full-da-Vinci-dMIB-pre-2015).
 
 ## Testing the whole arm
 
