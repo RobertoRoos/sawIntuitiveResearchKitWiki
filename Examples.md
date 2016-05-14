@@ -12,7 +12,7 @@
 - [3. sawIntuitiveResearchKitQtPID](#3-sawintuitiveresearchkitqtpid)
   - [3.1. Usage](#31-usage)
   - [3.2. Widgets](#32-widgets)
-- [4. sawIntuitiveResearchKitQtTeleOperationJSON](#4-sawintuitiveresearchkitqtteleoperationjson)
+- [4. sawIntuitiveResearchKitQtConsoleJSON](#4-sawintuitiveresearchkitqtconsolejson)
   - [4.1. Usage](#41-usage)
   - [4.2. Widgets](#42-widgets)
     - [4.3. Instructions](#43-instructions)
@@ -151,24 +151,23 @@ The `Index` spin box can be used to change which axis is used for the plotting a
 
 Also to note, the PID gains you are setting will not be saved so take a screenshot and edit your XML PID configuration file by hand.
 
-# 4. sawIntuitiveResearchKitQtTeleOperationJSON
+# 4. sawIntuitiveResearchKitQtConsoleJSON
 
 ## 4.1. Usage
 
-Use `sawIntuitiveResearchKitQtTeleOperationJSON` to test the whole system with a position based tele-operation controller.  The command line parameters can be found using `sawIntuitiveResearchKitQtTeleOperationJSON` without options:
+Use `sawIntuitiveResearchKitQtConsoleJSONN` to test the whole system with a position based tele-operation controller.  The command line parameters can be found using `sawIntuitiveResearchKitQtConsoleJSON` without options:
 ```
 sawIntuitiveResearchKitQtTeleOperationJSON:
  -j <value>, --json-config <value> : json configuration file (required)
- -f <value>, --firewire <value> : firewire port number(s) (optional)
  -g <value>, --gcmip <value> : global component manager IP address (optional)
 ```
 
 Assuming that you have set your path correctly and you are in the directory that contains your configuration file, you can start the program using something like:
 ```
- sawIntuitiveResearchKitQtTeleOperationJSON -j two-arms.json
+ sawIntuitiveResearchKitQtConsoleJSON -j console-xyz.json
 ```
 
-The file `two-arms.json` contains a description of the different pairs (master/slave) used for the tele-operation program.  An example is provided in the repository but make sure you update all the settings for your own system.   You can also edit the configuration file to edit or remove any pair of arms if you only want to test a single pair.
+The file `console.json` contains a description of your system, i.e. how many arms and which configuration files to use for your arms as well as teleoperation components.  Since the `console-xyz.json` files depend on your system, you will have to create your own so they can reference the correct arm serial numbers.  Many examples can be found in the `share` directory.
 
 ## 4.2. Widgets
 
