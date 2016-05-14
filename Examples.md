@@ -155,7 +155,7 @@ Also to note, the PID gains you are setting will not be saved so take a screensh
 
 ## 4.1. Usage
 
-Use `sawIntuitiveResearchKitQtConsoleJSONN` to test the whole system with a position based tele-operation controller.  The command line parameters can be found using `sawIntuitiveResearchKitQtConsoleJSON` without options:
+Use `sawIntuitiveResearchKitQtConsoleJSON` to test the whole system with a position based tele-operation controller.  The command line parameters can be found using `sawIntuitiveResearchKitQtConsoleJSON` without options:
 ```
 sawIntuitiveResearchKitQtTeleOperationJSON:
  -j <value>, --json-config <value> : json configuration file (required)
@@ -167,7 +167,7 @@ Assuming that you have set your path correctly and you are in the directory that
  sawIntuitiveResearchKitQtConsoleJSON -j console-xyz.json
 ```
 
-The file `console.json` contains a description of your system, i.e. how many arms and which configuration files to use for your arms as well as teleoperation components.  Since the `console-xyz.json` files depend on your system, you will have to create your own so they can reference the correct arm serial numbers.  Many examples can be found in the `share` directory.
+The file `console.json` contains a description of your system, i.e. how many arms and which configuration files to use for your arms as well as teleoperation components.  Since the `console-xyz.json` files depend on your system, you will have to create your own so they can reference the correct arm serial numbers.  Many examples can be found in the `share` directory.  `sawIntuitiveResearchKitQtConsoleJSON` will parse the JSON console configuration file to determine which components should be created, including Qt Widgets.  This allows to handle many different configurations without writing any C++ code nor re-compile.  Note that a "sister" application is available for ROS in `dvrk_robot`, `dvrk_console_json`.  The ROS topics will also be automatically populated based on the content of the JSON configuration file.
 
 ## 4.2. Widgets
 
