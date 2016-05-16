@@ -14,6 +14,7 @@ Getting Started
 
 Advanced
 * [Software architecture](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Software-Architecture)
+* [File formats](FileFormats)
 * [Development branches](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Development)
 * [Build with ROS catkin_make (deprecated)](/jhu-dvrk/dvrk-ros)
 * [Simulation with ROS](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Simulation)
