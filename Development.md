@@ -57,6 +57,7 @@ Besides pending issues, the following should be addressed before next release:
 * Make sure console handles SUJ and PSM/ECM clutch
 * Make sure PID and arm classes don't re-timestamp joint data
 * Implement motion of ECM in teleopECM
+* Make sure console can be used with teleopECM but no teleopPSM
 * Check that console/teleops can be controlled and configured (base frame, rotations) using ROS topics
 * Add psm-prograsp.json from Google group
 * Add ROS topics backward compatibility to all dvrk_robot applications
