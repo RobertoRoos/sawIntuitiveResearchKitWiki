@@ -24,4 +24,5 @@ Miscellaneous
 * [cisst](/jhu-cisst/cisst/wiki)
 * [Head Sensor](/jhu-dvrk/sawIntuitiveResearchKit/wiki/HeadSensor)
 * [Frequently Asked Questions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FAQ)
+* [Hamlyn Meetup 2016](/jhu-dvrk/sawIntuitiveResearchKit/wiki/HamlynMeetup2016)
 * [JHU](JHU-DVRK-Hardware-Status)
