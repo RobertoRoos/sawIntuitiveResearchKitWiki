@@ -30,11 +30,11 @@ These instructions are specific to Ubuntu Linux.  The low level software is Linu
 * Qt: GUI, version 4 on Ubuntu 12.04, 5 on Ubuntu 14.04
 * libncurses5-dev: curses based test GUI for 1394
 * flite: for some experimental text to speech
+* gfortran for our netlib code
+* OpenIGTLink for sawOpenIGTLink
 
-```bash
-sudo apt-get install libxml2-dev libraw1394-dev libncurses5-dev qtcreator swig
-sudo apt-get install flite cmake-curses-gui cmake-qt-gui libopencv-dev git subversion
-```
+One time command per computer:
+   `sudo apt-get install libxml2-dev libraw1394-dev libncurses5-dev qtcreator swig libopenigtlink-dev flite cmake-curses-gui cmake-qt-gui libopencv-dev git subversion gfortran`
 
 # 3. cisst/saw
 
