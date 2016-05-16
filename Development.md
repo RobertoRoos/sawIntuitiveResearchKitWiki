@@ -45,8 +45,8 @@ git submodule update
 ### `feature-ecm`
 
 * This branch will likely be merged before next release
-* New teleoperation components, one for PSM and one for ECM, now part of sawIntuitiveResearchKit
-* Console now handles most events and turn on/off teleoperation components (new `mtsStateTable` introduced in these components)
+* New teleoperation components, one for PSM and one for ECM, now part of sawIntuitiveResearchKit.  Slight differences in ROS topics to control teleop.
+* Console now handles most events and turn on/off teleoperation components (new `mtsStateTable` introduced in these components).  Need new topics to control console.
 * Better lock/positioning of MTMs
 * Tighter Qt layout
 
@@ -61,11 +61,13 @@ Besides pending issues, the following should be addressed before next release:
 * Check that console/teleops can be controlled and configured (base frame, rotations) using ROS topics
 * Add psm-prograsp.json from Google group
 * Add ROS topics backward compatibility to all dvrk_robot applications
+* Remove gcm option when compiled without ICE in all dVRK applications
 * PID class should have state joint data initialized before it's started (i.e. joint names list is empty in rostopic)
 * Fix CMake/Catkin for OpenIGT and ATIFT (not really dVRK but would help)
 * Compute wrench at tooltip based on joint torques and publish as ROS topic
 * Add dvrk-openigt to cisst-saw
 * Cleanup cisst CMake to avoid WARNING and use STATUS instead (reduce catkin build messages)
+* Add scale in Qt Console for all teleops
 
 Maybe for later releases:
 * Add ROS TF support, specially for SUJ
