@@ -62,7 +62,8 @@ Besides pending issues, the following should be addressed before next release:
 * Add ROS topics backward compatibility to all dvrk_robot applications
 * PID class should have state joint data initialized before it's started (i.e. joint names list is empty in rostopic)
 * Fix CMake/Catkin for OpenIGT and ATIFT (not really dVRK but would help)
-* Add dark-openigt to cisst-saw
+* Compute wrench at tooltip based on joint torques and publish as ROS topic
+* Add dvrk-openigt to cisst-saw
 * Cleanup cisst CMake to avoid WARNING and use STATUS instead (reduce catkin build messages)
 
 Maybe for later releases:
