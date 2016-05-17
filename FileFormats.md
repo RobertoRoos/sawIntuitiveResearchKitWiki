@@ -177,18 +177,38 @@ The main difference between the PSM's DH and MTM's is that we need the mass, cen
 
 # Console (JSON)
 
+Parsing is performed by the `Configure` method in `mtsIntuitiveResearchKitConsole`: https://github.com/jhu-dvrk/sawIntuitiveResearchKit/blob/master/code/mtsIntuitiveResearchKitConsole.cpp
+
+The `Configure` method calls:
+* `ConfigureArmJSON` to configure each arm
+* `ConfigurePSMTeleopJSON` to configure the PSM teleoperation components
+* `ConfigureECMTeleopJSON` to configure the ECM teleoperation components (from 1.4.0) 
+
+All files referenced within the `console-<your_setup>.json` file can be defined by an absolute path (not recommended) or a path relative to the console configuration file itself.  We recommend to keep all the files shared across systems in the provided `sawIntuitiveResearchKit/share` directory.  Then create a sub-directory for your system (e.g. `jhu-dVRK`) for all your files, e.g. `sawRobotIO1394` XML files and console JSON files.   In your console configuration files, use `../` to refer to the share files.
+
+Once you've created and populated your system specific directory, you can send us a github pull request or a zip file and we'll merge it with the master branch.
+
 ## IO section
 
+This section allows to tweak the IO component, i.e. the component that interfaces with the controllers over FireWire/Ethernet and performs all the read/writes.  One can change the refresh rate (in this example, 1/2 millisecond) and the FireWire port (default is 0).  It is recommended to not include this section and use the default values.
+
+In most cases, the PID components run in the same thread as the IO, so changing the IO period also changes the PID period.  See [software architecture](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Software-Architecture).
+
 ```js
-{
-    "io": {
-        "period": 0.0005, // in seconds
-        "port": 0 // default is 0
-    }
+  "io": {
+    "period": 0.0005, // in seconds
+    "port": 0 // default is 0
+  }
 ```
 
 ## Arms
 
+List of arms to be configured in the system.  Each arm needs a unique name, type and configuration file for kinematics.  The arm can be a physical one (`ECM`, `PSM`, `MTM` or `SUJ`) or a simulated one (`ECM`, `PSM` or `MTM`).  We don't support simulated SUJs yet.
+
+It the arm is simulated, one need to add `"simulation": "KINEMATIC"` and the `"io"` field is ignore (see https://github.com/jhu-dvrk/sawIntuitiveResearchKit/blob/master/share/console-PSM1_KIN_SIMULATED.json).
+
+For a real arm, you need to provide the file name for the IO, i.e. `sawRobotIO1394-<your_arm>.xml`.
+  
 ```js
     "arms":
     [
