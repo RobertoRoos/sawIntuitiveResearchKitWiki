@@ -127,7 +127,7 @@ All parameters are provided by ISI.  You might need to play with the last joint 
 
 ## MTMs
 
-** This applies to version 1.4.0 and later**
+**This applies to version 1.4.0 and later**, older versions still use `.rob` files.
 
 Parsing is performed by the `Configure` method in `mtsIntuitiveResearchKitMTM`: https://github.com/jhu-dvrk/sawIntuitiveResearchKit/blob/master/code/mtsIntuitiveResearchKitMTM.cpp
 
@@ -203,59 +203,41 @@ In most cases, the PID components run in the same thread as the IO, so changing 
 
 ## Arms
 
-List of arms to be configured in the system.  Each arm needs a unique name, type and configuration file for kinematics.  The arm can be a physical one (`ECM`, `PSM`, `MTM` or `SUJ`) or a simulated one (`ECM`, `PSM` or `MTM`).  We don't support simulated SUJs yet.
+List of arms to be configured in your system.  Each arm needs a unique name, type and configuration file for kinematics.  The arm can be a physical one (`ECM`, `PSM`, `MTM` or `SUJ`) or a simulated one (`ECM`, `PSM` or `MTM`).  We don't support simulated SUJs yet.
 
 It the arm is simulated, one need to add `"simulation": "KINEMATIC"` and the `"io"` field is ignore (see https://github.com/jhu-dvrk/sawIntuitiveResearchKit/blob/master/share/console-PSM1_KIN_SIMULATED.json).
 
 For a real arm, you need to provide the file name for the IO, i.e. `sawRobotIO1394-<your_arm>.xml`.
   
 ```js
-    "arms":
-    [
-        {
-            "name": "SUJ",
-            "type": "SUJ",
-            "io": "sawRobotIO1394-SUJ.xml",
-            "kinematic": "suj-ECM-1-2-3.json",
-            "base-frame": {
-                "component": "ECM",
-                "interface": "Robot"
-            }
-        }
-        ,
-        {
-            "name": "PSM1",
-            "type": "PSM",
-            "io": "sawRobotIO1394-PSM1-49695.xml",
-            "pid": "../sawControllersPID-PSM.xml",
-            "kinematic": "../psm-large-needle-driver.json",
-            "base-frame": {
-                "component": "SUJ",
-                "interface": "PSM1"
-            }
-        }
-        ,
-        {
-            "name": "ECM",
-            "type": "ECM",
-            "io": "sawRobotIO1394-ECM-29738.xml",
-            "pid": "../sawControllersPID-ECM.xml",
-            "kinematic": "../dvecm.rob",
-            "base-frame": {
-                "component": "SUJ",
-                "interface": "ECM"
-            }
-        }
-        ,
-        {
-            "name": "MTMR",
-            "type": "MTM",
-            "io": "sawRobotIO1394-MTMR-22403-foot-pedal.xml",
-            "pid": "../sawControllersPID-MTMR.xml",
-            "kinematic": "../mtmr.json"
-        }
-    ]
+  "arms":
+  [
+    {
+      "name": "SUJ",
+      "type": "SUJ",
+      "io": "sawRobotIO1394-SUJ.xml",
+      "kinematic": "suj-ECM-1-2-3.json",
+      "base-frame": {
+        "component": "ECM",
+        "interface": "Robot"
+      }
+    }
+    ,
+    {
+      "name": "PSM1",
+      "type": "PSM",
+      "io": "sawRobotIO1394-PSM1-49695.xml",
+      "pid": "../sawControllersPID-PSM.xml",
+      "kinematic": "../psm-large-needle-driver.json",
+      "base-frame": {
+        "component": "SUJ",
+        "interface": "PSM1"
+      }
+    }
+  ]
 ```
+
+The `base-frame` field is used only in combination with the SUJs.
 
 ## Teleoperation components
 
