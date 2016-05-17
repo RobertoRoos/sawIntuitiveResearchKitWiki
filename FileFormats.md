@@ -3,7 +3,19 @@
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [Kinematics (JSON)](#kinematics-json)
+  - [PSMs](#psms)
+    - [DH parameters](#dh-parameters)
+    - [Tooltip offset](#tooltip-offset)
+    - [Coupling matrices](#coupling-matrices)
+    - [Tool engage parameters](#tool-engage-parameters)
+    - [Tool joint limits](#tool-joint-limits)
+  - [MTMs](#mtms)
+    - [DH parameters](#dh-parameters-1)
+    - [Base offset](#base-offset)
 - [Console (JSON)](#console-json)
+  - [IO section](#io-section)
+  - [Arms](#arms)
+  - [Teleoperation components](#teleoperation-components)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
