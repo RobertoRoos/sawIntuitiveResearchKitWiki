@@ -84,7 +84,7 @@ Usually a rotation matrix to match ISI orientation and translation offset with r
     "JointToActuatorPosition" : [[...]],
     "ActuatorToJointEffort" : [[...]],
     "JointToActuatorEffort" : [[...]]
-    }
+  }
 ```
 
 You need to provide 4 matrices, two for position coupling and 2 for effort coupling.  The actuator to joint should be the inverse of joint to actuator in both cases.  If you're not using some of the actuators/joints, make sure the product of the coupling matrix by its inverse is still close to identity.
@@ -241,12 +241,16 @@ The `base-frame` field is used only in combination with the SUJs.
 
 ## Teleoperation components
 
+The `operator-present` is optional, i.e. the default behavior is to use the "io" component and the "COAG" button as a dead man switch.  You can use this field to select a different foot pedal.
+
 ```js
-    "operator-present": {
-        "component": "io",
-        "interface": "COAG"
-    }
+  "operator-present": {
+    "component": "io",
+    "interface": "COAG"
+  }
 ```
+
+You can then define multiple tele-operation components for different pairs of MTM/PSMs.  Please note that we still don't support multiple tools for a single arm like a real daVinci would so make sure each MTM and PSM is used only once.
 
 ```js
     "psm-teleops":
@@ -271,3 +275,7 @@ The `base-frame` field is used only in combination with the SUJs.
                       [ 0.0000,  0.0000,  1.0000]]
     }
 ```
+
+Please note that the `"period"` is optional and you should probably set it only if you have specific needs.  The `"rotation"` is used to re-align the master coordinate systems between the MTM(s) and PSM/ECM.  You might have a different matrix if you're not using the setup joints.
+
+Please note that `"ecm-teleop"` requires an ECM.  This feature requires version 1.4.0 and above.
