@@ -160,13 +160,12 @@ The main difference between the PSM's DH and MTM's is that we need the mass, cen
                    [  0.0, -0.5,          0.866025404, -0.325],
                    [  0.0,  0.0,          0.0,          1.0]]
 ```
- 
-The offset represents a 30 degrees rotation and 
 
 **Tooltip matrix uses SI units!**
 
-
 # Console (JSON)
+
+## IO section
 
 ```js
 {
@@ -174,12 +173,11 @@ The offset represents a 30 degrees rotation and
         "period": 0.0005, // in seconds
         "port": 0 // default is 0
     }
-    ,
-    "operator-present": {
-        "component": "io",
-        "interface": "COAG"
-    }
-    ,
+```
+
+## Arms
+
+```js
     "arms":
     [
         {
@@ -206,18 +204,6 @@ The offset represents a 30 degrees rotation and
         }
         ,
         {
-            "name": "PSM2",
-            "type": "PSM",
-            "io": "sawRobotIO1394-PSM2-32204.xml",
-            "pid": "../sawControllersPID-PSM.xml",
-            "kinematic": "../psm-large-needle-driver.json",
-            "base-frame": {
-                "component": "SUJ",
-                "interface": "PSM2"
-            }
-        }
-        ,
-        {
             "name": "ECM",
             "type": "ECM",
             "io": "sawRobotIO1394-ECM-29738.xml",
@@ -236,30 +222,24 @@ The offset represents a 30 degrees rotation and
             "pid": "../sawControllersPID-MTMR.xml",
             "kinematic": "../mtmr.json"
         }
-        ,
-        {
-            "name": "MTML",
-            "type": "MTM",
-            "io": "sawRobotIO1394-MTML-34863.xml",
-            "pid": "../sawControllersPID-MTML.xml",
-            "kinematic": "../mtml.json"
-        }
     ]
-    ,
+```
+
+## Teleoperation components
+
+```js
+    "operator-present": {
+        "component": "io",
+        "interface": "COAG"
+    }
+```
+
+```js
     "psm-teleops":
     [
         {
             "master": "MTMR",
             "slave": "PSM1",
-            "period": 0.005, // in seconds
-            "rotation" : [[ 0.0000,  1.0000,  0.0000],
-                          [ 1.0000,  0.0000,  0.0000],
-                          [ 0.0000,  0.0000, -1.0000]]
-        }
-        ,
-        {
-            "master": "MTML",
-            "slave": "PSM2",
             "period": 0.005, // in seconds
             "rotation" : [[ 0.0000,  1.0000,  0.0000],
                           [ 1.0000,  0.0000,  0.0000],
@@ -276,5 +256,4 @@ The offset represents a 30 degrees rotation and
                       [ 0.0000,  1.0000,  0.0000],
                       [ 0.0000,  0.0000,  1.0000]]
     }
-}
 ```
