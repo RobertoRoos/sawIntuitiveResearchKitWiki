@@ -10,11 +10,9 @@
 You can find examples of configuration files in the "shared" directory:
 https://github.com/jhu-dvrk/sawIntuitiveResearchKit/tree/master/share
 
-Pay close attention to units!
+**Pay close attention to units as we used different ones in different sections!**
 
 # Kinematics (JSON)
-
-All kinematics files contains the DH parameters.
 
 ## PSMs
 
@@ -24,7 +22,7 @@ You will need a different PSM configuration file per tool since the DH parameter
 
 You need to provide the DH for the whole PSM (7 joints) even if you have designed a custom tool which uses less actuators.  The same applies for the coupling matrices (7x7).  If you don't use the last actuators, set the diagonal elements to 1.
 
-## DH parameters
+### DH parameters
 
 ```js
 "DH": {
@@ -114,6 +112,59 @@ If you're developing your own tool, you should start with a very small range.
 All parameters are provided by ISI.  You might need to play with the last joint lower limit to increase the power applied to the tool's jaws.
 
 **These parameters are in millimeters and degrees** to be more human readable.  These are converted internally in SI units.
+
+## MTMs
+
+** This applies to version 1.4.0 and later**
+
+Parsing is performed by the `Configure` method in `mtsIntuitiveResearchKitMTM`: https://github.com/jhu-dvrk/sawIntuitiveResearchKit/blob/master/code/mtsIntuitiveResearchKitMTM.cpp
+
+We provide 3 files, `mtm.json`, `mtml.json` and `mtmr.json`.  These share the same DH parameters, the only difference is the base offset matrix.  For a single MTM, we assume no base offset, the origin is at the base of the kinematic chain.  For MTML and MTMR, the base offset re-orients the coordinate system to match the stereo display (angled at 30 degrees) and is centered on the eye piece.  This takes into account the distance between the two MTMs.
+ 
+### DH parameters
+
+See PSMs section first.
+
+```js
+"DH": {
+  "links": [
+    {
+      "convention": "standard",
+      "alpha":  1.5708, "A":  0.0000, "theta":  0.0000, "D":  0.0000,
+      "type": "revolute",
+      "mode": "active",
+      "offset":  -1.5708,
+      "mass":    0.0000,
+      "cx":   0.0000, "cy":   0.0000, "cz":   0.0000,
+      "Ixx":  0.0001, "Iyy":  0.0001, "Izz":  0.0001,
+      "x1":   1.0000, "x2":   0.0000, "x3":   0.0000,
+      "y1":   0.0000, "y2":   1.0000, "y3":   0.0000,
+      "z1":   0.0000, "z2":   0.0000, "z3":   1.0000
+    },
+    ...
+  ]
+}
+```
+
+The main difference between the PSM's DH and MTM's is that we need the mass, center of mass and inertia matrix.  We provide a rough estimate of these values but we will ultimately need a way to identify these parameters for each arm.
+
+**DH uses SI units!**
+
+### Base offset
+
+```js
+  // transformation to match ISI convention (for read-only research
+  // API on commercial da Vinci), uses stereo display as origin
+  "base-offset" : [[ -1.0,  0.0,          0.0,          0.180],
+                   [  0.0, -0.866025404, -0.5,         -0.400],
+                   [  0.0, -0.5,          0.866025404, -0.325],
+                   [  0.0,  0.0,          0.0,          1.0]]
+```
+ 
+The offset represents a 30 degrees rotation and 
+
+**Tooltip matrix uses SI units!**
+
 
 # Console (JSON)
 
