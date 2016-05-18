@@ -47,6 +47,15 @@ git submodule update
 
 ## Todo
 
+Pending issues:
+* #55 and #50, use separate IO XML files for external devices (foot pedal, camera focus)
+* #54, save content of `.cal` file in generated XML file (for debug, retrieval, ...)
+* #35, last issue is to control multiple slaves with one master (not likely in this release)
+
+Solved in next release:
+* #38, ROS timestamps
+* #36, better states in tele-operation components
+
 Besides pending issues, the following should be addressed before next release:
 * Fix cisst warning when optional interfaces/functions are not connected
 * Make sure console handles SUJ and PSM/ECM clutch
