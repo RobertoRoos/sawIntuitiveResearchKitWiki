@@ -16,15 +16,15 @@ For each component, `git checkout <branch_name>`:
 
 | Components               | Branches      | Branches     |
 | ------------------------ | ------------- |------------- |
-| cisst                    | devel         | devel        |
-| cisst-ros                | devel         | devel        |
-| sawKeyboard              | devel         | devel        |
-| sawTextToSpeech          | devel         | devel        |
-| sawRobotIO1394           | devel         | devel        |
-| sawControllers           | devel         | devel        |
-| sawConstraintControllers | devel         | devel        |
-| sawIntuitiveResearchKit  | devel         | feature-ecm  |
-| dvrk-ros                 | devel         | feature-ecm  |
+| cisst                    | devel         |         |
+| cisst-ros                | devel         |         |
+| sawKeyboard              | devel         |         |
+| sawTextToSpeech          | devel         |         |
+| sawRobotIO1394           | devel         |         |
+| sawControllers           | devel         |         |
+| sawConstraintControllers | devel         |         |
+| sawIntuitiveResearchKit  | devel         |   |
+| dvrk-ros                 | devel         |   |
 
 Note: sawRobotIO1394 in the devel branch has a different git submodule so you need to go in the component source directory and update the submodule:
 ```sh
@@ -37,14 +37,9 @@ git submodule update
 
 ### `devel`
 
-* Mostly small bug fixes
 * Main API changes are in dvrk_python and dvrk_matlab, converging towards final API 
 * Code in the components directory has been re-organized to better separate the component's code from examples and applications.  It is overall cleaner and works with the latest catkin build tools.
 * By default, the ROS topics have changed.  We now try to use "stamped" data types as much as possible and we've removed the joint positions/velocities topics since the state joint covers them all.  If you need the old topics, `dvrk_console_json` has the option `-c v1_3_0` to support older topics (`--compatibility`).  All topics with headers now have a reasonable timestamp, sequence number and id (string).
-
-### `feature-ecm`
-
-* This branch will likely be merged before next release
 * New teleoperation components, one for PSM and one for ECM, now part of sawIntuitiveResearchKit.  Slight differences in ROS topics to control teleop.
 * Console now handles most events and turn on/off teleoperation components (new `mtsStateTable` introduced in these components).  Need new topics to control console.
 * Better lock/positioning of MTMs
@@ -59,7 +54,6 @@ Besides pending issues, the following should be addressed before next release:
 * Check that console/teleops can be controlled and configured (base frame, rotations) using ROS topics
 * Add psm-prograsp.json from Google group
 * Add ROS topics backward compatibility to all dvrk_robot applications
-* Remove gcm option when compiled without ICE in all dVRK applications
 * Fix CMake/Catkin for OpenIGT and ATIFT (not really dVRK but would help)
 * Compute wrench at tooltip based on joint torques and publish as ROS topic
 * Add dvrk-openigt to cisst-saw
