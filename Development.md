@@ -5,7 +5,6 @@
 - [Compatible development branches](#compatible-development-branches)
 - [Changes](#changes)
   - [`devel`](#devel)
-  - [`feature-ecm`](#feature-ecm)
 - [Todo](#todo)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -23,8 +22,8 @@ For each component, `git checkout <branch_name>`:
 | sawRobotIO1394           | devel         |         |
 | sawControllers           | devel         |         |
 | sawConstraintControllers | devel         |         |
-| sawIntuitiveResearchKit  | devel         |   |
-| dvrk-ros                 | devel         |   |
+| sawIntuitiveResearchKit  | devel         |         |
+| dvrk-ros                 | devel         |         |
 
 Note: sawRobotIO1394 in the devel branch has a different git submodule so you need to go in the component source directory and update the submodule:
 ```sh
@@ -37,13 +36,13 @@ git submodule update
 
 ### `devel`
 
-* Main API changes are in dvrk_python and dvrk_matlab, converging towards final API 
+* Main API changes are in dvrk_python and dvrk_matlab, converging towards final API (see readme under dvrk_python)
 * Code in the components directory has been re-organized to better separate the component's code from examples and applications.  It is overall cleaner and works with the latest catkin build tools.
 * By default, the ROS topics have changed.  We now try to use "stamped" data types as much as possible and we've removed the joint positions/velocities topics since the state joint covers them all.  If you need the old topics, `dvrk_console_json` has the option `-c v1_3_0` to support older topics (`--compatibility`).  All topics with headers now have a reasonable timestamp, sequence number and id (string).
-* New teleoperation components, one for PSM and one for ECM, now part of sawIntuitiveResearchKit.  Slight differences in ROS topics to control teleop.
-* Console now handles most events and turn on/off teleoperation components (new `mtsStateTable` introduced in these components).  Need new topics to control console.
+* New teleoperation components, one for PSM and one for ECM, now part of sawIntuitiveResearchKit.  Slight differences in ROS topics to control teleop (set state instead of enable).
+* Console now handles most events and turn on/off teleoperation components (new `mtsStateMachine` introduced in these components).  Need new topics to control console.
 * Better lock/positioning of MTMs
-* Tighter Qt layout
+* Cleaner Qt layout
 
 ## Todo
 
@@ -74,5 +73,5 @@ Maybe for later releases:
 * Remove gravity and clutch mode from MTM, now replaced by effort_mode + gravity on/off + lock orientation on/off
 * Better handling of redundant joints in MTMs
 * Use new state machine in arm classes
-* Add alert with SUJ are moved without brakes released
+* Add alert when SUJ are moved without brakes released
 * Use Reflexes/RML for trajectory generation
