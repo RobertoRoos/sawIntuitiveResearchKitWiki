@@ -65,7 +65,6 @@ Besides pending issues, the following should be addressed before next release:
 * Fix CMake/Catkin for OpenIGT and ATIFT (not really dVRK but would help)
 * Compute wrench at tooltip based on joint torques and publish as ROS topic
 * Add dvrk-openigt to cisst-saw
-* Cleanup cisst CMake to avoid WARNING and use STATUS instead (reduce catkin build messages)
 * Add scale in Qt Console for all teleops
 
 Maybe for later releases:
