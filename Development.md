@@ -67,8 +67,6 @@ Besides pending issues, the following should be addressed before next release:
 * Add dvrk-openigt to cisst-saw
 * Add scale in Qt Console for all teleops
 * Deprecate ROS packages `dvrk_kinematics`, `dvrk_teleop`, `rqt_dvrk` by prefixing package name with `deprecated_` and move to new directory `deprecated`.
-* Fix teleop PSM (and likely ECM) to handle case where clutch is pressed while teleop is enabled
-* In console, if no teleop ECM, do not disable teleop PSM on CAM foot pedal
 
 Maybe for later releases:
 * Add ROS TF support, specially for SUJ
