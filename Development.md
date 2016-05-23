@@ -66,6 +66,7 @@ Besides pending issues, the following should be addressed before next release:
 * Compute wrench at tooltip based on joint torques and publish as ROS topic
 * Add dvrk-openigt to cisst-saw
 * Add scale in Qt Console for all teleops
+* Deprecate ROS packages `dvrk_kinematics`, `dvrk_teleop`, `rqt_dvrk` by prefixing package name with `deprecated_` and move to new directory `deprecated`. 
 
 Maybe for later releases:
 * Add ROS TF support, specially for SUJ
