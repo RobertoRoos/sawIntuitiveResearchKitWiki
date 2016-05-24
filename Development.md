@@ -67,6 +67,7 @@ Besides pending issues, the following should be addressed before next release:
 * Add dvrk-openigt to cisst-saw
 * Add scale in Qt Console for all teleops
 * Deprecate ROS packages `dvrk_kinematics`, `dvrk_teleop`, `rqt_dvrk` by prefixing package name with `deprecated_` and move to new directory `deprecated`.
+* Arm class, re-align wrench body only if in WRENCH body mode
 
 Maybe for later releases:
 * Add ROS TF support, specially for SUJ
