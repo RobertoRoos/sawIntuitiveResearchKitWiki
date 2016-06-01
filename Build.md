@@ -34,7 +34,7 @@ These instructions are specific to Ubuntu Linux.  The low level software is Linu
 * OpenIGTLink for sawOpenIGTLink
 
 One time command per computer:
-   `sudo apt-get install libxml2-dev libraw1394-dev libncurses5-dev qtcreator swig libopenigtlink-dev flite cmake-curses-gui cmake-qt-gui libopencv-dev git subversion gfortran`
+   `sudo apt-get install libxml2-dev libraw1394-dev libncurses5-dev qtcreator swig libopenigtlink-dev flite cmake-curses-gui cmake-qt-gui libopencv-dev git subversion gfortran libcppunit-dev`
 
 # 3. cisst/saw
 
