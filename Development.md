@@ -60,17 +60,13 @@ Besides pending issues, the following should be addressed before next release:
 * Make sure console handles SUJ and PSM/ECM clutch
 * Implement motion of ECM in teleopECM
 * Check that console/teleops can be controlled and configured (base frame, rotations) using ROS topics
-* Add ROS topics backward compatibility to all dvrk_robot applications
 * Fix CMake/Catkin for OpenIGT and ATIFT (not really dVRK but would help)
 * Add dvrk-openigt to cisst-saw
 * Add scale in Qt Console for all teleops
 * Deprecate ROS packages `dvrk_kinematics`, `dvrk_teleop`, `rqt_dvrk` by prefixing package name with `deprecated_` and move to new directory `deprecated`.
-* Arm class, re-align wrench body only if in WRENCH body mode
 * Remove `period` from provided JSON files, both for IO and Teleops, add documentation in format page
 * Document `types` in JSON files for arms and tele components
-* Add non interpolated mode for Matlab?
 * Add Matlab classes for ecm, mtm and psm
-* Provide API to get current twist and wrench in Python and Matlab
 
 Maybe for later releases:
 * Add ROS TF support, specially for SUJ
