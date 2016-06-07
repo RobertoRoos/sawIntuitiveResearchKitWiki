@@ -59,14 +59,12 @@ Besides pending issues, the following should be addressed before next release:
 * Fix cisst warning when optional interfaces/functions are not connected
 * Make sure console handles SUJ and PSM/ECM clutch
 * Implement motion of ECM in teleopECM
-* Check that console/teleops can be controlled and configured (base frame, rotations) using ROS topics
+* Check that teleops can be controlled and configured (base frame, rotations) using ROS topics
 * Fix CMake/Catkin for OpenIGT and ATIFT (not really dVRK but would help)
 * Add dvrk-openigt to cisst-saw
-* Add scale in Qt Console for all teleops
 * Deprecate ROS packages `dvrk_kinematics`, `dvrk_teleop`, `rqt_dvrk` by prefixing package name with `deprecated_` and move to new directory `deprecated`.
 * Remove `period` from provided JSON files, both for IO and Teleops, add documentation in format page
 * Document `types` in JSON files for arms and tele components
-* Add Matlab classes for ecm, mtm and psm
 
 Maybe for later releases:
 * Add ROS TF support, specially for SUJ
