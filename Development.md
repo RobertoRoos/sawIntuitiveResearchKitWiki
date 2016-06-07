@@ -63,8 +63,6 @@ Besides pending issues, the following should be addressed before next release:
 * Fix CMake/Catkin for OpenIGT and ATIFT (not really dVRK but would help)
 * Add dvrk-openigt to cisst-saw
 * Deprecate ROS packages `dvrk_kinematics`, `dvrk_teleop`, `rqt_dvrk` by prefixing package name with `deprecated_` and move to new directory `deprecated`.
-* Remove `period` from provided JSON files, both for IO and Teleops, add documentation in format page
-* Document `types` in JSON files for arms and tele components
 
 Maybe for later releases:
 * Add ROS TF support, specially for SUJ
