@@ -30,7 +30,6 @@ The screws used to mount the heat sink depend on the QLA revision:
  * Rev 3.0, delivered mm/yyyy: ??
  * Rev 4.0, delivered mm/yyyy: imperial 4-40, 3/8 long
 
-To provide enough clearance for all the screws, we had to mill the heat sink fins:
 ![Heat sink mounted](/jhu-dvrk/sawIntuitiveResearchKit/wiki/qla-heat-sink-03.jpg)
 
 With the fan:
@@ -38,6 +37,15 @@ With the fan:
 
 ## Results
 
+This was tested on the SUJ controller, dSIB rev 2.0.
+
 | Fan | Time | Temperature |
 |-----|------|-------------|
-| on  | 0:00 | 26 C        |
+| off | 0:00 | 29 C (room) |
+| off | 0:15 | 44 C        |
+| off | 0:30 | 50 C        |
+| on  | 0:40 | 46 C        |
+| on  | 0:45 | 37 C        |
+| on  | 0:50 | 34 C        |
+
+Without the fan the temperature seems stable around 50 C.  With the fan, the temperature goes down to 34 C.
