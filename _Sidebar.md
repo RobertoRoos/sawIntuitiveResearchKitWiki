@@ -19,12 +19,10 @@ Advanced
 * [Build with ROS catkin_make (deprecated)](/jhu-dvrk/dvrk-ros)
 * [Simulation with ROS](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Simulation)
 
-Controller
-* [MTM Gravity Compensation](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Control-Gravity-Compensation)
-
 Miscellaneous
 * [cisst](/jhu-cisst/cisst/wiki)
-* [Head Sensor](/jhu-dvrk/sawIntuitiveResearchKit/wiki/HeadSensor)
 * [Frequently Asked Questions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FAQ)
 * [Hamlyn Meetup 2016](/jhu-dvrk/sawIntuitiveResearchKit/wiki/HamlynMeetup2016)
+* [Head Sensor](/jhu-dvrk/sawIntuitiveResearchKit/wiki/HeadSensor)
+* [MTM Gravity Compensation](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Control-Gravity-Compensation)
 * [JHU](JHU-DVRK-Hardware-Status)
