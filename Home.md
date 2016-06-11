@@ -2,15 +2,11 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
 
-- [**Firmware**](#firmware)
 - [Introduction](#introduction)
+- [**Firmware**](#firmware)
+- [Links](#links)
 - [Updates](#updates)
-- [Documentation](#documentation)
-  - [Getting Started](#getting-started)
-  - [Advanced](#advanced)
-  - [Controller](#controller)
-  - [Publications](#publications)
-- [Miscellaneous](#miscellaneous)
+- [Publications](#publications)
 - [Acknowledgments](#acknowledgments)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
