@@ -16,8 +16,6 @@ Advanced
 * [Software architecture](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Software-Architecture)
 * [File formats](FileFormats)
 * [Development branches](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Development)
-* [Build with ROS catkin_make (deprecated)](/jhu-dvrk/dvrk-ros)
-* [Simulation with ROS](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Simulation)
 
 Miscellaneous
 * [cisst](/jhu-cisst/cisst/wiki)
@@ -26,3 +24,7 @@ Miscellaneous
 * [Head Sensor](/jhu-dvrk/sawIntuitiveResearchKit/wiki/HeadSensor)
 * [MTM Gravity Compensation](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Control-Gravity-Compensation)
 * [JHU](JHU-DVRK-Hardware-Status)
+
+Deprecated
+* [Build with ROS catkin_make (deprecated)](/jhu-dvrk/dvrk-ros)
+* [Simulation with ROS](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Simulation)
