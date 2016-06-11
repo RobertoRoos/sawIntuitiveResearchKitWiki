@@ -15,11 +15,15 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
+# Introduction
+
+The da Vinci Research Kit is an “open-source mechatronics” system, consisting of electronics, firmware, and software that is being used to control research systems based on the first-generation da Vinci system.
+
 # **Firmware**
 Firmware version 3.0 or 4.0 is now required, please upgrade.  Version 4.0 adds support for FireWire broadcasts, which enables faster I/O performance.
 https://github.com/jhu-cisst/mechatronics-firmware/wiki/FPGA-Program 
 
-# Introduction
+# Links
 
 ![Controller with Patient Side Manipulators (PSMs)](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ControllerWithPSM.jpg)
 
