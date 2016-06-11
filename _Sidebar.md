@@ -26,5 +26,5 @@ Miscellaneous
 * [JHU](JHU-DVRK-Hardware-Status)
 
 Deprecated
-* [Build with ROS catkin_make (deprecated)](/jhu-dvrk/dvrk-ros)
+* [Build with ROS catkin_make](/jhu-dvrk/dvrk-ros)
 * [Simulation with ROS](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Simulation)
