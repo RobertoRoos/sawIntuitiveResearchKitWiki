@@ -12,7 +12,7 @@
 
 # Introduction
 
-The dVRK controllers use a JHU designed Quad Linear Amps board ([acronyms defined in FAQ](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FAQ)).  The linear amplifiers are all mounted against a large heat sink (square aluminum barre).  This solution provides enough heat dissipation for both the MTMs and PSMs since these arms tend to require very little power (for most tasks, less than 0.5 A per board).  For the ECM and the SUJs, passive cooling is not sufficient.  The ECM arm is not as light as the PSMs and require a fair bit more power.  The second joint itself can draw close to 0.5 A continuously.
+The dVRK controllers use a JHU designed Quad Linear Amps board ([acronyms defined in FAQ](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FAQ)).  The linear amplifiers are all mounted against a large heat sink (square aluminum bar).  This solution provides enough heat dissipation for both the MTMs and PSMs since these arms tend to require very little power (for most tasks, less than 0.5 A per board).  For the ECM and the SUJs, passive cooling is not sufficient.  The ECM arm is not as light as the PSMs and require a fair bit more power.  The second joint itself can draw close to 0.5 A continuously.
 
 The QLA boards have multiple 2 pins 12 V connectors that are powered when the motor power is turned on.  We can use these to power a fan for active cooling.
 
@@ -30,17 +30,15 @@ Parts to build 4 heat sinks with fans,
 
 ## Manufacturing
 
-Each heat sink was first cut in half to match the length of the existing heat sink.  We then drilled 3 holes, matching the spacing on the existing heat sink.  We also drilled 4 holes, diameter 2.5 mm to mount the 40 mm fan.  To mount the fan, we used 3 mm screws, 20 mm long.  The length matches the cumulated thickness of the fan and heatsink:
+Each heat sink was first cut in half to match the length of the existing heat sink.  We then drilled 3 holes, matching the spacing on the existing heat sink.  We also drilled 4 holes, diameter 2.5 mm to mount the 40 mm fan.  To mount the fan, we used 3 mm screws, 20 mm long.  The length matches the cumulative thickness of the fan and heatsink:
 ![Mounting holes](/jhu-dvrk/sawIntuitiveResearchKit/wiki/qla-heat-sink-01.jpg)
 
 To provide enough clearance for all the screws, we had to mill the heat sink fins:
 ![Milled fins](/jhu-dvrk/sawIntuitiveResearchKit/wiki/qla-heat-sink-02.jpg)
 
-The screws used to mount the heat sink depend on the QLA revision:
- * Rev 1.0, delivered mm/yyyy: imperial 4-40, 3/8 long
- * Rev 2.0, delivered mm/yyyy: ??
- * Rev 3.0, delivered mm/yyyy: ??
- * Rev 4.0, delivered mm/yyyy: imperial 4-40, 3/8 long
+The screws used to mount the heat sink depend on the QLA serial number. To the best of our knowledge, although the older heat sink drawing indicates metric (M3) threads, we believe most were tapped for Imperial 4-40. The exception is build #3, with QLA S/N 4265-xx.
+ * QLA S/N 4265-xx: Metric M3, 8 mm long
+ * All other QLA: Imperial 4-40, 3/8" long
 
 ![Heat sink mounted](/jhu-dvrk/sawIntuitiveResearchKit/wiki/qla-heat-sink-03.jpg)
 
