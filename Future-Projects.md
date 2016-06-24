@@ -56,7 +56,8 @@ Add torque limits per joint in PID configurable by tool.  The JSON file for the 
 **[New feature, core C++]**
 
 ## Gravity compensation
-Develop an algorithm to automatically identify the center of mass and mass.  We assume inertia matrices are not needed at that point.  This can be calibration stage with an initial data collection using the ROS bridges, maybe directly from Matlab (that would require all groups to have the Robotics Systems Toolbox) or Numpy/Scipy, parameter identification offline, C++ code to adjust the joint torques at runtime.<br>
+Develop an algorithm to automatically identify the center of mass and mass.  We assume inertia matrices are not needed at that point.  This can be calibration stage with an initial data collection using the ROS bridges, maybe directly from Matlab (that would require all groups to have the Robotics Systems Toolbox) or Numpy/Scipy, parameter identification offline, C++ code to adjust the joint torques at runtime.  See See [#3](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/issues/3).<br>
+We would need this form the MTMs as well as the ECM so the clutch mode would be weightless.<br>
 Some work has been done at WPI and there's a student working over summer '16 at JHU<br>
 **[New feature, core C++ + ROS + Matlab/scipy]**
 
