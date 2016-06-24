@@ -17,40 +17,29 @@ Maybe moving to JSON format could help but this might be an unnecessary incompat
 
 ## Velocity control
 
-Add special mode to PID to servo torque based on current velocity or any better approach.  In arm class, add code to convert cartesian velocities (likely in body frame) to joint velocities and use PID interface to control joint velocities.  Add ROS topics for this new feature. 
+Add special mode to PID to servo torque based on current velocity or any better approach.  In arm class, add code to convert cartesian velocities (likely in body frame) to joint velocities and use PID interface to control joint velocities.  Add ROS topics for this new feature.<br>
 **[Improvement, core C++]**
 
 ## Torque limits specific to tool
 
-Add torque limits per joint in PID configurable by tool
+Add torque limits per joint in PID configurable by tool.  The JSON file for the tool is loaded by the PSM class so we need to add the proper interfaces to the PID component.<br>
+**[Improvement, core C++]**
 
 ## Gravity compensation
-
-
-
-[edit]1.3 PSM cleanup
-
-This includes:
-Configuration files to load different tools<s> Only file created for LND, should be easy to create others
-PID gains per configuration <s>joint limits.
-Update DH based on tools
-Re-write adapter/tool engage procedure
-[edit]1.4 Tele-operation states
-
-The current tele-operation components doesn't check things as simple as the master orientation when engaging.
-Create base class for tele-operation to manage states
-Implement current position based teleop using new base class
-Add new tele using rates for positions and force feedback for orientation
-
-
-
-
-
-## 
+Develop an algorithm to automatically identify the center of mass and mass.  We assume inertia matrices are not needed at that point.  This can be calibration stage with an initial data collection using the ROS bridges, maybe directly from Matlab (that would require all groups to have the Robotics Systems Toolbox) or Numpy/Scipy, parameter identification offline, C++ code to adjust the joint torques at runtime.<br> 
+**[Improvement, core C++ + ROS + Matlab/scipy]**
 
 ## Better use of redundancies
-* Positioning the wrist in effort mode
-* Taking advantage of the symmetry of the master gripper and maximize the joint space overlap with PSM
+Positioning the wrist in effort mode<br>
+Taking advantage of the symmetry of the master gripper and maximize the joint space overlap with PSM<br>
+**[Improvement, core C++]**
+
+## Better PSM teleoperation
+
+Take joint PSM limits into account and provide force feedback on MTMs.<br>
+Evaluate a different control, we currently use absolute positions since the follow mode started.  Maybe using relative motions since last command (incremental positions and/or velocities) would reduce the likelihood of jumps in the cartesian space.<br> 
+**[Improvement, core C++]**
+
 
 # Video
 
