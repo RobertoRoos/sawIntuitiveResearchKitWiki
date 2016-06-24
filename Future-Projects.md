@@ -62,7 +62,7 @@ Some work has been done at WPI and there's a student working over summer '16 at 
 
 ## Better use of redundancies
 Positioning the wrist in effort mode<br>
-Taking advantage of the symmetry of the master gripper and maximize the joint space overlap with PSM, see #56<br>
+Taking advantage of the symmetry of the master gripper and maximize the joint space overlap with PSM, see [#56](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/issues/56)<br>
 **[New feature, core C++]**
 
 ## Better PSM teleoperation
@@ -89,7 +89,7 @@ For dVRK users, tools to:
 **[New feature, ROS/Matlab, documentation]**
 
 ## Stereo endoscope focus
-Add support in console to use foot pedals CAM+/- to control the focus<br>
+Add support in console to use foot pedals CAM+/- to control the focus.  See [#55](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/issues/55)<br>
 See impact of focus change on camera calibration<br>
 Maybe track and approximate camera focus to provide a better camera calibration estimate<br>
 Autofocus?
