@@ -33,12 +33,12 @@ For all projects that impact the dVRK software stack (i.e. sawIntuitiveResearchK
 
 ## MTMs grippers
 The current calibration process uses the fully open angle and lightly closed angles.  We could also use the fully closed angle and maybe use a non linear mapping between the master grippers and tool's jaws.<br>
-Use both Hall Effect sensors, we need to use one of the digital outs to toggle the mux.  See [#25](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/issues/25)<br>
+Use both Hall Effect sensors, we need to use one of the digital outs to toggle the mux.  See [#23](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/issues/23)<br>
 **[Improvement, core C++]**
 
 ## Encoder/potentiometer redundancy
 Includes better filtering, maybe including some kind of delay to take into account the fact that the potentiometers are slow.  Filtering on the PC side tends to introduce more delay so maybe add filtering on the FPGA.   The current (simplistic) implementation is based on total of successive failures.<br>
-Figure out how to use potentiometer on master roll (last active joint).<br>
+Figure out how to use potentiometer on master roll (last active joint).  See [#25](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/issues/25)<br>
 See [#56](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/issues/56).<br>
 **[New feature, core C++]**
 
