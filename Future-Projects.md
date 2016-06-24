@@ -81,6 +81,7 @@ Create a virtual console with:
 
 ## Calibration/registration
 For dVRK users, tools to:
+* Manually re-align MTMs to PSMs, i.e. user visually aligns the MTM and based on current position estimate the rotation matrix used for the teleoperation components.
 * Calibrate stereo camera, some have used ROS tools based on OpenCV, others have used the latest Matlab toolkits.  It would be nice to have howto and maybe comparative results between both methods. 
 * Using simple grid held by PSMs, register PSM to camera?
 * Tooltracking?
