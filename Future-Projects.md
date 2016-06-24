@@ -2,31 +2,33 @@ For all projects that impact the dVRK software stack (i.e. sawIntuitiveResearchK
 
 # Control
 
-## Encoder/potentiometer redundancy
+# MTMs grippers
+The current calibration process uses the fully open angle and lightly closed angles.  We could also use the fully closed angle and maybe use a non linear mapping between the master grippers and tool's jaws.<br>
+Use both Hall Effect sensors, we need to use one of the digital outs to toggle the mux.<br>
+**[Improvement, core C++]**
 
+## Encoder/potentiometer redundancy
 Includes better filtering, maybe including some kind of delay to take into account the fact that the potentiometers are slow.  Filtering on the PC side tends to introduce more delay so maybe add filtering on the FPGA.   The current (simplistic) implementation is based on total of successive failures.<br>
 Figure out how to use potentiometer on master roll (last active joint).<br>
 **[Improvement, core C++]**
 
 ## PID component cleanup
-
 The current PID implementation needs to be cleaned up.  All joint commands should use iterators instead of for loops and cisstVector methods on vector of joints.<br>
 Fix velocity when in simulated mode.<br>
 Maybe moving to JSON format could help but this might be an unnecessary incompatibility.<br>
 **[Improvement, core C++]**
 
 ## Velocity control
-
 Add special mode to PID to servo torque based on current velocity or any better approach.  In arm class, add code to convert cartesian velocities (likely in body frame) to joint velocities and use PID interface to control joint velocities.  Add ROS topics for this new feature.<br>
 **[Improvement, core C++]**
 
 ## Torque limits specific to tool
-
 Add torque limits per joint in PID configurable by tool.  The JSON file for the tool is loaded by the PSM class so we need to add the proper interfaces to the PID component.<br>
 **[Improvement, core C++]**
 
 ## Gravity compensation
-Develop an algorithm to automatically identify the center of mass and mass.  We assume inertia matrices are not needed at that point.  This can be calibration stage with an initial data collection using the ROS bridges, maybe directly from Matlab (that would require all groups to have the Robotics Systems Toolbox) or Numpy/Scipy, parameter identification offline, C++ code to adjust the joint torques at runtime.<br> 
+Develop an algorithm to automatically identify the center of mass and mass.  We assume inertia matrices are not needed at that point.  This can be calibration stage with an initial data collection using the ROS bridges, maybe directly from Matlab (that would require all groups to have the Robotics Systems Toolbox) or Numpy/Scipy, parameter identification offline, C++ code to adjust the joint torques at runtime.<br>
+Some work has been done at WPI and there's a student working over summer '16 at JHU<br>
 **[Improvement, core C++ + ROS + Matlab/scipy]**
 
 ## Better use of redundancies
@@ -35,64 +37,56 @@ Taking advantage of the symmetry of the master gripper and maximize the joint sp
 **[Improvement, core C++]**
 
 ## Better PSM teleoperation
-
 Take joint PSM limits into account and provide force feedback on MTMs.<br>
 Evaluate a different control, we currently use absolute positions since the follow mode started.  Maybe using relative motions since last command (incremental positions and/or velocities) would reduce the likelihood of jumps in the cartesian space.<br> 
 **[Improvement, core C++]**
 
-
 # Video
 
-2.3 Read both Hall Effect sensors
-
-This should be fairly simple, maybe goes with firmware to toggle mux without adding too much FireWire
-[edit]2.4 Master gravity compensation
-
-WPI has done some work, not sure they take into account parallel links
-WPI code seems to be Matlab only
-Calibration tool using Matlab, runtime in cisst/SAW C++?
-[edit]2.5 Force feedback on masters
-
-Add force feedback on master when PSM/ECM reaches joint limits
-Others?
-[edit]2.6 Calibration tools
-
-There are a few parameters users should be able to re-calibrate:
-Gripper (exists) but probably needs improvement
-Potentiometers, find slopes from encoder (should be simple), find zeros for homing. Should generate new XML config file, maybe merge with .cal file?
-[edit]2.7 Simulink
-
-Provide examples and documentation, add to github/saw-dvrk or other organization on github
-[edit]3 Video
-
-[edit]3.1 RViz console
-
+## RViz console
 Create a virtual console with:
-Live or simulated video
-Maybe pro-view equivalent
-Icons for dVRK status
-[edit]3.2 Hand eye registration
+* Live or simulated video
+* Maybe pro-view equivalent
+* Icons for dVRK status: tool need re-align, clutch pressed, ...
+* Custom 3D widgets, maybe text viewers, drop tags, ...
 
+## Calibration/registration
 For dVRK users, tools to:
-calibrate stereo camera
-using simple grid held by PSMs, register PSM to camera?
-[edit]3.3 Motorized 3D camera
+* Calibrate stereo camera, some have used ROS tools based on OpenCV, others have used the latest Matlab toolkits.  It would be nice to have howto and maybe comparative results between both methods. 
+* Using simple grid held by PSMs, register PSM to camera?
+* Tooltracking?
 
-For dVRK users, alternative arm with stereo head.
-[edit]4 Simulation
+## Stereo endoscope focus
+Add support in console to use foot pedals CAM+/- to control the focus<br>
+See impact of focus change on camera calibration<br>
+Maybe track and approximate camera focus to provide a better camera calibration estimate<br>
+Autofocus?
 
+## Motorized 3D camera
+For dVRK users (i.e. users who don't have a full daVinci), alternative arm with stereo head.<br>
+Maybe a simple pan tilt camera with ROS interface controllable from MTMs?
 
 # Applications
 
-4.2 Dynamic simulation
+## Potentiometer and DH calibration
+We have a procedure to calibrate the scales but we're missing many offsets, the only one handled for now are the last 4 on PSMs.  Can we find a way to calibrate the pots on MTMs, ECM and first 3 on PSMs?<br?
+Develop a procedure to collect 3D positions both based on a tracking system (likely optical) and based on encoders and then identify the ideal DH parameters.  JHU has a high school student working on similar project during summer '16.<br>
+[New feature, ROS, ...]
 
+## Dynamic simulation
 Two different goals:
-Offline simulation
-Realtime simulation, can emulate training simulator from ISI?
-[edit]4.2.1 Gazebo
-There seems to a fair amount of work done at WPI.
-JHU would like to test and maybe use this. If we do use it we can support it and push this to the saw-dvrk github organization.
-Reports from JHU users re. known bugs without fixes
-[edit]4.2.2 VRep
-Some JHU users have experience with VRep
-Happy with user support, stable API
+* Offline simulation
+* Realtime simulation, research skill simulator?
+
+### Gazebo
+Gazebo reviews are mixed, some reported issues with stability and poor documentation but widely used in the ROS community, including for the DARPA project and at JHU with WAM arms.<br>
+There seems to a fair amount of work done at WPI and some at JHU.  There's a JHU summer '16 undergrad project ongoing.<br>
+
+### VRep
+Some JHU users have experience with VRep.  They've been happy with user support, stable API.  Not as popular as Gazebo.
+
+# Hardware
+
+## Repository of CAD files
+
+E.g. custom cannula from Sick Kids DC
