@@ -33,12 +33,13 @@ For all projects that impact the dVRK software stack (i.e. sawIntuitiveResearchK
 
 ## MTMs grippers
 The current calibration process uses the fully open angle and lightly closed angles.  We could also use the fully closed angle and maybe use a non linear mapping between the master grippers and tool's jaws.<br>
-Use both Hall Effect sensors, we need to use one of the digital outs to toggle the mux.<br>
+Use both Hall Effect sensors, we need to use one of the digital outs to toggle the mux.  See [#25](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/issues/25)<br>
 **[Improvement, core C++]**
 
 ## Encoder/potentiometer redundancy
 Includes better filtering, maybe including some kind of delay to take into account the fact that the potentiometers are slow.  Filtering on the PC side tends to introduce more delay so maybe add filtering on the FPGA.   The current (simplistic) implementation is based on total of successive failures.<br>
 Figure out how to use potentiometer on master roll (last active joint).<br>
+See [#56](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/issues/56).<br>
 **[New feature, core C++]**
 
 ## PID component cleanup
@@ -62,7 +63,7 @@ Some work has been done at WPI and there's a student working over summer '16 at 
 
 ## Better use of redundancies
 Positioning the wrist in effort mode<br>
-Taking advantage of the symmetry of the master gripper and maximize the joint space overlap with PSM, see [#56](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/issues/56)<br>
+Taking advantage of the symmetry of the master gripper and maximize the joint space overlap with PSM, see [#56](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/issues/56) and [#50](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/issues/50)<br>
 **[New feature, core C++]**
 
 ## Better PSM teleoperation
