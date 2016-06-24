@@ -38,8 +38,7 @@ Use both Hall Effect sensors, we need to use one of the digital outs to toggle t
 
 ## Encoder/potentiometer redundancy
 Includes better filtering, maybe including some kind of delay to take into account the fact that the potentiometers are slow.  Filtering on the PC side tends to introduce more delay so maybe add filtering on the FPGA.   The current (simplistic) implementation is based on total of successive failures.<br>
-Figure out how to use potentiometer on master roll (last active joint).  See [#25](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/issues/25)<br>
-See [#56](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/issues/56).<br>
+Figure out how to use potentiometer on master roll (last active joint).  See [#25](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/issues/25).<br>
 **[New feature, core C++]**
 
 ## PID component cleanup
