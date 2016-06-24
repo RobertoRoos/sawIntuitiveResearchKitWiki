@@ -3,7 +3,7 @@
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [Control](#control)
-- [MTMs grippers](#mtms-grippers)
+  - [MTMs grippers](#mtms-grippers)
   - [Encoder/potentiometer redundancy](#encoderpotentiometer-redundancy)
   - [PID component cleanup](#pid-component-cleanup)
   - [Velocity control](#velocity-control)
@@ -30,7 +30,7 @@ For all projects that impact the dVRK software stack (i.e. sawIntuitiveResearchK
 
 # Control
 
-# MTMs grippers
+## MTMs grippers
 The current calibration process uses the fully open angle and lightly closed angles.  We could also use the fully closed angle and maybe use a non linear mapping between the master grippers and tool's jaws.<br>
 Use both Hall Effect sensors, we need to use one of the digital outs to toggle the mux.<br>
 **[Improvement, core C++]**
@@ -38,7 +38,7 @@ Use both Hall Effect sensors, we need to use one of the digital outs to toggle t
 ## Encoder/potentiometer redundancy
 Includes better filtering, maybe including some kind of delay to take into account the fact that the potentiometers are slow.  Filtering on the PC side tends to introduce more delay so maybe add filtering on the FPGA.   The current (simplistic) implementation is based on total of successive failures.<br>
 Figure out how to use potentiometer on master roll (last active joint).<br>
-**[Improvement, core C++]**
+**[New feature, core C++]**
 
 ## PID component cleanup
 The current PID implementation needs to be cleaned up.  All joint commands should use iterators instead of for loops and cisstVector methods on vector of joints.<br>
@@ -48,21 +48,21 @@ Maybe moving to JSON format could help but this might be an unnecessary incompat
 
 ## Velocity control
 Add special mode to PID to servo torque based on current velocity or any better approach.  In arm class, add code to convert cartesian velocities (likely in body frame) to joint velocities and use PID interface to control joint velocities.  Add ROS topics for this new feature.<br>
-**[Improvement, core C++]**
+**[New feature, core C++]**
 
 ## Torque limits specific to tool
 Add torque limits per joint in PID configurable by tool.  The JSON file for the tool is loaded by the PSM class so we need to add the proper interfaces to the PID component.<br>
-**[Improvement, core C++]**
+**[New feature, core C++]**
 
 ## Gravity compensation
 Develop an algorithm to automatically identify the center of mass and mass.  We assume inertia matrices are not needed at that point.  This can be calibration stage with an initial data collection using the ROS bridges, maybe directly from Matlab (that would require all groups to have the Robotics Systems Toolbox) or Numpy/Scipy, parameter identification offline, C++ code to adjust the joint torques at runtime.<br>
 Some work has been done at WPI and there's a student working over summer '16 at JHU<br>
-**[Improvement, core C++ + ROS + Matlab/scipy]**
+**[New feature, core C++ + ROS + Matlab/scipy]**
 
 ## Better use of redundancies
 Positioning the wrist in effort mode<br>
 Taking advantage of the symmetry of the master gripper and maximize the joint space overlap with PSM<br>
-**[Improvement, core C++]**
+**[New feature, core C++]**
 
 ## Better PSM teleoperation
 Take joint PSM limits into account and provide force feedback on MTMs.<br>
@@ -77,12 +77,14 @@ Create a virtual console with:
 * Maybe pro-view equivalent
 * Icons for dVRK status: tool need re-align, clutch pressed, ...
 * Custom 3D widgets, maybe text viewers, drop tags, ...
+**[New feature, ROS/RViz, maybe C++ RViz module]**
 
 ## Calibration/registration
 For dVRK users, tools to:
 * Calibrate stereo camera, some have used ROS tools based on OpenCV, others have used the latest Matlab toolkits.  It would be nice to have howto and maybe comparative results between both methods. 
 * Using simple grid held by PSMs, register PSM to camera?
 * Tooltracking?
+**[New feature, ROS/Matlab, documentation]**
 
 ## Stereo endoscope focus
 Add support in console to use foot pedals CAM+/- to control the focus<br>
@@ -99,7 +101,7 @@ Maybe a simple pan tilt camera with ROS interface controllable from MTMs?
 ## Potentiometer and DH calibration
 We have a procedure to calibrate the scales but we're missing many offsets, the only one handled for now are the last 4 on PSMs.  Can we find a way to calibrate the pots on MTMs, ECM and first 3 on PSMs?<br?
 Develop a procedure to collect 3D positions both based on a tracking system (likely optical) and based on encoders and then identify the ideal DH parameters.  JHU has a high school student working on similar project during summer '16.<br>
-[New feature, ROS, ...]
+**[New feature, ROS, ...]**
 
 ## Dynamic simulation
 Two different goals:
@@ -109,9 +111,11 @@ Two different goals:
 ### Gazebo
 Gazebo reviews are mixed, some reported issues with stability and poor documentation but widely used in the ROS community, including for the DARPA project and at JHU with WAM arms.<br>
 There seems to a fair amount of work done at WPI and some at JHU.  There's a JHU summer '16 undergrad project ongoing.<br>
+**[New feature, Gazebo/ROS]**
 
 ### VRep
 Some JHU users have experience with VRep.  They've been happy with user support, stable API.  Not as popular as Gazebo.
+**[New feature, Gazebo/ROS]**
 
 # Hardware
 
