@@ -1,3 +1,31 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Control](#control)
+- [MTMs grippers](#mtms-grippers)
+  - [Encoder/potentiometer redundancy](#encoderpotentiometer-redundancy)
+  - [PID component cleanup](#pid-component-cleanup)
+  - [Velocity control](#velocity-control)
+  - [Torque limits specific to tool](#torque-limits-specific-to-tool)
+  - [Gravity compensation](#gravity-compensation)
+  - [Better use of redundancies](#better-use-of-redundancies)
+  - [Better PSM teleoperation](#better-psm-teleoperation)
+- [Video](#video)
+  - [RViz console](#rviz-console)
+  - [Calibration/registration](#calibrationregistration)
+  - [Stereo endoscope focus](#stereo-endoscope-focus)
+  - [Motorized 3D camera](#motorized-3d-camera)
+- [Applications](#applications)
+  - [Potentiometer and DH calibration](#potentiometer-and-dh-calibration)
+  - [Dynamic simulation](#dynamic-simulation)
+    - [Gazebo](#gazebo)
+    - [VRep](#vrep)
+- [Hardware](#hardware)
+  - [Repository of CAD files](#repository-of-cad-files)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 For all projects that impact the dVRK software stack (i.e. sawIntuitiveResearchKit or dark-ros), proper tickets/issues should be created on github.
 
 # Control
