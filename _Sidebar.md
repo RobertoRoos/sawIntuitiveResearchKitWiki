@@ -16,6 +16,7 @@ Advanced
 * [Software architecture](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Software-Architecture)
 * [File formats](FileFormats)
 * [Development branches](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Development)
+* [Projects](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Future-Porjects)
 
 Miscellaneous
 * [cisst](/jhu-cisst/cisst/wiki)
