@@ -61,8 +61,8 @@ We would need this form the MTMs as well as the ECM so the clutch mode would be 
 Some work has been done at WPI and there's a student working over summer '16 at JHU<br>
 **[New feature, core C++ + ROS + Matlab/scipy]**
 
-## Better use of redundancies
-Positioning the wrist in effort mode<br>
+## Better use of MTM redundancies
+Positioning the wrist in effort mode, see See [#2](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/issues/2)<br>
 Taking advantage of the symmetry of the master gripper and maximize the joint space overlap with PSM, see [#56](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/issues/56) and [#50](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/issues/50)<br>
 **[New feature, core C++]**
 
