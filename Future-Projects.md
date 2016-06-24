@@ -62,7 +62,7 @@ Some work has been done at WPI and there's a student working over summer '16 at 
 
 ## Better use of redundancies
 Positioning the wrist in effort mode<br>
-Taking advantage of the symmetry of the master gripper and maximize the joint space overlap with PSM<br>
+Taking advantage of the symmetry of the master gripper and maximize the joint space overlap with PSM, see #56<br>
 **[New feature, core C++]**
 
 ## Better PSM teleoperation
