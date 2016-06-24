@@ -9,7 +9,7 @@
   - [Velocity control](#velocity-control)
   - [Torque limits specific to tool](#torque-limits-specific-to-tool)
   - [Gravity compensation](#gravity-compensation)
-  - [Better use of redundancies](#better-use-of-redundancies)
+  - [Better use of redundancies](#better-use-of-mtms-redundancies)
   - [Better PSM teleoperation](#better-psm-teleoperation)
 - [Video](#video)
   - [RViz console](#rviz-console)
@@ -62,8 +62,8 @@ Some work has been done at WPI and there's a student working over summer '16 at 
 **[New feature, core C++ + ROS + Matlab/scipy]**
 
 ## Better use of MTM redundancies
-Positioning the wrist in effort mode, see See [#2](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/issues/2)<br>
-Taking advantage of the symmetry of the master gripper and maximize the joint space overlap with PSM, see [#56](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/issues/56) and [#50](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/issues/50)<br>
+Positioning the wrist in effort mode, see [#2](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/issues/2)<br>
+Taking advantage of the symmetry of the master gripper and maximize the joint space overlap with PSM, see [#56](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/issues/56).<br>
 **[New feature, core C++]**
 
 ## Better PSM teleoperation
@@ -90,7 +90,7 @@ For dVRK users, tools to:
 **[New feature, ROS/Matlab, documentation]**
 
 ## Stereo endoscope focus
-Add support in console to use foot pedals CAM+/- to control the focus.  See [#55](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/issues/55)<br>
+Add support in console to use foot pedals CAM+/- to control the focus.  See [#55](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/issues/55) and [#50](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/issues/50)<br>
 See impact of focus change on camera calibration<br>
 Maybe track and approximate camera focus to provide a better camera calibration estimate<br>
 Autofocus?
