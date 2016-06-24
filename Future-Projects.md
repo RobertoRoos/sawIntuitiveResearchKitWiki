@@ -83,7 +83,7 @@ Create a virtual console with:
 
 ## Calibration/registration
 For dVRK users, tools to:
-* Manually re-align MTMs to PSMs, i.e. user visually aligns the MTM and based on current position estimate the rotation matrix used for the teleoperation components.
+* Manually re-align MTMs to PSMs, i.e. user visually aligns the MTM and based on current position estimate the rotation matrix between the PSM base coordinate system and the camera frame.
 * Calibrate stereo camera, some have used ROS tools based on OpenCV, others have used the latest Matlab toolkits.  It would be nice to have howto and maybe comparative results between both methods. 
 * Using simple grid held by PSMs, register PSM to camera?
 * Tooltracking?
@@ -97,7 +97,7 @@ Autofocus?
 
 ## Motorized 3D camera
 For dVRK users (i.e. users who don't have a full daVinci), alternative arm with stereo head.<br>
-Maybe a simple pan tilt camera with ROS interface controllable from MTMs?
+Maybe a simple pan/tilt camera with ROS interface controllable from MTMs?  In any case, we should include a mechanism to report the position of the PSMs with respect to the camera.  In the case of a pan/tilt, the orientation is really what we are after.
 
 # Applications
 
@@ -129,4 +129,4 @@ Some JHU users have experience with VRep.  They've been happy with user support,
 
 ## Repository of CAD files
 
-E.g. custom cannula from Children's DC
+E.g. custom cannula from Children's DC or PSM calibration potentiometer calibration plate (JHU or IC).
