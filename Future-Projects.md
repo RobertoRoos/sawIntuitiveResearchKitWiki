@@ -117,8 +117,13 @@ There seems to a fair amount of work done at WPI and some at JHU.  There's a JHU
 Some JHU users have experience with VRep.  They've been happy with user support, stable API.  Not as popular as Gazebo.
 **[New feature, Gazebo/ROS]**
 
-# Hardware
+# Documentation
+
+## Documented code examples
+* Class derived from an existing arm
+* Class derived from a teleoperation component (PSM or ECM)
+* Python and Matlab examples, maybe more than get/set position?
 
 ## Repository of CAD files
 
-E.g. custom cannula from Sick Kids DC
+E.g. custom cannula from Children's DC
