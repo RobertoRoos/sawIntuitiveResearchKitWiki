@@ -23,3 +23,5 @@ The following commands and feedback are available for the console component (see
 
 * **v 1.4+**: `Scale`.  This _write_ event indicates that a request to change the scale has been sent to all teleoperation components (either for PSMs or ECM) known to the console.  This event is not triggered if the scale of a single teleoperation component is changed, i.e. one can change the `MTMR-PSM1` scale only.  In the case, the `MTMR-PSM1` component will trigger it's own event but the console is not changing the overall scale.<br>
   ROS publisher: `/dvrk/console/teleop/scale`: `std_msgs::Float32`
+
+** --- Work in progress --- **
