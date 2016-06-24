@@ -21,7 +21,8 @@
   - [Dynamic simulation](#dynamic-simulation)
     - [Gazebo](#gazebo)
     - [VRep](#vrep)
-- [Hardware](#hardware)
+- [Documentation](#documentation)
+  - [Documented code examples](#documented-code-examples)
   - [Repository of CAD files](#repository-of-cad-files)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
