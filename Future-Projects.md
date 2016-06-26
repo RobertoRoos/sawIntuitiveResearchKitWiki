@@ -114,11 +114,11 @@ Two different goals:
 ### Gazebo
 Gazebo reviews are mixed, some reported issues with stability and poor documentation but widely used in the ROS community, including for the DARPA project and at JHU with WAM arms.<br>
 There seems to a fair amount of work done at WPI and some at JHU.  There's a JHU summer '16 undergrad project ongoing.<br>
-**[New feature, Gazebo/ROS]**
+**[New feature, Gazebo/RViz/ROS]**
 
 ### VRep
 Some JHU users have experience with VRep.  They've been happy with user support, stable API.  Not as popular as Gazebo.
-**[New feature, Gazebo/ROS]**
+**[New feature, VRep/ROS]**
 
 # Documentation
 
