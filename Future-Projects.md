@@ -71,6 +71,14 @@ Take joint PSM limits into account and provide force feedback on MTMs.<br>
 Evaluate a different control, we currently use absolute positions since the follow mode started.  Maybe using relative motions since last command (incremental positions and/or velocities) would reduce the likelihood of jumps in the cartesian space.<br> 
 **[Improvement, core C++]**
 
+## Trajectory generation
+Current implementation uses robLSPB which always assumes an initial velocity 0.  We can't interrupt existing trajectory so it only works with blocking commands (wait for goal reached event).  Using Reflexxes RMLII we could have an implementation with trajectories picking up where the last one was.   There's some work done in cisstRobot and the dVRK repository (in branches feature-RML but it's incomplete, untested and the build is tricky (should use CMake external project to be portable).  As a side note, we should add support for trajectories in cartesian space, maybe interpolation position/Euler angles.<br>
+**[Improvement, core C++]**
+
+## Support for ROS MoveIt!
+We could provide an interface accepting ROS Trajectory messages (http://docs.ros.org/jade/api/trajectory_msgs/html/msg/JointTrajectory.html), we already have the `joint_state` so that should be enough for joint space.  I'm not totally sure what would be needed for cartesian trajectories but I assume a better integration with TF is needed.  The joint space trajectories shouldn’t be too hard to code on the C++ side, take a list of points (PT and/or PVT) and use the existing robQuintic code to implement a trajectory following mode.  There will be a need to spec a cisstParameterTypes message and add the conversion method from ROS to cisst.<br>
+**[New feature, core C++, ROS]**
+
 # Video
 
 ## RViz console
