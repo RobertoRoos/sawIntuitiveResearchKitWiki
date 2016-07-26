@@ -11,6 +11,8 @@
   - [Gravity compensation](#gravity-compensation)
   - [Better use of MTM redundancies](#better-use-of-mtm-redundancies)
   - [Better PSM teleoperation](#better-psm-teleoperation)
+  - [Trajectory generation](#trajectory-generation)
+  - [Support for ROS MoveIt!](#support-for-ros-moveit)
 - [Video](#video)
   - [RViz console](#rviz-console)
   - [Calibration/registration](#calibrationregistration)
