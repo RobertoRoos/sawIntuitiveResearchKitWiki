@@ -72,3 +72,4 @@ Maybe for later releases:
 * Better handling of redundant joints in MTMs
 * Use new state machine in arm classes
 * Add alert when SUJ are moved without brakes released
+* Add test function on user Id and permission on `/dev/fw*`?
