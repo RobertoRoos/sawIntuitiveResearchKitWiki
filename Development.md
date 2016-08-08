@@ -56,6 +56,8 @@ Solved in next release:
 * #36, better states in tele-operation components
 
 Besides pending issues, the following should be addressed before next release:
+* Use Reflexes/RML for trajectory generation
+* Move ECM .rob to JSON, add optional flag to move to zero position when homing 
 * Fix cisst warning when optional interfaces/functions are not connected
 * Make sure console handles SUJ and PSM/ECM clutch
 * Implement motion of ECM in teleopECM
@@ -70,4 +72,3 @@ Maybe for later releases:
 * Better handling of redundant joints in MTMs
 * Use new state machine in arm classes
 * Add alert when SUJ are moved without brakes released
-* Use Reflexes/RML for trajectory generation
