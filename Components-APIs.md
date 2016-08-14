@@ -68,5 +68,11 @@ The following commands and feedback are available for all arm components (see cl
 * **v 1.3**: `GetPositionJointDesired`.  This _read_ command returns the last requested joint positions used by the PID controller.<br>
   ROS publisher: `/dvrk/<arm_name>/position_joint_desired`: `sensor_msgs::JointState`.  Deprecated in **v 1.4**, see `state_joint_current`.
 
+* **v 1.3+**: `GetStateJoint`.  This _read_ command returns the current joint positions and velocities based on the encoders and the actuator to joint coupling matrix.  The effort is based on the current feedback provided by the FPGAQLA controllers and the coupling matrix from actuator to joint.  On a PSM, when no tool is present, the positions, velocities and efforts are the same as encoder positions.<br>
+  ROS publisher: `/dvrk/<arm_name>/state_joint_current`: `sensor_msgs::JointState`.  The names of joints are defined in the `sawControllersPID` XML file.
+
+* **v 1.3+**: `GetStateJointDesired`.  This _read_ command returns the last requested joint positions used by the PID controller.  Velocities are undefined.   Efforts are based on the output of the PID controller, i.e. requested effort.<br>
+  ROS publisher: `/dvrk/<arm_name>/state_joint_desired`: `sensor_msgs::JointState`.  The names of joints are defined in the `sawControllersPID` XML file.
+
 
 **--- Work in progress ---**
