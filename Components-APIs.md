@@ -13,7 +13,7 @@
 
 Each component of the dVRK described in the [software architecture](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Software-Architecture) provides a set of functionalities, i.e. commands for a [cisstMultiTask](https://github.com/jhu-cisst/cisst/wiki/cisstMultiTask-tutorial) component or topic for a ROS node (see [`dvrk_ros`](https://github.com/jhu-dvrk/dvrk-ros)`/dvrk_robot`).
 
-In general, we try to expose most C++ commands and events as ROS topics.  The latest mapping can be found in [`dvrk_add_topics_functions`](https://github.com/jhu-dvrk/dvrk-ros/blob/master/dvrk_robot/src/dvrk_add_topics_functions.cpp).
+In general, we try to expose most C++ commands and events as ROS topics.  The latest mapping can be found in [`dvrk_add_topics_functions`](https://github.com/jhu-dvrk/dvrk-ros/blob/master/dvrk_robot/src/dvrk_add_topics_functions.cpp).  From version 1.3 to 1.4, many ROS messages have changed as we are trying to use messages with a header as much as possible.  This allows to have a timestamp, name and sequence number for most messages.
 
 # Console
 
