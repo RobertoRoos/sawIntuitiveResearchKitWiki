@@ -6,6 +6,10 @@
 - [Console](#console)
   - [Commands](#commands)
   - [Feedback](#feedback)
+- [Foot pedals](#foot-pedals)
+  - [Feedback](#feedback-1)
+- [All arms](#all-arms)
+  - [Commands (read)](#commands-read)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
