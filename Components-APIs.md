@@ -60,7 +60,7 @@ The following feedback is available for the foot pedals:
 
 The following commands and feedback are available for all arm components (see class `mtsIntuitiveResearchKitArm`):
 
-## Commands
+## Commands (read)
 
 * **v 1.3**: `GetPositionJoint`.  This _read_ command returns the current joint positions based on the encoders and the actuator to joint coupling matrix.  On a PSM, when no tool is present, the joint positions are the same as encoder positions.<br>
   ROS publisher: `/dvrk/<arm_name>/position_joint_current`: `sensor_msgs::JointState`.  Deprecated in **v 1.4**, see `state_joint_current`.
@@ -74,5 +74,17 @@ The following commands and feedback are available for all arm components (see cl
 * **v 1.3+**: `GetStateJointDesired`.  This _read_ command returns the last requested joint positions used by the PID controller.  Velocities are undefined.   Efforts are based on the output of the PID controller, i.e. requested effort.<br>
   ROS publisher: `/dvrk/<arm_name>/state_joint_desired`: `sensor_msgs::JointState`.  The names of joints are defined in the `sawControllersPID` XML file.
 
+* **v 1.3+**: `GetPositionCartesian`.  This _read_ command returns the current cartesian position based on encoders.  If the arm has a base frame defined, the reported position includes the base frame (e.g. PSM wrt ECM or PSM with SUJ).<br>
+  ROS publisher: `/dvrk/<arm_name>/position_cartesian_current`: **v 1.3** `geometry_msgs::Pose`, **v 1.4+** `geometry_msgs::PoseStamped` 
+
+* **v 1.3+**: `GetPositionCartesianDesired`.  This _read_ command returns the desired cartesian position based on the PID desired joint positions.  If the arm has a base frame defined, the reported position includes the base frame (e.g. PSM wrt ECM or PSM with SUJ).<br>
+  ROS publisher: `/dvrk/<arm_name>/position_cartesian_desired`: **v 1.3** `geometry_msgs::Pose`, **v 1.4+** `geometry_msgs::PoseStamped` 
+
+
+* **v 1.3+**: `GetPositionCartesianLocal`.  This _read_ command returns the current cartesian position based on encoders.  The reported position is based on the arm kinematic chain only, it doesn't include any base frame.<br>
+  ROS publisher: `/dvrk/<arm_name>/position_cartesian_local_current`: **v 1.3** `geometry_msgs::Pose`, **v 1.4+** `geometry_msgs::PoseStamped` 
+
+* **v 1.3+**: `GetPositionCartesianLocalDesired`.  This _read_ command returns the desired cartesian position based on the PID desired joint positions.  The reported position is based on the arm kinematic chain only, it doesn't include any base frame.<br>
+  ROS publisher: `/dvrk/<arm_name>/position_cartesian_local_desired`: **v 1.3** `geometry_msgs::Pose`, **v 1.4+** `geometry_msgs::PoseStamped` 
 
 **--- Work in progress ---**
