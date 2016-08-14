@@ -84,11 +84,23 @@ The following commands and feedback are available for all arm components (see cl
 * **v 1.3+**: `GetPositionCartesianDesired`.  This _read_ command returns the desired cartesian position based on the PID desired joint positions.  If the arm has a base frame defined, the reported position includes the base frame (e.g. PSM wrt ECM or PSM with SUJ).<br>
   ROS publisher: `/dvrk/<arm_name>/position_cartesian_desired`: **v 1.3** `geometry_msgs::Pose`, **v 1.4+** `geometry_msgs::PoseStamped` 
 
-
 * **v 1.3+**: `GetPositionCartesianLocal`.  This _read_ command returns the current cartesian position based on encoders.  The reported position is based on the arm kinematic chain only, it doesn't include any base frame.<br>
   ROS publisher: `/dvrk/<arm_name>/position_cartesian_local_current`: **v 1.3** `geometry_msgs::Pose`, **v 1.4+** `geometry_msgs::PoseStamped` 
 
 * **v 1.3+**: `GetPositionCartesianLocalDesired`.  This _read_ command returns the desired cartesian position based on the PID desired joint positions.  The reported position is based on the arm kinematic chain only, it doesn't include any base frame.<br>
   ROS publisher: `/dvrk/<arm_name>/position_cartesian_local_desired`: **v 1.3** `geometry_msgs::Pose`, **v 1.4+** `geometry_msgs::PoseStamped` 
+
+* **v 1.4+**: `GetVelocityCartesian`.  This _read_ command returns the current cartesian velocity based on the encoders and the body jacobian.<br>
+  ROS publisher: `/dvrk/<arm_name>/twist_body_current`: `geometry_msgs::TwistStamped` 
+
+* **v 1.4+**: `GetWrenchBody`.  This _read_ command returns the current body wrench based on the motor current (electric current) feedback and the body jacobian.<br>
+  ROS publisher: `/dvrk/<arm_name>/wrench_body_current`: `geometry_msgs::WrenchStamped` 
+
+* **v 1.4+**: `GetJacobianBody`.  This _read_ command returns the current body jacobian.<br>
+  ROS publisher: `/dvrk/<arm_name>/jacobian_body`: `std_msgs::Float64MultiArray` 
+
+* **v 1.4+**: `GetJacobianSpatial`.  This _read_ command returns the current spatial jacobian.<br>
+  ROS publisher: `/dvrk/<arm_name>/jacobian_body`: `std_msgs::Float64MultiArray` 
+
 
 **--- Work in progress ---**
