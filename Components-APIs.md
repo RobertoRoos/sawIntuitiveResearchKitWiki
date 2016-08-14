@@ -56,5 +56,17 @@ The following feedback is available for the foot pedals:
 * **v 1.3+**: `Cam-`.  This _write_ event indicates that the camera focus "-" pedal has been pressed.  The C++ payload is `prmEventButton`.  The name of the event is defined in the `sawRobotIO1394` XML configuration file.<br>
   ROS publisher: `/dvrk/footpedals/camera_minus`: **v 1.3** `std_msgs::Bool`, **V 1.4+** `sensor_msgs::Joy`.
 
+# All arms
+
+The following commands and feedback are available for all arm components (see class `mtsIntuitiveResearchKitArm`):
+
+## Commands
+
+* **v 1.3**: `GetPositionJoint`.  This _read_ command returns the current joint positions based on the encoders and the actuator to joint coupling matrix.  On a PSM, when no tool is present, the joint positions are the same as encoder positions.<br>
+  ROS publisher: `/dvrk/<arm_name>/position_joint_current`: `sensor_msgs::JointState`.  Deprecated in **v 1.4**, see `state_joint_current`.
+
+* **v 1.3**: `GetPositionJointDesired`.  This _read_ command returns the last requested joint positions used by the PID controller.<br>
+  ROS publisher: `/dvrk/<arm_name>/position_joint_desired`: `sensor_msgs::JointState`.  Deprecated in **v 1.4**, see `state_joint_current`.
+
 
 **--- Work in progress ---**
