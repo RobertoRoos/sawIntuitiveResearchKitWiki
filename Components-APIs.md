@@ -10,6 +10,7 @@
   - [Feedback](#feedback-1)
 - [All arms](#all-arms)
   - [Commands (read)](#commands-read)
+  - [Commands (write)](#commands-write)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
