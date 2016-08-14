@@ -102,5 +102,15 @@ The following commands and feedback are available for all arm components (see cl
 * **v 1.4+**: `GetJacobianSpatial`.  This _read_ command returns the current spatial jacobian.<br>
   ROS publisher: `/dvrk/<arm_name>/jacobian_body`: `std_msgs::Float64MultiArray` 
 
+## Commands (write)
+
+* **v 1.3+**: `SetRobotControlState`.  This _write_ command set the desired state for the arm.  The parameter is a string, see https://github.com/jhu-dvrk/sawIntuitiveResearchKit/blob/master/code/mtsIntuitiveResearchKitArmTypes.cdg.  If the desired state is not possible based on the current state, an error event will be raised (ROS error message).<br>
+  ROS subscriber: `/dvrk/<arm_name>/set_robot_state`: `std_msgs::String`.
+
+* **v 1.3+**: `SetPositionJoint`.  This _write_ command set the desired joint position.  The controller will send the desired joint position directly to the PID components, no trajectory will be generated.  The caller has to make sure the desired position is reasonable.  The arm has to be in `DVRK_POSITION_JOINT` mode, see `SetRobotControlState` to change mode.<br>
+  ROS subscriber: `/dvrk/<arm_name>/set_position_joint`: `sensor_msgs::JointState`.
+
+
+
 
 **--- Work in progress ---**
