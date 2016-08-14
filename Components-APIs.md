@@ -35,4 +35,26 @@ The following commands and feedback are available for the console component (see
 * **v 1.4+**: `Scale`.  This _write_ event indicates that a request to change the scale has been sent to all teleoperation components (either for PSMs or ECM) known to the console.  This event is not triggered if the scale of a single teleoperation component is changed, i.e. one can change the `MTMR-PSM1` scale only.  In the case, the `MTMR-PSM1` component will trigger it's own event but the console is not changing the overall scale.<br>
   ROS publisher: `/dvrk/console/teleop/scale`: `std_msgs::Float32`
 
+# Foot pedals
+
+## Feedback
+
+The following feedback is available for the foot pedals:
+
+* **v 1.3+**: `Clutch`.  This _write_ event indicates that the "clutch" pedal has been pressed.  The C++ payload is `prmEventButton`.  The name of the event is defined in the `sawRobotIO1394` XML configuration file.<br>
+  ROS publisher: `/dvrk/footpedals/clutch`: **v 1.3** `std_msgs::Bool`, **V 1.4+** `sensor_msgs::Joy`.
+
+* **v 1.3+**: `Coag`.  This _write_ event indicates that the "coag" pedal has been pressed.  On some systems this pedal is labeled "mono".  The C++ payload is `prmEventButton`.  The name of the event is defined in the `sawRobotIO1394` XML configuration file.<br>
+  ROS publisher: `/dvrk/footpedals/coag`: **v 1.3** `std_msgs::Bool`, **V 1.4+** `sensor_msgs::Joy`.
+
+* **v 1.3+**: `Camera`.  This _write_ event indicates that the "camera" pedal has been pressed.  The C++ payload is `prmEventButton`.  The name of the event is defined in the `sawRobotIO1394` XML configuration file.<br>
+  ROS publisher: `/dvrk/footpedals/camera`: **v 1.3** `std_msgs::Bool`, **V 1.4+** `sensor_msgs::Joy`.
+
+* **v 1.3+**: `Cam+`.  This _write_ event indicates that the camera focus "+" pedal has been pressed.  The C++ payload is `prmEventButton`.  The name of the event is defined in the `sawRobotIO1394` XML configuration file.<br>
+  ROS publisher: `/dvrk/footpedals/camera_plus`: **v 1.3** `std_msgs::Bool`, **V 1.4+** `sensor_msgs::Joy`.
+
+* **v 1.3+**: `Cam-`.  This _write_ event indicates that the camera focus "-" pedal has been pressed.  The C++ payload is `prmEventButton`.  The name of the event is defined in the `sawRobotIO1394` XML configuration file.<br>
+  ROS publisher: `/dvrk/footpedals/camera_minus`: **v 1.3** `std_msgs::Bool`, **V 1.4+** `sensor_msgs::Joy`.
+
+
 **--- Work in progress ---**
