@@ -132,5 +132,21 @@ The following commands and feedback are available for all arm components (see cl
 * **v 1.4+**: `SetGravityCompensation`.  This _write_ command sets a flag used to determine if the gravity compensation should be added when the arm is in `DVRK_EFFORT_CARTESIAN` mode.<br>
   ROS subscriber: `/dvrk/<arm_name>/set_gravity_compensation`: `std_msgs::Bool`.
 
+# MTMs
+
+The following commands and feedback are available for MTMs only (see class `mtsIntuitiveResearchKitMTM`):
+
+## Commands (read)
+
+* **v 1.3+**: `GetGripperPosition`.  This _read_ command returns the current gripper position based on the Hall Effect sensors.<br>
+  ROS publisher: `/dvrk/<mtm_name>/gripper_position_current`: `std_msgs::Float32`.
+
+## Commands (write)
+
+* **v 1.4+**: `LockOrientation`.  This _write_ command sets the desired orientation while in effort mode.  The caller has to make sure the desired orientation is reasonable (within joint limits and PID tracking error).  The arm has to be in `DVRK_EFFORT_CARTESIAN` mode, see `SetRobotControlState` to change mode.<br>
+  ROS subscriber: `/dvrk/<mtm_name>/lock_orientation`: `geometry_msgs::Quaternion`.
+
+* **v 1.4+**: `UnlockOrientation`.  This _void_ command unlocks the MTM orientation while in cartesian effort mode.  The arm has to be in `DVRK_EFFORT_CARTESIAN` mode, see `SetRobotControlState` to change mode.<br>
+  ROS subscriber: `/dvrk/<mtm_name>/unlock_orientation`: `std_msgs::Empty`.
 
 **--- Work in progress ---**
