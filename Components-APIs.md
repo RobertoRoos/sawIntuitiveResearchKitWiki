@@ -117,9 +117,20 @@ The following commands and feedback are available for all arm components (see cl
 * **v 1.3+**: `SetPositionCartesian`.  This _write_ command sets the desired cartesian position.  The controller will compute the inverse kinematic and send the desired joint position directly to the PID component, no trajectory will be generated.  The arm has to be in `DVRK_POSITION_CARTESIAN` mode, see `SetRobotControlState` to change mode.<br>
   ROS subscriber: `/dvrk/<arm_name>/set_position_cartesian`: `geometry_msgs::Pose`.
 
-* **v 1.3+**: `SetPositionGoalCartesian`.  This _write_ command sets the desired cartesian goal position.  The controller will compute the inverse kinematics and generate a trajectory in joint space that will be sent to the PID component.  The generated trajectory is of type LSPB and always assumes a zero velocity at both start and end positions (see also `SetPositionGoalJoint`).  `The arm has to be in `DVRK_POSITION_GOAL_CARTESIAN` mode, see `SetRobotControlState` to change mode.<br>
+* **v 1.3+**: `SetPositionGoalCartesian`.  This _write_ command sets the desired cartesian goal position.  The controller will compute the inverse kinematics and generate a trajectory in joint space that will be sent to the PID component.  The generated trajectory is of type LSPB and always assumes a zero velocity at both start and end positions (see also `SetPositionGoalJoint`).  The arm has to be in `DVRK_POSITION_GOAL_CARTESIAN` mode, see `SetRobotControlState` to change mode.<br>
   ROS subscriber: `/dvrk/<arm_name>/set_position_goal_cartesian`: `geometry_msgs::Pose`.
 
+* **v 1.4+**: `SetWrenchBody`.  This _write_ command sets the desired wrench based on the body jacobian (tooltip frame).  The controller will compute joint torques using the jacobian and send these to the PID component.  The arm has to be in `DVRK_EFFORT_CARTESIAN` mode, see `SetRobotControlState` to change mode.<br>
+  ROS subscriber: `/dvrk/<arm_name>/set_wrench_body`: `geometry_msgs::Wrench`.
+
+* **v 1.4+**: `SetWrenchSpatial`.  This _write_ command sets the desired wrench based on the spatial jacobian (base frame).  The controller will compute joint torques using the jacobian and send these to the PID component.  The arm has to be in `DVRK_EFFORT_CARTESIAN` mode, see `SetRobotControlState` to change mode.<br>
+  ROS subscriber: `/dvrk/<arm_name>/set_wrench_spatial`: `geometry_msgs::Wrench`.
+
+* **v 1.4+**: `SetWrenchBodyOrientationAbsolute`.  This _write_ command sets a flag used to determine if the body wrenches (both set and get) should be defined using the tooltip orientation or the base frame orientation.  If set to true, all wrenches are based on the base frame orientation, i.e. constant.<br>
+  ROS subscriber: `/dvrk/<arm_name>/set_wrench_body_orientation_absolute`: `std_msgs::Bool`.
+
+* **v 1.4+**: `SetGravityCompensation`.  This _write_ command sets a flag used to determine if the gravity compensation should be added when the arm is in `DVRK_EFFORT_CARTESIAN` mode.<br>
+  ROS subscriber: `/dvrk/<arm_name>/set_gravity_compensation`: `std_msgs::Bool`.
 
 
 **--- Work in progress ---**
