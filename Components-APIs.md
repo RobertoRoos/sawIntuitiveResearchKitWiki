@@ -105,12 +105,20 @@ The following commands and feedback are available for all arm components (see cl
 
 ## Commands (write)
 
-* **v 1.3+**: `SetRobotControlState`.  This _write_ command set the desired state for the arm.  The parameter is a string, see https://github.com/jhu-dvrk/sawIntuitiveResearchKit/blob/master/code/mtsIntuitiveResearchKitArmTypes.cdg.  If the desired state is not possible based on the current state, an error event will be raised (ROS error message).<br>
+* **v 1.3+**: `SetRobotControlState`.  This _write_ command sets the desired state for the arm.  The parameter is a string, see https://github.com/jhu-dvrk/sawIntuitiveResearchKit/blob/master/code/mtsIntuitiveResearchKitArmTypes.cdg.  If the desired state is not possible based on the current state, an error event will be raised (ROS error message).<br>
   ROS subscriber: `/dvrk/<arm_name>/set_robot_state`: `std_msgs::String`.
 
-* **v 1.3+**: `SetPositionJoint`.  This _write_ command set the desired joint position.  The controller will send the desired joint position directly to the PID components, no trajectory will be generated.  The caller has to make sure the desired position is reasonable.  The arm has to be in `DVRK_POSITION_JOINT` mode, see `SetRobotControlState` to change mode.<br>
+* **v 1.3+**: `SetPositionJoint`.  This _write_ command sets the desired joint position.  The controller will send the desired joint position directly to the PID component, no trajectory will be generated.  The caller has to make sure the desired position is reasonable (within joint limits and PID tracking error).  The arm has to be in `DVRK_POSITION_JOINT` mode, see `SetRobotControlState` to change mode.<br>
   ROS subscriber: `/dvrk/<arm_name>/set_position_joint`: `sensor_msgs::JointState`.
 
+* **v 1.3+**: `SetPositionGoalJoint`.  This _write_ command sets the desired joint goal position.  The controller will generate a trajectory in joint space that will be sent to the PID component.  The generated trajectory is of type LSPB and always assumes a zero velocity at both start and end positions.  When the trajectory is completed, a `GoalReached` event is raised (ROS: `goal_reached`).  The user should make sure the goal has been reached before sending another goal.  `The arm has to be in `DVRK_POSITION_GOAL_JOINT` mode, see `SetRobotControlState` to change mode.<br>
+  ROS subscriber: `/dvrk/<arm_name>/set_position_goal_joint`: `sensor_msgs::JointState`.
+
+* **v 1.3+**: `SetPositionCartesian`.  This _write_ command sets the desired cartesian position.  The controller will compute the inverse kinematic and send the desired joint position directly to the PID component, no trajectory will be generated.  The arm has to be in `DVRK_POSITION_CARTESIAN` mode, see `SetRobotControlState` to change mode.<br>
+  ROS subscriber: `/dvrk/<arm_name>/set_position_cartesian`: `geometry_msgs::Pose`.
+
+* **v 1.3+**: `SetPositionGoalCartesian`.  This _write_ command sets the desired cartesian goal position.  The controller will compute the inverse kinematics and generate a trajectory in joint space that will be sent to the PID component.  The generated trajectory is of type LSPB and always assumes a zero velocity at both start and end positions (see also `SetPositionGoalJoint`).  `The arm has to be in `DVRK_POSITION_GOAL_CARTESIAN` mode, see `SetRobotControlState` to change mode.<br>
+  ROS subscriber: `/dvrk/<arm_name>/set_position_goal_cartesian`: `geometry_msgs::Pose`.
 
 
 
