@@ -11,6 +11,9 @@
 - [All arms](#all-arms)
   - [Commands (read)](#commands-read)
   - [Commands (write)](#commands-write)
+- [MTMs](#mtms)
+  - [Commands (read)](#commands-read-1)
+  - [Commands (write)](#commands-write-1)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
