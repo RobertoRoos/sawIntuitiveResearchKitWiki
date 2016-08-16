@@ -20,8 +20,9 @@ Advanced
 * [Projects](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Future-Projects)
 
 Miscellaneous
-* [cisst](/jhu-cisst/cisst/wiki)
 * [Frequently Asked Questions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FAQ)
+* [Timeline, publications, ...](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Timeline)
+* [cisst](/jhu-cisst/cisst/wiki)
 * [Hamlyn Meetup 2016](/jhu-dvrk/sawIntuitiveResearchKit/wiki/HamlynMeetup2016)
 * [QLA Heat Sink](/jhu-dvrk/sawIntuitiveResearchKit/wiki/QLA-Heat-Sink)
 * [Head Sensor](/jhu-dvrk/sawIntuitiveResearchKit/wiki/HeadSensor)
