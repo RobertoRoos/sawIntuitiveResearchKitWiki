@@ -55,10 +55,11 @@ You can locate all these sites on the [dVRK Google Map](https://mapsengine.googl
 ## Applications
 
 * Surgical robot teleoperation with BBZ console, BBZ (2016): https://youtu.be/VUAQNhp1yFM
-* Autonomous Robot Surgery: Performing Surgical Subtasks without Human Intervention, UC Berkeley (2014): https://youtu.be/beVWB6NtAaA
 * Autonomous Multi-Throw Multilateral Surgical Suturing, UC Berkeley (2016): https://youtu.be/z1ehShXFToc
+* Autonomous Robot Surgery: Performing Surgical Subtasks without Human Intervention, UC Berkeley (2014): https://youtu.be/beVWB6NtAaA
 
 # Publications
+ * IEEE Spectrum May 2016 [Would You Trust a Robot Surgeon to Operate on You?](http://spectrum.ieee.org/robotics/medical-robots/would-you-trust-a-robot-surgeon-to-operate-on-you)
 
 ## dVRK
 
@@ -67,3 +68,4 @@ You can locate all these sites on the [dVRK Google Map](https://mapsengine.googl
 * Chen Z, Deguet A, Taylor RH, DiMaio SP, Fischer GS, Kazanzides P, [An Open-Source Hardware and Software Platform for Telesurgical Robotics Research](/jhu-dvrk/sawIntuitiveResearchKit/wiki/chen-deguet-etal-miccai-2013.pdf), The MIDAS Journal - Systems and Architectures for Computer Assisted Interventions 2013, June 2013.
 
 ## Applications
+
