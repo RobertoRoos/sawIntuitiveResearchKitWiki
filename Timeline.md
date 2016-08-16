@@ -14,7 +14,7 @@
 
 # Timeline
 
-The dVRK controllers have been built in batches as the community grew over the years.
+The dVRK controllers have been built in batches as the community grew over the years.  You can locate all these sites on the [dVRK Google Map](https://mapsengine.google.com/map/embed?mid=z14AfgTT1a9w.ktOc3SMAsVF4).
 
 | Hardware batch | Year | University | PIs |
 | -------------- | ---- | ---------- | ------|
@@ -43,8 +43,6 @@ The dVRK controllers have been built in batches as the community grew over the y
 | 5 | 2016 | Ben Gurion Univ. | Ilana Nisky |
 | 5 | 2016 | Univ. of Naples | Bruno Siciliano |
 | 5 | 2016 | Chinese Univ. of Hong Kong | Yunhui Liu & Philip Chiu |
-
-You can locate all these sites on the [dVRK Google Map](https://mapsengine.google.com/map/embed?mid=z14AfgTT1a9w.ktOc3SMAsVF4).
 
 # Videos
 
