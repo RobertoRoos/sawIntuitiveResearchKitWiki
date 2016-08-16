@@ -9,7 +9,6 @@
 - [Updates](#updates)
   - [Firmware](#firmware)
   - [Software](#software-1)
-- [Publications](#publications)
 - [Acknowledgments](#acknowledgments)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->

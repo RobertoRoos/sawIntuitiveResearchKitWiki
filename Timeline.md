@@ -1,3 +1,17 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Timeline](#timeline)
+- [Videos](#videos)
+  - [dVRK](#dvrk)
+  - [Applications](#applications)
+- [Publications](#publications)
+  - [dVRK](#dvrk-1)
+  - [Applications](#applications-1)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Timeline
 
 # Videos
