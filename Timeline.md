@@ -48,15 +48,18 @@ The dVRK controllers have been built in batches as the community grew over the y
 
 ## dVRK
 
-* Video introduction on YouTube, JHU LCSR (2013): https://youtu.be/0n_9CgNSx6Y
+* Video introduction on YouTube, JHU LCSR (2013)<br>https://youtu.be/0n_9CgNSx6Y
 
 ## Applications
 
 * Surgical robot teleoperation with BBZ console, BBZ (2016)<br>https://youtu.be/VUAQNhp1yFM
+* The MACRO Tool, Miniaturized Asymmetrically Cut Robotic Tool for the dVRK, CIGITI, SickKids (2016)<br>https://youtu.be/6AKS6tdv5Ec 
 * Autonomous Multi-Throw Multilateral Surgical Suturing, UC Berkeley (2016)<br>https://youtu.be/z1ehShXFToc
-* A Dual-Modality Instrument for Minimally Invasive Robotic Palpation to Localize Tumours, Western Univ./CSTAR (2015):<br>https://youtu.be/uIIPHNK8lNY 
-* Robot-Assisted Surgery: Autonomous Tumor Localization and Extraction, UC Berkeley (2015): https://youtu.be/YiPq9t0tR3U
-* Autonomous Robot Surgery: Performing Surgical Subtasks without Human Intervention, UC Berkeley (2014): https://youtu.be/beVWB6NtAaA
+* Hamlyn Surgical Robot challenge 2015 Highlights (2015)<br>https://youtu.be/min4BOd_VOY
+* A Dual-Modality Instrument for Minimally Invasive Robotic Palpation to Localize Tumours, Western Univ./CSTAR (2015)<br>https://youtu.be/uIIPHNK8lNY 
+* Robot-Assisted Surgery: Autonomous Tumor Localization and Extraction, UC Berkeley (2015)<br>https://youtu.be/YiPq9t0tR3U
+* Heart Motion Compensation using the dVRK, UBC & Stanford (2015)<br>https://youtu.be/DofIP9HE4GI
+* Autonomous Robot Surgery: Performing Surgical Subtasks without Human Intervention, UC Berkeley (2014)<br>https://youtu.be/beVWB6NtAaA
 
 # Publications
 
