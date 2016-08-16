@@ -52,8 +52,10 @@ The dVRK controllers have been built in batches as the community grew over the y
 
 ## Applications
 
-* Surgical robot teleoperation with BBZ console, BBZ (2016): https://youtu.be/VUAQNhp1yFM
-* Autonomous Multi-Throw Multilateral Surgical Suturing, UC Berkeley (2016): https://youtu.be/z1ehShXFToc
+* Surgical robot teleoperation with BBZ console, BBZ (2016)<br>https://youtu.be/VUAQNhp1yFM
+* Autonomous Multi-Throw Multilateral Surgical Suturing, UC Berkeley (2016)<br>https://youtu.be/z1ehShXFToc
+* A Dual-Modality Instrument for Minimally Invasive Robotic Palpation to Localize Tumours, Western Univ./CSTAR (2015):<br>https://youtu.be/uIIPHNK8lNY 
+* Robot-Assisted Surgery: Autonomous Tumor Localization and Extraction, UC Berkeley (2015): https://youtu.be/YiPq9t0tR3U
 * Autonomous Robot Surgery: Performing Surgical Subtasks without Human Intervention, UC Berkeley (2014): https://youtu.be/beVWB6NtAaA
 
 # Publications
@@ -67,4 +69,3 @@ The dVRK controllers have been built in batches as the community grew over the y
 ## Applications
 
 * IEEE Spectrum, May 2016, [Would You Trust a Robot Surgeon to Operate on You?](http://spectrum.ieee.org/robotics/medical-robots/would-you-trust-a-robot-surgeon-to-operate-on-you)
-
