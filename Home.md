@@ -15,15 +15,24 @@
 
 The da Vinci Research Kit is an “open-source mechatronics” system, consisting of electronics, firmware, and software that is being used to control research systems based on the first-generation da Vinci system.
 
-# **Firmware**
-Firmware version 3.0 or 4.0 is now required, please upgrade.  Version 4.0 adds support for FireWire broadcasts, which enables faster I/O performance.
-https://github.com/jhu-cisst/mechatronics-firmware/wiki/FPGA-Program 
-
-# Links
-
 ![Controller with Patient Side Manipulators (PSMs)](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ControllerWithPSM.jpg)
 
 The sawIntuitiveResearchKit folder provides several example applications for controlling the Research Kit for the da Vinci System using the [IEEE-1394 (FireWire) controller](http://jhu-cisst.github.io/mechatronics/). The picture above shows two Controllers connected to two da Vinci Patient Side Manipulators (PSMs) at Worcester Polytechnic Institute (WPI).
+
+# Links
+
+## Related sites
+
+* Timeline, publications and videos
+* Google group https://groups.google.com/d/forum/research-kit-for-davinci and research-kit-for-davinci@googlegroups.com
+* Intuitive Surgical hardware wiki http://research.intusurg.com/dvrk
+* *cisst* libraries http://github.com/jhu-cisst/cisst/wiki
+* Johns Hopkins University Mechatronics http://jhu-cisst.github.io/mechatronics
+* Video introduction on YouTube http://www.youtube.com/watch?v=0n_9CgNSx6Y
+* [Google map](https://mapsengine.google.com/map/embed?mid=z14AfgTT1a9w.ktOc3SMAsVF4) with current and future sites 
+* List of all JHU LCSR Software http://jhu-lcsr.github.io/software/
+
+## Software
 
 The software applications use some or all of the following SAW components (and Qt widgets):
 * [mtsRobotIO1394](https://github.com/jhu-saw/sawRobotIO1394) - interface to IEEE-1394 (FireWire) controller boards
@@ -35,16 +44,14 @@ The components are cross-platform, except for mtsRobotIO1394, which relies on a 
 
 A ROS interface is available via [mtsROSBridge](https://github.com/jhu-cisst/cisst-ros) base class and [dVRK programs and files](https://github.com/jhu-dvrk/dvrk-ros).
 
-Related sites:
-* Google group https://groups.google.com/d/forum/research-kit-for-davinci and research-kit-for-davinci@googlegroups.com
-* Intuitive Surgical hardware wiki http://research.intusurg.com/dvrk
-* *cisst* libraries http://github.com/jhu-cisst/cisst/wiki
-* Johns Hopkins University Mechatronics http://jhu-cisst.github.io/mechatronics
-* Video introduction on YouTube http://www.youtube.com/watch?v=0n_9CgNSx6Y
-* [Google map](https://mapsengine.google.com/map/embed?mid=z14AfgTT1a9w.ktOc3SMAsVF4) with current and future sites 
-* List of all JHU LCSR Software http://jhu-lcsr.github.io/software/
-
 # Updates
+
+## Firmware
+
+Firmware version 3.0 or 4.0 is now required, please upgrade.  Version 4.0 adds support for FireWire broadcasts, which enables faster I/O performance.
+https://github.com/jhu-cisst/mechatronics-firmware/wiki/FPGA-Program 
+
+## Software
 
 * *January 2016*: Version 1.3.0 released, see latest change logs:
   * [sawIntuitiveResearchKit](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/blob/master/CHANGELOG.md)
