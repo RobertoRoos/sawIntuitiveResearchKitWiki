@@ -31,7 +31,6 @@ The sawIntuitiveResearchKit folder provides several example applications for con
 * Intuitive Surgical hardware wiki http://research.intusurg.com/dvrk
 * *cisst* libraries http://github.com/jhu-cisst/cisst/wiki
 * Johns Hopkins University Mechatronics http://jhu-cisst.github.io/mechatronics
-* Video introduction on YouTube http://www.youtube.com/watch?v=0n_9CgNSx6Y
 * [Google map](https://mapsengine.google.com/map/embed?mid=z14AfgTT1a9w.ktOc3SMAsVF4) with current and future sites 
 * List of all JHU LCSR Software http://jhu-lcsr.github.io/software/
 
@@ -67,12 +66,6 @@ https://github.com/jhu-cisst/mechatronics-firmware/wiki/FPGA-Program
 * *April 2015*: Version 1.1.0 released
 * *April 2014*: Moved to GitHub
 * *May 2013*: Initial Public Release
-
-# Publications
-
-* Kazanzides P, Chen Z, Deguet A, Fischer GS, Taylor RH, DiMaio SP, [An Open-Source Research Kit for the da Vinci Surgical System, International Conference on Robotics and Automation](/jhu-dvrk/sawIntuitiveResearchKit/wiki/kazanzides-chen-etal-icra-2014.pdf) - ICRA 2014, May 2014.
-
-* Chen Z, Deguet A, Taylor RH, DiMaio SP, Fischer GS, Kazanzides P, [An Open-Source Hardware and Software Platform for Telesurgical Robotics Research](/jhu-dvrk/sawIntuitiveResearchKit/wiki/chen-deguet-etal-miccai-2013.pdf), The MIDAS Journal - Systems and Architectures for Computer Assisted Interventions 2013, June 2013.
 
 # Acknowledgments
 
