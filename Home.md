@@ -26,7 +26,7 @@ The sawIntuitiveResearchKit folder provides several example applications for con
 
 ## Related sites
 
-* Timeline, publications and videos
+* [Timeline, videos and publications](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Timeline)
 * Google group https://groups.google.com/d/forum/research-kit-for-davinci and research-kit-for-davinci@googlegroups.com
 * Intuitive Surgical hardware wiki http://research.intusurg.com/dvrk
 * *cisst* libraries http://github.com/jhu-cisst/cisst/wiki
