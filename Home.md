@@ -3,9 +3,12 @@
 **Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
 
 - [Introduction](#introduction)
-- [**Firmware**](#firmware)
 - [Links](#links)
+  - [Related sites](#related-sites)
+  - [Software](#software)
 - [Updates](#updates)
+  - [Firmware](#firmware)
+  - [Software](#software-1)
 - [Publications](#publications)
 - [Acknowledgments](#acknowledgments)
 
