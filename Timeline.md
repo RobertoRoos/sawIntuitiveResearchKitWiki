@@ -50,9 +50,13 @@ You can locate all these sites on the [dVRK Google Map](https://mapsengine.googl
 
 ## dVRK
 
-* Video introduction on YouTube http://www.youtube.com/watch?v=0n_9CgNSx6Y
+* Video introduction on YouTube, JHU LCSR (2013): https://youtu.be/0n_9CgNSx6Y
 
 ## Applications
+
+* Surgical robot teleoperation with BBZ console, BBZ (2016): https://youtu.be/VUAQNhp1yFM
+* Autonomous Robot Surgery: Performing Surgical Subtasks without Human Intervention, UC Berkeley (2014): https://youtu.be/beVWB6NtAaA
+* Autonomous Multi-Throw Multilateral Surgical Suturing, UC Berkeley (2016): https://youtu.be/z1ehShXFToc
 
 # Publications
 
