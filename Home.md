@@ -30,7 +30,6 @@ The sawIntuitiveResearchKit folder provides several example applications for con
 * Intuitive Surgical hardware wiki http://research.intusurg.com/dvrk
 * *cisst* libraries http://github.com/jhu-cisst/cisst/wiki
 * Johns Hopkins University Mechatronics http://jhu-cisst.github.io/mechatronics
-* [Google map](https://mapsengine.google.com/map/embed?mid=z14AfgTT1a9w.ktOc3SMAsVF4) with current and future sites 
 * List of all JHU LCSR Software http://jhu-lcsr.github.io/software/
 
 ## Software
