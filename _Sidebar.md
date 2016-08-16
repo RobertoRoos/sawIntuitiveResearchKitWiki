@@ -21,7 +21,7 @@ Advanced
 
 Miscellaneous
 * [Frequently Asked Questions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FAQ)
-* [Timeline, publications, ...](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Timeline)
+* [Timeline, videos, publications](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Timeline)
 * [cisst](/jhu-cisst/cisst/wiki)
 * [Hamlyn Meetup 2016](/jhu-dvrk/sawIntuitiveResearchKit/wiki/HamlynMeetup2016)
 * [QLA Heat Sink](/jhu-dvrk/sawIntuitiveResearchKit/wiki/QLA-Heat-Sink)
