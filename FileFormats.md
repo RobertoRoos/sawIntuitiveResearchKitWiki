@@ -230,8 +230,8 @@ For a real arm, you need to provide the file name for the IO, i.e. `sawRobotIO13
       "name": "PSM1",
       "type": "PSM",
       "io": "sawRobotIO1394-PSM1-49695.xml",
-      "pid": "../sawControllersPID-PSM.xml",
-      "kinematic": "../psm-large-needle-driver.json",
+      "pid": "sawControllersPID-PSM.xml",
+      "kinematic": "psm-large-needle-driver.json",
       "base-frame": {
         "component": "SUJ",
         "interface": "PSM1"
