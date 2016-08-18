@@ -184,7 +184,10 @@ The `Configure` method calls:
 * `ConfigurePSMTeleopJSON` to configure the PSM teleoperation components
 * `ConfigureECMTeleopJSON` to configure the ECM teleoperation components (from 1.4.0) 
 
-All files referenced within the `console-<your_setup>.json` file can be defined by an absolute path (not recommended) or a path relative to the console configuration file itself.  We recommend to keep all the files shared across systems in the provided `sawIntuitiveResearchKit/share` directory.  Then create a sub-directory for your system (e.g. `jhu-dVRK`) for all your files, e.g. `sawRobotIO1394` XML files and console JSON files.   In your console configuration files, use `../` to refer to the share files.
+All files referenced within the `console-<your_setup>.json` file can be defined by an absolute path (not recommended) or a path relative to the console configuration file itself.  We recommend to keep all the files shared across systems in the provided `sawIntuitiveResearchKit/share` directory.  Then create a sub-directory for your system (e.g. `jhu-dVRK`) for all your files, e.g. `sawRobotIO1394` XML files and console JSON files.   In your console configuration files, you can refer to the shared configuration files (PID, kinematics) without any path.  By default, the console looks for files in the following directories:
+ * Current directory, i.e. directory in which the application was started
+ * Directory of the console file itself, this is how your IO files are usually found
+ * Shared source directory for the dVRK, this is how the default PID and kinematics files are found
 
 Once you've created and populated your system specific directory, you can send us a github pull request or a zip file and we'll merge it with the master branch.
 
