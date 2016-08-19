@@ -199,7 +199,7 @@ In most cases, the PID components run in the same thread as the IO, so changing 
 
 ```js
   "io": {
-    "period": 0.0005, // in seconds
+    "period": 0.0003, // in seconds
     "port": 0 // default is 0
   }
 ```
