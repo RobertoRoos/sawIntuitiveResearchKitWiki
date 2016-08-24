@@ -9,8 +9,6 @@ Getting Started
 * [Hardware setup](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Hardware)
 * [Calibration](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Calibration)
 * [Examples](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Examples)
-* [E-STOP wiring](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ESTOP)
-* [Full da Vinci system](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Full-da-Vinci)
 
 Advanced
 * [Software architecture](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Software-Architecture)
@@ -18,6 +16,8 @@ Advanced
 * [APIs](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Components-APIs)
 * [Development branches](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Development)
 * [Projects](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Future-Projects)
+* [E-STOP wiring](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ESTOP)
+* [Full da Vinci system](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Full-da-Vinci)
 
 Miscellaneous
 * [Frequently Asked Questions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FAQ)
