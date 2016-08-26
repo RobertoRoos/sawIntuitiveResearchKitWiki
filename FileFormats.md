@@ -329,4 +329,4 @@ You can then define multiple tele-operation components for different pairs of MT
 
 Please note that the `"period"` is optional and you should probably set it only if you have specific needs.  The `"rotation"` is used to re-align the master coordinate systems between the MTM(s) and PSM/ECM.  You might have a different matrix if you're not using the setup joints.
 
-Please note that `"ecm-teleop"` requires an ECM.  This feature requires version 1.4.0 and above.
+Please note that `"ecm-teleop"` requires an ECM.  This feature requires version 1.5.0 and above (i.e. it's not implemented yet).
