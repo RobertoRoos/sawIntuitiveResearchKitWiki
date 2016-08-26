@@ -256,6 +256,18 @@ In most cases, the PID components run in the same thread as the IO, so changing 
   }
 ```
 
+In **version 1.4** and later, you can also specify the FireWire protocol used to communicate between the PC and the controllers:
+```js
+  "io": {
+    "firewire-protocol": "sequential-read-broadcast-write"
+  }
+```
+
+The following protocols are supported:
+* `sequential-read-write`: the PC reads data from each board (2 FPGA/QLA per controller), performs its computations (conversions, safety checks, PID, ...) and then writes sequentially to each board (N reads, N writes).  This is the only protocol supported on older firmware (3 and below).
+* `sequential-read-broadcast-write`: the PC reads sequentially but performs a single write for all the boards (N reads, 1 write).  This is the default protocol for the dVRK controllers with firmware 4 and above.
+* `broadcast-read-write`: the PC sends a single query/synchronization to all boards, read values are aggregated in single packet over the bus and there's a single write (1 query, 1 read, 1 write).  This is the fastest protocol available but some FireWire cards seem to have some issues synchronizing the read packets.  You will have to test it on your hardware to see if it supports this protocol or not.
+
 ## Arms
 
 List of arms to be configured in your system.  Each arm needs a unique name, type and configuration file for kinematics.  The arm can be a physical one (`ECM`, `PSM`, `MTM` or `SUJ`) or a simulated one (`ECM`, `PSM` or `MTM`).  We don't support simulated SUJs yet.
