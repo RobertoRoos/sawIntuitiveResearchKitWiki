@@ -132,6 +132,8 @@ All parameters are provided by ISI.  You might need to play with the last joint 
 
 ### Base offset
 
+**This applies to version 1.4.0 and later**
+
 One can specify a base offset, i.e. a fixed transformation added at the base of the kinematic chain.  This is an optional field, it can be used for systems without setup joints to make sure the PSMs cartesian positions are defined with respect to the camera.   For a moving camera, we recommend using the `SetBaseFrame` C++ command instead (see also ROS topic `set_base_frame`).
   
 ```js
@@ -145,7 +147,7 @@ One can specify a base offset, i.e. a fixed transformation added at the base of 
 
 ## MTMs
 
-**This applies to version 1.4.0 and later**, older versions still use `.rob` files.
+**This applies to version 1.4.0 and later**, older versions use `.rob` files.
 
 Parsing is performed by the `Configure` method in `mtsIntuitiveResearchKitMTM`: https://github.com/jhu-dvrk/sawIntuitiveResearchKit/blob/master/code/mtsIntuitiveResearchKitMTM.cpp
 
@@ -194,6 +196,8 @@ The main difference between the PSM's DH and MTM's is that we need the mass, cen
 **Base offset matrix uses SI units!**
 
 ## ECM
+
+**This applies to version 1.4.0 and later**, older versions use `.rob` files.
 
 Parsing is performed by the `Configure` method in `mtsIntuitiveResearchKitECM`: https://github.com/jhu-dvrk/sawIntuitiveResearchKit/blob/master/code/mtsIntuitiveResearchKitECM.cpp
 
