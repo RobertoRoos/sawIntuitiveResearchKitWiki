@@ -145,6 +145,14 @@ One can specify a base offset, i.e. a fixed transformation added at the base of 
 
 **Base offset matrix uses SI units!**
 
+### Going to zero position when homing
+
+Since **version 1.4** the arm won't go to zero position during the homing procedure.  One can override this using the `homing-zero-position` boolean flag.
+ 
+```js
+    "homing-zero-position": 1 // or 0 for false
+```
+
 ## MTMs
 
 **This applies to version 1.4.0 and later**, older versions use `.rob` files.
@@ -226,6 +234,10 @@ Usually a rotation matrix to match ISI convention and the scope angle (straight,
 ### Base offset
 
 One can specify a base offset, i.e. a fixed transformation added at the base of the kinematic chain.  This is an optional field, see PSM Base offset section.
+
+### Going to zero position when homing
+
+See PSMs.
 
 # Console (JSON)
 
