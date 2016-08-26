@@ -75,8 +75,8 @@ In general, each component owns a thread and can run at its own frequency.  Ther
 
    ```c++
   IO::Run(void) {
-     ReadAllData(void);
-     SaveReadDataInStateTable(void); // state tables are used to cache data
+     ReadAllData();
+     SaveReadDataInStateTable(); // state tables are used to cache data
      ExecOut(); // trigger PID.Run() for all PID components attached to this IO
      ProcessQueuedCommands(); // dequeue all commands, including those from PID
   }
