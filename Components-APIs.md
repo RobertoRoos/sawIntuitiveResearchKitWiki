@@ -174,8 +174,40 @@ For each individual arm, the cartesian positions are based on:
   * Set at runtime by command or ROS topic
   * Prepended to the kinematic chain, including `base-offset`
 
-Two possible positions to query using commands (see ROS topics above):
+In general, the `base-offset` should be used for a constant transformation.  For example, the MTMs are always mounted rigidly to a frame and by default the ISI convention expects that x motions point to the left when viewed from the stereo display, y motions should point down and z motions towards the user.  The two masters are also mounted apart from each other.  By default, the DH parameters start from the link 0, i.e. close to the attachment point (see `mtm.json`).  The change of reference frame can be performed using the `base-offset` (see `mtml.json` and `mtmr.json`).
+
+For a dynamic change of reference frame one should use the `SetBaseFrame` command (ROS topic `set_base_frame`).  This is used to make sure the PSMs are always defined with respect to the ECM tooltip (camera frame).  When used with the setup joints, the console class propagates the different base frames to make sure the PSMs are defined with respect to the camera frame.  If you don't have access to the setup joints but have a way to register the PSMs to the camera, you can use the `SetBaseFrame` command on the PSMs.
+
+There are two possible positions to query using commands (see ROS topics above):
 * `GetPositionCartesian`: `BaseFrame * base-offset * DH * tooltip-offset`
 * `GetPositionCartesianLocal`: `base-offset * DH * tooltip-offset`
 
 ## Setup Joints
+
+When setup joint are present, the following positions are reported:
+* ECM frames:
+  * ECM-SUJ-Local:
+    * Defined with respect to patient cart origin
+    * Uses `base-offset * DH * tooltip-offset` from `suj.json`
+    * Defines ECM-RCM
+  * ECM-SUJ:
+    * Same as ECM-SUJ-Local
+  * ECM-Local:
+    * Defined with respect to the ECM RCM
+    * Uses `DH * tooltip-offset` from `ecm-*.json`
+    * `tooltip-offset` depends on type of scope (looking straight, up or down)
+  * ECM:
+    * **Camera frame defined with respect to patient cart**
+    * Uses `ECM-SUJ * ECM-Local` (`ECM-SUJ` is the base frame)
+* PSM frames
+  * PSM-SUJ-Local:
+    * See ECM-SUJ-Local
+  * PSM-SUJ:
+    * Defined with respect to camera frame
+    * Uses `inverse(ECM) * PSM-SUJ-Local` (`inverse(ECM)` is the base frame)
+  * PSM-Local:
+    * See ECM-Local
+    * `DH`, `coupling`, `tooltip-offset`... depend on type of tool
+  * PSM:
+    * **PSM tooltip frame defined with respect to camera frame**
+    * Uses `PSM-SUJ * PSM-Local` (`PSM-SUJ` is the base frame)
