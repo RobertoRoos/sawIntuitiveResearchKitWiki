@@ -149,10 +149,10 @@ One can specify a base offset, i.e. a fixed transformation added at the base of 
 
 ### Going to zero position when homing
 
-Since **version 1.4** the arm won't go to zero position during the homing procedure.  One can override this using the `homing-zero-position` boolean flag.
+Since **version 1.4** the arm won't go to zero position during the homing procedure.  One can override this using the `homing-zero-position` boolean flag.  The default for PSMs and ECM is now to stay in place when homing.
  
 ```js
-    "homing-zero-position": 1 // or 0 for false
+  "homing-zero-position": 1 // or 0 for false
 ```
 
 ## MTMs
