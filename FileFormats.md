@@ -125,6 +125,19 @@ All parameters are provided by ISI.  You might need to play with the last joint 
 
 **These parameters are in millimeters and degrees** to be more human readable.  These are converted internally in SI units.
 
+### Base offset
+
+One can specify a base offset, i.e. a fixed transformation added at the base of the kinematic chain.  This is an optional field, it can be used for systems without setup joints to make sure the PSMs cartesian positions are defined with respect to the camera.   For a moving camera, we recommend using the `SetBaseFrame` C++ command instead (see also ROS topic `set_base_frame`).
+  
+```js
+  "base-offset" : [[ 1.0, 0.0, 0.0, 0.0],
+                   [ 0.0, 1.0, 0.0, 0.0],
+                   [ 0.0, 0.0, 1.0, 0.0],
+                   [ 0.0, 0.0, 0.0, 1.0]]
+```
+
+**Base offset matrix uses SI units!**
+
 ## MTMs
 
 **This applies to version 1.4.0 and later**, older versions still use `.rob` files.
@@ -173,7 +186,37 @@ The main difference between the PSM's DH and MTM's is that we need the mass, cen
                    [  0.0,  0.0,          0.0,          1.0]]
 ```
 
+**Base offset matrix uses SI units!**
+
+## ECM
+
+Parsing is performed by the `Configure` method in `mtsIntuitiveResearchKitECM`: https://github.com/jhu-dvrk/sawIntuitiveResearchKit/blob/master/code/mtsIntuitiveResearchKitECM.cpp
+
+The `tooltip-offset` is used to change the camera coordinate system, it follows the ISI conventions and includes the scope angle.  For a straight endoscope, one should use `ecm-straight.json`. 
+
+### DH parameters
+
+See PSM DH section.  For the ECM we only need 4 joints.  The current implementation doesn't load any mass/inertia information as these are not used for the ECM (but these would be nice when the ECM is manually operated so the user wouldn't have to lift the whole arm).
+
+**DH uses SI units!**
+
+### Tooltip offset
+
+```js
+  // rotation to match ISI convention (for read-only research API on commercial da Vinci) for a straight endoscope
+  "tooltip-offset" : [[ 0.0, -1.0,  0.0,  0.0],
+                      [-1.0,  0.0,  0.0,  0.0],
+                      [ 0.0,  0.0, -1.0,  0.0],
+                      [ 0.0,  0.0,  0.0,  1.0]]
+```
+ 
+Usually a rotation matrix to match ISI convention and the scope angle (straight, up, down).  Following the ISI convention, the PSMs motion in camera view should be x to the left, y down and z towards the users.
+
 **Tooltip matrix uses SI units!**
+
+### Base offset
+
+One can specify a base offset, i.e. a fixed transformation added at the base of the kinematic chain.  This is an optional field, see PSM Base offset section.
 
 # Console (JSON)
 
