@@ -108,6 +108,9 @@ The following commands and feedback are available for all arm components (see cl
 
 ## Commands (write)
 
+* **v 1.4+**: `SetBaseFrame`.  This _write_ command sets a base frame used for all forward and inverse kinematic computations.  This transformation is prepended to the kinematic chain, i.e. `base_frame * base_offset * DH_chain * tooltip_offset`.   See transformation section.<br>
+  ROS subscriber: `/dvrk/<arm_name>/set_base_grame`: `geometry_msgs::Pose`.
+
 * **v 1.3+**: `SetRobotControlState`.  This _write_ command sets the desired state for the arm.  The parameter is a string, see https://github.com/jhu-dvrk/sawIntuitiveResearchKit/blob/master/code/mtsIntuitiveResearchKitArmTypes.cdg.  If the desired state is not possible based on the current state, an error event will be raised (ROS error message).<br>
   ROS subscriber: `/dvrk/<arm_name>/set_robot_state`: `std_msgs::String`.
 
@@ -153,3 +156,23 @@ The following commands and feedback are available for MTMs only (see class `mtsI
   ROS subscriber: `/dvrk/<mtm_name>/unlock_orientation`: `std_msgs::Empty`.
 
 **--- Work in progress ---**
+
+# Coordinate systems
+
+## Individual arms
+
+For each individual arm, the cartesian positions are based on:
+* DH parameters: defined in JSON file, used to compute the forward kinematics using joint positions
+* Kinematic chain offsets (optional):
+  * Defined in JSON file
+  * `base-offset`: constant offset prepended to the kinematic chain (all arms)
+  * `tooltip-offset`: constant offset appended to the kinematic chain (PSM and ECM only, not MTM)
+* Base Frame:
+  * Set at runtime by command or ROS topic
+  * Prepended to the kinematic chain, including `base-offset`
+
+Two possible positions to query using commands (see ROS topics above):
+* `GetPositionCartesian`: `BaseFrame * base-offset * DH * tooltip-offset`
+* `GetPositionCartesianLocal`: `base-offset * DH * tooltip-offset`
+
+## Setup Joints
