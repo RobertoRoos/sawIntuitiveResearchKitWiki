@@ -265,8 +265,8 @@ In **version 1.4** and later, you can also specify the FireWire protocol used to
 
 The following protocols are supported:
 * `sequential-read-write`: the PC reads data from each board (2 FPGA/QLA per controller), performs its computations (conversions, safety checks, PID, ...) and then writes sequentially to each board (N reads, N writes).  This is the only protocol supported on older firmware (3 and below).
-* `sequential-read-broadcast-write`: the PC reads sequentially but performs a single write for all the boards (N reads, 1 write).  This is the default protocol for the dVRK controllers with firmware 4 and above.
-* `broadcast-read-write`: the PC sends a single query/synchronization to all boards, read values are aggregated in single packet over the bus and there's a single write (1 query, 1 read, 1 write).  This is the fastest protocol available but some FireWire cards seem to have some issues synchronizing the read packets.  You will have to test it on your hardware to see if it supports this protocol or not.
+* `sequential-read-broadcast-write`: the PC reads sequentially but performs a single write for all the boards.  The write message is an array of values sent to the boards, each board access the data it needs by index (N reads, 1 write).  This is the default protocol for the dVRK controllers with firmware 4 and above.
+* `broadcast-read-write`: the PC sends a single query/synchronization to all boards, read values are aggregated in single packet over the bus and there's a single write (1 query, 1 read, 1 write).  This is the fastest protocol available but some FireWire cards seem to have trouble synchronizing the read packets.  You will have to test it on your hardware to see if it supports this protocol or not.
 
 ## Arms
 
