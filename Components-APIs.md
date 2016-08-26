@@ -14,6 +14,9 @@
 - [MTMs](#mtms)
   - [Commands (read)](#commands-read-1)
   - [Commands (write)](#commands-write-1)
+- [Coordinate systems](#coordinate-systems)
+  - [Individual arms](#individual-arms)
+  - [Setup Joints](#setup-joints)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
