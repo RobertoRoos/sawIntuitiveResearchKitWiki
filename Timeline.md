@@ -77,7 +77,7 @@ The dVRK controllers have been built in batches as the community grew over the y
 
 *  Combined 2D & 3D tracking of surgical instruments for minimally invasive and robotic assisted surgery<br>Xiamfei Du, Maximilian Allan, Alessia Dore, Daniil Stoyanov<br>International Journal of Computer Assisted Radiology and Surgery 11(6), July 2016
 
-* Autonomous Scanning for Endomicroscopic Mosaicing and 3D Fusion<br>Lin Zhang, Menglong Ye, Petros Giataganas, Guang-Zhong Yang<br>IROS 2016
+* Real-Time 3D Tracking of Articulated Tools for Robotic Surgery<br>Menglong Ye, Lin Zhang, Stamatia Giannarou, Guang-Zhong Yang<br>MICCAI 2016
 
 * Autonomous Ultrasound-Guided Tissue Dissection<br>Philip Pratt, Archie Hughes-Hallett, Lin Zhang, Guang-Zhong Yang<br>MICCAI 2015
 
