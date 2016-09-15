@@ -46,6 +46,7 @@ Figure out how to use potentiometer on master roll (last active joint).  See [#2
 ## PID component cleanup
 The current PID implementation needs to be cleaned up.  All joint commands should use iterators instead of for loops and cisstVector methods on vector of joints.<br>
 Fix velocity when in simulated mode.<br>
+Fix jumps/clamp when outside joint limit: https://github.com/jhu-dvrk/sawIntuitiveResearchKit/issues/63.<br>
 Maybe moving to JSON format could help but this might be an unnecessary incompatibility.<br>
 **[Improvement, core C++]**
 
