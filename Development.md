@@ -25,6 +25,7 @@ For each component, `git checkout <branch_name>`:
 | sawIntuitiveResearchKit  | devel         |         |
 | dvrk-ros                 | devel         |         |
 
+When switching from `devel` to `master` branch, it is recommended to do a full `catkin clean` since the file structure and CMake external projects might be different.
 
 ## Changes
 
@@ -38,7 +39,7 @@ Pending issues:
 * #35, last issue is to control multiple slaves with one master (not likely in this release)
 
 Besides pending issues, the following should be addressed before next release:
-* Use Reflexes/RML for trajectory generation
+* Use Reflexes/RML for trajectory generation **[Done]**
 * Fix cisst warning when optional interfaces/functions are not connected
 * Make sure console handles SUJ and PSM/ECM clutch
 * Implement motion of ECM in teleopECM
