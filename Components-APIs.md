@@ -114,7 +114,7 @@ The following commands and feedback are available for all arm components (see cl
 * **v 1.4+**: `SetBaseFrame`.  This _write_ command sets a base frame used for all forward and inverse kinematic computations.  This transformation is prepended to the kinematic chain, i.e. `base_frame * base_offset * DH_chain * tooltip_offset`.   See transformation section.<br>
   ROS subscriber: `/dvrk/<arm_name>/set_base_grame`: `geometry_msgs::Pose`.
 
-* **v 1.3+**: `SetRobotControlState`.  This _write_ command sets the desired state for the arm.  The parameter is a string, see https://github.com/jhu-dvrk/sawIntuitiveResearchKit/blob/master/code/mtsIntuitiveResearchKitArmTypes.cdg.  If the desired state is not possible based on the current state, an error event will be raised (ROS error message).<br>
+* **v 1.3+**: `SetRobotControlState`.  This _write_ command sets the desired state for the arm.  The parameter is a string, see https://github.com/jhu-dvrk/sawIntuitiveResearchKit/blob/master/components/code/mtsIntuitiveResearchKitArmTypes.cdg.  If the desired state is not possible based on the current state, an error event will be raised (ROS error message).<br>
   ROS subscriber: `/dvrk/<arm_name>/set_robot_state`: `std_msgs::String`.
 
 * **v 1.3+**: `SetPositionJoint`.  This _write_ command sets the desired joint position.  The controller will send the desired joint position directly to the PID component, no trajectory will be generated.  The caller has to make sure the desired position is reasonable (within joint limits and PID tracking error).  The arm has to be in `DVRK_POSITION_JOINT` mode, see `SetRobotControlState` to change mode.<br>
