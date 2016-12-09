@@ -17,7 +17,7 @@ For a specific da Vinci manipulator, Intuitive Surgical provides manipulator-spe
 
 To start the config generator, open Matlab and then type:
 ```
->> cd ~/catkin/src/cisst-saw/sawIntuitiveResearchKit/share/
+>> cd ~/catkin_ws/src/cisst-saw/sawIntuitiveResearchKit/share/
 >> configGUI
 ```
 The previous example assumes you are building the code with [ROS/catkin python tool](/jhu-dvrk/sawIntuitiveResearchKit/wiki/CatkinBuild).  The first command will differ if you checked out the cisst/SAW code in a different directory (i.e. not `~/catkin/src`).  You can also browse through your directories using the `Current Folder` panel in Matlab.  Once you're in the `sawIntuitiveResearchKit/share` folder, right click on `configGUI.m` and select `Run`.  Do not open the `configGUI.fig` file.
