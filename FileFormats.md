@@ -290,7 +290,7 @@ If the arm is simulated, one need to add `"simulation": "KINEMATIC"` and the `"i
 
 For a real arm, you need to provide the file name for the IO, i.e. `sawRobotIO1394-<your_arm>.xml`.
 
-Finally you can override the default periodicity of the arm class though it is not recommended.  For example adding `"period": 0.001` will set the periodicity to 0.001 (in seconds).
+Finally you can override the default periodicity of the arm class.  For example adding `"period": 0.001` will set the periodicity to 0.001 (in seconds).
   
 ```js
   "arms":
