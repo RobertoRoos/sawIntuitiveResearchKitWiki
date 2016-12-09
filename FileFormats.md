@@ -286,9 +286,11 @@ The following protocols are supported:
 
 List of arms to be configured in your system.  Each arm needs a unique name, type and configuration file for kinematics.  The arm can be a physical one (`ECM`, `PSM`, `MTM` or `SUJ`) or a simulated one (`ECM`, `PSM` or `MTM`).  We don't support simulated SUJs yet.
 
-If the arm is simulated, one need to add `"simulation": "KINEMATIC"` and the `"io"` field is ignore (see https://github.com/jhu-dvrk/sawIntuitiveResearchKit/blob/master/share/console-PSM1_KIN_SIMULATED.json).
+If the arm is simulated, one need to add `"simulation": "KINEMATIC"` and the `"io"` field is ignored (see https://github.com/jhu-dvrk/sawIntuitiveResearchKit/blob/master/share/console-PSM1_KIN_SIMULATED.json).
 
 For a real arm, you need to provide the file name for the IO, i.e. `sawRobotIO1394-<your_arm>.xml`.
+
+Finally you can override the default periodicity of the arm class though it is not recommended.  For example adding `"period": 0.001` will set the periodicity to 0.001 (in seconds).
   
 ```js
   "arms":
