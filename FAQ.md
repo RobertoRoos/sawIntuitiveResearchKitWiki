@@ -69,7 +69,7 @@ You will need a PC running Linux:
   * If you plan to send images to the stereo display, you will need two extra VGA outputs for the standard CRTs or two DVI outputs for the flat panels ([see ISI private Wiki](http://research.intusurg.com/dvrkwiki/index.php?title=DVRK:Topics:StereoViewerLCD))
   * In General Nvidia cards work fine on Linux.  If you have multiple cards, try to match them (use same model for all cards)
  * Software
-  * Ubuntu 12.04, 14.04 or 16.04
+  * Ubuntu 12.04, 14.04 or 16.04 (64 bits of course)
   * ROS Hydro or Indigo, Jade might work as well but hasn't been extensively tested
 
 ## The PSMs aren't moving
