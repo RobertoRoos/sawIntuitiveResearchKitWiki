@@ -56,6 +56,8 @@ Make sure you place the wire to short the two pins as deep as possible and keep 
 
 ### 2.1. FPGA Power
 
+**This only applies to the first generation of controllers, i.e. 2012 model.**
+
 For the Rev 1 controllers, there is a minor issue with the controllers and power provided via the Firewire cable.  If there are too many controllers on the daisy chain, there won't be enough power the FPGA boards properly and they might get stuck in an unstable state.  This is due to the fact that the Rev 1.1 FPGA boards (inside the Rev 1 controller box) can obtain power from the 6-pin Firewire cable or from its internal power supply -- specifically, the boards will use whichever voltage is higher. If the Firewire cable is connected to a box that is switched off, the FPGA boards will draw power from the PC via the Firewire cable.  This problem does not occur with the Rev 2 controllers, which contain Rev 1.2 FPGA boards, because those boards have a jumper (J10) to enable/disable power from  the 6-pin Firewire connector. By default, this jumper is not installed, so the FPGA boards cannot obtain power from the Firewire cable.
 
 * For the Rev 1 controllers, if you are using a 6 pin firewire A cable, we strongly recommend to unplug the firewire cable from the PC, power on the controllers and then re-plug the firewire cable on the PC.  This way, the controllers start using their own power supplies.
