@@ -27,6 +27,27 @@ For each component, `git checkout <branch_name>`:
 
 When switching from `devel` to `master` branch, it is recommended to do a full `catkin clean` since the file structure and CMake external projects might be different.
 
+If you don't want to checkout out those repositories one by one, just checkout all the repositories within `cisst-saw`. Note that, don't forget to checkout `dvrk-ros`, which is not located in `cisst-saw`.
+
+If it's your first time, follow this
+
+```bash
+cd ~/catkin_ws/src
+git clone https://github.com/jhu-cisst/cisst-saw --recursive
+git submodule foreach git checkout devel
+git submodule foreach git submodule init
+git submodule foreach git submodule update
+```
+
+Afterwards, follow this
+
+```bash
+git submodule foreach git checkout devel
+git submodule foreach git pull
+git submodule foreach git submodule init
+git submodule foreach git submodule update
+```
+
 ## Changes
 
 ### `devel`
