@@ -133,6 +133,13 @@ Some JHU users have experience with VRep.  They've been happy with user support,
 
 # Documentation
 
+## Test protocol
+* Must compile code on a clean install, latest two LTS Ubuntu (e.g. 16.04 and 14.04)
+* Test compilation with and without catkin/ROS
+* Include examples with generic/derived arms in compilation
+* Run Python/Matlab test scripts to make sure ROS topics have been updated on all ends
+* Add test scripts checking basic transitions between joint/cartesian, add small random noise to PID measured positions in simulated mode to make sure we can differentiate measured vs commanded position
+ 
 ## Documented code examples
 * Class derived from an existing arm
 * Class derived from a teleoperation component (PSM or ECM)
