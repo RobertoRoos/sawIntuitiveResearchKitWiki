@@ -34,6 +34,7 @@ If it's your first time, follow this
 ```bash
 cd ~/catkin_ws/src
 git clone https://github.com/jhu-cisst/cisst-saw --recursive
+cd ~/catkin_ws/src/cisst-saw
 git submodule foreach git checkout devel
 git submodule foreach git submodule init
 git submodule foreach git submodule update
@@ -42,6 +43,7 @@ git submodule foreach git submodule update
 Afterwards, follow this
 
 ```bash
+cd ~/catkin_ws/src/cisst-saw
 git submodule foreach git checkout devel
 git submodule foreach git pull
 git submodule foreach git submodule init
