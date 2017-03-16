@@ -31,4 +31,4 @@ Miscellaneous
 
 Deprecated
 * [Build with ROS catkin_make](/jhu-dvrk/dvrk-ros)
-* [Simulation with ROS](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Simulation)
+* [Simulation with ROS](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Simulation-(Deprecated))
