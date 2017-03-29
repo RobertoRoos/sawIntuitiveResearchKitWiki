@@ -45,13 +45,15 @@ Some JHU acronyms:
  * **dMIB**: da Vinci Manipulator Interface Board, board designed to interface between the ISI manipulators using an ITT Cannon plus a foot pedal connector and the QLA-FPGA connectors (SCSI and RS cables)
  * **dSIB**: da Vinci Setup joints Interface Board.  This doesn't exist yet, we are working on it! 
  * **Controller**:
-  * Enclosure
-  * Two QLA-FPGA to control up to 8 axis
-  * dMIB: mounted on the back
-  * Power supplies: 12V for logic + motor power:
-    * 24 V for all actuators on PSM
-    * 24 V for first 3 actuators and 12 V for last 4 actuators on MTM
-  * Safety relays
+   * Enclosure
+   * Two QLA-FPGA to control up to 8 axis
+   * dMIB: mounted on the back
+   * Power supplies: 12V for logic + motor power:
+      * 24 V for all actuators on PSM
+      * 24 V for first 3 actuators and 12 V for last 4 actuators on MTM
+      * 36 V for ECM, mostly to be able to release the brakes
+      * 48 V for SUJ, for brakes and PWM units to lift/lower the PSM3 SUJ
+   * Safety relays
  * `qladisp`: text based application used to test up to 2 QLA-FPGA boards.  See [testing hardware with `qladisp`](/jhu-dvrk/sawIntuitiveResearchKit/wiki//Hardware#22-testing-with-qladisp)
 
 See JHU Mechatronics for more details: http://jhu-cisst.github.io/mechatronics regarding the QLA-FPGA (JHU public page).
@@ -63,14 +65,16 @@ You will need a PC running Linux:
  * 4 cores minimum, 8 recommended (Intel i7)
  * 4 GB RAM minimum, 8 recommended
  * FireWire
-  * A dedicated firewire controller for each chain of controllers - you can hook 8 controllers (16 FPGA/QLA boards) in a single chain so 1 firewire controller is fine for most users.
-  * Early dVRK users have tested different cards and the SIIG FireWire adapter NN-E20012-S2 works well (uses a TI chipset)
+   * A dedicated firewire controller for each chain of controllers - you can hook 8 controllers (16 FPGA/QLA boards) in a single chain so 1 firewire controller is fine for most users.
+   * Early dVRK users have tested different cards and the SIIG FireWire adapter NN-E20012-S2 works well (uses a TI chipset)
+   * See also the following document: http://support.presonus.com/hc/en-us/article_attachments/203654243/Compatible_Hardware_List_7-12.pdf.  Any card from the compatible list should work.
+   * If possible, choose a PCIe card to get better performance. 
  * Graphic adapters
-  * If you plan to send images to the stereo display, you will need two extra VGA outputs for the standard CRTs or two DVI outputs for the flat panels ([see ISI private Wiki](http://research.intusurg.com/dvrkwiki/index.php?title=DVRK:Topics:StereoViewerLCD))
-  * In General Nvidia cards work fine on Linux.  If you have multiple cards, try to match them (use same model for all cards)
+   * If you plan to send images to the stereo display, you will need two extra VGA outputs for the standard CRTs or two DVI outputs for the flat panels ([see ISI private Wiki](http://research.intusurg.com/dvrkwiki/index.php?title=DVRK:Topics:StereoViewerLCD))
+   * In General Nvidia cards work fine on Linux.  If you have multiple cards, try to match them (use same model for all cards)
  * Software
-  * Ubuntu 12.04, 14.04 or 16.04 (64 bits of course)
-  * ROS Hydro or Indigo, Jade might work as well but hasn't been extensively tested
+   * Ubuntu 12.04, 14.04 or 16.04 (64 bits of course)
+   * ROS Hydro or Indigo, Jade might work as well but hasn't been extensively tested
 
 ## The PSMs aren't moving
 
