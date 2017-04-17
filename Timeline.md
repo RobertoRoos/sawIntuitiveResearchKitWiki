@@ -65,7 +65,7 @@ The dVRK controllers have been built in batches as the community grew over the y
 
 ## dVRK
 
-* Software Architecture of the da Vinci Research Kit<br>Zihan Chen, Anton Deguet, Russell H. Taylor, and Peter Kazanzides<br>IEEE International Conference on Robotics Computing, Taichung, Taiwan, April 2017<br>
+* [Software Architecture of the da Vinci Research Kit](/jhu-dvrk/sawIntuitiveResearchKit/wiki/chen-deguet-etal-irc-2017.pdf)<br>Zihan Chen, Anton Deguet, Russell H. Taylor, and Peter Kazanzides<br>IEEE International Conference on Robotics Computing, Taichung, Taiwan, April 2017<br>
 **Best Paper Award**
 
 * [An Open-Source Research Kit for the da Vinci Surgical System, International Conference on Robotics and Automation](/jhu-dvrk/sawIntuitiveResearchKit/wiki/kazanzides-chen-etal-icra-2014.pdf)<br>Kazanzides P, Chen Z, Deguet A, Fischer GS, Taylor RH, DiMaio SP<br>ICRA 2014, May 2014.
