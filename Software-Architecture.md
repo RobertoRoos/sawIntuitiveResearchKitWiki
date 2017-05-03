@@ -73,14 +73,14 @@ In general, each component owns a thread and can run at its own frequency.  Ther
  * There is a single IO component with multiple interfaces (one per arm connected).  This is required to avoid simultaneous accesses to the FireWire port (FireWire read/write are thread safe but processes can hang for a couple seconds).
  * The PID components could run in separate threads but this would introduce a fair amount of latency since the thread safe communication mechanisms in _cisstMultiTask_ are based on queues.   Assuming a 1 millisecond period for both IO and PID, the PID would read some cached data (position and velocity) from the IO (between 0+ and 1 millisecond old) and then request a new effort.  This request being queued will be acted on between 0+ and 1 millisecond later.  Overall, the time between read and write could be as high as 2 milliseconds.  Instead, we used the _cisstMultiTask_ ExecIn/ExecOut feature (see [cisstMultiTask concepts](https://github.com/jhu-cisst/cisst/wiki/cisstMultiTask-concepts)) which allows to attach a component to another.  Effectively, the parent thread now runs the child's computation whenever needed.  In pseudo code:
 
-   ```c++
+```C++
   IO::Run(void) {
      ReadAllData();
      SaveReadDataInStateTable(); // state tables are used to cache data
      ExecOut(); // trigger PID.Run() for all PID components attached to this IO
      ProcessQueuedCommands(); // dequeue all commands, including those from PID
   }
-   ```
+```
 
  * Qt manages its own thread(s)
  * The ROS bridges (cisst-ros) can be configured based on the user's needs (see below)
