@@ -1,4 +1,4 @@
-[Main](/jhu-dvrk/sawIntuitiveResearchKit/wiki)
+[[[dVRK-100px.png]]](/jhu-dvrk/sawIntuitiveResearchKit/wiki)
 
 Getting Started
 * [First Steps](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FirstSteps)
