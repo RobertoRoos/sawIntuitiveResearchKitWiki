@@ -37,8 +37,8 @@ The sawIntuitiveResearchKit folder provides several example applications for con
 The software applications use some or all of the following SAW components (and Qt widgets):
 * [mtsRobotIO1394](https://github.com/jhu-saw/sawRobotIO1394) - interface to IEEE-1394 (FireWire) controller boards
 * [mtsPID](https://github.com/jhu-saw/sawControllers) - PID controller used for MTM and PSM robots
-* [mtsTeleoperation] (https://github.com/jhu-saw/sawControllers) - Teleoperation component
-* [mtsTextToSpeech] (https://github.com/jhu-saw/sawTextToSpeech) - Text to speech component (for warning and error messages)
+* [mtsTeleoperation](https://github.com/jhu-saw/sawControllers) - Teleoperation component
+* [mtsTextToSpeech](https://github.com/jhu-saw/sawTextToSpeech) - Text to speech component (for warning and error messages)
 
 The components are cross-platform, except for mtsRobotIO1394, which relies on a low-level IEEE-1394 interface library (`libraw1394`) that is primarily available on Linux. Thus, the build instructions focus on Linux. For setting up the FireWire interface on Linux, see [this page](/jhu-cisst/mechatronics-software/wiki/Development-Environment).
 
