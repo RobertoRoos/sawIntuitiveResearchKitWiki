@@ -74,11 +74,19 @@ The dVRK controllers have been built in batches as the community grew over the y
 
 ## Applications
 
+* From Macro to Micro: Autonomous Multiscale Image Fusion for Robotic Surgery<br>Lin Zhang, Menglong Ye, Petros Giataganas, Michael Hughes, Adrian Bradu, Adrian Podoleanu, Guang-Zhong Yang<br> IEEE Robotics and Automation Magazine. 2017
+
+* A Breakthrough in Tumor Localization: Combining Tactile Sensing and Ultrasound to Improve Tumor Localization in Robotics-Assisted Minimally Invasive Surgery<br>Anish S. Naidu, Michael D. Naish, Rajnikant V. Patel<br> IEEE Robotics and Automation Magazine. 2017
+
+* Miniaturized Instruments for the da Vinci Research Kit: Design and Implementation of Custom Continuum Tools<br>Peter Francis, Kyle Eastwood, Vivek Bodani, Karl Price, Kunj Upadhyaya, Dale Podolsky, Hamidreza Azimian, Thomas Looi, James Drake<br> IEEE Robotics and Automation Magazine. 2017
+
+* Autonomous Scanning for Endomicroscopic Mosaicing and 3D Fusion<br>Lin Zhang, Menglong Ye, Petros Giataganas, Michael Hughes, Guang-Zhong Yang<br>ICRA 2017
+
 * IEEE Spectrum, May 2016, [Would You Trust a Robot Surgeon to Operate on You?](http://spectrum.ieee.org/robotics/medical-robots/would-you-trust-a-robot-surgeon-to-operate-on-you)
 
 * A development of assistant surgical robot system based on surgical-operation-by-wire and hands-on-throttle-and-stick<br>Myungjoon Kim, Chiwon Lee, Woo Jung Park, Sungwan Kim<br>BioMedical Engineering OnLine, December 2016
 
-*  Combined 2D & 3D tracking of surgical instruments for minimally invasive and robotic assisted surgery<br>Xiamfei Du, Maximilian Allan, Alessia Dore, Daniil Stoyanov<br>International Journal of Computer Assisted Radiology and Surgery 11(6), July 2016
+*  Combined 2D & 3D tracking of surgical instruments for minimally invasive and robotic assisted surgery<br>Xiaofei Du, Maximilian Allan, Alessia Dore, Daniil Stoyanov<br>International Journal of Computer Assisted Radiology and Surgery 11(6), July 2016
 
 * Real-Time 3D Tracking of Articulated Tools for Robotic Surgery<br>Menglong Ye, Lin Zhang, Stamatia Giannarou, Guang-Zhong Yang<br>MICCAI 2016
 
