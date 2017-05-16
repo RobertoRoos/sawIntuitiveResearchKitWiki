@@ -74,6 +74,8 @@ The dVRK controllers have been built in batches as the community grew over the y
 
 ## Applications
 
+* Motion-Compensated Autonomous Scanning for Tumour Localisation using Intraoperative Ultrasound<br>Lin Zhang, Menglong Ye, Stamatia Giannarou, Philip Pratt, Guang-Zhong Yang<br> MICCAI 2017
+
 * From Macro to Micro: Autonomous Multiscale Image Fusion for Robotic Surgery<br>Lin Zhang, Menglong Ye, Petros Giataganas, Michael Hughes, Adrian Bradu, Adrian Podoleanu, Guang-Zhong Yang<br> IEEE Robotics and Automation Magazine. 2017
 
 * A Breakthrough in Tumor Localization: Combining Tactile Sensing and Ultrasound to Improve Tumor Localization in Robotics-Assisted Minimally Invasive Surgery<br>Anish S. Naidu, Michael D. Naish, Rajnikant V. Patel<br> IEEE Robotics and Automation Magazine. 2017
