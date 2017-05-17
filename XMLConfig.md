@@ -52,15 +52,16 @@ You can also set advanced parameters or overwrite the default settings using:
   | Board ID 1 | 0    | 2    | 4   | 6    | 8    | 10 (A) | 12 (C) |
   | Board ID 2 | 1    | 3    | 5   | 7    | 9    | 11 (B) |        |
 
-    * To make sure the board IDs are physically set properly, you will have to open the controller enclosures.  The board ID can be changed by turning the rotary switch with a flat head screw driver.
+
+   * To make sure the board IDs are physically set properly, you will have to open the controller enclosures.  The board ID can be changed by turning the rotary switch with a flat head screw driver.
 
       ![Board ID selector](/jhu-dvrk/sawIntuitiveResearchKit/wiki/board-id-selector.jpg)
 
-    * Looking from the front of the enclosure, the first board is on the left and the second is on the right.  While you have the enclosure open, you should check that the QLA-FPGA sets are properly connected to the dMIB on the back of the controller: first board connected to bottom connectors, second board to top connectors.
+   * Looking from the front of the enclosure, the first board is on the left and the second is on the right.  While you have the enclosure open, you should check that the QLA-FPGA sets are properly connected to the dMIB on the back of the controller: first board connected to bottom connectors, second board to top connectors.
 
       ![Controller layout](/jhu-dvrk/sawIntuitiveResearchKit/wiki/controller-layout.jpg)
 
-    * If your configuration is unusual, you can overwrite the default IDs and specify the board IDs manually using the drop down menu to choose the board ID.  Make sure these two board IDs are different, otherwise the configuration file will not be generated. Also, if you plan to daisy chain multiple controllers, make sure you don't have two boards with the same ID on a single firewire port. 
+   * If your configuration is unusual, you can overwrite the default IDs and specify the board IDs manually using the drop down menu to choose the board ID.  Make sure these two board IDs are different, otherwise the configuration file will not be generated. Also, if you plan to daisy chain multiple controllers, make sure you don't have two boards with the same ID on a single firewire port. 
 
 1. Choose digital input settings.  For all PSMs, the defaults shouldn't be modified unless you are using some digital inputs for a specific application.  For the MTMs, you need to select 'Default Footpedal' for the controller box you plan to connect the foot pedal to.   If you plan to daisy chain multiple controllers, make sure the digital input names are unique.  As a direct consequence, make sure only one of the MTMs is configured with the digital inputs for the foot pedal.
 
