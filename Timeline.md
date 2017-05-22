@@ -52,6 +52,8 @@ The dVRK controllers have been built in batches as the community grew over the y
 
 ## Applications
 
+* Autonomous camera motion, CARES Lab, Wayne State University (2017)<br>https://youtu.be/mb8f259PBMo
+* Record and playback system, CARES Lab, Wayne State University (2016)<br>https://youtu.be/btgeu8B_qdQ
 * Surgical robot teleoperation with BBZ console, BBZ (2016)<br>https://youtu.be/VUAQNhp1yFM
 * The MACRO Tool, Miniaturized Asymmetrically Cut Robotic Tool for the dVRK, CIGITI, SickKids (2016)<br>https://youtu.be/6AKS6tdv5Ec 
 * Autonomous Multi-Throw Multilateral Surgical Suturing, UC Berkeley (2016)<br>https://youtu.be/z1ehShXFToc
