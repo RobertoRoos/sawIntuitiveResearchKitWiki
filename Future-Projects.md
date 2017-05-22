@@ -11,6 +11,7 @@
   - [Gravity compensation](#gravity-compensation)
   - [Better use of MTM redundancies](#better-use-of-mtm-redundancies)
   - [Better PSM teleoperation](#better-psm-teleoperation)
+  - [ECM teleoperation](#ecm-teleoperation)
   - [Trajectory generation](#trajectory-generation)
   - [Support for ROS MoveIt!](#support-for-ros-moveit)
 - [Video](#video)
@@ -73,6 +74,11 @@ Taking advantage of the symmetry of the master gripper and maximize the joint sp
 Take joint PSM limits into account and provide force feedback on MTMs.<br>
 Evaluate a different control, we currently use absolute positions since the follow mode started.  Maybe using relative motions since last command (incremental positions and/or velocities) would reduce the likelihood of jumps in the cartesian space.<br> 
 **[Improvement, core C++]**
+
+## ECM teleoperation
+Implement ECM two hands teleoperation.<br>
+An empty component was introduced in 1.4 but the actual teleoperation is not implemented (missing both ECM motion and MTM force feedback).<br>
+**[New feature, core C++]**
 
 ## Trajectory generation
 Current implementation uses robLSPB which always assumes an initial velocity 0.  We can't interrupt existing trajectory so it only works with blocking commands (wait for goal reached event).  Using Reflexxes RMLII we could have an implementation with trajectories picking up where the last one was.   There's some work done in cisstRobot and the dVRK repository (in branches feature-RML but it's incomplete, untested and the build is tricky (should use CMake external project to be portable).  As a side note, we should add support for trajectories in cartesian space, maybe interpolation position/Euler angles.<br>
