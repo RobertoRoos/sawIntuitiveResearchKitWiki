@@ -48,7 +48,7 @@ A ROS interface is available via [mtsROSBridge](https://github.com/jhu-cisst/cis
 
 ## Firmware
 
-Firmware version 3.0 or 4.0 is now required, please upgrade.  Version 4.0 adds support for FireWire broadcasts, which enables faster I/O performance.
+Firmware version 3.0, 4.0, or 5.0 is now required, please upgrade.  Version 4.0 adds support for FireWire broadcasts, which enables faster I/O performance.
 https://github.com/jhu-cisst/mechatronics-firmware/wiki/FPGA-Program 
 
 ## Software
@@ -67,3 +67,6 @@ https://github.com/jhu-cisst/mechatronics-firmware/wiki/FPGA-Program
 # Acknowledgments
 
 The cisst software has been developed with the support of the National Science Foundation, EEC 9731748, EEC 0646678, and MRI 0722943.
+
+The da Vinci Research Kit is supported by the National Science Foundation, via the National Robotics Initiative (NRI), as part of the collaborative research project "Software Framework for Research in Semi-Autonomous Teleoperation" between The Johns Hopkins University (IIS 1637789), Worcester Polytechnic Institute (IIS 1637759), and the University of Washington (IIS 1637444).
+
