@@ -64,6 +64,7 @@ Pending issues:
 Besides pending issues, the following should be addressed before next release:
 * Use Reflexes/RML for trajectory generation **[Done]**
 * Fix cisst warning when optional interfaces/functions are not connected
+* Add optional for all ROS bridge topics
 * Make sure console handles SUJ and PSM/ECM clutch
 * Implement motion of ECM in teleopECM
 * Add dvrk-openigt to cisst-saw
