@@ -1,3 +1,8 @@
+## Codes
+* SEMP: SUJ, ECM, MTM, PSM
+* Q/R: Qt, ROS
+
+## Checks
 | test | 1.5 |
 |------|-----|
 |Compile w/o ROS                | |
@@ -8,7 +13,7 @@
 |Firmware 6                     | |
 |All firewire protocols full dV | |
 |Matlab ConfigGenerator (EMP)   | |
-|Test all footpedals (Qt/ROS)   | |
+|Test all footpedals (QR)       | |
 |Current calibration (EMP)      | |
 |Pot calibration (EMP)          | |
 |MTM gripper calibration (M)    | |
