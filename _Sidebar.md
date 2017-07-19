@@ -15,6 +15,7 @@ Advanced
 * [File formats](FileFormats)
 * [APIs](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Components-APIs)
 * [Development branches](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Development)
+* [Release Checklist](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Release-Checklist)
 * [Projects](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Future-Projects)
 * [E-STOP wiring](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ESTOP)
 * [Full da Vinci system](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Full-da-Vinci)
