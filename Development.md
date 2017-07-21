@@ -57,15 +57,18 @@ git submodule foreach git submodule update
 ## Todo for 1.5
 
 Pending issues:
-* #55 and #50, use separate IO XML files for external devices (foot pedal, camera focus)
+* #55 and #50, use separate IO XML files for external devices (foot pedal, camera focus) **[Done]**
 * #54, save content of `.cal` file in generated XML file (for debug, retrieval, ...)
 * #35, last issue is to control multiple slaves with one master (not likely in this release)
 
 Besides pending issues, the following should be addressed before next release:
 * Use Reflexes/RML for trajectory generation **[Done]**
 * Fix cisst warning when optional interfaces/functions are not connected
-* Add optional for all ROS bridge topics
+* Add optional for ROS bridge topics
 * Make sure console handles SUJ and PSM/ECM clutch
+* Add warning when not compiled in release mode, cisstConfig.h should have build type
+* Test code to re-position MTM in tele-op mode
+* Add event on teleop components when in follow mode
 * Implement motion of ECM in teleopECM
 * Add dvrk-openigt to cisst-saw
 * Remove gravity and clutch mode from MTM, now replaced by effort_mode + gravity on/off + lock orientation on/off
