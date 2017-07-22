@@ -25,4 +25,4 @@
 |Teleop PSM over TCP<br>PUT SCRIPT NAME    | |
 |Teleop PSM simulated<br>PUT SCRIPT NAME   | |
 |ROS Python<br>rosrun dvrk_robot dvrk_mtm_test.py X<br>rosrun dvrk_robot dvrk_arm_test.py X| <br>R<br>R|
-|ROS Matlab<br>PUT SCRIPT NAME             | |
+|ROS Matlab<br>test_arm_api('X')<br>test_arm_move('X') | <br>L<br>L |
