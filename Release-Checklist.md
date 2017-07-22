@@ -1,5 +1,5 @@
 ## Codes
-* SEMP: SUJ, ECM, MTM, PSM
+* SEMP: SUJ, ECM, MTM, PSM.  Result SELR123
 * Q/R: Qt, ROS
 
 ## Checks
@@ -24,5 +24,5 @@
 |5mm tool<br>Teleop, Python, Matlab        | |
 |Teleop PSM over TCP<br>PUT SCRIPT NAME    | |
 |Teleop PSM simulated<br>PUT SCRIPT NAME   | |
-|ROS Python<br>PUT SCRIPT NAME             | |
+|ROS Python<br>rosrun dvrk_robot dvrk_mtm_test.py X<br>rosrun dvrk_robot dvrk_arm_test.py X| <br>R<br>R|
 |ROS Matlab<br>PUT SCRIPT NAME             | |
