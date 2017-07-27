@@ -3,6 +3,7 @@
 **Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
 
 - [Introduction](#introduction)
+- [Credit / Citation](#credit--citation)
 - [Links](#links)
   - [Related sites](#related-sites)
   - [Software](#software)
