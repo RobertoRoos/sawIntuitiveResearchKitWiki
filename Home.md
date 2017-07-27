@@ -26,9 +26,23 @@ The sawIntuitiveResearchKit folder provides several example applications for con
 
 If you use the dVRK in your research, please cite the following paper:
 
-P. Kazanzides, Z. Chen, A. Deguet, G. S. Fischer, R. H. Taylor, and S. P. DiMaio, “An open-source research kit for the da Vinci(R) surgical system,” in IEEE Intl. Conf. on Robotics and Automation (ICRA), 2014, pp. 6434–6439.
+P. Kazanzides, Z. Chen, A. Deguet, G. S. Fischer, R. H. Taylor, and S. P. DiMaio, “[An open-source research kit for the da Vinci(R) surgical system](/jhu-dvrk/sawIntuitiveResearchKit/wiki/kazanzides-chen-etal-icra-2014.pdf),” in IEEE Intl. Conf. on Robotics and Automation (ICRA), 2014, pp. 6434–6439.
+```bibtex
+@inproceedings{Kazanzides2014,
+title = {An Open-Source Research Kit for the da Vinci Surgical System},
+author = {Peter Kazanzides and Zihan Chen and Anton Deguet and Fischer, Gregory S. and Taylor, Russell H. and DiMaio, Simon P.},
+year = {2014},
+date = {2014-06-01},
+booktitle = {IEEE Intl. Conf. on Robotics and Auto. (ICRA)},
+pages = {6434-6439},
+address = {Hong Kong, China},
+keywords = {},
+pubstate = {published},
+tppubtype = {inproceedings}
+}
+```
 
-For posters and videos, please include the dVRK logo if possible.
+For posters and videos, please include the [dVRK logo](https://github.com/jhu-dvrk/dvrk-logo) if possible.
 
 # Links
 
@@ -78,4 +92,3 @@ https://github.com/jhu-cisst/mechatronics-firmware/wiki/FPGA-Program
 The cisst software has been developed with the support of the National Science Foundation, EEC 9731748, EEC 0646678, and MRI 0722943.
 
 The da Vinci Research Kit is supported by the National Science Foundation, via the National Robotics Initiative (NRI), as part of the collaborative research project "Software Framework for Research in Semi-Autonomous Teleoperation" between The Johns Hopkins University (IIS 1637789), Worcester Polytechnic Institute (IIS 1637759), and the University of Washington (IIS 1637444).
-
