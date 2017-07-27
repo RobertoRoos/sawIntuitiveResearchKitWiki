@@ -21,6 +21,14 @@ The da Vinci Research Kit is an “open-source mechatronics” system, consistin
 
 The sawIntuitiveResearchKit folder provides several example applications for controlling the Research Kit for the da Vinci System using the [IEEE-1394 (FireWire) controller](http://jhu-cisst.github.io/mechatronics/). The picture above shows two Controllers connected to two da Vinci Patient Side Manipulators (PSMs) at Worcester Polytechnic Institute (WPI).
 
+# Credit / Citation
+
+If you use the dVRK in your research, please cite the following paper:
+
+P. Kazanzides, Z. Chen, A. Deguet, G. S. Fischer, R. H. Taylor, and S. P. DiMaio, “An open-source research kit for the da Vinci(R) surgical system,” in IEEE Intl. Conf. on Robotics and Automation (ICRA), 2014, pp. 6434–6439.
+
+For posters and videos, please include the dVRK logo if possible.
+
 # Links
 
 ## Related sites
