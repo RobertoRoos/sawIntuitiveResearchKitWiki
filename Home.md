@@ -35,7 +35,6 @@ If you use the dVRK in your research, please cite the following paper:
     booktitle = {IEEE Intl. Conf. on Robotics and Auto. (ICRA)},
     pages = {6434-6439},
     address = {Hong Kong, China},
-    pubstate = {published},
     tppubtype = {inproceedings}
   }
   ```
