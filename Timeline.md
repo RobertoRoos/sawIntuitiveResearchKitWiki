@@ -49,6 +49,7 @@ The dVRK controllers have been built in batches as the community grew over the y
 ## dVRK
 
 * Video introduction on YouTube, JHU LCSR (2013)<br>https://youtu.be/0n_9CgNSx6Y
+* ieee.tv: Surgical Robotics: Shared research platforms and frameworks - da Vinci Research Kit<br>https://ieeetv.ieee.org/ieeetv-specials/surgical-robotics-shared-research-platforms-and-frameworks-da-vinci-research-kit
 
 ## Applications
 
