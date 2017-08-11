@@ -48,12 +48,12 @@ The dVRK controllers have been built in batches as the community grew over the y
 
 ## dVRK
 
+* ieee.tv: Surgical Robotics: Shared research platforms and frameworks - da Vinci Research Kit (2014)<br>https://ieeetv.ieee.org/ieeetv-specials/surgical-robotics-shared-research-platforms-and-frameworks-da-vinci-research-kit
 * Video introduction on YouTube, JHU LCSR (2013)<br>https://youtu.be/0n_9CgNSx6Y
-* ieee.tv: Surgical Robotics: Shared research platforms and frameworks - da Vinci Research Kit<br>https://ieeetv.ieee.org/ieeetv-specials/surgical-robotics-shared-research-platforms-and-frameworks-da-vinci-research-kit
 
 ## Applications
 
-* Smart Autonomous Unknown Deformable Object Manipulation, JHU & CUHK<br>https://youtu.be/ILR2EjBhOEk
+* Smart Autonomous Unknown Deformable Object Manipulation, JHU & CUHK (2017)<br>https://youtu.be/ILR2EjBhOEk
 * Autonomous camera motion, CARES Lab, Wayne State University (2017)<br>https://youtu.be/mb8f259PBMo
 * Record and playback system, CARES Lab, Wayne State University (2016)<br>https://youtu.be/btgeu8B_qdQ
 * Surgical robot teleoperation with BBZ console, BBZ (2016)<br>https://youtu.be/VUAQNhp1yFM
