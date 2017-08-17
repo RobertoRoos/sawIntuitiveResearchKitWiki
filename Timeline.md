@@ -34,7 +34,7 @@ The dVRK controllers have been built in batches as the community grew over the y
 | 3<br>dVRK | 2014 | Scuola Superiore Sant'Anna | Arianna Mendicassi |
 | 3<br>dVRK | 2014 | Seoul National Univ. | Sungwan Kim |
 | 3<br>da Vinci | 2014 | Óbuda Univ., Budapest | Tamás Haidegger |
-| 4<br>da Vinci | 2015 | Wayne State Univ. | Abhilash Panda |
+| 4<br>da Vinci | 2015 | Wayne State Univ. | Abhilash Pandya |
 | 4<br>da Vinci | 2015 | Children's National Medical Center | Kevin Cleary |
 | 4<br>da Vinci | 2015 | University of Verona | Paolo Fiorini |
 | 4<br>da Vinci | 2015 | National Institutes of Health | Sheng Xu |
