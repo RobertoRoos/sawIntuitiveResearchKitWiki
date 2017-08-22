@@ -32,12 +32,17 @@ If you don't want to checkout out those repositories one by one, just checkout a
 If it's your first time, follow this
 
 ```bash
+mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/src
 git clone https://github.com/jhu-cisst/cisst-saw --recursive
 cd ~/catkin_ws/src/cisst-saw
 git submodule foreach git checkout devel
 git submodule foreach git submodule init
 git submodule foreach git submodule update
+cd ~/catkin_ws/src
+git clone https://github.com/jhu-dvrk/dvrk-ros
+cd ~/catkin_ws/src/dvrk-ros
+git checkout devel
 ```
 
 Afterwards, follow this
@@ -48,6 +53,9 @@ git submodule foreach git checkout devel
 git submodule foreach git pull
 git submodule foreach git submodule init
 git submodule foreach git submodule update
+cd ~/catkin_ws/src/dvrk-ros
+git checkout devel
+git pull
 ```
 
 ## Changes
