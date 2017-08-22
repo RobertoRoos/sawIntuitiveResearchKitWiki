@@ -14,6 +14,7 @@
 |All firewire protocols full dV | |
 |Matlab ConfigGenerator (EMP)   | |
 |Footpedals event(QR)           | |
+|Trigger watchdog (Q)           | |
 |Current calibration (EMP)      | |
 |Pot calibration (EMP)          | |
 |MTM gripper calibration (M)    | |
