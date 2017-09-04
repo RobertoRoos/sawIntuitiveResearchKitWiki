@@ -31,14 +31,15 @@ The following sections assumes that you performed every step in:
 There are three ways to run the software.  The first one is the most common, the later two are script based:
 
 1. Running an executable based C++ code that creates and connects the components:
- * `sawIntuitiveResearchKitQtPID` -- requires several command-line parameters
- * `sawIntuitiveResearchKitQtTeleOperation` -- requires several command-line parameters
+  * `sawIntuitiveResearchKitQtPID` -- requires several command-line parameters
+  * `sawIntuitiveResearchKitQtConsoleJSON` -- requires a console.json configuration file
+  * `rosrun dvrk_robot dvrk_console_json` -- smae as sawIntuitiveResearchKitQtConsoleJSON but with ROS topics
 
 1. Using the `cisstComponentManager` to process a [script file](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/blob/master/share/sawIntuitiveResearchKitQtPID.cisst) that creates and connects the components (requires shared libraries):
- * `cisstComponentManager -e sawIntuitiveResearchKitQtPID.cisst`
+  * `cisstComponentManager -e sawIntuitiveResearchKitQtPID.cisst`
 
 1. Using Python to process a [script file](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/blob/master/share/sawIntuitiveResearchKitQtPID.py) that creates and connects the components (requires shared libraries and Python wrapping):
- * `python -i sawIntuitiveResearchKitQtPID.py`
+  * `python -i sawIntuitiveResearchKitQtPID.py`
 
 The latter two options require the software to be built using `shared` libraries (see CMake options). The last option also requires that cisst be built with Python support, which adds a dependency on SWIG, Python, and numpy. Note that the script files and the XML files are in the https://github.com/jhu-dvrk/sawIntuitiveResearchKit/tree/master/share share sub-directory.
 
@@ -82,17 +83,17 @@ The top sections of the IO widget are:
 
 ## 2.3. Testing the digital inputs
 
-1. Foot pedals.  Please note that the second foot pedal from the right is not wired.  All other foot pedals should be connected to one of the MTM controllers.  Test the foot pedal using the XML file for that specific controller (i.e. MTML or MTMR).  The foot pedals to test are, from left to right:
- * `Clutch`
- * `Camera`
- * `CAM+` and `CAM-`, the long center pedal can be toggle on both ends.
- * Not wired
- * `Coag` or `Mono`.  Please note that the labeling might differ.
+1. Foot pedals.  Please note that the second foot pedal from the right is not wired.  All other foot pedals should be connected to a dVRK controllers (since rev. 1.5, there's a separate configuration files for each controller dissociated from the arm configuration file).  Test the foot pedal using the XML file for that specific controller (i.e. MTML or MTMR).  The foot pedals to test are, from left to right:
+   * `Clutch`
+   * `Camera`
+   * `CAM+` and `CAM-`, the long center pedal can be toggle on both ends.
+   * Not wired on older systems, `Bi` or `BiCoag` for recent dVRK controllers.
+   * `Coag` or `Mono`.  Please note that the labeling might differ.
 1. PSM buttons.  There are 4 digital inputs configured per PSM arm:
- * `SUJClutch`.  White button on side of top horizontal link.
- * `ManipClutch`.  White button on top of vertical link (translation for tool insertion)
- * `Adapter`.  Triggered when the sterile adapter is engaged or removed.  Make sure you have shorted the two first pins as described in [the hardware page](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Hardware)
- * `Tool`.  Triggered when the tool is inserted or removed.   Please note that the tool can NOT be inserted until the sterile adapter's gears are matched with the arm's gears.   DO NOT force the tool in the sterile adapter!
+   * `SUJClutch`.  White button on side of top horizontal link.
+   * `ManipClutch`.  White button on top of vertical link (translation for tool insertion)
+   * `Adapter`.  Triggered when the sterile adapter is engaged or removed.  Make sure you have shorted the two first pins as described in [the hardware page](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Hardware)
+   * `Tool`.  Triggered when the tool is inserted or removed.   Please note that the tool can NOT be inserted until the sterile adapter's gears are matched with the arm's gears.   DO NOT force the tool in the sterile adapter!
 
 ## 2.4. Testing sensors
 
