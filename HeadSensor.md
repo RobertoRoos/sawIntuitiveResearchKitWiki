@@ -7,7 +7,6 @@
 - [3. Wiring](#3-wiring)
 - [4. Setup](#4-setup)
 - [5. Software](#5-software)
-- [6. Debouncing Algorithm](#6-debouncing-algorithm)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -48,72 +47,11 @@ Notes:
 
   ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/head/dvrk-head-sensor-side.jpg)  
 
-* Connection to controller box
+* Connector for controller box, connect to DOF 4 on controller with the foot pedals (to use default config files)
 
-  ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/head/dvrk-head-sensor-controller.jpg)
+  ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/head/dvrk-head-sensor-connector.jpg)
 
 # 5. Software
- * Rerun MATLAB XML config generator to make sure the digital input is renamed "HEAD"
- * Update JSON config file to set the presence sensor
-
-
-# 6. Debouncing Algorithm
-
-```matlab
-% Head Sensor: Debouncing Algorithm
-% Zihan Chen
-% 2015-05-22 
-
-clc; clear; close all;
-
-x0 = 0;
-u = ones(1, 1000);
-x = zeros(1, 1000);
-v = zeros(1, 1000);
-
-% 0 -> 1
-u(1:100) = zeros(1,100);
-u(101:120) = (rand(1,20)>0.8);
-u(121:140) = (rand(1,20)>0.6);
-u(141:160) = (rand(1,20)>0.4);
-u(161:180) = (rand(1,20)>0.2);
-
-% 1 -> 0
-u(201:500) = ones(1,300);
-u(501:520) = (rand(1,20)<0.8);
-u(521:540) = (rand(1,20)<0.6);
-u(541:560) = (rand(1,20)<0.4);
-u(561:580) = (rand(1,20)<0.2);
-u(581:600) = (rand(1,20)<0.0);
-u(601:1000) = zeros(1,400);
-
-w = 0.98;  % weighting factor
-low = 0.2; high = 0.8;
-x(1) = x0;
-for i = 2:length(u)
-  % compute confidence
-  x(i) = w * x(i-1) + (1-w) * u(i);  
-  
-  % hysteresis 
-  if ((v(i-1) == 1) && (x(i) < low)) 
-    v(i) = 0;
-  elseif ((v(i-1) == 0) && (x(i) > high))
-    v(i) = 1;
-  else
-    v(i) = v(i-1);
-  end  
-end
-
-figure;
-subplot(3,1,1); plot(u); 
-title('Sensor Input'); axis([0 1000 -0.1 1.1]);
-
-subplot(3,1,2); plot(x); 
-title('Confidence'); axis([0 1000 -0.1 1.1]);
-
-subplot(3,1,3); plot(v); 
-title('Present'); axis([0 1000 -0.1 1.1]);
-```
-
-**Sample Result:**  
-![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/head/dvrk-head-sensor-algorithm.jpg)
+ * For rev 1.4 and below, rerun MATLAB XML config generator to make sure the digital input is renamed "HEAD"
+ * For rev 1.5 and above, HEAD is already included in the IO foot pedal XML files
+ * Update JSON config file to set the presence sensor or point to the IO foot pedal configuration file (rev 1.5)
