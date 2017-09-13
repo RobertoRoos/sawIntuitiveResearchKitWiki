@@ -51,6 +51,8 @@ Notes:
 
   ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/head/dvrk-head-sensor-connector.jpg)
 
+  ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/head/dvrk-head-sensor-controller.jpg)
+
 # 5. Software
  * For rev 1.4 and below, rerun MATLAB XML config generator to make sure the digital input is renamed "HEAD"
  * For rev 1.5 and above, HEAD is already included in the IO foot pedal XML files
