@@ -22,7 +22,7 @@ The page documents how to make a head sensor for da Vinci Research Kit.  The goa
  * 12-feet S-Video Cable 
     * just get one that is long enough
     * any 3 wire cable would work, we just happened to have an old S-Video cable handy 
- * 1 3-pin straight connector (for the connection to the dVRK controller)
+ * 1 male DB 15 connector (for the connection to the dVRK controller)
  * 1 3-pin right angle connector (for the connection on the sensor side)
 
 # 3. Wiring
