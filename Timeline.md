@@ -1,7 +1,3 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
-
 The dVRK controllers have been built in batches as the community grew over the years.  You can locate all these sites on the [dVRK Google Map](https://mapsengine.google.com/map/embed?mid=z14AfgTT1a9w.ktOc3SMAsVF4).
 
 | Hardware batch | Year | University | PIs |
