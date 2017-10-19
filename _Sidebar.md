@@ -21,17 +21,19 @@ Advanced
 * [Full da Vinci system](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Full-da-Vinci)
 
 Community
-* [Frequently Asked Questions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FAQ)
 * [Groups](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Timeline)
 * [Videos](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Videos)
 * [Publications](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Publications)
-* [cisst](/jhu-cisst/cisst/wiki)
 * [Hamlyn Meetup 2016](/jhu-dvrk/sawIntuitiveResearchKit/wiki/HamlynMeetup2016)
+
+Miscellaneous
+* [Frequently Asked Questions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FAQ)
 * [QLA Heat Sink](/jhu-dvrk/sawIntuitiveResearchKit/wiki/QLA-Heat-Sink)
 * [Head Sensor](/jhu-dvrk/sawIntuitiveResearchKit/wiki/HeadSensor)
-* [MTM Gravity Compensation](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Control-Gravity-Compensation)
+* [cisst](/jhu-cisst/cisst/wiki)
 * [JHU](JHU-DVRK-Hardware-Status)
 
 Deprecated
+* [MTM Gravity Compensation](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Control-Gravity-Compensation)
 * [Build with ROS catkin_make](/jhu-dvrk/dvrk-ros)
 * [Simulation with ROS](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Simulation-(Deprecated))
