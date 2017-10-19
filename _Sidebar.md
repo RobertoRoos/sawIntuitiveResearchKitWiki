@@ -21,7 +21,7 @@ Advanced
 * [Full da Vinci system](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Full-da-Vinci)
 
 Community
-* [Groups](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Timeline)
+* [Groups/Timeline](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Timeline)
 * [Videos](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Videos)
 * [Publications](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Publications)
 * [Hamlyn Meetup 2016](/jhu-dvrk/sawIntuitiveResearchKit/wiki/HamlynMeetup2016)
