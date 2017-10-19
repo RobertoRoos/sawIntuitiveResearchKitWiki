@@ -20,9 +20,11 @@ Advanced
 * [E-STOP wiring](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ESTOP)
 * [Full da Vinci system](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Full-da-Vinci)
 
-Miscellaneous
+Community
 * [Frequently Asked Questions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FAQ)
-* [Timeline, videos, publications](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Timeline)
+* [Groups](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Timeline)
+* [Videos](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Videos)
+* [Publications](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Publications)
 * [cisst](/jhu-cisst/cisst/wiki)
 * [Hamlyn Meetup 2016](/jhu-dvrk/sawIntuitiveResearchKit/wiki/HamlynMeetup2016)
 * [QLA Heat Sink](/jhu-dvrk/sawIntuitiveResearchKit/wiki/QLA-Heat-Sink)
