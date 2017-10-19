@@ -22,7 +22,7 @@ The dVRK controllers have been built in batches as the community grew over the y
 | 1<br>dVRK | 2012 | Worcester Polytechnic Inst. | Greg Fischer |
 | 1<br>dVRK | 2012 | Stanford Univ. | Allison Okamura |
 | 1<br>da Vinci | 2012 | Univ. of British Columbia | Tim Salcudean |
-| 2<br>dVRK | 2013 | U.C. Berkeley | Ken Goldberg & Pieter Abbeel |
+| 2<br>dVRK | 2013 | [U.C. Berkeley](http://bair.berkeley.edu/blog/2017/10/17/lfd-surgical-robots/) | Ken Goldberg & Pieter Abbeel |
 | 2<br>dVRK | 2013 | Carnegie Mellon Univ. | Howie Choset |
 | 2<br>dVRK | 2013 | Vanderbilt Univ. | Nabil Simaan |
 | 2<br>dVRK | 2013 | SUNY Buffalo | Venkat Krovi |
