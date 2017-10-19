@@ -5,7 +5,7 @@
 - [Introduction](#introduction)
 - [Credit / Citation](#credit--citation)
 - [Links](#links)
-  - [Related sites](#related-sites)
+  - [General](#general)
   - [Software](#software)
 - [Updates](#updates)
   - [Firmware](#firmware)
@@ -32,7 +32,7 @@ For posters and videos, please include the [dVRK logo](https://github.com/jhu-dv
 
 # Links
 
-## Related sites
+## General
 
 * [Timeline, videos and publications](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Timeline)
 * Google group https://groups.google.com/d/forum/research-kit-for-davinci and research-kit-for-davinci@googlegroups.com
