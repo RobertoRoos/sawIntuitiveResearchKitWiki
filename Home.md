@@ -1,11 +1,11 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+**Table of Contents**
 
 - [Introduction](#introduction)
 - [Credit / Citation](#credit--citation)
 - [Links](#links)
-  - [General](#general)
+  - [Community](#community)
   - [Software](#software)
 - [Updates](#updates)
   - [Firmware](#firmware)
@@ -32,14 +32,18 @@ For posters and videos, please include the [dVRK logo](https://github.com/jhu-dv
 
 # Links
 
-## General
+## Community
 
-* [Groups](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Timeline), [Videos](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Videos) and [publications](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Publications)
-* Google group https://groups.google.com/d/forum/research-kit-for-davinci and research-kit-for-davinci@googlegroups.com
-* Intuitive Surgical hardware wiki http://research.intusurg.com/dvrk
-* *cisst* libraries http://github.com/jhu-cisst/cisst/wiki
-* Johns Hopkins University Mechatronics http://jhu-cisst.github.io/mechatronics
-* List of all JHU LCSR Software http://jhu-lcsr.github.io/software/
+* [News](/jhu-dvrk/sawIntuitiveResearchKit/wiki/News)
+* [Groups](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Timeline)
+* [Videos](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Videos)
+* [publications](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Publications)
+* Resources:
+  * Google group https://groups.google.com/d/forum/research-kit-for-davinci and research-kit-for-davinci@googlegroups.com
+  * Intuitive Surgical hardware wiki http://research.intusurg.com/dvrk
+  * *cisst* libraries http://github.com/jhu-cisst/cisst/wiki
+  * Johns Hopkins University Mechatronics http://jhu-cisst.github.io/mechatronics
+  * List of all JHU LCSR Software http://jhu-lcsr.github.io/software/
 
 ## Software
 
