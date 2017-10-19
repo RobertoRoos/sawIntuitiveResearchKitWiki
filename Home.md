@@ -34,9 +34,9 @@ For posters and videos, please include the [dVRK logo](https://github.com/jhu-dv
 
 ## Community
 
-* [News](/jhu-dvrk/sawIntuitiveResearchKit/wiki/News)
-* [Groups](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Timeline) and 
-* [Videos](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Videos)
+* [News](/jhu-dvrk/sawIntuitiveResearchKit/wiki/News) from the dVRK community
+* [Groups](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Timeline) and deployment timeline
+* [Videos](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Videos) of the dVRK in action
 * [Publications](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Publications)
 * Resources:
   * Google group https://groups.google.com/d/forum/research-kit-for-davinci and research-kit-for-davinci@googlegroups.com
