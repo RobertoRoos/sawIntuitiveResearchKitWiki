@@ -1,5 +1,12 @@
 [[[dVRK-100px.png]]](/jhu-dvrk/sawIntuitiveResearchKit/wiki)
 
+Community
+* [News](/jhu-dvrk/sawIntuitiveResearchKit/wiki/News)
+* [Groups, timeline, map](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Timeline)
+* [Videos](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Videos)
+* [Publications](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Publications)
+* [Hamlyn Meetup 2016](/jhu-dvrk/sawIntuitiveResearchKit/wiki/HamlynMeetup2016)
+
 Getting Started
 * [First Steps](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FirstSteps)
 * [Setting up environment](/jhu-cisst/mechatronics-software/wiki/Development-Environment)
@@ -19,13 +26,6 @@ Advanced
 * [Projects](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Future-Projects)
 * [E-STOP wiring](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ESTOP)
 * [Full da Vinci system](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Full-da-Vinci)
-
-Community
-* [News](/jhu-dvrk/sawIntuitiveResearchKit/wiki/News)
-* [Groups/Timeline](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Timeline)
-* [Videos](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Videos)
-* [Publications](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Publications)
-* [Hamlyn Meetup 2016](/jhu-dvrk/sawIntuitiveResearchKit/wiki/HamlynMeetup2016)
 
 Miscellaneous
 * [Frequently Asked Questions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FAQ)
