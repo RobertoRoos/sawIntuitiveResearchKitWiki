@@ -21,6 +21,7 @@ Advanced
 * [Full da Vinci system](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Full-da-Vinci)
 
 Community
+* [News](/jhu-dvrk/sawIntuitiveResearchKit/wiki/News)
 * [Groups/Timeline](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Timeline)
 * [Videos](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Videos)
 * [Publications](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Publications)
