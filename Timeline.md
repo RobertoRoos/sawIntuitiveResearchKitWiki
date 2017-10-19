@@ -1,4 +1,4 @@
-The dVRK controllers have been built in batches as the community grew over the years.  You can locate all these sites on the [dVRK Google Map](https://mapsengine.google.com/map/embed?mid=z14AfgTT1a9w.ktOc3SMAsVF4).
+The [dVRK](/jhu-dvrk/sawIntuitiveResearchKit/wiki) controllers have been built in batches as the community grew over the years.  You can locate all these sites on the [dVRK Google Map](https://mapsengine.google.com/map/embed?mid=z14AfgTT1a9w.ktOc3SMAsVF4).
 
 | Hardware batch | Year | University | PIs |
 | -------------- | ---- | ---------- | ------|
