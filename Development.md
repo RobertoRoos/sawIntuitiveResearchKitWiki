@@ -67,22 +67,27 @@ git pull
 Pending issues:
 * #55 and #50, use separate IO XML files for external devices (foot pedal, camera focus) **[Done]**
 * #54, save content of `.cal` file in generated XML file (for debug, retrieval, ...)
-* #35, last issue is to control multiple slaves with one master (not likely in this release)
+* #35, last issue is to control multiple slaves with one master (not likely in 1.5)
 
 Besides pending issues, the following should be addressed before next release:
 * Use Reflexes/RML for trajectory generation **[Done]**
-* Fix cisst warning when optional interfaces/functions are not connected
-* Add optional for ROS bridge topics
-* Make sure console handles SUJ and PSM/ECM clutch
-* Add warning when not compiled in release mode, cisstConfig.h should have build type
-* Test code to re-position MTM in tele-op mode
-* Add event on teleop components when in follow mode
-* Implement motion of ECM in teleopECM
-* Add dvrk-openigt to cisst-saw
-* Remove gravity and clutch mode from MTM, now replaced by effort_mode + gravity on/off + lock orientation on/off
-* Use new state machine in arm classes
+* Fix cisst warning when optional interfaces/functions are not connected **[Done]**
+* Make sure console handles SUJ and PSM/ECM clutch 
+* Add warning when not compiled in release mode, cisstConfig.h should have build type **[Done]**
+* Test code to re-position MTM in tele-op mode **[Done]**
+* Add event on tele components when in follow mode **[Done]**
+* Remove gravity and clutch mode from MTM, now replaced by effort_mode + gravity on/off + lock orientation on/off **[Done]**
+* Use new state machine in arm classes **[Done]**
+* Add cartesian impedance VF **[Done]**
+* Fix jaw motion when switching from direct to goal on PSM
+* Test new pot/encoder tolerance code on all arms + config generator
+* Optimize PSM Snake kinematics, put solver as data member, use vct Row/Column methods to avoid loops and temporary variables
+* Write porting guide for sawRobotIO XML config file update.  Add migration.md in sawRobotIO repo.
 
 Maybe for later releases:
+* Add dvrk-openigt to cisst-saw
+* Add optional for ROS bridge topics
+* Implement motion of ECM in teleopECM
 * Add ROS TF support, specially for SUJ
 * Better handling of redundant joints in MTMs
 * Add alert when SUJ are moved without brakes released
