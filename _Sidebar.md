@@ -9,7 +9,7 @@ Community
 
 Getting Started
 * [First Steps](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FirstSteps)
-* [Setting up environment](/jhu-cisst/mechatronics-software/wiki/Development-Environment)
+* [Setting up environment](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Development-Environment)
 * [Build with ROS](/jhu-dvrk/sawIntuitiveResearchKit/wiki/CatkinBuild)
 * [Build instructions w/o ROS](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Build)
 * [XML configuration](/jhu-dvrk/sawIntuitiveResearchKit/wiki/XMLConfig)
