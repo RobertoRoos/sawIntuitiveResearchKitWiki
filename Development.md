@@ -78,11 +78,13 @@ Besides pending issues, the following should be addressed before next release:
 * Add event on tele components when in follow mode **[Done]**
 * Remove gravity and clutch mode from MTM, now replaced by effort_mode + gravity on/off + lock orientation on/off **[Done]**
 * Use new state machine in arm classes **[Done]**
+* Add control mode/space **[Done]**
 * Add cartesian impedance VF **[Done]**
+* Test new pot/encoder tolerance code on all arms + config generator **[Done]**
+* Optimize PSM Snake kinematics, put solver as data member, use vct Row/Column methods to avoid loops and temporary variables **[Done]**
+* Removed redundant coupling matrices **[Done]**
 * Fix jaw motion when switching from direct to goal on PSM
-* Test new pot/encoder tolerance code on all arms + config generator
-* Optimize PSM Snake kinematics, put solver as data member, use vct Row/Column methods to avoid loops and temporary variables
-* Write porting guide for sawRobotIO XML config file update.  Add migration.md in sawRobotIO repo.
+* Fix effort mode on PSM, both cartesian and joint
 
 Maybe for later releases:
 * Add dvrk-openigt to cisst-saw
