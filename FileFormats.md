@@ -57,8 +57,8 @@ If you are willing to update the files manually, you will need to change:
 * In MTM configuration files, remove all coupling matrices except `ActuatorToJointPosition`
 * In PSM and ECM configuration files, remove the `Coupling` section altogether
 * In all files, you need to add the potentiometers tolerance.  The defaults depend on the arm type, check existing configuration files in `share/jhu-dVRK`.  For example, an MTM should have:
-    ```xml
- <Potentiometers Position="Joints">
+   ```XML
+      <Potentiometers Position="Joints">
          <Tolerance Axis="0" Distance="5.00" Latency="0.01" Unit="deg"/>
          <Tolerance Axis="1" Distance="5.00" Latency="0.01" Unit="deg"/>
          <Tolerance Axis="2" Distance="5.00" Latency="0.01" Unit="deg"/>
@@ -68,7 +68,7 @@ If you are willing to update the files manually, you will need to change:
          <Tolerance Axis="6" Distance="1000.00" Latency="0.01" Unit="deg"/>
          <Tolerance Axis="7" Distance="1000.00" Latency="0.01" Unit="deg"/>
       </Potentiometers>
-```
+   ```
 
 
 # Kinematics (JSON)
@@ -301,7 +301,11 @@ Once you've created and populated your system specific directory, you can send u
 
 ## IO section
 
-This section allows to tweak the IO component, i.e. the component that interfaces with the controllers over FireWire/Ethernet and performs all the read/writes.  One can change the refresh rate (in this example, 1/2 millisecond) and the FireWire port (default is 0).  It is recommended to not include this section and use the default values.
+This section allows to tweak the IO component, i.e. the component that interfaces with the controllers over FireWire/Ethernet and performs all the read/writes.
+
+### Period and port
+
+One can change the refresh rate (in this example, 1/2 millisecond) and the FireWire port (default is 0).  It is recommended to not include this section and use the default values.
 
 In most cases, the PID components run in the same thread as the IO, so changing the IO period also changes the PID period.  See [software architecture](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Software-Architecture).
 
@@ -311,6 +315,8 @@ In most cases, the PID components run in the same thread as the IO, so changing 
     "port": 0 // default is 0
   }
 ```
+
+### Watchdog time-out
 
 In **version 1.5** and higher, you can specify the watchdog time-out using:
 ```js
@@ -322,6 +328,8 @@ In **version 1.5** and higher, you can specify the watchdog time-out using:
 ```
 The watchdog time-out is set on the FPGA-QLA controllers.  If the controllers don't receive any message for a period exceeding the watchdog time-out, they will automatically turn off the power on all motors.   This is used if the physical communication is lost (unplugged wire) or if the application has crashed or is not sending commands fast enough.  The maximum value for the watchdog time-out is 300 ms.  Setting the time-out to zero turns off the watchdog and is not recommended.   This field is optional.
 
+### Foot pedals
+
 Also in **version 1.5**, IOs configuration for the foot pedals can (and should) be separated from the arm configuration.   In **version 1.4** and lower, users had to maintain two sawRobotIO1394 XML configuration files for each MTM, one with the foot pedals IO configuration and one without.  In **version 1.4** the arms section is used to defined the arms only while the new option `"io": { "footpedals": }` allows user to re-use a predefined configuration for the foot pedals IO configuration.  For example, if the foot pedals are connected to an MTMR controller, you will need:
 ```js
   "io": {
@@ -330,6 +338,8 @@ Also in **version 1.5**, IOs configuration for the foot pedals can (and should) 
     ...
   }
 ```
+
+### FireWire protocol
  
 In **version 1.4** and higher, you can also specify the FireWire protocol used to communicate between the PC and the controllers:
 ```js
