@@ -66,11 +66,12 @@ https://github.com/jhu-cisst/mechatronics-firmware/wiki/FPGA-Program
 
 ## Software
 
-* *August 2016*: Version 1.4.0 released, see latest change logs:
+* *November 2017*: Version 1.5.0 released, see latest change logs:
   * [sawIntuitiveResearchKit](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/blob/master/CHANGELOG.md)
   * [dvrk-ros](https://github.com/jhu-dvrk/dvrk-ros/blob/master/CHANGELOG.md)
   * [cisst-ros](https://github.com/jhu-cisst/cisst-ros/blob/master/CHANGELOG.md)
   * [sawRobotIO1394](https://github.com/jhu-saw/sawRobotIO1394/blob/master/CHANGELOG.md)
+* *August 2016*: Version 1.4.0 released
 * *January 2016*: Version 1.3.0 released
 * *October 2015*: Version 1.2.0 released
 * *April 2015*: Version 1.1.0 released
