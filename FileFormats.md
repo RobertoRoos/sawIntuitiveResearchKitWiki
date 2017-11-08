@@ -2,6 +2,10 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
+- [Robot IO (XML)](#robot-io-xml)
+  - [Automatic generation](#automatic-generation)
+  - [Porting between releases](#porting-between-releases)
+    - [Version 3 (dVRK 1.5)](#version-3-dvrk-15)
 - [Kinematics (JSON)](#kinematics-json)
   - [PSMs](#psms)
     - [DH parameters](#dh-parameters)
@@ -21,6 +25,10 @@
     - [Going to zero position when homing](#going-to-zero-position-when-homing-1)
 - [Console (JSON)](#console-json)
   - [IO section](#io-section)
+    - [Period and port](#period-and-port)
+    - [Watchdog time-out](#watchdog-time-out)
+    - [Foot pedals](#foot-pedals)
+    - [FireWire protocol](#firewire-protocol)
   - [Arms](#arms)
   - [Teleoperation components](#teleoperation-components)
 
