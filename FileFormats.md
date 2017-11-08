@@ -94,7 +94,9 @@ Usually a rotation matrix to match ISI orientation and translation offset with r
   }
 ```
 
-You need to provide 4 matrices, two for position coupling and 2 for effort coupling.  The actuator to joint should be the inverse of joint to actuator in both cases.  If you're not using some of the actuators/joints, make sure the product of the coupling matrix by its inverse is still close to identity.
+For revision **1.4** and lower, you need to provide 4 matrices, two for position coupling and 2 for effort coupling.  The actuator to joint should be the inverse of joint to actuator in both cases.  If you're not using some of the actuators/joints, make sure the product of the coupling matrix by its inverse is still close to identity.
+
+For revision **1.5** and higher, you only need to provide the actuator to joint position coupling matrix.
 
 ### Tool engage parameters
 
@@ -270,17 +272,35 @@ In most cases, the PID components run in the same thread as the IO, so changing 
   }
 ```
 
-In **version 1.4** and later, you can also specify the FireWire protocol used to communicate between the PC and the controllers:
+In **version 1.5** and higher, you can specify the watchdog time-out using:
 ```js
   "io": {
-    "firewire-protocol": "sequential-read-broadcast-write"
+    ...
+    "watchdog-timeout": 0.03, // in seconds
+    ...
   }
 ```
+The watchdog time-out is set on the FPGA-QLA controllers.  If the controllers don't receive any message for a period exceeding the watchdog time-out, they will automatically turn off the power on all motors.   This is used if the physical communication is lost (unplugged wire) or if the application has crashed or is not sending commands fast enough.  The maximum value for the watchdog time-out is 300 ms.  Setting the time-out to zero turns off the watchdog and is not recommended.   This field is optional.
 
+Also in **version 1.5**, IOs configuration for the foot pedals can (and should) be separated from the arm configuration.   In **version 1.4** and lower, users had to maintain two sawRobotIO1394 XML configuration files for each MTM, one with the foot pedals IO configuration and one without.  In **version 1.4** the arms section is used to defined the arms only while the new option `"io": { "footpedals": }` allows user to re-use a predefined configuration for the foot pedals IO configuration.  For example, if the foot pedals are connected to an MTMR controller, you will need:
+```js
+  "io": {
+    ...
+    "footpedals": "sawRobotIO1394-MTMR-foot-pedals.xml"
+    ...
+  }
+```
+ 
+In **version 1.4** and higher, you can also specify the FireWire protocol used to communicate between the PC and the controllers:
+```js
+  "io": {
+    "firewire-protocol": "sequential-read-broadcast-write" // recommended for rev up to 1.5
+  }
+```
 The following protocols are supported:
 * `sequential-read-write`: the PC reads data from each board (2 FPGA/QLA per controller), performs its computations (conversions, safety checks, PID, ...) and then writes sequentially to each board (N reads, N writes).  This is the only protocol supported on older firmware (3 and below).
 * `sequential-read-broadcast-write`: the PC reads sequentially but performs a single write for all the boards.  The write message is an array of values sent to the boards, each board access the data it needs by index (N reads, 1 write).  This is the default protocol for the dVRK controllers with firmware 4 and above.
-* `broadcast-read-write`: the PC sends a single query/synchronization to all boards, read values are aggregated in single packet over the bus and there's a single write (1 query, 1 read, 1 write).  This is the fastest protocol available but some FireWire cards seem to have trouble synchronizing the read packets.  You will have to test it on your hardware to see if it supports this protocol or not.
+* **experimental** `broadcast-read-write`: the PC sends a single query/synchronization to all boards, read values are aggregated in single packet over the bus and there's a single write (1 query, 1 read, 1 write).  This is the fastest protocol available but some FireWire cards seem to have trouble synchronizing the read packets.  You will have to test it on your hardware to see if it supports this protocol or not.
 
 ## Arms
 
