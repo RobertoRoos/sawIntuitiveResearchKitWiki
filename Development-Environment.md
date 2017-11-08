@@ -1,3 +1,13 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Install Ubuntu](#install-ubuntu)
+- [Install libraw1394 on Ubuntu](#install-libraw1394-on-ubuntu)
+- [Set permission for 1394 device](#set-permission-for-1394-device)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 Development Environment Setup 
 The current software is written in C/C++ and uses the libraw1394 library under Linux. See http://www.dennedy.org/libraw1394/ for libraw1394 documentation. 
 
