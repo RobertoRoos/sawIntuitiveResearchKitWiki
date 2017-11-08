@@ -31,6 +31,46 @@ https://github.com/jhu-dvrk/sawIntuitiveResearchKit/tree/master/share
 
 **Pay close attention to units as we used different ones in different sections!**
 
+# Robot IO (XML)
+
+These files are used to configure the IOs for each arm identified by its serial number.  They include the board IDs, digital inputs/outputs to use, conversion factors for the encoders, potentiometers, commanded current and current feedback as well as some safety parameters and coupling matrices (for MTMs).
+
+## Automatic generation
+
+The normal procedure to create your sawRobotIO1394 XML configuration files is:
+* Obtain the calibration files from ISI (`.cal` files).  There will be one file per arm identified by its serial number (see [XML configuration](/jhu-dvrk/sawIntuitiveResearchKit/wiki/XMLConfig)).
+* Generate the XML configuration files from the `.cal` files using the provided Matlab application (see [XML configuration](/jhu-dvrk/sawIntuitiveResearchKit/wiki/XMLConfig)).
+* Calibrate each arm.  The different calibration procedures will update the XML configuration file for each arm (see [Calibration](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Calibration))
+
+## Porting between releases
+
+Some new dVRK release might require to port your RobotIO XML configuration files.  The safest approach is to re-generate and re-calibrate the configuration files for each release.  In some cases, it is possible to update the XML configuration files manually.
+
+### Version 3 (dVRK 1.5)
+
+Version 3 for the sawRobotIO1394 XML configuration files was introduced in dVRK release 1.5.  One can manually port from version 2 to 3 but since we introduced a new and improved current calibration procedure in release 1.5, it is strongly recommended to regenerate your XML configuration files and perform the normal calibration procedures.
+
+If you are willing to update the files manually, you will need to change:
+* `Version` should be set to `3`
+* All `DigitalIn` in MTM configuration files should be removed.
+* All unused `DigitalIn` in PSM and ECM configuration files should be removed.
+* In MTM configuration files, remove all coupling matrices except `ActuatorToJointPosition`
+* In PSM and ECM configuration files, remove the `Coupling` section altogether
+* In all files, you need to add the potentiometers tolerance.  The defaults depend on the arm type, check existing configuration files in `share/jhu-dVRK`.  For example, an MTM should have:
+    ```xml
+ <Potentiometers Position="Joints">
+         <Tolerance Axis="0" Distance="5.00" Latency="0.01" Unit="deg"/>
+         <Tolerance Axis="1" Distance="5.00" Latency="0.01" Unit="deg"/>
+         <Tolerance Axis="2" Distance="5.00" Latency="0.01" Unit="deg"/>
+         <Tolerance Axis="3" Distance="5.00" Latency="0.01" Unit="deg"/>
+         <Tolerance Axis="4" Distance="5.00" Latency="0.01" Unit="deg"/>
+         <Tolerance Axis="5" Distance="5.00" Latency="0.01" Unit="deg"/>
+         <Tolerance Axis="6" Distance="1000.00" Latency="0.01" Unit="deg"/>
+         <Tolerance Axis="7" Distance="1000.00" Latency="0.01" Unit="deg"/>
+      </Potentiometers>
+```
+
+
 # Kinematics (JSON)
 
 ## PSMs
