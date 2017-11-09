@@ -37,7 +37,8 @@ The previous example assumes you are building the code with [ROS/catkin python t
  * PSM3: slave 3 (for users with full da Vinci)
  * ECM: endoscope arm (for users with full da Vinci)
 
- **Important note:** the foot pedal can be connected to any controller.  If you are generating the configuration file for the controller attached to the foot pedal, click the "Default Footpedal" button.
+ **For version 1.4 and lower:** the foot pedal can be connected to any controller.  If you are generating the configuration file for the controller attached to the foot pedals, click the "Default Footpedal" button.
+ **For version 1.5 and above:** the foot pedals configuration is now in a separate file provided in the `share` folder, there's no need to anything for the foot pedals when generating an arm Robot IO XML configuration file.
 
 1. Generate: click the generate button to generate XML configuration file. 
 
@@ -63,7 +64,7 @@ You can also set advanced parameters or overwrite the default settings using:
 
    * If your configuration is unusual, you can overwrite the default IDs and specify the board IDs manually using the drop down menu to choose the board ID.  Make sure these two board IDs are different, otherwise the configuration file will not be generated. Also, if you plan to daisy chain multiple controllers, make sure you don't have two boards with the same ID on a single firewire port. 
 
-1. Choose digital input settings.  For all PSMs, the defaults shouldn't be modified unless you are using some digital inputs for a specific application.  For the MTMs, you need to select 'Default Footpedal' for the controller box you plan to connect the foot pedal to.   If you plan to daisy chain multiple controllers, make sure the digital input names are unique.  As a direct consequence, make sure only one of the MTMs is configured with the digital inputs for the foot pedal.
+1. Choose digital input settings.  For all PSMs, the defaults shouldn't be modified unless you are using some digital inputs for a specific application.  **Rev 1.4 and below:** For the MTMs, you need to select 'Default Footpedal' for the controller box you plan to connect the foot pedal to.   If you plan to daisy chain multiple controllers, make sure the digital input names are unique.  As a direct consequence, make sure only one of the MTMs is configured with the digital inputs for the foot pedal.
 
 1. Choose drive direction.  You can hit the 'Default' button to restore the default values.  This multipliers (1 or -1) allow to change the direction of each axis.  This flag is used to make sure that the software uses the axis directions as defined in the Intuitive Research Kit User Manual.  It is important check the direction of each axis for each arm to make sure it corresponds to the documentation using the `sawIntuitiveResearchKitQtPID` or any other applications that allows you to monitor the potentiometers and encoder directions as well as torque directions.  If you find that the default directions don't match your hardware, please let us know. 
 
