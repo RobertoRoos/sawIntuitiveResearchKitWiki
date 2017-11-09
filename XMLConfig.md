@@ -37,8 +37,9 @@ The previous example assumes you are building the code with [ROS/catkin python t
  * PSM3: slave 3 (for users with full da Vinci)
  * ECM: endoscope arm (for users with full da Vinci)
 
- **For version 1.4 and lower:** the foot pedal can be connected to any controller.  If you are generating the configuration file for the controller attached to the foot pedals, click the "Default Footpedal" button.
  **For version 1.5 and above:** the foot pedals configuration is now in a separate file provided in the `share` folder, there's no need to anything for the foot pedals when generating an arm Robot IO XML configuration file.
+
+ **For version 1.4 and lower:** the foot pedal can be connected to any controller.  If you are generating the configuration file for the controller attached to the foot pedals, click the "Default Footpedal" button.
 
 1. Generate: click the generate button to generate XML configuration file. 
 
