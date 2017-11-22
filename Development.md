@@ -62,31 +62,14 @@ git pull
 
 ### `devel`
 
-## Todo for 1.5
+## Todo for 1.6
 
 Pending issues:
-* #55 and #50, use separate IO XML files for external devices (foot pedal, camera focus) **[Done]**
 * #54, save content of `.cal` file in generated XML file (for debug, retrieval, ...)
-* #35, last issue is to control multiple slaves with one master (not likely in 1.5)
-
-Besides pending issues, the following should be addressed before next release:
-* Use Reflexes/RML for trajectory generation **[Done]**
-* Fix cisst warning when optional interfaces/functions are not connected **[Done]**
+* #35, last issue is to control multiple slaves with one master
 * Make sure console handles SUJ and PSM/ECM clutch 
-* Add warning when not compiled in release mode, cisstConfig.h should have build type **[Done]**
-* Test code to re-position MTM in tele-op mode **[Done]**
-* Add event on tele components when in follow mode **[Done]**
-* Remove gravity and clutch mode from MTM, now replaced by effort_mode + gravity on/off + lock orientation on/off **[Done]**
-* Use new state machine in arm classes **[Done]**
-* Add control mode/space **[Done]**
-* Add cartesian impedance VF **[Done]**
-* Test new pot/encoder tolerance code on all arms + config generator **[Done]**
-* Optimize PSM Snake kinematics, put solver as data member, use vct Row/Column methods to avoid loops and temporary variables **[Done]**
-* Removed redundant coupling matrices **[Done]**
 * Fix jaw motion when switching from direct to goal on PSM
 * Fix effort mode on PSM, both cartesian and joint
-
-Maybe for later releases:
 * Add dvrk-openigt to cisst-saw
 * Add optional for ROS bridge topics
 * Implement motion of ECM in teleopECM
