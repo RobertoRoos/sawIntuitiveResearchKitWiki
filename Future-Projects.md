@@ -45,18 +45,14 @@ Figure out how to use potentiometer on master roll (last active joint).  See [#2
 **[New feature, core C++]**
 
 ## PID component cleanup
-The current PID implementation needs to be cleaned up.  All joint commands should use iterators instead of for loops and cisstVector methods on vector of joints.<br>
-Fix velocity when in simulated mode.<br>
+~~The current PID implementation needs to be cleaned up.  All joint commands should use iterators instead of for loops and cisstVector methods on vector of joints.<br>
+Fix velocity when in simulated mode.~~<br>
 Fix jumps/clamp when outside joint limit: https://github.com/jhu-dvrk/sawIntuitiveResearchKit/issues/63.<br>
 Maybe moving to JSON format could help but this might be an unnecessary incompatibility.<br>
 **[Improvement, core C++]**
 
 ## Velocity control
 Add special mode to PID to servo torque based on current velocity or any better approach.  In arm class, add code to convert cartesian velocities (likely in body frame) to joint velocities and use PID interface to control joint velocities.  Add ROS topics for this new feature.<br>
-**[New feature, core C++]**
-
-## Torque limits specific to tool
-Add torque limits per joint in PID configurable by tool.  The JSON file for the tool is loaded by the PSM class so we need to add the proper interfaces to the PID component.<br>
 **[New feature, core C++]**
 
 ## Gravity compensation
@@ -81,7 +77,7 @@ An empty component was introduced in 1.4 but the actual teleoperation is not imp
 **[New feature, core C++]**
 
 ## Trajectory generation
-Current implementation uses robLSPB which always assumes an initial velocity 0.  We can't interrupt existing trajectory so it only works with blocking commands (wait for goal reached event).  Using Reflexxes RMLII we could have an implementation with trajectories picking up where the last one was.   There's some work done in cisstRobot and the dVRK repository (in branches feature-RML but it's incomplete, untested and the build is tricky (should use CMake external project to be portable).  As a side note, we should add support for trajectories in cartesian space, maybe interpolation position/Euler angles.<br>
+~~Current implementation uses robLSPB which always assumes an initial velocity 0.  We can't interrupt existing trajectory so it only works with blocking commands (wait for goal reached event).  Using Reflexxes RMLII we could have an implementation with trajectories picking up where the last one was.   There's some work done in cisstRobot and the dVRK repository (in branches feature-RML but it's incomplete, untested and the build is tricky (should use CMake external project to be portable).~~  As a side note, we should add support for trajectories in cartesian space, maybe interpolation position/Euler angles.<br>
 **[Improvement, core C++]**
 
 ## Support for ROS MoveIt!
@@ -148,8 +144,8 @@ Some JHU users have experience with VRep.  They've been happy with user support,
  
 ## Documented code examples
 * Class derived from an existing arm
-* Class derived from a teleoperation component (PSM or ECM)
-* Python and Matlab examples, maybe more than get/set position?
+* ~~Class derived from a teleoperation component (PSM or ECM)~~
+* ~~Python and Matlab examples, maybe more than get/set position?~~
 
 ## Repository of CAD files
 
