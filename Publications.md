@@ -36,6 +36,8 @@
 
 * Real-Time 3D Tracking of Articulated Tools for Robotic Surgery<br>Menglong Ye, Lin Zhang, Stamatia Giannarou, Guang-Zhong Yang<br>MICCAI 2016
 
+* Motor channelling for safe and effective dynamic constraints in Minimally Invasive Surgery<br>Maria Grammatikopoulou, Konrad Leibrandt, Guang-Zhong Yang<br>IROS 2016
+
 * Autonomous Ultrasound-Guided Tissue Dissection<br>Philip Pratt, Archie Hughes-Hallett, Lin Zhang, Guang-Zhong Yang<br>MICCAI 2015
 
 * Articulating minimally invasive ultrasonic tool for robotics-assisted surgery<br>I. Khalaji, Michael David Naish, Rani Patel<br>ICRA 2015, June 2015
