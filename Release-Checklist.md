@@ -23,7 +23,7 @@
 |Home PSM, coupling<br>adapter, no tool    |Y|
 |Home PSM, coupling<br>adapter, tool       |Y|
 |5mm tool<br>Teleop, Python, Matlab        |Y|
-|Teleop PSM over TCP<br>console-MTMR-PSM1SocketClient-Teleop.json<br>console-PSM1SocketServer.json|Y|
+|Teleop PSM over UDP socker<br>`console-MTMR-PSM1SocketClient-Teleop.json`<br>`console-PSM1SocketServer.json`|Y|
 |Teleop PSM simulated<br>console-MTMR-PSM1_KIN_SIMULATED-Teleop.json|Y|
-|ROS Python<br>rosrun dvrk_robot dvrk_mtm_test.py X<br>rosrun dvrk_robot dvrk_arm_test.py X| <br>R<br>R|
+|ROS Python<br>`rosrun dvrk_robot dvrk_mtm_test.py X`<br>`rosrun dvrk_robot dvrk_arm_test.py X`| <br>R<br>R|
 |ROS Matlab `dvrk_matlab/test`<br>test_arm_api('X')<br>test_arm_move('X') | <br>L<br>L |
