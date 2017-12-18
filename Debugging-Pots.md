@@ -1,15 +1,3 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
-
-- [Introduction](#introduction)
-- [Connections](#connections)
-- [Visual checks](#visual-checks)
-- [Configuration files](#configuration-files)
-- [Using ROS bags to collect data](#using-ros-bags-to-collect-data)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
 # Introduction
 
 The dVRK uses the analog potentiometers on the robotic arms to:
@@ -28,6 +16,18 @@ If you're running into error messages regarding potentiometer and encoder incons
   * The two Micro DB68 SCSI cables between the dMIB and the QLA boards (see [FAQ](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FAQ) for acronym definitions).
 
 # Visual checks
+
+It is possible that one of the encoders or the potentiometers is defective.  The easiest way to check this is to use the graphical user interface and control the robot using the IO widget.
+
+![Robot IO GUI](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-gui-io.png)
+
+To visually check the pots and encoders:
+  * Do not hit **Power On** nor **Home** buttons.   If you have, just hit **Power Off**
+  * Select the **IO** tab corresponding to your arm
+  * In the **IO** tab, check **Direct control** and approve
+  * If you just started the console application and the arm hasn't been moved, both **Joint position** and **Actuator position** rows should be close to zero 
+  * Then click **Bias from potentiometers**.  This step will pre-load the encoders based on the potentiometers 
+  * The box **Use pot/encoder check** should be unchecked.
 
 # Configuration files
 
