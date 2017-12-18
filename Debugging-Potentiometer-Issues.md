@@ -16,6 +16,8 @@ If you're running into error messages regarding potentiometer and encoder incons
   * The large Cannon ITT connector at the back of the dVRK controller (see [Cannon ITT](https://www.ittcannon.com/products/dl-zif-connector/).  Make sure the connector is clean and the screw on the back is tighten (a quarter turn).
   * The two Micro DB68 SCSI cables between the dMIB and the QLA boards (see [FAQ](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FAQ) for acronym definitions).
 
+![Controller](/jhu-dvrk/sawIntuitiveResearchKit/wiki/controller-layout.jpg)
+
 # Visual checks
 
 It is possible that one of the encoders or the potentiometers is defective.  The easiest way to check this is to use the graphical user interface and control the robot using the IO widget.
