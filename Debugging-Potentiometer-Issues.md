@@ -78,13 +78,13 @@ The first parameter to increase should be the **Latency**.  The value is given i
 
 The goal of this section is to show how to collect both the encoder and potentiometer values for a given arm and plot the results.
 
-To collect the data, you will need to start the console with an extra option to turn on publishing of some low level data.   For a PSM, you would have to start the console using something like:
+To collect the data, you will need to start the console with an extra option to turn on publishing of some low level data.   For a PSM, you would have to start the console using the extra `-i` option:
 ```sh
    rosrun dvrk_robot dvrk_console_json -j jhu-daVinci/console-PSM3.json -i ros-io-PSM3.json
 ```
 Notes:
-  * Use your own console.json file (see [console file format](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FileFormats#console-json)
-  * The configuration files `ros-io-XYZ.json` are distributed along the dVRK code in the `share` folder (you can navigate to the configuration folder using `roscd dvrk_config`). 
+  * Use your own console.json file (see [console file format](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FileFormats#console-json))
+  * The configuration files `ros-io-XYZ.json` are distributed along the dVRK code in the `share` folder (you can navigate to the configuration folder using `roscd dvrk_config`)
 
 Once the console is started with the ROS IO option, you should see the following two new topics (using `rostopic list`):
 ```sh
@@ -92,7 +92,13 @@ Once the console is started with the ROS IO option, you should see the following
     /dvrk/PSM3/io/analog_input_pos_si
 ```
 
-For a PSM or ECM, since there's no actuator to joint coupling (when the tool is removed), we need to collect  both of these using `rosbag`:
+Perform the steps described above, don't power the arm, select **Direct control** and **Bias from potentiometers**.  For a PSM or ECM, since there's no actuator to joint coupling (when the tool is removed), we need to collect  both of these using `rosbag`:
 ```sh
-   
+~$ rosbag record /dvrk/PSM3/io/actuator_position /dvrk/PSM3/io/analog_input_pos_si
+[ WARN] [1513623303.346178759]: --max-splits is ignored without --split
+[ INFO] [1513623303.350457223]: Subscribing to /dvrk/PSM3/io/actuator_position
+[ INFO] [1513623303.353056929]: Subscribing to /dvrk/PSM3/io/analog_input_pos_si
+[ INFO] [1513623303.355828284]: Recording to 2017-12-18-13-55-03.bag. 
 ```
+
+While `rosbag` is recording, manually move the problematic joint back and forth as fast as you can without damaging anything.   Once this is done, stop `rosbag` with `ctrl-c`.
