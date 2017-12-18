@@ -7,7 +7,8 @@ The dVRK uses the analog potentiometers on the robotic arms to:
 For the safety checks, we use two different parameters per potentiometer.  Consistency is based on:
   * Distance, i.e. error tolerated in position between both (`|pots - encoders|`) readings
   * Latency, i.e. amount of time during which the distance is continuously above a given threshold
-The issue is to find the "best" distance and latency for each system.
+
+The challenge is to find the "best" distance and latency for each system.
 
 # Connections
 
