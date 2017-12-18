@@ -102,3 +102,18 @@ Perform the steps described above, don't power the arm, in **GUI**, **IO** tab, 
 ```
 
 While `rosbag` is recording, manually move the problematic joint back and forth as fast as you can without damaging anything.   Once this is done, stop `rosbag` with `ctrl-c`.
+
+You can then visualize your data using your preferred plotting tool.   For Plot Juggler (e.g. `sudo apt install ros-kinetic-plotjuggler`), use:
+```sh
+    rosrun plotjuggler PlotJuggler
+```
+In PlotJuggler, import your ros bag, select all signals and then drag-and-drop the actuator and pot for the joint you want to look at:
+
+![PlotJuggler](/jhu-dvrk/sawIntuitiveResearchKit/wiki/encoder-pots-plot.png)
+
+From there you can see if the issue is:
+* Garbage values, something is likely broken
+* Vertical offset or "stretch", you should probably re-calibrate your potentiometers
+* Horizontal offset.  The pot is likely too slow and you can fix this by increasing the "Latency" in the XML configuration file
+
+
