@@ -21,7 +21,7 @@ Advanced
 * [Software architecture](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Software-Architecture)
 * [File formats](FileFormats)
 * [APIs](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Components-APIs)
-* [Potentiometer issues](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Debugging-Pots)
+* [Potentiometer issues](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Debugging-Potentiometer-Issues)
 * [Development branches](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Development)
 * [Release Checklist](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Release-Checklist)
 * [Projects](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Future-Projects)
