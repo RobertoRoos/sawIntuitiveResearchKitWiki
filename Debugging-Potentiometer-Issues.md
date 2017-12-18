@@ -75,3 +75,24 @@ We found that some potentiometers can be "somewhat" working so it is possible to
 The first parameter to increase should be the **Latency**.  The value is given in seconds.  Try to increase it progressively by doubling it and restart the console (no need to power on/off the controllers).  If the system is still not stable, double the **Latency** and try again.  If the system is still not stable with a **Latency** of 1 seconds (`1.0`), try the same approach with the **Distance** parameter. 
 
 # Using ROS bags to collect data
+
+The goal of this section is to show how to collect both the encoder and potentiometer values for a given arm and plot the results.
+
+To collect the data, you will need to start the console with an extra option to turn on publishing of some low level data.   For a PSM, you would have to start the console using something like:
+```sh
+   rosrun dvrk_robot dvrk_console_json -j jhu-daVinci/console-PSM3.json -i ros-io-PSM3.json
+```
+Notes:
+  * Use your own console.json file (see [console file format](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FileFormats#console-json)
+  * The configuration files `ros-io-XYZ.json` are distributed along the dVRK code in the `share` folder (you can navigate to the configuration folder using `roscd dvrk_config`). 
+
+Once the console is started with the ROS IO option, you should see the following two new topics (using `rostopic list`):
+```sh
+    /dvrk/PSM3/io/actuator_position
+    /dvrk/PSM3/io/analog_input_pos_si
+```
+
+For a PSM or ECM, since there's no actuator to joint coupling (when the tool is removed), we need to collect  both of these using `rosbag`:
+```sh
+   
+```
