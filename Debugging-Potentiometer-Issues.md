@@ -92,7 +92,7 @@ Once the console is started with the ROS IO option, you should see the following
     /dvrk/PSM3/io/analog_input_pos_si
 ```
 
-Perform the steps described above, don't power the arm, select **Direct control** and **Bias from potentiometers**.  For a PSM or ECM, since there's no actuator to joint coupling (when the tool is removed), we need to collect  both of these using `rosbag`:
+Perform the steps described above, don't power the arm, in **GUI**, **IO** tab, select **Direct control** and **Bias from potentiometers**.  For a PSM or ECM, since there's no actuator to joint coupling (when the tool is removed), we need to collect  both of these using `rosbag`:
 ```sh
 ~$ rosbag record /dvrk/PSM3/io/actuator_position /dvrk/PSM3/io/analog_input_pos_si
 [ WARN] [1513623303.346178759]: --max-splits is ignored without --split
