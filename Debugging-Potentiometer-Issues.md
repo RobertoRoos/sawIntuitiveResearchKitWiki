@@ -22,6 +22,10 @@ For the safety checks, we use two different parameters per potentiometer.  Consi
 
 The challenge is to find the "best" distance and latency for each system.
 
+**Important notes regarding the MTMs**
+  * The last motorized joint (7), i.e. the roll has a potentiometer but the dVRK doesn't use it, neither for homing nor for safety checks.   To avoid errors we simply set a very high **Distance** threshold.  Please ignore the reported analog position for this axis.
+  * The very last "joint" (8), i.e. the gripper doesn't have an encoder.  The dVRK only uses the analog input of the 8th axis (no encoder, no motor).  The analog input is the value from the Hall effect sensor in the MTM gripper.   As for the 7th axis, we set a very high **Distance** threshold to avoid errors.  Please ignore the reported encoder joint and actuator positions as well as velocities.
+
 # Connections
 
 If you're running into error messages regarding potentiometer and encoder inconsistencies, the first thing to check is the physical connections.  Potentiometers feedback is an analog signal and is sensitive to bad connections/grounding.  Check:
@@ -115,5 +119,4 @@ From there you can see if the issue is:
 * Garbage values, something is likely broken
 * Vertical offset or "stretch", you should probably re-calibrate your potentiometers
 * Horizontal offset.  The pot is likely too slow and you can fix this by increasing the "Latency" in the XML configuration file
-
 
