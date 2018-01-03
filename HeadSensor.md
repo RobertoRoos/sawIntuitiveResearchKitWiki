@@ -10,11 +10,13 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# 1. General Info
-The page documents how to make a head sensor for da Vinci Research Kit.  The goal is to detect the presence of the operator at the master console using a proximity sensor mounted on the stereo display.
+# Introduction
 
-# 2. Hardware
+The real da Vinci system uses a head sensor to detect if the operator is present.  Without the operator, the system will not enable the tele-operation.   For the dVRK, we have used a foot pedal as a dead man switch to detect if the operator is present (usually the "COAG" foot pedal).   This is a reasonable solution for brief experiments but it's not very convenient.   In this page we describe how to either create a "dVRK" head sensor from cheap parts or hack the existing da Vinci head sensor.  The later option requires a full da Vinci system and it's important to note that it's not trivial to switch back and forth between the ISI controllers and dVRK controllers since we're disconnecting the ISI controller underneath the head cover.
 
+# dVRK Head Sensor 
+
+## Hardware
  * 1 Digital Distance Sensor 10cm
    * http://www.pololu.com/product/1134
  * 20 Molex pin connectors (Digikey Part No. WM2510-ND) 
@@ -25,7 +27,7 @@ The page documents how to make a head sensor for da Vinci Research Kit.  The goa
  * 1 male DB 15 connector (for the connection to the dVRK controller)
  * 1 3-pin right angle connector (for the connection on the sensor side)
 
-# 3. Wiring
+## Wiring
 
 | Sensor | Cable | Controller (J18)     |
 |--------|-------|----------------------|
@@ -37,7 +39,7 @@ Notes:
 * J18 is a 15-pin connector labelled DOF 4 on the back of the dVRK controller
 * Please connect head sensor and foot pedal on same controller box
 
-# 4. Setup
+## Physical setup
 
 * Setup option 1: base
 
@@ -53,7 +55,15 @@ Notes:
 
   ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/head/dvrk-head-sensor-controller.jpg)
 
-# 5. Software
+## Software
  * For rev 1.4 and below, rerun MATLAB XML config generator to make sure the digital input is renamed "HEAD"
  * For rev 1.5 and above, HEAD is already included in the IO foot pedal XML files
  * Update JSON config file to set the presence sensor or point to the IO foot pedal configuration file (rev 1.5)
+
+# daVinci Head Sensor
+
+## Wiring
+
+The head sensor is located under the master console's cover.   It has four strobing LEDs on one side and four light sensors on the other side.
+
+  ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/head/daVinci-head-sensor.jpg)
