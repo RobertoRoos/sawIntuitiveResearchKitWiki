@@ -66,7 +66,7 @@ Notes:
 
 ## Wiring
 
-The head sensor is located under the master console's cover.   It has four strobing LEDs on one side and four light sensors on the other side.
+The head sensor is located under the master console's cover.   It has four strobing LEDs on one side and four light sensors on the other side.  One the following picture, ignore the dVRK head sensor in the middle.  The actual daVinci head sensor is mounted on the head's sides, behind the 4 round holes forming a diamond shape on each side.
 
   ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/head/daVinci-head-sensor.jpg)
 
