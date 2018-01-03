@@ -2,11 +2,14 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
 
-- [1. General Info](#1-general-info)
-- [2. Hardware](#2-hardware)
-- [3. Wiring](#3-wiring)
-- [4. Setup](#4-setup)
-- [5. Software](#5-software)
+- [Introduction](#introduction)
+- [dVRK Head Sensor](#dvrk-head-sensor)
+  - [Hardware](#hardware)
+  - [Wiring](#wiring)
+  - [Physical setup](#physical-setup)
+  - [Software](#software)
+- [daVinci Head Sensor](#davinci-head-sensor)
+  - [Wiring](#wiring-1)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
