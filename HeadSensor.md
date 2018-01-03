@@ -55,7 +55,6 @@ Notes:
 * Connector for controller box, connect to DOF 4 on controller with the foot pedals (to use default config files)
 
   ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/head/dvrk-head-sensor-connector.jpg)
-
   ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/head/dvrk-head-sensor-controller.jpg)
 
 ## Software
@@ -70,3 +69,11 @@ Notes:
 The head sensor is located under the master console's cover.   It has four strobing LEDs on one side and four light sensors on the other side.
 
   ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/head/daVinci-head-sensor.jpg)
+
+Under the cover, there's a single connector going to the controller and a cable going between the LEDs on one side and the sensors on the other side.
+
+  ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/head/daVinci-head-sensor-cable.jpg)
+
+The sensors are hidden behind a metal plate.
+
+  ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/head/daVinci-head-sensor-sensors.jpg)
