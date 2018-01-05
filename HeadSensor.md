@@ -77,3 +77,14 @@ Under the cover, there's a single connector going to the controller and a cable 
 The sensors are hidden behind a metal plate.
 
   ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/head/daVinci-head-sensor-sensors.jpg)
+
+## Testing with `qladisp`
+
+The D-SUB connector can be plugged on one of the "DOF" connectors on the back of the dVRK controller.   For the following section, we assume the head sensor is connected to "DOF 0" on a PSM3 controller.   This means that it will be interfaced using the IOs for a the first axis on the first board on the PSM3 controller, i.e. board ID is 10.   To test the head sensor, start `qladisp 10`.
+
+Then, one can turn on/off the LEDs using the key '0' to toggle.   The value of `DigOut` in `qladisp` should toggle between `0xF` (off) and `0xE` (on).   Then turned on, motion between the LEDs and the sensors should be displayed in the `Home`, `PosLim` and `NegLim` fields.  When the light is blocked, the values should go up by one (e.g. `0xC` to `0xD` or `0xE` to 0xF`):
+  * Sensor 1: `Home`, Bit Id 0
+  * Sensor 2: `PosLim`, Bit Id 4
+  * Sensor 3: `NegLim`, Bit Id 8
+
+  * 
