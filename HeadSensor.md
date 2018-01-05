@@ -10,6 +10,7 @@
   - [Software](#software)
 - [daVinci Head Sensor](#davinci-head-sensor)
   - [Wiring](#wiring-1)
+  - [Testing with `qladisp`](#testing-with-qladisp)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
