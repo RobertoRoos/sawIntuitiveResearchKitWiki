@@ -29,6 +29,7 @@ Some ISI acronyms:
  * **ECM**: Endoscopic Camera Manipulator, 1 on real da Vinci system.
  * **SUJ**: Setup Joints, 3 to 4 on a  da Vinci system.  Not included in Research Kit yet.
  * **HRSV**: High Resolution Stereo Viewer.  At least 3 versions exist, CRT 640x480 (Standard and S), CRT 1024x720 (S HD), LCD (Si/Xi).  The Research Kit comes with the CRT 640x480.
+ * **CCU**: Camera Control Unit.   The two boxes in the vision cart that are connected to the endoscope cameras.  These usually have either an NTSC or SDI output for frame grabbers.
  * Tray, foot pedal tray: foot pedals including clutch, camera, camera focus, bi and mono (or coag).  One is included in Research Kit.
 
 Please read the Research Kit user manual: http://research.intusurg.com/dvrkwiki/index.php?title=DVRK:Docs:Main (ISI private wiki)
