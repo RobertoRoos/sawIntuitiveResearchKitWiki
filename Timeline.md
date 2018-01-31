@@ -26,4 +26,8 @@ The [dVRK](/jhu-dvrk/sawIntuitiveResearchKit/wiki) controllers have been built i
 | 5<br>da Vinci | 2016 | U.C. San Diego | Michael Yip |
 | 5<br>dVRK | 2016 | Ben Gurion Univ. | Ilana Nisky |
 | 5<br>da Vinci | 2016 | Univ. of Naples | Bruno Siciliano |
-| 5<br>dVRK | 2016 | Chinese Univ. of Hong Kong | Yunhui Liu & Philip Chiu |
+| 5<br>dVRK | 2016 | Cleveland Clinic | Robb Colbrunn |
+| 6<br>dVRK | 2017 | University of Texas, Dallas | Ann Majewicz Fey |
+| 6<br>dVRK | 2017 | Chinese Univ. of Hong Kong | Samuel Au |
+| 6<br>dVRK | 2017 | University of Leeds | Pietro Valdastri |
+| 6<br>dVRK | 2017 | Hochschule Reutlingen | Lars Schmidt |
