@@ -221,6 +221,8 @@ The problem is that these values are partially based on the electronics used dur
 
 ## 4.2. Requirements
 
+**For the ECM**, make sure the brakes are properly calibrated.   This requires to calibrate both the controller current (see above) and the power to release the brakes, see [Full da Vinci system](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Full-da-Vinci).
+
 As for the other calibration steps, you need to have all the configuration files generated, the C++ code compiled and the current calibration performed.  Furthermore, the current implementation requires the ROS bridges and Python.  Make sure you compiled your dVRK software stack using `catkin build`.  See [build with ROS](/jhu-dvrk/sawIntuitiveResearchKit/wiki/CatkinBuild).
 
 For the offsets, we need a physical mechanism to maintain the arm in zero position (or any known position).  We currently have a fairly easy solution for the last 4 joints of the PSM.  The four metal bars/gears are in zero positions when aligned.  We tried different methods and got similar results so you should use whatever is the most convenient for you:
