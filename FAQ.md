@@ -16,7 +16,7 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## What does ISI, Classic, S, Si, Xi, PSM, MTM, ECM, SUJ, HSRV, ... mean?
+## What does ISI, Classic, S, Si, Xi, PSM, MTM, ECM, SUJ, HRSV, ... mean?
 
 Some ISI acronyms:
  * **ISI**: Intuitive Surgical Inc.
