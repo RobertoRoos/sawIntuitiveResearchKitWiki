@@ -3,14 +3,14 @@ The [dVRK](/jhu-dvrk/sawIntuitiveResearchKit/wiki) controllers have been built i
 | Hardware batch | Year | University | PIs |
 | -------------- | ---- | ---------- | ------|
 | 0, 1, 3<br>dVRK, da Vinci | 2004-2014 | [Johns Hopkins Univ.](https://lcsr.jhu.edu) | Peter Kazanzides  & Russell Taylor |
-| 1<br>dVRK | 2012 | Worcester Polytechnic Inst. | Greg Fischer |
+| 1<br>dVRK, da Vinci | 2012 | Worcester Polytechnic Inst. | Greg Fischer |
 | 1<br>dVRK | 2012 | Stanford Univ. | Allison Okamura |
 | 1<br>da Vinci | 2012 | Univ. of British Columbia | Tim Salcudean |
 | 2<br>dVRK | 2013 | [U.C. Berkeley](http://bair.berkeley.edu/blog/2017/10/17/lfd-surgical-robots/) | Ken Goldberg & Pieter Abbeel |
 | 2<br>dVRK | 2013 | Carnegie Mellon Univ. | Howie Choset |
 | 2<br>dVRK | 2013 | Vanderbilt Univ. | Nabil Simaan |
 | 2<br>dVRK | 2013 | SUNY Buffalo | Venkat Krovi |
-| 2<br>da Vinci | 2013 | Univ. W. Ontario/CSTAR | Rani Patel |
+| 2<br>da Vinci | 2013 | Univ. W. Ontario/CSTAR | Rajni Patel |
 | 2<br>dVRK | 2013 | Hospital for Sick Kids, Toronto | Jim Drake, M.D. |
 | 2<br>da Vinci | 2013 | Intuitive Surgical Research | Simon DiMaio |
 | 3, 5<br>da Vinci | 2014, 2016 | Imperial College | Guang-Zhong Yang & Philip Pratt |
@@ -29,5 +29,5 @@ The [dVRK](/jhu-dvrk/sawIntuitiveResearchKit/wiki) controllers have been built i
 | 5<br>dVRK | 2016 | Cleveland Clinic | Robb Colbrunn |
 | 6<br>dVRK | 2017 | University of Texas, Dallas | Ann Majewicz Fey |
 | 6<br>dVRK | 2017 | Chinese Univ. of Hong Kong | Samuel Au |
-| 6<br>dVRK | 2017 | University of Leeds | Pietro Valdastri |
-| 6<br>dVRK | 2017 | Hochschule Reutlingen | Lars Schmidt |
+| 6<br>da Vinci | 2017 | University of Leeds | Pietro Valdastri |
+| 6<br>da Vinci | 2017 | Hochschule Reutlingen | Lars Schmidt |
