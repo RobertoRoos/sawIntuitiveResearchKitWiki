@@ -15,7 +15,7 @@ The [dVRK](/jhu-dvrk/sawIntuitiveResearchKit/wiki) controllers have been built i
 | 2<br>da Vinci | 2013 | Intuitive Surgical Research | Simon DiMaio |
 | 3, 5<br>da Vinci | 2014, 2016 | Imperial College | Guang-Zhong Yang & Philip Pratt |
 | 3<br>da Vinci | 2014 | Univ. College, London | Dan Stoyanov |
-| 3<br>dVRK | 2014 | Scuola Superiore Sant'Anna | Arianna Mendicassi |
+| 3<br>dVRK | 2014 | Scuola Superiore Sant'Anna | Arianna Menciassi |
 | 3<br>dVRK | 2014 | Seoul National Univ. | Sungwan Kim |
 | 3<br>da Vinci | 2014 | Óbuda Univ., Budapest | Tamás Haidegger |
 | 4<br>da Vinci | 2015 | Wayne State Univ. | Abhilash Pandya |
