@@ -63,25 +63,31 @@ Notes:
   ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/head/dvrk-head-sensor-controller.jpg)
 
 ## Software
- * For rev 1.4 and below, rerun MATLAB XML config generator to make sure the digital input is renamed "HEAD"
- * For rev 1.5 and above, HEAD is already included in the IO foot pedal XML files
+ There is no specific configuration to perform at that point provided that you connect the head sensor on the same controller as the foot pedals.
+ * For **rev 1.4** and below, rerun MATLAB XML config generator to make sure the digital input is renamed "HEAD"
+ * For **rev 1.5** and above, HEAD is already included in the IO foot pedal XML files
  * Update JSON config file to set the presence sensor or point to the IO foot pedal configuration file (rev 1.5)
 
 # daVinci Head Sensor
 
 ## Wiring
 
-The head sensor is located under the master console's cover.   It has four strobing LEDs on one side and four light sensors on the other side.  One the following picture, ignore the dVRK head sensor in the middle.  The actual daVinci head sensor is mounted on the head's sides, behind the 4 round holes forming a diamond shape on each side.
+The head sensor is located under the master console's cover.   It has four strobing LEDs on one side and four light sensors on the other side.  It is mounted on the head's sides, behind the 4 round holes forming a diamond shape on each side.
 
   ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/head/daVinci-head-sensor.jpg)
 
-Under the cover, there's a single connector going to the controller and a cable going between the LEDs on one side and the sensors on the other side.
+Under the cover, there's a long cable going to the ISI controller at the base of the master console.  There's also a short cable going between the LEDs on one side and the sensors on the other side.  The sensors are hidden behind a metal plate to make sure only the lights from the LEDs can be detected.  It is recommended to leave these alone!
+
+  ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/head/daVinci-head-sensor.jpg)
+
+We found that the easiest solution to connect to the head sensor is to locate the DB 25 cable that connects both the head sensor and the speakers under the surgeon's console.   That connector is located on the back of the console, on the left side, just behind the arms.   You will need to take the side cover off to find it:
+
+  ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/head/daVinci-head-sensor-plug.jpg)
+
+You will then need to make a new cable to connect the da Vinci head sensor to the dVRK controllers.  It will be a DB 25 female on the head sensor's end and a high density DB 15 male on the controller's end.
 
   ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/head/daVinci-head-sensor-cable.jpg)
 
-The sensors are hidden behind a metal plate.
-
-  ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/head/daVinci-head-sensor-sensors.jpg)
 
 ## Testing with `qladisp`
 
