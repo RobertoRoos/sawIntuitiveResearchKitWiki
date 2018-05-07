@@ -1,3 +1,13 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Introduction](#introduction)
+- [Material](#material)
+- [Wiring](#wiring)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Introduction
 
 The goal of this page is to show how to build some dVRK compatible foot pedals.  These can only be used with the dVRK controllers and can't be connected directly to a PC.  This can be useful if you're splitting your dVRK into two systems (e.g. one MTM/PSM on one controller and the other MTM/PSM an another controller) or if you use a spare PSM with an alternate master arm (e.g. PSM and Force Dimension master).
