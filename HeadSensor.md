@@ -16,7 +16,7 @@
 
 # Introduction
 
-The real da Vinci system uses a head sensor to detect if the operator is present.  Without the operator, the system will not enable the tele-operation.   For the dVRK, we have used a foot pedal as a dead man switch to detect if the operator is present (usually the "COAG" foot pedal).   This is a reasonable solution for brief experiments but it's not very convenient.   In this page we describe how to either create a "dVRK" head sensor from cheap parts or hack the existing da Vinci head sensor.  The later option requires a full da Vinci system and it's important to note that it's not trivial to switch back and forth between the ISI controllers and dVRK controllers since we're disconnecting the ISI controller underneath the head cover.
+The real da Vinci system uses a head sensor to detect if the operator is present.  Without the operator, the system will not enable the tele-operation.   For the dVRK, we have used a foot pedal as a dead man switch to detect if the operator is present (usually the "COAG" foot pedal).   This is a reasonable solution for brief experiments but it's not very convenient.   In this page we describe how to either create a "dVRK" head sensor from cheap parts or hack the existing da Vinci head sensor.  The later option requires a full da Vinci system and it's important to note that you will need to keep the plastic back covers off the surgeon's console to switch back and forth between the ISI controllers and dVRK controllers.
 
 # dVRK Head Sensor 
 
@@ -51,7 +51,11 @@ Notes:
 
 * Setup option 2: side
 
-  ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/head/dvrk-head-sensor-side.jpg)  
+  ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/head/dvrk-head-sensor-side.jpg)
+
+* Setup option 3: full surgeon's console.  If you have a full da Vinci, you can pull the forehead foam pad and sticj the wire underneath.  Alternatively you can make a custom cable and use the original da Vinci head sensor (see below).  
+
+  ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/head/dVRK-head-sensor-full-system.jpg)
 
 * Connector for controller box, connect to DOF 4 on controller with the foot pedals (to use default config files)
 
