@@ -11,6 +11,7 @@
 - [daVinci Head Sensor](#davinci-head-sensor)
   - [Wiring](#wiring-1)
   - [Testing with `qladisp`](#testing-with-qladisp)
+  - [Software configuration](#software-configuration)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
