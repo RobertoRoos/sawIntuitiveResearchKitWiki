@@ -216,3 +216,8 @@ The example above assumes that:
  * You're using the dVRK software **rev 1.6** or above
  * You have connected to the camera focus cable to the MTMR controller.  If you're connecting the endoscope focus unit to another controller and you can't find the corresponding configuration file in `sawIntuitiveResearchKit/share/io`, feel free to create one and contribute it back to the community
  * You have the da Vinci foot pedal connected with the Camera +/- toggle pedal properly working.  You can check in the Qt graphical user interface, under the IO/Buttons tab.
+
+At that point, you should be able to control the camera focus using the foot pedals.  When pressing the +/- pedal you should:
+  * See the focus change
+  * See the "Focus In"/"Focus Out" LED turn on/off on the vision cart
+  * Hear the motor on the camera head 
