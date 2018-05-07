@@ -11,6 +11,7 @@
 - [daVinci Head Sensor](#davinci-head-sensor)
   - [Wiring](#wiring-1)
   - [Testing with `qladisp`](#testing-with-qladisp)
+  - [Software configuration](#software-configuration)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -33,11 +34,11 @@ The real da Vinci system uses a head sensor to detect if the operator is present
 
 ## Wiring
 
-| Sensor | Cable | Controller (J18)     |
-|--------|-------|----------------------|
-| VIN    | Red   | Pin 8 (VCC-CON-A 5V) |
-| GND    | White | Pin 6 (GND)          |
-| OUT    |Yellow | Pin 7 (HOME4)        |
+| Sensor | Cable | Controller (J18, aka DOF 4) |
+|--------|-------|-----------------------------|
+| VIN    | Red   | Pin 8 (VCC-CON-A 5V)        |
+| GND    | White | Pin 6 (GND)                 |
+| OUT    |Yellow | Pin 7 (HOME4)               |
 
 Notes:
 * J18 is a 15-pin connector labelled DOF 4 on the back of the dVRK controller
@@ -63,33 +64,49 @@ Notes:
   ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/head/dvrk-head-sensor-controller.jpg)
 
 ## Software
- * For rev 1.4 and below, rerun MATLAB XML config generator to make sure the digital input is renamed "HEAD"
- * For rev 1.5 and above, HEAD is already included in the IO foot pedal XML files
+ There is no specific configuration to perform at that point provided that you connect the head sensor on the same controller as the foot pedals.
+ * For **rev 1.4** and below, rerun MATLAB XML config generator to make sure the digital input is renamed "HEAD"
+ * For **rev 1.5** and above, HEAD is already included in the IO foot pedal XML files
  * Update JSON config file to set the presence sensor or point to the IO foot pedal configuration file (rev 1.5)
 
 # daVinci Head Sensor
 
 ## Wiring
 
-The head sensor is located under the master console's cover.   It has four strobing LEDs on one side and four light sensors on the other side.  One the following picture, ignore the dVRK head sensor in the middle.  The actual daVinci head sensor is mounted on the head's sides, behind the 4 round holes forming a diamond shape on each side.
+The head sensor is located under the master console's cover.   It has four strobing LEDs on one side and four light sensors on the other side.  It is mounted on the head's sides, behind the 4 round holes forming a diamond shape on each side.
 
   ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/head/daVinci-head-sensor.jpg)
 
-Under the cover, there's a single connector going to the controller and a cable going between the LEDs on one side and the sensors on the other side.
-
-  ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/head/daVinci-head-sensor-cable.jpg)
-
-The sensors are hidden behind a metal plate.
+Under the cover, there's a long cable going to the ISI controller at the base of the master console.  There's also a short cable going between the LEDs on one side and the sensors on the other side.  The sensors are hidden behind a metal plate to make sure only the lights from the LEDs can be detected.  It is recommended to leave these alone!
 
   ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/head/daVinci-head-sensor-sensors.jpg)
+
+We found that the easiest solution to connect to the head sensor is to locate the DB 25 cable that connects both the head sensor and the speakers under the surgeon's console.   That connector is located on the back of the console, on the left side, just behind the arms.   You will need to take the side cover off to find it:
+
+  ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/head/daVinci-head-sensor-plug.jpg)
+
+You will then need to make a new cable to connect the da Vinci head sensor to the dVRK controllers.  It will be a DB 25 female on the head sensor's end and a high density DB 15 male on the controller's end.  The DB 15 male is designed to be connected to the `DOF 0` connector on the back of the dVRK controller (we provide examples of configuration files for the head sensor connected to `DOF 0`).   The wiring pin out is provided in the following formats
+ * [PDF](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/head/daVinci-head-sensor-DB-25-to-DB-15.pdf)
+ * [ods](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/head/daVinci-head-sensor-DB-25-to-DB-15.ods)
+
+Once you have build your custom cable, you can connect it to the da Vinci head sensor:
+
+  ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/head/daVinci-head-sensor-cable.jpg)
 
 ## Testing with `qladisp`
 
 The D-SUB connector can be plugged on one of the "DOF" connectors on the back of the dVRK controller.   For the following section, we assume the head sensor is connected to "DOF 0" on a PSM3 controller.   This means that it will be interfaced using the IOs for a the first axis on the first board on the PSM3 controller, i.e. board ID is 10.   To test the head sensor, start `qladisp 10`.
 
-Then, one can turn on/off the LEDs using the key '0' to toggle.   The value of `DigOut` in `qladisp` should toggle between `0xF` (off) and `0xE` (on).   Then turned on, motion between the LEDs and the sensors should be displayed in the `Home`, `PosLim` and `NegLim` fields.  When the light is blocked, the values should go up by one (e.g. `0xC` to `0xD` or `0xE` to 0xF`):
+Then, one can turn on/off the LEDs using the key '0' to toggle.   The value of `DigOut` in `qladisp` should toggle between `0xF` (off) and `0xE` (on).   Then turned on, motion between the LEDs and the sensors should be displayed in the `Home`, `PosLim` and `NegLim` fields.  When the light is blocked, the values should go up by one (e.g. `0xC` to `0xD` or `0xE` to `0xF`):
   * Sensor 1: `Home`, Bit Id 0
   * Sensor 2: `PosLim`, Bit Id 4
   * Sensor 3: `NegLim`, Bit Id 8
 
-  * 
+## Software configuration
+
+Assuming that you're connecting your head sensor to the MTMR controller, always on the `DOF 0` connector, you just need to add the following line in your console JSON configuration file:
+```json
+   "operator-present": {
+        "io": "sawRobotIO1394-MTMR-dv-head-sensor.xml"
+   }
+```

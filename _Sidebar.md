@@ -27,11 +27,12 @@ Advanced
 * [Projects](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Future-Projects)
 * [E-STOP wiring](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ESTOP)
 * [Full da Vinci system](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Full-da-Vinci)
+* [Head Sensor](/jhu-dvrk/sawIntuitiveResearchKit/wiki/HeadSensor)
+* [Foot Pedals](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FootPedals)
 
 Miscellaneous
 * [Frequently Asked Questions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FAQ)
 * [QLA Heat Sink](/jhu-dvrk/sawIntuitiveResearchKit/wiki/QLA-Heat-Sink)
-* [Head Sensor](/jhu-dvrk/sawIntuitiveResearchKit/wiki/HeadSensor)
 * [cisst](/jhu-cisst/cisst/wiki)
 * [JHU](JHU-DVRK-Hardware-Status)
 
