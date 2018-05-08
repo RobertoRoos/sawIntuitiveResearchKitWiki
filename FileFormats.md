@@ -361,43 +361,98 @@ The following protocols are supported:
 
 ## Arms
 
-List of arms to be configured in your system.  Each arm needs a unique name, type and configuration file for kinematics.  The arm can be a physical one (`ECM`, `PSM`, `MTM` or `SUJ`) or a simulated one (`ECM`, `PSM` or `MTM`).  We don't support simulated SUJs yet.
+List of arms to be configured in your system.  Each arm needs a unique name, type and configuration file for kinematics.
+
+### Name
+
+The name of the arm.  The name will be used to create all the interfaces for the component connections, Qt GUI and ROS topics.  For a dVRK arm, there will be a component with the arm name.  For some other devices, e.g. sawForceDimensionSDK, the arm name might match a provided interface name (see Component and interface below). 
+
+### Type
+
+The arm can be a dVRK arm: `ECM`, `PSM`, `MTM` or `SUJ`.  These are the predefined classes in sawIntuitiveResearchKit and the most commonly used.
+
+One can also declare a derived arm using the types `ECM_DERIVED`, `PSM_DERIVED` or `MTM_DERIVED`.   For all derived types, the console will assume that the user has already created and added the arm to the component manager (see https://github.com/jhu-cisst/cisst/wiki/cisstMultiTask-concepts).  To create and add the component, one can either write their own `main.cpp` or use dynamic loading (see example of `component-manager` below).  For all derived classes, the console will automatically add the IO connections as well as the Qt GUI widgets and ROS topics.
+
+Finally, one can use `ECM_GENERIC`, `PSM_GENERIC` or `MTM_GENERIC`.  In this case the console will not create any IO connection, Qt widget nor ROS topics.  The only requirement is that this generic arm has all the required features in its provided interfaces.  For example, a device supported by the ForceDimension SDK can be used as a generic master arm with the following configuration:
+```json
+    "component-manager": {
+        "components":
+        [
+            {
+                "shared-library": "sawForceDimensionSDK",
+                "class-name": "mtsForceDimension",
+                "constructor-arg": {
+                    "Name": "ForceDimensionSDK"
+                },
+                "configure-parameter": "sawForceDimensionSDK-MTMR.json"
+            }
+        ]
+    }
+```
+The above configuration tells the console class to:
+  * Load a shared library names `sawForceDimensionSDK` (cisst/SAW wrapper for the Force Dimension SDK)
+  * Create an object of type `mtsForceDimension` under the name `ForceDimensionSDK`
+  * The configuration file contains the name of the interface to be created, i.e. `MTMR`
+
+Then in the `arms` section, we can create a generic MTM using:
+```json
+    "arms":
+    [
+        {
+            "name": "MTMR",  // created previously using custom components
+            "type": "MTM_GENERIC",
+            "component": "ForceDimensionSDK", // name of component
+            "interface": "MTMR" // name of interface
+        }
+    ]
+```
+
+### Period
+
+You can override the default periodicity of the arm class for all the classes .  For example adding `"period": 0.001` will set the periodicity to 0.001 (in seconds).  This works only for the dVRK and derived arm types.
+
+### IO
+
+This is required for all arms connected to the hardware using the component from sawRobotIO1394, i.e. all the dVRK arms and derived (unless you're using the simulation mode).  These files are specific to each arm since the contain the calibration information, i.e. `sawRobotIO1394-<your_arm>.xml`.
+
+### Simulation
 
 If the arm is simulated, one need to add `"simulation": "KINEMATIC"` and the `"io"` field is ignored (see https://github.com/jhu-dvrk/sawIntuitiveResearchKit/blob/master/share/console-PSM1_KIN_SIMULATED.json).
 
-For a real arm, you need to provide the file name for the IO, i.e. `sawRobotIO1394-<your_arm>.xml`.
+### Base frame
 
-Finally you can override the default periodicity of the arm class.  For example adding `"period": 0.001` will set the periodicity to 0.001 (in seconds).
-  
+Introduced in **rev 1.6**.  
+
+### Component and interface
+
+### Examples:
+
+For a simple dVRK arm:
 ```json
-  "arms":
-  [
-    {
-      "name": "SUJ",
-      "type": "SUJ",
-      "io": "sawRobotIO1394-SUJ.xml",
-      "kinematic": "suj-ECM-1-2-3.json",
-      "base-frame": {
-        "component": "ECM",
-        "interface": "Robot"
-      }
-    }
-    ,
-    {
-      "name": "PSM1",
-      "type": "PSM",
-      "io": "sawRobotIO1394-PSM1-49695.xml",
-      "pid": "sawControllersPID-PSM.xml",
-      "kinematic": "psm-large-needle-driver.json",
-      "base-frame": {
-        "component": "SUJ",
-        "interface": "PSM1"
-      }
-    }
-  ]
+    "arms": [
+        {
+            "name": "PSM1",
+            "type": "PSM",
+            "io": "sawRobotIO1394-PSM1-49695.xml",
+            "pid": "sawControllersPID-PSM.xml",
+            "kinematic": "psm-large-needle-driver.json"
+        }
+    ]
 ```
 
-The `base-frame` field is used only in combination with the SUJs.
+For the same arm but attached to the SUJs (you need either the actual setup joints or the simulated setup joints in your console), add:
+```json
+    "arms": [
+        {
+            "name": "PSM1",
+            ... ,
+            "base-frame": {
+                "component": "SUJ",
+                "interface": "PSM1"
+            }
+        }
+    ]
+```
 
 ## Teleoperation components
 
