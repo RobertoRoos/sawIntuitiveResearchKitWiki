@@ -193,7 +193,7 @@ All parameters are provided by ISI.  You might need to play with the last joint 
 
 ### Base offset
 
-**This applies to version 1.4.0 and later**
+**This applies to version 1.4.0 and 1.5.0.  For version 1.6, see `"base-frame"` in `"arm"`**
 
 One can specify a base offset, i.e. a fixed transformation added at the base of the kinematic chain.  This is an optional field, it can be used for systems without setup joints to make sure the PSMs cartesian positions are defined with respect to the camera.   For a moving camera, we recommend using the `SetBaseFrame` C++ command instead (see also ROS topic `set_base_frame`).
   
@@ -312,8 +312,9 @@ All files referenced within the `console-<your_setup>.json` file can be defined 
  * Current directory, i.e. directory in which the application was started
  * Directory of the console file itself, this is how your IO files are usually found
  * Shared source directory for the dVRK, this is how the default PID and kinematics files are found
+ * Shared source directory '/io'.  This folder is used to store share IO files without any system specific settings (foot pedals, camera focus, head sensor...)
 
-Once you've created and populated your system specific directory, you can send us a github pull request or a zip file and we'll merge it with the master branch.
+Once you've created and populated your system specific directory, you can send us a github pull request or a zip.  We'll merge it with the `master` branch and sync the `devel` branch.
 
 ## IO section
 
@@ -348,25 +349,46 @@ The watchdog time-out is set on the FPGA-QLA controllers.  If the controllers do
 
 Also in **version 1.5**, IOs configuration for the foot pedals can (and should) be separated from the arm configuration.   In **version 1.4** and lower, users had to maintain two sawRobotIO1394 XML configuration files for each MTM, one with the foot pedals IO configuration and one without.  In **version 1.4** the arms section is used to defined the arms only while the new option `"io": { "footpedals": }` allows user to re-use a predefined configuration for the foot pedals IO configuration.  For example, if the foot pedals are connected to an MTMR controller, you will need:
 ```json
-  "io": {
-    ...
-    "footpedals": "sawRobotIO1394-MTMR-foot-pedals.xml"
-    ...
-  }
+    "io": {
+        "footpedals": "sawRobotIO1394-MTMR-foot-pedals.xml"
+    }
 ```
 
 ### FireWire protocol
  
 In **version 1.4** and higher, you can also specify the FireWire protocol used to communicate between the PC and the controllers:
 ```json
-  "io": {
-    "firewire-protocol": "sequential-read-broadcast-write" // recommended for rev up to 1.5
-  }
+    "io": {
+       "firewire-protocol": "sequential-read-broadcast-write" // recommended for rev up to 1.5
+    }
 ```
 The following protocols are supported:
 * `sequential-read-write`: the PC reads data from each board (2 FPGA/QLA per controller), performs its computations (conversions, safety checks, PID, ...) and then writes sequentially to each board (N reads, N writes).  This is the only protocol supported on older firmware (3 and below).
 * `sequential-read-broadcast-write`: the PC reads sequentially but performs a single write for all the boards.  The write message is an array of values sent to the boards, each board access the data it needs by index (N reads, 1 write).  This is the default protocol for the dVRK controllers with firmware 4 and above.
 * **experimental** `broadcast-read-write`: the PC sends a single query/synchronization to all boards, read values are aggregated in single packet over the bus and there's a single write (1 query, 1 read, 1 write).  This is the fastest protocol available but some FireWire cards seem to have trouble synchronizing the read packets.  You will have to test it on your hardware to see if it supports this protocol or not.
+
+## Other devices
+
+This section is used to configure some of the external devices found on a full da Vinci system.  These devices need to be connected to the dVRK controllers using custom cables.
+
+### Head sensor
+
+Instructions to connect to the da Vinci head sensor can be found [here](/jhu-dvrk/sawIntuitiveResearchKit/wiki/HeadSensor).  Once you have the cable, the console configuration file needs the following:
+
+```json
+    "operator-present": {
+        "io": "sawRobotIO1394-MTMR-dv-head-sensor.xml"
+    }
+
+### Endoscope focus
+
+Instructions to connect to the da Vinci endoscope focus controller can be found [here](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Full-da-Vinci).  Once you have the cable, the console configuration file needs the following:
+
+```json
+    "endoscope-focus": {
+        "io": "sawRobotIO1394-MTML-dv-endoscope-focus.xml"
+    }
+```
 
 ## Arms
 
