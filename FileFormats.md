@@ -481,7 +481,7 @@ There are two possible syntaxes to define the base frame for the arm, one for a 
 ```
 In the example above, we define the base frame of the MTMR using the ISI convention, i.e. the origin is just in the middle of the eye piece of the stereo display (`"HSRV"`), the Z axis is aligned with the display depth (hence the 30 degrees rotation) and shifted to the right (translation by -0.180 in X).
 
-For a moving frame, the `base-frame` is retrieve in runtime using a cisst/SAW component and interface.  Therefore it requires two fields:
+For a moving frame, the `base-frame` is retrieved in runtime using a cisst/SAW component and interface.  Therefore it requires two fields:
   * `"component"`: name of the component providing the base frame
   * `"interface"`: name of the provided interface with the command to retrieve the base frame
 ```json
@@ -500,6 +500,19 @@ For a moving frame, the `base-frame` is retrieve in runtime using a cisst/SAW co
 In the above example, the PSM1 base frame is provided at runtime by the `SUJ` component.  This component has one provided interface per SUJ arm, appropriately named after the arm it carries (in this case `PSM1`).
 
 ### Component and interface
+
+These two fields are only required for "generic" arms so the console knows which component/interface to connect to.  For example:
+```json
+    "arms":
+    [
+        {
+            "name": "MTMR",  // created previously using custom components
+            "type": "MTM_GENERIC",
+            "component": "ForceDimensionSDK",
+            "interface": "MTMR"
+        }
+   ]
+```
 
 ### Examples:
 
@@ -549,12 +562,7 @@ You can then define multiple tele-operation components for different pairs of MT
         {
             "master": "MTMR",
             "slave": "PSM1",
-            "period": 0.005, // in seconds
-            // rotation can be defined here in release 1.5 and below
-            // for release 1.6 and above, use "configure-parameter"
-            "rotation" : [[ 0.0000,  1.0000,  0.0000],
-                          [ 1.0000,  0.0000,  0.0000],
-                          [ 0.0000,  0.0000, -1.0000]]
+            "period": 0.005 // in seconds
         }
     ]
     ,
@@ -562,12 +570,7 @@ You can then define multiple tele-operation components for different pairs of MT
     {
         "master-left": "MTML",
         "master-right": "MTMR",
-        "slave": "ECM",
-        // rotation can be defined here in release 1.5 and below
-        // for release 1.6 and above, use "configure-parameter"
-        "rotation" : [[ 1.0000,  0.0000,  0.0000],
-                      [ 0.0000,  1.0000,  0.0000],
-                      [ 0.0000,  0.0000,  1.0000]]
+        "slave": "ECM"
     }
 ```
 
