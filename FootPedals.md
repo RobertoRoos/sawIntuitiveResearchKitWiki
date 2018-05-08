@@ -23,7 +23,7 @@ The design described below is based on up to 3 pairs of foot pedals.  One can us
 
 # Wiring
 
-To minimize the amount of soldering we simply cut one DB 15 extension cable in two (one cable per foot pedal).  The wiring for two foot pedals (i.e., without the optional 3rd foot pedal for camera +/-) can be seen in the following picture:
+To minimize the amount of soldering we simply cut one DB 15 extension cable in two (one cable per foot pedal).  The wiring for two foot pedals (i.e., without the optional 3rd foot pedal for camera +/-) can be seen in the following picture (credit: Christian Hernandez):
 
    ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/foot/dVRK-foot-pedal-wiring.jpg)
 
