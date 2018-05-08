@@ -31,6 +31,7 @@
     - [FireWire protocol](#firewire-protocol)
   - [Other devices](#other-devices)
     - [Head sensor](#head-sensor)
+    - [Endoscope focus](#endoscope-focus)
   - [Arms](#arms)
     - [Name](#name)
     - [Type](#type)
