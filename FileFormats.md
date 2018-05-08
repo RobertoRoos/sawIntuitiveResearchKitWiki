@@ -34,6 +34,7 @@
     - [Type](#type)
     - [Period](#period)
     - [IO](#io)
+    - [PID](#pid)
     - [Simulation](#simulation)
     - [Base frame](#base-frame)
     - [Component and interface](#component-and-interface)
