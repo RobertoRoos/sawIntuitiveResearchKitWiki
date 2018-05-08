@@ -381,6 +381,7 @@ Introduced in **version 1.6**.  Instructions to connect to the da Vinci head sen
     "operator-present": {
         "io": "sawRobotIO1394-MTMR-dv-head-sensor.xml"
     }
+```
 
 ### Endoscope focus
 
