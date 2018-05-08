@@ -373,15 +373,15 @@ List of arms to be configured in your system.  Each arm needs a unique name, typ
 
 ### Name
 
-The name of the arm.  The name will be used to create all the interfaces for the component connections, Qt GUI and ROS topics.  For a dVRK arm, there will be a component with the arm name.  For some other devices, e.g. sawForceDimensionSDK, the arm name might match a provided interface name (see Component and interface below). 
+The name of the arm.  In most cases this will be one of `MTML`, `MTMR`, `PSM1`, `PSM2`, `PSM3`, `ECM` or `SUJ`.  The name will be used to create all the interfaces for the component connections, Qt GUI and ROS topics.  For a dVRK arm, this will create a cisst/SAW component with the arm name.  For some other devices, e.g. `sawForceDimensionSDK`, the arm name will match a provided interface name (see Component and interface below). 
 
 ### Type
 
-The arm can be a dVRK arm: `ECM`, `PSM`, `MTM` or `SUJ`.  These are the predefined classes in sawIntuitiveResearchKit and the most commonly used.
+The arm can be a dVRK arm: `ECM`, `PSM`, `MTM` or `SUJ`.  These are the predefined classes in `sawIntuitiveResearchKit` and the most commonly used.  For these base dVRK arms, the console class will create all the required components (IO, Qt Widgets and ROS topics).
 
 One can also declare a derived arm using the types `ECM_DERIVED`, `PSM_DERIVED` or `MTM_DERIVED`.   For all derived types, the console will assume that the user has already created and added the arm to the component manager (see https://github.com/jhu-cisst/cisst/wiki/cisstMultiTask-concepts).  To create and add the component, one can either write their own `main.cpp` or use dynamic loading (see example of `component-manager` below).  For all derived classes, the console will automatically add the IO connections as well as the Qt GUI widgets and ROS topics.
 
-Finally, one can use `ECM_GENERIC`, `PSM_GENERIC` or `MTM_GENERIC`.  In this case the console will not create any IO connection, Qt widget nor ROS topics.  The only requirement is that this generic arm has all the required features in its provided interfaces.  For example, a device supported by the ForceDimension SDK can be used as a generic master arm with the following configuration:
+Finally, one can use `ECM_GENERIC`, `PSM_GENERIC` or `MTM_GENERIC`.  In this case the console will not create any IO component, Qt widget nor ROS topics.  The only requirement is that this generic arm has all the required commands and events in its provided interfaces.  For example, a device supported by the ForceDimension SDK can be used as a generic master arm with the following configuration:
 ```json
     "component-manager": {
         "components":
@@ -423,9 +423,13 @@ You can override the default periodicity of the arm class for all the classes . 
 
 This is required for all arms connected to the hardware using the component from sawRobotIO1394, i.e. all the dVRK arms and derived (unless you're using the simulation mode).  These files are specific to each arm since the contain the calibration information, i.e. `sawRobotIO1394-<your_arm>.xml`.
 
+### PID
+
+
+
 ### Simulation
 
-If the arm is simulated, one need to add `"simulation": "KINEMATIC"` and the `"io"` field is ignored (see https://github.com/jhu-dvrk/sawIntuitiveResearchKit/blob/master/share/console-PSM1_KIN_SIMULATED.json).
+If the arm is simulated, one need to add `"simulation": "KINEMATIC"`.  In this case, `"io"` field is ignored (see https://github.com/jhu-dvrk/sawIntuitiveResearchKit/blob/master/share/console-PSM1_KIN_SIMULATED.json).  The only simulation currently supported is "kinematic", i.e. the PID will set the measured positions based on the commanded positions.   This allows to test the kinematic but doesn't include any dynamic nor simulation of interactions with the work like Gazebo or VREP would.
 
 ### Base frame
 
