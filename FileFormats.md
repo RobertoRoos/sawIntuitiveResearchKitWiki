@@ -29,6 +29,8 @@
     - [Watchdog time-out](#watchdog-time-out)
     - [Foot pedals](#foot-pedals)
     - [FireWire protocol](#firewire-protocol)
+  - [Other devices](#other-devices)
+    - [Head sensor](#head-sensor)
   - [Arms](#arms)
     - [Name](#name)
     - [Type](#type)
