@@ -41,7 +41,6 @@
     - [Simulation](#simulation)
     - [Base frame](#base-frame)
     - [Component and interface](#component-and-interface)
-    - [Examples:](#examples)
   - [Teleoperation components](#teleoperation-components)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -512,35 +511,6 @@ These two fields are only required for "generic" arms so the console knows which
             "interface": "MTMR"
         }
    ]
-```
-
-### Examples:
-
-For a simple dVRK arm:
-```json
-    "arms": [
-        {
-            "name": "PSM1",
-            "type": "PSM",
-            "io": "sawRobotIO1394-PSM1-49695.xml",
-            "pid": "sawControllersPID-PSM.xml",
-            "kinematic": "psm-large-needle-driver.json"
-        }
-    ]
-```
-
-For the same arm but attached to the SUJs (you need either the actual setup joints or the simulated setup joints in your console), add:
-```json
-    "arms": [
-        {
-            "name": "PSM1",
-            ... ,
-            "base-frame": {
-                "component": "SUJ",
-                "interface": "PSM1"
-            }
-        }
-    ]
 ```
 
 ## Teleoperation components
