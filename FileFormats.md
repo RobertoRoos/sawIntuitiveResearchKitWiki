@@ -220,7 +220,7 @@ Since **version 1.4** the arm won't go to zero position during the homing proced
 
 Parsing is performed by the `Configure` method in `mtsIntuitiveResearchKitMTM`: https://github.com/jhu-dvrk/sawIntuitiveResearchKit/blob/master/code/mtsIntuitiveResearchKitMTM.cpp
 
-We provide 3 files, `mtm.json`, `mtml.json` and `mtmr.json`.  These share the same DH parameters, the only difference is the base offset matrix.  For a single MTM, we assume no base offset, the origin is at the base of the kinematic chain.  For MTML and MTMR, the base offset re-orients the coordinate system to match the stereo display (angled at 30 degrees) and is centered on the eye piece.  This takes into account the distance between the two MTMs.
+We provide 3 files, `mtm.json`, `mtml-deprecated.json` and `mtmr-deprecated.json`.  These share the same DH parameters, the only difference is the base offset matrix.  For a single MTM, we assume no base offset, the origin is at the base of the kinematic chain.  For MTML and MTMR, the base offset re-orients the coordinate system to match the stereo display (angled at 30 degrees) and is centered on the eye piece.  This takes into account the distance between the two MTMs.  In **version 1.6** and above, it is recommended to use the `"arm"` `"base-frame"` to set the base frame of the arm.
  
 ### DH parameters
 
@@ -261,7 +261,7 @@ The main difference between the PSM's DH and MTM's is that we need the mass, cen
                    [  0.0,  0.0,  0.0,  1.0]]
 ```
 
-**Base offset matrix uses SI units!**   This base offset is included in the "local" kinematic chain and should not be specific to each user's setup.  For a transformation that represents where the arm is mounted, e.g. where is the MTM with respect to the display, use the "base-frame" field in the console JSON configuration file. 
+**Base offset matrix uses SI units!**   This base offset is included in the "local" kinematic chain and should not be specific to each user's setup.  For a transformation that represents where the arm is mounted, e.g. where is the MTM with respect to the display, use the "base-frame" field in the console JSON configuration file (introduced in **version 1.6***). 
 
 ## ECM
 
