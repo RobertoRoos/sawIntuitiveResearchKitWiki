@@ -30,6 +30,14 @@
     - [Foot pedals](#foot-pedals)
     - [FireWire protocol](#firewire-protocol)
   - [Arms](#arms)
+    - [Name](#name)
+    - [Type](#type)
+    - [Period](#period)
+    - [IO](#io)
+    - [Simulation](#simulation)
+    - [Base frame](#base-frame)
+    - [Component and interface](#component-and-interface)
+    - [Examples:](#examples)
   - [Teleoperation components](#teleoperation-components)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
