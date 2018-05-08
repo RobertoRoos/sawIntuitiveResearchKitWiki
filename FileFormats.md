@@ -91,7 +91,7 @@ You need to provide the DH for the whole PSM (7 joints) even if you have designe
 
 ### DH parameters
 
-```js
+```json
 "DH": {
   "links": [
     {
@@ -112,7 +112,7 @@ The DH is a list of links, loaded in the order they're found in the configuratio
 
 ### Tooltip offset
 
-```js
+```json
   // rotation to match ISI convention (for read-only research API on commercial da Vinci)
   "tooltip-offset" : [[ 0.0, -1.0,  0.0,  0.0],
                       [ 0.0,  0.0,  1.0,  0.0],
@@ -126,7 +126,7 @@ Usually a rotation matrix to match ISI orientation and translation offset with r
 
 ### Coupling matrices
 
-```js
+```json
   // values from the dVRK user guide, see tool appendix C
   "coupling" : {
     "ActuatorToJointPosition" : [[ 1.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000],
@@ -148,7 +148,7 @@ For revision **1.5** and higher, you only need to provide the actuator to joint 
 
 ### Tool engage parameters
 
-```js
+```json
   // angles used to engage the tool, in degrees or millimeters
   // make sure these are within the range of motion IN the cannula
   "tool-engage-position" : {
@@ -167,7 +167,7 @@ If you're developing your own tool, you should start with a very small range.
 
 ### Tool joint limits
 
-```js
+```json
   // values from dVRK user guide, converted to degrees or millimeters and floored (closest degree).
   // see PSM calibration for first 3 joints
   // see tool appendix for last 4 joints
@@ -188,7 +188,7 @@ All parameters are provided by ISI.  You might need to play with the last joint 
 
 One can specify a base offset, i.e. a fixed transformation added at the base of the kinematic chain.  This is an optional field, it can be used for systems without setup joints to make sure the PSMs cartesian positions are defined with respect to the camera.   For a moving camera, we recommend using the `SetBaseFrame` C++ command instead (see also ROS topic `set_base_frame`).
   
-```js
+```json
   "base-offset" : [[ 1.0, 0.0, 0.0, 0.0],
                    [ 0.0, 1.0, 0.0, 0.0],
                    [ 0.0, 0.0, 1.0, 0.0],
@@ -201,7 +201,7 @@ One can specify a base offset, i.e. a fixed transformation added at the base of 
 
 Since **version 1.4** the arm won't go to zero position during the homing procedure.  One can override this using the `homing-zero-position` boolean flag.  This field is optional, the default for PSMs and ECM is now to stay in place when homing.  MTMs always go to zero position when homed.
  
-```js
+```json
   "homing-zero-position": 1 // or 0 for false
 ```
 
@@ -217,7 +217,7 @@ We provide 3 files, `mtm.json`, `mtml.json` and `mtmr.json`.  These share the sa
 
 See PSMs section first.
 
-```js
+```json
 "DH": {
   "links": [
     {
@@ -244,16 +244,15 @@ The main difference between the PSM's DH and MTM's is that we need the mass, cen
 
 ### Base offset
 
-```js
-  // transformation to match ISI convention (for read-only research
-  // API on commercial da Vinci), uses stereo display as origin
-  "base-offset" : [[ -1.0,  0.0,          0.0,          0.180],
-                   [  0.0, -0.866025404, -0.5,         -0.400],
-                   [  0.0, -0.5,          0.866025404, -0.325],
-                   [  0.0,  0.0,          0.0,          1.0]]
+```json
+  // dummy example, it would take a 4x4 matrix
+  "base-offset" : [[  1.0,  0.0,  0.0,  0.0],
+                   [  0.0,  1.0,  0.0,  0.0],
+                   [  0.0,  0.0,  1.0,  0.0],
+                   [  0.0,  0.0,  0.0,  1.0]]
 ```
 
-**Base offset matrix uses SI units!**
+**Base offset matrix uses SI units!**   This base offset is included in the "local" kinematic chain and should not be specific to each user's setup.  For a transformation that represents where the arm is mounted, e.g. where is the MTM with respect to the display, use the "base-frame" field in the console JSON configuration file. 
 
 ## ECM
 
@@ -271,7 +270,7 @@ See PSM DH section.  For the ECM we only need 4 joints.  The current implementat
 
 ### Tooltip offset
 
-```js
+```json
   // rotation to match ISI convention (for read-only research API on commercial da Vinci) for a straight endoscope
   "tooltip-offset" : [[ 0.0, -1.0,  0.0,  0.0],
                       [-1.0,  0.0,  0.0,  0.0],
@@ -317,7 +316,7 @@ One can change the refresh rate (in this example, 1/2 millisecond) and the FireW
 
 In most cases, the PID components run in the same thread as the IO, so changing the IO period also changes the PID period.  See [software architecture](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Software-Architecture).
 
-```js
+```json
   "io": {
     "period": 0.0003, // in seconds
     "port": 0 // default is 0
@@ -327,19 +326,19 @@ In most cases, the PID components run in the same thread as the IO, so changing 
 ### Watchdog time-out
 
 In **version 1.5** and higher, you can specify the watchdog time-out using:
-```js
+```json
   "io": {
     ...
     "watchdog-timeout": 0.03, // in seconds
     ...
   }
 ```
-The watchdog time-out is set on the FPGA-QLA controllers.  If the controllers don't receive any message for a period exceeding the watchdog time-out, they will automatically turn off the power on all motors.   This is used if the physical communication is lost (unplugged wire) or if the application has crashed or is not sending commands fast enough.  The maximum value for the watchdog time-out is 300 ms.  Setting the time-out to zero turns off the watchdog and is not recommended.   This field is optional.
+The watchdog time-out is set on the FPGA-QLA controllers.  If the controllers don't receive any message for a period exceeding the watchdog time-out, they will automatically turn off the power on all motors.   This is used if the physical communication is lost (unplugged wire) or if the application has crashed or is not sending commands fast enough.  The maximum value for the watchdog time-out is 300 ms.  Setting the time-out to zero turns off the watchdog and is not recommended.   This field is optional and it is recommended to not override the default.
 
 ### Foot pedals
 
 Also in **version 1.5**, IOs configuration for the foot pedals can (and should) be separated from the arm configuration.   In **version 1.4** and lower, users had to maintain two sawRobotIO1394 XML configuration files for each MTM, one with the foot pedals IO configuration and one without.  In **version 1.4** the arms section is used to defined the arms only while the new option `"io": { "footpedals": }` allows user to re-use a predefined configuration for the foot pedals IO configuration.  For example, if the foot pedals are connected to an MTMR controller, you will need:
-```js
+```json
   "io": {
     ...
     "footpedals": "sawRobotIO1394-MTMR-foot-pedals.xml"
@@ -350,7 +349,7 @@ Also in **version 1.5**, IOs configuration for the foot pedals can (and should) 
 ### FireWire protocol
  
 In **version 1.4** and higher, you can also specify the FireWire protocol used to communicate between the PC and the controllers:
-```js
+```json
   "io": {
     "firewire-protocol": "sequential-read-broadcast-write" // recommended for rev up to 1.5
   }
@@ -370,7 +369,7 @@ For a real arm, you need to provide the file name for the IO, i.e. `sawRobotIO13
 
 Finally you can override the default periodicity of the arm class.  For example adding `"period": 0.001` will set the periodicity to 0.001 (in seconds).
   
-```js
+```json
   "arms":
   [
     {
@@ -404,7 +403,7 @@ The `base-frame` field is used only in combination with the SUJs.
 
 The `operator-present` is optional, i.e. the default behavior is to use the "io" component and the "COAG" button as a dead man switch.  You can use this field to select a different foot pedal.
 
-```js
+```json
   "operator-present": {
     "component": "io",
     "interface": "COAG"
@@ -413,7 +412,7 @@ The `operator-present` is optional, i.e. the default behavior is to use the "io"
 
 You can then define multiple tele-operation components for different pairs of MTM/PSMs.  Please note that we still don't support multiple tools for a single arm like a real daVinci would so make sure each MTM and PSM is used only once.
 
-```js
+```json
     "psm-teleops":
     [
         {
@@ -443,6 +442,6 @@ You can then define multiple tele-operation components for different pairs of MT
 
 Please note that the `"period"` is optional and you should probably set it only if you have specific needs.  The `"rotation"` is used to re-align the master coordinate systems between the MTM(s) and PSM/ECM.  You might have a different matrix if you're not using the setup joints.
 
-Please note that `"ecm-teleop"` requires an ECM.  This feature requires version 1.6.0 and above.
+Please note that `"ecm-teleop"` requires an ECM.  This feature is available in version 1.6.0 and above.
 
-For release **1.6** and above, there is a new scope for tele operation components called "configure-parameter".   In this scope, one can define "rotation" using the same format as release **1.5** and below as well as "scale" (a floating point value, ideally greater than 0.0 and lesser than 1.0).  For PSM tele operation, one can also specify "ignore-jaw" which can be set to `True` or `False` if your master arm doesn't have a gripper or your slave arm doesn't have jaws.
+For release **1.6** and above, there is a new scope for tele-operation components called "configure-parameter".   In this scope, one can define "rotation" using the same format as release **1.5** and below as well as "scale" (a floating point value, ideally greater than 0.0 and lesser than 1.0).  For PSM tele operation, one can also specify "ignore-jaw" which can be set to `True` or `False` if your master arm doesn't have a gripper or your slave arm doesn't have jaws.
