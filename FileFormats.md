@@ -375,7 +375,7 @@ This section is used to configure some of the external devices found on a full d
 
 ### Head sensor
 
-Instructions to connect to the da Vinci head sensor can be found [here](/jhu-dvrk/sawIntuitiveResearchKit/wiki/HeadSensor).  Once you have the cable, the console configuration file needs the following:
+Introduced in **version 1.6**.  Instructions to connect to the da Vinci head sensor can be found [here](/jhu-dvrk/sawIntuitiveResearchKit/wiki/HeadSensor).  Once you have the cable, the console configuration file needs the following:
 
 ```json
     "operator-present": {
@@ -384,7 +384,7 @@ Instructions to connect to the da Vinci head sensor can be found [here](/jhu-dvr
 
 ### Endoscope focus
 
-Instructions to connect to the da Vinci endoscope focus controller can be found [here](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Full-da-Vinci).  Once you have the cable, the console configuration file needs the following:
+Introduced in **version 1.6**.  Instructions to connect to the da Vinci endoscope focus controller can be found [here](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Full-da-Vinci).  Once you have the cable, the console configuration file needs the following:
 
 ```json
     "endoscope-focus": {
@@ -450,7 +450,7 @@ This is required for all arms connected to the hardware using the component from
 
 ### PID
 
-
+This is required for all the dVRK and derived arms, either in simulation mode or not.  It is strongly recommended to use the configuration files provided along the source code.  Since the console class has a search path that includes the directory where the default PID configurations files are, there is no need to copy the files from the source directory.
 
 ### Simulation
 
@@ -458,7 +458,44 @@ If the arm is simulated, one need to add `"simulation": "KINEMATIC"`.  In this c
 
 ### Base frame
 
-Introduced in **rev 1.6**.  
+There are two possible syntaxes to define the base frame for the arm, one for a static configuration and one for a moving base frame.  The syntax for a static configuration has been introduced in **version 1.6**.  It requires two fields:
+  * `"reference-frame"`: name of the reference frame, i.e. string used for display as well as ROS tf broadcast
+  * `"transform"`: a 4x4 transformation matrix
+```json
+    {
+        "name": "MTMR",
+        "type": "MTM",
+        "io": "sawRobotIO1394-MTMR-28247.xml",
+        "pid": "sawControllersPID-MTMR.xml",
+        "kinematic": "mtm.json",
+        "base-frame": {
+            "reference-frame": "HRSV",
+            "transform": [[ -1.0,  0.0,          0.0,         -0.180],
+                          [  0.0,  0.866025404,  0.5,          0.400],
+                          [  0.0,  0.5,         -0.866025404,  0.475],
+                          [  0.0,  0.0,          0.0,          1.0]]
+        }
+    }
+```
+In the example above, we define the base frame of the MTMR using the ISI convention, i.e. the origin is just in the middle of the eye piece of the stereo display (`"HSRV"`), the Z axis is aligned with the display depth (hence the 30 degrees rotation) and shifted to the right (translation by -0.180 in X).
+
+For a moving frame, the `base-frame` is retrieve in runtime using a cisst/SAW component and interface.  Therefore it requires two fields:
+  * `"component"`: name of the component providing the base frame
+  * `"interface"`: name of the provided interface with the command to retrieve the base frame
+```json
+    {
+        "name": "PSM1",
+        "type": "PSM",
+        "io": "sawRobotIO1394-PSM1-49695.xml",
+        "pid": "sawControllersPID-PSM.xml",
+        "kinematic": "psm-large-needle-driver.json",
+        "base-frame": {
+            "component": "SUJ",
+            "interface": "PSM1"
+        }
+    }
+```
+In the above example, the PSM1 base frame is provided at runtime by the `SUJ` component.  This component has one provided interface per SUJ arm, appropriately named after the arm it carries (in this case `PSM1`).
 
 ### Component and interface
 
