@@ -61,7 +61,7 @@ A ROS interface is available via [mtsROSBridge](https://github.com/jhu-cisst/cis
 
 ## Firmware
 
-Firmware version 3.0, 4.0, or 5.0 is now required, please upgrade.  Version 4.0 adds support for FireWire broadcasts, which enables faster I/O performance.
+Firmware version 4.0, 5.0 or 6.0 is now required (dVRK 1.6), please upgrade your firmware to Rev6.  Version 6.0 adds support for FPGA based velocity estimation.
 https://github.com/jhu-cisst/mechatronics-firmware/wiki/FPGA-Program 
 
 ## Software
