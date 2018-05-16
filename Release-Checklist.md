@@ -3,15 +3,17 @@
 * Q/R: Qt, ROS
 
 ## Checks
-| test | 1.5 |
-|------|-----|
-|Compile w/o ROS                |?|
-|Compile 14.04 + Jade           |Y|
-|Compile 16.04 + Kinetic        |Y|
-|Compile 16.04 + Lunar          |Y|
-|Firmware mix 4/5               |Y|
-|Firmware 6                     |N|
-|All firewire protocols full dV |Not full broadcast|
+| test | 1.5 | 1.6 |
+|------|-----|-----|
+|Compile w/o ROS                |?|Y|
+|Compile 14.04 + Jade           |Y|?|
+|Compile 16.04 + Kinetic        |Y|Y|
+|Compile 16.04 + Lunar          |Y|?|
+|Compile 17.04 + Lunar          | |Y|
+|Compile 18.04 + Melodic        | |Y|
+|Firmware mix 4/5               |Y|Y|
+|Firmware 6                     |N|Y|
+|All firewire protocols full dV |Not full broadcast|Not full broadcast|
 |Matlab ConfigGenerator (EMP)   |EMP|
 |Footpedals event(QR)           |QR|
 |Trigger watchdog (Q)           |QR|
