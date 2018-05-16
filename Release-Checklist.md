@@ -8,11 +8,11 @@
 |Compile w/o ROS                |?|Y|
 |Compile 14.04 + Jade           |Y|?|
 |Compile 16.04 + Kinetic        |Y|Y|
-|Compile 16.04 + Lunar          |Y|?|
-|Compile 17.04 + Lunar          | |Y|
-|Compile 18.04 + Melodic        | |Y|
+|Compile 16.04 + Lunar          |Y|deprecated|
+|Compile 17.04 + Lunar          |n/a|Y|
+|Compile 18.04 + Melodic        |n/a |Y|
 |Firmware mix 4/5               |Y|Y|
-|Firmware 6                     |N|Y|
+|Firmware 6                     |n/a|Y|
 |All firewire protocols full dV |Not full broadcast|Not full broadcast|
 |Matlab ConfigGenerator (EMP)   |EMP|EMP|
 |Current calibration (EMP)      |SEMP|SEMP|
