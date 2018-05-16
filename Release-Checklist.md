@@ -32,4 +32,4 @@
 |`rosrun dvrk_robot dvrk_mtm_cartesian_impedance.py X`|n/a|Y|
 |`rosrun dvrk_robot dvrk_psm_test.py X`|n/a|Y|
 |`rosrun dvrk_robot dvrk_psm_effort_test.py X`|n/a|Y (not 5mm tools!)|
-|ROS Matlab `dvrk_matlab/test`<br>`test_arm_api('X')`<br>`test_arm_move('X')`| <br>L<br>L |
+|ROS Matlab `dvrk_matlab/test`<br>`test_arm_api('X')`<br>`test_arm_move('X')`| <br>L<br>L | <br>PM<br>PM |
