@@ -20,11 +20,11 @@
 |MTM gripper calibration (M)    |M|M|
 |Footpedals event(QR)           |QR|QR|
 |Trigger watchdog (Q)           |QR|Q|
-|Qt PID application             |EMP|
+|Qt PID application             |EMP|EMP|
 |Home PSM, coupling<br>no adapter, no tool |Y|Y|
 |Home PSM, coupling<br>adapter, no tool    |Y|Y|
 |Home PSM, coupling<br>adapter, tool       |Y|Y|
-|5mm tool<br>Teleop, Python, Matlab        |Y|
+|5mm tool<br>[T]eleop, [P]ython, [M]atlab        |Y|T|
 |Teleop PSM over UDP socket<br>`console-MTMR-PSM1SocketClient-Teleop.json`<br>`console-PSM1SocketServer.json`|Y|Y|
 |Teleop PSM simulated<br>console-MTMR-PSM1_KIN_SIMULATED-Teleop.json|Y|Y|
 |`rosrun dvrk_robot dvrk_arm_test.py X`|EMP|EMP|
