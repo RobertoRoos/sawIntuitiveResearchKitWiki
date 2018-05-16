@@ -14,16 +14,16 @@
 |Firmware mix 4/5               |Y|Y|
 |Firmware 6                     |N|Y|
 |All firewire protocols full dV |Not full broadcast|Not full broadcast|
-|Matlab ConfigGenerator (EMP)   |EMP|
-|Footpedals event(QR)           |QR|
-|Trigger watchdog (Q)           |QR|
-|Current calibration (EMP)      |SEMP|
+|Matlab ConfigGenerator (EMP)   |EMP|EMP|
+|Current calibration (EMP)      |SEMP|SEMP|
 |Pot calibration (EMP)          |EMP|
 |MTM gripper calibration (M)    |M|
+|Footpedals event(QR)           |QR|QR|
+|Trigger watchdog (Q)           |QR|Q|
 |Qt PID application             |EMP|
-|Home PSM, coupling<br>no adapter, no tool |Y|
-|Home PSM, coupling<br>adapter, no tool    |Y|
-|Home PSM, coupling<br>adapter, tool       |Y|
+|Home PSM, coupling<br>no adapter, no tool |Y|Y|
+|Home PSM, coupling<br>adapter, no tool    |Y|Y|
+|Home PSM, coupling<br>adapter, tool       |Y|Y|
 |5mm tool<br>Teleop, Python, Matlab        |Y|
 |Teleop PSM over UDP socket<br>`console-MTMR-PSM1SocketClient-Teleop.json`<br>`console-PSM1SocketServer.json`|Y|
 |Teleop PSM simulated<br>console-MTMR-PSM1_KIN_SIMULATED-Teleop.json|Y|
