@@ -62,18 +62,14 @@ git pull
 
 ### `devel`
 
-## Todo for 1.6
+## Todo for 1.7
 
 Pending issues:
 * #54, save content of `.cal` file in generated XML file (for debug, retrieval, ...)
 * #35, last issue is to control multiple slaves with one master
-* Make sure console handles SUJ and PSM/ECM clutch 
-* Fix jaw motion when switching from direct to goal on PSM
-* Fix effort mode on PSM, both cartesian and joint
 * Add dvrk-openigt to cisst-saw
 * Add optional for ROS bridge topics
-* Implement motion of ECM in teleopECM
-* Add ROS TF support, specially for SUJ
-* Better handling of redundant joints in MTMs
+* Better handling of redundant joints in MTMs #2 and #56
+* #3 MTM and ECM gravity compensation 
 * Add alert when SUJ are moved without brakes released
 * Add test function on user Id and permission on `/dev/fw*`?
