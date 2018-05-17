@@ -28,9 +28,29 @@ This has to be done only once by a user with sudo privileges.  You can use Synap
 If you installed linux recently, you are likely to have Kernel 3.x with the new Juju firewire driver stack, which means the firewire device would be /dev/fw* instead of the old /dev/raw1394*. In order to run the control software without root permission, please do the following steps:
  * Create `/etc/udev/rules.d` folder if it's not there
  * Add rules for `/dev/fw*` devices (or `/dev/raw1394*` for Ubuntu versions prior to 10.04)
- * Create Group **fpgaqla**
+ * Optionally create group **fpgaqla**
  * Optionally add the current user to Group **fpgaqla**
- * Restart computer
+ * Reload udev rules
+
+**Note**: pick one of the two solutions described below!
+
+## Convenient solution
+
+If you or your institution doesn't care about who can access the FireWire devices on your system, you can grant anyone to have read and write permissions on all FireWire devices.  This is simpler to manage but not as safe as the solution described in the next section.
+
+The following script should be run only once per computer:
+```sh
+   sudo mkdir /etc/udev/rules.d # create a directory if needed
+   cd
+   echo 'KERNEL=="fw*", GROUP="fpgaqla", MODE="0666"' > ~/80-firewire-all.rules # create the rule
+   sudo mv ~/80-firewire-all.rules /etc/udev/rules.d/80-firewire-all.rules  # move the rule in the proper directory
+   sudo addgroup fpgaqla          # create the group with read-write access to /dev/fw*
+   sudo udevadm control --reload-rules # apply new rules
+```
+
+## Safer solution
+
+If you or your institution cares about who can access the FireWire devices on your computer you can create a dedicated unix group to control who can access the FireWire devices.
 
 The following script should be run only once per computer and performs the steps described above:
 ```sh
@@ -39,6 +59,7 @@ The following script should be run only once per computer and performs the steps
    echo 'KERNEL=="fw*", GROUP="fpgaqla", MODE="0660"' > ~/80-firewire-fpgaqla.rules # create the rule
    sudo mv ~/80-firewire-fpgaqla.rules /etc/udev/rules.d/80-firewire-fpgaqla.rules  # move the rule in the proper directory
    sudo addgroup fpgaqla          # create the group with read-write access to /dev/fw*
+   sudo udevadm control --reload-rules # apply new rules
    sudo adduser `whoami` fpgaqla  # add current user to the group
 ```
 
