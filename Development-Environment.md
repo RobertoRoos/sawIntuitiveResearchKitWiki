@@ -5,6 +5,8 @@
 - [Install Ubuntu](#install-ubuntu)
 - [Install libraw1394 on Ubuntu](#install-libraw1394-on-ubuntu)
 - [Set permission for 1394 device](#set-permission-for-1394-device)
+  - [Convenient solution](#convenient-solution)
+  - [Safer solution](#safer-solution)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
