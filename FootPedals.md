@@ -18,8 +18,8 @@ The design described below is based on up to 3 pairs of foot pedals.  One can us
 
 # Material
 
- * One (or two or three) pairs of foot pedals.  We found that these pedals are nicely built and heavy enough to not slide on the floor when used: https://www.amazon.com/dp/B077NM69DL   The following model might work as well but we didn't try: https://smile.amazon.com/Plastic-Double-Action-Switch-Pedal/dp/B077NK8XYZ
- * Cables: https://www.amazon.com/Monoprice-6ft-DB15-Molded-Cable/dp/B002LWJ7TA  You will need 2 to 4 cables.
+ * One (or two or three) pairs of foot pedals.  We found that these pedals are nicely built and heavy enough to not slide on the floor when used: https://smile.amazon.com/dp/B077NM69DL   The following model might work as well but we didn't try: https://smile.amazon.com/Plastic-Double-Action-Switch-Pedal/dp/B077NK8XYZ
+ * Cables: https://smile.amazon.com/Monoprice-6ft-DB15-Molded-Cable/dp/B002LWJ7TA  You will need 2 to 4 cables.
 
 # Wiring
 
