@@ -206,7 +206,7 @@ You can download a document to print on letter paper: [dVRK labels for SUJ](/jhu
 
 ![dVRK focus controller cable](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-focus-control-cable.jpg)
 
-Once you've build your cable,you can modify your console JSON configuration file and add:
+Once you've build your cable, you can modify your console JSON configuration file and add:
 ```json
     "endoscope-focus": {
         "io": "sawRobotIO1394-MTML-dv-endoscope-focus.xml"
@@ -214,7 +214,7 @@ Once you've build your cable,you can modify your console JSON configuration file
 ```
 The example above assumes that:
  * You're using the dVRK software **rev 1.6** or above
- * You have connected to the camera focus cable to the MTMR controller.  If you're connecting the endoscope focus unit to another controller and you can't find the corresponding configuration file in `sawIntuitiveResearchKit/share/io`, feel free to create one and contribute it back to the community
+ * You have connected to the camera focus cable to the MTML controller.  If you're connecting the endoscope focus unit to another controller and you can't find the corresponding configuration file in `sawIntuitiveResearchKit/share/io`, feel free to create one and contribute it back to the community
  * You have the da Vinci foot pedal connected with the Camera +/- toggle pedal properly working.  You can check in the Qt graphical user interface, under the IO/Buttons tab.
 
 At that point, you should be able to control the camera focus using the foot pedals.  When pressing the +/- pedal you should:
