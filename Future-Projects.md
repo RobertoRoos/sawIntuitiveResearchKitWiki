@@ -40,7 +40,7 @@ Use both Hall Effect sensors, we need to use one of the digital outs to toggle t
 **[Improvement, core C++]**
 
 ## Encoder/potentiometer redundancy
-Includes better filtering, maybe including some kind of delay to take into account the fact that the potentiometers are slow.  Filtering on the PC side tends to introduce more delay so maybe add filtering on the FPGA.   The current (simplistic) implementation is based on total of successive failures.<br>
+Includes better filtering, maybe including some kind of delay to take into account the fact that the potentiometers are slow.  Filtering on the PC side tends to introduce more delay so maybe add filtering on the FPGA.   The current (simplistic) implementation is based on total of successive failures.  In release 1.6 we've introduced a new test based on distance and latency with parameters set per joint and per arm in XML configuration file.  This is not ideal but should be sufficient for most users.<br>
 Figure out how to use potentiometer on master roll (last active joint).  See [#25](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/issues/25).<br>
 **[New feature, core C++]**
 
@@ -72,8 +72,8 @@ Evaluate a different control, we currently use absolute positions since the foll
 **[Improvement, core C++]**
 
 ## ECM teleoperation
-Implement ECM two hands teleoperation.<br>
-An empty component was introduced in 1.4 but the actual teleoperation is not implemented (missing both ECM motion and MTM force feedback).<br>
+~~Implement ECM two hands teleoperation.<br>
+An empty component was introduced in 1.4 but the actual teleoperation is not implemented (missing both ECM motion and MTM force feedback).~~  This was implemented in 1.6.<br>
 **[New feature, core C++]**
 
 ## Trajectory generation
@@ -81,7 +81,7 @@ An empty component was introduced in 1.4 but the actual teleoperation is not imp
 **[Improvement, core C++]**
 
 ## Support for ROS MoveIt!
-We could provide an interface accepting ROS Trajectory messages (http://docs.ros.org/jade/api/trajectory_msgs/html/msg/JointTrajectory.html), we already have the `joint_state` so that should be enough for joint space.  I'm not totally sure what would be needed for cartesian trajectories but I assume a better integration with TF is required.  The joint space trajectories shouldn’t be too hard to code on the C++ side, take a list of points (PT and/or PVT) and use the existing robQuintic code to implement a trajectory following mode.  There will be a need to spec a cisstParameterTypes message and add the conversion method from ROS to cisst.<br>
+We could provide an interface accepting ROS Trajectory messages (http://docs.ros.org/jade/api/trajectory_msgs/html/msg/JointTrajectory.html), we already have the `joint_state` so that should be enough for joint space.  I'm not totally sure what would be needed for cartesian trajectories but I assume a better integration with TF is required.  The joint space trajectories shouldn’t be too hard to code on the C++ side, take a list of points (PT and/or PVT) and use the existing robQuintic code to implement a trajectory following mode.  There will be a need to spec a cisstParameterTypes message and add the conversion method from ROS to cisst.  An alternative solution would be to use a separate ROS node that would rely on the ros controller "FollowJointTrajectory", the communication with the dVRK can be done by re-implementing a hardware (HW) abstraction using ROS topics.<br>
 **[New feature, core C++, ROS]**
 
 # Video
@@ -103,7 +103,7 @@ For dVRK users, tools to:
 **[New feature, ROS/Matlab, documentation]**
 
 ## Stereo endoscope focus
-Add support in console to use foot pedals CAM+/- to control the focus.  See [#55](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/issues/55) and [#50](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/issues/50)<br>
+~~Add support in console to use foot pedals CAM+/- to control the focus.  See [#55](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/issues/55) and [#50](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/issues/50)~~.  This has been implemented in 1.6.<br>
 See impact of focus change on camera calibration<br>
 Maybe track and approximate camera focus to provide a better camera calibration estimate<br>
 Autofocus?
