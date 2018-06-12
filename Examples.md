@@ -33,7 +33,7 @@ There are three ways to run the software.  The first one is the most common, the
 1. Running an executable based C++ code that creates and connects the components:
   * `sawIntuitiveResearchKitQtPID` -- requires several command-line parameters
   * `sawIntuitiveResearchKitQtConsoleJSON` -- requires a console.json configuration file
-  * `rosrun dvrk_robot dvrk_console_json` -- smae as sawIntuitiveResearchKitQtConsoleJSON but with ROS topics
+  * `rosrun dvrk_robot dvrk_console_json` -- same as sawIntuitiveResearchKitQtConsoleJSON but with ROS topics
 
 1. Using the `cisstComponentManager` to process a [script file](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/blob/master/share/sawIntuitiveResearchKitQtPID.cisst) that creates and connects the components (requires shared libraries):
   * `cisstComponentManager -e sawIntuitiveResearchKitQtPID.cisst`
