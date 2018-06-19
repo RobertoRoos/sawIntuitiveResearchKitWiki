@@ -16,9 +16,7 @@ The safety chain is connected via one or two connectors on the back of the contr
 After some iterations, the final design consists of two connectors: a 4-pin connector and a 5-pin connector.
 The purpose of this page is to explain how to correctly connect the safety chain, based on this final design.
 
-As of June 2018, we have developed retrofit kits to convert all existing controller boxes to the new standard.
-Designs, documentation and images of the retrofit kits can be found in this [GitHub project](https://github.com/jhu-dvrk/dvrk-estop-retrofit)
-and assembled retrofit kits (i.e., a small PCB with connectors) is being made available to the community at no cost.
+**As of June 2018, we have developed retrofit kits to convert all existing controller boxes to the new standard. Designs, documentation and images of the retrofit kits can be found in this [GitHub project](https://github.com/jhu-dvrk/dvrk-estop-retrofit) and assembled retrofit kits (i.e., a small PCB with connectors) is being made available to the community at no cost.**
 
 # 2. Overview of Safety Chain
 
@@ -46,12 +44,12 @@ implemented at WPI, and a modular (reconfigurable) e-stop chain that was develop
 The modular e-stop chain, also called reconfigurable e-stop chain, consists of three different types of cables:
 
 1. E-Stop Cable: connects the e-stop to the 5-pin connector on one controller box
-2. Extension Cable: connects the 4-pin connector on one box to the 5-pin connector on another box
+2. Extension (Daisy-Chain) Cable: connects the 4-pin connector on one box to the 5-pin connector on another box
 3. Termination Plug: placed on a 4-pin connector on one of the controller boxes
 
 These are shown in the following image (from the dvrk-estop-retrofit project):
 
-![](https://github.com/jhu-dvrk/dvrk-estop-retrofit/docs/dvrk-estop.png)
+![](https://github.com/jhu-dvrk/dvrk-estop-retrofit/blob/master/docs/dvrk-estop.png)
 
 This design is intended to enable quick reconfiguration of the safety circuit. For example, a complete DVRK setup (4 daisy-chained controller boxes) would have 1 E-Stop Cable, 3 Extension Cables, and 1 Termination Plug. To split this into two separate systems (e.g., MTMR+PSM1 and MTML+PSM2), each system would use 1 E-Stop Cable, 1 Extension Cable, and 1 Termination Plug.
 
