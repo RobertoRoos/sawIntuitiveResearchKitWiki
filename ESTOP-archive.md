@@ -1,7 +1,5 @@
 # Obsolete E-stop documentation (DO NOT USE)
 
-This page is not linked anywhere, so you should not be reading it!
-
 ## 1. Modular E-Stop connection using mini-DIN
 
 We mplemented a module e-stop connection at JHU using mini-DIN connectors.  The female connectors are Digikey P/N CP-2140-ND (free hanging) or CP-2540-ND (panel mount). The male connector is Digikey P/N CP-2040-ND (free hanging). For the extension cable, it is possible to use an S-Video cable IF the pin carrying the 12V is cut (pin 1 in the drawing below). Otherwise, you would also connect the 12V supplies together, as in the Parallel Connection below, though at least the current would not flow through the safety relays.

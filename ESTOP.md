@@ -2,6 +2,15 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
 
+- [1. Summary](#1-summary)
+- [2. General Info](#2-general-info)
+- [3. Overview of Safety Chain](#3-overview-of-safety-chain)
+- [4. Modular E-Stop Chain (recommended)](#4-modular-e-stop-chain-recommended)
+- [5. Monolithic E-stop Chain (not recommended)](#5-monolithic-e-stop-chain-not-recommended)
+- [6. A quick note about grounding](#6-a-quick-note-about-grounding)
+- [7. Miscellaneous](#7-miscellaneous)
+- [8. Debugging](#8-debugging)
+
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 # 1. Summary
@@ -75,7 +84,7 @@ To correct this deficiency, later versions of the controller box include at leas
 Since the 4-pin safety connector does not include a GND pin, this GND connection could be obtained by attaching via a screw on the enclosure. See the notes on
 the [dvrk-estop-retrofit project](https://github.com/jhu-dvrk/dvrk-estop-retrofit). On the 5-pin safety connector, the GND is available on pin 2.
 
-# 7. Misc.
+# 7. Miscellaneous
 
 [Prior (obsolete) e-stop information](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ESTOP-archive).
 
@@ -85,7 +94,7 @@ If you have trouble powering on the motors, please continue reading this section
 
 ## 8.1. Test single FPGA-QLA board set (bypassing relays on QLA boards)
 
-As step 1, we want to confirm that the FPGA board, QLA board and power supplies all work. We do this by bypassing the internal relays in the box but keeping the E-STOP in the chain as shown in the next figure. 
+As step 1, we want to confirm that the FPGA board, QLA board and power supplies all work. We do this by bypassing the internal relays in the box but keeping the E-STOP in the chain as shown in the next figure. This is done by connecting the +12V to the EN (enable) signal, via the e-stop. The figure below shows the wiring with the 4-pin safety connector, but similar wiring can be done with the 5-pin connector.
 Connect the modified connector to the controller box you want to debug and run the ''qladisp'' program: 
 
 ```bash
@@ -104,7 +113,10 @@ Connect the modified connector to the controller box you want to debug and run t
 
 ## 8.2. Test single controller box with QLA relays in the loop
 
-After confirming that the power system is working, we start to add relays inside one controller box to the chain. Modify the connector as indicated in the following figure. 
+After confirming that the power system is working, we start to add relays inside one controller box to the chain.
+With the modular connector setup (Section 4), you should attach the E-Stop cable to the 5-pin connector and the Termination Plug
+to the 4-pin connector. Alternatively, modify the connector as indicated in the following figure (for a 4-pin connector; 5-pin connection
+is similar).
 
 ```bash
  # assume we are testing MTML box
