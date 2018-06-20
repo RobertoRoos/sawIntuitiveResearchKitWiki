@@ -4,7 +4,11 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# 1. General Info
+# 1. Summary
+
+The safety chain, which typically includes an e-stop button, connects all controller boxes in a configured system. We have standardized on 4-pin and 5-pin safety connectors on all controller boxes. If your controller box does not already have these connectors, as of June 2018, we have developed retrofit kits to convert earlier controller boxes to this standard. Designs, documentation and images of the retrofit kits can be found in this [GitHub project](https://github.com/jhu-dvrk/dvrk-estop-retrofit) and assembled retrofit kits (i.e., a small PCBs with connectors) are being made available to the community at no cost.
+
+# 2. General Info
 
 Each controller box contains one or two connectors to support a "safety chain". The basic concept is that the safety chain must be unbroken
 (i.e., electrically closed) for the motor power supplies in all of the connected controller boxes to be enabled.
@@ -16,9 +20,7 @@ The safety chain is connected via one or two connectors on the back of the contr
 After some iterations, the final design consists of two connectors: a 4-pin connector and a 5-pin connector.
 The purpose of this page is to explain how to correctly connect the safety chain, based on this final design.
 
-**As of June 2018, we have developed retrofit kits to convert all existing controller boxes to the new standard. Designs, documentation and images of the retrofit kits can be found in this [GitHub project](https://github.com/jhu-dvrk/dvrk-estop-retrofit) and assembled retrofit kits (i.e., a small PCB with connectors) is being made available to the community at no cost.**
-
-# 2. Overview of Safety Chain
+# 3. Overview of Safety Chain
 
 Each controller box contains 3 relays, as shown in Figure 1: 
 * 1 relay on each of the two QLA boards 
@@ -39,7 +41,7 @@ the signals from pins 2-4 on the old (4-pin) connector to pins 3-5 on the new (5
 The advantage of the final design, of one 4-pin and one 5-pin connector is that it enables both a monolithic (hard-wired) e-stop chain, as
 implemented at WPI, and a modular (reconfigurable) e-stop chain that was developed at JHU and is currently used on most systems.
 
-# 3. Modular E-stop Chain (recommended)
+# 4. Modular E-stop Chain (recommended)
 
 The modular e-stop chain, also called reconfigurable e-stop chain, consists of three different types of cables:
 
@@ -53,16 +55,18 @@ These are shown in the following image (from the dvrk-estop-retrofit project):
 
 This design is intended to enable quick reconfiguration of the safety circuit. For example, a complete DVRK setup (4 daisy-chained controller boxes) would have 1 E-Stop Cable, 3 Extension Cables, and 1 Termination Plug. To split this into two separate systems (e.g., MTMR+PSM1 and MTML+PSM2), each system would use 1 E-Stop Cable, 1 Extension Cable, and 1 Termination Plug.
 
-# 4. Monolithic E-stop Chain (not recommended)
+# 5. Monolithic E-stop Chain (not recommended)
 
 The monolithic e-stop chain, previously called the serial e-stop chain, is built to connect to a specific number of controllers. For example,
-the figure below shows the connection to two controller boxes (with 4-pin connectors). If the controller box has a 5-pin connector, it
+the figures below show the connection to two controller boxes (left) and to four controller boxes (right). Both examples show controllers with 4-pin connectors. If the controller box has a 5-pin connector, it
 would be better to use that, so that the GND can also be connected. Note that whether using the 4-pin or 5-pin connectors,
-the disadvantage of this setup is that the cable would have to be redone to support fewer or more controllers.
+the disadvantage of this setup is that the cable has to be redone to support fewer or more controllers.
 
-![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/daVinci-Estop_2Controllers-1.png)
+| Two controller boxes (not recommended) | Four controller boxes (not recommended) |
+| ------- | ------- |
+| ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/daVinci-Estop_2Controllers-1.png) | ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/daVinci-Estop_4Controllers-1.png) |
 
-# 5. A quick note about grounding
+# 6. A quick note about grounding
 
 It is good practice to connect the GND (ground) on all components of a system. The original controller box, with a 4-pin safety connector, did not include a specific GND connection between controller boxes and therefore relied on the likelihood that the GND would be shared via the AC wiring (e.g., if all controller boxes are plugged in to the same AC circuit).
 
@@ -71,20 +75,17 @@ To correct this deficiency, later versions of the controller box include at leas
 Since the 4-pin safety connector does not include a GND pin, this GND connection could be obtained by attaching via a screw on the enclosure. See the notes on
 the [dvrk-estop-retrofit project](https://github.com/jhu-dvrk/dvrk-estop-retrofit). On the 5-pin safety connector, the GND is available on pin 2.
 
-# 6. Misc.
+# 7. Misc.
 
 [Prior (obsolete) e-stop information](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ESTOP-archive).
 
-# 7. Debugging
+# 8. Debugging
 
 If you have trouble powering on the motors, please continue reading this section.
 
-**Note: this section was created assuming a 4-pin safety connector and should be updated.**
+## 8.1. Test single FPGA-QLA board set (bypassing relays on QLA boards)
 
-## 3.1. Test single FPGA-QLA board set (bypassing relays on QLA boards)
-
-As step 1, we want to confirm that the FPGA board, QLA board and power supplies all work. We do this by bypassing the internal relays in the box but keeping the E-STOP in the chain as shown in the next figure. ** For the new safety chain, it should be sufficient to connect the E-Stop Cable and Termination Plug to the
-controller box.**
+As step 1, we want to confirm that the FPGA board, QLA board and power supplies all work. We do this by bypassing the internal relays in the box but keeping the E-STOP in the chain as shown in the next figure. 
 Connect the modified connector to the controller box you want to debug and run the ''qladisp'' program: 
 
 ```bash
@@ -101,7 +102,7 @@ Connect the modified connector to the controller box you want to debug and run t
   ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/estop_bypass_one.jpg)
 
 
-## 3.2. Test single controller box with QLA relays in the loop
+## 8.2. Test single controller box with QLA relays in the loop
 
 After confirming that the power system is working, we start to add relays inside one controller box to the chain. Modify the connector as indicated in the following figure. 
 
@@ -150,17 +151,5 @@ Assume we are testing MTML board 0 and 1:
  * You should also hear a click sound from the relay
 1. Do a continuity test between P1 and P2. Now they should be shorted; if not, check the wire connection. 
 
-Finally, do the test in section 3.2. You should be good to go. 
+Finally, do the test in section 8.2. You should be good to go. 
 
-
-## 3.3. Test full system
-
-At this point, we are sure that the relay and power system work properly. What's left is to make your connector based on your setup. The next figure shows a setup for two controller boxes (from WPI). 
-
-NOTE: when you receive your controller box, you might also have received 4 setup diagrams including 
-* 2 controller boxes
-* 4 controller boxes
-* 2 controller boxes bypassing internal relays
-* 4 controller boxes bypassing internal relays 
-
-![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/daVinci-Estop_2Controllers-1.png) ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/daVinci-Estop_4Controllers-1.png)
