@@ -44,12 +44,11 @@ To enable the motor power supply, the 12V power needs to be connected to RELAY 3
 Figure 1: Controller box relay and power supply
 
 Figure 1 shows a 4-pin safety connector on the controller box. There have, however, been several variations of safety connectors in the different
-generations of controller boxes, starting with one 4-pin connector, then one 5-pin connector, then two 5-pin connectors, and finally one 4-pin and
-one 5-pin connector.
-In all systems, the connector pinouts are the same. The 5-pin connector is the same as the 4-pin connector except that pin #2 is GND, which shifts
-the signals from pins 2-4 on the old (4-pin) connector to pins 3-5 on the new (5-pin) connector.
+generations of controller boxes, starting with one 4-pin connector, then one 5-pin connector, then two 5-pin connectors, and finally one 4-pin and one 5-pin connector.
+The 5-pin connector is the same as the 4-pin connector except that pin #2 is GND, which shifts
+the signals from pins 2-4 on the old (4-pin) connector to pins 3-5 on the new (5-pin) connector. Note also that in the final design, pin #1 of the 4-pin connector is GND rather than 12V.
 
-The advantage of the final design, of one 4-pin and one 5-pin connector is that it enables both a monolithic (hard-wired) e-stop chain, as
+The advantage of the final design, of one 4-pin and one 5-pin connector, is that it enables both a monolithic (hard-wired) e-stop chain, as
 implemented at WPI, and a modular (reconfigurable) e-stop chain that was developed at JHU and is currently used on most systems.
 
 # 4. Modular E-stop Chain (recommended)
