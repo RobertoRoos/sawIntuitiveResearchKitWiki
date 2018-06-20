@@ -45,7 +45,7 @@ To enable the motor power supply, the 12V power needs to be connected to RELAY 3
 Figure 1: Controller box relay and power supply
 
 Figure 1 shows a 4-pin safety connector on the controller box. There have, however, been several variations of safety connectors in the different
-generations of controller boxes, starting with one 4-pin connector (Build #1), then one 5-pin connector (Build #2?, #3), then two 5-pin connectors (Build #4), and finally one 4-pin and one 5-pin connector (Build #5+).
+generations of controller boxes, starting with one 4-pin connector (Build #1, #2), then one 5-pin connector (Build #3), then two 5-pin connectors (Build #4), and finally one 4-pin and one 5-pin connector (Build #5+).
 The 5-pin connector is the same as the 4-pin connector except that pin #2 is GND, which shifts
 the signals from pins 2-4 on the old (4-pin) connector to pins 3-5 on the new (5-pin) connector. Note also that in the final design, pin #1 of the 4-pin connector is GND rather than 12V.
 
