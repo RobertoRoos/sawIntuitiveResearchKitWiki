@@ -15,7 +15,9 @@
 
 # 1. Summary
 
-The safety chain, which typically includes an e-stop button, connects all controller boxes in a configured system. We have standardized on 4-pin and 5-pin safety connectors on all controller boxes. If your controller box does not already have these connectors, as of June 2018, we have developed retrofit kits to convert earlier controller boxes to this standard. Designs, documentation and images of the retrofit kits can be found in this [GitHub project](https://github.com/jhu-dvrk/dvrk-estop-retrofit) and assembled retrofit kits (i.e., a small PCBs with connectors) are being made available to the community at no cost.
+<img align="right" width="200" src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/standard-safety-connectors.jpg">
+
+The safety chain, which typically includes an e-stop button, connects all controller boxes in a configured system. We have standardized on 4-pin and 5-pin safety connectors on all controller boxes, as shown on the right image. If your controller box does not already have these connectors, as of June 2018, we have developed retrofit kits to convert earlier controller boxes to this standard. Designs, documentation and images of the retrofit kits can be found in this [GitHub project](https://github.com/jhu-dvrk/dvrk-estop-retrofit) and assembled retrofit kits (i.e., a small PCBs with connectors) are being made available to the community at no cost.
 
 # 2. General Info
 
