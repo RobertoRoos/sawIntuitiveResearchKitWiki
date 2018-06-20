@@ -7,9 +7,10 @@
 - [3. Overview of Safety Chain](#3-overview-of-safety-chain)
 - [4. Modular E-Stop Chain (recommended)](#4-modular-e-stop-chain-recommended)
 - [5. Monolithic E-stop Chain (not recommended)](#5-monolithic-e-stop-chain-not-recommended)
-- [6. A quick note about grounding](#6-a-quick-note-about-grounding)
-- [7. Miscellaneous](#7-miscellaneous)
-- [8. Debugging](#8-debugging)
+- [6. Issue with two 5-pin connectors](#6-issue-with-two-5-pin-connectors)
+- [7. A quick note about grounding](#7-a-quick-note-about-grounding)
+- [8. Miscellaneous](#8-miscellaneous)
+- [9. Debugging](#9-debugging)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -49,7 +50,7 @@ The 5-pin connector is the same as the 4-pin connector except that pin #2 is GND
 the signals from pins 2-4 on the old (4-pin) connector to pins 3-5 on the new (5-pin) connector. Note also that in the final design, pin #1 of the 4-pin connector is GND rather than 12V.
 
 The advantage of the final design, of one 4-pin and one 5-pin connector, is that it enables both a monolithic (hard-wired) e-stop chain, as
-implemented at WPI, and a modular (reconfigurable) e-stop chain that was developed at JHU and is currently used on most systems. Note that this was the intended goal of the systems with two 5-pin connectors, but in those systems it is possible to accidentally bypass some of the safety relays because the Extension (Daisy-Chain) Cable is not straight-through; it connects S1 (pin 3) on one connector to S2 (pin 4) on the other.
+implemented at WPI, and a modular (reconfigurable) e-stop chain that was developed at JHU and is currently used on most systems. Note that this was the intended goal of the systems with two 5-pin connectors, but in those systems it is possible to accidentally bypass some of the safety relays, as described in Section 6.
 
 # 4. Modular E-stop Chain (recommended)
 
@@ -76,7 +77,13 @@ the disadvantage of this setup is that the cable has to be redone to support few
 | ------- | ------- |
 | ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/daVinci-Estop_2Controllers-1.png) | ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/daVinci-Estop_4Controllers-1.png) |
 
-# 6. A quick note about grounding
+# 6. Issue with two 5-pin connectors
+
+The Build #4 controller boxes contain two 5-pin safety connectors. While the intent was to enable both the modular and monolithic connection schemes, it is possible to miswire the e-stop chain because the Extension (Daisy-Chain) Cable is not straight-through; it connects S1 (pin 3) on one connector to S2 (pin 4) on the other. Thus, it matters which way the cable is connected. Connecting it backwards will cause some of the safety relays to be bypassed, as shown in the figure below (for clarity, only the S1-S2 wire is shown).
+
+![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/SafetyChain-Build4.png)
+
+# 7. A quick note about grounding
 
 It is good practice to connect the GND (ground) on all components of a system. The original controller box, with a 4-pin safety connector, did not include a specific GND connection between controller boxes and therefore relied on the likelihood that the GND would be shared via the AC wiring (e.g., if all controller boxes are plugged in to the same AC circuit).
 
@@ -85,11 +92,11 @@ To correct this deficiency, later versions of the controller box include at leas
 Since the 4-pin safety connector does not include a GND pin, this GND connection could be obtained by attaching via a screw on the enclosure. See the notes on
 the [dvrk-estop-retrofit project](https://github.com/jhu-dvrk/dvrk-estop-retrofit). On the 5-pin safety connector, the GND is available on pin 2.
 
-# 7. Miscellaneous
+# 8. Miscellaneous
 
 [Prior (obsolete) e-stop information](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ESTOP-archive).
 
-# 8. Debugging
+# 9. Debugging
 
 If you have trouble powering on the motors, please continue reading this section.
 
