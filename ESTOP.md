@@ -102,7 +102,7 @@ If you have trouble powering on the motors, please continue reading this section
 
 ## 8.1. Test single FPGA-QLA board set (bypassing relays on QLA boards)
 
-As step 1, we want to confirm that the FPGA board, QLA board and power supplies all work. We do this by bypassing the internal relays in the box but keeping the E-STOP in the chain as shown in the next figure. This is done by connecting the +12V to the EN (enable) signal, via the e-stop. The figure below shows the wiring with the 4-pin safety connector, but similar wiring can be done with the 5-pin connector.
+As step 1, we want to confirm that the FPGA board, QLA board and power supplies all work. We do this by bypassing the internal relays in the box but keeping the E-STOP in the chain as shown in the next figure. This is done by connecting the +12V to the EN (enable) signal, via the e-stop. The figure below shows the wiring with the 5-pin safety connector, but similar wiring can be done with the single 4-pin connector.
 Connect the modified connector to the controller box you want to debug and run the ''qladisp'' program: 
 
 ```bash
