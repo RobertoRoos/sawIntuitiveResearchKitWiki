@@ -123,8 +123,8 @@ Connect the modified connector to the controller box you want to debug and run t
 
 After confirming that the power system is working, we start to add relays inside one controller box to the chain.
 With the modular connector setup (Section 4), you should attach the E-Stop cable to the 5-pin connector and the Termination Plug
-to the 4-pin connector. Alternatively, modify the connector as indicated in the following figure (for a 4-pin connector; 5-pin connection
-is similar).
+to the 4-pin connector, as shown in the following figure.
+Alternatively, for a single 4-pin or 5-pin connector, modify the cable to attach 12V to S1 and S2 to EN.
 
 ```bash
  # assume we are testing MTML box
