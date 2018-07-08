@@ -3,14 +3,13 @@
 **Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
 
 - [1. Summary](#1-summary)
-- [2. General Info](#2-general-info)
-- [3. Overview of Safety Chain](#3-overview-of-safety-chain)
-- [4. Modular E-Stop Chain (recommended)](#4-modular-e-stop-chain-recommended)
-- [5. Monolithic E-stop Chain (not recommended)](#5-monolithic-e-stop-chain-not-recommended)
-- [6. Issue with two 5-pin connectors](#6-issue-with-two-5-pin-connectors)
-- [7. A quick note about grounding](#7-a-quick-note-about-grounding)
-- [8. Miscellaneous](#8-miscellaneous)
-- [9. Debugging](#9-debugging)
+- [2. Overview of Safety Chain](#2-overview-of-safety-chain)
+- [3. Modular E-Stop Chain (recommended)](#3-modular-e-stop-chain-recommended)
+- [4. Monolithic E-stop Chain (not recommended)](#4-monolithic-e-stop-chain-not-recommended)
+- [5. Issue with two 5-pin connectors](#5-issue-with-two-5-pin-connectors)
+- [6. A quick note about grounding](#6-a-quick-note-about-grounding)
+- [7. Miscellaneous](#7-miscellaneous)
+- [8. Debugging](#8-debugging)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -18,23 +17,15 @@
 
 <img align="right" width="200" src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/standard-safety-connectors.jpg">
 
-The safety chain, which typically includes an e-stop button, connects all controller boxes in a configured system. We have standardized on 4-pin and 5-pin safety connectors on all controller boxes, as shown on the right image. If your controller box does not already have these connectors, as of June 2018, we have developed retrofit kits to convert earlier controller boxes to this standard. Designs, documentation and images of the retrofit kits can be found in this [GitHub project](https://github.com/jhu-dvrk/dvrk-estop-retrofit) and assembled retrofit kits (i.e., a small PCBs with connectors) are being made available to the community at no cost.
+The safety chain, which typically includes an e-stop button, connects all controller boxes in a configured system. We have standardized on 4-pin and 5-pin safety connectors on all controller boxes, as shown on the right image. If your controller box does not already have these connectors, as of June 2018, we have developed retrofit kits to convert earlier controller boxes to this standard. Designs, documentation and images of the retrofit kits can be found in this [GitHub project](https://github.com/jhu-dvrk/dvrk-estop-retrofit) and assembled retrofit kits (i.e., small PCBs with connectors) are being made available to the community at no cost.
 
-# 2. General Info
+# 2. Overview of Safety Chain
 
 Each controller box contains one or two connectors to support a "safety chain". The basic concept is that the safety chain must be unbroken
 (i.e., electrically closed) for the motor power supplies in all of the connected controller boxes to be enabled.
 If any device on the safety chain breaks electrical continuity, then all motor power supplies in all connected controller boxes are disabled.
 Devices in the safety chain include manually operated switches, such as the e-stop button, and computer-controlled relays, which enable the
-system to disable motor power.
-
-The safety chain is connected via one or two connectors on the back of the controller box (depending on the controller box version).
-After some iterations, the final design consists of two connectors: a 4-pin connector and a 5-pin connector.
-The purpose of this page is to explain how to correctly connect the safety chain, based on this final design.
-
-# 3. Overview of Safety Chain
-
-Each controller box contains 3 relays, as shown in Figure 1: 
+system to disable motor power. This is illustrated in Figure 1, which shows the safety wiring in a controller box. In particular, each controller box contains 3 relays:
 * 1 Safety Relay on each of the two QLA boards
 * 1 relay to control the motor power supply (AC Input Relay)
 
@@ -52,7 +43,7 @@ the signals from pins 2-4 on the old (4-pin) connector to pins 3-5 on the new (5
 The advantage of the final design, of one 4-pin and one 5-pin connector, is that it enables both a monolithic (hard-wired) e-stop chain, as
 implemented at WPI, and a modular (reconfigurable) e-stop chain that was developed at JHU and is currently used on most systems. Note that this was the intended goal of the systems with two 5-pin connectors, but in those systems it is possible to accidentally bypass some of the safety relays, as described in Section 6.
 
-# 4. Modular E-stop Chain (recommended)
+# 3. Modular E-stop Chain (recommended)
 
 The modular e-stop chain, also called reconfigurable e-stop chain, consists of three different types of cables:
 
@@ -66,7 +57,7 @@ These are shown in the following image (from the dvrk-estop-retrofit project):
 
 This design is intended to enable quick reconfiguration of the safety circuit. For example, a complete DVRK setup (4 daisy-chained controller boxes) would have 1 E-Stop Cable, 3 Extension Cables, and 1 Termination Plug. To split this into two separate systems (e.g., MTMR+PSM1 and MTML+PSM2), each system would use 1 E-Stop Cable, 1 Extension Cable, and 1 Termination Plug.
 
-# 5. Monolithic E-stop Chain (not recommended)
+# 4. Monolithic E-stop Chain (not recommended)
 
 The monolithic e-stop chain, previously called the serial e-stop chain, is built to connect to a specific number of controllers. For example,
 the figures below show the connection to two controller boxes (left) and to four controller boxes (right). Both examples show controllers with 4-pin connectors. If the controller box has a 5-pin connector, it
@@ -77,13 +68,13 @@ the disadvantage of this setup is that the cable has to be redone to support few
 | ------- | ------- |
 | ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/daVinci-Estop_2Controllers-1.png) | ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/daVinci-Estop_4Controllers-1.png) |
 
-# 6. Issue with two 5-pin connectors
+# 5. Issue with two 5-pin connectors
 
 The Build #4 controller boxes contain two 5-pin safety connectors. While the intent was to enable both the modular and monolithic connection schemes, it is possible to miswire the e-stop chain because the Extension (Daisy-Chain) Cable is not straight-through; it connects S1 (pin 3) on one connector to S2 (pin 4) on the other. Thus, it matters which way the cable is connected. Connecting it backwards will cause some of the safety relays to be bypassed, as shown in the figure below (for clarity, only the S1-S2 wire is shown).
 
 ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/SafetyChain-Build4.png)
 
-# 7. A quick note about grounding
+# 6. A quick note about grounding
 
 It is good practice to connect the GND (ground) on all components of a system. The original controller box, with a 4-pin safety connector, did not include a specific GND connection between controller boxes and therefore relied on the likelihood that the GND would be shared via the AC wiring (e.g., if all controller boxes are plugged in to the same AC circuit).
 
@@ -92,11 +83,11 @@ To correct this deficiency, later versions of the controller box include at leas
 Since the 4-pin safety connector does not include a GND pin, this GND connection could be obtained by attaching via a screw on the enclosure. See the notes on
 the [dvrk-estop-retrofit project](https://github.com/jhu-dvrk/dvrk-estop-retrofit). On the 5-pin safety connector, the GND is available on pin 2.
 
-# 8. Miscellaneous
+# 7. Miscellaneous
 
 [Prior (obsolete) e-stop information](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ESTOP-archive).
 
-# 9. Debugging
+# 8. Debugging
 
 If you have trouble powering on the motors, please continue reading this section.
 
