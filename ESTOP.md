@@ -33,13 +33,13 @@ To enable the motor power supply, the 12V power needs to be connected to the AC 
 
 ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/estop_relay.jpg) 
 
-Figure 1: Controller box relays and power supply
+_Figure 1: Controller box relays and power supply_
 
 Figure 1 shows the standard safety connectors (one 4-pin and one 5-pin) on the controller box. There have, however, been several variations of safety connectors in the different generations of controller boxes, as shown in the figure below. All of them can be upgraded to the standard configuration (shown on the right) by using the appropriate retrofit kit.
 
 ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/estop_connectors.png)
 
-Figure 2: Safety connectors for the different generations of controller boxes. Standard configuration (one 4-pin and one 5-pin connector) shown on right.
+_Figure 2: Safety connectors for the different generations of controller boxes. Standard configuration (one 4-pin and one 5-pin connector) shown on right._
 
 The 5-pin connector is the same as the 4-pin connector except that pin #2 is GND, which shifts
 the signals from pins 2-4 on the old (4-pin) connector to pins 3-5 on the new (5-pin) connector. Note also that in the final design, pin #1 of the 4-pin connector is GND rather than 12V.
@@ -130,24 +130,28 @@ Alternatively, for a single 4-pin or 5-pin connector, modify the cable to attach
  #   - 'p' first turns on the QLA relays
  #   - then turns on board and amplifier power
  # The mv-good and all amplifiers should be turned on at this time
- #   - if not, check the DEBUG section
+ #   - if not, check the Hardware Debug section (below)
 ```
 
 ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/estop_one.jpg)
 
-## 8.3 **DEBUG**
+## 8.3 Hardware Debug
 
 I'm sorry you are reading this section, but we need to figure it out. You will need a multimeter to debug.
 
 The very first step is to check if the relay on the QLA board is working. As shown in the following figure, there are two test points (T1, T2). NOTE, the relay might look different depending on your hardware revision. The connection between the two points is designed to be open when the relay is turned OFF and shorted when the relay is ON.
 
 Assume we test board 0 first:
-1. Do a continuity test between T1 and T2. It should be open; if not, contact us. (No power)
-1. Turn on relay now
- * `$ qladisp 0`
- * Press 'p' to turn on relay
- * You should also hear a click sound from the relay
-1. Do a continuity test between T1 and T2. Now they should be shorted; if not, contact us.
+<ol>
+<li>Do a continuity test between T1 and T2. It should be open; if not, contact us. (No power)</li>
+<li>Turn on relay now
+ <ul>
+ <li>`$ qladisp 0`</li>
+ <li>Press 'p' to turn on relay</li>
+ <li>You should also hear a click sound from the relay</li>
+ </ul></li>
+<li>Do a continuity test between T1 and T2. Now they should be shorted; if not, contact us.</li>
+</ol>
 REPEAT the same process for board 1.
 
 ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/estop_relay_debug.png)
@@ -159,11 +163,15 @@ Now, you have two working relays. Please check the wire connection, make sure:
 The next step is to test them together. The S1 and S2 pins of the safety connector are connected to the two relays. If the system is working, they should be open while the relays are OFF and shorted while the relays are ON.
 
 Assume we are testing MTML board 0 and 1:
-1. Do a continuity test between S1 and S2. Should be open.
-1. Turn on relay now
- * `$ qladisp 0 1`
- * Press 'p' to turn on relay
- * You should also hear a click sound from the relay
-1. Do a continuity test between S1 and S2. Now they should be shorted; if not, check the wire connection.
+<ol>
+<li>Do a continuity test between S1 and S2. Should be open.</li>
+<li>Turn on relay now
+  <ul>
+  <li>`$ qladisp 0 1`</li>
+  <li>Press 'p' to turn on relay</li>
+  <li>You should also hear a click sound from the relay</li>
+  </ul></li>
+<li>Do a continuity test between S1 and S2. Now they should be shorted; if not, check the wire connection.</li>
+</ol>
 
 Finally, do the test in section 8.2. You should be good to go.
