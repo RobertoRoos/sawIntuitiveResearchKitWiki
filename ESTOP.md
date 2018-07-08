@@ -35,11 +35,11 @@ To enable the motor power supply, the 12V power needs to be connected to the AC 
 
 Figure 1: Controller box relays and power supply
 
-Figure 1 shows the standard safety connectors (one 4-pin and one 5-pin) on the controller box. There have, however, been several variations of safety connectors in the different generations of controller boxes, as shown in the figure below.
+Figure 1 shows the standard safety connectors (one 4-pin and one 5-pin) on the controller box. There have, however, been several variations of safety connectors in the different generations of controller boxes, as shown in the figure below. All of them can be upgraded to the standard configuration (shown on the right) by using the appropriate retrofit kit.
 
 ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/estop_connectors.png)
 
-Figure 2: Safety connectors for the different generations of controller boxes
+Figure 2: Safety connectors for the different generations of controller boxes. Standard configuration (one 4-pin and one 5-pin connector) shown on right.
 
 The 5-pin connector is the same as the 4-pin connector except that pin #2 is GND, which shifts
 the signals from pins 2-4 on the old (4-pin) connector to pins 3-5 on the new (5-pin) connector. Note also that in the final design, pin #1 of the 4-pin connector is GND rather than 12V.
@@ -74,7 +74,7 @@ the disadvantage of this setup is that the cable has to be redone to support few
 
 # 5. Issue with two 5-pin connectors
 
-The Build #4 controller boxes contain two 5-pin safety connectors. While the intent was to enable both the modular and monolithic connection schemes, it is possible to miswire the e-stop chain because the Extension (Daisy-Chain) Cable is not straight-through; it connects S1 (pin 3) on one connector to S2 (pin 4) on the other. Thus, it matters which way the cable is connected. Connecting it backwards will cause some of the safety relays to be bypassed, as shown in the figure below (for clarity, only the S1-S2 wire is shown).
+The Build #4 controller boxes contain two 5-pin safety connectors. While the intent was to enable both the modular and monolithic connection schemes, it is possible to miswire the e-stop chain because the Extension (Daisy-Chain) Cable is not straight-through; it connects S1 (pin 3) on one connector to S2 (pin 4) on the other. Thus, it matters which way the cable is connected. Connecting it backwards will cause some of the safety relays to be bypassed, as shown in the figure below.
 
 ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/SafetyChain-Build4.png)
 
@@ -117,8 +117,8 @@ Connect the modified connector to the controller box you want to debug and run t
 ## 8.2. Test single controller box with QLA relays in the loop
 
 After confirming that the power system is working, we start to add relays inside one controller box to the chain.
-With the modular connector setup (Section 4), you should attach the E-Stop cable to the 5-pin connector and the Termination Plug
-to the 4-pin connector, as shown in the following figure.
+With the [modular connector setup](#3-modular-e-stop-chain-recommended), you should attach the E-Stop cable to the
+5-pin connector and the Termination Plug to the 4-pin connector, as shown in the following figure.
 Alternatively, for a single 4-pin or 5-pin connector, modify the cable to attach 12V to S1 and S2 to EN.
 
 ```bash
@@ -135,36 +135,35 @@ Alternatively, for a single 4-pin or 5-pin connector, modify the cable to attach
 
 ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/estop_one.jpg)
 
-**DEBUG**  
+## 8.3 **DEBUG**
 
-I'm sorry you are reading this section, but we need to figure it out. You will need a multimeter to debug. 
+I'm sorry you are reading this section, but we need to figure it out. You will need a multimeter to debug.
 
-The very first step is to check if the relay on the QLA board is working. As shown in the following figure, there are two test points (T1, T2). NOTE, the relay might look different depending on your hardware revision. The connection between the two points is designed to be open when the relay is turned OFF and shorted when the relay is ON. 
+The very first step is to check if the relay on the QLA board is working. As shown in the following figure, there are two test points (T1, T2). NOTE, the relay might look different depending on your hardware revision. The connection between the two points is designed to be open when the relay is turned OFF and shorted when the relay is ON.
 
 Assume we test board 0 first:
 1. Do a continuity test between T1 and T2. It should be open; if not, contact us. (No power)
-1. Turn on relay now 
- * `$ qladisp 0` 
- * Press 'p' to turn on relay 
+1. Turn on relay now
+ * `$ qladisp 0`
+ * Press 'p' to turn on relay
  * You should also hear a click sound from the relay
-1. Do a continuity test between T1 and T2. Now they should be shorted; if not, contact us. 
-REPEAT the same process for board 1. 
+1. Do a continuity test between T1 and T2. Now they should be shorted; if not, contact us.
+REPEAT the same process for board 1.
 
 ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/estop_relay_debug.png)
 
 Now, you have two working relays. Please check the wire connection, make sure:
 1. they are serially connected
-2. the connection to the E-STOP terminal is correct. 
+2. the connection to the E-STOP terminal is correct.
 
-The next step is to test them together. The middle two pins (P1 and P2) of the E-STOP terminal are connected to the two relays. If the system is working, they should be open while the relays are OFF and shorted while the relays are ON. 
+The next step is to test them together. The S1 and S2 pins of the safety connector are connected to the two relays. If the system is working, they should be open while the relays are OFF and shorted while the relays are ON.
 
 Assume we are testing MTML board 0 and 1:
-1. Do a continuity test between P1 and P2. Should be open. 
-1. Turn on relay now 
+1. Do a continuity test between S1 and S2. Should be open.
+1. Turn on relay now
  * `$ qladisp 0 1`
- * Press 'p' to turn on relay 
+ * Press 'p' to turn on relay
  * You should also hear a click sound from the relay
-1. Do a continuity test between P1 and P2. Now they should be shorted; if not, check the wire connection. 
+1. Do a continuity test between S1 and S2. Now they should be shorted; if not, check the wire connection.
 
-Finally, do the test in section 8.2. You should be good to go. 
-
+Finally, do the test in section 8.2. You should be good to go.
