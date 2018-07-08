@@ -40,8 +40,8 @@ generations of controller boxes, starting with one 4-pin connector (Build #1, #2
 The 5-pin connector is the same as the 4-pin connector except that pin #2 is GND, which shifts
 the signals from pins 2-4 on the old (4-pin) connector to pins 3-5 on the new (5-pin) connector. Note also that in the final design, pin #1 of the 4-pin connector is GND rather than 12V.
 
-The advantage of the final design, of one 4-pin and one 5-pin connector, is that it enables both a monolithic (hard-wired) e-stop chain, as
-implemented at WPI, and a modular (reconfigurable) e-stop chain that was developed at JHU and is currently used on most systems. Note that this was the intended goal of the systems with two 5-pin connectors, but in those systems it is possible to accidentally bypass some of the safety relays, as described in Section 6.
+The advantage of the final design, of one 4-pin and one 5-pin connector, is that it enables both a [modular (reconfigurable) e-stop chain](#3-modular-e-stop-chain-recommended), developed at JHU and currently used on most systems, and a [monolithic (hard-wired) e-stop chain]((#4-monolithic-e-stop-chain-not-recommended), as initially implemented at WPI.
+Note that this was the intended goal of the systems with two 5-pin connectors, but in those systems it is possible to accidentally bypass some of the safety relays, as described in [Section 5](#5-issue-with-two-5-pin-connectors).
 
 # 3. Modular E-stop Chain (recommended)
 
