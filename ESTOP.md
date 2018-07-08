@@ -35,7 +35,7 @@ To enable the motor power supply, the 12V power needs to be connected to the AC 
 
 _Figure 1: Controller box relays and power supply_
 
-Figure 1 shows the standard safety connectors (one 4-pin and one 5-pin) on the controller box. There have, however, been several variations of safety connectors in the different generations of controller boxes, as shown in the figure below. All of them can be upgraded to the standard configuration (shown on the right) by using the appropriate retrofit kit.
+Figure 1 shows the standard safety connectors (one 4-pin and one 5-pin) on the controller box. There have, however, been several variations of safety connectors in the different generations of controller boxes, as shown in the figure below. All of them can be upgraded to the standard configuration (shown on the right) by using the appropriate [retrofit kit](https://github.com/jhu-dvrk/dvrk-estop-retrofit).
 
 ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/estop_connectors.png)
 
@@ -65,8 +65,11 @@ This design is intended to enable quick reconfiguration of the safety circuit. F
 
 The monolithic e-stop chain, previously called the serial e-stop chain, is built to connect to a specific number of controllers. For example,
 the figures below show the connection to two controller boxes (left) and to four controller boxes (right). Both examples show controllers with 4-pin connectors. If the controller box has a 5-pin connector, it
-would be better to use that, so that the GND can also be connected. Note that whether using the 4-pin or 5-pin connectors,
-the disadvantage of this setup is that the cable has to be redone to support fewer or more controllers.
+would be better to use that, so that the GND can also be connected.
+This setup is a natural fit for controller boxes with only one safety connector and can be used for controller boxes with two
+connectors (in which case the 5-pin connector would be used), but has the disadvantage that
+the cable must be redone to support fewer or more controllers. Thus, for controller boxes with a single connector, we recommend
+installing the [retrofit kit](https://github.com/jhu-dvrk/dvrk-estop-retrofit) to obtain the standard two connector configuration and instead use the [Modular E-stop Chain](#3-modular-e-stop-chain-recommended).
 
 | Two controller boxes (not recommended) | Four controller boxes (not recommended) |
 | ------- | ------- |
