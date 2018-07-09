@@ -1,3 +1,13 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Obsolete E-stop documentation (DO NOT USE)](#obsolete-e-stop-documentation-do-not-use)
+  - [1. Modular E-Stop connection using mini-DIN](#1-modular-e-stop-connection-using-mini-din)
+  - [2. Parallel E-Stop Connection (Not Recommended, unless you want to destroy your hardware)](#2-parallel-e-stop-connection-not-recommended-unless-you-want-to-destroy-your-hardware)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Obsolete E-stop documentation (DO NOT USE)
 
 ## 1. Modular E-Stop connection using mini-DIN
