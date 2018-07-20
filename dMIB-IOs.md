@@ -42,7 +42,7 @@ In the table below:
 | 2     | I:11 | NEGLIM4 | Arm | Arm | Arm | | |
 | 2     | O:0  | DOUT1   | | | | | DOF5:14 |
 | 2     | O:1  | DOUT2   | | | | | DOF6:14 |
-| 2     | O:2  | DOUT3   | | | _Dallas-Out_ | | DOF7:14 |
+| 2     | O:2  | DOUT3   | | _Dallas-Out_ | | | DOF7:14 |
 | 2     | O:3  | DOUT4   | HE Select | | | | DOF8:16 |
 
 Explanation of signals:
@@ -52,7 +52,7 @@ Explanation of signals:
 * HE Select can be used to select which Hall effect sensor (of the two in the MTM gripper) is read by the system. For this to be enabled, there must be a jumper between pins 1 and 2 of J12 on the dMIB.
 * _daVinci Head_ is an interface to the head-in sensor integrated in the full da Vinci console (see below). It is not typically present in dVRK systems. The above pinout assumes it is connected to DOF1 on the back of the controller.
 * _dVRK head_ is a custom head-in sensor developed for the dVRK (see below). The above pinout assumes it is connected to DOF4 on the back of the controller.
-* _Endoscope_ enables software control of the endoscope focus (see below). The above pinout assumes it is connected to both DOF1 and DOF2
+* _Endoscope_ enables software control of the endoscope focus (see below). The above pinout assumes it is connected to both DOF1 and DOF2 on the back of the controller.
 * _Dallas-In_ and _Dallas-Out_ are proposed as the interface to the Dallas PROM chip inside instruments, which would enable reading of the instrument name.
 
 ## External devices
