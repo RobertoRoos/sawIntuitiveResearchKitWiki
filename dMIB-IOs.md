@@ -28,22 +28,22 @@ In the table below:
 | 1     | O:1  | DOUT2   | _Endoscope_ | | | MuxIncrement | DOF2:14 |
 | 1     | O:2  | DOUT3   | | | | ControlPWM | DOF3:14 |
 | 1     | O:3  | DOUT4   | | | | DisablePWM | DOF4:14 |
-| 2     | I:0  | HOME1   | _Foot pedal_ | | | | DOF5:7, FP:5/7 |
-| 2     | I:1  | HOME2   | _Foot pedal_ | | | | DOF6:7, FP:12/13 |
-| 2     | I:2  | HOME3   | _Foot pedal_ | | | | DOF7:7, FP:10/11 |
-| 2     | I:3  | HOME4   | _Foot pedal_ | | | | FP:1/2 |
-| 2     | I:4  | POSLIM1 | _Foot pedal_ | | | | DOF5:3, FP:6/8 |
-| 2     | I:5  | POSLIM2 | _Foot pedal_ | | | | DOF6:3, FP:4/3 |
+| 2     | I:0  | HOME1   | _Foot pedal_ | | | | DOF5:7, FP:5 |
+| 2     | I:1  | HOME2   | _Foot pedal_ | | | | DOF6:7, FP:12 |
+| 2     | I:2  | HOME3   | _Foot pedal_ | | | | DOF7:7, FP:10 |
+| 2     | I:3  | HOME4   | _Foot pedal_ | | | | FP:1 |
+| 2     | I:4  | POSLIM1 | _Foot pedal_ | | | | DOF5:3, FP:6 |
+| 2     | I:5  | POSLIM2 | _Foot pedal_ | | | | DOF6:3, FP:4 |
 | 2     | I:6  | POSLIM3 | | | | | DOF7:3 |
 | 2     | I:7  | POSLIM4 | | Tool | | | |
 | 2     | I:8  | NEGLIM1 | | | | | DOF5:5 |
 | 2     | I:9  | NEGLIM2 | | | | | DOF6:5 |
 | 2     | I:10 | NEGLIM3 | | Adaptor | | | DOF7:5 |
-| 2     | I:11 | NEGLIM4 | | | | | |
+| 2     | I:11 | NEGLIM4 | Arm | Arm | Arm | | |
 | 2     | O:0  | DOUT1   | | | | | DOF5:14 |
 | 2     | O:1  | DOUT2   | | | | | DOF6:14 |
 | 2     | O:2  | DOUT3   | | | | | DOF7:14 |
-| 2     | O:3  | DOUT4   | | | | | DOF8:16 |
+| 2     | O:3  | DOUT4   | HE Select | | | | DOF8:16 |
 
 ## External devices
 
