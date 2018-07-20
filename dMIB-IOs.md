@@ -34,7 +34,7 @@ In the table below:
 | 2     | I:3  | HOME4   | _Foot pedal_ | | | | FP:1 |
 | 2     | I:4  | POSLIM1 | _Foot pedal_ | | | | DOF5:3, FP:6 |
 | 2     | I:5  | POSLIM2 | _Foot pedal_ | | | | DOF6:3, FP:4 |
-| 2     | I:6  | POSLIM3 | | | | | DOF7:3 |
+| 2     | I:6  | POSLIM3 | | _Dallas-In_ | | | DOF7:3 |
 | 2     | I:7  | POSLIM4 | | Tool | | | |
 | 2     | I:8  | NEGLIM1 | | | | | DOF5:5 |
 | 2     | I:9  | NEGLIM2 | | | | | DOF6:5 |
@@ -42,8 +42,18 @@ In the table below:
 | 2     | I:11 | NEGLIM4 | Arm | Arm | Arm | | |
 | 2     | O:0  | DOUT1   | | | | | DOF5:14 |
 | 2     | O:1  | DOUT2   | | | | | DOF6:14 |
-| 2     | O:2  | DOUT3   | | | | | DOF7:14 |
+| 2     | O:2  | DOUT3   | | | _Dallas-Out_ | | DOF7:14 |
 | 2     | O:3  | DOUT4   | HE Select | | | | DOF8:16 |
+
+Explanation of signals:
+* Adaptor indicates whether the sterile adapter is present
+* Tool indicates whether a tool (instrument) is present
+* Arm is an "arm present" signal, which indicates that the arm (MTM, PSM or ECM) is connected
+* HE Select can be used to select which Hall effect sensor (of the two in the MTM gripper) is read by the system. For this to be enabled, there must be a jumper between pins 1 and 2 of J12 on the dMIB.
+* _daVinci Head_ is an interface to the head-in sensor integrated in the full da Vinci console (see below). It is not typically present in dVRK systems. The above pinout assumes it is connected to DOF1 on the back of the controller.
+* _dVRK head_ is a custom head-in sensor developed for the dVRK (see below). The above pinout assumes it is connected to DOF4 on the back of the controller.
+* _Endoscope_ enables software control of the endoscope focus (see below). The above pinout assumes it is connected to both DOF1 and DOF2
+* _Dallas-In_ and _Dallas-Out_ are proposed as the interface to the Dallas PROM chip inside instruments, which would enable reading of the instrument name.
 
 ## External devices
 
