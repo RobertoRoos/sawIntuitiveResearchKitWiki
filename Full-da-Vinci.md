@@ -129,10 +129,11 @@ We are not totally sure how much variability there is between systems.  In order
 
 |System|1 Release (A)|1 Release (s)|1 Released (A)|2 Release(A)|2 Release (s)|2 Released (A)|3 Release(A)|3 Release (s)|3 Released (A)| 
 |-----|-----|-----|-----|-----|-----|-----|-----|-----|-----| 
-| JHU |0.250|0.2  |0.090|0.220|0.2  |0.090|1.100|0.2  |0.300|
-| ISI |0.250|2.0  |0.100|0.210|2.0  |0.100|1.100|0.2  |0.200|
-| WSU |0.270|0.5  |0.120|0.300|0.5  |0.130|1.100|0.2  |0.170|
-|
+| JHU |0.250|2.0  |0.090|0.220|2.0  |0.090|1.100|2.0  |0.200|
+| ISI |0.250|2.0  |0.100|0.210|2.0  |0.100|1.200|2.0  |0.200|
+| WSU |0.270|0.5  |0.120|0.300|0.5  |0.130|1.100|2.0  |0.170|
+| UCL |0.250|2.0  |0.040|0.140|2.0  |0.040|1.100|2.0  |0.200|
+ 
 **Important note for older dVRK controllers:** We found that the power requirements are close to the maximum amount of power a 24V power supply can deliver.  There is some variability between different systems and brakes so you might need to upgrade the power supply to 36V in the controller enclosure.  To check if you have reached the maximum deliverable power, keep an eye on the current feedback.  These values should be close to the required current.  If the current feedback seems to plateau while you increase the requested current, you'll likely need to upgrade your power supply.
 
 ## dMIB modification for setup joints switch
