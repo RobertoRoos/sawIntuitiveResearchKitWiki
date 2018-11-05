@@ -81,6 +81,7 @@ For most users, please use the ROS interface. The [dvrk_python](https://github.c
 # Example python code
 import dvrk
 m = dvrk.mtm('MTML')
+m.home()
 m.get_current_joint_position()
 m.move_joint_one(0.2, 0)
 ```
