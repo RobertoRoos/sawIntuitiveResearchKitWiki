@@ -19,7 +19,7 @@ Getting Started
 
 Advanced
 * [Software architecture](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Software-Architecture)
-* [Config File formats](FileFormats)
+* [Config File formats](Configuration-File-Formats)
 * [Software Components APIs](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Components-APIs)
 * [Potentiometer issues](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Debugging-Potentiometer-Issues)
 * [Development branches](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Development)
