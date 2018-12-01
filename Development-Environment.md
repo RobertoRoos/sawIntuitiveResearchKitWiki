@@ -13,9 +13,16 @@
 Development Environment Setup 
 The current software is written in C/C++ and uses the libraw1394 library under Linux. See http://www.dennedy.org/libraw1394/ for libraw1394 documentation. 
 
+# FireWire Adapter
+The dVRK controllers use FireWire as the fieldbus, and you will need a FireWire adapter. Due to the fact that FireWire is a sophisticated protocol, some chipset implementation is not fully functional and has various issues such as dropping packets and supporting a limited number of FireWire nodes. We **STRONGLY **recommend adapters with chipsets from Texas Instrument. For example, the PEX1394A2V 2-Port PCI Express FireWire Card from StarTech. 
+
+Reference: 
+
+[1] PreSonus: Approved FireWire chipsets for FireStudio™-series interfaces and StudioLive™ mixers. 
+
 # Install Ubuntu
 
-(October 30, 2017) We recommend Ubuntu 16.04 LTS, which is a long term support version.  For ROS, we recommend Kinetic.
+(October 30, 2017) We recommend Ubuntu 16.04 LTS, which is a long-term support version.  For ROS, we recommend Kinetic.
 
 #  Install libraw1394 on Ubuntu
 
