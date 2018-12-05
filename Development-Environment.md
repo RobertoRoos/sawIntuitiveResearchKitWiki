@@ -20,6 +20,8 @@ Reference:
 
 [1] PreSonus: Approved FireWire chipsets for FireStudio™-series interfaces and StudioLive™ mixers. 
 
+[2] StarTech FireWire card: [Amazon Link](https://www.amazon.com/Port-1394a-Express-FireWire-Card/dp/B00IAABHFE/ref=sr_1_9?ie=UTF8&qid=1543974002&sr=8-9&keywords=pcie+firewire)
+
 # Install Ubuntu
 
 (October 30, 2017) We recommend Ubuntu 16.04 LTS, which is a long-term support version.  For ROS, we recommend Kinetic.
