@@ -2,6 +2,7 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
+- [FireWire Adapter](#firewire-adapter)
 - [Install Ubuntu](#install-ubuntu)
 - [Install libraw1394 on Ubuntu](#install-libraw1394-on-ubuntu)
 - [Set permission for 1394 device](#set-permission-for-1394-device)
