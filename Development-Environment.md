@@ -17,6 +17,26 @@ The current software is written in C/C++ and uses the libraw1394 library under L
 # FireWire Adapter
 The dVRK controllers use FireWire as the fieldbus, and you will need a FireWire adapter. Due to the fact that FireWire is a sophisticated protocol, some chipset implementation is not fully functional and has various issues such as dropping packets and supporting a limited number of FireWire nodes. We **STRONGLY** recommend adapters with chipsets from Texas Instrument, such as the PEX1394A2V 2-Port PCI Express FireWire Card from StarTech. 
 
+To get the chipset model of your FireWire card: 
+```sh
+# use lshw to get all hardware info and look for the firewire section. 
+$ lshw 
+-------------
+Example FireWire Section.
+*-firewire
+                description: FireWire (IEEE 1394)
+                product: TSB12LV23 IEEE-1394 Controller
+                vendor: Texas Instruments
+                physical id: 0
+                bus info: pci@0000:03:00.0
+                version: 00
+                width: 32 bits
+                clock: 33MHz
+                capabilities: ohci bus_master cap_list
+                configuration: driver=firewire_ohci latency=32 maxlatency=4 mingnt=3
+                resources: irq:21 memory:fe404000-fe4047ff memory:fe400000-fe403fff
+```
+
 Reference: 
 
 [1] PreSonus: Approved FireWire chipsets for FireStudio™-series interfaces and StudioLive™ mixers. 
