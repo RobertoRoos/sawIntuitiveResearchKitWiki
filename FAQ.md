@@ -74,8 +74,9 @@ You will need a PC running Linux:
    * If you plan to send images to the stereo display, you will need two extra VGA outputs for the standard CRTs or two DVI outputs for the flat panels ([see ISI private Wiki](http://research.intusurg.com/dvrkwiki/index.php?title=DVRK:Topics:StereoViewerLCD))
    * In General Nvidia cards work fine on Linux.  If you have multiple cards, try to match them (use same model for all cards)
  * Software
-   * Ubuntu 12.04, 14.04 or 16.04 (64 bits of course)
-   * ROS Hydro or Indigo, Jade might work as well but hasn't been extensively tested
+   * Ubuntu 16.04 or 18.04 (64 bits of course)
+   * ROS Kinetic on Ubuntu 16.04, Melodic on Ubuntu 18.04
+   * As far as we know, recent versions of the dVRK software (1.3 to 1.6) will likely compile with older Ubuntu/ROS so you might not have to upgrade your OS
 
 ## The PSMs aren't moving
 
