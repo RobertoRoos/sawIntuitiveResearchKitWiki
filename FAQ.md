@@ -63,8 +63,8 @@ See JHU Mechatronics for more details: http://jhu-cisst.github.io/mechatronics r
 ## What PC configuration do you suggest?
 
 You will need a PC running Linux:
- * 4 cores minimum, 8 recommended (Intel i7)
- * 4 GB RAM minimum, 8 recommended
+ * 8 cores recommended (Intel i7, i9 or equivalent Xeon)
+ * 8 GB RAM minimum, 16 recommended
  * FireWire
    * A dedicated firewire controller for each chain of controllers - you can hook 8 controllers (16 FPGA/QLA boards) in a single chain so 1 firewire controller is fine for most users.
    * Early dVRK users have tested different cards and the SIIG FireWire adapter NN-E20012-S2 works well (uses a TI chipset)
