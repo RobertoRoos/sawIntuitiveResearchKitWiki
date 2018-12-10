@@ -15,7 +15,7 @@ Development Environment Setup
 The current software is written in C/C++ and uses the libraw1394 library under Linux. See http://www.dennedy.org/libraw1394/ for libraw1394 documentation. 
 
 # FireWire Adapter
-The dVRK controllers use FireWire as the fieldbus, and you will need a FireWire adapter. Due to the fact that FireWire is a sophisticated protocol, some chipset implementation is not fully functional and has various issues such as dropping packets and supporting a limited number of FireWire nodes. We **STRONGLY** recommend adapters with chipsets from Texas Instrument, such as the PEX1394A2V 2-Port PCI Express FireWire Card from StarTech. 
+The dVRK controllers use FireWire as the fieldbus, and you will need a FireWire adapter. Due to the fact that FireWire is a sophisticated protocol, some chipset implementations are not fully functional and have various issues such as dropping packets and supporting a limited number of FireWire nodes. We **STRONGLY** recommend adapters with chipsets from Texas Instruments, such as the PEX1394A2V 2-Port PCI Express FireWire Card from StarTech. 
 
 To get the chipset model of your FireWire card: 
 ```sh
