@@ -26,6 +26,6 @@ Please consider your institution's and country's rules regarding data privacy an
 
 # Datasets
 
-|Dataset| Clinical application | Data type | Environment | Users | System | Trial size | 
-|-------|----------------------|-----------|-------------|-------|--------|------------|
-|[JIGSAWS](https://cirl.lcsr.jhu.edu/research/hmm/datasets/jigsaws_release/)| Suturing, Knot-Tying, Needle-Passing | Video, Kinematics, Phase Annotation | Phantom | Mixed | da Vinci Research API | 8 subjects, 5 trials in each action|
+|Dataset| Clinical application | Data type | Environment | Users | System | 
+|-------|----------------------|-----------|-------------|-------|--------|
+|[JIGSAWS](https://cirl.lcsr.jhu.edu/research/hmm/datasets/jigsaws_release/)| Suturing, Knot-Tying, Needle-Passing | Video, Kinematics, Phase Annotation | Phantom | Mixed | da Vinci Research API |
