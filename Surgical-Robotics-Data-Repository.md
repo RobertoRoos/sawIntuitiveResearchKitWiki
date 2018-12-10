@@ -23,3 +23,9 @@ Please consider your institution's and country's rules regarding data privacy an
 * Capture and use data for any future research (as opposed to a single study)
 * Permission to share anonymized data with other sites
 * Permission to store data indefinitely
+
+# Datasets
+
+|Dataset| Clinical application | Data type | Environment | Users | System | Trial size | 
+|-------|----------------------|-----------|-------------|-------|--------|------------|
+|[JIGSAWS](https://cirl.lcsr.jhu.edu/research/hmm/datasets/jigsaws_release/)| Suturing, Knot-Tying, Needle-Passing | Video, Kinematics, Phase Annotation | Phantom | Mixed | da Vinci Research API | 8 subjects, 5 trials in each action|
