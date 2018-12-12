@@ -19,7 +19,7 @@ In order to easily share data from studies between groups, we recommend the foll
 * Version of software/firmware the data was collected on
 
 ### Data/privacy protection
-Please consider your institution's and country's rules regarding data privacy and company policies before uploading any data. It is up to each individual group to obtain permission and user consent to share the data publicly. Consider asking for the following in all consent forms before conducting user studies to maximize usability of the data:
+Please consider your institution's and country's rules regarding data privacy and company policies before uploading any data. It is up to each individual group to obtain permission and user consent to share the data publicly. Time stamps should include an offset to further anonymize studies. Consider asking for the following in all consent forms before conducting user studies to maximize usability of the data:
 * Capture and use data for any future research (as opposed to a single study)
 * Permission to share anonymized data with other sites
 * Permission to store data indefinitely
