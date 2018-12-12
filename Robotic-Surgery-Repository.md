@@ -28,4 +28,4 @@ Please consider your institution's and country's rules regarding data privacy an
 
 |Dataset| Clinical application | Data type | Environment | Users | System | 
 |-------|----------------------|-----------|-------------|-------|--------|
-|[JIGSAWS](https://cirl.lcsr.jhu.edu/research/hmm/datasets/jigsaws_release/)| Suturing, Knot-Tying, Needle-Passing | Video, Kinematics, Phase Annotation | Phantom | Mixed | da Vinci Research API |
+|[JIGSAWS](https://cirl.lcsr.jhu.edu/research/hmm/datasets/jigsaws_release/)| Suturing, Knot-Tying, Needle-Passing | Video, Kinematics, Phase Annotation | Phantom | Mixed (8)| da Vinci Research API |
