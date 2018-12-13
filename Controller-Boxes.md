@@ -8,10 +8,14 @@ Each da Vinci arm (MTM, PSM, ECM) is controlled by a single box, shown below. A 
 * Two FireWire connectors
 * Two Ethernet connectors (later versions)
 * One or two 4 or 5-pin safety chain connectors (depending on version); see [ESTOP page](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ESTOP)
+* One DB15 footpedal connector; see [dMIB I/O page](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dMIB-IOs)
+* Seven HD15 expansion connectors and one HD26 expansion connector; see [dMIB I/O page](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dMIB-IOs)
 
 ## Internal Components 
 
 Internally, each controller box contains two FPGA/QLA board sets, one dMIB (da Vinci Manipulator Interface Board), LED boards, power supplies and relays.
+
+  ![Controller layout](/jhu-dvrk/sawIntuitiveResearchKit/wiki/controller-layout.jpg)
 
 ### Custom Boards (PCBs)
 * The FPGA and QLA designs are open source and available via this [GitHub page](http://jhu-cisst.github.io/mechatronics/).
