@@ -26,6 +26,7 @@ Advanced
 * [Development branches](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Development)
 * [Release Checklist](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Release-Checklist)
 * [Projects](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Future-Projects)
+* [Controller Boxes](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Controller-Boxes)
 * [E-STOP wiring](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ESTOP)
 * [Full da Vinci system](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Full-da-Vinci)
 * [Head Sensor](/jhu-dvrk/sawIntuitiveResearchKit/wiki/HeadSensor)
