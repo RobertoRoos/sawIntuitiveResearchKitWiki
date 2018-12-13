@@ -29,7 +29,7 @@ The calibration steps are required to fine tune the XML configuration file gener
 # 2. Current offsets
 
 ## 2.0 Prerequisite
-Please read the [ESTOP debugging](wiki/ESTOP#8-debugging) section before you start.   
+Please read the [ESTOP debugging](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ESTOP#8-debugging) section before you start.   
 When you are calibrating motor current, ONLY have 1 controller box in ESTOP chain.
 
 ## 2.1. Introduction
