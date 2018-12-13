@@ -7,7 +7,7 @@ Each da Vinci arm (MTM, PSM, ECM) is controlled by a single box, shown below. A 
 * One 156-pin connector (for the MTM, PSM, or ECM)
 * Two FireWire connectors
 * Two Ethernet connectors (later versions)
-* One or two 4 or 5-pin safety chain connectors (depending on version); see [ESTOP page](/jhu-dvrk/sawIntuitiveResearchKit/ESTOP)
+* One or two 4 or 5-pin safety chain connectors (depending on version); see [ESTOP page](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ESTOP)
 
 ## Internal Components 
 
