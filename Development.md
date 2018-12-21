@@ -43,6 +43,9 @@ cd ~/catkin_ws/src
 git clone https://github.com/jhu-dvrk/dvrk-ros
 cd ~/catkin_ws/src/dvrk-ros
 git checkout devel
+git clone https://github.com/jhu-dvrk/dvrk-gravity-compensation
+cd ~/catkin_ws/src/dvrk-gravity-compensation
+git checkout devel
 ```
 
 Afterwards, follow this
@@ -54,6 +57,9 @@ git submodule foreach git pull
 git submodule foreach git submodule init
 git submodule foreach git submodule update
 cd ~/catkin_ws/src/dvrk-ros
+git checkout devel
+git pull
+cd ~/catkin_ws/src/dvrk-gravity-compensation
 git checkout devel
 git pull
 ```
