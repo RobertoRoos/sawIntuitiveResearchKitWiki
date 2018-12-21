@@ -16,6 +16,10 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
+# **This page is deprecated**
+
+Please check README.md on https://github.com/jhu-dvrk/dvrk-gravity-compensation instead.
+
 # Gravity Compensation
 
 In ideal case, given robot link mass and center of mass, Recursive Newton Euler (RNE) algorithm can be used to compute gravity compensation terms. To get this correct, we need two things:
