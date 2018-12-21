@@ -24,5 +24,6 @@ This package is not part of the cisst-saw yet as it contains many CAD files that
 ```bash
 cd ~/catkin_ws/src
 git clone https://github.com/jhu-dvrk/dvrk-ros
+git clone https://github.com/jhu-dvrk/dvrk-gravity-compensation
 catkin build
 ```
