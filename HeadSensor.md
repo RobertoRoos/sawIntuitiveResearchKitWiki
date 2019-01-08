@@ -95,7 +95,7 @@ Once you have build your custom cable, you can connect it to the da Vinci head s
 
 ## Testing with `qladisp`
 
-The D-SUB connector can be plugged on one of the "DOF" connectors on the back of the dVRK controller.   For the following section, we assume the head sensor is connected to "DOF 0" on a PSM3 controller.   This means that it will be interfaced using the IOs for a the first axis on the first board on the PSM3 controller, i.e. board ID is 10.   To test the head sensor, start `qladisp 10`.
+The HD-15 connector can be plugged on one of the "DOF" connectors on the back of the dVRK controller.   For the following section, we assume the head sensor is connected to "DOF 1" on a PSM3 controller.   This means that it will be interfaced using the IOs for a the first axis on the first board on the PSM3 controller, i.e. board ID is 10.   To test the head sensor, start `qladisp 10`.  You can test your head sensor on any controller, just replace the `10` by the first board ID in the controller you're using.
 
 Then, one can turn on/off the LEDs using the key '0' to toggle.   The value of `DigOut` in `qladisp` should toggle between `0xF` (off) and `0xE` (on).   Then turned on, motion between the LEDs and the sensors should be displayed in the `Home`, `PosLim` and `NegLim` fields.  When the light is blocked, the values should go up by one (e.g. `0xC` to `0xD` or `0xE` to `0xF`):
   * Sensor 1: `Home`, Bit Id 0
@@ -111,4 +111,4 @@ Assuming that you're connecting your head sensor to the MTMR controller, always 
    }
 ```
 
-**Important note:** The board numbering on the software side start with index 0 (e.g. in XML IO configuration files) but the labels on the back of the controller start at index 1.  Keep this in mind if you plan to connect the head sensor to another "DOF".
+**Important note:** The board numbering on the software side start with index 0 (e.g. in XML IO configuration file) but the labels on the back of the controller start at index 1.  Keep this in mind if you plan to connect the head sensor to another "DOF" and create your own XML configuration files.
