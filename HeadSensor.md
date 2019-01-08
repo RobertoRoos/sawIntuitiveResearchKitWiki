@@ -85,7 +85,7 @@ We found that the easiest solution to connect to the head sensor is to locate th
 
   ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/head/daVinci-head-sensor-plug.jpg)
 
-You will then need to make a new cable to connect the da Vinci head sensor to the dVRK controllers.  It will be a DB 25 female on the head sensor's end and a high density DB 15 male on the controller's end.  The DB 15 male is designed to be connected to the `DOF 0` connector on the back of the dVRK controller (we provide examples of configuration files for the head sensor connected to `DOF 0`).   The wiring pin out is provided in the following formats
+You will then need to make a new cable to connect the da Vinci head sensor to the dVRK controllers.  It will be a DB 25 female on the head sensor's end and a high density HD 15 (aka DB 15) male on the controller's end.  The HD 15 male is designed to be connected to the `DOF 1` connector on the back of the dVRK controller (we provide examples of configuration files for the head sensor connected to `DOF 1`).  The wiring pin out is provided in the following formats
  * [PDF](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/head/daVinci-head-sensor-DB-25-to-DB-15.pdf)
  * [ods](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/head/daVinci-head-sensor-DB-25-to-DB-15.ods)
 
@@ -104,9 +104,11 @@ Then, one can turn on/off the LEDs using the key '0' to toggle.   The value of `
 
 ## Software configuration
 
-Assuming that you're connecting your head sensor to the MTMR controller, always on the `DOF 0` connector, you just need to add the following line in your console JSON configuration file:
+Assuming that you're connecting your head sensor to the MTMR controller, always on the `DOF 1` connector, you just need to add the following line in your console JSON configuration file:
 ```json
    "operator-present": {
         "io": "sawRobotIO1394-MTMR-dv-head-sensor.xml"
    }
 ```
+
+**Important note:** The board numbering on the software side start with index 0 (e.g. in XML IO configuration files) but the labels on the back of the controller start at index 1.  Keep this in mind if you plan to connect the head sensor to another "DOF".
