@@ -117,7 +117,7 @@ In PlotJuggler, import your ros bag, select all signals and then drag-and-drop t
 
 In this example, both joint 4 and 5 potentiometers have a significant delay:
 
-![PlotJuggler](/jhu-dvrk/sawIntuitiveResearchKit/wiki/encoder-pots-plot-2.png)
+![PlotJuggler](/jhu-dvrk/sawIntuitiveResearchKit/wiki/encoder-pots-plot-delay.png)
 
 From there you can see if the issue is:
 * Garbage values, something is likely broken
