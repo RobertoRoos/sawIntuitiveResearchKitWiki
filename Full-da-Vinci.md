@@ -35,7 +35,7 @@ On the other hand, the dVRK mechatronics and software support the camera manipul
 You will be able to switch back and forth between the mechatronics from ISI and the dVRK controllers but this requires to unplug and replug a few cables.  The user has to connect the arms, setup joints and foot pedal directly to the dVRK controllers:
 * MTM cables can be found on the back of the master console, grey plastic covers need to be removed.
   ![Masters connectors](/jhu-dvrk/sawIntuitiveResearchKit/wiki/master-console-arm-cables.jpg)
-* Foot pedal cable can be found on the front of the master console, under the stereo display and the cover needs to be removed.  Unplug the bottom part and connect it to the dVRK controller.  This cable is rather short so one might consider investing in an extension cable.
+* Foot pedal cable can be found on the front of the master console, under the stereo display and the cover needs to be removed.  Unplug the bottom part and connect it to the dVRK controller.  This cable is rather short so one might consider investing in an extension cable (e.g. https://smile.amazon.com/Monoprice-6ft-DB15-Molded-Cable/dp/B002LWJ7TA).
   ![Foot pedals connector](/jhu-dvrk/sawIntuitiveResearchKit/wiki/master-console-pedals-cable.jpg)
 * On the patient side, both setup joints and arms need to be unplugged from the back of the cart to be connected to the dVRK controllers.  The long cables normally used to connect the patient cart to the master console are not used.  The cables coming from the arms shouldn't be connected to the back to the cart, they must be connected directly to the dVRK controllers!
   ![Unplugged patient cart](/jhu-dvrk/sawIntuitiveResearchKit/wiki/patient-cart-arm-suj-plugs.jpg)
