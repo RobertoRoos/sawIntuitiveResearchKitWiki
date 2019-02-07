@@ -80,9 +80,9 @@ The first parameter to increase should be the **Latency**.  The value is given i
 
 # Using ROS bags to collect data
 
-The goal of this section is to show how to collect both the encoder and potentiometer values for a given arm and plot the results.
+The goal of this section is to show how to collect both the encoder and potentiometer values for a given arm and plot the results.  You can also bypass the data collection with rosbag and visualize the data live.
 
-To collect the data, you will need to start the console with an extra option to turn on publishing of some low level data.   For a PSM, you would have to start the console using the extra `-i` option:
+To collect the data or view the data live, you will need to start the console with an extra option to turn on publishing of some low level data.   For a PSM, you would have to start the console using the extra `-i` option:
 ```sh
    rosrun dvrk_robot dvrk_console_json -j jhu-daVinci/console-PSM3.json -i ros-io-PSM3.json
 ```
@@ -111,9 +111,13 @@ You can then visualize your data using your preferred plotting tool.   For Plot 
 ```sh
     rosrun plotjuggler PlotJuggler
 ```
-In PlotJuggler, import your ros bag, select all signals and then drag-and-drop the actuator and pot for the joint you want to look at:
+In PlotJuggler, import your ros bag, select all signals and then drag-and-drop the actuator and pot for the joint(s) you want to look at.   You can also start ROS streaming in PlotJuggler and select the signals you want to plot.  In the following example, there's is a small calibration offset:
 
 ![PlotJuggler](/jhu-dvrk/sawIntuitiveResearchKit/wiki/encoder-pots-plot.png)
+
+In this example, both joint 4 and 5 potentiometers have a significant delay:
+
+![PlotJuggler](/jhu-dvrk/sawIntuitiveResearchKit/wiki/encoder-pots-plot-2.png)
 
 From there you can see if the issue is:
 * Garbage values, something is likely broken
