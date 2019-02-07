@@ -32,6 +32,10 @@ If you're running into error messages regarding potentiometer and encoder incons
   * The large Cannon ITT connector at the back of the dVRK controller (see [Cannon ITT](https://www.ittcannon.com/products/dl-zif-connector/).  Make sure the connector is clean and the screw on the back is tighten (a quarter turn).
   * The two Micro DB68 SCSI cables between the dMIB and the QLA boards (see [FAQ](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FAQ) for acronym definitions).
 
+For each connection (i.e. ITT connector and both ends of the DB68 cable):
+  * Clean the connectors, we recommend both compressed air (canned) and contact cleaner (e.g. [WD Contact Cleaner](https://www.amazon.com/WD-40-Specialist-Electrical-Contact-Cleaner/dp/B07H8VFTST)).  You should clean both the cable ends and the connectors on the PCBs
+  * Make sure all screws are tight
+
 ![Controller](/jhu-dvrk/sawIntuitiveResearchKit/wiki/controller-layout.jpg)
 
 # Visual checks
