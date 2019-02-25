@@ -23,7 +23,7 @@ The [dVRK](/jhu-dvrk/sawIntuitiveResearchKit/wiki) controllers have been built i
 | 4<br>da Vinci | 2015 | University of Verona | Paolo Fiorini |
 | 4<br>da Vinci | 2015 | National Institutes of Health | Sheng Xu |
 | 5<br>da Vinci | 2016 | Case Western Reserve Univ. | Cenk Cavusoglu |
-| 5<br>da Vinci | 2016 | U.C. San Diego | Michael Yip |
+| 5, 7<br>da Vinci | 2016, 2019 | U.C. San Diego | Michael Yip |
 | 5<br>dVRK | 2016 | Ben Gurion Univ. | Ilana Nisky |
 | 5<br>da Vinci | 2016 | Univ. of Naples | Bruno Siciliano |
 | 5<br>da Vinci | 2016 | Cleveland Clinic | Robb Colbrunn |
@@ -35,3 +35,5 @@ The [dVRK](/jhu-dvrk/sawIntuitiveResearchKit/wiki) controllers have been built i
 | 7<br>da Vinci | 2019 | University of Maryland | Axel Krieger |
 | 7<br>dVRK | 2019 | University of Alberta | Mahdi Tavakoli |
 | 7<br>daVinci | 2019 | Purdue University | Juan Wachs, Denny Yu |
+| 7<br>dVRK? | 2019 | Wake Forest | Philip Brown |
+| 7<br>daVinci S MTMs | 2019 | surgnova.com | jindi.zhang@surgnova.com |
