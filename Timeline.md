@@ -14,7 +14,7 @@ The [dVRK](/jhu-dvrk/sawIntuitiveResearchKit/wiki) controllers have been built i
 | 2<br>dVRK | 2013 | Hospital for Sick Kids, Toronto | Jim Drake, M.D. |
 | 2<br>da Vinci | 2013 | Intuitive Surgical Research | Simon DiMaio |
 | 3, 5<br>da Vinci | 2014, 2016 | Imperial College | Guang-Zhong Yang & Philip Pratt |
-| 3<br>da Vinci | 2014 | Univ. College, London | Dan Stoyanov |
+| 3, 7<br>da Vinci | 2014, 2019 | Univ. College, London | Dan Stoyanov |
 | 3<br>dVRK | 2014 | Scuola Superiore Sant'Anna | Arianna Menciassi |
 | 3<br>dVRK | 2014 | Seoul National Univ. | Sungwan Kim |
 | 3<br>da Vinci | 2014 | Óbuda Univ., Budapest | Tamás Haidegger |
@@ -28,7 +28,10 @@ The [dVRK](/jhu-dvrk/sawIntuitiveResearchKit/wiki) controllers have been built i
 | 5<br>da Vinci | 2016 | Univ. of Naples | Bruno Siciliano |
 | 5<br>da Vinci | 2016 | Cleveland Clinic | Robb Colbrunn |
 | 5<br>da Vinci | 2016 | Politecnico di Milano | Elena De Momi |
-| 5, 6<br>dVRK, da Vinci | 2016 | Chinese Univ. of Hong Kong | Yunhui Liu, Philip Chiu, Samuel Au |
+| 5, 6<br>dVRK, da Vinci | 2016, 2017 | Chinese Univ. of Hong Kong | Yunhui Liu, Philip Chiu, Samuel Au |
 | 6<br>dVRK | 2017 | University of Texas, Dallas | Ann Majewicz Fey |
 | 6<br>da Vinci | 2017 | University of Leeds | Pietro Valdastri |
 | 6<br>da Vinci | 2017 | Hochschule Reutlingen | Lars Schmidt |
+| 7<br>da Vinci | 2019 | University of Maryland | Axel Krieger |
+| 7<br>dVRK | 2019 | University of Alberta | Mahdi Tavakoli |
+| 7<br>daVinci | 2019 | Purdue University | Juan Wachs, Denny Yu |
