@@ -24,11 +24,11 @@ Internally, each controller box contains two FPGA/QLA board sets, one dMIB (da V
   * Bill of Materials (BOM): Rev B, Rev D, Rev E, Rev F
 
 ### Power Supplies
-* All boxes contain a 12V logic power supply that provides power to the FPGA boards and the safety chain.
+* All boxes contain a 12V (50W) logic power supply that provides power to the FPGA boards and the safety chain.
 * Each box also contains one or more motor power supplies that are connected to the QLAs:
-  * MTM: one 24V power supply connected to QLA #1 and one 12V power supply connected to QLA #2
-  * PSM: one 24V power supply connected to both QLAs
-  * ECM: one 36V power supply connected to both QLAs
+  * MTM: one 24V (75W) power supply connected to QLA #1 and one 12V (50W) power supply connected to QLA #2
+  * PSM: one 24V (225W) power supply connected to both QLAs
+  * ECM: one 36V (225W) power supply connected to both QLAs
 * Replacement power supplies
   * 12V Logic Power Supply (For All) & 12V Motor Power Supply (For MTM): https://www.digikey.com/product-detail/en/cui-inc/VGS-50-12/102-1935-ND/2045666
   * 24V Motor Power Supply (For MTM): https://www.digikey.com/product-detail/en/cui-inc/VGS-75-24/102-1943-ND/2045674
