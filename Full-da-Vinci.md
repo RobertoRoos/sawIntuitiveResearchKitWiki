@@ -169,6 +169,8 @@ Once the application is started, hit the `home` button.   The ECM should power p
 
 # Setup joints
 
+![SUJ arm widget](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-gui-arm-suj.png)
+
 **TBD**  Hardware is not yet available for setup joints.
 
 Joints diameters:
