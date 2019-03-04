@@ -26,9 +26,11 @@ The following sections assumes that you performed every step in:
 * [Software build instructions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Build)
 * [Generating XML configuration files](/jhu-dvrk/sawIntuitiveResearchKit/wiki/XMLConfig)
 * [Hardware setup and testing](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Hardware)
-* [Calibrating and updating XML configuration files](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Calibration)
+* [Calibrating and updating XML configuration files](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Calibration
 
-There are three ways to run the software.  The first one is the most common, the later two are script based:
+The examples are listed in order of complexity.  The last example is actually the core application used to run the dVRK software (aka the "dVRK console").  It is nevertheless recommended to follow the instructions for the **sawRobotIO1394QtConsole** example to test the hardware upon reception.  You can skip the **sawIntuitiveResearchKitQtPID**.
+
+There are three ways to run the software.  The first one is the most common (_and recommended!_), the later two are script based:
 
 1. Running an executable based C++ code that creates and connects the components:
   * `sawIntuitiveResearchKitQtPID` -- requires several command-line parameters
@@ -41,7 +43,7 @@ There are three ways to run the software.  The first one is the most common, the
 1. Using Python to process a [script file](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/blob/master/share/sawIntuitiveResearchKitQtPID.py) that creates and connects the components (requires shared libraries and Python wrapping):
   * `python -i sawIntuitiveResearchKitQtPID.py`
 
-The latter two options require the software to be built using `shared` libraries (see CMake options). The last option also requires that cisst be built with Python support, which adds a dependency on SWIG, Python, and numpy. Note that the script files and the XML files are in the https://github.com/jhu-dvrk/sawIntuitiveResearchKit/tree/master/share share sub-directory.
+The latter two options require the software to be built using `shared` libraries (see CMake options, set by default if you build the dVRK software using ROS catkin build). The last option also requires that cisst be built with Python support, which adds a dependency on SWIG, Python, and numpy. Note that the script files and the XML files are in the `sawIntuitiveResearchKit/share` sub-directory.
 
 # 2. sawRobotIO1394QtConsole
 
@@ -154,7 +156,7 @@ The `Index` spin box can be used to change which axis is used for the plotting a
 
 Also to note, the PID gains you are setting will not be saved so take a screenshot and edit your XML PID configuration file by hand.
 
-# 4. sawIntuitiveResearchKitQtConsoleJSON
+# 4. sawIntuitiveResearchKitQtConsoleJSON (**and** ROS dvrk_robot dvrk_console_json)
 
 ## 4.1. Usage
 
