@@ -120,6 +120,8 @@ Once everything has been checked all the sensors, you can power the controllers.
 
 ## 3.1. Usage
 
+**For most users, skip this section**.  We provide default configuration files for the PID parameters that should be perfectly fine.  Furthermore, we might need to update some of the parameters to reflect future PID implementations so maintaining your own configuration files for the PID would force you to merge new versions manually.
+
 Use `sawIntuitiveResearchKitQtPID` to test and tune your PID parameters.  The command line parameters can be found using `sawIntuitiveResearchKitQtPID` without options:
 ```
 sawIntuitiveResearchKitQtPID:
@@ -176,11 +178,11 @@ The application introduces a few new widgets.   Please note that all the homing 
 
 ![Console messages GUI](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-gui-console-messages.png)
 
-The console widget is a light weight widget that aggregates all the error messages from the different arms and allows to home all arms in one click.
+The console widget is a widget that aggregates all the error messages from the different arms and allows to home all arms in one click.
 
 ![Arm GUI](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-gui-arm.png)
 
-The arm widget can be used to monitor messages specific to an arm, current 3D position (you can right click on the 3D view to change the orientation widget) and timing of the underlying component (homing, kinematics, ...).
+The arm widget can be used to monitor messages specific to an arm, current 3D position (you can right click on the 3D view to change the orientation widget), joint state, estimated wrench (you can right click on the 3D view to change the wrench widget) and timing of the underlying component (homing, kinematics, ...).
 
 ![Tele operation GUI](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-gui-teleop.png)
 
@@ -196,6 +198,15 @@ Once the adapter is engaged, you can insert the tool.  At that point:
 * The tool gears should get engaged automatically.  To check that the tool is properly engaged, wiggle to tool tip and you should feel the motor's resistance in all directions.
 * In the `Buttons` tab, you should see the `Tool` state as `pressed`
 
-To start the tele-operation, you will first need to push the tool down.  Since the PID controller is already running, you will need to press the `Tool clutch` button (this is the physical white button on top of the PSM, not a Qt GUI Button!).  While pressing the tool clutch button, move the tool tip down (away from the RCM).   You can now used the `enable` check box in the `MTMx-PSMy` tab to enable the tele-op controller.  If you have multiple pairs, you will have to enable in each tab (we plan to improve this soon).  Check the log messages in the first tab to make sure everything went as planned.
+To start the tele-operation, you will first need to push the tool tip past the cannula.  Since the PID controller is already running, you will need to press the `Tool clutch` button (this is the physical white button on top of the PSM, not a Qt GUI Button!).  While pressing the tool clutch button, move the tool tip down (away from the RCM).   You can now used the `Start` button in the `Tele operation` box to enable the tele-op controller.  Check the log messages in the first tab to make sure everything went as planned.
 
 Once the tele-operation controller is running, press the `coag` (or `mono`) foot pedal continuously with your right foot to indicate the operator's presence.  The foot pedal acts as a dead-man switch and replace the optical system used in the real daVinci system to detected the presence of the operator's head.  If you've added a different sensor to detect the operator you obviously don't need to use the `coag` pedal (see [Head Sensor](/jhu-dvrk/sawIntuitiveResearchKit/wiki/HeadSensor)).  You can then tele-operate and use the clutch to re-position the master arms.
+
+When the operator is present, the tele-op component will try to orient the MTM so it matches the orientation of the PSM tooltip.   If you don't let go of the MTM orientation, you might get an error message similar to:
+```
+14:29:30 Warning #5: MTML-PSM2: unable to align MTM, current angle error is 48.5626
+```
+Similarly, the gripper/jaw angles have to match before tele-op can start.   You will have to pinch/release the gripper on the MTM until it matches the gripper angle on the PSM.  Until you do so, the following message will be periodically sent to the console:
+```
+14:29:36 Warning #6: MTML-PSM2: unable to match gripper/jaw angle, pinch and release the gripper
+```
