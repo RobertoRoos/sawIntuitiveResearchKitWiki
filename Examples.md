@@ -12,7 +12,7 @@
 - [3. sawIntuitiveResearchKitQtPID](#3-sawintuitiveresearchkitqtpid)
   - [3.1. Usage](#31-usage)
   - [3.2. Widgets](#32-widgets)
-- [4. sawIntuitiveResearchKitQtConsoleJSON](#4-sawintuitiveresearchkitqtconsolejson)
+- [4. sawIntuitiveResearchKitQtConsoleJSON (**and** ROS dvrk_robot dvrk_console_json)](#4-sawintuitiveresearchkitqtconsolejson-and-ros-dvrk_robot-dvrk_console_json)
   - [4.1. Usage](#41-usage)
   - [4.2. Widgets](#42-widgets)
     - [4.3. Instructions](#43-instructions)
