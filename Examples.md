@@ -184,7 +184,10 @@ The console widget is a widget that aggregates all the error messages from the d
 
 The arm widget can be used to monitor messages specific to an arm, current 3D position (you can right click on the 3D view to change the orientation widget), joint state, estimated wrench (you can right click on the 3D view to change the wrench widget) and timing of the underlying component (homing, kinematics, ...).
 
-![Tele operation GUI](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-gui-teleop.png)
+![Tele operation PSM GUI](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-gui-teleop.png)
+![Tele operation ECM GUI](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-gui-teleop-ecm.png)
+
+The widgets for PSM and ECM tele-operation will show the current state of the corresponding components.
 
 ### 4.3. Instructions
 
