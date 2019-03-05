@@ -53,7 +53,7 @@ Make sure you place the wire to short the two pins as deep as possible and keep 
 
 ## 2. Firewire
 
-***NOTE:*** the following steps should be performed without connecting the arms to the controllers.
+***Note:*** the following steps should be performed without connecting the arms to the controllers.
 
 ### 2.1. FPGA Power
 
@@ -75,7 +75,7 @@ Before you start any program, you need to make sure the controllers are properly
    ```
 Note that the FireWire card in your PC shows as a FireWire node.   So even if you have no FireWire device plugged on your PC, you should see `fw0`.   You might have to unplug/replug the FireWire cable that comes from the controllers to your PC to force a FireWire bus reset.  Wait 10 seconds before replugging.  At that point, you should see some new `fwX` devices in `/dev`.   If everything works as expected, you will see 2 new device handles per controller plugged on the FireWire chain (e.g. `fw1`, `fw2`...).  The numbers must be continuous.  If you see the device numbers skipping some values, it is likely because the kernel didn't have enough time to reset the handles.  If this happens, force a bus reset by unplugging the FireWire cable from the PC, wait a bit longer and replug the FireWire cable.
 
-**Note: ** If you want to check what the Linux kernel is doing while plugging/unplugging the FireWire cable, open a separate shell and start `dmsg -w`. 
+***Note:*** If you want to check what the Linux kernel is doing while plugging/unplugging the FireWire cable, open a separate shell and start `dmsg -w`. 
 
 To test the firewire communication, the simplest solution is to use the command line tool `qladisp`.   Assuming that you have [built the software](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Build), `qladisp` can be found in the cisst build tree, subdirectory `build/bin`.  The program requires one or more board IDs.  The user can optionally specify a port number:
 
