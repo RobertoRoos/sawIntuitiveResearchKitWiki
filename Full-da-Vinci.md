@@ -32,7 +32,7 @@ On the other hand, the dVRK mechatronics and software support the camera manipul
 * For the setup joints, we use a single FPGA-QLA board connected to a board designed by Intuitive Surgical (dSIB) which can interface with all 4 setup joints.  This board has been designed and is being tested at JHU.
  
 You can also access the head sensor and control the endoscope focus using custom cables.  For more details regarding the cables (that you will need to assemble), see:
-* Head sensor: [head sensor options](/jhu-dvrk/sawIntuitiveResearchKit/wiki/HeadSensor#davinci-head-sensor)
+* Head sensor: [head sensor options](/jhu-dvrk/sawIntuitiveResearchKit/wiki/HeadSensor#davinci-head-sensor) (see daVinci Head Sensor section)
 * Camera focus: [endoscope focus section on this page](#endoscope-focus-controller)
 
 You will be able to switch back and forth between the mechatronics from ISI and the dVRK controllers but this requires to unplug and replug a few cables.  The user has to connect the arms, setup joints and foot pedal directly to the dVRK controllers:
