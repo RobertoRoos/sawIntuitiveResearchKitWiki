@@ -19,11 +19,15 @@
 
 # Hardware setup and testing
 
+Acronyms used in this document are defined in the [FAQ](jhu-dvrk/sawIntuitiveResearchKit/wiki/FAQ).
+
 ## 1. Unboxing
 
 ### 1.1. Arms
 
 Please read the unboxing instructions provided by ISI at http://research.intusurg.com/dvrkwiki/index.php?title=DVRK:Docs:Main
+
+The arms need to be connected directly to the controllers.   If you have a research kit (i.e. not the full patient cart) it is very easy.   If you have a full patient cart, the controllers for the PSMs and ECM need to be connected to the cables that come from the arms.   To do so, disconnect the arms (PSMs and ECM) from the back of the patient cart and plug them in the dVRK controllers.   Do not use the long cables that connect the patient cart to the master console.   See also the [full daVinci page](jhu-dvrk/sawIntuitiveResearchKit/wiki/full-da-Vinci)(Introduction section).
 
 ### 1.2. Sterile adapter
 
@@ -35,19 +39,16 @@ Make sure you place the wire to short the two pins as deep as possible and keep 
 
 ### 1.3. Controllers
 
-1. There are two types of controllers, MTM (Master Manipulators) and PSM (Patient Side Manipulator).  It is important not to mix them as the Master controllers use a 24V power supply for the first 4 actuators and a 12V power supply for the last 3 actuators while the Slave controllers use a 24V power supply for all 7 actuators.  You can verify which one is which by opening the controllers.
+1. There are three types of controllers, MTM, PSM and ECM.  It is important not to mix them as the MTM controllers use a 24V power supply for the first 4 actuators and a 12V power supply for the last 3 actuators while the PSM controllers use a 24V power supply for all 7 actuators.  For the ECM, there's a single 36V power supply for the 4 motors and 3 brakes.  You can verify which one is which by opening the controllers.  See also [Controller Boxes](jhu-dvrk/sawIntuitiveResearchKit/wiki/Controller-Boxes).
 
 1. We strongly recommend to label the controllers with the name of the arm you plan to control along with the board IDs.   The board IDs should follow the convention described in the [XML configuration page](/jhu-dvrk/sawIntuitiveResearchKit/wiki/XMLConfig).   Each controller contains two sets of boards.    Each set is composed of a lower board (aka QLA for quad linear amps) and the upper board (FPGA + firewire connections).   The upper board (FPGA) has a rotary dial to set the board ID.   Using a small screw driver you can change the Id for each board. For example, the controller dedicated to the MTM Right should have a label with:
+   ```
+   MTMR (board IDs 2 - 3) 
+   ```
 
-  ```
-  MTMR (board IDs 2 - 3) 
-  ```
-
-1. When you will first unbox the controllers, check the internal connections.  If you find a cable with a loose end or partially unplugged you'll have to plug it back.
+1. When you will first unbox the controllers, check the internal connections.  If you find a cable with a loose end or partially unplugged you'll have to plug it back.  **This is quite important, we've seen controllers that looked like they were delivered using a roller coaster!**
 
 1. We recommend plugging all your controllers to a single power strip with a switch.  This will ensure that all controllers can be turned on or off using a single button.
-
-1. One group has reported that floating ground can cause issues during current calibration procedure. So if you are using WPI ESTOP setup with 4-pin ESTOP connector, we recommend you to put all boxes to a common ground. See also [ESTOP](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ESTOP#21-serial-connection-wpi) page. 
 
 
 ## 2. Firewire
@@ -64,11 +65,19 @@ For the Rev 1 controllers, there is a minor issue with the controllers and power
 
 * If you are using a 4 pin firewire A cable (this is often the case on PC laptops), you won't have any issue since these cables don't provide power over firewire.
 
-* This is also not an issue with the Rev 2 controllers, unless you install jumper J10 on the FPGA boards.
+* This is also not an issue with the Rev 2 and above controllers, unless you install jumper J10 on the FPGA boards.
 
 ### 2.2. Testing with `qladisp`
 
-To test the firewire connections, the simplest solution is to use the command line tool `qladisp`.   Assuming that you have [built the software](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Build), `qladisp` can be found in the cisst build tree, subdirectory `build/bin`.  The program requires one or more board IDs.  The user can optionally specify a port number:
+Before you start any program, you need to make sure the controllers are properly identified on the FireWire bus.   To do so, use the command line:
+   ```
+   ls -al /dev/fw*
+   ```
+Note that the FireWire card in your PC shows as a FireWire node.   So even if you have no FireWire device plugged on your PC, you should see `fw0`.   You might have to unplug/replug the FireWire cable that comes from the controllers to your PC to force a FireWire bus reset.  Wait 10 seconds before replugging.  At that point, you should see some new `fwX` devices in `/dev`.   If everything works as expected, you will see 2 new device handles per controller plugged on the FireWire chain (e.g. `fw1`, `fw2`...).  The numbers must be continuous.  If you see the device numbers skipping some values, it is likely because the kernel didn't have enough time to reset the handles.  If this happens, force a bus reset by unplugging the FireWire cable from the PC, wait a bit longer and replug the FireWire cable.
+
+**Note: ** If you want to check what the Linux kernel is doing while plugging/unplugging the FireWire cable, open a separate shell and start `dmsg -w`. 
+
+To test the firewire communication, the simplest solution is to use the command line tool `qladisp`.   Assuming that you have [built the software](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Build), `qladisp` can be found in the cisst build tree, subdirectory `build/bin`.  The program requires one or more board IDs.  The user can optionally specify a port number:
 
   ```
   qladisp b1 [b2] [-pP]
