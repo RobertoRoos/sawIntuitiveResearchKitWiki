@@ -25,25 +25,27 @@ It is important to notice that there are a few hardware features from the full d
 * Audio pipeline
 * Control panel and switches on the master console arm rest (on/off, scaling, arm pairing, ...)
 * Height adjustment for the stereo display
-* Head sensor
 * ...
 
 On the other hand, the dVRK mechatronics and software support the camera manipulator (ECM) and will soon support the setup joints:
 * For the ECM, we use a FPGA-QLA based PSM controller with a special configuration (XML file) to support the brakes.
 * For the setup joints, we use a single FPGA-QLA board connected to a board designed by Intuitive Surgical (dSIB) which can interface with all 4 setup joints.  This board has been designed and is being tested at JHU.
  
+You can also access the head sensor and control the endoscope focus using custom cables.  For more details regarding the cables (that you will need to assemble), see:
+* Head sensor: [head sensor options](/jhu-dvrk/sawIntuitiveResearchKit/wiki/HeadSensor#davinci-head-sensor)
+* Camera focus: [endoscope focus section on this page](#endoscope-focus-controller)
+
 You will be able to switch back and forth between the mechatronics from ISI and the dVRK controllers but this requires to unplug and replug a few cables.  The user has to connect the arms, setup joints and foot pedal directly to the dVRK controllers:
 * MTM cables can be found on the back of the master console, grey plastic covers need to be removed.
   ![Masters connectors](/jhu-dvrk/sawIntuitiveResearchKit/wiki/master-console-arm-cables.jpg)
 * Foot pedal cable can be found on the front of the master console, under the stereo display and the cover needs to be removed.  Unplug the bottom part and connect it to the dVRK controller.  This cable is rather short so one might consider investing in an extension cable (e.g. https://smile.amazon.com/Monoprice-6ft-DB15-Molded-Cable/dp/B002LWJ7TA).
   ![Foot pedals connector](/jhu-dvrk/sawIntuitiveResearchKit/wiki/master-console-pedals-cable.jpg)
-* On the patient side, both setup joints and arms need to be unplugged from the back of the cart to be connected to the dVRK controllers.  The long cables normally used to connect the patient cart to the master console are not used.  The cables coming from the arms shouldn't be connected to the back to the cart, they must be connected directly to the dVRK controllers!
+* On the patient side, both setup joints and arms need to be unplugged from the back of the cart to be connected to the dVRK controllers.  **The long cables normally used to connect the patient cart to the master console are not used**.  The cables coming from the arms shouldn't be connected to the back to the cart, they must be connected directly to the dVRK controllers!   Since the cables coming from the arms are not very long, you will need to place all the PSM and ECM controllers really close behind the patient cart.
   ![Unplugged patient cart](/jhu-dvrk/sawIntuitiveResearchKit/wiki/patient-cart-arm-suj-plugs.jpg)
-
 
 # ECM
 
-Make sure you use an ECM controller, i.e. a controller with a single 36V motor power supply for both FPGA-QLA sets.  Controllers for the MTMs have two power supplies for the motors, a 24V for the first 4 axis and a 12V for the last 4 axis.  Controllers for the PSMs have a single power supply for all axis but it is only 24V.  On your controller, set the board IDs to 4 and 5 (see [XML configuration](/jhu-dvrk/sawIntuitiveResearchKit/wiki/XMLConfig)).
+Make sure you use an ECM controller, i.e. a controller with a single 36V motor power supply for both FPGA-QLA sets.  Controllers for the MTMs have two power supplies for the motors, a 24V for the first 4 axis and a 12V for the last 4 axis.  Controllers for the PSMs have a single power supply for all axis but it is only 24V.  On your controller, set the board IDs to 4 and 5 (see [XML configuration](/jhu-dvrk/sawIntuitiveResearchKit/wiki/XMLConfig)).  As for the PSMs, you must connect the cable that comes directly from the arm to the controller.
 
 ## XML configuration
 
