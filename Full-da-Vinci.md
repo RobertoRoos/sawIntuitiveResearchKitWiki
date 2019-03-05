@@ -41,6 +41,7 @@ You will be able to switch back and forth between the mechatronics from ISI and 
 * Foot pedal cable can be found on the front of the master console, under the stereo display and the cover needs to be removed.  Unplug the bottom part and connect it to the dVRK controller.  This cable is rather short so one might consider investing in an extension cable (e.g. https://smile.amazon.com/Monoprice-6ft-DB15-Molded-Cable/dp/B002LWJ7TA).
   ![Foot pedals connector](/jhu-dvrk/sawIntuitiveResearchKit/wiki/master-console-pedals-cable.jpg)
 * On the patient side, both setup joints and arms need to be unplugged from the back of the cart to be connected to the dVRK controllers.  **The long cables normally used to connect the patient cart to the master console are not used**.  The cables coming from the arms shouldn't be connected to the back to the cart, they must be connected directly to the dVRK controllers!   Since the cables coming from the arms are not very long, you will need to place all the PSM and ECM controllers really close behind the patient cart.
+  ![Rack mounted PSM/ECM controllers](/jhu-dvrk/sawIntuitiveResearchKit/wiki/patient-cart-rack.jpg)
   ![Unplugged patient cart](/jhu-dvrk/sawIntuitiveResearchKit/wiki/patient-cart-arm-suj-plugs.jpg)
 
 # ECM
@@ -188,6 +189,10 @@ You can download a document to print on letter paper: [dVRK labels for SUJ](/jhu
 
 # Endoscope focus controller
 
+The goal of this section is to describe how to control the camera focus using the foot pedals through the dVRK controllers/software.
+
+![Focus controller front](/jhu-dvrk/sawIntuitiveResearchKit/wiki/camera-focus-front.jpg)
+
 * Focus controller
   * Back of endoscope focus controller, male DSUB 15 pins
   * Focus +, short pin 1 with pin 9, power comes from pin 1 (floating high, 5V)
@@ -210,6 +215,7 @@ You can download a document to print on letter paper: [dVRK labels for SUJ](/jhu
     * Ground: dMIB `DOF 1` pin 10 and/or `DOF 2` pin 10 <-> Focus controller pin 9 (dMIB share ground between `DOF 1` and `DOF2`)
 
 ![dVRK focus controller cable](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-focus-control-cable.jpg)
+![Focus controller back](/jhu-dvrk/sawIntuitiveResearchKit/wiki/camera-focus-back.jpg)
 
 Once you've build your cable, you can modify your console JSON configuration file and add:
 ```json
