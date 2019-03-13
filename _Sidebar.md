@@ -11,7 +11,6 @@ Getting Started
 * [First Steps](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FirstSteps)
 * [Setting up environment](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Development-Environment)
 * [Build with ROS](/jhu-dvrk/sawIntuitiveResearchKit/wiki/CatkinBuild)
-* [Build instructions w/o ROS](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Build)
 * [XML configuration](/jhu-dvrk/sawIntuitiveResearchKit/wiki/XMLConfig)
 * [Hardware setup](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Hardware)
 * [Calibration](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Calibration)
@@ -35,6 +34,7 @@ Advanced
 Miscellaneous
 * [Frequently Asked Questions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FAQ)
 * [QLA Heat Sink](/jhu-dvrk/sawIntuitiveResearchKit/wiki/QLA-Heat-Sink)
+* [Build instructions w/o ROS](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Build)
 * [cisst](/jhu-cisst/cisst/wiki)
 * [JHU](JHU-DVRK-Hardware-Status)
 
