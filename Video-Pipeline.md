@@ -22,7 +22,7 @@ At the other end of the video pipeline, we have the stereo viewer.  It can be ei
 
 ## ISI SD HRSV
 
-The da Vinci Classic came with two SD CRT (Cathodic Ray Tube) monitors, their resolution is 640x480.  The connectors on the back of the monitor is not totally standard and each group will have to build a custom cable to provide a VGA interface.   One can find instructions on the [ISI Research Wiki](https://research.intusurg.com/index.php/DVRK:Topics:StereoViewer) [Password protected].
+The da Vinci Classic came with two SD CRT (Cathodic Ray Tube) monitors, their resolution is 640x480.  The connectors on the back of the monitor is not totally standard and each group will have to build a custom cable to provide a VGA interface.   One can find instructions on the [ISI Research Wiki](https://research.intusurg.com/index.php/DVRK:Topics:StereoViewer) **[Password protected]**.
  
 ## ISI HD HRSV
 
@@ -32,7 +32,7 @@ Some of the da Vinci S consoles came with two higher resolution CRTs (1024x768).
 
 Some groups have replaced the CRTs in the HRSV provided by ISI with a pair of LCD panels.  The main issue is to find the proper size of monitor, i.e. roughly 14" with 4/3 ratio and ideally a fairly high resolution.
 
-  * The group at JHU found some replacement part for older laptop and LCD controllers that work fine (see [ISI Research Wiki](https://research.intusurg.com/index.php/DVRK:Topics:StereoViewerLCD) [Password protected].  Unfortunately, some of the parts used are getting harder to find.
+  * The group at JHU found some replacement part for older laptop and LCD controllers that work fine (see [ISI Research Wiki](https://research.intusurg.com/index.php/DVRK:Topics:StereoViewerLCD) **[Password protected]**).  Unfortunately, some of the parts used are getting harder to find.
 
   * Other options?
 
