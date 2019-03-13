@@ -30,7 +30,7 @@ The calibration steps are required to fine tune the XML configuration file gener
 
 ## 2.0 Prerequisite
 Please read the [ESTOP debugging](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ESTOP#8-debugging) section before you start.   
-When you are calibrating motor current, ONLY have 1 controller box in ESTOP chain.
+When you are calibrating motor current, it might be simpler to have a single controller on the ESTOP chain.   If you prefer to keep all your controllers on the ESTOP chain, make sure all the controllers are also connected to the FireWire chain and you will have to use the `qlacloserelays` utility program to enable power.
 
 ## 2.1. Introduction
 
