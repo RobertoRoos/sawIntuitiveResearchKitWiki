@@ -1,5 +1,8 @@
 ## About
-This page documents how to run kinematics simulation of da Vinci Reseach Kit (dVRK).
+
+This page documents how to run kinematics simulation of da Vinci Research Kit (dVRK).  It is possible to run the dVRK in simulation mode on any computer as there is no need for a FireWire adapter.
+
+The kinematic simulation mode uses the same software components and configuration files as the real arm except that the PID controller doesn't communicate with the hardware.  Instead, measured position in the joint space are based on the last commanded joint values.  This mode allows user to test their code with simple motion commands.  In kinematic simulation mode, the dVRK software retains most of the graphical user interface (IO widgets are not available of course) as well as the ROS topics.   One can use Rviz to visualize the arms in a virtual environment.
 
 ## Build 
 Please follow the [catkin build](/jhu-dvrk/sawIntuitiveResearchKit/wiki/CatkinBuild) page to download and build the software stack. 
@@ -88,4 +91,3 @@ m.move_joint_one(0.2, 0)
 
 ## Questions
 Please use the dVRK Google Group if you have any questions. (See [First Steps](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FirstSteps))
-
