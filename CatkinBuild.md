@@ -15,11 +15,12 @@ These instructions are provided for those who want to build the whole cisst/SAW 
 # Packages
 
 ## cisstNetlib, cisst, SAW components and cisst-ros bridge
-You will first need to build cisst and its dependencies, see [cisst/SAW catkin instructions](https://github.com/jhu-cisst/cisst/wiki/Compiling-cisst-and-SAW-with-CMake#13-building-using-catkin-build-tools-for-ros)
+
+You will first need to build cisst and its dependencies.   Follow the instructions provided for [cisst/SAW catkin build](https://github.com/jhu-cisst/cisst/wiki/Compiling-cisst-and-SAW-with-CMake#13-building-using-catkin-build-tools-for-ros) and then come back to this page for the dVRK/ROS specific packages.
 
 ## dvrk-ros
 
-This package is not part of the cisst-saw yet as it contains many CAD files that are of no use for most cisst-saw users and we can't really justify 30MB of data.  Once we removed all the sldprt files, we can add the dvrk-ros as a submodule in cisst-saw and save that extra step:
+These packages are not part of the cisst-saw repositories since they contain many CAD files that are of no use for most cisst-saw users:
 
 ```bash
 cd ~/catkin_ws/src
