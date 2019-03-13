@@ -36,5 +36,14 @@ Some groups have replaced the CRTs provided by ISI with a pair of LCD panels.  T
 
 # Hardware based pipeline
 
+The hardware based pipeline is the simplest solution and likely the cheapest.  It is based on off-the-shelf converters that can be placed between the CCUs and the monitor.  The main drawback is that one can not modify nor use the video coming from the CCUs before displaying on the HRSV monitors.
+
+![Hardware based video pipeline](/jhu-dvrk/sawIntuitiveResearchKit/wiki/video-pipeline-hardware.png)
+
+The main problem is to find a proper converter (two for left and right videos):
+ * S-Video to VGA, one could use: --- find suggestion from community
+ * SDI to VGA, one could use: --- find suggestion from community
+
 # Software base pipeline 
 
+![Software based video pipeline](/jhu-dvrk/sawIntuitiveResearchKit/wiki/video-pipeline-software.png)
