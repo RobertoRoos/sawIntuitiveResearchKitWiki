@@ -46,9 +46,9 @@ config:=/path/to/ros/workspace/src/cisst-saw/sawIntuitiveResearchKit/share/jhu-d
 ```
 
 ## Launch File & Configuration File
-The dVRK kinematics simulation uses a simulated low-level hardware class and reuses rest of the code including the main executable **dvrk_console_josn**, which can run a real or a simulated arm based on a configuration file in json format. 
+The dVRK kinematics simulation uses a simulated low-level hardware class and reuses rest of the code including the main executable `dvrk_console_json`, which can run a real or a simulated arm based on a configuration file in json format. 
 
-Here is a snippet from the launch file starting **dvrk_console_json**.
+Here is a snippet from the launch file starting `dvrk_console_json`.
 ```xml
   <node name="dvrk_$(arg arm)_node"
         pkg="dvrk_robot"
