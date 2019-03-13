@@ -13,6 +13,8 @@ This is the most common endoscope found on Classic/Standard full da Vinci system
 Intuitive started to release an HD endoscope along the da Vinci S (see [FAQ](jhu-dvrk/sawIntuitiveResearchKit/wiki/FAQ) for different generations of systems).  The endoscope and mount is actually the same as the Standard SD endoscope but the camera heads are different.  They still use a motorized mechanism for focus but the sensor now support full HD (1080x1920).  To process the raw signal from the camera, there are also two CCUs.  Intuitive used different CCUs over time.  Some systems come with the Ikegami CCUs.  The video output is SDI.
 
 ## Custom cameras
+
+Contributions from the dVRK community can go here.
  
 # Displays
 
@@ -28,7 +30,7 @@ Some of the da Vinci S consoles came with two higher resolution CRTs (1024x768).
 
 ## Hacked ISI HRSV
 
-Some groups have replaced the CRTs provided by ISI with a pair of LCD panels.  The issue is to find the proper size of monitor, i.e. roughly 14" with 4/3 ratio and ideally a fairly high resolution.
+Some groups have replaced the CRTs in the HRSV provided by ISI with a pair of LCD panels.  The main issue is to find the proper size of monitor, i.e. roughly 14" with 4/3 ratio and ideally a fairly high resolution.
 
   * The group at JHU found some replacement part for older laptop and LCD controllers that work fine (see [ISI Research Wiki](https://research.intusurg.com/index.php/DVRK:Topics:StereoViewerLCD) [Password protected].  Unfortunately, some of the parts used are getting harder to find.
 
@@ -40,10 +42,17 @@ The hardware based pipeline is the simplest solution and likely the cheapest.  I
 
 ![Hardware based video pipeline](/jhu-dvrk/sawIntuitiveResearchKit/wiki/video-pipeline-hardware.png)
 
-The main problem is to find a proper converter (two for left and right videos):
+You will need some standard cables as well as a pair of video converters (one for the left video and one for the right video):
  * S-Video to VGA, one could use: --- find suggestion from community
  * SDI to VGA, one could use: --- find suggestion from community
 
 # Software base pipeline 
 
+If you need to process the video input (e.g. camera calibration, filtering, 3D reconstruction...) or modify the video being displayed (camera distortion compensation, overlays, messages...) you will need to use put a PC in the middle of the video pipeline.   In this case the main 3 "components" are:
+ * Frame grabbers
+ * Software
+ * Video output (most likely a graphic card with 2 extra outputs)
+
 ![Software based video pipeline](/jhu-dvrk/sawIntuitiveResearchKit/wiki/video-pipeline-software.png)
+
+For the frame grabbers and software, you can find some documentation on the [dVRK ROS GitHub repository](https://github.com/jhu-dvrk/dvrk-ros/blob/master/dvrk_robot/video.md).
