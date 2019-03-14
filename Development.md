@@ -43,6 +43,7 @@ cd ~/catkin_ws/src
 git clone https://github.com/jhu-dvrk/dvrk-ros
 cd ~/catkin_ws/src/dvrk-ros
 git checkout devel
+cd ~/catkin_ws/src
 git clone https://github.com/jhu-dvrk/dvrk-gravity-compensation
 cd ~/catkin_ws/src/dvrk-gravity-compensation
 git checkout devel
