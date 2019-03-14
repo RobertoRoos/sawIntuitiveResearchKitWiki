@@ -9,32 +9,33 @@ Community
 
 Getting Started
 * [First Steps](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FirstSteps)
-* [Setting up environment](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Development-Environment)
+* [Setting up Environment](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Development-Environment)
 * [Build with ROS](/jhu-dvrk/sawIntuitiveResearchKit/wiki/CatkinBuild)
-* [XML configuration](/jhu-dvrk/sawIntuitiveResearchKit/wiki/XMLConfig)
-* [Hardware setup](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Hardware)
+* [XML Configuration](/jhu-dvrk/sawIntuitiveResearchKit/wiki/XMLConfig)
+* [Hardware Setup](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Hardware)
 * [Calibration](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Calibration)
 * [Examples](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Examples)
 
 Advanced
-* [Software architecture](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Software-Architecture)
+* [Software Architecture](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Software-Architecture)
 * [Config File formats](Configuration-File-Formats)
 * [Software Components APIs](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Components-APIs)
 * [Kinematics Simulation](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Kinematics-Simulation)
-* [Potentiometer issues](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Debugging-Potentiometer-Issues)
-* [Development branches](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Development)
+* [Potentiometer Issues](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Debugging-Potentiometer-Issues)
+* [Development Branches](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Development)
 * [Release Checklist](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Release-Checklist)
 * [Projects](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Future-Projects)
 * [Controller Boxes](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Controller-Boxes)
-* [E-STOP wiring](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ESTOP)
-* [Full da Vinci system](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Full-da-Vinci)
+* [E-STOP Wiring](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ESTOP)
+* [Full da Vinci System](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Full-da-Vinci)
 * [Head Sensor](/jhu-dvrk/sawIntuitiveResearchKit/wiki/HeadSensor)
 * [Foot Pedals](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FootPedals)
+* [Video Pipeline](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Video-Pipeline)
 
 Miscellaneous
 * [Frequently Asked Questions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FAQ)
 * [QLA Heat Sink](/jhu-dvrk/sawIntuitiveResearchKit/wiki/QLA-Heat-Sink)
-* [Build instructions w/o ROS](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Build)
+* [Build Instructions w/o ROS](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Build)
 * [cisst](/jhu-cisst/cisst/wiki)
 * [JHU](JHU-DVRK-Hardware-Status)
 
