@@ -82,7 +82,9 @@ Some groups have replaced the CRTs in the HRSV provided by ISI with a pair of LC
 
   * The group at JHU found some replacement parts for old laptops and LCD controllers that work fine (see [ISI Research Wiki](https://research.intusurg.com/index.php/DVRK:Topics:StereoViewerLCD) **[Password protected]**).  Unfortunately, some of these parts are getting harder to find online.
 
-  * Other options?
+  * The group at CUHK used a pair of DELL monitors ([1505FP](https://www.amazon.com/Dell-1505FP-15-IN-LCD-MONITOR/dp/B0026JQ85Y)) as replacement.  The resolution is 1024x768.
+
+![HRSV with DELL 15" monitors](/jhu-dvrk/sawIntuitiveResearchKit/wiki/video-hrsv-dell-15.jpg)
 
 # Hardware based pipeline
 
