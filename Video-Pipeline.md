@@ -46,7 +46,7 @@ CCUs are in the middle, the endoscope focus controller is on top.  A light sourc
 
 ## ISI HD endoscope
 
-Intuitive started to release an HD endoscope along the da Vinci S (see [FAQ](jhu-dvrk/sawIntuitiveResearchKit/wiki/FAQ) for different generations of systems).  The endoscope and mount is actually the same as the Standard SD endoscope but the camera heads are different.  They still use a motorized mechanism for focus but the sensor now support full HD (1080x1920).  To process the raw signal from the camera, there are also two CCUs.  Intuitive used different CCUs over time.  Some systems come with the Ikegami CCUs.  The video output is SDI.
+Intuitive started to release an HD endoscope along the da Vinci S (see [FAQ](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FAQ) for different generations of systems).  The endoscope and mount is actually the same as the Standard SD endoscope but the camera heads are different.  They still use a motorized mechanism for focus but the sensor now support full HD (1080x1920).  To process the raw signal from the camera, there are also two CCUs.  Intuitive used different CCUs over time.  Some systems come with the Ikegami CCUs.  The video output is SDI.
 
 ### Endoscope
 
