@@ -21,10 +21,10 @@
 Some ISI acronyms:
  * **ISI**: Intuitive Surgical Inc.
  * **Classic**: refers to first generation da Vinci.  The research kit is based on the Classic.  Also know as Standard.
- * **S**: second generation da Vinci.  New PSMs, MTMs arms are similar to first generation.
+ * **S**: second generation da Vinci.  New PSMs/ECM, MTMs arms are similar to first generation.
  * **Si**: third generation da Vinci. New MTMs, dual console, new stereo display, PSMs are similar to second generation.
- * **Xi**: fourth generation da Vinci.  New setup joints, new PSMs (now known as USMs) can be used to hold tools or camera.  Surgeon console and stereo display similar to Si.
- * **X**: Similar to Is but with Xi patient side arms.
+ * **Xi**: fourth generation da Vinci.  New setup joints, new arm to replace both PSMs and ECM (now known as USMs) can be used to hold tools or camera.  Surgeon console and stereo display similar to Si.
+ * **X**: Similar to Si but with Xi patient side arms.
  * **PSM**: Patient Side Manipulator, 2 to 3 on a full da Vinci system, 2 included in Research Kit: PSM1 and PSM2 - Mechanically identical. 
  * **MTM**: Master Tool Manipulator, 2 on a full da Vinci system (4 with dual console on Si/Xi system): 2 included in Research Kit: MTML and MTMR - Not mechanically identical, last joints are different for left and right arms.
  * **ECM**: Endoscopic Camera Manipulator, 1 on real da Vinci system.
@@ -39,13 +39,13 @@ Please read the Research Kit user manual: http://research.intusurg.com/dvrkwiki/
 
 This is a high level description of the different generations of da Vinci systems.
 
-| Model | Year | Surgeon's console | PSMs/ECM | Setup Joints | Endoscope |
+| Model | Year | Surgeon's console | PSM/ECM/USM | Setup Joints | Endoscope |
 |-------|------|-------------------|----------|--------------|-----------|
-| Classic | 2000 | Rev 1 | Rev 1 | Rev 1 | Rev 1 |
-| S       | 2006 | Rev 1 | Rev 2 | Rev 2 | Rev 1 + HD |
-| Si      | 2009 | Rev 2 | Rev 2 | Rev 2 | Rev 2 |
-| X       | 2017 | Rev 2 | Rev 3 | Rev 2 | Rev 3 |
-| Xi      | 2014 | Rev 2 | Rev 3 | Rev 3 | Rev 3 |
+| Classic | 2000 | Rev 1 | Rev 1 (PSM/ECM)| Rev 1 | Rev 1 |
+| S       | 2006 | Rev 1 | Rev 2 (PSM/ECM)| Rev 2 | Rev 1 + HD |
+| Si      | 2009 | Rev 2 | Rev 2 (PSM/ECM)| Rev 2 | Rev 2 |
+| X       | 2017 | Rev 2 | Rev 3 (USM)| Rev 2 | Rev 3 |
+| Xi      | 2014 | Rev 2 | Rev 3 (USM)| Rev 3 | Rev 3 |
 
 ## What does QLA-FPGA, qladisp, ... mean?
 
