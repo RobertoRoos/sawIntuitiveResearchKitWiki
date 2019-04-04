@@ -23,8 +23,8 @@ For the safety checks, we use two different parameters per potentiometer.  Consi
 The challenge is to find the "best" distance and latency for each system.
 
 **Important notes regarding the MTMs**
-  * The last motorized joint (7), i.e. the roll has a potentiometer but the dVRK doesn't use it, neither for homing nor for safety checks.   To avoid errors we simply set a very high **Distance** threshold.  Please ignore the reported analog position for this axis.
-  * The very last "joint" (8), i.e. the gripper doesn't have an encoder.  The dVRK only uses the analog input of the 8th axis (no encoder, no motor).  The analog input is the value from the Hall effect sensor in the MTM gripper.   As for the 7th axis, we set a very high **Distance** threshold to avoid errors.  Please ignore the reported encoder joint and actuator positions as well as velocities.
+  * The last motorized joint (7), i.e. the roll has a potentiometer but the dVRK doesn't use it, neither for homing nor for safety checks.   To avoid errors we simply set a very high **Distance** threshold.  In Rev 1.6 and above, the value 0.0 should be used to simply disable the safety check.  Please ignore the reported analog position for this axis.
+  * The very last "joint" (8), i.e. the gripper doesn't have an encoder.  The dVRK only uses the analog input of the 8th axis (no encoder, no motor).  The analog input is the value from the Hall effect sensor in the MTM gripper.   As for the 7th axis, we set a very high **Distance** threshold to avoid errors.  In Rev 1.6 and above, the value 0.0 should be used to simply disable the safety check.  Please ignore the reported encoder joint and actuator positions as well as velocities.
 
 # Connections
 
@@ -80,7 +80,9 @@ We found that some potentiometers can be "somewhat" working so it is possible to
          <Tolerance Axis="7" Distance="1000.00" Latency="0.01" Unit="deg"/>
       </Potentiometers>
    ```
-The first parameter to increase should be the **Latency**.  The value is given in seconds.  Try to increase it progressively by doubling it and restart the console (no need to power on/off the controllers).  If the system is still not stable, double the **Latency** and try again.  If the system is still not stable with a **Latency** of 1 seconds (`1.0`), try the same approach with the **Distance** parameter. 
+The first parameter to increase should be the **Latency**.  The value is given in seconds.  Try to increase it progressively by doubling it and restart the console (no need to power on/off the controllers).  If the system is still not stable, double the **Latency** and try again.  If the system is still not stable with a **Latency** of 1 seconds (`1.0`), try the same approach with the **Distance** parameter.
+
+**Note:** In Rev 1.6 and above, instead of using a high **Distance** value to disable the safety check on a given joint, simply set the **Distance** to zero (i.e. `0.0`). 
 
 # Using ROS bags to collect data
 
@@ -127,4 +129,3 @@ From there you can see if the issue is:
 * Garbage values, something is likely broken
 * Vertical offset or "stretch", you should probably re-calibrate your potentiometers
 * Horizontal offset.  The pot is likely too slow and you can fix this by increasing the "Latency" in the XML configuration file
-
