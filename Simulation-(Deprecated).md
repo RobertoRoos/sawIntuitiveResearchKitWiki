@@ -1,3 +1,9 @@
+# DEPRECATED
+For simulation needs, please try the following two options:
+* [Kinematics Simulation](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Kinematics-Simulation)
+* [V-REP Simulator from Universitá di Napoli Federico II](https://doi.org/10.1109/BIOROB.2018.8487187)
+
+=======================
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
@@ -105,4 +111,4 @@ TODO_HOW_TO_CONNECT_TO_REAL_ROBOT
 
 ### 6.3. Questions
 Please email me if you have questions or are interested to do some simulation work.
-Email: zihan.chen@jhu.edu 
+Email: zihan.chen.jhu@gmail.com
