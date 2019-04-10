@@ -66,7 +66,8 @@ https://github.com/jhu-cisst/mechatronics-firmware/wiki/FPGA-Program
 
 ## Software
 
-* *April 2019*: Version 1.7.0 released, see latest change logs:
+* *April 2019*: Version 1.7.0 released:
+  * Using c++ 14 features: **Ubuntu 16.04 or higher required**
   * [sawIntuitiveResearchKit](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/blob/master/CHANGELOG.md)
   * [dvrk-ros](https://github.com/jhu-dvrk/dvrk-ros/blob/master/CHANGELOG.md)
   * [cisst-ros](https://github.com/jhu-cisst/cisst-ros/blob/master/CHANGELOG.md)
