@@ -70,8 +70,8 @@ https://github.com/jhu-cisst/mechatronics-firmware/wiki/FPGA-Program
   * Using c++ 14 features: **Ubuntu 16.04 or higher required**
   * [sawIntuitiveResearchKit](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/blob/master/CHANGELOG.md)
   * [dvrk-ros](https://github.com/jhu-dvrk/dvrk-ros/blob/master/CHANGELOG.md)
-  * [cisst-ros](https://github.com/jhu-cisst/cisst-ros/blob/master/CHANGELOG.md)
   * [cisst](https://github.com/jhu-cisst/cisst/blob/master/CHANGELOG.md)
+  * [cisst-ros](https://github.com/jhu-cisst/cisst-ros/blob/master/CHANGELOG.md)
   * [sawRobotIO1394](https://github.com/jhu-saw/sawRobotIO1394/blob/master/CHANGELOG.md)
   * [sawControllers](https://github.com/jhu-saw/sawControllers/blob/master/CHANGELOG.md)
 * *May 2018*: Version 1.6.0 released
