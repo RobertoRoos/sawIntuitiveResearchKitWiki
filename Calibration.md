@@ -304,7 +304,7 @@ As for the scales calibration, you first need to start the console application a
 
 In a separate shell, start the calibration script using the command line:
 ```sh
-# In directory ~/catkin_ws/src/cisst-saw/sawIntuitiveResearchKit/share/jhu-dVRK
+# In directory ~/catkin_ws/src/cisst-saw/sawIntuitiveResearchKit/share/<your-system-directory>
 rosrun dvrk_robot dvrk_calibrate_potentiometers.py offsets PSM2 sawRobotIO1394-PSM2-00000.xml
 ```
 Follow the instructions and place the calibration template (either Lego bars or plexiglass plate) when prompted to.  The result should look like:
