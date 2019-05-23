@@ -39,7 +39,7 @@ For posters and videos, please include the [dVRK logo](https://github.com/jhu-dv
 * [Videos](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Videos) of the dVRK in action
 * [Publications](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Publications)
 * Resources:
-  * Google group https://groups.google.com/d/forum/research-kit-for-davinci and research-kit-for-davinci@googlegroups.com (if you decide to join the dVRK Google group, please tell us which group/university you belong to in your request).
+  * Google group https://groups.google.com/d/forum/research-kit-for-davinci and research-kit-for-davinci@googlegroups.com (use the Google group web page to request membership, don't forget to mention your group/university so the group admin can identify you).
   * Intuitive Surgical hardware wiki http://research.intusurg.com/dvrk
   * *cisst* libraries http://github.com/jhu-cisst/cisst/wiki
   * Johns Hopkins University Mechatronics http://jhu-cisst.github.io/mechatronics
