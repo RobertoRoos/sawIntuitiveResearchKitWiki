@@ -14,7 +14,7 @@ You will need to create two accounts to access some privates resources:
 * Google group https://groups.google.com/d/forum/research-kit-for-davinci and research-kit-for-davinci@googlegroups.com We strongly encourage users to send questions using this google group.
  * How to add new user: 
   1. Go to https://groups.google.com/forum/#!forum/research-kit-for-davinci
-  2. Use the *Apply for membership* link to request membership 
+  2. Use the *Apply for membership* link to request membership, don't forget to mention your group/university so the group admin can identify you.
 
 ## Documentation
 
