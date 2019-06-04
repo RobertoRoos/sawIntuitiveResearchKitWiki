@@ -109,20 +109,20 @@ Maybe track and approximate camera focus to provide a better camera calibration 
 Autofocus?
 
 ## Motorized 3D camera
-For dVRK users (i.e. users who don't have a full daVinci), alternative arm with stereo head.<br>
+For dVRK users (i.e. users who don't have a full da Vinci), alternative arm with stereo head.<br>
 Maybe a simple pan/tilt camera with ROS interface controllable from MTMs?  In any case, we should include a mechanism to report the position of the PSMs with respect to the camera.  In the case of a pan/tilt, the orientation is really what we are after.
 
 # Applications
 
 ## Potentiometer and DH calibration
-We have a procedure to calibrate the scales but we're missing many offsets, the only one handled for now are the last 4 on PSMs.  Can we find a way to calibrate the pots on MTMs, ECM and first 3 on PSMs?<br?
-Develop a procedure to collect 3D positions both based on a tracking system (likely optical) and based on encoders and then identify the ideal DH parameters.  JHU has a high school student working on similar project during summer '16.<br>
+We have a procedure to calibrate the scales but we're missing many offsets, the only one handled for now are the last 4 on PSMs.  Can we find a way to calibrate the pots on MTMs, ECM and first 3 on PSMs?<br>
+Develop a procedure to collect 3D positions both based on a tracking system (likely optical) and based on encoders and then identify the ideal DH parameters.  JHU had a high school student working on similar project during summer '16.<br>
 **[New feature, ROS, ...]**
 
 ## Dynamic simulation
 Two different goals:
 * Offline simulation
-* Realtime simulation, research skill simulator?
+* Real-time simulation, research skill simulator?
 
 ### Gazebo
 Gazebo reviews are mixed, some reported issues with stability and poor documentation but widely used in the ROS community, including for the DARPA project and at JHU with WAM arms.<br>
