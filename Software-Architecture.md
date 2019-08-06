@@ -169,29 +169,29 @@ The class `mtsRobotIO1394QtWidget` is part of the [sawRobotIO1394](https://githu
 
 The layout will be slightly different based on the robot.
  * Without brakes, PSM and MTM:
-  ![IO GUI without brakes](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-gui-io.png)
+  ![IO GUI without brakes](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/gui/dvrk-gui-io.png)
  * With brakes, ECM:
-  ![IO GUI with brakes](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-gui-ecm-console.png)
+  ![IO GUI with brakes](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/gui/dvrk-gui-ecm-console.png)
  * Extra widget for buttons (class `prmQtWidgetEventButtonsComponent`, part of [cisstParameterTypesQt](https://github.com/jhu-cisst/cisst) library)
-  ![IO GUI buttons](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-gui-buttons.png)
+  ![IO GUI buttons](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/gui/dvrk-gui-buttons.png)
 
 ## PID controller
 
 The class `mtsPIDQtWidget` is part of the [sawControllers](https://github.com/jhu-saw/sawControllers) library.
 
-  ![PID GUI](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-gui-pid.png)
+  ![PID GUI](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/gui/dvrk-gui-pid.png)
 
 ## Arm classes
 
 The class `mtsIntuitiveResearchKitArmQtWidget` is part of the [sawIntuitiveResearchKit](https://github.com/jhu-dvrk/sawIntuitiveResearchKit) library.
 
-  ![Arm GUI](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-gui-arm.png)
+  ![Arm GUI](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/gui/dvrk-gui-arm.png)
 
 ## Tele-operation
 
 The class `mtsTeleOperationQtWidget` is part of the [sawControllers](https://github.com/jhu-saw/sawControllers) library.
 
-  ![Teleop GUI](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-gui-teleop.png)
+  ![Teleop GUI](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/gui/dvrk-gui-teleop.png)
 
 ## Console
 

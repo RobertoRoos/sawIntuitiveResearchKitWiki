@@ -42,7 +42,7 @@ For each connection (i.e. ITT connector and both ends of the DB68 cable):
 
 It is possible that one of the encoders or the potentiometers is defective.  The easiest way to check this is to use the graphical user interface and control the robot using the IO widget.
 
-![Robot IO GUI](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-gui-io.png)
+![Robot IO GUI](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/gui/dvrk-gui-io.png)
 
 Start the console application and configure the system without homing:
   1. Do not hit **Power On** nor **Home** buttons.   If you have, just hit **Power Off**

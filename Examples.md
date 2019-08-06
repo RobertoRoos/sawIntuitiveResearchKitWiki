@@ -66,7 +66,7 @@ sawRobotIO1394QtConsole -c sawRobotIO1394-PSM1-12345.xml
 
 This program relies on two Qt widgets, one for all the digital inputs and one for the IO per axis.
 
-![Digital IO GUI](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-gui-buttons.png)
+![Digital IO GUI](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/gui/dvrk-gui-buttons.png)
 
 The "buttons" widget shows all the digital inputs as defined in the XML configuration files.  For each button, the widget provides:
 * The digital input name which also corresponds to the IO component interface name.
@@ -74,7 +74,7 @@ The "buttons" widget shows all the digital inputs as defined in the XML configur
 * The total number of events received so far
 * Time of last event received
 
-![Robot IO GUI](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-gui-io.png)
+![Robot IO GUI](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/gui/dvrk-gui-io.png)
 
 The top sections of the IO widget are:
 * Power.  The power on the QLA boards is controlled at two levels, per board and per actuator.  You can either `Power all` to power both the boards and actuators or use `Power boards` to power the boards only.  You can then enable or disable power per actuator using the check boxes `Actuator power`.
@@ -142,7 +142,7 @@ Assuming that you have set your path correctly and you are in the directory that
 
 This program uses the IO, Buttons and PID widgets.
 
-![PID GUI](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-gui-pid.png)
+![PID GUI](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/gui/dvrk-gui-pid.png)
 
 The PID Widget doesn't provide any direct access to all the IO features.   Before you enable the PID, make sure you use the IO widget to:
 * Power the boards.
@@ -178,16 +178,16 @@ The file `console.json` contains a description of your system, i.e. how many arm
 
 The application introduces a few new widgets.   Please note that all the homing logic is implemented in the high level components so the IO and PID widgets should only be used for monitoring and debugging.   You do not need to use the IO widget to power the boards, reset the encoders or bias the current based on current feedback.   These steps are all triggered in sequence when you hit the `Home` button on the console widget.      
 
-![Console messages GUI](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-gui-console-messages.png)
+![Console messages GUI](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/gui/dvrk-gui-console-messages.png)
 
 The console widget is a widget that aggregates all the error messages from the different arms and allows to home all arms in one click.
 
-![Arm GUI](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-gui-arm.png)
+![Arm GUI](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/gui/dvrk-gui-arm.png)
 
 The arm widget can be used to monitor messages specific to an arm, current 3D position (you can right click on the 3D view to change the orientation widget), joint state, estimated wrench (you can right click on the 3D view to change the wrench widget) and timing of the underlying component (homing, kinematics, ...).
 
-![Tele operation PSM GUI](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-gui-teleop.png)
-![Tele operation ECM GUI](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-gui-teleop-ecm.png)
+![Tele operation PSM GUI](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/gui/dvrk-gui-teleop.png)
+![Tele operation ECM GUI](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/gui/dvrk-gui-teleop-ecm.png)
 
 The widgets for PSM and ECM tele-operation will show the current state of the corresponding components.
 

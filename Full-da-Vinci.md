@@ -114,7 +114,7 @@ This is a **VERY IMPORTANT PROCEDURE**.  At that point, we don't have a utility 
 
 For this procedure we will use the [sawRobotIO1394QtConsole](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Examples#2-sawrobotio1394qtconsole) program along with the ECM XML configuration file for your arm.  You will need to manually edit the XML file and between changes, test using the `sawRobotIO1394QtConsole` program.
 
-![sawRobotIO1394QtConsole with brakes](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-gui-ecm-console.png)
+![sawRobotIO1394QtConsole with brakes](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/gui/dvrk-gui-ecm-console.png)
 
 1. The first step is to determine the `ReleaseCurrent`.
    * In the XML file, set all the `ReleasedCurrent` (NOTE: **releaseD** current) to zero and the `ReleaseTime` to 60 seconds.  Start from a low value for the 3 `ReleaseCurrent` values (~0.1 for 100 mA).
@@ -149,7 +149,7 @@ Using the `sawRobotIO1394QtConsole` you should be able to monitor the switch eve
 
 * SUJ switch ![ECM Arm switch](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ecm-suj-switch.jpg)
 
-* IO Widget ![sawRobotIO1394QtConsole IO](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-gui-ecm-io.png)
+* IO Widget ![sawRobotIO1394QtConsole IO](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/gui/dvrk-gui-ecm-io.png)
 
 The Arm (aka manipulator) switch should work and the SUJ shouldn't until you hack the dMIB.  To modify the dMIB, follow [these instructions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Full-da-Vinci-dMIB-pre-2015).
 
@@ -172,7 +172,7 @@ Once the application is started, hit the `home` button.   The ECM should power p
 
 # Setup joints
 
-![SUJ arm widget](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dvrk-gui-arm-suj.png)
+![SUJ arm widget](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/gui/dvrk-gui-arm-suj.png)
 
 **TBD**  Hardware is not yet available for setup joints.
 
