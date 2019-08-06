@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="431.79999mm"
+   height="279.39999mm"
+   viewBox="0 0 431.79999 279.39999"
+   version="1.1"
+   id="svg5041"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="suj-labels-diagonals.svg">
+  <defs
+     id="defs5035" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="48.861576"
+     inkscape:cy="651.23324"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="2560"
+     inkscape:window-height="1412"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5038">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-17.6)">
+    <rect
+       style="fill:#ffffff;fill-opacity:0.21568627;stroke:#000000;stroke-width:0.66326046;stroke-opacity:1"
+       id="rect3025"
+       width="463.24673"
+       height="19.33674"
+       x="-125.91827"
+       y="242.95102"
+       transform="rotate(-28.536614)" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="-118.89025"
+       y="256.33484"
+       id="text5089"
+       transform="rotate(-28.589206)"><tspan
+         sodipodi:role="line"
+         x="-118.89025"
+         y="256.33484"
+         style="stroke-width:0.26458332"
+         id="tspan5091">PSM Joint 1, 463.91</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:0.21568627;stroke:#000000;stroke-width:0.63114119;stroke-opacity:1"
+       id="rect3025-2"
+       width="418.77084"
+       height="19.368858"
+       x="-105.95493"
+       y="211.2197"
+       transform="rotate(-28.357741)" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="-98.041245"
+       y="224.66182"
+       id="text5089-7"
+       transform="rotate(-27.94954)"><tspan
+         sodipodi:role="line"
+         x="-98.041245"
+         y="224.66182"
+         style="stroke-width:0.26458332"
+         id="tspan5091-0">PSM Joint 2, 419.402</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="-68.820267"
+       y="189.42732"
+       id="text5250"
+       transform="rotate(-27.134532)"><tspan
+         sodipodi:role="line"
+         id="tspan5248"
+         x="-68.820267"
+         y="189.42732"
+         style="stroke-width:0.26458332">PSM Joint 3, 339.2</tspan></text>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5252"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(0.26458333,0,0,0.26458333,0,17.6)"><flowRegion
+         id="flowRegion5254"><rect
+           id="rect5256"
+           width="225.71428"
+           height="51.42857"
+           x="532.85712"
+           y="667.42859" /></flowRegion><flowPara
+         id="flowPara5258" /><flowPara
+         id="flowPara5260">3</flowPara></flowRoot>    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="-55.651081"
+       y="157.14832"
+       id="text5250-3"
+       transform="rotate(-27.134532)"><tspan
+         sodipodi:role="line"
+         x="-55.651081"
+         y="157.14832"
+         style="stroke-width:0.26458332"
+         id="tspan5299">PSM Joint 4, 296.1</tspan></text>
+    <rect
+       y="276.87347"
+       x="-54.520813"
+       height="19.482094"
+       width="280.34509"
+       id="rect3852"
+       style="fill:#ffffff;fill-opacity:0.21568627;stroke:#000000;stroke-width:0.51790553;stroke-opacity:1"
+       transform="rotate(-28.391544)" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="-48.584515"
+       y="290.53751"
+       id="text5250-3-0"
+       transform="rotate(-28.63144)"><tspan
+         sodipodi:role="line"
+         x="-48.584515"
+         y="290.53751"
+         style="stroke-width:0.26458332"
+         id="tspan5299-6">PSM Joint 5, 280.863</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:0.21568627;stroke:#000000;stroke-width:0.61943918;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4716"
+       width="338.58057"
+       height="20.019562"
+       x="-85.808029"
+       y="174.56519"
+       transform="rotate(-27.824457)" />
+    <rect
+       style="fill:#ffffff;fill-opacity:0.21568627;stroke:#000000;stroke-width:0.58265889;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4716-7"
+       width="299.01733"
+       height="20.056341"
+       x="-70.938026"
+       y="143.69408"
+       transform="rotate(-27.652044)" />
+  </g>
+</svg>
