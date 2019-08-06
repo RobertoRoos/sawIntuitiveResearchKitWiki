@@ -28,6 +28,8 @@ Advanced
 * [Controller Boxes](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Controller-Boxes)
 * [E-STOP Wiring](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ESTOP)
 * [Full da Vinci System](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Full-da-Vinci)
+  * [ECM](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ECM)
+  * [Endoscope Focus](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Endoscope-Focus-Controller)
 * [Head Sensor](/jhu-dvrk/sawIntuitiveResearchKit/wiki/HeadSensor)
 * [Foot Pedals](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FootPedals)
 * [Video Pipeline](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Video-Pipeline)
