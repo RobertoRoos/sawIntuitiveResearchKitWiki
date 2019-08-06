@@ -18,6 +18,10 @@ This page describes how to use the Setup Joints (SUJs) with the dVRK.  This is u
 
 **TBD**  Hardware is not yet available for setup joints.
 
+# Labels
+
+## Physical dimension
+
 Joints diameters:
 * PSM1:
   * 0: Translation, where's the origin?
@@ -27,4 +31,16 @@ Joints diameters:
   * 4: Rotation, horizontal axis, diameter 93.3 mm (PSMs only -135/+135)
   * 5: Rotation, "vertical" axis, diameter 89.4 mm (PSMs only -135/+135)
 
+## Labels
+
 You can download a document to print on letter paper: [dVRK labels for SUJ](/jhu-dvrk/sawIntuitiveResearchKit/wiki/suj-labels.svg).  The `.svg` file can be opened, modified and printed using `inkscape` on Linux.  You can also find a [pdf version](/jhu-dvrk/sawIntuitiveResearchKit/wiki/suj-labels.pdf) if you don't have `inkscape`.  Please, if you update the `.svg` file, make sure you also update the `.pdf`.
+
+## 
+
+# Calibration
+
+## PSM1 and PSM2
+
+## PSM3
+
+## ECM
