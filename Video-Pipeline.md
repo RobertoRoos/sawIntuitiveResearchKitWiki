@@ -33,16 +33,16 @@ This is the most common endoscope found on Classic/Standard full da Vinci system
 
 ### Endoscope
 
-![SD endoscope with Panasonic Cameras](/jhu-dvrk/sawIntuitiveResearchKit/wiki/video-panasonic-sd-endoscope.jpg)
+![SD endoscope with Panasonic Cameras](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/video/video-panasonic-sd-endoscope.jpg)
 
 ### CCU front
 
 CCUs are in the middle, the endoscope focus controller is on top.  A light source is below.
-![SD Panasonic CCUs front](/jhu-dvrk/sawIntuitiveResearchKit/wiki/video-panasonic-sd-ccu-front.jpg)
+![SD Panasonic CCUs front](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/video/video-panasonic-sd-ccu-front.jpg)
 
 ### CCU back
 
-![SD Panasonic CCUs back](/jhu-dvrk/sawIntuitiveResearchKit/wiki/video-panasonic-sd-ccu-back.jpg)
+![SD Panasonic CCUs back](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/video/video-panasonic-sd-ccu-back.jpg)
 
 ## ISI HD endoscope
 
@@ -50,15 +50,15 @@ Intuitive started to release an HD endoscope along the da Vinci S (see [FAQ](/jh
 
 ### Endoscope
 
-![HD endoscope with Ikegami Cameras](/jhu-dvrk/sawIntuitiveResearchKit/wiki/video-ikegami-hd-endoscope.jpg)
+![HD endoscope with Ikegami Cameras](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/video/video-ikegami-hd-endoscope.jpg)
 
 ### CCU front
 
-![HD Ikegami CCUs front](/jhu-dvrk/sawIntuitiveResearchKit/wiki/video-ikegami-hd-ccu-front.jpg)
+![HD Ikegami CCUs front](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/video/video-ikegami-hd-ccu-front.jpg)
 
 ### CCU back
 
-![HD Ikegami CCUs back](/jhu-dvrk/sawIntuitiveResearchKit/wiki/video-ikegami-hd-ccu-back.jpg)
+![HD Ikegami CCUs back](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/video/video-ikegami-hd-ccu-back.jpg)
 
 ## Custom cameras
 
@@ -84,13 +84,13 @@ Some groups have replaced the CRTs in the HRSV provided by ISI with a pair of LC
 
   * The group at CUHK used a pair of DELL monitors ([1505FP](https://www.amazon.com/Dell-1505FP-15-IN-LCD-MONITOR/dp/B0026JQ85Y)) as replacement.  The resolution is 1024x768.
 
-![HRSV with DELL 15" monitors](/jhu-dvrk/sawIntuitiveResearchKit/wiki/video-hrsv-dell-15.jpg)
+![HRSV with DELL 15" monitors](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/video/video-hrsv-dell-15.jpg)
 
 # Hardware based pipeline
 
 The hardware based pipeline is the simplest solution and likely the cheapest.  It is based on off-the-shelf converters that can be placed between the CCUs and the monitors.  The main drawback is that one can not modify nor process the videos coming from the CCUs before displaying on the HRSV monitors.
 
-![Hardware based video pipeline](/jhu-dvrk/sawIntuitiveResearchKit/wiki/video-pipeline-hardware.png)
+![Hardware based video pipeline](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/video/video-pipeline-hardware.png)
 
 You will need some standard cables as well as a pair of video converters (one for the left video and one for the right video):
  * S-Video to VGA, one could use: --- find suggestion from community
@@ -103,6 +103,6 @@ If you need to process the video inputs (e.g. camera calibration, filtering, 3D 
  * Software
  * Video output (most likely a graphic card with 2 extra outputs)
 
-![Software based video pipeline](/jhu-dvrk/sawIntuitiveResearchKit/wiki/video-pipeline-software.png)
+![Software based video pipeline](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/video/video-pipeline-software.png)
 
 For the frame grabbers and software, you can find some documentation on the [dVRK ROS GitHub repository](https://github.com/jhu-dvrk/dvrk-ros/blob/master/dvrk_robot/video.md).
