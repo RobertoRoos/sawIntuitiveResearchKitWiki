@@ -81,14 +81,15 @@ You will need a PC running Linux:
    * A dedicated firewire controller for each chain of controllers - you can hook 8 controllers (16 FPGA/QLA boards) in a single chain so 1 firewire controller is fine for most users.
    * Early dVRK users have tested different cards and the SIIG FireWire adapter NN-E20012-S2 works well (uses a TI chipset)
    * See also the following document: http://support.presonus.com/hc/en-us/article_attachments/203654243/Compatible_Hardware_List_7-12.pdf.  Any card from the compatible list should work.
-   * If possible, choose a PCIe card to get better performance. 
+   * If possible, choose a PCIe card to get better performance.
+   * See also https://github.com/jhu-dvrk/sawIntuitiveResearchKit/wiki/Development-Environment
  * Graphic adapters
    * If you plan to send images to the stereo display, you will need two extra VGA outputs for the standard CRTs or two DVI outputs for the flat panels ([see ISI private Wiki](http://research.intusurg.com/dvrkwiki/index.php?title=DVRK:Topics:StereoViewerLCD))
-   * In General Nvidia cards work fine on Linux.  If you have multiple cards, try to match them (use same model for all cards)
+   * In General Nvidia cards work fine on Linux.  If you have multiple cards, try to match them (use same model for all cards) but we strongly recommend using a single card with enough outputs to drive all the monitors you need.
  * Software
    * Ubuntu 16.04 or 18.04 (64 bits of course)
    * ROS Kinetic on Ubuntu 16.04, Melodic on Ubuntu 18.04
-   * As far as we know, recent versions of the dVRK software (1.3 to 1.6) will likely compile with older Ubuntu/ROS so you might not have to upgrade your OS
+   * As far as we know, recent versions of the dVRK software (1.3 to 1.6) will likely compile with older Ubuntu/ROS so you might not have to upgrade your OS.  For release 1.7, you will need a recent C++ compiler (Ubuntu 14.04 doesn't work as-is, 16.04 and 18.04 are fine).
 
 ## The PSMs aren't moving
 

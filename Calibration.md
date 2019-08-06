@@ -298,13 +298,13 @@ There is usually no point to save the results of the second pass.
 
 ## 4.3. Calibrating offsets
 
-These instructions are for **PSMs only**.  If you need to calibrate offsets on different arms (MTM, ECM), please create a ticket (issue in github).
+These instructions are for all arms but we only know how to properly hold the joints at their zero position for the last 4 joints of the **PSMs**.  If you need to calibrate offsets on different arms (MTM, ECM), you will need to figure out a way to constraint the arm to its zero position.
 
 As for the scales calibration, you first need to start the console application and home the arm.
 
 In a separate shell, start the calibration script using the command line:
 ```sh
-# In directory ~/catkin_ws/src/cisst-saw/sawIntuitiveResearchKit/share/jhu-dVRK
+# In directory ~/catkin_ws/src/cisst-saw/sawIntuitiveResearchKit/share/<my-config-dir>
 rosrun dvrk_robot dvrk_calibrate_potentiometers.py offsets PSM2 sawRobotIO1394-PSM2-00000.xml
 ```
 Follow the instructions and place the calibration template (either Lego bars or plexiglass plate) when prompted to.  The result should look like:
@@ -318,8 +318,9 @@ index | old offset  | new offset  | correction
  5    |  174.920864 |  175.741625 | -0.820761 
  6    |  179.924389 |  179.851204 |  0.073185 
 ```
-Note that the first 3 offsets are not "corrected" since we don't have a way to constrain them to zero position.
-In this case you can see corrections as high as 1.47 degree on the fourth joint (index 3).  Press `y[enter]` to save the results.  Then stop the console application, make sure you restart it with the updated XML file and re-run the calibration script.  The results should improve:
+For the MTMs or ECM, the script will save all joint offsets.   For the PSMs, since we know there is an easy way to calibrate the last 4 joint offsets, the script will prompt you to figure out if you should save all the joints or only the last 4.   If you are using the Lego bars or template describe above, **DO NOT** save all, just save the last 4.
+
+Then stop the console application, make sure you restart it with the updated XML file and re-run the calibration script.  The results should improve:
 ```
 index | old offset  | new offset  | correction
  0    |   99.441352 |   99.441352 |  0.000000 

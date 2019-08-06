@@ -69,14 +69,23 @@ git pull
 
 ### `devel`
 
-## Todo for 1.7
+## Roadmap for 1.8
 
-Pending issues:
+* ~~ECM gravity compensation~~
+* ~~Teleop with clutch/relative orientation~~
+* ~~#35, last issue is to control multiple slaves with one master~~
+* IK with joint limits for PSMs
+* Closed kinematics for MTM?
+* Better handling of redundant joints in MTMs #2 and #56
+* Fix relative joint move, maybe relative cartesian move
+* Fix cisst-ros to expose ROS node and pass arguments to node (e.g. namespace)
 * #54, save content of `.cal` file in generated XML file (for debug, retrieval, ...)
-* #35, last issue is to control multiple slaves with one master
 * Add dvrk-openigt to cisst-saw
 * Add optional for ROS bridge topics
-* Better handling of redundant joints in MTMs #2 and #56
-* #3 MTM and ECM gravity compensation 
 * Add alert when SUJ are moved without brakes released
 * Add test function on user Id and permission on `/dev/fw*`?
+
+## Roadmap for 2.0
+
+* CRTK compliance for C++ command/method and ROS topics
+* MoveIt! (via CRTK)

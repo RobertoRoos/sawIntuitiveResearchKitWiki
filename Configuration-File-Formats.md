@@ -548,4 +548,4 @@ Please note that the `"period"` is optional and you should probably set it only 
 
 Please note that `"ecm-teleop"` requires an ECM.  This feature is available in version 1.6.0 and above.
 
-For release **1.6** and above, there is a new scope for tele-operation components called "configure-parameter".   In this scope, one can define "rotation" using the same format as release **1.5** and below as well as "scale" (a floating point value, ideally greater than 0.0 and lesser than 1.0).  For PSM tele operation, one can also specify "ignore-jaw" which can be set to `True` or `False` if your master arm doesn't have a gripper or your slave arm doesn't have jaws.
+For release **1.6** and above, there is a new scope for tele-operation components called "configure-parameter".   In this scope, one can define "rotation" using the same format as release **1.5** and below as well as "scale" (a floating point value, ideally greater than 0.0 and lesser than 1.0).  For PSM tele operation, one can also specify "ignore-jaw" which can be set to `true` or `false` if your master arm doesn't have a gripper or your slave arm doesn't have jaws.

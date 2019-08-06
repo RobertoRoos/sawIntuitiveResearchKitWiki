@@ -56,9 +56,9 @@ Add special mode to PID to servo torque based on current velocity or any better 
 **[New feature, core C++]**
 
 ## Gravity compensation
-Develop an algorithm to automatically identify the center of mass and mass.  We assume inertia matrices are not needed at that point.  This can be calibration stage with an initial data collection using the ROS bridges, maybe directly from Matlab (that would require all groups to have the Robotics Systems Toolbox) or Numpy/Scipy, parameter identification offline, C++ code to adjust the joint torques at runtime.  See [#3](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/issues/3).<br>
+~~Develop an algorithm to automatically identify the center of mass and mass.  We assume inertia matrices are not needed at that point.  This can be calibration stage with an initial data collection using the ROS bridges, maybe directly from Matlab (that would require all groups to have the Robotics Systems Toolbox) or Numpy/Scipy, parameter identification offline, C++ code to adjust the joint torques at runtime.  See [#3](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/issues/3).<br>
 We would need this form the MTMs as well as the ECM so the clutch mode would be weightless.<br>
-Some work has been done at WPI and there's a student working over summer '16 at JHU<br>
+Some work has been done at WPI and there's a student working over summer '16 at JHU.~~  This has been provided by CUHK group and released with 1.7.<br>
 **[New feature, core C++ + ROS + Matlab/scipy]**
 
 ## Better use of MTM redundancies
@@ -81,7 +81,7 @@ An empty component was introduced in 1.4 but the actual teleoperation is not imp
 **[Improvement, core C++]**
 
 ## Support for ROS MoveIt!
-We could provide an interface accepting ROS Trajectory messages (http://docs.ros.org/jade/api/trajectory_msgs/html/msg/JointTrajectory.html), we already have the `joint_state` so that should be enough for joint space.  I'm not totally sure what would be needed for cartesian trajectories but I assume a better integration with TF is required.  The joint space trajectories shouldn’t be too hard to code on the C++ side, take a list of points (PT and/or PVT) and use the existing robQuintic code to implement a trajectory following mode.  There will be a need to spec a cisstParameterTypes message and add the conversion method from ROS to cisst.  An alternative solution would be to use a separate ROS node that would rely on the ros controller "FollowJointTrajectory", the communication with the dVRK can be done by re-implementing a hardware (HW) abstraction using ROS topics.<br>
+~~We could provide an interface accepting ROS Trajectory messages (http://docs.ros.org/jade/api/trajectory_msgs/html/msg/JointTrajectory.html), we already have the `joint_state` so that should be enough for joint space.  I'm not totally sure what would be needed for cartesian trajectories but I assume a better integration with TF is required.  The joint space trajectories shouldn’t be too hard to code on the C++ side, take a list of points (PT and/or PVT) and use the existing robQuintic code to implement a trajectory following mode.  There will be a need to spec a cisstParameterTypes message and add the conversion method from ROS to cisst.  An alternative solution would be to use a separate ROS node that would rely on the ros controller "FollowJointTrajectory", the communication with the dVRK can be done by re-implementing a hardware (HW) abstraction using ROS topics.~~  This is partially implemented in CRTK branches.<br>
 **[New feature, core C++, ROS]**
 
 # Video
@@ -109,20 +109,20 @@ Maybe track and approximate camera focus to provide a better camera calibration 
 Autofocus?
 
 ## Motorized 3D camera
-For dVRK users (i.e. users who don't have a full daVinci), alternative arm with stereo head.<br>
+For dVRK users (i.e. users who don't have a full da Vinci), alternative arm with stereo head.<br>
 Maybe a simple pan/tilt camera with ROS interface controllable from MTMs?  In any case, we should include a mechanism to report the position of the PSMs with respect to the camera.  In the case of a pan/tilt, the orientation is really what we are after.
 
 # Applications
 
 ## Potentiometer and DH calibration
-We have a procedure to calibrate the scales but we're missing many offsets, the only one handled for now are the last 4 on PSMs.  Can we find a way to calibrate the pots on MTMs, ECM and first 3 on PSMs?<br?
-Develop a procedure to collect 3D positions both based on a tracking system (likely optical) and based on encoders and then identify the ideal DH parameters.  JHU has a high school student working on similar project during summer '16.<br>
+We have a procedure to calibrate the scales but we're missing many offsets, the only one handled for now are the last 4 on PSMs.  Can we find a way to calibrate the pots on MTMs, ECM and first 3 on PSMs?<br>
+Develop a procedure to collect 3D positions both based on a tracking system (likely optical) and based on encoders and then identify the ideal DH parameters.  JHU had a high school student working on similar project during summer '16.<br>
 **[New feature, ROS, ...]**
 
 ## Dynamic simulation
 Two different goals:
 * Offline simulation
-* Realtime simulation, research skill simulator?
+* Real-time simulation, research skill simulator?
 
 ### Gazebo
 Gazebo reviews are mixed, some reported issues with stability and poor documentation but widely used in the ROS community, including for the DARPA project and at JHU with WAM arms.<br>
