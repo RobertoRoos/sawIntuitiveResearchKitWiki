@@ -29,6 +29,7 @@ Advanced
 * [E-STOP Wiring](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ESTOP)
 * [Full da Vinci System](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Full-da-Vinci)
   * [ECM](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ECM)
+  * [SUJ](/jhu-dvrk/sawIntuitiveResearchKit/wiki/SUJ)
   * [Endoscope Focus](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Endoscope-Focus-Controller)
 * [Head Sensor](/jhu-dvrk/sawIntuitiveResearchKit/wiki/HeadSensor)
 * [Foot Pedals](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FootPedals)
