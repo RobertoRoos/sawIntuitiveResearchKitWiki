@@ -26,7 +26,7 @@ It is important to notice that there are a few hardware features from the full d
 
 On the other hand, the dVRK mechatronics and software support the camera manipulator (ECM) and will soon support the setup joints:
 * For the ECM, we use a FPGA-QLA based PSM controller with a special configuration (XML file) to support the brakes.  See the [ECM page](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ECM) for more details.
-* For the setup joints, we use a single FPGA-QLA board connected to a board designed by Intuitive Surgical (dSIB) which can interface with all 4 setup joints.  This board has been designed and is being tested at JHU.
+* For the setup joints, we use a single FPGA-QLA board connected to a board designed by Intuitive Surgical (dSIB) which can interface with all 4 setup joints.  This board has been designed and is being tested at JHU.  See the [SUJ page](/jhu-dvrk/sawIntuitiveResearchKit/wiki/SUJ) for more details.
 
 You can also access the head sensor and control the endoscope focus using custom cables.  For more details regarding the cables (that you will need to assemble), see:
 * Head sensor: [head sensor options](/jhu-dvrk/sawIntuitiveResearchKit/wiki/HeadSensor#davinci-head-sensor) (see daVinci Head Sensor section)
