@@ -54,15 +54,15 @@ Afterwards, follow this
 ```bash
 cd ~/catkin_ws/src/cisst-saw
 git submodule foreach git checkout devel
-git submodule foreach git pull
+git submodule foreach git pull origin devel
 git submodule foreach git submodule init
 git submodule foreach git submodule update
 cd ~/catkin_ws/src/dvrk-ros
 git checkout devel
-git pull
+git pull origin devel
 cd ~/catkin_ws/src/dvrk-gravity-compensation
 git checkout devel
-git pull
+git pull origin devel
 ```
 
 ## Changes
@@ -75,6 +75,7 @@ git pull
 * ~~Teleop with clutch/relative orientation~~
 * ~~#35, last issue is to control multiple slaves with one master~~
 * IK with joint limits for PSMs
+* Automatic tool type discovery, dynamically change tool type
 * Closed kinematics for MTM?
 * Better handling of redundant joints in MTMs #2 and #56
 * Fix relative joint move, maybe relative cartesian move
