@@ -113,6 +113,7 @@ You're probably missing the curses development libraries.  Install them, re-run 
 
  * Make sure you don't have any loose ITT Cannon cable from your manipulator to the controller.
  * Make sure the SCSI and RS cables between the dMIB and QLA boards inside the enclosure are not loose.
+ * See also [controller boxes description](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Controller-Boxes) and [debugging potentiometer issues](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Debugging-Potentiometer-Issues)
 
 ## Power Issue
 
