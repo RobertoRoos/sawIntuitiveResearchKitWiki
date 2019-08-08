@@ -85,7 +85,7 @@ You will need a PC running Linux:
    * See also https://github.com/jhu-dvrk/sawIntuitiveResearchKit/wiki/Development-Environment
  * Graphic adapters
    * If you plan to send images to the stereo display, you will need two extra VGA outputs for the standard CRTs or two DVI outputs for the flat panels ([see ISI private Wiki](http://research.intusurg.com/dvrkwiki/index.php?title=DVRK:Topics:StereoViewerLCD))
-   * In General Nvidia cards work fine on Linux.  If you have multiple cards, try to match them (use same model for all cards) but we strongly recommend using a single card with enough outputs to drive all the monitors you need.
+   * In general Nvidia cards work fine on Linux.  If you have multiple cards, try to match them (use same model for all cards) but we strongly recommend using a single card with enough outputs to drive all the monitors you need.
  * Software
    * Ubuntu 16.04 or 18.04 (64 bits of course)
    * ROS Kinetic on Ubuntu 16.04, Melodic on Ubuntu 18.04
