@@ -12,6 +12,12 @@ Acronyms used in this page are defined in [Frequently Asked Questions](/jhu-dvrk
 
 This page describes how to use the Setup Joints (SUJs) with the dVRK.  This is useful only for the groups with a [full da Vinci](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Full-da-Vinci.md)
 
+The Setup Joints use potentiometers to read the joint positions.   Each joint has two potentiometers and each arm has up to 6 joints.  So we have a total of 48 potentiometers, each provides a voltage that needs to be converted to an angle (revolute joints) or distance (prismatic joints).  The dVRK controller has 4 analog to digital inputs so it reads the potentiometer values sequentially using a multiplexer.  Cycling through the potentiometers takes time so you need to make sure you let the readings stabilize before doing anything.
+
+The brakes are controlled per arm, not per joint.  The dVRK controller uses the linear amps dedicated to motor control to release the brakes.  Finally, some patient carts come with a third PSM (aka PSM3).  The PSM3 SUJ is mounted under the ECM SUJ and doesn't have any counter weights.  It can be lifted using a separate motor controlled by a PWM unit included on the dSIB.
+
+To use the SUJ with the dVRK controller and software, the main challenge is to calibrate the potentiometers.  To do so, we use some custom labels that can be attached to each joint of the SUJs.
+
 # Setup joints
 
 ![SUJ arm widget](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/gui/dvrk-gui-arm-suj.png)
