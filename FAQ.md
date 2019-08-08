@@ -68,6 +68,7 @@ Some JHU acronyms:
       * 48 V for SUJ, for brakes and PWM units to lift/lower the PSM3 SUJ
    * Safety relays
  * `qladisp`: text based application used to test up to 2 QLA-FPGA boards.  See [testing hardware with `qladisp`](/jhu-dvrk/sawIntuitiveResearchKit/wiki//Hardware#22-testing-with-qladisp)
+ * `qlacloserelays`: text based application used to close safety relays for all the controllers connected through FireWire, very useful if you're not using all the controllers connected through the FireWire and e-stop chain and don't want to re-configure all your wiring. 
 
 See JHU Mechatronics for more details: http://jhu-cisst.github.io/mechatronics regarding the QLA-FPGA (JHU public page).
 
