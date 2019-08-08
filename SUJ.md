@@ -23,13 +23,12 @@ This page describes how to use the Setup Joints (SUJs) with the dVRK.  This is u
 ## Physical dimension
 
 Joints diameters:
-* PSM1:
-  * 0: Translation, where's the origin?
-  * 1: Rotation, vertical axis, diameter 147.5 mm (all -90/+90)  
-  * 2: Rotation, vertical axis, diameter 133.5 mm (PSM1 -135/0, PSM2 0/+135, PSM3/ECM -90/+90) 
-  * 3: Rotation, vertical axis, diameter 107.5 mm (all -90/+90)
-  * 4: Rotation, horizontal axis, diameter 93.3 mm (PSMs only -135/+135)
-  * 5: Rotation, "vertical" axis, diameter 89.4 mm (PSMs only -135/+135)
+* 0: Translation, where's the origin?
+* 1: Rotation, vertical axis, diameter 147.5 mm, circumference 463.4 mm (all -90/+90)  
+* 2: Rotation, vertical axis, diameter 133.5 mm, circumference 419.4 mm (PSM1 -135/0, PSM2 0/+135, PSM3/ECM -90/+90) 
+* 3: Rotation, vertical axis, diameter 107.5 mm, circumference 337.7 mm (all -90/+90)
+* 4: Rotation, horizontal axis, diameter 93.3 mm, circumference 293.1 mm (PSMs only -135/+135)
+* 5: Rotation, "vertical" axis, diameter 89.4 mm, circumference 280.9 mm (PSMs only -135/+135)
 
 ## Labels
 
