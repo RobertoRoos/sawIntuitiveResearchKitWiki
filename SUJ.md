@@ -40,11 +40,22 @@ Joints diameters:
 
 You can download a document to print on letter paper: [dVRK labels for SUJ](/jhu-dvrk/sawIntuitiveResearchKit/wiki/suj-labels.svg).  The `.svg` file can be opened, modified and printed using `inkscape` on Linux.  You can also find a [pdf version](/jhu-dvrk/sawIntuitiveResearchKit/wiki/suj-labels.pdf) if you don't have `inkscape`.  Please, if you update the `.svg` file, make sure you also update the `.pdf`.
 
-## 
+## Label placement
+
+### PSM1 and PSM2
+
+![SUJ PSM1 Joint 1](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/gui/SUJ-ECM-joint-1.jpg)
+
+![SUJ PSM1 Joint 2](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/gui/SUJ-ECM-joint-2.jpg)
+### PSM3
+
+### ECM
+
 
 # Calibration
 
 ## PSM1 and PSM2
+
 
 ## PSM3
 
