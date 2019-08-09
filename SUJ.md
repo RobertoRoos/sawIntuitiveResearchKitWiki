@@ -116,6 +116,29 @@ The numbering of the joints are best understood if the arm is fully extended. Jo
 
 ## PSM1 and PSM2
 
+The dVRK graphical table has two rows and six columns. The first column is for joint 0, second for joint 1, third for joint 2, and so on.
+
+### Joint 0
+To calibrate joint 0 it is necessary to have a laser measuring tool. The procedure for calibration is as follows:
+1. Lower the PSM to its lowest point.
+2. Place the measuring tool underneath joint 1 as shown in the picture below.
+3. Find and record the height of the PSM.
+4. Enter 0 in the graphical table in the first column of the first row.
+5. Raise the PSM to its highest point.
+6. Find and record the height of the PSM.
+7. Subtract the final height from the initial height.
+8. Enter the difference in height in the second column of the first row. 
+
+### Joints 1-5
+The procedure for calibration is as follows:
+1. Turn the joint to an extreme (either its highest or lowest degree measurement on the label).
+2. Enter that angle into the graphical table in the first row and in the column that corresponds with the joint.
+3. Turn the joint to the other extreme.
+4. Enter that angle into the graphical table in the second row and in the column that corresponds with the joint.
+5. Repeat until all 5 joints have values in the top and bottom row.
+
+**When the table is full of values hit "Manual Calibration" and the correct offsets and scales will print in the terminal.**
+
 <img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/translation-laser-bottom.jpg" width="350">
 <img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/translation-laser-top.jpg" width="350">
 
