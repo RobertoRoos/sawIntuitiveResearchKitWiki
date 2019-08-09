@@ -44,9 +44,9 @@ You can download a document to print on letter paper: [dVRK labels for SUJ](/jhu
 
 ### PSM1 and PSM2
 
-![SUJ PSM1 Joint 1](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/gui/SUJ-ECM-joint-1.jpg)
+![SUJ PSM1 Joint 1](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-ECM-joint-1.jpg)
 
-![SUJ PSM1 Joint 2](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/gui/SUJ-ECM-joint-2.jpg)
+![SUJ PSM1 Joint 2](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-ECM-joint-2.jpg)
 ### PSM3
 
 ### ECM
