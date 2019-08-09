@@ -1,8 +1,23 @@
 <!--ts-->
    * [Introduction](#introduction)
    * [Setup joints](#setup-joints)
+   * [Labels](#labels)
+      * [Physical dimension](#physical-dimension)
+      * [Labels](#labels-1)
+      * [Label Placement](#label-placement)
+         * [Important Notes](#important-notes)
+         * [Directions for Placing the Labels](#directions-for-placing-the-labels)
+            * [PSMs](#psms)
+            * [ECM](#ecm)
+         * [PSM1 and PSM2](#psm1-and-psm2)
+         * [PSM3](#psm3)
+         * [ECM](#ecm-1)
+   * [Calibration](#calibration)
+      * [PSM1 and PSM2](#psm1-and-psm2-1)
+      * [PSM3](#psm3-1)
+      * [ECM](#ecm-2)
 
-<!-- Added by: adeguet1, at: 2019-08-06T12:14-04:00 -->
+<!-- Added by: anton, at:  -->
 
 <!--te-->
 
