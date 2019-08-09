@@ -15,7 +15,7 @@
    version="1.1"
    id="svg1282"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
-   sodipodi:docname="ECM.svg">
+   sodipodi:docname="ECM_Labels.svg">
   <defs
      id="defs1276" />
   <sodipodi:namedview
@@ -26,16 +26,16 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="463.99669"
-     inkscape:cy="375.79893"
+     inkscape:cx="352.56812"
+     inkscape:cy="410.08464"
      inkscape:document-units="mm"
-     inkscape:current-layer="g4128"
+     inkscape:current-layer="g142"
      showgrid="false"
      units="in"
-     inkscape:window-width="2493"
-     inkscape:window-height="1385"
-     inkscape:window-x="2627"
-     inkscape:window-y="27"
+     inkscape:window-width="2560"
+     inkscape:window-height="1412"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata1279">
@@ -55,294 +55,317 @@
      id="layer1"
      transform="translate(0,-81.1)">
     <g
-       id="g4128"
-       transform="matrix(0.2838439,0,0,0.69544326,5.8759233,-594.08146)">
-      <rect
-         y="992.54535"
-         x="42.939148"
-         height="23.964222"
-         width="598.47021"
-         id="rect4710"
-         style="fill:#ffffff;fill-opacity:0.21568627;stroke:#000000;stroke-width:0.45051917;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <rect
-         style="fill:#ffffff;fill-opacity:0.21568627;stroke:#000000;stroke-width:0.45051917;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="rect4712"
-         width="448.85263"
-         height="23.964222"
-         x="42.939148"
-         y="992.54535" />
-      <rect
-         y="992.54535"
-         x="42.939148"
-         height="23.964222"
-         width="299.23511"
-         id="rect4714"
-         style="fill:#ffffff;fill-opacity:0.21568627;stroke:#000000;stroke-width:0.45051917;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <rect
-         style="fill:#ffffff;fill-opacity:0.21568627;stroke:#000000;stroke-width:0.45051917;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="rect4716"
-         width="149.61755"
-         height="23.964222"
-         x="42.939148"
-         y="992.54535" />
-      <text
-         id="text4804"
-         y="1007.6317"
-         x="45.426109"
-         style="font-style:normal;font-weight:normal;font-size:12.00978279px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.00081527"
-         xml:space="preserve"
-         transform="scale(1.0008306,0.9991701)"><tspan
-           id="tspan4806"
-           y="1007.6317"
-           x="45.426109"
-           sodipodi:role="line"
-           style="font-size:8.00652218px;line-height:1.25;font-family:sans-serif;stroke-width:1.00081527">90   ECM, joint 3</tspan></text>
-      <text
-         id="text4808"
-         y="1007.6317"
-         x="195.9247"
-         style="font-style:normal;font-weight:normal;font-size:12.00978279px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.00081527"
-         xml:space="preserve"
-         transform="scale(1.0008306,0.9991701)"><tspan
-           y="1007.6317"
-           x="195.9247"
-           id="tspan4810"
-           sodipodi:role="line"
-           style="font-size:8.00652218px;line-height:1.25;font-family:sans-serif;stroke-width:1.00081527">135</tspan></text>
-      <text
-         id="text4812"
-         y="1007.6317"
-         x="345.41321"
-         style="font-style:normal;font-weight:normal;font-size:12.00978279px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.00081527"
-         xml:space="preserve"
-         transform="scale(1.0008306,0.9991701)"><tspan
-           y="1007.6317"
-           x="345.41321"
-           id="tspan4814"
-           sodipodi:role="line"
-           style="font-size:8.00652218px;line-height:1.25;font-family:sans-serif;stroke-width:1.00081527">180   ECM, joint 3</tspan></text>
-      <text
-         id="text4816"
-         y="1008.6419"
-         x="495.9118"
-         style="font-style:normal;font-weight:normal;font-size:12.00978279px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.00081527"
-         xml:space="preserve"
-         transform="scale(1.0008306,0.9991701)"><tspan
-           y="1008.6419"
-           x="495.9118"
-           id="tspan4818"
-           sodipodi:role="line"
-           style="font-size:8.00652218px;line-height:1.25;font-family:sans-serif;stroke-width:1.00081527">225</tspan></text>
-      <text
-         id="text4820"
-         y="1007.6317"
-         x="623.89294"
-         style="font-style:normal;font-weight:normal;font-size:12.00978279px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.00081527"
-         xml:space="preserve"
-         transform="scale(1.0008306,0.99917009)"><tspan
-           y="1007.6317"
-           x="623.89294"
-           id="tspan4822"
-           sodipodi:role="line"
-           style="font-size:8.00652218px;line-height:1.25;font-family:sans-serif;stroke-width:1.00081527">270</tspan></text>
+       id="g95"
+       transform="matrix(0.28384363,0,0,0.69544326,4.6869508,-591.36951)">
+      <g
+         id="g142">
+        <g
+           transform="translate(-77.900595,68.481503)"
+           id="g78">
+          <rect
+             y="925.91608"
+             x="121.50555"
+             height="23.964222"
+             width="598.47021"
+             id="rect4710"
+             style="fill:#ffffff;fill-opacity:0.21568627;stroke:#000000;stroke-width:0.45051917;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+          <rect
+             style="fill:#ffffff;fill-opacity:0.21568627;stroke:#000000;stroke-width:0.45051917;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             id="rect4712"
+             width="448.85263"
+             height="23.964222"
+             x="121.50555"
+             y="925.91608" />
+          <rect
+             y="925.91608"
+             x="121.50555"
+             height="23.964222"
+             width="299.23511"
+             id="rect4714"
+             style="fill:#ffffff;fill-opacity:0.21568627;stroke:#000000;stroke-width:0.45051917;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+          <rect
+             style="fill:#ffffff;fill-opacity:0.21568627;stroke:#000000;stroke-width:0.45051917;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             id="rect4716"
+             width="149.61755"
+             height="23.964222"
+             x="121.50555"
+             y="925.91608" />
+        </g>
+        <text
+           transform="scale(1.2266932,0.81519978)"
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:9.79850388px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.81654203"
+           x="37.062111"
+           y="1235.712"
+           id="text4804"><tspan
+             style="font-size:6.53233624px;line-height:1.25;font-family:sans-serif;stroke-width:0.81654203"
+             sodipodi:role="line"
+             x="37.062111"
+             y="1235.712"
+             id="tspan4806">90   ECM, joint 3</tspan></text>
+        <text
+           transform="scale(1.2266932,0.81519978)"
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:9.79850388px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.81654203"
+           x="159.85043"
+           y="1235.712"
+           id="text4808"><tspan
+             style="font-size:6.53233624px;line-height:1.25;font-family:sans-serif;stroke-width:0.81654203"
+             sodipodi:role="line"
+             id="tspan4810"
+             x="159.85043"
+             y="1235.712">135</tspan></text>
+        <text
+           transform="scale(1.2266932,0.81519978)"
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:9.79850388px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.81654203"
+           x="281.81464"
+           y="1235.712"
+           id="text4812"><tspan
+             style="font-size:6.53233624px;line-height:1.25;font-family:sans-serif;stroke-width:0.81654203"
+             sodipodi:role="line"
+             id="tspan4814"
+             x="281.81464"
+             y="1235.712">180   ECM, joint 3</tspan></text>
+        <text
+           transform="scale(1.2266932,0.81519978)"
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:9.79850388px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.81654203"
+           x="404.603"
+           y="1236.5358"
+           id="text4816"><tspan
+             style="font-size:6.53233624px;line-height:1.25;font-family:sans-serif;stroke-width:0.81654203"
+             sodipodi:role="line"
+             id="tspan4818"
+             x="404.603"
+             y="1236.5358">225</tspan></text>
+        <text
+           transform="scale(1.2266932,0.81519978)"
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:9.79850388px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.81654203"
+           x="509.01971"
+           y="1235.712"
+           id="text4820"><tspan
+             style="font-size:6.53233624px;line-height:1.25;font-family:sans-serif;stroke-width:0.81654203"
+             sodipodi:role="line"
+             id="tspan4822"
+             x="509.01971"
+             y="1235.712">270</tspan></text>
+      </g>
     </g>
     <g
-       id="g4112"
-       transform="matrix(0.28397014,0,0,0.69096561,5.8571883,-535.01286)">
-      <rect
-         y="956.87659"
-         x="42.987366"
-         height="24.151718"
-         width="742.10077"
-         id="rect4694"
-         style="fill:#ffffff;fill-opacity:0.21568627;stroke:#000000;stroke-width:0.4515323;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <rect
-         style="fill:#ffffff;fill-opacity:0.21568627;stroke:#000000;stroke-width:0.452981;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="rect4704"
-         width="556.46588"
-         height="24.15027"
-         x="42.987366"
-         y="956.87671" />
-      <rect
-         y="956.87659"
-         x="42.987366"
-         height="24.151634"
-         width="370.85489"
-         id="rect4706"
-         style="fill:#ffffff;fill-opacity:0.21568627;stroke:#000000;stroke-width:0.45161596;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <rect
-         style="fill:#ffffff;fill-opacity:0.21568627;stroke:#000000;stroke-width:0.45165753;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="rect4708"
-         width="185.29024"
-         height="24.151592"
-         x="42.987366"
-         y="956.87671" />
+       id="g165"
+       transform="translate(-2.4758946,-1.4246572)">
+      <g
+         transform="translate(5.1026786,65.956845)"
+         id="g148">
+        <rect
+           style="fill:#ffffff;fill-opacity:0.21568627;stroke:#000000;stroke-width:0.20001078;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="rect4694"
+           width="210.73447"
+           height="16.688007"
+           x="14.473542"
+           y="65.679771" />
+        <rect
+           y="65.67984"
+           x="14.473542"
+           height="16.687006"
+           width="158.0197"
+           id="rect4704"
+           style="fill:#ffffff;fill-opacity:0.21568627;stroke:#000000;stroke-width:0.20065248;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <rect
+           style="fill:#ffffff;fill-opacity:0.21568627;stroke:#000000;stroke-width:0.20004782;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="rect4706"
+           width="105.31171"
+           height="16.687948"
+           x="14.473542"
+           y="65.67984" />
+        <rect
+           y="65.679771"
+           x="14.473542"
+           height="16.68792"
+           width="52.616894"
+           id="rect4708"
+           style="fill:#ffffff;fill-opacity:0.21568627;stroke:#000000;stroke-width:0.20006624;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      </g>
       <text
+         transform="scale(0.83270504,1.2009054)"
          id="text4880"
-         y="972.48163"
-         x="45.459507"
-         style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         y="118.35365"
+         x="24.579201"
+         style="font-style:normal;font-weight:normal;font-size:4.09225607px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.34102133"
          xml:space="preserve"><tspan
            id="tspan4882"
-           y="972.48163"
-           x="45.459507"
+           y="118.35365"
+           x="24.579201"
            sodipodi:role="line"
-           style="font-size:8px;line-height:1.25;font-family:sans-serif">-90   ECM, joint2</tspan></text>
+           style="font-size:2.72817063px;line-height:1.25;font-family:sans-serif;stroke-width:0.34102133">-90   ECM, joint2</tspan></text>
       <text
+         transform="scale(0.83270504,1.2009054)"
          id="text4884"
-         y="972.48163"
-         x="233.17719"
-         style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         y="118.35365"
+         x="88.594948"
+         style="font-style:normal;font-weight:normal;font-size:4.09225607px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.34102133"
          xml:space="preserve"><tspan
-           y="972.48163"
-           x="233.17719"
+           y="118.35365"
+           x="88.594948"
            id="tspan4886"
            sodipodi:role="line"
-           style="font-size:8px;line-height:1.25;font-family:sans-serif">-45</tspan></text>
+           style="font-size:2.72817063px;line-height:1.25;font-family:sans-serif;stroke-width:0.34102133">-45</tspan></text>
       <text
+         transform="scale(0.83270504,1.2009054)"
          id="text4888"
-         y="971.47241"
-         x="418.8764"
-         style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         y="118.00948"
+         x="151.92232"
+         style="font-style:normal;font-weight:normal;font-size:4.09225607px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.34102133"
          xml:space="preserve"><tspan
-           y="971.47241"
-           x="418.8764"
+           y="118.00948"
+           x="151.92232"
            id="tspan4890"
            sodipodi:role="line"
-           style="font-size:8px;line-height:1.25;font-family:sans-serif">0   ECM, joint 2</tspan></text>
+           style="font-size:2.72817063px;line-height:1.25;font-family:sans-serif;stroke-width:0.34102133">0   ECM, joint 2</tspan></text>
       <text
+         transform="scale(0.83270504,1.2009054)"
          id="text4892"
-         y="971.47241"
-         x="604.57562"
-         style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         y="118.00948"
+         x="215.24969"
+         style="font-style:normal;font-weight:normal;font-size:4.09225607px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.34102133"
          xml:space="preserve"><tspan
-           y="971.47241"
-           x="604.57562"
+           y="118.00948"
+           x="215.24969"
            id="tspan4894"
            sodipodi:role="line"
-           style="font-size:8px;line-height:1.25;font-family:sans-serif">45</tspan></text>
+           style="font-size:2.72817063px;line-height:1.25;font-family:sans-serif;stroke-width:0.34102133">45</tspan></text>
       <text
+         transform="scale(0.83270504,1.2009054)"
          id="text4896"
-         y="971.47235"
-         x="770.09003"
-         style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         y="118.00946"
+         x="271.69366"
+         style="font-style:normal;font-weight:normal;font-size:4.09225607px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.34102133"
          xml:space="preserve"><tspan
-           y="971.47235"
-           x="770.09003"
+           y="118.00946"
+           x="271.69366"
            id="tspan4898"
            sodipodi:role="line"
-           style="font-size:8px;line-height:1.25;font-family:sans-serif">90</tspan></text>
+           style="font-size:2.72817063px;line-height:1.25;font-family:sans-serif;stroke-width:0.34102133">90</tspan></text>
     </g>
     <g
-       id="g1447"
-       transform="matrix(1.0669112,0,0,0.99857593,-1.5644659,-3.534626)">
-      <rect
-         style="fill:#ffffff;fill-opacity:0.21568627;stroke:#000000;stroke-width:0.19517419;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="rect4696"
-         width="217.25497"
-         height="16.829069"
-         x="18.43507"
-         y="159.85973" />
-      <rect
-         y="159.85973"
-         x="18.43507"
-         height="16.829069"
-         width="162.94124"
-         id="rect4698"
-         style="fill:#ffffff;fill-opacity:0.21568627;stroke:#000000;stroke-width:0.19517419;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <rect
-         style="fill:#ffffff;fill-opacity:0.21568627;stroke:#000000;stroke-width:0.19517419;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="rect4700"
-         width="108.62749"
-         height="16.829069"
-         x="18.43507"
-         y="159.85973" />
-      <rect
-         y="159.85973"
-         x="18.43507"
-         height="16.829069"
-         width="54.313744"
-         id="rect4702"
-         style="fill:#ffffff;fill-opacity:0.21568627;stroke:#000000;stroke-width:0.19517419;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       id="g202"
+       transform="translate(0.09275782,-24.162505)">
+      <g
+         transform="translate(3.8175595,-28.348214)"
+         id="g185">
+        <rect
+           y="212.60489"
+           x="13.190426"
+           height="16.805103"
+           width="231.79176"
+           id="rect4696"
+           style="fill:#ffffff;fill-opacity:0.21568627;stroke:#000000;stroke-width:0.20145454;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <rect
+           style="fill:#ffffff;fill-opacity:0.21568627;stroke:#000000;stroke-width:0.20145454;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="rect4698"
+           width="173.84383"
+           height="16.805103"
+           x="13.190426"
+           y="212.60489" />
+        <rect
+           y="212.60489"
+           x="13.190426"
+           height="16.805103"
+           width="115.89588"
+           id="rect4700"
+           style="fill:#ffffff;fill-opacity:0.21568627;stroke:#000000;stroke-width:0.20145454;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <rect
+           style="fill:#ffffff;fill-opacity:0.21568627;stroke:#000000;stroke-width:0.20145454;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="rect4702"
+           width="57.947941"
+           height="16.805103"
+           x="13.190426"
+           y="212.60489" />
+      </g>
       <text
-         transform="scale(0.61205193,1.6338483)"
+         transform="scale(0.78096443,1.2804681)"
          xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:5.18837643px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.19517419;stroke-miterlimit:4;stroke-dasharray:none"
-         x="208.77681"
-         y="104.06822"
+         style="font-style:normal;font-weight:normal;font-size:4.33827209px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.16319531;stroke-miterlimit:4;stroke-dasharray:none"
+         x="171.35596"
+         y="151.4077"
          id="text4784"><tspan
            sodipodi:role="line"
            id="tspan4786"
-           x="208.77681"
-           y="104.06822"
-           style="font-size:3.45891786px;line-height:1.25;font-family:sans-serif;stroke-width:0.19517419;stroke-miterlimit:4;stroke-dasharray:none">0   ECM, joint 1</tspan></text>
+           x="171.35596"
+           y="151.4077"
+           style="font-size:2.89218163px;line-height:1.25;font-family:sans-serif;stroke-width:0.16319531;stroke-miterlimit:4;stroke-dasharray:none">0   ECM, joint 1</tspan></text>
       <text
-         transform="scale(0.61205193,1.6338483)"
+         transform="scale(0.78096443,1.2804681)"
          xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:5.18837643px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.19517419;stroke-miterlimit:4;stroke-dasharray:none"
-         x="119.7599"
-         y="104.06822"
+         style="font-style:normal;font-weight:normal;font-size:4.33827209px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.16319531;stroke-miterlimit:4;stroke-dasharray:none"
+         x="96.924286"
+         y="151.4077"
          id="text4788"><tspan
            sodipodi:role="line"
            id="tspan4790"
-           x="119.7599"
-           y="104.06822"
-           style="font-size:3.45891786px;line-height:1.25;font-family:sans-serif;stroke-width:0.19517419;stroke-miterlimit:4;stroke-dasharray:none">-45</tspan></text>
+           x="96.924286"
+           y="151.4077"
+           style="font-size:2.89218163px;line-height:1.25;font-family:sans-serif;stroke-width:0.16319531;stroke-miterlimit:4;stroke-dasharray:none">-45</tspan></text>
       <text
-         transform="scale(0.61205193,1.6338483)"
+         transform="scale(0.78096443,1.2804681)"
          xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:5.18837643px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.19517419;stroke-miterlimit:4;stroke-dasharray:none"
-         x="31.615673"
-         y="104.06822"
+         style="font-style:normal;font-weight:normal;font-size:4.33827209px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.16319531;stroke-miterlimit:4;stroke-dasharray:none"
+         x="23.222298"
+         y="151.4077"
          id="text4792"><tspan
            sodipodi:role="line"
-           x="31.615673"
-           y="104.06822"
+           x="23.222298"
+           y="151.4077"
            id="tspan4794"
-           style="font-size:3.45891786px;line-height:1.25;font-family:sans-serif;stroke-width:0.19517419;stroke-miterlimit:4;stroke-dasharray:none">-90    ECM, joint 1</tspan></text>
+           style="font-size:2.89218163px;line-height:1.25;font-family:sans-serif;stroke-width:0.16319531;stroke-miterlimit:4;stroke-dasharray:none">-90    ECM, joint 1</tspan></text>
       <text
-         transform="scale(0.61205193,1.6338483)"
+         transform="scale(0.78096443,1.2804681)"
          xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:5.18837643px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.19517419;stroke-miterlimit:4;stroke-dasharray:none"
-         x="297.35739"
-         y="104.06822"
+         style="font-style:normal;font-weight:normal;font-size:4.33827209px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.16319531;stroke-miterlimit:4;stroke-dasharray:none"
+         x="245.42281"
+         y="151.4077"
          id="text4796"><tspan
            sodipodi:role="line"
            id="tspan4798"
-           x="297.35739"
-           y="104.06822"
-           style="font-size:3.45891786px;line-height:1.25;font-family:sans-serif;stroke-width:0.19517419;stroke-miterlimit:4;stroke-dasharray:none">45</tspan></text>
+           x="245.42281"
+           y="151.4077"
+           style="font-size:2.89218163px;line-height:1.25;font-family:sans-serif;stroke-width:0.16319531;stroke-miterlimit:4;stroke-dasharray:none">45</tspan></text>
       <text
-         transform="scale(0.61205193,1.6338483)"
+         transform="scale(0.78096443,1.2804681)"
          xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:5.18837643px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.19517419;stroke-miterlimit:4;stroke-dasharray:none"
-         x="379.82895"
-         y="104.50457"
+         style="font-style:normal;font-weight:normal;font-size:4.33827209px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.16319531;stroke-miterlimit:4;stroke-dasharray:none"
+         x="314.38156"
+         y="151.77257"
          id="text4800"><tspan
            sodipodi:role="line"
            id="tspan4802"
-           x="379.82895"
-           y="104.50457"
-           style="font-size:3.45891786px;line-height:1.25;font-family:sans-serif;stroke-width:0.19517419;stroke-miterlimit:4;stroke-dasharray:none">90</tspan></text>
+           x="314.38156"
+           y="151.77257"
+           style="font-size:2.89218163px;line-height:1.25;font-family:sans-serif;stroke-width:0.16319531;stroke-miterlimit:4;stroke-dasharray:none">90</tspan></text>
     </g>
-    <rect
-       y="274.42804"
-       x="18.115683"
-       height="5.4562774"
-       width="199.76863"
-       id="rect4696-0"
-       style="fill:#ffffff;fill-opacity:0.21568627;stroke:#000000;stroke-width:0.23136523;stroke-opacity:1" />
-    <text
-       id="text4792-9"
-       y="298.48123"
-       x="18.916298"
-       style="font-style:normal;font-weight:normal;font-size:2.95138669px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.2459489"
-       xml:space="preserve"
-       transform="scale(1.0757655,0.92957062)"><tspan
-         style="font-size:1.96759117px;line-height:1.25;font-family:sans-serif;stroke-width:0.2459489"
-         id="tspan4794-3"
-         y="298.48123"
+    <g
+       id="g207">
+      <rect
+         style="fill:#ffffff;fill-opacity:0.21568627;stroke:#000000;stroke-width:0.23136523;stroke-opacity:1"
+         id="rect4696-0"
+         width="199.76863"
+         height="5.4562774"
+         x="18.115683"
+         y="274.42804" />
+      <text
+         transform="scale(1.0757655,0.92957062)"
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:2.95138669px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.2459489"
          x="18.916298"
-         sodipodi:role="line">This box should be 20 cm long if printed correctly</tspan></text>
+         y="298.48123"
+         id="text4792-9"><tspan
+           sodipodi:role="line"
+           x="18.916298"
+           y="298.48123"
+           id="tspan4794-3"
+           style="font-size:1.96759117px;line-height:1.25;font-family:sans-serif;stroke-width:0.2459489">This box should be 20 cm long if printed correctly</tspan></text>
+    </g>
   </g>
 </svg>

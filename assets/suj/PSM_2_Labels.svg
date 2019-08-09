@@ -44,10 +44,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.5085784"
-     inkscape:cx="533.64461"
-     inkscape:cy="435.59332"
+     inkscape:cx="470.24141"
+     inkscape:cy="574.79722"
      inkscape:document-units="mm"
-     inkscape:current-layer="g153"
+     inkscape:current-layer="g1012"
      showgrid="false"
      units="in"
      showguides="false"
@@ -79,7 +79,7 @@
        transform="matrix(0.36522876,0,0,0.31559472,-44.756075,-60.389062)">
       <g
          id="g1076"
-         transform="translate(-0.50940313,-10.434177)">
+         transform="translate(1.8916382,-15.435759)">
         <rect
            style="fill:#ffffff;fill-opacity:0.21568627;stroke:#000000;stroke-width:0.58909136;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            id="rect3852"
@@ -228,7 +228,7 @@
       </g>
       <g
          id="g1034"
-         transform="translate(-0.07521706,-4.4432822)">
+         transform="translate(-0.55542532,-4.4432822)">
         <g
            transform="translate(-1.2555209,131.31166)"
            id="g1467">
@@ -341,13 +341,13 @@
         </g>
       </g>
       <g
-         id="g1236">
+         id="g1012"
+         transform="translate(0.40745737,-6.0396814)">
         <g
-           transform="translate(0.40745737,-6.0396814)"
-           id="g1012">
+           id="g2240">
           <rect
-             y="355.0098"
-             x="168.97585"
+             y="355.01901"
+             x="168.97583"
              height="86.079018"
              width="429.74634"
              id="rect3025-7"
@@ -357,10 +357,10 @@
              id="rect3828"
              width="286.40286"
              height="86.07827"
-             x="168.97585"
-             y="355.01309" />
+             x="168.97583"
+             y="355.01974" />
           <rect
-             y="355.01974"
+             y="355.01898"
              x="168.97583"
              height="86.079048"
              width="142.21991"
@@ -369,72 +369,74 @@
           <text
              xml:space="preserve"
              style="font-style:normal;font-weight:normal;font-size:12px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1"
-             x="175.71884"
-             y="401.36304"
+             x="500.81982"
+             y="404.45828"
              id="text4148-5-52"><tspan
                style="font-size:10.39091682px;line-height:1.25;font-family:sans-serif;stroke-width:1"
                sodipodi:role="line"
                id="tspan4150-4-5"
-               x="175.71884"
-               y="401.36304">-135 PSM 2, Joint 2</tspan><tspan
+               x="500.81982"
+               y="404.45828">135 PSM 2, Joint 2</tspan><tspan
                id="tspan1387-47"
                style="font-size:10.39091682px;line-height:1.25;font-family:sans-serif;stroke-width:1"
                sodipodi:role="line"
-               x="175.71884"
-               y="408.27533" /></text>
+               x="500.81982"
+               y="411.37057" /></text>
           <text
              xml:space="preserve"
              style="font-style:normal;font-weight:normal;font-size:12px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1"
-             x="316.41983"
-             y="403.29611"
+             x="457.60104"
+             y="404.88995"
              id="text4148-5-4"><tspan
                style="font-size:10.39091682px;line-height:1.25;font-family:sans-serif;stroke-width:1"
                sodipodi:role="line"
                id="tspan4150-4-4"
-               x="316.41983"
-               y="403.29611">-90</tspan><tspan
+               x="457.60104"
+               y="404.88995">90</tspan><tspan
                id="tspan1521"
                style="font-size:10.39091682px;line-height:1.25;font-family:sans-serif;stroke-width:1"
                sodipodi:role="line"
-               x="316.41983"
-               y="410.2084" /><tspan
+               x="457.60104"
+               y="411.80225" /><tspan
                id="tspan1387-3"
                style="font-size:10.39091682px;line-height:1.25;font-family:sans-serif;stroke-width:1"
                sodipodi:role="line"
-               x="316.41983"
-               y="410.2084" /></text>
+               x="457.60104"
+               y="411.80225" /></text>
           <text
              xml:space="preserve"
              style="font-style:normal;font-weight:normal;font-size:12px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1"
-             x="458.90247"
-             y="401.36304"
+             x="313.39935"
+             y="404.45828"
              id="text4148-5-0"><tspan
                style="font-size:10.39091682px;line-height:1.25;font-family:sans-serif;stroke-width:1"
                sodipodi:role="line"
                id="tspan4150-4-78"
-               x="458.90247"
-               y="401.36304">-45 PSM 2, Joint 2</tspan><tspan
+               x="313.39935"
+               y="404.45828">45 PSM 2, Joint 2</tspan><tspan
                id="tspan1387-6"
                style="font-size:10.39091682px;line-height:1.25;font-family:sans-serif;stroke-width:1"
                sodipodi:role="line"
-               x="458.90247"
-               y="408.27533" /></text>
+               x="313.39935"
+               y="411.37057" /></text>
           <text
              xml:space="preserve"
              style="font-style:normal;font-weight:normal;font-size:12px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1"
-             x="588.21771"
-             y="403.29611"
-             id="text4148-5-8"><tspan
+             x="172.83757"
+             y="403.22275"
+             id="text4148-5-8"
+             inkscape:transform-center-x="27.535581"
+             inkscape:transform-center-y="1.403087"><tspan
                style="font-size:10.39091682px;line-height:1.25;font-family:sans-serif;stroke-width:1"
                sodipodi:role="line"
                id="tspan4150-4-8"
-               x="588.21771"
-               y="403.29611">0</tspan><tspan
+               x="172.83757"
+               y="403.22275">0</tspan><tspan
                id="tspan1387-43"
                style="font-size:10.39091682px;line-height:1.25;font-family:sans-serif;stroke-width:1"
                sodipodi:role="line"
-               x="588.21771"
-               y="410.2084" /></text>
+               x="172.83757"
+               y="410.13504" /></text>
         </g>
       </g>
       <g
@@ -452,167 +454,170 @@
              y="364.11261"
              style="font-size:7.57110357px;line-height:1.25;font-family:sans-serif;stroke-width:0.94638795"> </tspan></text>
         <g
-           transform="matrix(-1.0006695,0,0,0.99279192,916.11353,3.7158422)"
-           id="g1854">
+           id="g2186">
+          <rect
+             transform="scale(-1,1)"
+             style="fill:#ffffff;fill-opacity:0.21568627;stroke:#000000;stroke-width:0.72790635;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             id="rect3850-2-8-06-6"
+             width="98.021378"
+             height="85.356133"
+             x="-267.47552"
+             y="460.31512"
+             inkscape:transform-center-x="-31.772081"
+             inkscape:transform-center-y="-2.9693533" />
           <g
-             id="g1723"
-             transform="translate(-0.80152123,-24.415004)">
-            <rect
-               inkscape:transform-center-y="-2.9693533"
-               inkscape:transform-center-x="-31.772081"
-               y="484.32938"
-               x="649.00555"
-               height="85.975853"
-               width="97.955795"
-               id="rect3850-2-8-06-6"
-               style="fill:#ffffff;fill-opacity:0.21568627;stroke:#000000;stroke-width:0.73029959;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-            <g
-               transform="matrix(0.61792514,0,0,1.0021525,155.82022,-389.34381)"
-               id="g6795">
-              <text
-                 xml:space="preserve"
-                 style="font-style:normal;font-weight:normal;font-size:12px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1"
-                 x="587.25806"
-                 y="952.04529"
-                 id="text4072-2-6"><tspan
-                   sodipodi:role="line"
-                   id="tspan4074-6-1"
-                   x="587.25806"
-                   y="952.04529"
-                   style="font-size:8px;line-height:1.25;font-family:sans-serif;stroke-width:1">45</tspan></text>
-              <text
-                 xml:space="preserve"
-                 style="font-style:normal;font-weight:normal;font-size:12px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1"
-                 x="752.5036"
-                 y="951.91827"
-                 id="text4076-1-2"><tspan
-                   sodipodi:role="line"
-                   id="tspan4078-8-9"
-                   x="752.5036"
-                   y="951.91827"
-                   style="font-size:8px;line-height:1.25;font-family:sans-serif;stroke-width:1">90</tspan></text>
-              <text
-                 xml:space="preserve"
-                 style="font-style:normal;font-weight:normal;font-size:15.24918079px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.27076519"
-                 x="-135.67314"
+             id="g6795"
+             transform="matrix(-0.61833884,0,0,0.9949289,760.99105,-407.06056)">
+            <text
+               transform="scale(-1.0000759,0.9999241)"
+               id="text4072-2-6"
+               y="953.2348"
+               x="-599.65631"
+               style="font-style:normal;font-weight:normal;font-size:12.00091076px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.00007594"
+               xml:space="preserve"><tspan
+                 style="font-size:8.00060749px;line-height:1.25;font-family:sans-serif;stroke-width:1.00007594"
+                 y="953.2348"
+                 x="-599.65631"
+                 id="tspan4074-6-1"
+                 sodipodi:role="line">-45</tspan></text>
+            <text
+               transform="scale(-0.99999069,1.0000093)"
+               id="text4076-1-2"
+               y="953.58502"
+               x="-765.94434"
+               style="font-style:normal;font-weight:normal;font-size:11.99988842px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.99999064"
+               xml:space="preserve"><tspan
+                 style="font-size:7.99992514px;line-height:1.25;font-family:sans-serif;stroke-width:0.99999064"
+                 y="953.58502"
+                 x="-765.94434"
+                 id="tspan4078-8-9"
+                 sodipodi:role="line">-90</tspan></text>
+            <text
+               transform="scale(-1.2735004,0.78523728)"
+               id="text4148-5-1"
+               y="1171.0692"
+               x="-135.67314"
+               style="font-style:normal;font-weight:normal;font-size:15.24918079px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.27076519"
+               xml:space="preserve"><tspan
                  y="1171.0692"
-                 id="text4148-5-1"
-                 transform="scale(-1.2735004,0.78523728)"><tspan
-                   style="font-size:13.20441437px;line-height:1.25;font-family:sans-serif;stroke-width:1.27076519"
-                   sodipodi:role="line"
-                   id="tspan4150-4-49"
-                   x="-135.67314"
-                   y="1171.0692">-90 PSM 2, Joint 3</tspan><tspan
-                   id="tspan1387-2"
-                   style="font-size:13.20441437px;line-height:1.25;font-family:sans-serif;stroke-width:1.27076519"
-                   sodipodi:role="line"
-                   x="-135.67314"
-                   y="1179.8531" /></text>
-            </g>
-            <rect
-               y="484.21313"
-               x="170.26013"
-               height="85.914185"
-               width="115.27921"
-               id="rect3850-2-8-06"
-               style="fill:#ffffff;fill-opacity:0.21568627;stroke:#000000;stroke-width:0.79196453;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-            <rect
-               y="484.21313"
-               x="285.53934"
-               height="85.914185"
-               width="115.27921"
-               id="rect3850-2-8-06-3"
-               style="fill:#ffffff;fill-opacity:0.21568627;stroke:#000000;stroke-width:0.79196447;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-            <rect
-               y="484.21317"
-               x="400.81854"
-               height="85.975853"
-               width="97.955795"
-               id="rect3850-2-8-06-2"
-               style="fill:#ffffff;fill-opacity:0.21568627;stroke:#000000;stroke-width:0.73029959;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-            <rect
-               y="555.58917"
-               x="498.53482"
-               height="14.716084"
-               width="150.47072"
-               id="rect3850-2-8-06-0"
-               style="fill:#ffffff;fill-opacity:0.21568627;stroke:#000000;stroke-width:0.58909136;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-            <rect
-               y="555.24402"
-               x="515.81049"
-               height="15.20938"
-               width="0.547602"
-               id="rect1304"
-               style="stroke-width:0.46570283;stroke-miterlimit:4;stroke-dasharray:none" />
-            <rect
-               y="555.24384"
-               x="631.43451"
-               height="15.20938"
-               width="0.547602"
-               id="rect1306"
-               style="stroke-width:0.24626122;stroke-miterlimit:4;stroke-dasharray:none" />
-            <text
-               transform="scale(-1.0000012,0.99999881)"
-               xml:space="preserve"
-               style="font-style:normal;font-weight:normal;font-size:12.00001431px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.00000119"
-               x="-283.3443"
-               y="532.44757"
-               id="text4148-5-06"><tspan
-                 style="font-size:10.39092922px;line-height:1.25;font-family:sans-serif;stroke-width:1.00000119"
+                 x="-135.67314"
+                 id="tspan4150-4-49"
                  sodipodi:role="line"
-                 id="tspan4150-4-89"
-                 x="-283.3443"
-                 y="532.44757">-45</tspan><tspan
-                 id="tspan1387-26"
-                 style="font-size:10.39092922px;line-height:1.25;font-family:sans-serif;stroke-width:1.00000119"
+                 style="font-size:13.20441437px;line-height:1.25;font-family:sans-serif;stroke-width:1.27076519"> 90 PSM 2, Joint 3</tspan><tspan
+                 y="1179.8531"
+                 x="-135.67314"
                  sodipodi:role="line"
-                 x="-283.3443"
-                 y="539.35986" /></text>
-            <text
-               transform="scale(-1.0000018,0.99999821)"
-               xml:space="preserve"
-               style="font-style:normal;font-weight:normal;font-size:12.00002098px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.00000179"
-               x="-398.46985"
-               y="532.20374"
-               id="text4148-5-6"><tspan
-                 style="font-size:10.39093494px;line-height:1.25;font-family:sans-serif;stroke-width:1.00000179"
-                 sodipodi:role="line"
-                 id="tspan4150-4-495"
-                 x="-398.46985"
-                 y="532.20374">0 PSM 2, Joint 3</tspan><tspan
-                 id="tspan1387-0"
-                 style="font-size:10.39093494px;line-height:1.25;font-family:sans-serif;stroke-width:1.00000179"
-                 sodipodi:role="line"
-                 x="-398.46985"
-                 y="539.11603" /></text>
+                 style="font-size:13.20441437px;line-height:1.25;font-family:sans-serif;stroke-width:1.27076519"
+                 id="tspan1387-2" /></text>
           </g>
+          <rect
+             transform="scale(-1,1)"
+             style="fill:#ffffff;fill-opacity:0.21568627;stroke:#000000;stroke-width:0.78936923;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             id="rect3850-2-8-06"
+             width="115.35639"
+             height="85.294907"
+             x="-746.54144"
+             y="460.19971" />
+          <rect
+             transform="scale(-1,1)"
+             style="fill:#ffffff;fill-opacity:0.21568627;stroke:#000000;stroke-width:0.78936917;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             id="rect3850-2-8-06-3"
+             width="115.35639"
+             height="85.294907"
+             x="-631.18506"
+             y="460.19971" />
+          <rect
+             transform="scale(-1,1)"
+             style="fill:#ffffff;fill-opacity:0.21568627;stroke:#000000;stroke-width:0.72790635;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             id="rect3850-2-8-06-2"
+             width="98.021378"
+             height="85.356133"
+             x="-515.82867"
+             y="460.19974" />
+          <rect
+             transform="scale(-1,1)"
+             style="fill:#ffffff;fill-opacity:0.21568627;stroke:#000000;stroke-width:0.58716089;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             id="rect3850-2-8-06-0"
+             width="150.57146"
+             height="14.610009"
+             x="-417.80731"
+             y="530.94586" />
+          <rect
+             transform="scale(-1,1)"
+             style="stroke-width:0.46417668;stroke-miterlimit:4;stroke-dasharray:none"
+             id="rect1304"
+             width="0.54796863"
+             height="15.09975"
+             x="-400.75977"
+             y="530.71863" />
+          <rect
+             transform="scale(-1,1)"
+             style="stroke-width:0.24545421;stroke-miterlimit:4;stroke-dasharray:none"
+             id="rect1306"
+             width="0.54796863"
+             height="15.09975"
+             x="-285.05835"
+             y="530.71844" />
+          <text
+             id="text4148-5-06"
+             y="510.09824"
+             x="630.88251"
+             style="font-style:normal;font-weight:normal;font-size:11.96068954px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.99672413"
+             xml:space="preserve"
+             transform="scale(1.0039607,0.99605488)"><tspan
+               y="510.09824"
+               x="630.88251"
+               id="tspan4150-4-89"
+               sodipodi:role="line"
+               style="font-size:10.35687733px;line-height:1.25;font-family:sans-serif;stroke-width:0.99672413">45</tspan><tspan
+               y="516.98792"
+               x="630.88251"
+               sodipodi:role="line"
+               style="font-size:10.35687733px;line-height:1.25;font-family:sans-serif;stroke-width:0.99672413"
+               id="tspan1387-26" /></text>
+          <text
+             id="text4148-5-6"
+             y="509.85519"
+             x="516.13367"
+             style="font-style:normal;font-weight:normal;font-size:11.96069622px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.99672472"
+             xml:space="preserve"
+             transform="scale(1.0039614,0.99605428)"><tspan
+               y="509.85519"
+               x="516.13367"
+               id="tspan4150-4-495"
+               sodipodi:role="line"
+               style="font-size:10.35688305px;line-height:1.25;font-family:sans-serif;stroke-width:0.99672472">0 PSM 2, Joint 3</tspan><tspan
+               y="516.74487"
+               x="516.13367"
+               sodipodi:role="line"
+               style="font-size:10.35688305px;line-height:1.25;font-family:sans-serif;stroke-width:0.99672472"
+               id="tspan1387-0" /></text>
           <text
              xml:space="preserve"
-             style="font-style:normal;font-weight:normal;font-size:12.03945446px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.00328791"
-             x="-742.93842"
-             y="506.02725"
-             id="text4148-5-4-9"
-             transform="scale(-0.99605612,1.0039595)"><tspan
-               style="font-size:10.4250803px;line-height:1.25;font-family:sans-serif;stroke-width:1.00328791"
+             style="font-style:normal;font-weight:normal;font-size:12px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.00000012"
+             x="175.60973"
+             y="508.08481"
+             id="text4148-5-4-9"><tspan
+               style="font-size:10.39091682px;line-height:1.25;font-family:sans-serif;stroke-width:1.00000012"
                sodipodi:role="line"
                id="tspan4150-4-4-1"
-               x="-742.93842"
-               y="506.02725">135</tspan><tspan
+               x="175.60973"
+               y="508.08481">-135</tspan><tspan
                id="tspan1185"
-               style="font-size:10.4250803px;line-height:1.25;font-family:sans-serif;stroke-width:1.00328791"
+               style="font-size:10.39091682px;line-height:1.25;font-family:sans-serif;stroke-width:1.00000012"
                sodipodi:role="line"
-               x="-742.93842"
-               y="512.96228" /><tspan
+               x="175.60973"
+               y="514.99713" /><tspan
                id="tspan1521-2"
-               style="font-size:10.4250803px;line-height:1.25;font-family:sans-serif;stroke-width:1.00328791"
+               style="font-size:10.39091682px;line-height:1.25;font-family:sans-serif;stroke-width:1.00000012"
                sodipodi:role="line"
-               x="-742.93842"
-               y="512.96228" /><tspan
+               x="175.60973"
+               y="514.99713" /><tspan
                id="tspan1387-3-7"
-               style="font-size:10.4250803px;line-height:1.25;font-family:sans-serif;stroke-width:1.00328791"
+               style="font-size:10.39091682px;line-height:1.25;font-family:sans-serif;stroke-width:1.00000012"
                sodipodi:role="line"
-               x="-742.93842"
-               y="512.96228" /></text>
+               x="175.60973"
+               y="514.99713" /></text>
         </g>
       </g>
       <g
