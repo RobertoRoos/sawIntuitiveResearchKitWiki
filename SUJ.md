@@ -116,6 +116,10 @@ The numbering of the joints are as follows:
 
 ## PSM1 and PSM2
 ![PSM Translation Bottom](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/translation-laser-bottom.jpg)
+
+<img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-PSM1-joint-1.jpg" width="200" style="transform:rotate(90deg);">
+
+
 ![PSM Translation Top](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/translation-laser-top.jpg)
 
 ## PSM3
