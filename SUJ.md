@@ -47,36 +47,41 @@ Every joint moves in the positive direction when turned counter clockwise and in
 
 The label for joint 3 of the ECM is made so that 180 is the value that is aligned with the divot in the joint because the 0 position for the ECM is where the ECM is doubled back, facing the main column.
 
-Make sure to put the labels on the ____ before the joint.
+Make sure to put the labels on the link before the joint.
+
+PSM1 and PSM2 have identical SUJs except for their second joints that have the same geometry but have different bounds of rotation (PSM1 moves from -135 to 0 and PSM 2 moves from 0 to 135). This is why the directions for their label placement is the same.
+
+The numbering of the joints are as follows:
+* Joint 0: Translation
+* Joint 1:
 
 ### Directions for Placing the Labels
 
-[ECM Labels PDF](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/ECM_Labels.pdf)
+| ECM  | PSM1 | PSM2  | PSM3 |
+| ------------- | ------------- | ------------- | ------------- |
+| [ECM Labels PDF](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/ECM_Labels.pdf)  | [PSM1 Labels PDF](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/PSM_1_Labels.pdf)  | [PSM2 Labels PDF](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/PSM_2_Labels.pdf)  | [PSM3 Labels PDF](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/PSM_3_Labels.pdf)  |
+| [ECM Labels SVG](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/ECM_Labels.svg)  | [PSM1 Labels SVG](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/PSM_1_Labels.svg)  | [PSM2 Labels SVG](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/PSM_2_Labels.svg)  | [PSM3 Labels SVG](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/PSM_3_Labels.svg)  |
 
-[ECM Labels SVG](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/ECM_Labels.svg)
-
-[PSM1 Labels PDF](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/PSM_1_Labels.pdf)
-
-[PSM1 Labels SVG](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/PSM_1_Labels.svg)
-
-[PSM2 Labels PDF](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/PSM_2_Labels.pdf)
-
-[PSM2 Labels SVG](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/PSM_2_Labels.svg)
-
-[PSM3 Labels PDF](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/PSM_3_Labels.pdf)
-
-[PSM3 Labels SVG](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/PSM_3_Labels.svg)
-
+#### PSMs
 1. Open the PSM 1 and PSM 2 Labels files at the top of this section and print out the document on either letter size paper or glossy white/ clear polyester sheets (glossy white sheets are preferred).
 2. Check that the box at the bottom of the document measures 20 cm.
 3. Cut out the label for the joint you are marking.
 4. Align the zero degree measurement with the indented line already on the joint as shown in the images below.
 5. Either tape on the paper or stick on the sheets in that location (if you are using the glossy sheets, reinforce them by taping them down).
 
+#### ECM
+1. Open the ECM Labels file at the top of this section and print out the document on either letter size paper or gloss white/ clear polyester sheets.
+2. Check that the box at the bottom of the document measures 20 cm.
+3. Cut out the label for the joint you are marking.
+4. Align the zero degree measurement with the indented line already on joints 1 and 2 as shown in the images below.
+5. Align the 180 degree measurement with the indented line already on joint 3 as shown in the image below.
+6. Either tape on the paper or stick on the sheets in that location.
 
 ### PSM1 and PSM2
 
-![SUJ PSM1 Joint 1](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-PSM1-joint-1.jpg)
+![SUJ PSM1 Joint 1](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-PSM1-joint-1.jpg =200x100)
+
+<img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-PSM1-joint-1.jpg" width="200">
 
 ![SUJ PSM1 Joint 2](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-PSM1-joint-2.jpg)
 
@@ -110,8 +115,13 @@ Make sure to put the labels on the ____ before the joint.
 # Calibration
 
 ## PSM1 and PSM2
-
+![PSM Translation Bottom](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/translation-laser-bottom.jpg)
+![PSM Translation Top](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/translation-laser-top.jpg)
 
 ## PSM3
+![Validation RCM-ECM](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/validation-RCM-ECM.jpg)
+![Validation RCM-RCM](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/validation-RCM-RCM.jpg)
 
 ## ECM
+![ECM Translation Bottom](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/translation-ECM-bottom.jpg)
+![ECM Translation Bottom](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/translation-ECM-top.jpg)
