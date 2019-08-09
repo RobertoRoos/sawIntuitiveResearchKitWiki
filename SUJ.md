@@ -1,8 +1,23 @@
 <!--ts-->
    * [Introduction](#introduction)
    * [Setup joints](#setup-joints)
+   * [Labels](#labels)
+      * [Physical dimension](#physical-dimension)
+      * [Labels](#labels-1)
+      * [Label Placement](#label-placement)
+         * [Important Notes](#important-notes)
+         * [Directions for Placing the Labels](#directions-for-placing-the-labels)
+            * [PSMs](#psms)
+            * [ECM](#ecm)
+         * [PSM1 and PSM2](#psm1-and-psm2)
+         * [PSM3](#psm3)
+         * [ECM](#ecm-1)
+   * [Calibration](#calibration)
+      * [PSM1 and PSM2](#psm1-and-psm2-1)
+      * [PSM3](#psm3-1)
+      * [ECM](#ecm-2)
 
-<!-- Added by: adeguet1, at: 2019-08-06T12:14-04:00 -->
+<!-- Added by: anton, at:  -->
 
 <!--te-->
 
@@ -51,9 +66,7 @@ Make sure to put the labels on the link before the joint.
 
 PSM1 and PSM2 have identical SUJs except for their second joints that have the same geometry but have different bounds of rotation (PSM1 moves from -135 to 0 and PSM 2 moves from 0 to 135). This is why the directions for their label placement is the same.
 
-The numbering of the joints are as follows:
-* Joint 0: Translation
-* Joint 1:
+The numbering of the joints are best understood if the arm is fully extended. Joint 0 is the translational movement. The rest of the joints are numbered increasingly as you move out from the main column. So joint 1 is the closest joint to the column and joint is the second closest joint. Joint 4 is the joint that rotates the carriage in the horizontal plane.
 
 ### Directions for Placing the Labels
 
@@ -63,7 +76,7 @@ The numbering of the joints are as follows:
 | [ECM Labels SVG](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/ECM_Labels.svg)  | [PSM1 Labels SVG](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/PSM_1_Labels.svg)  | [PSM2 Labels SVG](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/PSM_2_Labels.svg)  | [PSM3 Labels SVG](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/PSM_3_Labels.svg)  |
 
 #### PSMs
-1. Open the PSM 1 and PSM 2 Labels files at the top of this section and print out the document on either letter size paper or glossy white/ clear polyester sheets (glossy white sheets are preferred).
+1. Open the PSM1 and PSM2 Labels files at the top of this section and print out the document on either letter size paper or glossy white/ clear polyester sheets (glossy white sheets are preferred).
 2. Check that the box at the bottom of the document measures 20 cm.
 3. Cut out the label for the joint you are marking.
 4. Align the zero degree measurement with the indented line already on the joint as shown in the images below.
@@ -79,55 +92,40 @@ The numbering of the joints are as follows:
 
 ### PSM1 and PSM2
 
-![SUJ PSM1 Joint 1](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-PSM1-joint-1.jpg =200x100)
-
-<img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-PSM1-joint-1.jpg" width="200">
-
-![SUJ PSM1 Joint 2](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-PSM1-joint-2.jpg)
-
-![SUJ PSM1 Joint 3](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-PSM1-joint-3.jpg)
-
-![SUJ PSM1 Joint 4](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-PSM1-joint-4.jpg)
-
-![SUJ PSM1 Joint 5](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-PSM1-joint-5.jpg)
-
+<img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-PSM1-joint-1.jpg" width="350"> 
+<img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-PSM1-joint-2.jpg" width="350">
+<img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-PSM1-joint-3.jpg" width="350">
+<img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-PSM1-joint-4.jpg" width="350">
+<img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-PSM1-joint-5.jpg" width="350">
 
 ### PSM3
 
-![SUJ PSM3 Joint 1](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-PSM3-joint-1.jpg)
-
-![SUJ PSM3 Joint 2](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-PSM3-joint-2.jpg)
-
-![SUJ PSM3 Joint 3](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-PSM3-joint-3.jpg)
-
-![SUJ PSM3 Joint 4](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-PSM3-joint-4.jpg)
-
-![SUJ PSM3 Joint 5](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-PSM3-joint-5.jpg)
+<img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-PSM3-joint-1.jpg" width="350">
+<img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-PSM3-joint-2.jpg" width="350">
+<img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-PSM3-joint-3.jpg" width="350">
+<img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-PSM3-joint-4.jpg" width="350">
+<img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-PSM3-joint-5.jpg" width="350">
 
 ### ECM
 
-![SUJ ECM Joint 1](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-ECM-joint-1.jpg)
-
-![SUJ ECM Joint 2](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-ECM-joint-2.jpg)
-
-![SUJ ECM Joint 3](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-ECM-joint-3.jpg)
+<img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-ECM-joint-1.jpg" width="350">
+<img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-ECM-joint-2.jpg" width="350">
+<img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-ECM-joint-3.jpg" width="350">
 
 # Calibration
 
 ## PSM1 and PSM2
-![PSM Translation Bottom](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/translation-laser-bottom.jpg)
 
-<img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-PSM1-joint-1.jpg" width="200" style="transform:rotate(90deg);">
-
-
-<img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-PSM1-joint-1.jpg" class="rotate90">
-
-![PSM Translation Top](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/translation-laser-top.jpg)
+<img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/translation-laser-bottom.jpg" width="350">
+<img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/translation-laser-top.jpg" width="350">
 
 ## PSM3
-![Validation RCM-ECM](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/validation-RCM-ECM.jpg)
-![Validation RCM-RCM](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/validation-RCM-RCM.jpg)
+
+<img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/validation-RCM-ECM.jpg" width="350">
+<img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/validation-RCM-RCM.jpg" width="350">
 
 ## ECM
-![ECM Translation Bottom](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/translation-ECM-bottom.jpg)
-![ECM Translation Bottom](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/translation-ECM-top.jpg)
+
+<img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/translation-ECM-bottom.jpg" width="350">
+<img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/translation-ECM-top.jpg" width="350">
+
