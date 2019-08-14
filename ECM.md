@@ -109,7 +109,7 @@ We are not totally sure how much variability there is between systems.  In order
 | ISI |0.250|2.0  |0.100|0.210|2.0  |0.100|1.200|2.0  |0.200|
 | WSU |0.270|0.5  |0.120|0.300|0.5  |0.130|1.100|2.0  |0.170|
 | UCL |0.250|2.0  |0.040|0.140|2.0  |0.040|1.100|2.0  |0.200|
-| PU  |0.250|2.0  |0.130|0.180|2.0  |0.100|0.700|2.0  |0.200|
+| PU  |0.250|2.0  |0.130|0.180|2.0  |0.100|1.100|2.0  |0.200|
  
 **Important note for older dVRK controllers:** We found that the power requirements are close to the maximum amount of power a 24V power supply can deliver.  There is some variability between different systems and brakes so you might need to upgrade the power supply to 36V in the controller enclosure.  To check if you have reached the maximum deliverable power, keep an eye on the current feedback.  These values should be close to the required current.  If the current feedback seems to plateau while you increase the requested current, you'll likely need to upgrade your power supply.
 
