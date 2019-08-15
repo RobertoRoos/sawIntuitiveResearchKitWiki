@@ -137,6 +137,51 @@ The procedure for calibration is as follows:
 4. Enter that angle into the graphical table in the second row and in the column that corresponds with the joint.
 5. Repeat until all 5 joints have values in the top and bottom row.
 
+## PSM3
+
+### Joint 0
+To calibrate joint 0 it is necessary to have a laser measuring tool. The procedure for calibration is as follows:
+1. Lower the PSM to its lowest point.
+2. Place the measuring tool underneath joint 1 as shown in the picture below of PSM1 (all 3 PSMs have similar flat pieces under their joints).
+3. Find and record the height of the PSM.
+4. Enter 0 in the graphical table in the first column of the first row.
+5. Raise the PSM to its highest point.
+6. Find and record the height of the PSM.
+7. Subtract the final height from the initial height.
+8. Enter the difference in height in the second column of the first row.
+9. Anton, we need to add something here about adjusting the offset.
+
+### Joints 1-5
+The procedure for calibration is as follows:
+1. Turn the joint to an extreme (either its highest or lowest degree measurement on the label).
+2. Enter that angle into the graphical table in the first row and in the column that corresponds with the joint.
+3. Turn the joint to the other extreme.
+4. Enter that angle into the graphical table in the second row and in the column that corresponds with the joint.
+5. Repeat until all 5 joints have values in the top and bottom row.
+
+## ECM
+**The ECM can only be calibrated after calibrating PSM1 or PSM2**
+
+### Joint 0
+The procedure for calibration is as follows:
+1. Lower the ECM to its lowest point.
+2. Lower PSM1 to the point at which the bottom of PSM1's second joint and the ECM's second joint are level as seen below.
+3. Record the reported height for PSM1 from the graphical as the initial height of the ECM.
+4. Enter 0 in the graphical table in the first column of the first row.
+5. Raise the ECM to its highest point.
+6. Raise PSM1 to the point at which the bottom of PSM1's second joint and the ECM's second joint are level as seen below.
+7. Subtract the final height from the initial height.
+8. Enter the difference in height in the second column of the first row.
+
+### Joints 1-3
+The procedure for calibration is as follows:
+1. Turn the joint to an extreme (either its highest or lowest degree measurement on the label).
+2. Enter that angle into the graphical table in the first row and in the column that corresponds with the joint.
+3. Turn the joint to the other extreme.
+4. Enter that angle into the graphical table in the second row and in the column that corresponds with the joint.
+5. Repeat until all 3 joints have values in the top and bottom row.
+6. Fill the last two columns in with random numbers as place holders.
+
 **When the table is full of values hit "Manual Calibration" and the correct offsets and scales will print in the terminal.**
 
 ### Calibration Check
