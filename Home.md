@@ -41,6 +41,7 @@ For posters and videos, please include the [dVRK logo](https://github.com/jhu-dv
 * Resources:
   * Google group https://groups.google.com/d/forum/research-kit-for-davinci and research-kit-for-davinci@googlegroups.com (use the Google group web page to request membership, don't forget to mention your group/university so the group admin can identify you).
   * Intuitive Surgical hardware wiki http://research.intusurg.com/dvrk
+  * Intuitive Foundation http://www.intuitive-foundation.org/dvrk/
   * *cisst* libraries http://github.com/jhu-cisst/cisst/wiki
   * Johns Hopkins University Mechatronics http://jhu-cisst.github.io/mechatronics
   * List of all JHU LCSR Software http://jhu-lcsr.github.io/software/
