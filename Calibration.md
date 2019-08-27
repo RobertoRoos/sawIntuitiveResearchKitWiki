@@ -15,6 +15,8 @@
   - [4.2. Requirements](#42-requirements)
   - [4.3. Calibrating scales](#43-calibrating-scales)
   - [4.3. Calibrating offsets](#43-calibrating-offsets)
+  - [4.4. Errors during the potentiometer calibration](#44-errors-during-the-potentiometer-calibration)
+
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -332,3 +334,9 @@ index | old offset  | new offset  | correction
  6    |  179.851204 |  179.858797 | -0.007594 
 ```
 Similar to the scales, there is usually no point to save the results of the second pass for the offsets.
+
+## 4.4. Errors during the potentiometer calibration
+
+There is a potential egg and chicken issue.   While trying to calibrate the potentiometers, the safety checks using the potentiometers are still active.   So if the original calibration (from `.cal` files) is way off, there will likely be some safety checks triggered while the robot arms are moving.
+
+To avoid this, you can disable the pot/encoder safety checks but you MUST first visually check that the potentiometers and potentiometers work fine (see https://github.com/jhu-dvrk/sawIntuitiveResearchKit/wiki/Debugging-Potentiometer-Issues#visual-checks), you can disable the pots/encoder safety checks manually during the calibration process.   To do so, “Home” the arm and then switch to the IO Qt Widget, check the “Direct control” box and approve.  Then uncheck “Use pot/encoder check” box.   At that point, you can start the scale calibration using the Python script.
