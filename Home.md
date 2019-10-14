@@ -67,6 +67,8 @@ https://github.com/jhu-cisst/mechatronics-firmware/wiki/FPGA-Program
 
 ## Software
 
+* *July 2019*: Version 1.7.1 released:
+  * Fixed error in MTM gravity compensation code
 * *April 2019*: Version 1.7.0 released:
   * Using c++ 14 features: **Ubuntu 16.04 or higher required**
   * [sawIntuitiveResearchKit](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/blob/master/CHANGELOG.md) (main dVRK code)
