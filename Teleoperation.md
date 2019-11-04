@@ -23,7 +23,39 @@ The current implementation primarily attempts to replicate the teleoperation tra
 
 ### API
 
+* Scale:
+* Orientation:
+* Ignoring jaws:
+* Lock translation:
+* Lock orientation:
+* Align MTM:
+
 ### Selecting teleoperation pairs
+
+On a clinical da Vinci system, there are usually 3 PSMs and only 2 MTMs.  So the user has to select which PSMs should be teleoperation at a given time and which one should be unselected.  The clinical system uses a menu (or buttons) on the console to set the configuration (e.g. MTMR will drive PSM1 and PSM3 while MTML will drive PSM2).   Then the operator can use a foot pedal to toggle the PSMs on the MTM configured to drive 2 PSMs.  For the da Vinci Classic and S, the operator had to do a "quick tap" on the clutch pedal.
+
+In practice, you can swap using the “Clutch” foot pedal if there are two PSMs controlled by a single MTM.  This is done using a “quick tap”, i.e. about 1/10 of a second tap on the clutch. This is similar to the Intuitive implementation on the clinical first two generations of daVincis.
+
+To do a full swap MTMR/PSM1 & MTML/PSM2 to MTMR/PSM2 & MTML/PSM1 you will need to use ROS topics.
+The ROS topics are defined in https://github.com/jhu-dvrk/dvrk-ros/blob/master/dvrk_robot/src/dvrk_add_topics_functions.cpp#L41
+
+We use the diagnostic_msgs::KeyValue which is a pair of strings to represent the MTM/PSM pair.
+
+In your case, you would start with:
+status: MTMR/PSM1 - MTML/PSM2
+
+Then use the topic /dvrk/teleop/select_teleop_psm with MTMR/“” (use empty string to free the MTMR)
+status:  MTMR/“" - MTML/PSM2
+
+Then assign PSM2 to MTMR: /dvrk/teleop/select_teleop_psm MTMR/PSM2
+status: MTMR/PSM2 - MTML/“”
+
+Finally assign PSM1 to MTML: /dvrk/teleop/select_teleop_psm MTML/PSM1
+status: MTMR/PSM2 - MTML/PSM1
+
+While you’re changing the selected pairs, you should make sure your requests are valid and listen to the ROS topics:
+/dvrk//teleop/teleop_psm_selected
+/dvrk//teleop/teleop_psm_unselected
 
 ## ECM teleoperation
 
