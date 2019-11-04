@@ -23,10 +23,23 @@ The current implementation primarily attempts to replicate the teleoperation tra
 
 ### API
 
+In general, see [configuration parameters](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Configuration-File-Formats#teleoperation-components).
+
+* State:
+  ** The different states for the teleoperation components are defined in: [`mtsTeleOperationPSM.cpp`](/jhu-dvrk/sawIntuitiveResearchKit/blob/master/components/code/mtsTeleOperationPSM.cpp).
+  ** ROS topics:
 * Scale:
+  ** The scale can be set per teleoperation pair or for all teleoperation components simultaneously via the console.   For most applications it probably makes sense to control the scale via the console.
+  ** ROS topics:
 * Orientation:
+  ** The registration orientation matrix was initially provided so users could provide the rotation between the PSM reference frame and the MTM reference frame.  This rotation is applied to all MTM motions before being sent to the PSM.  It is not the recommended way to register the MTM and PSMs anymore.  Instead, we recommend to use the reference/base frame for all arms so their coordinate systems are properly aligned.  See [console configuration](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Configuration-File-Formats#base-frame)
+  ** ROS topics:
 * Ignoring jaws:
+  ** In some cases, it might be useful to not control the jaws (e.g. custom tools, tools with attached sensor over the jaws...).   When the user chooses to ignore the jaws, the teleoperation component will not try to match the jaws and gripper angles before engaging the follow mode.
+  ** Configuration parameter: `ignore-jaws`
 * Lock translation:
+  ** This setting allows to lock the translation.  In this mode, the translation part of the MTM motion is ignored, the orientation is sent to the PSM.  Furthermore the MTM position is locked (first 3 degrees of freedom).
+  ** ROS topics:
 * Lock orientation:
 * Align MTM:
 
