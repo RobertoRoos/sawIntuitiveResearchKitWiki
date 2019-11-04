@@ -20,6 +20,7 @@ Advanced
 * [Software Architecture](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Software-Architecture)
 * [Config File formats](Configuration-File-Formats)
 * [Software Components APIs](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Components-APIs)
+* [Teleoperation](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Teleoperation)
 * [Kinematics Simulation](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Kinematics-Simulation)
 * [Potentiometer Issues](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Debugging-Potentiometer-Issues)
 * [Development Branches](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Development)
