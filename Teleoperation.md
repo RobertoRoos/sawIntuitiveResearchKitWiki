@@ -56,16 +56,16 @@ We use the `diagnostic_msgs::KeyValue` which is a pair of strings to represent t
 
 For example, if a user with two MTMs (MTML and MTMR) and two PSMs (PSM1 and PSM2) wants to swap the two PSMs while the application is running, they first have to declare all 4 possible combinations in the console JSON configuration file.  Then:
 
-* In your case, you would start with:
+* In your case, you would start with:<br>
   Status: MTMR/PSM1 - MTML/PSM2
 
-* Then use the topic `/dvrk/teleop/select_teleop_psm` with `MTMR/“”` (use empty string to free the MTMR)
+* Then use the topic `/dvrk/teleop/select_teleop_psm` with `MTMR/“”` (use empty string to free the MTMR)<br>
   Status:  MTMR/“" - MTML/PSM2
 
-* Then assign PSM2 to MTMR: `/dvrk/teleop/select_teleop_psm MTMR/PSM2`
+* Then assign PSM2 to MTMR: `/dvrk/teleop/select_teleop_psm MTMR/PSM2`<br>
   Status: MTMR/PSM2 - MTML/“”
 
-* Finally assign PSM1 to MTML: `/dvrk/teleop/select_teleop_psm MTML/PSM1`
+* Finally assign PSM1 to MTML: `/dvrk/teleop/select_teleop_psm MTML/PSM1`<br>
   Status: MTMR/PSM2 - MTML/PSM1
 
 While you’re changing the selected pairs, you should make sure your requests are valid and listen to the ROS topics:
