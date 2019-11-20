@@ -71,15 +71,28 @@ git pull origin devel
 
 ## Roadmap for 1.8
 
+Definitively:
 * ~~ECM gravity compensation~~
 * ~~Teleop with clutch/relative orientation~~
 * ~~#35, last issue is to control multiple slaves with one master~~
-* IK with joint limits for PSMs
-* Automatic tool type discovery, dynamically change tool type
-* Closed kinematics for MTM?
+* ~~Automatic tool type discovery, dynamically change tool type~~
+* ~~Temperature checks with warning and errors~~
+* ~~Check IO/PID periodicity and stops if overloaded~~
+* Closed kinematics for ECM with unit tests
+* Closed kinematics for MTM with unit tests
 * Better handling of redundant joints in MTMs #2 and #56
-* Fix relative joint move, maybe relative cartesian move
+* TeleopPSM scale gripper/jaw based on joint limits
+* Add joint goal from Qt Arm widget
 * Fix cisst-ros to expose ROS node and pass arguments to node (e.g. namespace)
+* Update SUJ doc + example with simulated SUJ
+* Update Teleop doc
+
+Maybe:
+* #121, add cap on maximum difference between PID goals
+* Trajectory in cartesian space
+* Fix relative joint move, maybe relative cartesian move
+* UDP support?
+* IK with joint limits for PSMs
 * #54, save content of `.cal` file in generated XML file (for debug, retrieval, ...)
 * Add dvrk-openigt to cisst-saw
 * Add optional for ROS bridge topics
