@@ -1,6 +1,6 @@
 The [dVRK](/jhu-dvrk/sawIntuitiveResearchKit/wiki) controllers have been built in batches as the community grew over the years.  You can locate all these sites on the [dVRK Google Map](https://mapsengine.google.com/map/embed?mid=z14AfgTT1a9w.ktOc3SMAsVF4).
 
-| Hardware batch | Year | University | PIs | Count | 
+| Hardware batch | Year | University | PIs | # | 
 | -------------- | ---- | ---------- | ------| ---- |
 | 0, 1, 3<br>dVRK, da Vinci | 2004-2014 | [Johns Hopkins Univ.](https://lcsr.jhu.edu) | Peter Kazanzides  & Russell Taylor | 1 |
 | 1<br>dVRK, da Vinci | 2012 | Worcester Polytechnic Inst. | Greg Fischer | 2 | 
