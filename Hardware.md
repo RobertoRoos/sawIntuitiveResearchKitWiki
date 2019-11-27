@@ -39,7 +39,7 @@ Make sure you place the wire to short the two pins as deep as possible and keep 
 
 ### 1.3. Controllers
 
-1. There are three types of controllers, MTM, PSM and ECM.  It is important not to mix them as the MTM controllers use a 24V power supply for the first 4 actuators and a 12V power supply for the last 3 actuators while the PSM controllers use a 24V power supply for all 7 actuators.  For the ECM, there's a single 36V power supply for the 4 motors and 3 brakes.  You can verify which one is which by opening the controllers.  See also [Controller Boxes](jhu-dvrk/sawIntuitiveResearchKit/wiki/Controller-Boxes).
+1. There are three types of controllers, MTM, PSM and ECM.  It is important not to mix them as the MTM controllers use a 24V power supply for the first 4 actuators and a 12V power supply for the last 3 actuators while the PSM controllers use a 24V power supply for all 7 actuators.  For the ECM, there's a single 36V power supply for the 4 motors and 3 brakes.  You can verify which one is which by opening the controllers.  See also [Controller Boxes](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Controller-Boxes).
 
 1. We strongly recommend to label the controllers with the name of the arm you plan to control along with the board IDs.   The board IDs should follow the convention described in the [XML configuration page](/jhu-dvrk/sawIntuitiveResearchKit/wiki/XMLConfig).   Each controller contains two sets of boards.    Each set is composed of a lower board (aka QLA for quad linear amps) and the upper board (FPGA + firewire connections).   The upper board (FPGA) has a rotary dial to set the board ID.   Using a small screw driver you can change the Id for each board. For example, the controller dedicated to the MTM Right should have a label with:
    ```
