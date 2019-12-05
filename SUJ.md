@@ -15,6 +15,8 @@
          * [PSM1 and PSM2](#psm1-and-psm2)
          * [PSM3](#psm3)
          * [ECM](#ecm)
+   * [Mounting and connecting the dVRK SUJ controller](#mounting-and-connecting-the-dvrk-suj-controller)
+   * [dVRK configuration files](#dvrk-configuration-files)
    * [Calibration](#calibration)
       * [General notes](#general-notes)
       * [PSM1 and PSM2](#psm1-and-psm2-1)
