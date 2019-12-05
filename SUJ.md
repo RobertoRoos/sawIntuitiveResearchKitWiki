@@ -26,9 +26,9 @@
       * [ECM](#ecm-1)
          * [Joint 0](#joint-0-2)
          * [Joints 1-3](#joints-1-3)
-         * [Calibration Check](#calibration-check)
-            * [PSM3](#psm3-2)
-            * [ECM](#ecm-2)
+      * [Calibration Check](#calibration-check)
+         * [PSM3](#psm3-2)
+         * [ECM](#ecm-2)
    * [Simulation](#simulation)
 
 <!-- Added by: anton, at:  -->
