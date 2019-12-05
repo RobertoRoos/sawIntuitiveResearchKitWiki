@@ -99,9 +99,7 @@ Make sure to put the labels on the link before the joint.
 
 PSM1 and PSM2 have identical SUJs except for their second joints that have the same geometry but have different bounds of rotation (PSM1 moves from -135 to 0 and PSM 2 moves from 0 to 135). This is why the directions for their label placement is the same.
 
-The numbering of the joints are best understood if the arm is fully extended. Joint 0 is the translational movement. The rest of the joints are numbered increasingly as you move out from the main column. So joint 1 is the closest joint to the column and joint is the second closest joint. Joint 4 is the joint that rotates the carriage in the horizontal plane.
-
-### Directions for Placing the Labels
+### Directions for placing the labels
 
 | ECM  | PSM1 | PSM2  | PSM3 |
 | ------------- | ------------- | ------------- | ------------- |
@@ -135,6 +133,14 @@ For the ECM, **make sure the label for the 3rd joint is positioned so 180 is on 
 <img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-ECM-joint-3.jpg" width="350">
 
 # Calibration
+
+## General notes
+
+When you're using the dVRK SUJ controller, the joint values are measured using potentiometers.  The voltage measured has to be converted to an angle using a simple linear transformation.   Since each system has different potentiometers, each system need to be individually calibrated.   To do so, the dVRK GUI provides a very simple interface that allows to compute the scale and offset for the linear transformation using two set points.  At each point, the controller will provide the voltage and the user has to provide the measured angle using some kind of external measurement tool.
+
+For all the rotational joints, we found that the labels provide a reasonable estimate.  For the translation joints, we don't currently have a good system.  The process described here relies on a cheap laser measurement tool.
+
+<img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/translation-laser-top.jpg" width="350">
 
 ## PSM1 and PSM2
 
