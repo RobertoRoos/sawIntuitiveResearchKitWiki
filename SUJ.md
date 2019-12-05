@@ -146,6 +146,14 @@ For the ECM, **make sure the label for the 3rd joint is positioned so 180 is on 
 <img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-ECM-joint-2.jpg" width="350">
 <img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-ECM-joint-3.jpg" width="350">
 
+# Mounting and connecting the dVRK SUJ controller
+
+# dVRK configuration files
+
+The simplest way to create the configuration files for your system is to start from the files in the [`share/jhu-daVinci`](/jhu-dvrk/sawIntuitiveResearchKit/tree/master/share/jhu-daVinci) directory.  The main files are:
+ * `sawRobotIO1394-SUJ.xml`.  This file is unique to each systems since it is calibrated for current feedback (see [current calibration](jhu-dvrk/sawIntuitiveResearchKit/wiki/Calibration)) so you should keep it in your system's directory (e.g. `share/mylarb-daVinci`).
+ * `suj-ECM-1-2-3.json`.  This file contains the DH parameters for all the SUJs as well as the calibration results for the potentiometers to joint values conversion.  As such, this file is also specific to each system.
+ * `console-SUJ*.json`.  These files are used with the dVRK console application (i.e. `sawIntuitiveResearchKitQtConsoleJSON` or `rosrun dvrk_robot dvrk_console_json`).  If you're creating a configuration file with the SUJs and the actual arms (ECM and PSMs), don't forget to set the `base-frame` for each active arm (see example in [`share/jhu-daVinci`](/jhu-dvrk/sawIntuitiveResearchKit/blob/master/share/jhu-daVinci/console-SUJ-ECM-MTMR-PSM1-MTML-PSM2-Teleop.json)).
 # Calibration
 
 ## General notes
