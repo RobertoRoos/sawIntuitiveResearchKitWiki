@@ -273,3 +273,6 @@ effort: [0]"
 ```
 
 When using the ROS command line, make sure you take advantage of auto-completion (press "tab" key repeatedly).  This will automatically fill the message type as well as an empty message.   Then you can just copy/paste your `position` vector.
+
+If you want to use the SUJs simulation mode to emulate the dVRK controller with a real patient's cart, you will need to use the clinical mode (i.e. original da Vinci controller) to release the brakes and optionally lift the PSM3.
+
