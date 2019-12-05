@@ -226,18 +226,18 @@ The procedure for calibration is as follows:
 
 **When the table is full of values hit "Manual Calibration" and the correct offsets and scales will print in the terminal.**
 
-### Calibration Check
+## Calibration Check
 When the calibration is complete, place all the RCMs together and check that their reported values on the graphical are within a 20 mm cube of each other. (This is show in the pictures labeled PSM3)
 
 <img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/translation-laser-bottom.jpg" width="350">
 <img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/translation-laser-top.jpg" width="350">
 
-#### PSM3
+### PSM3
 
 <img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/validation-RCM-ECM.jpg" width="350">
 <img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/validation-RCM-RCM.jpg" width="350">
 
-#### ECM
+### ECM
 
 <img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/translation-ECM-bottom.jpg" width="350">
 <img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/translation-ECM-top.jpg" width="350">
