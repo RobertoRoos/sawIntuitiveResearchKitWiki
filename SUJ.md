@@ -27,10 +27,43 @@ Acronyms used in this page are defined in [Frequently Asked Questions](/jhu-dvrk
 
 This page describes how to use the Setup Joints (SUJs) with the dVRK.  This is useful only for the groups with a [full da Vinci](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Full-da-Vinci.md)
 
-The Setup Joints use potentiometers to read the joint positions.   Each joint has two potentiometers and each arm has up to 6 joints.  So we have a total of 48 potentiometers, each provides a voltage that needs to be converted to an angle (revolute joints) or distance (prismatic joints).  The dVRK controller has 4 analog to digital inputs so it reads the potentiometer values sequentially using a multiplexer.  Cycling through the potentiometers takes time so you need to make sure you let the readings stabilize before doing anything.
+## Purpose
 
-The brakes are controlled per arm, not per joint.  The dVRK controller uses the linear amps dedicated to motor control to release the brakes.  Finally, some patient carts come with a third PSM (aka PSM3).  The PSM3 SUJ is mounted under the ECM SUJ and doesn't have any counter weights.  It can be lifted using a separate motor controlled by a PWM unit included on the dSIB.
+The SUJs are passive arms with electric brakes.  They are used to position the patient side arms remote centers of motion (RCM) on the patient.  Once the system is setup for a surgery, the SUJs are not supposed to be moved until the end of the surgery.  Depending on the daVinci, there are between 3 and 4 SUJs mounted on the patient cart.  All systems have an ECM SUJ mounted on the front of the support column.  They also have 2 SUJs, one for the PSM1 (mounted on the right) and one for the PSM2 (mounted on the left).  For systems with a third PSM, the PSM3 is mounted on the front of the center column, under the ECM SUJ.
 
+## Original hardware
+
+The Setup Joints use potentiometers to read the joint positions.   Each joint has two potentiometers and each arm has up to 6 joints.  So we have a total of 48 potentiometers, each provides a voltage that needs to be converted to an angle (revolute joints) or distance (prismatic joints).
+
+The brakes are controlled per arm, not per joint.  Finally, some patient carts come with a third PSM (aka PSM3).  The PSM3 SUJ is mounted under the ECM SUJ and doesn't have any counter weights.  It can be lifted using a separate motor. 
+
+## dVRK usage
+
+### dVRK SUJ controller
+
+**This controller is in final phase of testing and close to production (as of December 2019)**
+
+The controller support all the features available on the daVinci patient cart, i.e.:
+* Read joint positions. The dVRK QLA has 4 analog to digital inputs so it reads the potentiometer values sequentially using a multiplexer.
+* Release brakes.  The dVRK controller uses the linear amps of the QLA dedicated to motor control to release the brakes. 
+* Lift PSM3.  The dVRK FPGA generates a PWM signal sent to the PWM power unit included on the dSIB.
+
+### dVRK software
+
+The dVRK software stack provides all the functions and parameters needed to compute the forward kinematic of the SUJ arms based on the joint values.  Furthermore, it maintains the will maintain the transformation tree between all the kinematics chain so that the PSM1 tip will be defined wrt the ECM tip (including active ECM motion).
+
+Physical buttons are also used by the software to release the SUJ brakes and the SUJ PSM3 lift.  The following "buttons" are supported:
+* Physical button on SUJ arms (black handle).   The only SUJ arms with this button are the SUJ PSM1 and SUJ PSM2.
+* Physical button on the actual arm (i.e. ECM or PSM).  On the ECM, black handle on top of parallel link.  On the PSMs, white button on the side of the parallel link.  **Note:** the software can only handle these buttons if the actual arm controller (i.e. ECM, PSM1, PSM2 and/or PSM3) is used by the dVRK software.
+* Software "clutch" button for all SUJ.  The button is found in the Qt Widget for the SUJ arm.  You have to press continuously on the button to release the brake.  This logic prevents users from accidentally keep the brakes released. 
+* Physical lift toggle button on PSM3.  This button is usually attached on the parallel link of the PSM3 using a strap.
+* Software "lift" buttons for SUJ PSM3.
+
+### dVRK simulation mode
+
+All dVRK arm can be used in simulation mode, this includes the SUJs.  There are two main applications for this simulation with the SUJs:
+* Simulate the whole patient cart.  At that point all PSMs and the ECM are also simulated.
+* Simulate only the SUJs.  This can be used if you don't have access to the dVRK SUJ controller.  With the simulation mode, you have to find and manually enter the SUJs joint values.  Once this is done, the software can compute the forward kinematic and provide all the base frames you need for the PSM and ECM teleoperation.
 To use the SUJ with the dVRK controller and software, the main challenge is to calibrate the potentiometers.  To do so, we use some custom labels that can be attached to each joint of the SUJs.
 
 # Setup joints
@@ -58,9 +91,10 @@ You can download a document to print on letter paper: [dVRK labels for SUJ](/jhu
 ## Label Placement
 
 ### Important Notes
+
 Every joint moves in the positive direction when turned counter clockwise and in the negative direction when turned clockwise. This is why the labels for joint 4 on the three PSMs are the only labels with negative values on the left and negative values on the right.
 
-The label for joint 3 of the ECM is made so that 180 is the value that is aligned with the divot in the joint because the 0 position for the ECM is where the ECM is doubled back, facing the main column.
+The label for joint 3 of the ECM is made so that 180 is the value that is aligned with the divot in the joint because the 0 position for the ECM is where the ECM is facing the support column.
 
 Make sure to put the labels on the link before the joint.
 
