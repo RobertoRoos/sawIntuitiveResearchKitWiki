@@ -81,7 +81,7 @@ Physical buttons are also used by the software to release the SUJ brakes and the
 
 All dVRK arm can be used in simulation mode, this includes the SUJs.  There are two main applications for the simulation mode with the SUJs:
 * Simulate the whole patient cart.  At that point all PSMs and the ECM are also simulated.
-* Simulate only the SUJs.  This can be used if you don't have access to the dVRK SUJ controller.  With the simulation mode, you have to find the SUJs joint values (e.g. using labels) and then set the joint values using ROS.  Once this is done, the software can compute the SUJs forward kinematic and provide all the base frames you need for the PSM and ECM teleoperation.
+* Simulate only the SUJs.  This can be used if you don't have access to the dVRK SUJ controller.  With the simulation mode, you have to find the SUJs joint values (e.g. using labels) and then set the joint values using ROS.  Once this is done, the software can compute the SUJs forward kinematic and provide all the base frames you need for the PSM and ECM teleoperation.  See details in the [Simulation](#simulation) section.
 
 # Labels
 
@@ -103,9 +103,9 @@ Joints diameters:
 
 You can download a document to print on letter paper: [dVRK labels for SUJ](/jhu-dvrk/sawIntuitiveResearchKit/wiki/suj-labels.svg).  The `.svg` file can be opened, modified and printed using `inkscape` on Linux.  You can also find a [pdf version](/jhu-dvrk/sawIntuitiveResearchKit/wiki/suj-labels.pdf) if you don't have `inkscape`.  Please, if you update the `.svg` file, make sure you also update the `.pdf`.
 
-## Label Placement
+## Label placement
 
-### Important Notes
+### Important notes
 
 Every joint moves in the positive direction when turned counter clockwise and in the negative direction when turned clockwise. This is why the labels for joint 4 on the three PSMs are the only labels with negative values on the left and negative values on the right.
 
@@ -253,6 +253,24 @@ When the calibration is complete, place all the RCMs together and check that the
 <img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/translation-ECM-top.jpg" width="350">
 
 # Simulation
+
+To configure the SUJs in simulation mode, you will need to add the following in your console configuration file:
+```json
+    "arms":
+    [
+        {
+            "name": "SUJ",
+            "type": "SUJ",
+            "simulation": "KINEMATIC",
+            "kinematic": "arm/suj-simulated.json",
+            "base-frame": {
+                "component": "ECM",
+                "interface": "Robot"
+            }
+        }
+```
+
+For the rest of your console configuration and more specifically settings for the `base-frame`, see the `console-SUJ-*.json` files in [`share/jhu-daVinci`](/jhu-dvrk/sawIntuitiveResearchKit/tree/master/share/jhu-daVinci) directory.
 
 In simulation mode, when you start the dVRK software, all the SUJs joint values are set to zero.  You have to send the proper joint values using ROS topics.  Note that all values should be using SI units (meters for the first joint and radians for all remaining joitns) and all arms expect 6 values (the ECM only need 4 so set the 5th and 6th values to `0.0`).  The ROS topics to use are:
 * `/dvrk/SUJ/ECM/set_position_joint`
