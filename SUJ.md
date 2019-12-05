@@ -218,12 +218,12 @@ When the calibration is complete, place all the RCMs together and check that the
 <img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/translation-laser-bottom.jpg" width="350">
 <img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/translation-laser-top.jpg" width="350">
 
-## PSM3
+#### PSM3
 
 <img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/validation-RCM-ECM.jpg" width="350">
 <img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/validation-RCM-RCM.jpg" width="350">
 
-## ECM
+#### ECM
 
 <img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/translation-ECM-bottom.jpg" width="350">
 <img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/translation-ECM-top.jpg" width="350">
