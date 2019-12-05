@@ -29,11 +29,11 @@ This page describes how to use the Setup Joints (SUJs) with the dVRK.  This is u
 
 ## Purpose
 
-The SUJs are passive arms with electric brakes.  They are used to position the patient side arms remote centers of motion (RCM) on the patient.  Once the system is setup for a surgery, the SUJs are not supposed to be moved until the end of the surgery.  Depending on the daVinci, there are between 3 and 4 SUJs mounted on the patient cart.  All systems have an ECM SUJ mounted on the front of the support column.  They also have 2 SUJs, one for the PSM1 (mounted on the right) and one for the PSM2 (mounted on the left).  For systems with a third PSM, the PSM3 is mounted on the front of the center column, under the ECM SUJ.
+The SUJs (Set Up Joints) are passive arms with electric brakes.  They are used to position the patient side arms remote centers of motion (RCM) on the patient.  Once the system is setup for a surgery, the SUJs are not supposed to be moved until the end of the surgery.  Depending on the daVinci, there are between 3 and 4 SUJs mounted on the patient cart.  All systems have an ECM SUJ mounted on the front of the support column.  All systems also have 2 PSM SUJs, one for the PSM1 (mounted on the right) and one for the PSM2 (mounted on the left).  For systems with a third PSM, the PSM3 SUJ is mounted on the front of the center column, under the ECM SUJ.
 
 ## Original hardware
 
-The Setup Joints use potentiometers to read the joint positions.   Each joint has two potentiometers and each arm has up to 6 joints.  So we have a total of 48 potentiometers, each provides a voltage that needs to be converted to an angle (revolute joints) or distance (prismatic joints).
+The setup joints use potentiometers to read the joint positions.   Each joint has two potentiometers and each arm has up to 6 joints.  So we have a total of 48 potentiometers, each provides a voltage that needs to be converted to an angle (revolute joints) or distance (prismatic joints).
 
 The brakes are controlled per arm, not per joint.  Finally, some patient carts come with a third PSM (aka PSM3).  The PSM3 SUJ is mounted under the ECM SUJ and doesn't have any counter weights.  It can be lifted using a separate motor. 
 
@@ -43,38 +43,37 @@ The brakes are controlled per arm, not per joint.  Finally, some patient carts c
 
 **This controller is in final phase of testing and close to production (as of December 2019)**
 
-The controller support all the features available on the daVinci patient cart, i.e.:
+The dVRK SUJ controller supports all the features available on the daVinci patient cart, i.e.:
 * Read joint positions. The dVRK QLA has 4 analog to digital inputs so it reads the potentiometer values sequentially using a multiplexer.
 * Release brakes.  The dVRK controller uses the linear amps of the QLA dedicated to motor control to release the brakes. 
 * Lift PSM3.  The dVRK FPGA generates a PWM signal sent to the PWM power unit included on the dSIB.
 
 ### dVRK software
 
-The dVRK software stack provides all the functions and parameters needed to compute the forward kinematic of the SUJ arms based on the joint values.  Furthermore, it maintains the will maintain the transformation tree between all the kinematics chain so that the PSM1 tip will be defined wrt the ECM tip (including active ECM motion).
+The dVRK software stack provides all the functions and parameters needed to compute the forward kinematic of the SUJ arms based on the joint values.  Furthermore, it maintains the transformation tree between all the kinematic chains so that the PSM tip will be defined wrt the ECM tip (including active ECM motion).
 
 Physical buttons are also used by the software to release the SUJ brakes and the SUJ PSM3 lift.  The following "buttons" are supported:
 * Physical button on SUJ arms (black handle).   The only SUJ arms with this button are the SUJ PSM1 and SUJ PSM2.
-* Physical button on the actual arm (i.e. ECM or PSM).  On the ECM, black handle on top of parallel link.  On the PSMs, white button on the side of the parallel link.  **Note:** the software can only handle these buttons if the actual arm controller (i.e. ECM, PSM1, PSM2 and/or PSM3) is used by the dVRK software.
-* Software "clutch" button for all SUJ.  The button is found in the Qt Widget for the SUJ arm.  You have to press continuously on the button to release the brake.  This logic prevents users from accidentally keep the brakes released. 
-* Physical lift toggle button on PSM3.  This button is usually attached on the parallel link of the PSM3 using a strap.
-* Software "lift" buttons for SUJ PSM3.
+* Physical button on the actual arm (i.e. ECM or PSM).  On the ECM, black handle on top of parallel link.  On the PSMs, white button on the side of the parallel link.  **Note:** the software can only handle these buttons if the actual arm controller (i.e. ECM, PSM1, PSM2 and/or PSM3) is used by the dVRK software since these buttons are wired along the other arm signals.
+* Software "clutch" button for all SUJ.  The "button" is found in the Qt widget for the SUJ arm.  You have to press continuously on the button to release the brake.  This logic prevents users from accidentally keeping the brakes released. 
+* Physical lift toggle button on PSM3.  This button is usually attached on the parallel link of the PSM3 using a velcro strap.
+* Software "lift" up and down buttons for SUJ PSM3.
+
+![SUJ arm Qt widget](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/gui/dvrk-gui-arm-suj.png)
 
 ### dVRK simulation mode
 
-All dVRK arm can be used in simulation mode, this includes the SUJs.  There are two main applications for this simulation with the SUJs:
+All dVRK arm can be used in simulation mode, this includes the SUJs.  There are two main applications for the simulation mode with the SUJs:
 * Simulate the whole patient cart.  At that point all PSMs and the ECM are also simulated.
-* Simulate only the SUJs.  This can be used if you don't have access to the dVRK SUJ controller.  With the simulation mode, you have to find and manually enter the SUJs joint values.  Once this is done, the software can compute the forward kinematic and provide all the base frames you need for the PSM and ECM teleoperation.
-To use the SUJ with the dVRK controller and software, the main challenge is to calibrate the potentiometers.  To do so, we use some custom labels that can be attached to each joint of the SUJs.
-
-# Setup joints
-
-![SUJ arm widget](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/gui/dvrk-gui-arm-suj.png)
-
-**TBD**  Hardware is not yet available for setup joints.
+* Simulate only the SUJs.  This can be used if you don't have access to the dVRK SUJ controller.  With the simulation mode, you have to find and manually enter the SUJs joint values.  Once this is done, the software can compute the SUJs forward kinematic and provide all the base frames you need for the PSM and ECM teleoperation.
 
 # Labels
 
-## Physical dimension
+To use the SUJs with the dVRK controller and/or the dVRK software, the main challenge is to determine the current position of each joint.  This has to be done if you have the dVRK controllers (for calibration) or if you plan to use the SUJs in simulation mode.  To help with this task, we provide some custom labels that can be attached to each joint of the SUJs.
+
+## Physical dimensions
+
+These dimensions are used to determine the scales on the labels.
 
 Joints diameters:
 * 0: Translation, where's the origin?
@@ -94,7 +93,7 @@ You can download a document to print on letter paper: [dVRK labels for SUJ](/jhu
 
 Every joint moves in the positive direction when turned counter clockwise and in the negative direction when turned clockwise. This is why the labels for joint 4 on the three PSMs are the only labels with negative values on the left and negative values on the right.
 
-The label for joint 3 of the ECM is made so that 180 is the value that is aligned with the divot in the joint because the 0 position for the ECM is where the ECM is facing the support column.
+The label for joint 3 of the ECM is made so that **180 is the value that is aligned with the divot** in the joint because the 0 position for the ECM is where the ECM is facing the support column.
 
 Make sure to put the labels on the link before the joint.
 
@@ -109,20 +108,7 @@ The numbering of the joints are best understood if the arm is fully extended. Jo
 | [ECM Labels PDF](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/ECM_Labels.pdf)  | [PSM1 Labels PDF](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/PSM_1_Labels.pdf)  | [PSM2 Labels PDF](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/PSM_2_Labels.pdf)  | [PSM3 Labels PDF](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/PSM_3_Labels.pdf)  |
 | [ECM Labels SVG](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/ECM_Labels.svg)  | [PSM1 Labels SVG](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/PSM_1_Labels.svg)  | [PSM2 Labels SVG](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/PSM_2_Labels.svg)  | [PSM3 Labels SVG](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/PSM_3_Labels.svg)  |
 
-#### PSMs
-1. Open the PSM1 and PSM2 Labels files at the top of this section and print out the document on either letter size paper or glossy white/ clear polyester sheets (glossy white sheets are preferred).
-2. Check that the box at the bottom of the document measures 20 cm.
-3. Cut out the label for the joint you are marking.
-4. Align the zero degree measurement with the indented line already on the joint as shown in the images below.
-5. Either tape on the paper or stick on the sheets in that location (if you are using the glossy sheets, reinforce them by taping them down).
-
-#### ECM
-1. Open the ECM Labels file at the top of this section and print out the document on either letter size paper or gloss white/ clear polyester sheets.
-2. Check that the box at the bottom of the document measures 20 cm.
-3. Cut out the label for the joint you are marking.
-4. Align the zero degree measurement with the indented line already on joints 1 and 2 as shown in the images below.
-5. Align the 180 degree measurement with the indented line already on joint 3 as shown in the image below.
-6. Either tape on the paper or stick on the sheets in that location.
+After printing the labels, make sure your computer or printer didn't scale the document to fit the paper.   There is a printed reference on the labels that should measure 20 cm.
 
 ### PSM1 and PSM2
 
@@ -141,6 +127,8 @@ The numbering of the joints are best understood if the arm is fully extended. Jo
 <img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-PSM3-joint-5.jpg" width="350">
 
 ### ECM
+
+For the ECM, **make sure the label for the 3rd joint is positioned so 180 is on the divot**.
 
 <img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-ECM-joint-1.jpg" width="350">
 <img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-ECM-joint-2.jpg" width="350">
