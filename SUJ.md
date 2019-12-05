@@ -81,7 +81,7 @@ Physical buttons are also used by the software to release the SUJ brakes and the
 
 All dVRK arm can be used in simulation mode, this includes the SUJs.  There are two main applications for the simulation mode with the SUJs:
 * Simulate the whole patient cart.  At that point all PSMs and the ECM are also simulated.
-* Simulate only the SUJs.  This can be used if you don't have access to the dVRK SUJ controller.  With the simulation mode, you have to find and manually enter the SUJs joint values.  Once this is done, the software can compute the SUJs forward kinematic and provide all the base frames you need for the PSM and ECM teleoperation.
+* Simulate only the SUJs.  This can be used if you don't have access to the dVRK SUJ controller.  With the simulation mode, you have to find the SUJs joint values (e.g. using labels) and then set the joint values using ROS.  Once this is done, the software can compute the SUJs forward kinematic and provide all the base frames you need for the PSM and ECM teleoperation.
 
 # Labels
 
