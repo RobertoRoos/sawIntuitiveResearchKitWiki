@@ -234,3 +234,24 @@ When the calibration is complete, place all the RCMs together and check that the
 <img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/translation-ECM-bottom.jpg" width="350">
 <img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/translation-ECM-top.jpg" width="350">
 
+# Simulation
+
+In simulation mode, when you start the dVRK software, all the SUJs joint values are set to zero.  You have to send the proper joint values using ROS topics.  Note that all values should be using SI units (meters for the first joint and radians for all remaining joitns) and all arms expect 6 values (the ECM only need 4 so set the 5th and 6th values to `0.0`).  The ROS topics to use are:
+* `/dvrk/SUJ/ECM/set_position_joint`
+* `/dvrk/SUJ/PSM1/set_position_joint`
+* `/dvrk/SUJ/PSM2/set_position_joint`
+* `/dvrk/SUJ/PSM3/set_position_joint`
+
+You can send your joint values from the command line using the `rostopic pub` command.  For example:
+```sh
+rostopic pub /dvrk/SUJ/PSM2/set_position_joint sensor_msgs/JointState "header:
+  seq: 0
+  stamp: {secs: 0, nsecs: 0}
+  frame_id: ''
+name: ['']
+position: [0.0735, 0.249, 1.438, 0.283, 0.379, 0.606]
+velocity: [0]
+effort: [0]" 
+```
+
+When using the ROS command line, make sure you take advantage of auto-completion (press "tab" key repeatedly).  This will automatically fill the message type as well as an empty message.   Then you can just copy/paste your `position` vector.
