@@ -166,6 +166,29 @@ For all the rotational joints, we found that the labels provide a reasonable est
 
 <img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/translation-laser-top.jpg" width="350">
 
+The main steps to perform the calibration for one SUJ are:
+1. Position the joints one by one (it's easier if you're in a small space)
+1. Release the brakes (you might need a helper to press the GUI "Clutch" button in the arm SUJ tab)
+1. Position the arm to one extreme of the joint space, at a position with a reading on the labels you attached to the joint
+1. Re-engage the brakes
+1. Wait a few seconds for the position to be measured by the dVRK controller (we rely on potentiometers and a multiplexer so it takes time to cycle through all 24 potentiometers)
+1. Enter the joint position you read on the label in the GUI "Joint Start" (click on the "Show more" button to see the calibration widget).  By default the position is set to `-inf`.  When you enter the actual joint position, the application records the current potentiometer value
+1. On the same joint, go to the other extreme position and enter the real joint position in "Joint Finish".  The point of using 2 positions as far as possible to each other is to minimize the error when we're computing the slope for the potentiometer to position linear function.  "Joint Start" and "Joint Finish" can be in any order, i.e. that start joint value doesn't have to be smaller than the joint finish value.
+1. Repeat for all 6 joints on your SUJ. If you're calibrating the ECM SUJ, enter bogus values for the last two joints.  Just make sure these values are all different.
+1. Once you've entered all the joint positions needed (i.e. 4x2 for ECM SUJ, 6x2 for PSM SUJs), hit the "Manual Recalibration" button.
+1. The manual recalibration is a simple line fit for each pair of positions.  The result will be printed in your terminal, you **have to manually copy/paste** the new values to your SUJ configuration file (e.g. `suj-ECM-1-2-3.json`).   The output should look like:
+   ```
+   SUJ scales and offsets for arm: Timestamp (auto): 0.14189 (valid) Value: PSM3
+   Please update your suj.json file using these values
+   "primary-offsets": [ 2329.7, -59930, 1.9507e+05, -2.6861e+05, -2.3586e+05, -3.0817e+05],
+   "primary-scales": [ -5461.2, 98040, -57190, 98040, 1.0558e+05, 1.3726e+05],
+   "secondary-offsets": [ -23431, 28095, -2.0391e+05, 1.8798e+05, 1.9171e+05, 2.1985e+05],
+   "secondary-scales": [ 17476, -45752, 59677, -68628, -85785, -98040],
+   ```
+   When you copy/paste these values to your configuration file, make sure you're modifying the section for the SUJ you're currently calibrating.
+1. When you're done calibrating all SUJs, quit the dVRK console application and restart it to test the calibration
+
+
 ## PSM1 and PSM2
 
 The dVRK graphical table has two rows and six columns. The first column is for joint 0, second for joint 1, third for joint 2, and so on.
