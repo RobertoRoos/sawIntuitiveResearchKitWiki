@@ -315,5 +315,7 @@ effort: [0]"
 
 When using the ROS command line, make sure you take advantage of auto-completion (press "tab" key repeatedly).  This will automatically fill the message type as well as an empty message.   Then you can just copy/paste your `position` vector.
 
-If you want to use the SUJs simulation mode to emulate the dVRK controller with a real patient's cart, you will need to use the clinical mode (i.e. original da Vinci controller) to release the brakes and optionally lift the PSM3.
+If you want to use the SUJs simulation mode to emulate the dVRK controller with a real patient's cart, you will need to use the clinical mode (i.e. original da Vinci controller) to release the brakes and optionally lift the PSM3.  If you are lucky and have access to the ISI Research API in the clinical mode, you might be able to get the actual joint values for your SUJs, write them down and then send them to the dVRK SUJ in simulated mode.
+
+**Note:** If you are using the SUJ just to find the relative orientation of the PSM coordinates systems with respect to the ECM coordinate system so you can tele-operate the ECM and PSM with the dVRK stack, translations don't matter!  That means that you don't need to pay attention to the translation stage (joint 0) on the SUJs.  This will make your life a bit easier since we don't have labels for the translation stage.
 
