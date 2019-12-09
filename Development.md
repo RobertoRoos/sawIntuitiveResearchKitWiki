@@ -81,10 +81,10 @@ Definitively:
 * Closed kinematics for ECM with unit tests
 * Closed kinematics for MTM with unit tests
 * Better handling of redundant joints in MTMs #2 and #56
-* TeleopPSM scale gripper/jaw based on joint limits
+* ~~TeleopPSM scale gripper/jaw based on joint limits~~
 * Add joint goal from Qt Arm widget
 * Fix cisst-ros to expose ROS node and pass arguments to node (e.g. namespace)
-* Update SUJ doc + example with simulated SUJ
+* ~~Update SUJ doc + example with simulated SUJ~~
 * Update Teleop doc
 
 Maybe:
