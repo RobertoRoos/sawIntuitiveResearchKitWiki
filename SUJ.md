@@ -127,7 +127,7 @@ After printing the labels, make sure your computer or printer didn't scale the d
 ### PSM1 and PSM2
 
 <a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-PSM1-joint-1.jpg"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-PSM1-joint-1.jpg" width="350"></a>
-<a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-PSM1-joint-2.jpg"<img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-PSM1-joint-2.jpg" width="350"></a>
+<a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-PSM1-joint-2.jpg"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-PSM1-joint-2.jpg" width="350"></a>
 <a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-PSM1-joint-3.jpg"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-PSM1-joint-3.jpg" width="350"></a>
 <a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-PSM1-joint-4.jpg"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-PSM1-joint-4.jpg" width="350"></a>
 <a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-PSM1-joint-5.jpg"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/SUJ-PSM1-joint-5.jpg" width="350"></a>
