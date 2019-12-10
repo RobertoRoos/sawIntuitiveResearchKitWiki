@@ -101,7 +101,9 @@ Joints diameters:
 
 ## Labels
 
-You can download a document to print on letter paper: [dVRK labels for SUJ](/jhu-dvrk/sawIntuitiveResearchKit/wiki/suj-labels.svg).  The `.svg` file can be opened, modified and printed using `inkscape` on Linux.  You can also find a [pdf version](/jhu-dvrk/sawIntuitiveResearchKit/wiki/suj-labels.pdf) if you don't have `inkscape`.  Please, if you update the `.svg` file, make sure you also update the `.pdf`.
+You can download a document to print on letter paper: [dVRK labels for SUJ](/jhu-dvrk/sawIntuitiveResearchKit/wiki/suj-labels.svg).  The `.svg` file can be opened, modified and printed using `inkscape` on Linux.  You can also find a [pdf version](/jhu-dvrk/sawIntuitiveResearchKit/wiki/suj-labels.pdf) if you don't have `inkscape`.  Please, if you update the `.svg` file, make sure you also update the `.pdf` and send the updated version to JHU.
+
+We used clear polyester labels (Hemmi Papilio Supplies, Gloss White/Clear Polyester, 3 mil with permanent adhesive, SKU: HPGC/HPGW) but you can also use plain white paper with double sided tape on the back.
 
 ## Label placement
 
