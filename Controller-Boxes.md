@@ -19,9 +19,7 @@ Internally, each controller box contains two FPGA/QLA board sets, one dMIB (da V
 
 ### Custom Boards (PCBs)
 * The FPGA and QLA designs are open source and available via this [GitHub page](http://jhu-cisst.github.io/mechatronics/).
-* The dMIB is provided by Intuitive Surgical. Schematics/BOM are available here:
-  * Schematics: [Rev B](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/dmib/DMIB_RevB.pdf), [Rev D](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/dmib/DMIB_RevD.pdf), [Rev E](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/dmib/DMIB_RevE.pdf), Rev F
-  * Bill of Materials (BOM): Rev B, Rev D, Rev E, Rev F
+* The dMIB is provided by Intuitive Surgical. The designs, including schematics and BOM, are available via this [GitHub page](https://github.com/jhu-dvrk/dvrk-pcb-dMIB).
 
 ### Power Supplies
 * All boxes contain a 12V (50W) logic power supply that provides power to the FPGA boards and the safety chain.
