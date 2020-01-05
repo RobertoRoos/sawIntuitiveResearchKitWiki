@@ -78,7 +78,7 @@ Definitively:
 * ~~Automatic tool type discovery, dynamically change tool type~~
 * ~~Temperature checks with warning and errors~~
 * ~~Check IO/PID periodicity and stops if overloaded~~
-* Closed kinematics for ECM with unit tests
+* ~~Closed kinematics for ECM with unit tests~~
 * Closed kinematics for MTM with unit tests
 * Better handling of redundant joints in MTMs #2 and #56
 * ~~TeleopPSM scale gripper/jaw based on joint limits~~
