@@ -62,8 +62,8 @@ A ROS interface is available via [mtsROSBridge](https://github.com/jhu-cisst/cis
 
 ## Firmware
 
-Firmware version 4.0, 5.0 or 6.0 is now required (dVRK 1.6), please upgrade your firmware to Rev6.  Version 6.0 adds support for FPGA based velocity estimation.
-https://github.com/jhu-cisst/mechatronics-firmware/wiki/FPGA-Program 
+Firmware version 4.0, 5.0 or 6.0 is now required (dVRK 1.6), please upgrade your firmware to Rev6.  Version 6.0 adds support for FPGA based velocity estimation. See
+https://github.com/jhu-cisst/mechatronics-firmware/wiki/FPGA-Program for step-by-step instructions to upgrade your firmware.
 
 ## Software
 
