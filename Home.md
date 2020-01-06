@@ -16,7 +16,7 @@
 
 # Introduction
 
-The da Vinci Research Kit (**dVRK**) is an “open-source mechatronics” system, consisting of electronics, firmware, and software that is being used to control research systems based on the first-generation da Vinci system.
+The da Vinci Research Kit (**dVRK**) is an “open-source mechatronics” system, consisting of electronics, firmware, and software that is being used to control research systems based on the now retired first-generation da Vinci system from Intuitive Surgical Inc.
 
 ![Controller with Patient Side Manipulators (PSMs)](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ControllerWithPSM.jpg)
 
@@ -41,7 +41,7 @@ For posters and videos, please include the [dVRK logo](https://github.com/jhu-dv
 * Resources:
   * Google group https://groups.google.com/d/forum/research-kit-for-davinci and research-kit-for-davinci@googlegroups.com (**for dVRK users only**; use the Google group web page to request membership, don't forget to mention your group/university so the group admin can identify you).
   * Intuitive Surgical hardware wiki http://research.intusurg.com/dvrk
-  * Intuitive Foundation http://www.intuitive-foundation.org/dvrk/
+  * Intuitive Foundation http://www.intuitive-foundation.org/dvrk/ (includes online applications to get retired da Vinci components from Intuitive Surgical)
   * *cisst* libraries http://github.com/jhu-cisst/cisst/wiki
   * Johns Hopkins University Mechatronics http://jhu-cisst.github.io/mechatronics
   * List of all JHU LCSR Software http://jhu-lcsr.github.io/software/
