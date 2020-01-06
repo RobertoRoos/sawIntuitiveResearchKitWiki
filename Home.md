@@ -16,7 +16,7 @@
 
 # Introduction
 
-The da Vinci Research Kit is an “open-source mechatronics” system, consisting of electronics, firmware, and software that is being used to control research systems based on the first-generation da Vinci system.
+The da Vinci Research Kit (**dVRK**) is an “open-source mechatronics” system, consisting of electronics, firmware, and software that is being used to control research systems based on the first-generation da Vinci system.
 
 ![Controller with Patient Side Manipulators (PSMs)](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ControllerWithPSM.jpg)
 
