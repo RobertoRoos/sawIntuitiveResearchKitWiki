@@ -19,7 +19,7 @@ The [dVRK](/jhu-dvrk/sawIntuitiveResearchKit/wiki) controllers have been built i
 | 3<br>dVRK | 2014 | Seoul National Univ. | Sungwan Kim | 15 |
 | 3<br>da Vinci | 2014 | Óbuda Univ., Budapest | Tamás Haidegger | 16 |
 | 4<br>da Vinci | 2015 | Wayne State Univ. | Abhilash Pandya | 17 |
-| 4<br>da Vinci | 2015 | Children's National Medical Center | Kevin Cleary | 18 |
+| 4<br>da Vinci | 2015 | University of Texas at Austin | Farshid Alambeigi | 18 |
 | 4<br>da Vinci | 2015 | University of Verona | Paolo Fiorini | 19 |
 | 4<br>da Vinci | 2015 | National Institutes of Health | Sheng Xu | 20 |
 | 5<br>da Vinci | 2016 | Case Western Reserve Univ. | Cenk Cavusoglu | 21 |
