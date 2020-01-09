@@ -79,13 +79,14 @@ Definitively:
 * ~~Temperature checks with warning and errors~~
 * ~~Check IO/PID periodicity and stops if overloaded~~
 * ~~Closed kinematics for ECM with unit tests~~
-* Closed kinematics for MTM with unit tests
+* ~~Closed kinematics for MTM with unit tests~~
 * Better handling of redundant joints in MTMs #2 and #56
 * ~~TeleopPSM scale gripper/jaw based on joint limits~~
 * ~~Add joint goal from Qt Arm widget~~
 * ~~Fix cisst-ros to expose ROS node and pass arguments to node (e.g. namespace)~~
 * ~~Update SUJ doc + example with simulated SUJ~~
 * Update Teleop doc
+* Fix ctrl+c hangs with ROS/cisstMultiTask/Qt
 
 Maybe:
 * #121, add cap on maximum difference between PID goals
