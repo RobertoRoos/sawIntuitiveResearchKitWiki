@@ -34,6 +34,6 @@ The [dVRK](/jhu-dvrk/sawIntuitiveResearchKit/wiki) controllers have been built i
 | 6<br>da Vinci | 2017 | Hochschule Reutlingen | Lars Schmidt | 30 |
 | 7<br>da Vinci | 2019 | University of Maryland | Axel Krieger | 31 |
 | 7<br>dVRK | 2019 | University of Alberta | Mahdi Tavakoli | 32 |
-| 7<br>daVinci | 2019 | Purdue University | Juan Wachs, Denny Yu | 33 |
-| 7<br>dVRK? | 2019 | Wake Forest | Philip Brown | 34 |
-| 7<br>daVinci S MTMs | 2019 | surgnova.com | Jindi Zhang | 35 |
+| 7<br>da Vinci | 2019 | Purdue University | Juan Wachs, Denny Yu | 33 |
+| 7<br>da Vinci | 2019 | Wake Forest | Philip Brown | 34 |
+| 7<br>da Vinci S MTMs | 2019 | surgnova.com | Jindi Zhang | 35 |
