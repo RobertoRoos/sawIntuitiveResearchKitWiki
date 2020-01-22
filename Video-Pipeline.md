@@ -29,7 +29,7 @@ The dVRK community is fairly heterogeneous, each site has different needs and ha
 
 ## ISI SD endoscope
 
-This is the most common endoscope found on Classic/Standard full da Vinci system.  The camera heads come with a motorized mechanism for focus.  To process the raw video signals, there are two CCUs (Camera Control Units), usually bolted to the video tower.  One of the CCU model used is the Panasonic GP US742 (at least in the US).   The video outputs on the back of the CCUs are all analog and the simplest option is to use the [S-Video](https://www.lifewire.com/s-video-definition-1082148) connection.  On US system, the signal is NTSC.
+This is the most common endoscope found on Classic/Standard full da Vinci system.  The camera heads come with a motorized mechanism for focus.  To process the raw video signals, there are two CCUs (Camera Control Units), usually bolted to the video tower.  One of the CCU model used is the Panasonic GP US742 (at least in the US).   The video outputs on the back of the CCUs are all analog and the simplest option is to use the [S-Video](https://www.lifewire.com/s-video-definition-1082148) connection.  On US system, the signal is NTSC.  See also [Panasonic brochure (pdf)](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/video/panasonic-gp-us742-user-manual.pdf).
 
 ### Endoscope
 
