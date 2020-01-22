@@ -7,17 +7,6 @@ The kinematic simulation mode uses the same software components and configuratio
 ## Build 
 Please follow the [catkin build](/jhu-dvrk/sawIntuitiveResearchKit/wiki/CatkinBuild) page to download and build the software stack. 
 
-```sh
-# Simplified version 
-# NOTE: 
-#   1) use your own ROS workspace path
-#   2) select the appropriate releases if necessary
-cd /path/to/your/ros/workspace && cd src
-git clone https://github.com/jhu-dvrk/dvrk-ros
-git clone https://github.com/jhu-cisst/cisst-saw --recursive
-catkin build
-```
-
 ## Run the simulation 
 
 Please see [dvrk_robot](/jhu-dvrk/dvrk-ros/tree/master/dvrk_robot) page for more details. 
@@ -38,14 +27,6 @@ config:=/path/to/ros/workspace/src/cisst-saw/sawIntuitiveResearchKit/share/conso
 # ECM
 roslaunch dvrk_robot dvrk_arm_rviz.launch arm:=ECM \
 config:=/path/to/ros/workspace/src/cisst-saw/sawIntuitiveResearchKit/share/console-ECM_KIN_SIMULATED.json
-
-# -------------------------------
-# 1 real arm and 1 simulated arm
-# -------------------------------
-roslaunch dvrk_robot dvrk_master_slave_rviz.launch master:=MTML slave:=PSM1 \
-config:=/path/to/ros/workspace/src/cisst-saw/sawIntuitiveResearchKit/share/jhu-dVRK/console-MTMR-PSM1_KIN_SIMULATED-Teleop.json
-
-./jhu-dVRK/console-MTMR-PSM1_KIN_SIMULATED-Teleop.json
 ```
 
 ## Launch File & Configuration File
