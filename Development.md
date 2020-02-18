@@ -87,7 +87,8 @@ Definitively:
 * ~~Fix cisst-ros to expose ROS node and pass arguments to node (e.g. namespace)~~
 * ~~Update SUJ doc + example with simulated SUJ~~
 * Update Teleop doc
-* Fix ctrl+c hangs with ROS/cisstMultiTask/Qt
+* ~~Fix ctrl+c hangs with ROS/cisstMultiTask/Qt~~
+* Add default SUJ values in suj.json for simulated mode
 
 Maybe:
 * #121, add cap on maximum difference between PID goals
