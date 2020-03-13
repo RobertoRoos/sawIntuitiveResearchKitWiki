@@ -1,14 +1,18 @@
 <!--ts-->
    * [Introduction](#introduction)
    * [Sources](#sources)
-      * [ISI SD endoscope](#isi-sd-endoscope)
-         * [Endoscope](#endoscope)
+      * [ISI SD Panasonic](#isi-sd-panasonic)
+         * [Cameras](#cameras)
          * [CCU front](#ccu-front)
          * [CCU back](#ccu-back)
-      * [ISI HD endoscope](#isi-hd-endoscope)
-         * [Endoscope](#endoscope-1)
+      * [ISI HD Ikegami](#isi-hd-ikegami)
+         * [Cameras](#cameras-1)
          * [CCU front](#ccu-front-1)
          * [CCU back](#ccu-back-1)
+      * [ISI HD Panasonic](#isi-hd-panasonic)
+         * [Cameras](#cameras-2)
+         * [CCU front](#ccu-front-2)
+         * [CCU back](#ccu-back-2)
       * [Custom cameras](#custom-cameras)
    * [Displays](#displays)
       * [ISI SD HRSV](#isi-sd-hrsv)
@@ -17,7 +21,7 @@
    * [Hardware based pipeline](#hardware-based-pipeline)
    * [Software based pipeline](#software-based-pipeline)
 
-<!-- Added by: anton, at: 2019-03-14T16:12-04:00 -->
+<!-- Added by: anton, at:  -->
 
 <!--te-->
 
