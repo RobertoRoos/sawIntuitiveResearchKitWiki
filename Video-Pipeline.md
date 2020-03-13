@@ -27,11 +27,11 @@ The dVRK community is fairly heterogeneous, each site has different needs and ha
 
 # Sources
 
-## ISI SD endoscope
+## ISI SD Panasonic
 
 This is the most common endoscope found on Classic/Standard full da Vinci system.  The camera heads come with a motorized mechanism for focus.  To process the raw video signals, there are two CCUs (Camera Control Units), usually bolted to the video tower.  One of the CCU model used is the Panasonic GP US742 (at least in the US).   The video outputs on the back of the CCUs are all analog and the simplest option is to use the [S-Video](https://www.lifewire.com/s-video-definition-1082148) connection.  On US system, the signal is NTSC.  See also [Panasonic brochure (pdf)](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/video/panasonic-gp-us742-user-manual.pdf).
 
-### Endoscope
+### Cameras
 
 ![SD endoscope with Panasonic Cameras](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/video/video-panasonic-sd-endoscope.jpg)
 
@@ -44,11 +44,11 @@ CCUs are in the middle, the endoscope focus controller is on top.  A light sourc
 
 ![SD Panasonic CCUs back](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/video/video-panasonic-sd-ccu-back.jpg)
 
-## ISI HD endoscope
+## ISI HD Ikegami
 
 Intuitive started to release an HD endoscope along the da Vinci S (see [FAQ](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FAQ) for different generations of systems).  The endoscope and mount is actually the same as the Standard SD endoscope but the camera heads are different.  They still use a motorized mechanism for focus but the sensor now support full HD (1080x1920).  To process the raw signal from the camera, there are also two CCUs.  Intuitive used different CCUs over time.  Some systems come with the Ikegami CCUs.  The video output is SDI.
 
-### Endoscope
+### Cameras
 
 ![HD endoscope with Ikegami Cameras](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/video/video-ikegami-hd-endoscope.jpg)
 
@@ -59,6 +59,22 @@ Intuitive started to release an HD endoscope along the da Vinci S (see [FAQ](/jh
 ### CCU back
 
 ![HD Ikegami CCUs back](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/video/video-ikegami-hd-ccu-back.jpg)
+
+## ISI HD Panasonic
+
+See Ikegami HD section, most of the system is similar except the cameras.  Some systems come with the Panasonic Cameras.  The video output is SDI.
+
+### Cameras
+
+![HD endoscope with Panasonic Cameras](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/video/video-panasonic-hd-endoscope.jpg)
+
+### CCU front
+
+![HD Panasonic CCUs front](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/video/video-panasonic-hd-ccu-front.jpg)
+
+### CCU back
+
+![HD Panasonic CCUs back](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/video/video-panasonic-hd-ccu-back.jpg)
 
 ## Custom cameras
 
