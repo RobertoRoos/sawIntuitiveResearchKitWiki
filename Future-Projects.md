@@ -37,6 +37,7 @@ For all projects that impact the dVRK software stack (i.e. sawIntuitiveResearchK
 ## MTMs grippers
 The current calibration process uses the fully open angle and lightly closed angles.  We could also use the fully closed angle and maybe use a non linear mapping between the master grippers and tool's jaws.<br>
 Use both Hall Effect sensors, we need to use one of the digital outs to toggle the mux.  See [#23](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/issues/23)<br>
+After 1.7, mapping is a bit different.  The teleop code now gets the max angle for the PSM jaws and MTM grippers.  It then find the scale from 0 to max between PSM and MTM.   This allows to open fully and close as needed.  Negative angles (applying more torque) use the positive scale.  There is still room for improvement here.<br>
 **[Improvement, core C++]**
 
 ## Encoder/potentiometer redundancy
@@ -64,6 +65,7 @@ Some work has been done at WPI and there's a student working over summer '16 at 
 ## Better use of MTM redundancies
 Positioning the wrist in effort mode, see [#2](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/issues/2)<br>
 Taking advantage of the symmetry of the master gripper and maximize the joint space overlap with PSM, see [#56](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/issues/56).<br>
+After 1.7, code was introduced to optimize the 4th joint of MTM (platform) when in free moving mode.  This is still work in progress for IK.<br>
 **[New feature, core C++]**
 
 ## Better PSM teleoperation
@@ -106,7 +108,7 @@ For dVRK users, tools to:
 ~~Add support in console to use foot pedals CAM+/- to control the focus.  See [#55](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/issues/55) and [#50](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/issues/50)~~.  This has been implemented in 1.6.<br>
 See impact of focus change on camera calibration<br>
 Maybe track and approximate camera focus to provide a better camera calibration estimate<br>
-Autofocus?
+In March 2020, we discovered that the focus unit has a motor with encoder and two joint limits.  We could bypass the whole ISI focus controller and use the dVRK controller instead.  One would need to develop an adapter board and all the code to control this "joint" using the existing `sawRobotIO` and `sawControllers/mtsPID` components.
 
 ## Motorized 3D camera
 For dVRK users (i.e. users who don't have a full da Vinci), alternative arm with stereo head.<br>
