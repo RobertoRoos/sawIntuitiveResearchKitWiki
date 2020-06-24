@@ -41,9 +41,9 @@ This is a high level description of the different generations of da Vinci system
 
 | Model | Year | Surgeon's console | PSM/ECM/USM | Setup Joints | Endoscope |
 |-------|------|-------------------|----------|--------------|-----------|
-| Classic | 2000 | Rev 1 | Rev 1 (PSM/ECM)| Rev 1 | Rev 1 |
-| S       | 2006 | Rev 1 | Rev 2 (PSM/ECM)| Rev 2 | Rev 1 + HD |
-| Si      | 2009 | Rev 2 | Rev 2 (PSM/ECM)| Rev 2 | Rev 2 |
+| Classic | 2000 | Rev 1 | Rev 1 (PSM/ECM)| Rev 1 | Rev 1 with SD |
+| S       | 2006 | Rev 1 | Rev 2 (PSM/ECM)| Rev 2 | Rev 1 with SD or HD |
+| Si      | 2009 | Rev 2 | Rev 2 (PSM/ECM)| Rev 2 | Rev 2 HD|
 | X       | 2017 | Rev 2 | Rev 3 (USM)| Rev 2 | Rev 3 |
 | Xi      | 2014 | Rev 2 | Rev 3 (USM)| Rev 3 | Rev 3 |
 
