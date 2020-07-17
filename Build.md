@@ -17,7 +17,7 @@
 
 # 1. Building the software
 
-**We strongly recommend to NOT use these instructions**, unless you are really allergic to ROS.   The ROS build with catkin tools is much simpler and requires less manual steps.
+**We strongly recommend to NOT use these instructions**, unless you are really allergic to ROS.   The ROS build with catkin tools is much simpler and requires less manual steps.  See [Catkin build instructions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/CatkinBuild).
 
 These instructions are specific to Ubuntu Linux.  The low level software is Linux specific (i.e. it won't run on other OSs) but should run on any Linux distribution.  High level components (all but `sawRobotIO1394`) can be compiled on Linux, Windows, MacOS and used in separate processes using cisstMultiTask with ICE.
 
