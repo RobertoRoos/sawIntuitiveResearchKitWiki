@@ -247,10 +247,15 @@ The file `console-PSM2.json` is specific to each system since it points to your 
 
 Once `dvrk_console_json` is started, make sure you can home the arm.  If you have multiple controllers connected to the same safety chain/e-stop, you can use the utility `qlacloserelays` to close all safety relays.
 
-In a separate shell, start the calibration script using the command line:
+In a separate shell, start the calibration script using the command line (dVRK 1.x):
 ```sh
 # In directory ~/catkin_ws/src/cisst-saw/sawIntuitiveResearchKit/share/<my-config-dir>
 rosrun dvrk_robot dvrk_calibrate_potentiometers.py scales PSM2 sawRobotIO1394-PSM2-00000.xml
+```
+For dVRK 2.x:
+```sh
+# In directory ~/catkin_ws/src/cisst-saw/sawIntuitiveResearchKit/share/<my-config-dir>
+rosrun dvrk_robot dvrk_calibrate_potentiometers.py -t scales -a PSM2 -c sawRobotIO1394-PSM2-00000.xml
 ```
 Make sure you use the same `sawRobotIO1394-XXX-00000.xml` for the calibration script and the console application!  The file name can be found in the console-PSM2.json file you're using.
 
