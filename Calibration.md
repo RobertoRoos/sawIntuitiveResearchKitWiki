@@ -300,9 +300,9 @@ There is usually no point to save the results of the second pass.
 
 ## 4.3. Calibrating offsets
 
-These instructions are for all arms but we only know how to properly hold the joints at their zero position for the last 4 joints of the **PSMs**.  If you need to calibrate offsets on different arms (MTM, ECM), you will need to figure out a way to constraint the arm to its zero position.
+These instructions are for all arms but we only know how to properly hold the joints at their zero position for the last 4 joints of the **PSMs**.  If you need to calibrate offsets on different arms (MTM, ECM), you will need to figure out a way to constraint the arm to its zero position (mechanical zero).
 
-As for the scales calibration, you first need to start the console application and home the arm.
+For the scales calibration, you first need to start the console application and power the arm.  If the arm can power with the existing potentiometer offsets, home the arm.  You can then either keep the arm powered and use the motors to position it close to it's mechanical zero.   For the ECM and PSM, when the arm is maintained in position using its motors, you can use the "clutch" button to release the PID controller and position the arm manually.  For all arms, you can also use the ROS topics to send `move` goals or use the Qt GUI (dVRK 2.0 and above).  Once the arm is close to its mechanical zero position, you can use the script below.
 
 In a separate shell, start the calibration script using the command line:
 ```sh
