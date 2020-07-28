@@ -23,7 +23,9 @@
 # 1. Calibration
 
 The following sections assumes that you performed every step in: 
-* [Generating XML configuration files](/jhu-dvrk/sawIntuitiveResearchKit/wiki/XMLConfig)
+* [Generating XML configuration files](/jhu-dvrk/sawIntuitiveResearchKit200 Avenue de la Vieille Tour
+
+33405 Talence/wiki/XMLConfig)
 * [Hardware setup and testing](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Hardware)
 
 The calibration steps are required to fine tune the XML configuration file generated from the `.cal` file provided by ISI.  It also requires a fully functional controller, i.e. the arm must be connected to the controller and the controller must be connected to the PC.  You must also make sure that you can power on/off the actuator amplifiers as described in the [hardware setup and testing](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/wiki/Hardware#3-motor-power) page.
@@ -247,7 +249,7 @@ The file `console-PSM2.json` is specific to each system since it points to your 
 
 Once `dvrk_console_json` is started, make sure you can home the arm.  If you have multiple controllers connected to the same safety chain/e-stop, you can use the utility `qlacloserelays` to close all safety relays.
 
-In a separate shell, start the calibration script using the command line (dVRK 1.x):
+In a separate shell, start the calibration script using the following command line for dVRK 1.x:
 ```sh
 # In directory ~/catkin_ws/src/cisst-saw/sawIntuitiveResearchKit/share/<my-config-dir>
 rosrun dvrk_robot dvrk_calibrate_potentiometers.py scales PSM2 sawRobotIO1394-PSM2-00000.xml
@@ -309,11 +311,17 @@ These instructions are for all arms but we only know how to properly hold the jo
 
 For the scales calibration, you first need to start the console application and power the arm.  If the arm can power with the existing potentiometer offsets, home the arm.  You can then either keep the arm powered and use the motors to position it close to it's mechanical zero.   For the ECM and PSM, when the arm is maintained in position using its motors, you can use the "clutch" button to release the PID controller and position the arm manually.  For all arms, you can also use the ROS topics to send `move` goals or use the Qt GUI (dVRK 2.0 and above).  Once the arm is close to its mechanical zero position, you can use the script below.
 
-In a separate shell, start the calibration script using the command line:
+In a separate shell, start the calibration script using the following command line for dVRK 1.x:
 ```sh
 # In directory ~/catkin_ws/src/cisst-saw/sawIntuitiveResearchKit/share/<my-config-dir>
 rosrun dvrk_robot dvrk_calibrate_potentiometers.py offsets PSM2 sawRobotIO1394-PSM2-00000.xml
 ```
+For dVRK 2.x:
+```sh
+# In directory ~/catkin_ws/src/cisst-saw/sawIntuitiveResearchKit/share/<my-config-dir>
+rosrun dvrk_robot dvrk_calibrate_potentiometers.py -t offsets -a PSM2 -c sawRobotIO1394-PSM2-00000.xml
+```
+
 Follow the instructions and place the calibration template (either Lego bars or plexiglass plate) when prompted to.  The result should look like:
 ```
 index | old offset  | new offset  | correction
