@@ -1,20 +1,24 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
-
-- [Introduction](#introduction)
-- [JHU custom built June 2016](#jhu-custom-built-june-2016)
-  - [Parts](#parts)
-  - [Manufacturing](#manufacturing)
-  - [Results](#results)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
 # Introduction
 
-The dVRK controllers use a JHU designed Quad Linear Amps board ([acronyms defined in FAQ](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FAQ)).  The linear amplifiers are all mounted against a large heat sink (square aluminum bar).  This solution provides enough heat dissipation for both the MTMs and PSMs since these arms tend to require very little power (for most tasks, less than 0.5 A per board).  For the ECM and the SUJs, passive cooling is not sufficient.  The ECM arm is not as light as the PSMs and require a fair bit more power.  The second joint itself can draw close to 0.5 A continuously.
+The dVRK controllers use a JHU designed Quad Linear Amps board ([acronyms defined in FAQ](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FAQ)).  The linear amplifiers are all mounted against a large passive heat sink (square aluminum bar).  This solution provides some heat dissipation but this is not enough for the dVRK arms.
+
+For the ECM and the SUJs, **passive cooling is definitely not enough**.  Make sure you have upgrade your controllers with an extra heat sink and fan.  The ECM arm is not as light as the PSMs and requires a fair bit more power.  The second joint itself can draw close to 0.5 A continuously.
+
+The MTMs and PSMs can run for a little while (half hour or so) without any issues but for prolonged usage, we strongly recommend to upgrade your controllers with a an extra heat sink and fan.
+
+# Power source for the fans
 
 The QLA boards have multiple 2 pins 12 V connectors that are powered when the motor power is turned on.  We can use these to power a fan for active cooling.
+
+# Mounting screws
+
+The screws used to mount the heat sink depend on the QLA serial number. To the best of our knowledge, although the older heat sink drawing indicates metric (M3) threads, we believe most were tapped for Imperial 4-40. The exception is build #3, with QLA S/N 4265-xx.
+ * QLA S/N 4265-xx: Metric M3, 8 mm long
+ * All other QLA: Imperial 4-40, 3/8" long
+
+# Recommended solution
+
+We found that a single Pentium Socket 370 heat sink and fan performs very well.  There is very little manufacturing required so users can likely upgrade their controllers by themselves.   We use the StarTech FANP1003LD: https://smile.amazon.com/dp/B000IXS6DW with success but other heatsinks for Socket 370 might work as well.  Make sure there's a "valley" wide enough in the middle to drill a hole and accommodate a screw head (see size below).  The StarTech fan also come with a plug that can be "reconfigured", i.e. using a sharp tool you can dislodge the connectors from the plug and reconfigure the plug to match the ground and +12V on the dVRK QLAs.
 
 # JHU custom built June 2016 
 
@@ -35,10 +39,6 @@ Each heat sink was first cut in half to match the length of the existing heat si
 
 To provide enough clearance for all the screws, we had to mill the heat sink fins:
 ![Milled fins](/jhu-dvrk/sawIntuitiveResearchKit/wiki/qla-heat-sink-02.jpg)
-
-The screws used to mount the heat sink depend on the QLA serial number. To the best of our knowledge, although the older heat sink drawing indicates metric (M3) threads, we believe most were tapped for Imperial 4-40. The exception is build #3, with QLA S/N 4265-xx.
- * QLA S/N 4265-xx: Metric M3, 8 mm long
- * All other QLA: Imperial 4-40, 3/8" long
 
 ![Heat sink mounted](/jhu-dvrk/sawIntuitiveResearchKit/wiki/qla-heat-sink-03.jpg)
 
