@@ -1,15 +1,13 @@
 <!--ts-->
--e    * [Introduction](#introduction)
+   * [Introduction](#introduction)
    * [Power source for the fans](#power-source-for-the-fans)
    * [Mounting screws](#mounting-screws)
    * [Recommended solution](#recommended-solution)
    * [JHU custom built June 2016](#jhu-custom-built-june-2016)
       * [Parts](#parts)
       * [Manufacturing](#manufacturing)
-      * [Results](#results)
--e 
+      * [Results](#results) 
 <!-- Added by: anton, at:  -->
-
 <!--te-->
 
 # Introduction
@@ -32,7 +30,29 @@ The screws used to mount the heat sink depend on the QLA serial number. To the b
 
 # Recommended solution
 
-We found that a single Pentium Socket 370 heat sink and fan performs very well.  There is very little manufacturing required so users can likely upgrade their controllers by themselves.   We use the StarTech FANP1003LD: https://smile.amazon.com/dp/B000IXS6DW with success but other heatsinks for Socket 370 might work as well.  Make sure there's a "valley" wide enough in the middle to drill a hole and accommodate a screw head (see size below).  The StarTech fan also come with a plug that can be "reconfigured", i.e. using a sharp tool you can dislodge the connectors from the plug and reconfigure the plug to match the ground and +12V on the dVRK QLAs.
+We found that a single Pentium Socket 370 heat sink and fan performs very well.  There is very little manufacturing required so users can likely upgrade their controllers by themselves.   We use the StarTech FANP1003LD: https://smile.amazon.com/dp/B000IXS6DW with success but other heatsinks for Socket 370 might work as well.
+
+![Socket 370 fan](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/qla-heat-sink-socket-370/qla-heat-sink-fan.jpg)
+
+If you decide or need to get a different socket 370 heat sink and fan assembly, make sure there's a "valley" wide enough in the middle to drill a hole and accommodate a screw head (see size below).  You will need to drill a single hole in the middle of the heat sink.
+
+![Heat sink with hole](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/qla-heat-sink-socket-370/qla-heat-sink-hole.jpg)
+
+Once you've drilled the heat sink and located the screw to attach it, apply a little bit of thermal paste between the new heat sink and the QLA heat sink:
+
+![Heat sink mounted](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/qla-heat-sink-socket-370/qla-heat-sink-mounted.jpg)
+
+The plug that comes with the StarTech fans **are not compatible with the dVRK QLA power plugs**!  You must reconfigure it to match the QLA wiring.  The pins in the white housing can be pulled out, you just need to gently pull while pushing on the little metal tabs on the side of the plug.  Once you've pulled all the pins, you can cut the yellow cable and place the other two pins (black and red) to match the QLA.  The QLA power plugs are labeled with "12V" and "GND".  You must reconfigure the fan's plug so the black wire goes to "GND" and the red cable goes to "12V".
+
+![Connector](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/qla-heat-sink-socket-370/qla-heat-sink-connector-a.jpg)
+
+![Connector](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/qla-heat-sink-socket-370/qla-heat-sink-connector-b.jpg)
+
+You can then screw the fan back on top of the heat sink and plug it.   There are three 12V connectors on the QLA.  Note that one of them might already be used for the whole controller case fan.
+
+![12V connectors on a QLA](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/qla-heat-sink-socket-370/qla-heat-sink-board-power.jpg)
+
+![All set](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/qla-heat-sink-socket-370/qla-heat-sink-mounted.jpg)
 
 # JHU custom built June 2016 
 
@@ -49,15 +69,18 @@ Parts to build 4 heat sinks with fans,
 ## Manufacturing
 
 Each heat sink was first cut in half to match the length of the existing heat sink.  We then drilled 3 holes, matching the spacing on the existing heat sink.  We also drilled 4 holes, diameter 2.5 mm to mount the 40 mm fan.  To mount the fan, we used 3 mm screws, 20 mm long.  The length matches the cumulative thickness of the fan and heatsink:
-![Mounting holes](/jhu-dvrk/sawIntuitiveResearchKit/wiki/qla-heat-sink-01.jpg)
+
+![Mounting holes](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/qla-heat-sink-2006/qla-heat-sink-01.jpg)
 
 To provide enough clearance for all the screws, we had to mill the heat sink fins:
-![Milled fins](/jhu-dvrk/sawIntuitiveResearchKit/wiki/qla-heat-sink-02.jpg)
 
-![Heat sink mounted](/jhu-dvrk/sawIntuitiveResearchKit/wiki/qla-heat-sink-03.jpg)
+![Milled fins](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/qla-heat-sink-2006/qla-heat-sink-02.jpg)
+
+![Heat sink mounted](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/qla-heat-sink-2006/qla-heat-sink-03.jpg)
 
 With the fan:
-![Fan mounted](/jhu-dvrk/sawIntuitiveResearchKit/wiki/qla-heat-sink-04.jpg)
+
+![Fan mounted](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/qla-heat-sink-2006/qla-heat-sink-04.jpg)
 
 ## Results
 
