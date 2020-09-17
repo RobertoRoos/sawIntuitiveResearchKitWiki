@@ -14,7 +14,7 @@
 
 The dVRK controllers use a JHU designed Quad Linear Amps board ([acronyms defined in FAQ](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FAQ)).  The linear amplifiers are all mounted against a large passive heat sink (square aluminum bar).  This solution provides some heat dissipation but this is not enough for the dVRK arms.
 
-For the ECM and the SUJs, **passive cooling is definitely not enough**.  Make sure you have upgrade your controllers with an extra heat sink and fan.  The ECM arm is not as light as the PSMs and requires a fair bit more power.  The second joint itself can draw close to 0.5 A continuously.
+For the ECM and the SUJs, **passive cooling is definitely not enough**.  Make sure you have upgraded your controllers with an extra heat sink and fan.  The ECM arm is not as light as the PSMs and requires a fair bit more power.  The second joint itself can draw close to 0.5 A continuously.
 
 The MTMs and PSMs can run for a little while (half hour or so) without any issues but for prolonged usage, we strongly recommend to upgrade your controllers with a an extra heat sink and fan.
 
@@ -30,25 +30,25 @@ The screws used to mount the heat sink depend on the QLA serial number. To the b
 
 # Recommended solution
 
-We found that a single Pentium Socket 370 heat sink and fan performs very well.  There is very little manufacturing required so users can likely upgrade their controllers by themselves.   We use the StarTech FANP1003LD: https://smile.amazon.com/dp/B000IXS6DW with success but other heatsinks for Socket 370 might work as well.
+We found that a single Pentium Socket 370 heat sink and fan performs very well.  There is very little manufacturing required so users can likely upgrade their controllers by themselves.   We uses the StarTech FANP1003LD (https://www.amazon.com/dp/B000IXS6DW) with success but other heatsinks for Socket 370 might work as well.
 
 ![Socket 370 fan](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/qla-heat-sink-socket-370/qla-heat-sink-fan.jpg)
 
-If you decide or need to get a different socket 370 heat sink and fan assembly, make sure there's a "valley" wide enough in the middle to drill a hole and accommodate a screw head (see size below).  You will need to drill a single hole in the middle of the heat sink.
+If you decide or need to get a different socket 370 heat sink and fan assembly, make sure there's a "valley" wide enough in the middle to drill a hole and accommodate a screw head.  You will need to drill a single hole in the middle of the heat sink.
 
 ![Heat sink with hole](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/qla-heat-sink-socket-370/qla-heat-sink-hole.jpg)
 
-Once you've drilled the heat sink and located the screw to attach it, apply a little bit of thermal paste between the new heat sink and the QLA heat sink:
+Once you've drilled the heat sink and located the screw to attach it, apply some thermal paste between the new heat sink and the QLA heat sink:
 
 ![Heat sink mounted](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/qla-heat-sink-socket-370/qla-heat-sink-mounted.jpg)
 
-The plug that comes with the StarTech fans **are not compatible with the dVRK QLA power plugs**!  You must reconfigure it to match the QLA wiring.  The pins in the white housing can be pulled out, you just need to gently pull while pushing on the little metal tabs on the side of the plug.  Once you've pulled all the pins, you can cut the yellow cable and place the other two pins (black and red) to match the QLA.  The QLA power plugs are labeled with "12V" and "GND".  You must reconfigure the fan's plug so the black wire goes to "GND" and the red cable goes to "12V".
+The plug that comes with the StarTech fans **are not compatible with the dVRK QLA power plugs**!  You must reconfigure it to match the QLA wiring.  The pins in the white housing can be pulled out, you need to gently pull while pushing on the little metal tabs on the side of the plug.  Once you've pulled all the pins, you can cut the yellow wire and place the other two pins (black and red) to match the QLA.  The QLA power plugs are labeled with "12V" and "GND".  You must reconfigure the fan's plug so the black wire goes to "GND" and the red wire goes to "12V".
 
 ![Connector](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/qla-heat-sink-socket-370/qla-heat-sink-connector-a.jpg)
 
 ![Connector](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/qla-heat-sink-socket-370/qla-heat-sink-connector-b.jpg)
 
-You can then screw the fan back on top of the heat sink and plug it.   There are three 12V connectors on the QLA.  Note that one of them might already be used for the whole controller case fan.
+You can then screw the fan back on top of the heat sink and plug it.   There are three 12V connectors on the QLA, all equivalent.  Note that one of them might already be used for the whole controller case fan.
 
 ![12V connectors on a QLA](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/qla-heat-sink-socket-370/qla-heat-sink-board-power.jpg)
 
