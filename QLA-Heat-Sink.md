@@ -1,3 +1,17 @@
+<!--ts-->
+-e    * [Introduction](#introduction)
+   * [Power source for the fans](#power-source-for-the-fans)
+   * [Mounting screws](#mounting-screws)
+   * [Recommended solution](#recommended-solution)
+   * [JHU custom built June 2016](#jhu-custom-built-june-2016)
+      * [Parts](#parts)
+      * [Manufacturing](#manufacturing)
+      * [Results](#results)
+-e 
+<!-- Added by: anton, at:  -->
+
+<!--te-->
+
 # Introduction
 
 The dVRK controllers use a JHU designed Quad Linear Amps board ([acronyms defined in FAQ](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FAQ)).  The linear amplifiers are all mounted against a large passive heat sink (square aluminum bar).  This solution provides some heat dissipation but this is not enough for the dVRK arms.
