@@ -42,19 +42,21 @@ Once you've drilled the heat sink and located the screw to attach it, apply some
 
 ![Heat sink mounted](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/qla-heat-sink-socket-370/qla-heat-sink-mounted.jpg)
 
-The plug that comes with the StarTech fans **are not compatible with the dVRK QLA power plugs**!  You must reconfigure it to match the QLA wiring.  The pins in the white housing can be pulled out, you need to gently pull while pushing on the little metal tabs on the side of the plug.  Once you've pulled all the pins, you can cut the yellow wire and place the other two pins (black and red) to match the QLA.  The QLA power plugs are labeled with "12V" and "GND".  You must reconfigure the fan's plug so the black wire goes to "GND" and the red wire goes to "12V".
+The plug that comes with the StarTech fans is **not compatible with the dVRK QLA power plugs**!  You must reconfigure it to match the QLA wiring.  The pins in the white housing (fan plug) can be removed, you need to gently pull on the wire while pushing on the little metal tab on the side of the plug.  Once you've pulled all the pins, you can cut the yellow wire and re-insert the other two pins (black and red) to match the QLA.  The QLA power plugs are labeled with "12V" and "GND".  You must reconfigure the fan's plug so the black wire goes to "GND" and the red wire goes to "12V".  Make sure your wiring matches the photos below, i.e. the plug is not symmetrical.
 
 ![Connector](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/qla-heat-sink-socket-370/qla-heat-sink-connector-a.jpg)
 
 ![Connector](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/qla-heat-sink-socket-370/qla-heat-sink-connector-b.jpg)
 
-You can then screw the fan back on top of the heat sink and plug it.   There are three 12V connectors on the QLA, all equivalent.  Note that one of them might already be used for the whole controller case fan.
+You can then screw the fan back on top of the heat sink and plug it.  There are three 12V connectors on the QLA, all equivalent.  Note that one of them might already be used for the whole controller case fan.  The fan's plug still has room for 3 pins while the QLA plugs only have two pins so there are two physical ways to plug the fans.   Make sure you plug it so the two wires (black and red) and aligned with the QLA plug.
 
 ![12V connectors on a QLA](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/qla-heat-sink-socket-370/qla-heat-sink-board-power.jpg)
 
 ![All set](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/qla-heat-sink-socket-370/qla-heat-sink-mounted.jpg)
 
-# JHU custom built June 2016 
+# Custom built June 2016 
+
+This section is provided for your information only, this is mostly historical.  We don't recommend this approach anymore, the socket 370 heat sink and fan are much easier to implement.
 
 ## Parts
 
