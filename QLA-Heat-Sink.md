@@ -3,7 +3,7 @@
    * [Power source for the fans](#power-source-for-the-fans)
    * [Mounting screws](#mounting-screws)
    * [Recommended solution](#recommended-solution)
-   * [JHU custom built June 2016](#jhu-custom-built-june-2016)
+   * [Custom built June 2016](#custom-built-june-2016)
       * [Parts](#parts)
       * [Manufacturing](#manufacturing)
       * [Results](#results) 
