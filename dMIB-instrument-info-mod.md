@@ -1,3 +1,6 @@
+:warning: | Do not do this if you have a recently built controller (with dMIB rev F or newer)
+:---: | :---
+
 This dMIB hardware modification connects a wire between the QLA and the add-only memory inside the instruments so the dVRK software can read the type of the installed instrument.
 
 # Prerequisites
