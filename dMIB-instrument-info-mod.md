@@ -4,7 +4,7 @@ This dMIB hardware modification connects a wire between the QLA and the add-only
 
 Reading the instrument info requires 
 
-* a dMIB rev F or newer, and 
+* a dMIB rev F or newer, or a modified dMIB rev A-E, and 
 * a QLA version 1.4 or newer, and
 * FPGA firmware 7 or newer.
 
