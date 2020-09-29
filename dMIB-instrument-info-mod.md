@@ -2,9 +2,19 @@ This dMIB hardware modification connects a wire between the QLA and the add-only
 
 # Prerequisites
 
-TBD
+Reading the instrument info requires 
 
-This modification requires dVRK controller version `??` (QLA Version 1.4+).
+* a dMIB rev F or newer, and 
+* a QLA version 1.4 or newer, and
+* FPGA firmware 7 or newer.
+
+The version is printed on the silkscreen on both boards. You can also check the version of QLA by querying the serial number.
+
+If your dVRK controller is shipped later than `??`, you do not need to modify. You should have a v1.4+ QLA and rev F+ dMIB. The instrument info is supported out of the box.
+
+Otherwise, if you have a QLA version 1.4 or newer (shipped later than `??`), your controller is compatible with the modification in the next section.
+
+We do not have a plan to support QLA earlier than version 1.4.
 
 # Modification
 
@@ -22,4 +32,8 @@ You need the PSM dVRK controllers, screwdrivers/nut drivers/hex wrenches, a piec
 
 # Testing
 
-TBD
+Use the `instrument` program to dump the memory from the instrument.
+
+```
+instrument [-pP] <board num>
+```
