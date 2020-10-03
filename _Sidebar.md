@@ -35,7 +35,9 @@ Advanced
 * [Head Sensor](/jhu-dvrk/sawIntuitiveResearchKit/wiki/HeadSensor)
 * [Foot Pedals](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FootPedals)
 * [Video Pipeline](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Video-Pipeline)
-* [Special Tools](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Special-Tools)
+* Tools
+  * [Tool Detection](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Tool-Detection)
+  * [Special Tools](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Special-Tools)
 
 Miscellaneous
 * [Frequently Asked Questions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FAQ)
