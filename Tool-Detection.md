@@ -42,11 +42,11 @@ We do not have a plan to support QLA earlier than version 1.4.
 
 For recent dMIBs, one can either the dMIB Dallas driver or the 1-wire FPGA approach.  To select which one is be used, you need to place a jumper on the dMIB.  The jumper (J42) is located between the two SCSI-68 cables on the internal face of the dMIB (i.e. you don't need to remove the dMIB from the controller to access the jumper).
 
-<a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/tool-detection/dmib-tool-jumper-empty.jpg"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/tool-detection/dmib-tool-jumper-empty.jpg" width="250"></a>
+<a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/tool-detection/dmib-tool-jumper-empty.jpg"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/tool-detection/dmib-tool-jumper-empty.jpg" width="350"></a>
 
 To configure the dMIB to use the 1-wire FPGA based approach, you need to jump the first 2 pins (see picture).
 
-<a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/tool-detection/dmib-tool-jumper-FPGA.jpg"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/tool-detection/dmib-tool-jumper-FPGA.jpg" width="250"></a>
+<a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/tool-detection/dmib-tool-jumper-12-FPGA.jpg"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/tool-detection/dmib-tool-jumper-12-FPGA.jpg" width="350"></a>
 
 To use the dMIB Dallas driver, you will need to jump the pins 2 and 3.
 
