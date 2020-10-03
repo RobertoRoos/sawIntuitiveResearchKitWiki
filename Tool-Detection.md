@@ -1,14 +1,27 @@
-:warning: | Do not do this if you have a recently built controller (with dMIB rev F or newer)
-:---: | :---
+<!--ts-->
+   * [Introduction](#introduction)
+   * [Hardware](#hardware)
+      * [Prerequisites](#prerequisites)
+      * [dMIB rev F or newer](#dmib-rev-f-or-newer)
+      * [Older dMIB modification](#older-dmib-modification)
+   * [Software](#software)
+      * [Testing](#testing)
+      * [dVRK console configuration](#dvrk-console-configuration)
 
-This dMIB hardware modification connects a wire between the QLA and the add-only memory inside the instruments so the dVRK software can read the type of the installed instrument.
+<!-- Added by: anton, at:  -->
 
-# Prerequisites
+<!--te-->
 
-Reading the instrument info requires 
+# Introduction
 
-* a dMIB rev F or newer, or a modified dMIB rev A-E, and 
-* a QLA version 1.4 or newer, and
+# Hardware
+
+## Prerequisites
+
+Reading the instrument info requires
+
+* a dMIB rev F or newer, or a modified dMIB rev A-E
+* a QLA version 1.4 or newer
 * FPGA firmware 7 or newer.
 
 The version is printed on the silkscreen on both boards. You can also check the version of QLA by querying the serial number.
@@ -19,13 +32,21 @@ Otherwise, if you have a QLA version 1.4 or newer (shipped later than `??`), you
 
 We do not have a plan to support QLA earlier than version 1.4.
 
-# Modification
+## dMIB rev F or newer
+
+## Older dMIB modification
+
+:warning: | Do not do this if you have a recently built controller (with dMIB rev F or newer)
+:---: | :---
+
+This dMIB hardware modification connects a wire between the QLA and the add-only memory inside the instruments so the dVRK software can read the type of the installed instrument.
+
 
 You need the PSM dVRK controllers, screwdrivers/nut drivers/hex wrenches, a piece of small insulated wire or magnet wire, and a soldering iron.
 
 **Step 1.** Unplug power. Unplug cables from the dMIB/QLA so you can work on the back side of the 156-pin ITT Cannon connector (that mates with the robot arm connector) or take the dMIB out. Please make sure to label the cables as you unplug them.
 
-**Step 2.** (optional) Remove dMIB from the PSM dVRK controller box. This step may be optional if you have small dexterous fingers and good soldering skills (or use the EndoWrist soldering iron). 
+**Step 2.** (optional) Remove dMIB from the PSM dVRK controller box. This step may be optional if you have small dexterous fingers and good soldering skills (or use the EndoWrist soldering iron).
 
 **Step 3.** See the figure below. Solder a jumper wire between the `R1 pin` in the 156-pin connector and the resistor `R69` pad that is closest to the SCSI connector. *Some dMIB have misaligned silkscreen for the 156-pin connector, like the rev. D in the figure.* Do not remove the resistor R69. If you did so and cannot solder the original part back in, you can jump an approximately 1 kOhm resistor between the `R69` pad you connected the jumper wires to and the `T6 pin` of the 156-pin connector.
 
@@ -33,10 +54,14 @@ You need the PSM dVRK controllers, screwdrivers/nut drivers/hex wrenches, a piec
 
 **Step 4.** Reconnect the cables between QLA and dMIB. Connect the PSM and test the functionality. Reassemble the controller box.
 
-# Testing
+# Software
+
+## Testing
 
 Use the `instrument` program to dump the memory from the instrument.
 
 ```
 instrument [-pP] <board num>
 ```
+
+## dVRK console configuration
