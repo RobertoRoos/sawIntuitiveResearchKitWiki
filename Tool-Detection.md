@@ -32,6 +32,8 @@ Reading the instrument info requires:
 
 The dMIB and QLA versions are printed on the silkscreen on both boards. You can also check the version of QLA by querying the serial number.  To locate the dMIB and QLA, see [Controller Boxes](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Controller-Boxes).
 
+Hardware batches/builds and board versions can be found for each system in the [list of dVRK sites](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Timeline).
+
 If your dVRK controller is shipped later than `??`, you do not need to modify. You should have a v1.4+ QLA and rev F+ dMIB. The instrument info is supported out of the box.
 
 Otherwise, if you have a QLA version 1.4 or newer (shipped later than `??`), your controller is compatible with the modification in the next section.
