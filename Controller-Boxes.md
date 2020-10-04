@@ -1,3 +1,15 @@
+<!--ts-->
+   * [Controller Boxes (MTM, PSM, ECM)](#controller-boxes-mtm-psm-ecm)
+      * [Exterior Connectors](#exterior-connectors)
+      * [Internal Components](#internal-components)
+         * [Custom Boards (PCBs)](#custom-boards-pcbs)
+         * [Power Supplies](#power-supplies)
+   * [Hardware modifications](#hardware-modifications)
+
+<!-- Added by: anton, at:  -->
+
+<!--te-->
+
 # Controller Boxes (MTM, PSM, ECM)
 
 Each da Vinci arm (MTM, PSM, ECM) is controlled by a single box, shown below. A similar controller box is used for the Setup Joint controller.
@@ -11,7 +23,7 @@ Each da Vinci arm (MTM, PSM, ECM) is controlled by a single box, shown below. A 
 * One DB15 footpedal connector; see [dMIB I/O page](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dMIB-IOs)
 * Seven HD15 expansion connectors and one HD26 expansion connector; see [dMIB I/O page](/jhu-dvrk/sawIntuitiveResearchKit/wiki/dMIB-IOs)
 
-## Internal Components 
+## Internal Components
 
 Internally, each controller box contains two FPGA/QLA board sets, one dMIB (da Vinci Manipulator Interface Board), LED boards, power supplies and relays.
 
