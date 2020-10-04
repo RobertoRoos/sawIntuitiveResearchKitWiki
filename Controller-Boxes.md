@@ -34,7 +34,7 @@ Internally, each controller box contains two FPGA/QLA board sets, one dMIB (da V
   * 24V Motor Power Supply (For PSM): https://www.astrodynetdi.com/ecatalog/power-supplies/PMK225S-24U
   * 36V Motor Power Supply (For ECM): https://www.astrodynetdi.com/ecatalog/power-supplies/PMK225S-36U
 
-# Hardware modification
+# Hardware modifications
 
 * dMIB:
   * [ECM switch for SUJ](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Full-da-Vinci-dMIB-pre-2015)
