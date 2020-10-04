@@ -14,35 +14,35 @@
 
 # Introduction
 
-The da Vinci instruments can be automatically identified when inserted in the sterile adapter using the `add-only` chip embedded in the tool (aka Dallas chip).  This feature was not supported in early versions of the dVRK both from a software and hardware perspective.
+The da Vinci instruments can be automatically identified when inserted in the sterile adapter using the `add-only` chip embedded in the tool (aka Dallas chip, DS2505).  This feature was not supported in early versions of the dVRK both from a software and hardware perspective.
 
 To retrieve the instrument tool type, the dVRK hardware can use two different approaches:
-* dMIB Dallas driver chip.  This chip communicates with the tool using a 1-wire interface.  The FPGA then communicates with the dMIB Dallas chip.  This requires a recent dMIB (See requirements below).
-* FPGA 1-wire interface.  In this scenario, the FPGA/QLA emulates a Dallas driver chip and communicates directly with the tool's chip.  This method can be used on slightly modified older dMIBs as well as recent dMIBs.
+* dMIB Dallas driver chip (DS2480B).  The FPGA communicates serially with the DS2480B chip on the dMIB, which then communicates with the DS2505 chip in the tool using a 1-wire interface.  This requires a recent dMIB (See requirements below).
+* FPGA 1-wire interface.  In this scenario, the FPGA/QLA communicates directly with the tool's DS2505 chip.  This method can be used on slightly modified older dMIBs as well as recent dMIBs.
 
 # Hardware
 
 ## Prerequisites
 
 Reading the instrument info requires:
-* a dMIB rev F or newer, or a modified dMIB rev A-E (see below)
-* a QLA version 1.4 or newer
+* dMIB rev F or newer, or a modified dMIB rev A-E (see below)
+* QLA version 1.4 or newer
 * FPGA firmware 7 or newer
 * dVRK software 2.0 or higher
 
 The dMIB and QLA versions are printed on the silkscreen on both boards. You can also check the version of QLA by querying the serial number.  To locate the dMIB and QLA, see [Controller Boxes](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Controller-Boxes).
 
-Hardware batches/builds and board versions can be found for each system in the [list of dVRK sites](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Timeline).
+Hardware batches/builds can be found for each system in the [list of dVRK sites](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Timeline). The board versions for each build can be found in the [FPGA](https://github.com/jhu-cisst/FPGA1394#release-notes) and [QLA](https://github.com/jhu-cisst/QLA#release-notes) release notes.
 
 If your dVRK controller is shipped later than `??`, you do not need to modify. You should have a v1.4+ QLA and rev F+ dMIB. The instrument info is supported out of the box.
 
-Otherwise, if you have a QLA version 1.4 or newer (shipped later than `??`), your controller is compatible with the modification in the next section.
+Otherwise, if you have a QLA version 1.4 or newer (Build #5 or later), your controller is compatible with the modification in the next section.
 
-We do not have a plan to support QLA earlier than version 1.4.
+Currently, there is no support for QLA earlier than version 1.4.
 
 ## dMIB rev F or newer
 
-For recent dMIBs, one can either the dMIB Dallas driver or the 1-wire FPGA approach.  To select which one is be used, you need to place a jumper on the dMIB.  The jumper (J42) is located between the two SCSI-68 cables on the internal face of the dMIB (i.e. you don't need to remove the dMIB from the controller to access the jumper).
+For recent dMIBs, one can either the dMIB Dallas driver or the 1-wire FPGA approach.  To select which one is be used, you need to place a jumper on the dMIB.  The jumper (J42) is located between the two SCSI-68 cables on the internal face of the dMIB (i.e. you do not need to remove the dMIB from the controller to access the jumper).
 
 <a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/tool-detection/dmib-tool-jumper-empty.jpg"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/tool-detection/dmib-tool-jumper-empty.jpg" width="350"></a>
 
@@ -52,7 +52,7 @@ To configure the dMIB to use the 1-wire FPGA based approach, you need to jump th
 
 To use the dMIB Dallas driver, you will need to jump the pins 2 and 3.
 
-**Note:** As of September 2020, the dMIB Dallas driver approach is not yet supported by the firmware.
+**Note:** As of September 2020, the dMIB Dallas driver option is not yet supported by the firmware.
 
 ## Older dMIB modification
 
