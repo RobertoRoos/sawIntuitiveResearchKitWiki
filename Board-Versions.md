@@ -1,5 +1,7 @@
 The board versions and description of changes for each build can be found in the [FPGA](https://github.com/jhu-cisst/FPGA1394#release-notes) and [QLA](https://github.com/jhu-cisst/QLA#release-notes) release notes.
 
+A list of sites for each build can be found in the [timeline](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Timeline).
+
 | Build | Year | FPGA | QLA | dMIB | 
 | ----- | ---- | --- | ---- | ---- |
 | 0 | 2012 | 1.0 | 1.1  | x |
