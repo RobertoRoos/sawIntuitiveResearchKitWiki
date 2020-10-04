@@ -1,4 +1,4 @@
-The board versions and description of changes for each build can be found in the [FPGA](https://github.com/jhu-cisst/FPGA1394#release-notes) and [QLA](https://github.com/jhu-cisst/QLA#release-notes) release notes.  Layout is described in the [controller](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Controllers)'s page.
+The board versions and description of changes for each build can be found in the [FPGA](https://github.com/jhu-cisst/FPGA1394#release-notes) and [QLA](https://github.com/jhu-cisst/QLA#release-notes) release notes.  Layout is described in the [controller](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Controller-Boxes)'s page.
 
 A list of sites for each build can be found in the [timeline](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Timeline).
 
