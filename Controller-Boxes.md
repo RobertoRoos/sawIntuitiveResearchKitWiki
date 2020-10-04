@@ -33,3 +33,11 @@ Internally, each controller box contains two FPGA/QLA board sets, one dMIB (da V
   * 24V Motor Power Supply (For MTM): https://www.digikey.com/product-detail/en/cui-inc/VGS-75-24/102-1943-ND/2045674
   * 24V Motor Power Supply (For PSM): https://www.astrodynetdi.com/ecatalog/power-supplies/PMK225S-24U
   * 36V Motor Power Supply (For ECM): https://www.astrodynetdi.com/ecatalog/power-supplies/PMK225S-36U
+
+# Hardware modification
+
+* dMIB:
+  * [ECM switch for SUJ](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Full-da-Vinci-dMIB-pre-2015)
+  * [PSM Dallas chip for tool detection)](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Tool-Detection)
+* QLAs:
+  * [Heat sink and fan](/jhu-dvrk/sawIntuitiveResearchKit/wiki/QLA-Heat-Sink)
