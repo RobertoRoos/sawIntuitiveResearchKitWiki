@@ -18,7 +18,7 @@ Internally, each controller box contains two FPGA/QLA board sets, one dMIB (da V
   ![Controller layout](/jhu-dvrk/sawIntuitiveResearchKit/wiki/controller-layout.jpg)
 
 ### Custom Boards (PCBs)
-* [Component versions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Board-Versions).
+* [Component versions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Board-Versions) by build/date.
 * The FPGA and QLA designs are open source and available via this [GitHub page](http://jhu-cisst.github.io/mechatronics/).
 * The dMIB is provided by Intuitive Surgical. The designs, including schematics and BOM, are available via this [GitHub page](https://github.com/jhu-dvrk/dvrk-pcb-dMIB).
 
