@@ -38,6 +38,6 @@ Internally, each controller box contains two FPGA/QLA board sets, one dMIB (da V
 
 * dMIB:
   * [ECM switch for SUJ](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Full-da-Vinci-dMIB-pre-2015)
-  * [PSM Dallas chip for tool detection)](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Tool-Detection)
+  * [PSM Dallas chip for tool detection](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Tool-Detection)
 * QLAs:
   * [Heat sink and fan](/jhu-dvrk/sawIntuitiveResearchKit/wiki/QLA-Heat-Sink)
