@@ -97,12 +97,12 @@ Maybe:
 * UDP support?
 * IK with joint limits for PSMs
 * #54, save content of `.cal` file in generated XML file (for debug, retrieval, ...)
-* Add dvrk-openigt to cisst-saw
+* ~~Add dvrk-openigt to cisst-saw~~
 * Add optional for ROS bridge topics
 * Add alert when SUJ are moved without brakes released
 * Add test function on user Id and permission on `/dev/fw*`?
 
 ## Roadmap for 2.0
 
-* CRTK compliance for C++ command/method and ROS topics
+* ~~CRTK compliance for C++ command/method and ROS topics~~
 * MoveIt! (via CRTK)
