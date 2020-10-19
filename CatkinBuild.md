@@ -26,5 +26,8 @@ These packages are not part of the cisst-saw repositories since they contain man
 cd ~/catkin_ws/src
 git clone https://github.com/jhu-dvrk/dvrk-ros
 git clone https://github.com/jhu-dvrk/dvrk-gravity-compensation
+git clone https://github.com/collaborative-robotics/crtk_msgs crtk/crtk_msgs
+git clone https://github.com/collaborative-robotics/crtk_python_client crtk/crtk_python_client
+git clone https://github.com/collaborative-robotics/crtk_matlab_client crtk/crtk_matlab_client
 catkin build
 ```
