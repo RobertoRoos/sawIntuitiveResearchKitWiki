@@ -1,4 +1,16 @@
 <!--ts-->
+   * [Introduction](#introduction)
+   * [catkin build and rosinstall](#catkin-build-and-rosinstall)
+      * [Debian packages](#debian-packages)
+      * [Catkin workspace, clone and build](#catkin-workspace-clone-and-build)
+      * [Environment variables](#environment-variables)
+   * [catkin build and git submodules](#catkin-build-and-git-submodules)
+      * [cisstNetlib, cisst, SAW components and cisst-ros bridge](#cisstnetlib-cisst-saw-components-and-cisst-ros-bridge)
+      * [dvrk-ros](#dvrk-ros)
+   * [cmake; make and git submodules](#cmake-make-and-git-submodules)
+
+<!-- Added by: anton, at:  -->
+
 <!--te-->
 
 # Introduction
