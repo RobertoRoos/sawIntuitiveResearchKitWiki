@@ -245,7 +245,7 @@ rosrun dvrk_robot dvrk_console_json -j <my-config-dir>/console-PSM2.json -i ros-
 ```
 The file `console-PSM2.json` is specific to each system since it points to your `sawRobotIO1394-PSM2-00000.xml` file.  On the other hand, the file `ros-io-PSM2.json` can be found in the `sawIntuitiveResearchKit/share` directory since it isn't system specific.
 
-Once `dvrk_console_json` is started, make sure you can home the arm.  If you have multiple controllers connected to the same safety chain/e-stop, you can use the utility `qlacloserelays` to close all safety relays.
+Once `dvrk_console_json` is started, make sure you can home the arm.  After you homed the arm, in the GUI, IO tab, select _Direct control_ and unselect _Use pot/encoder check_.  If you have multiple controllers connected to the same safety chain/e-stop, you can use the utility `qlacloserelays` to close all safety relays.
 
 In a separate shell, start the calibration script using the following command line for dVRK 1.x:
 ```sh
