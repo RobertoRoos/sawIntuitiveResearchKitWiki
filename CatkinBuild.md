@@ -26,7 +26,7 @@ The `rosinstall` configuration file is provided in dVRK 2.x and higher but can a
 This section assumes you already have ROS installed (see https://www.ros.org).  You will need to install a few more packages:
 * **Ubuntu 16.04** with ROS Kinetic: `sudo apt-get install libxml2-dev libraw1394-dev libncurses5-dev qtcreator swig flite sox espeak cmake-curses-gui cmake-qt-gui libopencv-dev git subversion gfortran libcppunit-dev qt5-default python-wstool python-catkin-tools`
 * **Ubuntu 18.04** with ROS Melodic: `sudo apt install libxml2-dev libraw1394-dev libncurses5-dev qtcreator swig sox espeak cmake-curses-gui cmake-qt-gui git subversion gfortran libcppunit-dev libqt5xmlpatterns5-dev python-wstool python-catkin-tools`
-* **Ubuntu 20.04** with ROS Noetic:`sudo apt install libxml2-dev libraw1394-dev libncurses5-dev qtcreator swig sox espeak cmake-curses-gui cmake-qt-gui git subversion gfortran libcppunit-dev libqt5xmlpatterns5-dev python-wstool python3-catkin-tools python3-osrf-pycommon`
+* **Ubuntu 20.04** with ROS Noetic:`sudo apt install libxml2-dev libraw1394-dev libncurses5-dev qtcreator swig sox espeak cmake-curses-gui cmake-qt-gui git subversion gfortran libcppunit-dev libqt5xmlpatterns5-dev python3-wstool python3-catkin-tools python3-osrf-pycommon`
 
 ## Catkin workspace, clone and build
 
