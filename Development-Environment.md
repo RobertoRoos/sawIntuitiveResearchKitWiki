@@ -15,7 +15,7 @@ Development Environment Setup
 The current software is written in C/C++ and uses the libraw1394 library under Linux. See http://www.dennedy.org/libraw1394/ for libraw1394 documentation. 
 
 # FireWire Adapter
-The dVRK controllers use FireWire as the fieldbus, and you will need a FireWire adapter. Due to the fact that FireWire is a sophisticated protocol, some chipset implementations are not fully functional and have various issues such as dropping packets and supporting a limited number of FireWire nodes. We **STRONGLY** recommend adapters with chipsets from Texas Instruments, such as the PEX1394A2V 2-Port PCI Express FireWire Card from StarTech. 
+The dVRK controllers use FireWire as the fieldbus, and you will need a FireWire adapter. Due to the fact that FireWire is a sophisticated protocol, some chipset implementations are not fully functional and have various issues such as dropping packets and supporting a limited number of FireWire nodes. We **STRONGLY** recommend adapters with chipsets from Texas Instruments (see links below).
 
 To get the chipset model of your FireWire card: 
 ```sh
@@ -41,7 +41,9 @@ Reference:
 
 [1] PreSonus: Approved FireWire chipsets for FireStudio™-series interfaces and StudioLive™ mixers. 
 
-[2] StarTech FireWire card: [Amazon Link](https://www.amazon.com/Port-1394a-Express-FireWire-Card/dp/B00IAABHFE/ref=sr_1_9?ie=UTF8&qid=1543974002&sr=8-9&keywords=pcie+firewire)
+[2] StarTech FireWire card (old, hard to find): [Amazon link](https://www.amazon.com/Port-1394a-Express-FireWire-Card/dp/B00IAABHFE/ref=sr_1_9?ie=UTF8&qid=1543974002&sr=8-9&keywords=pcie+firewire).
+
+[3] Syba FireWire card: [Amazon link](https://www.amazon.com/gp/product/B002S53IG8/).  This card comes with regular and low profile plate so it can also be used in low profile desktop computers. 
 
 # Install Ubuntu
 
