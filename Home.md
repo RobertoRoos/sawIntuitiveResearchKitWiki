@@ -1,5 +1,17 @@
-<!-- ts -->
-<!-- te -->
+<!--ts-->
+   * [Introduction](#introduction)
+   * [Credit / Citation](#credit--citation)
+   * [Links](#links)
+      * [Community](#community)
+      * [Software](#software)
+   * [Updates](#updates)
+      * [Firmware](#firmware)
+      * [Software](#software-1)
+   * [Acknowledgments](#acknowledgments)
+
+<!-- Added by: anton, at:  -->
+
+<!--te-->
 
 # Introduction
 
