@@ -1,4 +1,20 @@
 <!--ts-->
+      * [What does ISI, Classic, S, Si, Xi, PSM, MTM, ECM, SUJ, HRSV, ... mean?](#what-does-isi-classic-s-si-xi-psm-mtm-ecm-suj-hrsv--mean)
+      * [Generations of da Vinci systems](#generations-of-da-vinci-systems)
+      * [What does QLA-FPGA, qladisp, ... mean?](#what-does-qla-fpga-qladisp--mean)
+      * [What PC configuration do you suggest?](#what-pc-configuration-do-you-suggest)
+      * [The PSMs aren't moving](#the-psms-arent-moving)
+      * [Where are qladisp and qlacloserelays, everything else has been compiled](#where-are-qladisp-and-qlacloserelays-everything-else-has-been-compiled)
+      * [All signals freeze for a couple seconds](#all-signals-freeze-for-a-couple-seconds)
+      * [Some intermittent signals](#some-intermittent-signals)
+      * [Power issues](#power-issues)
+      * [Firewire connection](#firewire-connection)
+         * [Symptom](#symptom)
+         * [Firewire cables](#firewire-cables)
+      * [I plugged my PC to the stereo display but I get no image?](#i-plugged-my-pc-to-the-stereo-display-but-i-get-no-image)
+
+<!-- Added by: anton, at:  -->
+
 <!--te-->
 
 ## What does ISI, Classic, S, Si, Xi, PSM, MTM, ECM, SUJ, HRSV, ... mean?
