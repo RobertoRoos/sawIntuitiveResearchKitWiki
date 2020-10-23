@@ -80,7 +80,9 @@ You will need a PC running Linux:
  * 8 GB RAM minimum, 16 recommended
  * FireWire
    * A dedicated firewire controller for each chain of controllers - you can hook 8 controllers (16 FPGA/QLA boards) in a single chain so 1 firewire controller is fine for most users.
-   * Early dVRK users have tested different cards and the SIIG FireWire adapter NN-E20012-S2 works well (uses a TI chipset)
+   * FireWire adapters:
+     * [SYBA Low Profile PCI-Express Firewire](https://www.amazon.com/gp/product/B002S53IG8/)
+     * Early dVRK users have tested different cards and the SIIG FireWire adapter NN-E20012-S2 works well (uses a TI chipset)
    * See also the following document: http://support.presonus.com/hc/en-us/article_attachments/203654243/Compatible_Hardware_List_7-12.pdf.  Any card from the compatible list should work.
    * If possible, choose a PCIe card to get better performance.
    * See also https://github.com/jhu-dvrk/sawIntuitiveResearchKit/wiki/Development-Environment
@@ -115,20 +117,22 @@ You're probably missing the curses development libraries.  Install them, re-run 
  * Make sure the SCSI and RS cables between the dMIB and QLA boards inside the enclosure are not loose.
  * See also [controller boxes description](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Controller-Boxes) and [debugging potentiometer issues](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Debugging-Potentiometer-Issues)
 
-## Power Issue
+## Power issues
 
 Most power issues are related to the emergency stop: [E-Stop](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ESTOP)
 
-## Firewire Connection
+## Firewire connection
 
 ### Symptom
  * Can't even connect to controllers
  * See some of the QLA-FPGA but not all
  * `qladisp` seems to be working but the display freezes for a couple of seconds
 
-### Firewire Cables
+### Firewire cables
 
-Cheap cables tend to have more quality issues.  We found a working combination for our controllers (at JHU), see [ISI private wiki](http://research.intusurg.com/dvrkwiki/index.php?title=DVRK:GroupPages:JHU#Mechatronics).  The best way to test your setup is to start with a single cable and single QLA-FPGA and then add the extra boards one by one to the daisy chain.   This requires to open the controller enclosures.
+Cheap cables tend to have more quality issues.  We strongly recommend to buy your FireWire cables from Unibrain.
+
+For a more detailed description of the cables used for our controllers (at JHU), see [ISI private wiki](http://research.intusurg.com/dvrkwiki/index.php?title=DVRK:GroupPages:JHU#Mechatronics).  The best way to test your setup is to start with a single cable and single QLA-FPGA and then add the extra boards one by one to the daisy chain.   This requires to open the controller enclosures.
 
 ## I plugged my PC to the stereo display but I get no image?
 
