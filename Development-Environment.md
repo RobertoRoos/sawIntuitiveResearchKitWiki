@@ -47,7 +47,7 @@ Reference:
 
 # Install Ubuntu
 
-(April, 2019) We recommend Ubuntu 16.04 LTS or 18.04 LTS, which are both long-term support versions.  For ROS, we recommend Kinetic on 16.04, Melodic on 18.04.
+We recommend Ubuntu 18.04 LTS but one can also use 16.04 or 20.04 with the latest dVRK (2020).  For ROS, we recommend Kinetic on 16.04, Melodic on 18.04 and Noetic on 20.04.
 
 #  Install libraw1394 on Ubuntu
 
