@@ -1,18 +1,5 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**
-
-- [Introduction](#introduction)
-- [Credit / Citation](#credit--citation)
-- [Links](#links)
-  - [Community](#community)
-  - [Software](#software)
-- [Updates](#updates)
-  - [Firmware](#firmware)
-  - [Software](#software-1)
-- [Acknowledgments](#acknowledgments)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<!-- ts -->
+<!-- te -->
 
 # Introduction
 
@@ -56,7 +43,7 @@ The software applications use some or all of the following SAW components (and Q
 
 The components are cross-platform, except for mtsRobotIO1394, which relies on a low-level IEEE-1394 interface library (`libraw1394`) that is primarily available on Linux. Thus, the build instructions focus on Linux. For setting up the FireWire interface on Linux, see [this page](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Development-Environment).
 
-A ROS interface is available via [mtsROSBridge](https://github.com/jhu-cisst/cisst-ros) base class and [dVRK programs and files](https://github.com/jhu-dvrk/dvrk-ros).
+A ROS interface is available via [mtsROSBridge](https://github.com/jhu-cisst/cisst-ros) base class and [dVRK ROS programs and files](https://github.com/jhu-dvrk/dvrk-ros).
 
 # Updates
 
