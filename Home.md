@@ -53,6 +53,8 @@ The software applications use some or all of the following SAW components (and Q
 * [mtsTeleoperation](https://github.com/jhu-saw/sawIntuitiveResearchKit) - Teleoperation components
 * [mtsTextToSpeech](https://github.com/jhu-saw/sawTextToSpeech) - Text to speech component (for warning and error messages)
 
+Continuous builds for the dVRK full stack including ROS on [travis-ci.org](https://travis-ci.org/jhu-dvrk/dvrk-travis-integration) ![Build status](https://travis-ci.org/jhu-dvrk/dvrk-travis-integration.svg)
+
 The components are cross-platform, except for mtsRobotIO1394, which relies on a low-level IEEE-1394 interface library (`libraw1394`) that is primarily available on Linux. Thus, the build instructions focus on Linux. For setting up the FireWire interface on Linux, see [this page](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Development-Environment).
 
 A ROS interface is available via [mtsROSBridge](https://github.com/jhu-cisst/cisst-ros) base class and [dVRK ROS programs and files](https://github.com/jhu-dvrk/dvrk-ros).
