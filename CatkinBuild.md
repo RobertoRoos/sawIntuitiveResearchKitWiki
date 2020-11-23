@@ -42,7 +42,7 @@ catkin config --cmake-args -DCMAKE_BUILD_TYPE=Release # all code should be compi
 cd src                             # go in source directory to pull code
 wstool merge https://raw.githubusercontent.com/jhu-dvrk/dvrk-ros/devel/dvrk_ros.rosinstall # or replace devel by master
 wstool up                          # now wstool knows which repositories to pull, let's get the code
-catkin build                       # ... and finally compile everything
+catkin build --summary             # ... and finally compile everything
 ```
 
 ## Environment variables
