@@ -68,7 +68,7 @@ git clone https://github.com/jhu-dvrk/dvrk-gravity-compensation
 git clone https://github.com/collaborative-robotics/crtk_msgs crtk/crtk_msgs
 git clone https://github.com/collaborative-robotics/crtk_python_client crtk/crtk_python_client
 git clone https://github.com/collaborative-robotics/crtk_matlab_client crtk/crtk_matlab_client
-catkin build
+catkin build --summary
 ```
 
 # `cmake; make` and `git submodules`
