@@ -14,19 +14,19 @@
 # Introduction
 
 This is totally experimental and not that useful.  When building for Mac OS, one can use the dVRK stack with simulated arms (in kinematic mode) and potentially with the real arms with the ethernet interface (Local Link).  The ethernet interface requires firmware version 7 or higher AND controllers with a physical a network interface.  Even with the network interface, the Mac OS build is laking the current features:
- * ROS.  The code will run but you will need to use something like the sawsSocketStreamer or sawOpenIGTKLink to communicate between programs
+ * ROS.  The code will run but you will need to use something like the sawsSocketStreamer or sawOpenIGTKLink to communicate between programs instead of ROS
  * Potentiometer calibration and gravity compensation identification (calibration programs are using ROS)
  * `catkin build`
 
 # Requirements
- * Xcode compilers with command line tools
+ * Xcode
  * CMake, see www.cmake.org
  * A Fortran compiler.  This one works: http://hpc.sourceforge.net/#fortran
  * Qt.  You will need to create an account and download the free version
 
 # Build
 
-The current process is not automated.  It might be possible to install the programs `wstool` and `catkin` since both are Python based but I didn't try.  The build is performed in steps and each step requires to configure (CMake), build and install.  I also favor "Unix Makefiles" but one could probably use Xcode projects.
+The current process is not automated.  It might be possible to install the programs `wstool` and `catkin` since both are Python based but I didn't try.  The build is performed in steps and each step requires to configure (CMake), build and install.  I prefer "Unix Makefiles" but one could probably use Xcode projects.
 
 ## Get the code
 
@@ -35,12 +35,19 @@ mkdir ~/dVRK
 cd ~/dVRK
 clone https://github.com/jhu-cisst/cisst-saw.git --recursive
 ```
+```sh
+cd ~/dVRK/cisst-saw
+git submodule foreach git checkout devel
+git submodule foreach git pull origin devel
+git submodule foreach git submodule init
+git submodule foreach git submodule update
+```
 
 ## cisstNetlib
 
 When using CMake, pick the generator "Unix Makefiles" and select "Specify native compilers".  In the next window, specify the "Fortran" compiler only.  It you've installed the compiler mentioned above, it should be `/usr/local/bin/gfortran`.  For CMake, use the source directory `/Users/you/dVRK/cisst-saw/cisstNetlib`.  Please note that `you` in `/Users/you` should be replaced by your login name.
 
-In CMake, set:
+In CMake, change:
  * `CMAKE_BUILD_TYPE` to `Release`
  * `CMAKE_INSTALL_PREFIX` to `/Users/you/dVRK/install`
 
@@ -50,7 +57,7 @@ Then in CMake, configure and generate.   In the build tree, build using `make` a
 
 In CMake, use the generator "Unix Makefiles" and the source tree should be `/Users/you/dVRK/cisst-saw`.
 
-In CMake, set:
+In CMake, change:
  * `CMAKE_BUILD_TYPE` to `Release`
  * `CMAKE_INSTALL_PREFIX` to `/Users/you/dVRK/install`
  * `CISSTNETLIB_DIR` to `/Users/you/dVRK/install`
@@ -75,11 +82,14 @@ In your build tree for cisst-saw, you will need to set some environment variable
 source cisst/cisstvars.sh
 export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/Users/you/dVRK/build/cisst-saw/cisst/cisstReflexxesTypeII/lib
 ```
-The last command is to find the share library for Reflexxes.  The path with depend on where you built cisst-saw.
+The last command is to find the shared libraries for Reflexxes.  The path with depend on where you built cisst-saw.
 
 Then go in your source tree:
 ```sh
 cd ~/dVRK/cisst-saw/sawIntuitiveResearchKit/share/console
 sawIntuitiveResearchKitQtConsoleJSON -j console-full-system-simulated.json
 ```
+
+# Screenshots
+
 
