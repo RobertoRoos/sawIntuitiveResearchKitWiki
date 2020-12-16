@@ -40,5 +40,33 @@ In CMake, use the generator "Unix Makefiles" and the source tree should be `/Use
 In CMake, set:
  * `CMAKE_BUILD_TYPE` to `Release`
  * `CMAKE_INSTALL_PREFIX` to `/Users/you/dVRK/install`
- * `
+ * `CISSTNETLIB_DIR` to `/Users/you/dVRK/install`
+ * `CISSTNETLIB_USE_LOCAL_INSTALL` checked
+ * `Cisstnetlib_DIR` to `/Users/you/dVRK/install/cmake`
+ * `CISST_HAS_QT5` checked - you will also need to set all the Qt paths, e.g. `Qt5Core_DIR` set to `/Users/you/Qt/5.15.2/clang_64/lib/cmake/Qt5Core`
+ * `CISST_USE_EXTERNAL` checked
+ * `CISST_HAS_JSON` checked
+ * `CISST_USE_SI_UNITS` checked
+ * `CISST_BUILD_SHARED_LIB` checked
+ * `CISST_cisstRobot` checked
+ * `SAW_sawControllers` checked
+ * `SAW_sawIntuitiveResearchKit` checked
+ * `SAW_sawRobotIO1394` checked
+
+You should be able to configure and generate in CMake.  In your build tree for cisst-saw, `make -j`.  No need to build.
+
+## Run the code
+
+In your build tree for cisst-saw, you will need to set some environment variables:
+```sh
+source cisst/cisstvars.sh
+export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/Users/you/dVRK/build/cisst-saw/cisst/cisstReflexxesTypeII/lib
+```
+The last command is to find the share library for Reflexxes.  The path with depend on where you built cisst-saw.
+
+Then go in your source tree:
+```sh
+cd ~/dVRK/cisst-saw/sawIntuitiveResearchKit/share/console
+sawIntuitiveResearchKitQtConsoleJSON -j console-full-system-simulated.json
+```
 
