@@ -42,7 +42,7 @@ Advanced
 Miscellaneous
 * [Frequently Asked Questions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FAQ)
 * [QLA Heat Sink](/jhu-dvrk/sawIntuitiveResearchKit/wiki/QLA-Heat-Sink)
-* [Build Instructions w/o ROS](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Build)
+* Build w/o ROS [Linux](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Build) [Mac](/jhu-dvrk/sawIntuitiveResearchKit/wiki/MacBuild)
 * [cisst](/jhu-cisst/cisst/wiki)
 * [JHU](JHU-DVRK-Hardware-Status)
 
