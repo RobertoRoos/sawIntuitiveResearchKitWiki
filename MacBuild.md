@@ -17,7 +17,7 @@
 Building on Mac OS is totally experimental and not that useful.  We strongly recommend to use Ubuntu Linux LTS with ROS.
 
 When building for Mac OS, one can use the dVRK stack with simulated arms (in kinematic mode) and potentially with the real arms with the ethernet interface (Local Link).  The ethernet interface requires firmware version 7 or higher AND controllers with a physical a network interface.  Even with the network interface, the Mac OS build is laking the current features:
- * ROS.  The code will run but you will need to use something like the sawsSocketStreamer or sawOpenIGTKLink to communicate between programs instead of ROS
+ * ROS.  The code will run but you will need to use something like [sawsSocketStreamer](https://github.com/jhu-saw/sawSocketStreamer) or [sawOpenIGTKLink](https://github.com/jhu-saw/sawOpenIGTLink) to communicate between programs instead of ROS
  * Potentiometer calibration and gravity compensation identification (calibration programs are using ROS)
  * `catkin build`
 
