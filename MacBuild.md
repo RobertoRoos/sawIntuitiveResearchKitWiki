@@ -98,6 +98,8 @@ sawIntuitiveResearchKitQtConsoleJSON -j console-full-system-simulated.json
 
 # Screenshots
 
-<a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/mac/mac-qladisp.png"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/mac/mac-qladisp.png" width="350"></a>
+ * `qladisp`<br><a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/mac/mac-qladisp.png"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/mac/mac-qladisp.png" width="350"></a>
+ * Console with simulated PSM<br>
 <a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/mac/mac-simulated-PSM1.png"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/mac/mac-simulated-PSM1.png" width="350"></a>
+ * Console with actual PSM over UDP<br>
 <a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/mac/mac-PSM1-desktop.png"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/mac/mac-PSM1-desktop.png" width="350"></a>
