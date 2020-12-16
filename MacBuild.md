@@ -6,6 +6,7 @@
       * [cisstNetlib](#cisstnetlib)
       * [cisst/SAW](#cisstsaw)
    * [Run the code](#run-the-code)
+   * [Screenshots](#screenshots)
 
 <!-- Added by: anton, at:  -->
 
@@ -92,4 +93,6 @@ sawIntuitiveResearchKitQtConsoleJSON -j console-full-system-simulated.json
 
 # Screenshots
 
-
+<a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/mac/mac-qladisp.png"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/mac/mac-qladisp.png" width="350"></a>
+<a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/mac/mac-simulated-PSM1.png"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/mac/mac-simulated-PSM1.png" width="350"></a>
+<a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/mac/mac-PSM1-desktop.png"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/mac/mac-PSM1-desktop.png" width="350"></a>
