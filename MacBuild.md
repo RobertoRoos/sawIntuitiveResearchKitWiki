@@ -38,6 +38,8 @@ mkdir ~/dVRK
 cd ~/dVRK
 clone https://github.com/jhu-cisst/cisst-saw.git --recursive
 ```
+
+As of December 2020, you need to use the `devel` branches to compile on Mac OS:
 ```sh
 cd ~/dVRK/cisst-saw
 git submodule foreach git checkout devel
