@@ -55,7 +55,7 @@ In CMake, set:
 
 You should be able to configure and generate in CMake.  In your build tree for cisst-saw, `make -j`.  No need to build.
 
-## Run the code
+# Run the code
 
 In your build tree for cisst-saw, you will need to set some environment variables:
 ```sh
