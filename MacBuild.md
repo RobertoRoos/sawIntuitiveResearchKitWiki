@@ -1,3 +1,16 @@
+<!--ts-->
+   * [Introduction](#introduction)
+   * [Requirements](#requirements)
+   * [Build](#build)
+      * [Get the code](#get-the-code)
+      * [cisstNetlib](#cisstnetlib)
+      * [cisst/SAW](#cisstsaw)
+   * [Run the code](#run-the-code)
+
+<!-- Added by: anton, at:  -->
+
+<!--te-->
+
 # Introduction
 
 This is totally experimental and not that useful.  When building for Mac OS, one can use the dVRK stack with simulated arms (in kinematic mode) and potentially with the real arms with the ethernet interface (Local Link).  The ethernet interface requires firmware version 7 or higher AND controllers with a physical a network interface.  Even with the network interface, the Mac OS build is laking the current features:
