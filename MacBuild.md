@@ -25,7 +25,7 @@ When building for Mac OS, one can use the dVRK stack with simulated arms (in kin
 # Requirements
  * Xcode
  * CMake, see www.cmake.org
- * A Fortran compiler.  This one works: http://hpc.sourceforge.net/#fortran
+ * A Fortran compiler.  This one works: http://hpc.sourceforge.net/#fortran.  The following might be even easier to install and use: https://github.com/fxcoudert/gfortran-for-macOS/releases as it comes with a Mac installer (`dmg` file).
  * Qt.  You will need to create an account and download the free version
 
 # Build
