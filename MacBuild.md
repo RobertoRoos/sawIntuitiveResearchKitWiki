@@ -16,8 +16,8 @@
 
 Building on Mac OS is totally experimental and not that useful.  We strongly recommend to use Ubuntu Linux LTS with ROS.
 
-When building for Mac OS, one can use the dVRK stack with simulated arms (in kinematic mode) and potentially with the real arms with the ethernet interface (Local Link).  The ethernet interface requires firmware version 7 or higher AND controllers with a physical a network interface.  Even with the network interface, the Mac OS build is laking the current features:
- * ROS.  The code will run but you will need to use something like [sawsSocketStreamer](https://github.com/jhu-saw/sawSocketStreamer) or [sawOpenIGTKLink](https://github.com/jhu-saw/sawOpenIGTLink) as middleware
+When building for Mac OS, one can use the dVRK stack with simulated arms (in kinematic mode) and potentially with the real arms with the ethernet interface (Local Link).  The ethernet interface requires firmware version 7 or higher AND controllers with a physical network interface.  Even with the network interface, the Mac OS build is lacking the current features:
+ * ROS.  The code will run but you will need to use something like [sawsSocketStreamer](https://github.com/jhu-saw/sawSocketStreamer) or [sawOpenIGTLink](https://github.com/jhu-saw/sawOpenIGTLink) as middleware
  * Potentiometer calibration and gravity compensation identification (calibration programs are using ROS)
  * `catkin build`
  * ...
@@ -51,7 +51,7 @@ git submodule foreach git submodule update
 
 ## cisstNetlib
 
-When using CMake, pick the generator "Unix Makefiles" and select "Specify native compilers".  In the next window, specify the "Fortran" compiler only.  It you've installed the compiler mentioned above, it should be `/usr/local/bin/gfortran`.  For CMake, use the source directory `/Users/you/dVRK/cisst-saw/cisstNetlib`.  Please note that `you` in `/Users/you` should be replaced by your login name.
+When using CMake, pick the generator "Unix Makefiles" and select "Specify native compilers".  In the next window, specify the "Fortran" compiler only.  If you've installed the compiler mentioned above, it should be `/usr/local/bin/gfortran`.  For CMake, use the source directory `/Users/you/dVRK/cisst-saw/cisstNetlib`.  Please note that `you` in `/Users/you` should be replaced by your login name.
 
 In CMake, change:
  * `CMAKE_BUILD_TYPE` to `Release`
@@ -88,7 +88,7 @@ In your build tree for cisst-saw, you will need to set some environment variable
 source cisst/cisstvars.sh
 export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/Users/you/dVRK/build/cisst-saw/cisst/cisstReflexxesTypeII/lib
 ```
-The last command is to find the shared libraries for Reflexxes.  The path with depend on where you built cisst-saw.
+The last command is to find the shared libraries for Reflexxes.  The path will depend on where you built cisst-saw.
 
 Then go in your source tree:
 ```sh
