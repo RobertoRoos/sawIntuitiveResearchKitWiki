@@ -65,9 +65,9 @@ A ROS interface is available via [mtsROSBridge](https://github.com/jhu-cisst/cis
 Several groups have developed software modules that integrate with the dVRK and may be useful to others in the community. Many of these software modules use ROS to interface to the dVRK.
 
 ### Simulators
-
 * [Asynchronous Multi-Body Framework (AMBF)](https://github.com/WPI-AIM/ambf) - dynamic simulator developed at Worcester Polytechnic Institute (WPI); includes models of the dVRK manipulators and interfaces to the dVRK hardware (e.g., to use MTMs as input devices).
 * [V-Rep Simulator for the dVRK](https://github.com/unina-icaros/dvrk-vrep) - V-Rep simulator developed at University of Naples.
+* [ATAR](https://github.com/neemoh/ATAR) - Bullet based dynamic simulator developed at Politecnico di Milano.
 
 ### Machine Learning
 * [dVRL](https://github.com/ucsdarclab/dVRL) - reinforcement learning environment, based on V-Rep, developed at University of California, San Diego.
