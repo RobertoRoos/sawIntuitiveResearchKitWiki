@@ -3,7 +3,8 @@
    * [Credit / Citation](#credit--citation)
    * [Links](#links)
       * [Community](#community)
-      * [Software](#software)
+      * [Core Software](#core-software)
+      * [Software Ecosystem](#software-ecosystem)
    * [Updates](#updates)
       * [Firmware](#firmware)
       * [Software](#software-1)
@@ -45,7 +46,7 @@ For posters and videos, please include the [dVRK logo](https://github.com/jhu-dv
   * Johns Hopkins University Mechatronics http://jhu-cisst.github.io/mechatronics
   * List of all JHU LCSR Software http://jhu-lcsr.github.io/software/
 
-## Software
+## Core Software
 
 The software applications use some or all of the following SAW components (and Qt widgets):
 * [mtsRobotIO1394](https://github.com/jhu-saw/sawRobotIO1394) - interface to IEEE-1394 (FireWire) controller boards
@@ -55,9 +56,22 @@ The software applications use some or all of the following SAW components (and Q
 
 The dVRK software stack is continuously built on [travis-ci.org](https://travis-ci.org/jhu-dvrk/dvrk-travis-integration) for the following Ubuntu/ROS combinations: _16.04/kinetic_, _18.04/melodic_ and _20.04/noetic_ ![Build status](https://travis-ci.org/jhu-dvrk/dvrk-travis-integration.svg)
 
-The components are cross-platform, except for mtsRobotIO1394, which relies on a low-level IEEE-1394 interface library (`libraw1394`) that is primarily available on Linux. Thus, the build instructions focus on Linux. For setting up the FireWire interface on Linux, see [this page](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Development-Environment).
+The components are cross-platform, except for mtsRobotIO1394, which relies on a low-level IEEE-1394 interface library (`libraw1394`) that is primarily available on Linux. Thus, the build instructions focus on Linux. For setting up the FireWire interface on Linux, see [this page](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Development-Environment). _Note: This will change with dVRK Software Version 2.0 and Firmware Rev 7, which will add support for Ethernet (UDP or Raw)._
 
 A ROS interface is available via [mtsROSBridge](https://github.com/jhu-cisst/cisst-ros) base class and [dVRK ROS programs and files](https://github.com/jhu-dvrk/dvrk-ros).
+
+## Software Ecosystem
+
+Several groups have developed software modules that integrate with the dVRK and may be useful to others in the community. Many of these software modules use ROS to interface to the dVRK.
+
+### Simulators
+
+* [Asynchronous Multi-Body Framework (AMBF)](https://github.com/WPI-AIM/ambf) - dynamic simulator developed at Worcester Polytechnic Institute (WPI); includes models of the dVRK manipulators and interfaces to the dVRK hardware (e.g., to use MTMs as input devices).
+* [V-Rep Simulator for the dVRK](https://github.com/unina-icaros/dvrk-vrep) - V-Rep simulator developed at University of Naples
+
+### Machine Learning
+* [dVRL](https://github.com/ucsdarclab/dVRL) - reinforcement learning environment, based on V-Rep, developed at University of California, San Diego.
+* [AMBF-RL](https://github.com/WPI-AIM/ambf_rl) -- reinforcement learning environment, based on AMBF, developed at Worcester Polytechnic Institute (WPI).
 
 # Updates
 
