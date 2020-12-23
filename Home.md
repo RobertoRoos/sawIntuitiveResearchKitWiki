@@ -76,7 +76,7 @@ Several groups have developed software modules that integrate with the dVRK and 
 ### Mixed Reality
 * [dVRK-XR](https://github.com/jhu-dvrk/dvrk-xr) - mixed reality visualization, based on Unity 3D, developed at Johns Hopkins University; interfaces to dVRK via UDP or ROS.
 
-### High level control
+### High Level Control
 * [Mesh based virtual fixtures](https://github.com/mli0603/PolygonMeshVirtualFixture) - haptic feedback with Slicer visualization (via [OpenIGTLink](https://github.com/jhu-saw/sawOpenIGTLink)) developed at Johns Hopkins University.
 
 ### Computer Vision - TBD
