@@ -71,12 +71,12 @@ Several groups have developed software modules that integrate with the dVRK and 
 
 ### Machine Learning
 * [dVRL](https://github.com/ucsdarclab/dVRL) - reinforcement learning environment, based on V-Rep, developed at University of California, San Diego.
-* [AMBF-RL](https://github.com/WPI-AIM/ambf_rl) -- reinforcement learning environment, based on AMBF, developed at Worcester Polytechnic Institute (WPI).
+* [AMBF-RL](https://github.com/WPI-AIM/ambf_rl) - reinforcement learning environment, based on AMBF, developed at Worcester Polytechnic Institute (WPI).
 
 ### Mixed Reality
-* [dVRK-XR](https://github.com/jhu-dvrk/dvrk-xr) -- mixed reality visualization, based on Unity 3D, developed at Johns Hopkins University; interfaces to dVRK via UDP or ROS.
+* [dVRK-XR](https://github.com/jhu-dvrk/dvrk-xr) - mixed reality visualization, based on Unity 3D, developed at Johns Hopkins University; interfaces to dVRK via UDP or ROS.
 
-### Computer Vision -- TBD
+### Computer Vision - TBD
 * Instrument tracking
 * Stereo reconstruction
 
