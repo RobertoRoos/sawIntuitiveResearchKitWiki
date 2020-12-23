@@ -67,11 +67,18 @@ Several groups have developed software modules that integrate with the dVRK and 
 ### Simulators
 
 * [Asynchronous Multi-Body Framework (AMBF)](https://github.com/WPI-AIM/ambf) - dynamic simulator developed at Worcester Polytechnic Institute (WPI); includes models of the dVRK manipulators and interfaces to the dVRK hardware (e.g., to use MTMs as input devices).
-* [V-Rep Simulator for the dVRK](https://github.com/unina-icaros/dvrk-vrep) - V-Rep simulator developed at University of Naples
+* [V-Rep Simulator for the dVRK](https://github.com/unina-icaros/dvrk-vrep) - V-Rep simulator developed at University of Naples.
 
 ### Machine Learning
 * [dVRL](https://github.com/ucsdarclab/dVRL) - reinforcement learning environment, based on V-Rep, developed at University of California, San Diego.
 * [AMBF-RL](https://github.com/WPI-AIM/ambf_rl) -- reinforcement learning environment, based on AMBF, developed at Worcester Polytechnic Institute (WPI).
+
+### Mixed Reality
+* [dVRK-XR](https://github.com/jhu-dvrk/dvrk-xr) -- mixed reality visualization, based on Unity 3D, developed at Johns Hopkins University; interfaces to dVRK via UDP or ROS.
+
+### Computer Vision -- TBD
+* Instrument tracking
+* Stereo reconstruction
 
 # Updates
 
