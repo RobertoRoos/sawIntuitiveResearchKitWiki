@@ -76,6 +76,9 @@ Several groups have developed software modules that integrate with the dVRK and 
 ### Mixed Reality
 * [dVRK-XR](https://github.com/jhu-dvrk/dvrk-xr) - mixed reality visualization, based on Unity 3D, developed at Johns Hopkins University; interfaces to dVRK via UDP or ROS.
 
+### High level control
+* [Mesh based virtual fixtures](https://github.com/mli0603/PolygonMeshVirtualFixture) - haptic feedback based on meshes with Slicer visualization developed at Johns Hopkins University.
+
 ### Computer Vision - TBD
 * Instrument tracking
 * Stereo reconstruction
