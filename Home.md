@@ -77,7 +77,13 @@ Several groups have developed software modules that integrate with the dVRK and 
 * [dVRK-XR](https://github.com/jhu-dvrk/dvrk-xr) - mixed reality visualization, based on Unity 3D, developed at Johns Hopkins University; interfaces to dVRK via UDP or ROS.
 
 ### High Level Control
-* [Mesh based virtual fixtures](https://github.com/mli0603/PolygonMeshVirtualFixture) - haptic feedback with Slicer visualization (via [OpenIGTLink](https://github.com/jhu-saw/sawOpenIGTLink)) developed at Johns Hopkins University.
+* [Mesh based virtual fixtures](https://github.com/mli0603/PolygonMeshVirtualFixture) - haptic feedback with Slicer visualization, via [OpenIGTLink](https://github.com/jhu-saw/sawOpenIGTLink), developed at Johns Hopkins University.
+
+### Data Recording/Playback
+* [DVRK_RecordAndPlayback](https://github.com/careslab/DVRK_RecordAndPlayback) - data recording and playback developed at Wayne State University.
+
+### Autonomous Camera Control
+* [autocamera](https://github.com/careslab/autocamera) - autonomous camera control developed at Wayne State University.
 
 ### Computer Vision - TBD
 * Instrument tracking
