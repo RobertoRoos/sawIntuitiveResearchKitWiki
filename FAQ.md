@@ -52,15 +52,15 @@ This is a high level description of the different generations of da Vinci system
 
 Some JHU acronyms:
  * **JHU**: Johns Hopkins University.
- * **QLA**: quad linear amps, JHU designed board with power for up to 4 axis.
- * **FPGA**: logic board designed by JHU, mounted on top of the QLA.  Provides 2 firewire connector to daisy chain and connect to PC.
- * **QLA-FPGA**: board set including a QLA an FPGA board.
+ * **QLA**: quad linear amplifier, JHU designed board with power for up to 4 axis.
+ * **FPGA**: logic board designed by JHU, mounted on top of the QLA.  Provides 2 firewire connector to daisy chain and connect to PC. Version 2+ also includes an Ethernet connector.
+ * **QLA-FPGA**: board set including a QLA and FPGA board.
  * **Firmware**: embedded software running on the FPGA logic board.
  * **dMIB**: da Vinci Manipulator Interface Board, board designed to interface between the ISI manipulators using an ITT Cannon plus a foot pedal connector and the QLA-FPGA connectors (SCSI and RS cables)
- * **dSIB**: da Vinci Setup joints Interface Board.  This doesn't exist yet, we are working on it!
+ * **dSIB**: da Vinci Setup joints Interface Board.
  * **Controller**:
    * Enclosure
-   * Two QLA-FPGA to control up to 8 axis
+   * Two QLA-FPGA to control up to 8 axes
    * dMIB: mounted on the back
    * Power supplies: 12V for logic + motor power:
       * 24 V for all actuators on PSM
@@ -114,7 +114,7 @@ You're probably missing the curses development libraries.  Install them, re-run 
 
 # Some intermittent signals
 
- * Make sure you don't have any loose ITT Cannon cable from your manipulator to the controller.
+ * Make sure you don't have any loose ITT Cannon cables from your manipulator to the controller.
  * Make sure the SCSI and RS cables between the dMIB and QLA boards inside the enclosure are not loose.
  * See also [controller boxes description](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Controller-Boxes) and [debugging potentiometer issues](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Debugging-Potentiometer-Issues)
 
