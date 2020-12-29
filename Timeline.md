@@ -24,21 +24,22 @@ Details regarding the different builds can be found in the [board versions page]
 | 4<br>da Vinci | 2015 | University of Texas at Austin<br>(originally CNMC) | Farshid Alambeigi | 18 |
 | 4<br>da Vinci | 2015 | University of Verona | Paolo Fiorini | 19 |
 | 4<br>da Vinci | 2015 | National Institutes of Health | Sheng Xu | 20 |
-| 5<br>da Vinci | 2016 | Case Western Reserve Univ. | Cenk Cavusoglu | 21 |
-| 5, 7<br>da Vinci | 2016, 2019 | U.C. San Diego | Michael Yip | 22 |
-| 5<br>dVRK | 2016 | Ben Gurion Univ. | Ilana Nisky | 23 |
-| 5<br>da Vinci | 2016 | Univ. of Naples | Bruno Siciliano | 24 |
-| 5<br>da Vinci | 2016 | Cleveland Clinic | Robb Colbrunn | 25 |
-| 5<br>da Vinci | 2016 | Politecnico di Milano | Elena De Momi | 26 |
-| 5, 6<br>dVRK, da Vinci | 2016, 2017 | Chinese Univ. of Hong Kong | Yunhui Liu, Philip Chiu, Samuel Au | 27 |
-| 6<br>dVRK | 2017 | University of Texas, Dallas | Ann Majewicz Fey | 28 |
-| 6<br>da Vinci | 2017 | University of Leeds | Pietro Valdastri | 29 |
-| 6<br>da Vinci | 2017 | Hochschule Reutlingen | Lars Schmidt | 30 |
-| 7<br>da Vinci | 2019 | University of Maryland | Axel Krieger | 31 |
-| 7<br>dVRK | 2019 | University of Alberta | Mahdi Tavakoli | 32 |
-| 7<br>da Vinci | 2019 | Purdue University | Juan Wachs, Denny Yu | 33 |
-| 7<br>da Vinci | 2019 | Wake Forest | Philip Brown | 34 |
-| 7<br>da Vinci S MTMs | 2019 | surgnova.com | Jindi Zhang | 35 |
-| 8<br>da Vinci | 2020 | University of Illinois, Chicago | Liaohai Leo Chen  | 36 |
-| 8 | 2020 | University of Twente | Sarthak Misra | 37 |
-| 8<br>da Vinci | 2020 | University of Torino | Alberto Arezzo | 38 |
+| -<br>da Vinci | 2016 | Management Center Innsbruck | Yeongmi Kim | 21 |
+| 5<br>da Vinci | 2016 | Case Western Reserve Univ. | Cenk Cavusoglu | 22 |
+| 5, 7, 8<br>da Vinci | 2016, 2019<br>2020 | U.C. San Diego | Michael Yip<br>Tania Morimoto | 23 |
+| 5<br>dVRK | 2016 | Ben Gurion Univ. | Ilana Nisky | 24 |
+| 5<br>da Vinci | 2016 | Univ. of Naples | Bruno Siciliano | 25 |
+| 5<br>da Vinci | 2016 | Cleveland Clinic | Robb Colbrunn | 26 |
+| 5<br>da Vinci | 2016 | Politecnico di Milano | Elena De Momi | 27 |
+| 5, 6<br>dVRK, da Vinci | 2016, 2017 | Chinese Univ. of Hong Kong | Yunhui Liu, Philip Chiu, Samuel Au | 28 |
+| 6<br>dVRK | 2017 | University of Texas, Dallas | Ann Majewicz Fey | 29 |
+| 6<br>da Vinci | 2017 | University of Leeds | Pietro Valdastri | 30 |
+| 6<br>da Vinci | 2017 | Hochschule Reutlingen | Lars Schmidt | 31 |
+| 7<br>da Vinci | 2019 | University of Maryland | Axel Krieger | 32 |
+| 7<br>dVRK | 2019 | University of Alberta | Mahdi Tavakoli | 33 |
+| 7<br>da Vinci | 2019 | Purdue University | Juan Wachs, Denny Yu | 34 |
+| 7<br>da Vinci | 2019 | Wake Forest | Philip Brown | 35 |
+| 7<br>da Vinci S MTMs | 2019 | surgnova.com | Jindi Zhang | 36 |
+| 8<br>da Vinci | 2020 | University of Illinois, Chicago | Liaohai Leo Chen  | 37 |
+| 8<br>dVRK | 2020 | University of Twente | Sarthak Misra | 38 |
+| 8<br>da Vinci | 2020 | University of Torino | Alberto Arezzo | 39 |
