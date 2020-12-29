@@ -11,7 +11,7 @@ Details regarding the different builds can be found in the [board versions page]
 | 2<br>dVRK | 2013 | [U.C. Berkeley](http://bair.berkeley.edu/blog/2017/10/17/lfd-surgical-robots/) | Ken Goldberg & Pieter Abbeel | 5 |
 | 2<br>dVRK | 2013 | Carnegie Mellon Univ. | Howie Choset | 6 |
 | 2<br>dVRK | 2013 | Vanderbilt Univ. | Nabil Simaan | 7 |
-| 2<br>dVRK | 2013 | SUNY Buffalo | Venkat Krovi | 8 |
+| 2<br>dVRK | 2013 | Clemson University<br>(originally SUNY Buffalo) | Venkat Krovi | 8 |
 | 2<br>da Vinci | 2013 | Univ. W. Ontario/CSTAR | Rajni Patel | 9 |
 | 2<br>dVRK | 2013 | Hospital for Sick Kids, Toronto | Jim Drake, M.D. | 10 |
 | 2<br>da Vinci | 2013 | Intuitive Surgical Research | Simon DiMaio | 11 |
@@ -21,7 +21,7 @@ Details regarding the different builds can be found in the [board versions page]
 | 3<br>dVRK | 2014 | Seoul National Univ. | Sungwan Kim | 15 |
 | 3<br>da Vinci | 2014 | Óbuda Univ., Budapest | Tamás Haidegger | 16 |
 | 4<br>da Vinci | 2015 | Wayne State Univ. | Abhilash Pandya | 17 |
-| 4<br>da Vinci | 2015 | University of Texas at Austin | Farshid Alambeigi | 18 |
+| 4<br>da Vinci | 2015 | University of Texas at Austin<br>(originally CNMC) | Farshid Alambeigi | 18 |
 | 4<br>da Vinci | 2015 | University of Verona | Paolo Fiorini | 19 |
 | 4<br>da Vinci | 2015 | National Institutes of Health | Sheng Xu | 20 |
 | 5<br>da Vinci | 2016 | Case Western Reserve Univ. | Cenk Cavusoglu | 21 |
@@ -39,3 +39,6 @@ Details regarding the different builds can be found in the [board versions page]
 | 7<br>da Vinci | 2019 | Purdue University | Juan Wachs, Denny Yu | 33 |
 | 7<br>da Vinci | 2019 | Wake Forest | Philip Brown | 34 |
 | 7<br>da Vinci S MTMs | 2019 | surgnova.com | Jindi Zhang | 35 |
+| 8<br>da Vinci | 2020 | University of Illinois, Chicago | Liaohai Leo Chen  | 36 |
+| 8 | 2020 | University of Twente | Sarthak Misra | 37 |
+| 8<br>da Vinci | 2020 | University of Torino | Alberto Arezzo | 38 |
