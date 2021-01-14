@@ -56,7 +56,7 @@ The software applications use some or all of the following SAW components (and Q
 
 The dVRK software stack is continuously built on [travis-ci.org](https://travis-ci.org/jhu-dvrk/dvrk-travis-integration) for the following Ubuntu/ROS combinations: _16.04/kinetic_, _18.04/melodic_ and _20.04/noetic_ ![Build status](https://travis-ci.org/jhu-dvrk/dvrk-travis-integration.svg)
 
-Github build status: ![Ubuntu 16.04 ROS Kinetic](https://github.com/adeguet1/dvrk-github-workflow/workflows/Ubuntu%2016.04%20ROS%20Kinetic/badge.svg)
+Github build status (devel branches): ![Ubuntu 16.04 ROS Kinetic](https://github.com/jhu-dvrk/dvrk-github-workflow/workflows/Ubuntu%2016.04%20ROS%20Kinetic/badge.svg) ![Ubuntu 18.04 ROS Melodic](https://github.com/jhu-dvrk/dvrk-github-workflow/workflows/Ubuntu%2018.04%20ROS%20Melodic/badge.svg) ![Ubuntu 20.04 ROS Noetic](https://github.com/jhu-dvrk/dvrk-github-workflow/workflows/Ubuntu%2020.04%20ROS%20Noetic/badge.svg)
 
 The components are cross-platform, except for mtsRobotIO1394, which relies on a low-level IEEE-1394 interface library (`libraw1394`) that is primarily available on Linux. Thus, the build instructions focus on Linux. For setting up the FireWire interface on Linux, see [this page](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Development-Environment). _Note: This will change with dVRK Software Version 2.0 and Firmware Rev 7, which will add support for Ethernet (UDP or Raw)._
 
