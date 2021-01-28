@@ -1,15 +1,14 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+<!--ts-->
+   * [FireWire Adapter](#firewire-adapter)
+   * [Install Ubuntu](#install-ubuntu)
+   * [Install libraw1394 on Ubuntu](#install-libraw1394-on-ubuntu)
+   * [Set permission for 1394 device](#set-permission-for-1394-device)
+      * [Convenient solution](#convenient-solution)
+      * [Safer solution](#safer-solution)
 
-- [FireWire Adapter](#firewire-adapter)
-- [Install Ubuntu](#install-ubuntu)
-- [Install libraw1394 on Ubuntu](#install-libraw1394-on-ubuntu)
-- [Set permission for 1394 device](#set-permission-for-1394-device)
-  - [Convenient solution](#convenient-solution)
-  - [Safer solution](#safer-solution)
+<!-- Added by: anton, at: 2021-01-28T16:01-05:00 -->
 
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<!--te-->
 
 Development Environment Setup 
 The current software is written in C/C++ and uses the libraw1394 library under Linux. See http://www.dennedy.org/libraw1394/ for libraw1394 documentation. 

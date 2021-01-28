@@ -1,12 +1,11 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+<!--ts-->
+   * [Introduction](#introduction)
+   * [Material](#material)
+   * [Wiring](#wiring)
 
-- [Introduction](#introduction)
-- [Material](#material)
-- [Wiring](#wiring)
+<!-- Added by: anton, at: 2021-01-28T16:11-05:00 -->
 
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<!--te-->
 
 # Introduction
 

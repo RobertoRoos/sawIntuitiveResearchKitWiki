@@ -1,12 +1,13 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+<!--ts-->
+   * [XML configuration file](#xml-configuration-file)
+      * [Default Board IDs](#default-board-ids)
+      * [How to generate XML configuration file](#how-to-generate-xml-configuration-file)
+      * [Advanced parameters](#advanced-parameters)
+   * [Source Code](#source-code)
 
-- [XML configuration file](#xml-configuration-file)
-  - [1. How to generate XML configuration file](#1-how-to-generate-xml-configuration-file)
-  - [2. Config Generator](#2-config-generator)
+<!-- Added by: anton, at: 2021-01-28T16:09-05:00 -->
 
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<!--te-->
 
 # XML configuration file
 
@@ -22,7 +23,17 @@ To start the config generator, open Matlab and then type:
 ```
 The previous example assumes you are building the code with [ROS/catkin python tool](/jhu-dvrk/sawIntuitiveResearchKit/wiki/CatkinBuild).  The first command will differ if you checked out the cisst/SAW code in a different directory (i.e. not `~/catkin/src`).  You can also browse through your directories using the `Current Folder` panel in Matlab.  Once you're in the `sawIntuitiveResearchKit/share` folder, right click on `configGUI.m` and select `Run`.  Do not open the `configGUI.fig` file.
 
-## 1. How to generate XML configuration file
+## Default Board IDs
+
+We strongly recommend to use the following mapping for the board IDs and controllers.  Many shared configuration files assume the following convention.
+
+| ID         | MTML | MTMR | ECM | PSM1 yellow | PSM2 green | PSM3 red | SUJ |
+|------------|------|------|-----|------|------|--------|--------|
+| Board ID 1 | 0    | 2    | 4   | 6    | 8    | 10 (A) | 12 (C) |
+| Board ID 2 | 1    | 3    | 5   | 7    | 9    | 11 (B) |        |
+
+
+## How to generate XML configuration file
 
 1. Choose the calibration file provided by Intuitive Surgical, mXXXX.cal or pXXXX.cal. The naming convention is that the first letter indicates device type with 'm' for master tool manipulator and 'p' for patient-side manipulator (slave), followed by the device serial number. The serial number can be found on the mechanical arm itself, on a silver label with multiple bar codes.   Look for the 'TRK ID'.
 
@@ -45,15 +56,13 @@ The previous example assumes you are building the code with [ROS/catkin python t
 
     ![XML config generator screenshot](/jhu-dvrk/sawIntuitiveResearchKit/wiki/matlab-config-generator.png)
 
+## Advanced parameters
+
+The following section is only for very specific cases.  Most users should ignore this!
+
 You can also set advanced parameters or overwrite the default settings using:
 
 1. Choose board ID: the board ID is the rotary switch value (4-bit from 0 to F), which should be unique among daisy-chained controller boards. The board ID should be set automatically based on the arm type using the following convention.  Not all Research Kit come with the ECM and the PSM3 but the board Id should be reserved nevertheless.  PSM on da Vinci come with color stickers, i.e. yellow, green and red.
-
-  |            | MTML | MTMR | ECM | PSM1 yellow | PSM2 green | PSM3 red | SUJ |
-  |------------|------|------|-----|------|------|--------|--------|
-  | Board ID 1 | 0    | 2    | 4   | 6    | 8    | 10 (A) | 12 (C) |
-  | Board ID 2 | 1    | 3    | 5   | 7    | 9    | 11 (B) |        |
-
 
    * To make sure the board IDs are physically set properly, you will have to open the controller enclosures.  The board ID can be changed by turning the rotary switch with a flat head screw driver.
 
@@ -69,7 +78,7 @@ You can also set advanced parameters or overwrite the default settings using:
 
 1. Choose drive direction.  You can hit the 'Default' button to restore the default values.  This multipliers (1 or -1) allow to change the direction of each axis.  This flag is used to make sure that the software uses the axis directions as defined in the Intuitive Research Kit User Manual.  It is important check the direction of each axis for each arm to make sure it corresponds to the documentation using the `sawIntuitiveResearchKitQtPID` or any other applications that allows you to monitor the potentiometers and encoder directions as well as torque directions.  If you find that the default directions don't match your hardware, please let us know. 
 
-## 2. Config Generator
+# Source Code
 
 This configuration generator consists of three files: 
 * configGUI.m: GUI logic 

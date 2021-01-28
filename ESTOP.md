@@ -1,20 +1,19 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+<!--ts-->
+   * [1. Summary](#1-summary)
+   * [2. Overview of Safety Chain](#2-overview-of-safety-chain)
+   * [3. Modular E-stop Chain (recommended)](#3-modular-e-stop-chain-recommended)
+   * [4. Monolithic E-stop Chain (not recommended)](#4-monolithic-e-stop-chain-not-recommended)
+   * [5. Issue with two 5-pin connectors](#5-issue-with-two-5-pin-connectors)
+   * [6. A quick note about grounding](#6-a-quick-note-about-grounding)
+   * [7. Miscellaneous](#7-miscellaneous)
+   * [8. Debugging](#8-debugging)
+      * [8.1. Test single FPGA-QLA board set (bypassing relays on QLA boards)](#81-test-single-fpga-qla-board-set-bypassing-relays-on-qla-boards)
+      * [8.2. Test single controller box with QLA relays in the loop](#82-test-single-controller-box-with-qla-relays-in-the-loop)
+      * [8.3 Hardware Debug](#83-hardware-debug)
 
-- [1. Summary](#1-summary)
-- [2. Overview of Safety Chain](#2-overview-of-safety-chain)
-- [3. Modular E-stop Chain (recommended)](#3-modular-e-stop-chain-recommended)
-- [4. Monolithic E-stop Chain (not recommended)](#4-monolithic-e-stop-chain-not-recommended)
-- [5. Issue with two 5-pin connectors](#5-issue-with-two-5-pin-connectors)
-- [6. A quick note about grounding](#6-a-quick-note-about-grounding)
-- [7. Miscellaneous](#7-miscellaneous)
-- [8. Debugging](#8-debugging)
-  - [8.1. Test single FPGA-QLA board set (bypassing relays on QLA boards)](#81-test-single-fpga-qla-board-set-bypassing-relays-on-qla-boards)
-  - [8.2. Test single controller box with QLA relays in the loop](#82-test-single-controller-box-with-qla-relays-in-the-loop)
-  - [8.3 Hardware Debug](#83-hardware-debug)
+<!-- Added by: anton, at: 2021-01-28T16:13-05:00 -->
 
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<!--te-->
 
 # 1. Summary
 

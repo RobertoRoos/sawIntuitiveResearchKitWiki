@@ -1,34 +1,33 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+<!--ts-->
+   * [Introduction](#introduction)
+   * [dVRK Head Sensor](#dvrk-head-sensor)
+      * [Hardware](#hardware)
+      * [Wiring](#wiring)
+      * [Physical setup](#physical-setup)
+      * [Software](#software)
+   * [daVinci Head Sensor](#davinci-head-sensor)
+      * [Wiring](#wiring-1)
+      * [Testing with qladisp](#testing-with-qladisp)
+      * [Software configuration](#software-configuration)
 
-- [Introduction](#introduction)
-- [dVRK Head Sensor](#dvrk-head-sensor)
-  - [Hardware](#hardware)
-  - [Wiring](#wiring)
-  - [Physical setup](#physical-setup)
-  - [Software](#software)
-- [daVinci Head Sensor](#davinci-head-sensor)
-  - [Wiring](#wiring-1)
-  - [Testing with `qladisp`](#testing-with-qladisp)
-  - [Software configuration](#software-configuration)
+<!-- Added by: anton, at: 2021-01-28T16:10-05:00 -->
 
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<!--te-->
 
 # Introduction
 
 The real da Vinci system uses a head sensor to detect if the operator is present.  Without the operator, the system will not enable the tele-operation.   For the dVRK, we have used a foot pedal as a dead man switch to detect if the operator is present (usually the "COAG" foot pedal).   This is a reasonable solution for brief experiments but it's not very convenient.   In this page we describe how to either create a "dVRK" head sensor from cheap parts or hack the existing da Vinci head sensor.  The later option requires a full da Vinci system and it's important to note that you will need to keep the plastic back covers off the surgeon's console to switch back and forth between the ISI controllers and dVRK controllers.
 
-# dVRK Head Sensor 
+# dVRK Head Sensor
 
 ## Hardware
  * 1 Digital Distance Sensor 10cm
    * http://www.pololu.com/product/1134
- * 20 Molex pin connectors (Digikey Part No. WM2510-ND) 
+ * 20 Molex pin connectors (Digikey Part No. WM2510-ND)
    * NOTE: we only need 6 pin connectors
- * 12-feet S-Video Cable 
+ * 12-feet S-Video Cable
     * just get one that is long enough
-    * any 3 wire cable would work, we just happened to have an old S-Video cable handy 
+    * any 3 wire cable would work, we just happened to have an old S-Video cable handy
  * 1 male DB 15 connector (for the connection to the dVRK controller)
  * 1 3-pin right angle connector (for the connection on the sensor side)
 
@@ -54,7 +53,7 @@ Notes:
 
   ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/head/dvrk-head-sensor-side.jpg)
 
-* Setup option 3: full surgeon's console.  If you have a full da Vinci, you can pull the forehead foam pad and sticj the wire underneath.  Alternatively you can make a custom cable and use the original da Vinci head sensor (see below).  
+* Setup option 3: full surgeon's console.  If you have a full da Vinci, you can pull the forehead foam pad and sticj the wire underneath.  Alternatively you can make a custom cable and use the original da Vinci head sensor (see below).
 
   ![](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/head/dVRK-head-sensor-full-system.jpg)
 

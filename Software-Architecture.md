@@ -1,30 +1,29 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+<!--ts-->
+   * [Overview](#overview)
+   * [Low level](#low-level)
+      * [FPGA/QLA boards](#fpgaqla-boards)
+      * [AmpIO library](#ampio-library)
+   * [C  ](#c)
+      * [Threads](#threads)
+      * [Robot IOs](#robot-ios)
+      * [PID controller](#pid-controller)
+      * [Arm classes](#arm-classes)
+      * [Tele-operation](#tele-operation)
+      * [Console](#console)
+   * [Qt widgets](#qt-widgets)
+      * [Robot IOs](#robot-ios-1)
+      * [PID controller](#pid-controller-1)
+      * [Arm classes](#arm-classes-1)
+      * [Tele-operation](#tele-operation-1)
+      * [Console](#console-1)
+   * [ROS](#ros)
+      * [Topics](#topics)
+      * [Python](#python)
+      * [Matlab](#matlab)
 
-- [Overview](#overview)
-- [Low level](#low-level)
-  - [FPGA/QLA boards](#fpgaqla-boards)
-  - [AmpIO library](#ampio-library)
-- [C++](#c)
-  - [Threads](#threads)
-  - [Robot IOs](#robot-ios)
-  - [PID controller](#pid-controller)
-  - [Arm classes](#arm-classes)
-  - [Tele-operation](#tele-operation)
-  - [Console](#console)
-- [Qt widgets](#qt-widgets)
-  - [Robot IOs](#robot-ios-1)
-  - [PID controller](#pid-controller-1)
-  - [Arm classes](#arm-classes-1)
-  - [Tele-operation](#tele-operation-1)
-  - [Console](#console-1)
-- [ROS](#ros)
-  - [Topics](#topics)
-  - [Python](#python)
-  - [Matlab](#matlab)
+<!-- Added by: anton, at: 2021-01-28T16:03-05:00 -->
 
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<!--te-->
 
 # Overview
 
