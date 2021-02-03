@@ -1,49 +1,5 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
-
-- [Robot IO (XML)](#robot-io-xml)
-  - [Automatic generation](#automatic-generation)
-  - [Porting between releases](#porting-between-releases)
-    - [Version 3 (dVRK 1.5)](#version-3-dvrk-15)
-- [Kinematics (JSON)](#kinematics-json)
-  - [PSMs](#psms)
-    - [DH parameters](#dh-parameters)
-    - [Tooltip offset](#tooltip-offset)
-    - [Coupling matrices](#coupling-matrices)
-    - [Tool engage parameters](#tool-engage-parameters)
-    - [Tool joint limits](#tool-joint-limits)
-    - [Base offset](#base-offset)
-    - [Going to zero position when homing](#going-to-zero-position-when-homing)
-  - [MTMs](#mtms)
-    - [DH parameters](#dh-parameters-1)
-    - [Base offset](#base-offset-1)
-  - [ECM](#ecm)
-    - [DH parameters](#dh-parameters-2)
-    - [Tooltip offset](#tooltip-offset-1)
-    - [Base offset](#base-offset-2)
-    - [Going to zero position when homing](#going-to-zero-position-when-homing-1)
-- [Console (JSON)](#console-json)
-  - [IO section](#io-section)
-    - [Period and port](#period-and-port)
-    - [Watchdog time-out](#watchdog-time-out)
-    - [Foot pedals](#foot-pedals)
-    - [FireWire protocol](#firewire-protocol)
-  - [Other devices](#other-devices)
-    - [Head sensor](#head-sensor)
-    - [Endoscope focus](#endoscope-focus)
-  - [Arms](#arms)
-    - [Name](#name)
-    - [Type](#type)
-    - [Period](#period)
-    - [IO](#io)
-    - [PID](#pid)
-    - [Simulation](#simulation)
-    - [Base frame](#base-frame)
-    - [Component and interface](#component-and-interface)
-  - [Teleoperation components](#teleoperation-components)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<!--ts-->
+<--!te-->
 
 You can find examples of configuration files in the "shared" directory:
 https://github.com/jhu-dvrk/sawIntuitiveResearchKit/tree/master/share
@@ -95,7 +51,7 @@ The safest solution is to restart from the calibrations files.  But, if you have
 * `Version` should be set to `4`.
 * `BitsToPosSI` and `VoltsToPosSI` now require a `Unit` to be specified.  The implicit units were `deg` and `mm` so if you don't change the `Scale` or `Offset`, make sure you add `Unit="deg" (for `Type="Revolute"`) or `Unit="mm"` (for `Type="Prismatic"`).
 * For MTMs, the axis "7", i.e. the 8th and last joint has been removed.  It was used for the Hall Effect sensor in the gripper.  We now use a separate file.  This allows to not enable power on the 8th axis.  So you need to update `NumOfActuator` and `NumOfJoints` to `7`, remove all the settings for the last joint, remove the `Potentiometers/Tolerance`for `Axis="7"` and finally remove the last column and row of `ActuatorToJointPosition` (resize matrix from 8x8 to 7x7).
-* For MTMs, you will need a new configuration file for the gripper.  The file's name must match the arm's name, for example: `sawRobotIO1394-MTMR-gripper-28247.xml`.  Replace the serial number with your serial number.  To create the file, you can either use the XML configuration generator or start from an existing file in `share/jhu-dVRK`.  Make sure you update the `Name`, `SN` and `BoardID`.  In any case, you should run the [gripper calibration tool](jhu-dvrk/sawIntuitiveResearchKit/wiki/Calibration#3-gripper-on-mtms) afterwards.
+* For MTMs, you will need a new configuration file for the gripper.  The file's name must match the arm's name, for example: `sawRobotIO1394-MTMR-gripper-28247.xml`.  Replace the serial number with your serial number.  To create the file, you can either use the XML configuration generator or start from an existing file in `share/jhu-dVRK`.  Make sure you update the `Name`, `SN` and `BoardID`.  In any case, you should run the [gripper calibration tool](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Calibration#3-gripper-on-mtms) afterwards.
 * For PSMs, assuming that your hardware can access the tool [Dallas chip](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Tool-Detection), you will need to add the following `<DallasChip BoardID="7" Name="PSM1-Dallas" />`.   The `BoardID` should match the board ID of the second board in the PSM controller, i.e. 7 for a PSM1, 9 for a PSM2 and 11 for a PSM3.  Make sure the `Name` also reflect the PSM number.
 
 # Kinematics (JSON)
