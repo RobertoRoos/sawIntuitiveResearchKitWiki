@@ -1,5 +1,5 @@
 <!--ts-->
-<--!te-->
+<!--te-->
 
 You can find examples of configuration files in the "shared" directory:
 https://github.com/jhu-dvrk/sawIntuitiveResearchKit/tree/master/share
