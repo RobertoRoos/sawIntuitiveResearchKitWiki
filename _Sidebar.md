@@ -19,7 +19,10 @@ Getting Started
 Advanced
 * [Software Architecture](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Software-Architecture)
 * [Config File formats](Configuration-File-Formats)
-* [Software Components APIs](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Components-APIs)
+* APIs
+  * [API 1.x](/jhu-dvrk/sawIntuitiveResearchKit/wiki/API-1.x)
+  * [API 2.x](/jhu-dvrk/sawIntuitiveResearchKit/wiki/API-2.x)
+  * [Coordinate Systems](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Coordinate-Systems)
 * [Teleoperation](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Teleoperation)
 * [Kinematics Simulation](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Kinematics-Simulation)
 * [Potentiometer Issues](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Debugging-Potentiometer-Issues)
