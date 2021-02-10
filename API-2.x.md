@@ -162,6 +162,7 @@ In general, we try to expose most C++ commands and events as ROS topics or servi
 
 ## Tele-operation
 
+* `console/teleop/enabled`
 * `console/teleop/enable`
 * `console/teleop/scale`
 * `console/teleop/set_scale`
