@@ -76,8 +76,6 @@ In general, we try to expose most C++ commands and events as ROS topics or servi
 
 ## PSM
 
-## SUJ
-
 * `jaw/measured_js`
 * `jaw/setpoint_js`
 * `jaw/servo_jf`
@@ -92,6 +90,8 @@ In general, we try to expose most C++ commands and events as ROS topics or servi
 * `io/tool`
 * `io/manip_clutch`
 * `io/suj_clutch`
+
+## SUJ
 
 # Tele-operation
 
