@@ -1,4 +1,19 @@
 <!--ts-->
+   * [Introduction](#introduction)
+   * [Console](#console)
+      * [Commands](#commands)
+      * [Feedback](#feedback)
+   * [Foot pedals](#foot-pedals)
+      * [Feedback](#feedback-1)
+   * [All arms](#all-arms)
+      * [Commands (read)](#commands-read)
+      * [Commands (write)](#commands-write)
+   * [MTMs](#mtms)
+      * [Commands (read)](#commands-read-1)
+      * [Commands (write)](#commands-write-1)
+
+<!-- Added by: anton, at: 2021-02-10T11:36-05:00 -->
+
 <!--te-->
 
 # Introduction

@@ -1,4 +1,10 @@
 <!--ts-->
+   * [Introduction](#introduction)
+   * [Individual arms](#individual-arms)
+   * [Setup Joints](#setup-joints)
+
+<!-- Added by: anton, at: 2021-02-10T11:36-05:00 -->
+
 <!--te-->
 
 # Introduction
