@@ -63,7 +63,7 @@ Then in CMake, configure and generate.   In the build tree, build using `make` a
 
 In CMake, use the generator "Unix Makefiles" and the source tree should be `/Users/you/dVRK/cisst-saw`.
 
-In CMake, change:
+In CMake, change the following settings (for reference, the [GitHub workflow](https://github.com/jhu-dvrk/dvrk-github-workflow/tree/master/.github/workflows) uses a CMake config file):
  * `CMAKE_BUILD_TYPE` to `Release`
  * `CMAKE_INSTALL_PREFIX` to `/Users/you/dVRK/install`
  * `CISSTNETLIB_DIR` to `/Users/you/dVRK/install`
@@ -79,7 +79,7 @@ In CMake, change:
  * `SAW_sawIntuitiveResearchKit` checked
  * `SAW_sawRobotIO1394` checked
 
-You should be able to configure and generate in CMake.  In your build tree for cisst-saw, `make -j`.  No need to build.
+You should be able to configure and generate in CMake.  In your build tree for cisst-saw, `make -j`.  No need to install.
 
 # Run the code
 
