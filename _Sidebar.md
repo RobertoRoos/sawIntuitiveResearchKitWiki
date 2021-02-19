@@ -5,7 +5,7 @@ Community
 * [Groups, timeline, map](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Timeline)
 * [Videos](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Videos)
 * [Publications](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Publications)
-* [Hamlyn Meetup 2016](/jhu-dvrk/sawIntuitiveResearchKit/wiki/HamlynMeetup2016)
+* [Meetings](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Meetings)
 
 Getting Started
 * [First Steps](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FirstSteps)
