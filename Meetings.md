@@ -12,7 +12,7 @@ Held online on June 30 2020.
  
 # 2017 Raven/dVRK User Group meeting
 
-Held at University of British Columbia, Vancouver, CA
+Held at University of British Columbia, Vancouver, CA (after IROS '97)
 
 # 2016 Hamlyn Meetup
 
