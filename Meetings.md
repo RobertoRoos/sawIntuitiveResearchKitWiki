@@ -20,7 +20,7 @@ The meet up happened was on Sunday, June 26th at Imperial College, London, UK
 
 * [PowerPoint presentation](https://github.com/jhu-dvrk/dvrk-presentations/raw/main/dVRK-Hamlyn-2016-user-meetup-no-video.pptx) (Anton)
 
-# March 2014 dVRK User Group
+# March 2014 dVRK User Group meeting
 
 Held at Johns Hopkins University, Baltimore, USA
 
