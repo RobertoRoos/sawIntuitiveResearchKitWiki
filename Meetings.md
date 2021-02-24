@@ -10,7 +10,7 @@ Held online on June 30 2020.
 
 * [PowerPoint presentation](https://github.com/jhu-dvrk/dvrk-presentations/raw/main/dVRK_2.0_2020_06.pptx)
 
-# 2018 Tutorial on Collaborative Robotics Toolkit (CRTK) and Open Platforms for Medical Robotics Research
+# 2018 Tutorial on Collaborative Robotics Toolkit (CRTK)
 
 Held on October 5 2018 in Madrid, Spain (IROS 2018): https://collaborative-robotics.github.io/iros-2018-tutorial.html
 
