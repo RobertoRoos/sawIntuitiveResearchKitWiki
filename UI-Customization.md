@@ -16,13 +16,10 @@ To install some extra styles:
 
 Since we use Qt for all GUIs, these options should work on all OSs but we've only tested them on Linux.
 
-### Oxygen style on Ubuntu 18.04
-
-<a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/gui/dvrk-style-oxygen.png"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/gui/dvrk-style-oxygen.png" width="600"></a>
-
-# QtCurve style on Ubuntu 18.04
-
-<a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/gui/dvrk-style-qt-curve.png"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/gui/dvrk-style-qt-curve.png" width="600"></a>
+* Oxygen style on Ubuntu 18.04<br>
+  <a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/gui/dvrk-style-oxygen.png"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/gui/dvrk-style-oxygen.png" width="600"></a>
+* QtCurve style on Ubuntu 18.04<br>
+  <a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/gui/dvrk-style-qt-curve.png"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/gui/dvrk-style-qt-curve.png" width="600"></a>
 
 ## Audio
 
