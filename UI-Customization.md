@@ -5,6 +5,9 @@
 Starting with the dVRK 2.0, we added support for a "pseudo" dark mode and Qt styles.  If you're using a Qt based window manager you will likely not use these features (e.g. KDE).  For the default Ubuntu window managers, these extra options allow some user customization of the dVRK GUIs.
 
 To activate the dark mode, add the option `-D` when starting the dVRK console application.  This applies to the plain application `sawIntuitiveResearchKitQtConsoleJSON` as well as the ROS node `dvrk_robot dvrk_console_json`.
+
+<a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/gui/dvrk-style-dark.png"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/gui/dvrk-style-dark.png" width="600"></a>
+
 To change the Qt style, use the option `-S`.  To figure out which Qt styles are available, use a dummy style that doesn't exist: `-S unicorn` (let's hope no one will ever create a Qt style named "unicorn").  The application will fail to launch but it will display a list of available styles.
 
 To install some extra styles:
@@ -12,6 +15,14 @@ To install some extra styles:
 * Ubuntu 20.04: `sudo apt install qt5-style*`
 
 Since we use Qt for all GUIs, these options should work on all OSs but we've only tested them on Linux.
+
+### Oxygen style on Ubuntu 18.04
+
+<a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/gui/dvrk-style-oxygen.png"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/gui/dvrk-style-oxygen.png" width="600"></a>
+
+# QtCurve style on Ubuntu 18.04
+
+<a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/gui/dvrk-style-qt-curve.png"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/gui/dvrk-style-qt-curve.png" width="600"></a>
 
 ## Audio
 
