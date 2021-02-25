@@ -7,10 +7,10 @@
       * [Software Ecosystem](#software-ecosystem)
    * [Updates](#updates)
       * [Firmware](#firmware)
-      * [Software](#software-1)
+      * [Software](#software)
    * [Acknowledgments](#acknowledgments)
 
-<!-- Added by: anton, at:  -->
+<!-- Added by: anton, at: 2021-02-25T10:06-05:00 -->
 
 <!--te-->
 
