@@ -23,6 +23,7 @@ Advanced
   * [API 1.x](/jhu-dvrk/sawIntuitiveResearchKit/wiki/API-1.x)
   * [API 2.x](/jhu-dvrk/sawIntuitiveResearchKit/wiki/API-2.x)
   * [Coordinate Systems](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Coordinate-Systems)
+* [UI Customization](/jhu-dvrk/sawIntuitiveResearchKit/wiki/UI-Customization)
 * [Teleoperation](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Teleoperation)
 * [Kinematics Simulation](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Kinematics-Simulation)
 * [Potentiometer Issues](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Debugging-Potentiometer-Issues)
