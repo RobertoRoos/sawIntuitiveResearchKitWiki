@@ -26,6 +26,6 @@ Since we use Qt for all GUIs, these options should work on all OSs but we've onl
 
 Starting with the dVRK 1.6 we added some audio feedback for some console events (operator present, pedal pressed...).  The dVRK applications rely on the [*sawTextToSpeech* component](https://github.com/jhu-saw/sawTextToSpeech) for both text-to-speech and beeps.  These commands are exposed by the ROS node under the topics:
 * `/console/string_to_speech`: expects a plain string
-* `/console/beep`: expect a `std_msgs/Float64MultiArray` with 3 values: duration (in seconds), frequency and volume (0 to 1).   For example `data: [0.5, 3000.0, 1.0]`
+* `/console/beep`: expects a `std_msgs/Float64MultiArray` with 3 values: duration (in seconds), frequency and volume (0 to 1).   For example `data: [0.5, 3000.0, 1.0]`
 
 See the [*sawTextToSpeech* page](https://github.com/jhu-saw/sawTextToSpeech) for requirements.
