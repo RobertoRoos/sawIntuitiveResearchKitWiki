@@ -20,7 +20,8 @@ Since we use Qt for all GUIs, these options should work on all OSs but we've onl
   <a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/gui/dvrk-style-oxygen.png"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/gui/dvrk-style-oxygen.png" width="600"></a>
 * QtCurve style on Ubuntu 18.04<br>
   <a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/gui/dvrk-style-qt-curve.png"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/gui/dvrk-style-qt-curve.png" width="600"></a>
-
+*  ukui-dark style on Ubuntu 20.04<br>
+  <a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/gui/dvrk-style-ukui-dark.png"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/gui/dvrk-style-ukui-dark.png" width="600"></a>
 ## Audio
 
 Starting with the dVRK 1.6 we added some audio feedback for some console events (operator present, pedal pressed...).  The dVRK applications rely on the [*sawTextToSpeech* component](https://github.com/jhu-saw/sawTextToSpeech) for both text-to-speech and beeps.  These commands are exposed by the ROS node under the topics:
