@@ -66,7 +66,15 @@ Notes:
  There is no specific configuration to perform at that point provided that you connect the head sensor on the same controller as the foot pedals.
  * For **rev 1.4** and below, rerun MATLAB XML config generator to make sure the digital input is renamed "HEAD"
  * For **rev 1.5** and above, HEAD is already included in the IO foot pedal XML files
- * Update JSON config file to set the presence sensor or point to the IO foot pedal configuration file (rev 1.5)
+ * Update your JSON config file to set the presence sensor or point to the IO foot pedal configuration file (rev 1.5)
+    ```json
+    "console-inputs": {
+        "operator-present": {
+            "component": "io",  // hard coded in source code, file mtsIntuitiveResearchKitConsole.cpp
+            "interface": "Head" // name of the button you want to use, defined in sawRobotIO1394 configuration file
+        }
+    }
+    ```
 
 # daVinci Head Sensor
 
