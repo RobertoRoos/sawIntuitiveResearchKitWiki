@@ -10,6 +10,8 @@
 
 <!--te-->
 
+For all acronyms see [FAQ](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FAQ).
+
 # da Vinci Classic Active Arm Controllers (MTM, PSM, ECM)
 
 Each da Vinci arm (MTM, PSM, ECM) is controlled by a single box, shown below. A similar controller box is used for the Setup Joint controller (see below).  The controllers are built around 2 QLA/FPGA stacks.  They are designed to interface with the da Vinci Classic (first generation) active arms, both on the patient and surgeon's side.  They provide inputs for the potentiometers and encoders as well as miscellaneous digital IOs (foot pedals, buttons...).  For motor control they use linear amplifiers with current feedback.  All controllers come with FireWire interfaces so they can be daisy chained and communicate with a computer.  Later controllers came with an Ethernet adapter (supported with firmware 7+ and software 2+).  See also [controller versions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Board-Versions). 
@@ -57,4 +59,26 @@ Internally, each controller box contains two FPGA/QLA board sets, one dMIB (da V
 
 # da Vinci Classis Setup Joint Controller
 
- 
+The dVRK SUJ controller supports all the features available on the daVinci patient cart, i.e.:
+* Read joint positions. The dVRK QLA has 4 analog to digital inputs so it reads the potentiometer values sequentially using a multiplexer.
+* Release brakes.  The dVRK controller uses the linear amps of the QLA dedicated to motor control to release the brakes. 
+* Lift PSM3.  The dVRK FPGA generates a PWM signal sent to the PWM power unit included on the dSIB.
+
+For more details regarding the software features and configuration, see the [SUJ page](jhu-dvrk/sawIntuitiveResearchKit/wiki/SUJ).
+
+## Exterior Connectors
+
+* One AC power connector, with on/off switch
+* 4 156-pin connectors (one per SUJ arm)
+* Two FireWire connectors
+* One Ethernet connecttor
+* Two 5-pin safety chain connectors; see [ESTOP page](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ESTOP)
+
+## Internal Components
+
+Internally, each controller box contains one FPGA/QLA board set, one dSIB (da Vinci SUJ Interface Board), LED boards, power supplies and relays.
+
+  ![Controller layout](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj-controller-layout.jpg)
+
+* All boxes contain a 12V (50W) logic power supply that provides power to the FPGA board
+* Each box also contains one brake power supply connected to the QLA (48V)
