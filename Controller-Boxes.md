@@ -67,7 +67,7 @@ The dVRK SUJ controller supports all the features available on the daVinci patie
 * Release brakes.  The dVRK controller uses the linear amps of the QLA dedicated to motor control to release the brakes. 
 * Lift PSM3.  The dVRK FPGA generates a PWM signal sent to the PWM power unit included on the dSIB.
 
-For more details regarding the software features and configuration, see the [SUJ page](jhu-dvrk/sawIntuitiveResearchKit/wiki/SUJ).
+For more details regarding the software features and configuration, see the [SUJ page](/jhu-dvrk/sawIntuitiveResearchKit/wiki/SUJ).
 
 ## Exterior Connectors
 
