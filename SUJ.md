@@ -57,12 +57,7 @@ The brakes are controlled per arm, not per joint.  Finally, some patient carts c
 
 ### dVRK SUJ controller
 
-**This controller is in final phase of testing and close to production (as of December 2019)**
-
-The dVRK SUJ controller supports all the features available on the daVinci patient cart, i.e.:
-* Read joint positions. The dVRK QLA has 4 analog to digital inputs so it reads the potentiometer values sequentially using a multiplexer.
-* Release brakes.  The dVRK controller uses the linear amps of the QLA dedicated to motor control to release the brakes. 
-* Lift PSM3.  The dVRK FPGA generates a PWM signal sent to the PWM power unit included on the dSIB.
+See [dVRK controllers page](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Controller-Boxes) for hardware description.
 
 ### dVRK software
 
