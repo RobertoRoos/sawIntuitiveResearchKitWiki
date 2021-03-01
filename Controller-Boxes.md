@@ -74,11 +74,12 @@ For more details regarding the software features and configuration, see the [SUJ
 * One Ethernet connecttor
 * Two 5-pin safety chain connectors; see [ESTOP page](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ESTOP)
 
+ ![SUJ controller exterior](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/suj-controller-exterior.png)
+
 ## Internal Components
 
-Internally, each controller box contains one FPGA/QLA board set, one dSIB (da Vinci SUJ Interface Board), LED boards, power supplies and relays.
+Internally, each controller box contains one FPGA/QLA board set, one dSIB (da Vinci SUJ Interface Board), LED boards and 2 power supplies:
+* 12V (50W) logic power supply that provides power to the FPGA board
+* Brake power supply connected to the QLA (48V)
 
-  ![Controller layout](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj-controller-layout.jpg)
-
-* All boxes contain a 12V (50W) logic power supply that provides power to the FPGA board
-* Each box also contains one brake power supply connected to the QLA (48V)
+  ![SUJ controller interior](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/suj-controller-interior.png)
