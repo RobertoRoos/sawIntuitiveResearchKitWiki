@@ -1,12 +1,15 @@
 <!--ts-->
-   * [Controller Boxes (MTM, PSM, ECM)](#controller-boxes-mtm-psm-ecm)
+   * [da Vinci Classic Active Arm Controllers (MTM, PSM, ECM)](#da-vinci-classic-active-arm-controllers-mtm-psm-ecm)
       * [Exterior Connectors](#exterior-connectors)
       * [Internal Components](#internal-components)
          * [Custom Boards (PCBs)](#custom-boards-pcbs)
          * [Power Supplies](#power-supplies)
-   * [Hardware modifications](#hardware-modifications)
+      * [Hardware modifications](#hardware-modifications)
+   * [da Vinci Classis Setup Joint Controller](#da-vinci-classis-setup-joint-controller)
+      * [Exterior Connectors](#exterior-connectors-1)
+      * [Internal Components](#internal-components-1)
 
-<!-- Added by: anton, at:  -->
+<!-- Added by: anton, at: 2021-03-01T15:40-05:00 -->
 
 <!--te-->
 
