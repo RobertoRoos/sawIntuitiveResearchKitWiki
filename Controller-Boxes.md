@@ -10,11 +10,12 @@
 
 <!--te-->
 
-# Controller Boxes (MTM, PSM, ECM)
+# da Vinci Classic Active Arm Controllers (MTM, PSM, ECM)
 
-Each da Vinci arm (MTM, PSM, ECM) is controlled by a single box, shown below. A similar controller box is used for the Setup Joint controller.
+Each da Vinci arm (MTM, PSM, ECM) is controlled by a single box, shown below. A similar controller box is used for the Setup Joint controller (see below).  The controllers are built around 2 QLA/FPGA stacks.  They are designed to interface with the da Vinci Classic (first generation) active arms, both on the patient and surgeon's side.  They provide inputs for the potentiometers and encoders as well as miscellaneous digital IOs (foot pedals, buttons...).  For motor control they use linear amplifiers with current feedback.  All controllers come with FireWire interfaces so they can be daisy chained and communicate with a computer.  Later controllers came with an Ethernet adapter (supported with firmware 7+ and software 2+).  See also [controller versions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Board-Versions). 
 
 ## Exterior Connectors
+
 * One AC power connector, with on/off switch
 * One 156-pin connector (for the MTM, PSM, or ECM)
 * Two FireWire connectors
@@ -46,10 +47,14 @@ Internally, each controller box contains two FPGA/QLA board sets, one dMIB (da V
   * 24V Motor Power Supply (For PSM): https://www.astrodynetdi.com/ecatalog/power-supplies/PMK225S-24U
   * 36V Motor Power Supply (For ECM): https://www.astrodynetdi.com/ecatalog/power-supplies/PMK225S-36U
 
-# Hardware modifications
+## Hardware modifications
 
 * dMIB:
   * [ECM switch for SUJ](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Full-da-Vinci-dMIB-pre-2015)
   * [PSM Dallas chip for tool detection](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Tool-Detection)
 * QLAs:
   * [Heat sink and fan](/jhu-dvrk/sawIntuitiveResearchKit/wiki/QLA-Heat-Sink)
+
+# da Vinci Classis Setup Joint Controller
+
+ 
