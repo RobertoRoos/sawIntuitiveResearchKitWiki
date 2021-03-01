@@ -5,7 +5,7 @@
          * [Custom Boards (PCBs)](#custom-boards-pcbs)
          * [Power Supplies](#power-supplies)
       * [Hardware modifications](#hardware-modifications)
-   * [da Vinci Classis Setup Joint Controller](#da-vinci-classis-setup-joint-controller)
+   * [da Vinci Classic Setup Joint Controller](#da-vinci-classic-setup-joint-controller)
       * [Exterior Connectors](#exterior-connectors-1)
       * [Internal Components](#internal-components-1)
 
@@ -60,7 +60,7 @@ Internally, each controller box contains two FPGA/QLA board sets, one dMIB (da V
 * QLAs:
   * [Heat sink and fan](/jhu-dvrk/sawIntuitiveResearchKit/wiki/QLA-Heat-Sink)
 
-# da Vinci Classis Setup Joint Controller
+# da Vinci Classic Setup Joint Controller
 
 The dVRK SUJ controller supports all the features available on the daVinci patient cart, i.e.:
 * Read joint positions. The dVRK QLA has 4 analog to digital inputs so it reads the potentiometer values sequentially using a multiplexer.
