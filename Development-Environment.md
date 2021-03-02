@@ -5,8 +5,9 @@
    * [Set permission for 1394 device](#set-permission-for-1394-device)
       * [Convenient solution](#convenient-solution)
       * [Safer solution](#safer-solution)
+   * [Testing connectivity](#testing-connectivity)
 
-<!-- Added by: anton, at: 2021-01-28T16:01-05:00 -->
+<!-- Added by: adeguet1, at: 2021-03-02T13:05-05:00 -->
 
 <!--te-->
 
