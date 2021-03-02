@@ -114,7 +114,7 @@ FirewirePort::Init: successfully initialized port 0
 Using libraw1394 version 2.1.2
 FirewirePort::Init: successfully disabled cycle start packet
 FirewirePort::InitNodes: base node id = ffc0
-BasePort::ScanNodes: building node map for d nodes:
+BasePort::ScanNodes: building node map for 13 nodes:
   Node 0, BoardId = c, Firmware Version = 7
   Node 1, BoardId = a, Firmware Version = 7
   Node 2, BoardId = b, Firmware Version = 7
