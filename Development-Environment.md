@@ -105,7 +105,7 @@ Once a user has been added to the `fpgaqla` group, they need to logout/login so 
 
 # Testing connectivity
 
-There are a few ways to test that your controllers are properly connected.  You can start with the higher level command line application provided along the dVRK software, `qladisp`.  Just type `qladisp` in a terminal (without options) and the output should show the list of boards found with their board Id and firmware version.  For example:
+There are a few ways to test that your controllers are properly connected.  You can start with the command line application provided with the dVRK software `qladisp`.  Just type `qladisp` in a terminal (without options) and the output should show the list of boards found with their board Id and firmware version.  For example:
 ```sh
 Trying to detect boards on port:
 ParseOptions: no option provided, using default fw:0
@@ -152,7 +152,7 @@ crw-rw-rw- 1 root fpgaqla 243,  9 Mar  2 11:45 /dev/fw9
 
 You should have two `fw` devices created for each controllers (except 1 for SUJ controller).  Note that `fw0` is the FireWire adapter on the PC itself.  If you have multiple FireWire cards on your PC, the first nodes will correspond to the cards on the PC (e.g. for 2 cards, `fw0` and `fw1`).
 
-**Very important note:** The `fw` devices should be numbered contiguously, i.e. there shouldn't be any gap between the numbers.  It there are some gaps, the FireWire bus initialization likely failed.   You can force a bus reset by unplugging and re-plugging the FireWire cable on your PC.
+**Very important note:** The `fw` devices should be numbered contiguously, i.e. there shouldn't be any gap between the numbers.  It there are some gaps, the FireWire bus initialization likely failed.  This can happen when FireWire cables are unplugged and re-plugged too fast for the kernel, make sure you wait a few seconds between steps.  If this happens, you can force a bus reset by unplugging, waiting 5 seconds and re-plugging the FireWire cable on your PC.
 
 Lastly, you can also monitor the kernel messages using the command `dmesg -w`.  Start the command in a separate terminal and leave it alone while plugging/unplugging the FireWire cables.  You should see messages re. the creation of FireWire devices:
 ```sh
@@ -165,5 +165,6 @@ Lastly, you can also monitor the kernel messages using the command `dmesg -w`.  
 The example above shows the output for firmware 7+.  With older firmware versions, you will get some warnings/errors you can ignore.  For firmware 7, the output is quite useful:
   * **fa610e**3f00000007: **fa610e** is the vendor Id, i.e. JHU/dVRK
   * fa610e**3**f00000007: **3** is the board Id
-  * fa610e3**f**00000007: **f** is the FPGA board type, i.e. **f** for FireWire only, **e** for boards with Ethernet adapter 
-  * fa610e3f0000000**7**: **7** is the firmware version 
+  * fa610e3**f**00000007: **f** is the FPGA board type, i.e. **f** for FireWire only, **e** for boards with Ethernet adapter (see [controller versions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Board-Versions)
+  * fa610e3f0000000**7**: **7** is the firmware version
+
