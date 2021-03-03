@@ -104,7 +104,9 @@ For all additional users, you will need to add the new user to the group.   To f
 ```sh
    sudo adduser put_the_new_user_id_here fpgaqla
 ```
-Once a user has been added to the `fpgaqla` group, they need to logout/login so the group membership can take effect.   To check if the group membership is correct, the user can use the shell command `id`.
+Once a user has been added to the `fpgaqla` group, they ne[455344.152159] firewire_core 0000:04:00.0: skipped unsupported ROM entry 879e7ffe at fffff00005c0
+[455344.152178] firewire_core 0000:04:00.0: skipped unsupported ROM entry 99df7fe9 at fffff00005c0
+ed to logout/login so the group membership can take effect.   To check if the group membership is correct, the user can use the shell command `id`.
 
 # Testing connectivity
 
@@ -181,5 +183,5 @@ The example above shows the output for firmware 7+.  With older firmware version
 For firmware 7, the output is quite useful:
   * **fa610e**3f00000007: **fa610e** is the vendor Id, i.e. JHU/dVRK
   * fa610e**3**f00000007: **3** is the board Id
-  * fa610e3**f**00000007: **f** is the FPGA board type, i.e. **f** for FireWire only, **e** for boards with Ethernet adapter (see [controller versions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Board-Versions)
+  * fa610e3**f**00000007: **f** is the FPGA board type, i.e. **f** for FireWire only, **e** for boards with Ethernet adapter (see [controller versions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Board-Versions))
   * fa610e3f0000000**7**: **7** is the firmware version
