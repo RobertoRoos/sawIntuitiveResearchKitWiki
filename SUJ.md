@@ -296,10 +296,17 @@ To configure the SUJs in simulation mode, you will need to add the following in 
 For the rest of your console configuration and more specifically settings for the `base-frame`, see the `console-SUJ-*.json` files in [`share/jhu-daVinci`](/jhu-dvrk/sawIntuitiveResearchKit/tree/master/share/jhu-daVinci) directory.
 
 In simulation mode, when you start the dVRK software, all the SUJs joint values are set to zero.  You have to send the proper joint values using ROS topics.  Note that all values should be using SI units (meters for the first joint and radians for all remaining joitns) and all arms expect 6 values (the ECM only need 4 so set the 5th and 6th values to `0.0`).  The ROS topics to use are:
-* `/dvrk/SUJ/ECM/set_position_joint`
-* `/dvrk/SUJ/PSM1/set_position_joint`
-* `/dvrk/SUJ/PSM2/set_position_joint`
-* `/dvrk/SUJ/PSM3/set_position_joint`
+* dVRK 1.7:
+  * `/dvrk/SUJ/ECM/set_position_joint`
+  * `/dvrk/SUJ/PSM1/set_position_joint`
+  * `/dvrk/SUJ/PSM2/set_position_joint`
+  * `/dvrk/SUJ/PSM3/set_position_joint`
+* dVRK 2:
+  * `/SUJ/ECM/move_jp`
+  * `/SUJ/PSM1/move_jp`
+  * `/SUJ/PSM2/move_jp`
+  * `/SUJ/PSM3/move_jp`
+
 
 You can send your joint values from the command line using the `rostopic pub` command.  For example:
 ```sh
