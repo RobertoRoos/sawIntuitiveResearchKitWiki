@@ -6,8 +6,11 @@
       * [Convenient solution](#convenient-solution)
       * [Safer solution](#safer-solution)
    * [Testing connectivity](#testing-connectivity)
+      * [qladisp](#qladisp)
+      * [ls -l /dev/fw*](#ls--l-devfw)
+      * [dmesg -w](#dmesg--w)
 
-<!-- Added by: adeguet1, at: 2021-03-02T13:05-05:00 -->
+<!-- Added by: anton, at: 2021-03-03T11:20-05:00 -->
 
 <!--te-->
 
