@@ -293,7 +293,7 @@ To configure the SUJs in simulation mode, you will need to add the following in 
         }
 ```
 
-For the rest of your console configuration and more specifically settings for the `base-frame`, see the `console-SUJ-*.json` files in [`share/jhu-daVinci`](/jhu-dvrk/sawIntuitiveResearchKit/tree/master/share/jhu-daVinci) directory.
+For the rest of your console configuration and more specifically settings for the `base-frame`, see the `console-SUJ-*.json` files in [`share/jhu-daVinci`](/jhu-dvrk/sawIntuitiveResearchKit/tree/master/share/jhu-daVinci) directory and the file `console-patient-side-simulated.json` in `share/console`.
 
 In simulation mode, when you start the dVRK software, all the SUJs joint values are set to zero.  You have to send the proper joint values using ROS topics.  Note that all values should be using SI units (meters for the first joint and radians for all remaining joitns) and all arms expect 6 values (the ECM only need 4 so set the 5th and 6th values to `0.0`).  The ROS topics to use are:
 * `/SUJ/ECM/move_jp`
