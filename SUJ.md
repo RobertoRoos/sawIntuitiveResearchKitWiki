@@ -63,6 +63,8 @@ See [dVRK controllers page](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Controller-Bo
 
 The dVRK software stack provides all the functions and parameters needed to compute the forward kinematic of the SUJ arms based on the joint values.  Furthermore, it maintains the transformation tree between all the kinematic chains so that the PSM tip will be defined wrt the ECM tip (including active ECM motion).
 
+**Important note:** The SUJ arms are not very accurate.  The overall accuracy of the PSM tip wrt the ECM tip should be within +/- 5 cm (centimeters) and a few degrees.  They are designed to provide an estimated base frame for a tele operation task with a human in the loop.  In that case, relative translations don't matter and relative orientation has to be a reasonable estimate (5 to 10 degrees error doesn't affect performance significantly).  If you need a more precise estimation for the PSM position wrt the ECM, you will need to implement your own registration method.
+
 Physical buttons are also used by the software to release the SUJ brakes and the SUJ PSM3 lift.  The following "buttons" are supported:
 * Physical button on SUJ arms (black handle).   The only SUJ arms with this button are the SUJ PSM1 and SUJ PSM2.
 * Physical button on the actual arm (i.e. ECM or PSM).  On the ECM, black handle on top of parallel link.  On the PSMs, white button on the side of the parallel link.  **Note:** the software can only handle these buttons if the actual arm controller (i.e. ECM, PSM1, PSM2 and/or PSM3) is used by the dVRK software since these buttons are wired along the other arm signals.
