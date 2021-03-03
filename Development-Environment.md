@@ -105,6 +105,8 @@ Once a user has been added to the `fpgaqla` group, they need to logout/login so 
 
 # Testing connectivity
 
+## `qladisp`
+
 There are a few ways to test that your controllers are properly connected.  You can start with the command line application provided with the dVRK software `qladisp`.  Just type `qladisp` in a terminal (without options) and the output should show the list of boards found with their board Id and firmware version.  For example:
 ```sh
 Trying to detect boards on port:
@@ -132,6 +134,8 @@ BasePort::ScanNodes: building node map for 13 nodes:
 ```
 This is the output for a full system.  For most systems, you should see two boards per controller/arm.
 
+## `ls -l /dev/fw*`
+
 If this doesn't work, check that all FireWire devices have been found and created with the correct files permissions using `ls -al /dev/fw*`.   The output should look like:
 ```sh
 crw-rw-rw- 1 root fpgaqla 243,  0 Feb 12 09:31 /dev/fw0
@@ -154,6 +158,8 @@ You should have two `fw` devices created for each controllers (except 1 for SUJ 
 
 **Very important note:** The `fw` devices should be numbered contiguously, i.e. there shouldn't be any gap between the numbers.  It there are some gaps, the FireWire bus initialization likely failed.  This can happen when FireWire cables are unplugged and re-plugged too fast for the kernel, make sure you wait a few seconds between steps.  If this happens, you can force a bus reset by unplugging, waiting 5 seconds and re-plugging the FireWire cable on your PC.
 
+## `dmesg -w`
+
 Lastly, you can also monitor the kernel messages using the command `dmesg -w`.  Start the command in a separate terminal and leave it alone while plugging/unplugging the FireWire cables.  You should see messages re. the creation of FireWire devices:
 ```sh
 [2413623.229296] firewire_core 0000:09:04.0: created device fw8: GUID fa610e3f00000007, S400
@@ -162,9 +168,15 @@ Lastly, you can also monitor the kernel messages using the command `dmesg -w`.  
 [2413623.229398] firewire_core 0000:09:04.0: created device fw6: GUID fa610e8f00000007, S400
 ```
 
-The example above shows the output for firmware 7+.  With older firmware versions, you will get some warnings/errors you can ignore.  For firmware 7, the output is quite useful:
+The example above shows the output for firmware 7+.  With older firmware versions, you will get some warnings/errors you can ignore:
+```sh
+[455344.152159] firewire_core 0000:04:00.0: skipped unsupported ROM entry 879e7ffe at fffff00005c0
+[455344.152178] firewire_core 0000:04:00.0: skipped unsupported ROM entry 99df7fe9 at fffff00005c0
+...
+```
+
+For firmware 7, the output is quite useful:
   * **fa610e**3f00000007: **fa610e** is the vendor Id, i.e. JHU/dVRK
   * fa610e**3**f00000007: **3** is the board Id
   * fa610e3**f**00000007: **f** is the FPGA board type, i.e. **f** for FireWire only, **e** for boards with Ethernet adapter (see [controller versions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Board-Versions)
   * fa610e3f0000000**7**: **7** is the firmware version
-
