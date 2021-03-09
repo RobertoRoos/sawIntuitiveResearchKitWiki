@@ -9,7 +9,7 @@
       * [qladisp](#qladisp)
       * [ls -l /dev/fw*](#ls--l-devfw)
       * [dmesg -w](#dmesg--w)
-      * [udevadmin](#udevadmin)
+      * [udevadm](#udevadm)
 
 <!-- Added by: anton, at: 2021-03-09T15:00-05:00 -->
 
@@ -187,7 +187,7 @@ For firmware 7, the output is quite useful:
   * fa610e3**f**00000007: **f** is the FPGA board type, i.e. **f** for FireWire only, **e** for boards with Ethernet adapter (see [controller versions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Board-Versions))
   * fa610e3f0000000**7**: **7** is the firmware version
 
-## `udevadmin`
+## `udevadm`
 
 Lastly, once the controllers are properly connected you can check all the attributes using:
 ```sh
