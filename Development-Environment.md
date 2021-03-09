@@ -165,7 +165,7 @@ You should have two `fw` devices created for each controllers (except 1 for SUJ 
 
 ## `dmesg -w`
 
-Lastly, you can also monitor the kernel messages using the command `dmesg -w`.  Start the command in a separate terminal and leave it alone while plugging/unplugging the FireWire cables.  You should see messages re. the creation of FireWire devices:
+You can also monitor the kernel messages using the command `dmesg -w`.  Start the command in a separate terminal and leave it alone while plugging/unplugging the FireWire cables.  You should see messages re. the creation of FireWire devices:
 ```sh
 [2413623.229296] firewire_core 0000:09:04.0: created device fw8: GUID fa610e3f00000007, S400
 [2413623.229365] firewire_core 0000:09:04.0: created device fw11: GUID fa610e2f00000007, S400
@@ -174,7 +174,7 @@ Lastly, you can also monitor the kernel messages using the command `dmesg -w`.  
 ```
 
 The example above shows the output for firmware 7+.  With older firmware versions, you will get some warnings/errors you can ignore:
-```sh
+```
 [455344.152159] firewire_core 0000:04:00.0: skipped unsupported ROM entry 879e7ffe at fffff00005c0
 [455344.152178] firewire_core 0000:04:00.0: skipped unsupported ROM entry 99df7fe9 at fffff00005c0
 ...
@@ -185,3 +185,25 @@ For firmware 7, the output is quite useful:
   * fa610e**3**f00000007: **3** is the board Id
   * fa610e3**f**00000007: **f** is the FPGA board type, i.e. **f** for FireWire only, **e** for boards with Ethernet adapter (see [controller versions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Board-Versions))
   * fa610e3f0000000**7**: **7** is the firmware version
+
+## `udevadmin`
+
+Lastly, once the controllers are properly connected you can check all the attributes using:
+```sh
+udevadm info --name=/dev/fw1 --attribute-walk  | less
+```
+
+The output will include the info provided by `dmesg` and more:
+```
+ looking at device '/devices/pci0000:00/0000:00:1c.4/0000:03:00.0/0000:04:00.0/fw1':
+    KERNEL=="fw1"
+    SUBSYSTEM=="firewire"
+    DRIVER==""
+    ATTR{guid}=="0xfa610e6f00000007"
+    ATTR{is_local}=="0"
+    ATTR{model}=="0x000001"
+    ATTR{model_name}=="FPGA1/QLA"
+    ATTR{units}==""
+    ATTR{vendor}=="0xfa610e"
+    ATTR{vendor_name}=="JHU LCSR"
+```
