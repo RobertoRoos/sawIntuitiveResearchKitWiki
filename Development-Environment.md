@@ -9,8 +9,9 @@
       * [qladisp](#qladisp)
       * [ls -l /dev/fw*](#ls--l-devfw)
       * [dmesg -w](#dmesg--w)
+      * [udevadmin](#udevadmin)
 
-<!-- Added by: anton, at: 2021-03-03T11:20-05:00 -->
+<!-- Added by: anton, at: 2021-03-09T15:00-05:00 -->
 
 <!--te-->
 
