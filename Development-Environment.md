@@ -106,9 +106,7 @@ For all additional users, you will need to add the new user to the group.   To f
 ```sh
    sudo adduser put_the_new_user_id_here fpgaqla
 ```
-Once a user has been added to the `fpgaqla` group, they ne[455344.152159] firewire_core 0000:04:00.0: skipped unsupported ROM entry 879e7ffe at fffff00005c0
-[455344.152178] firewire_core 0000:04:00.0: skipped unsupported ROM entry 99df7fe9 at fffff00005c0
-ed to logout/login so the group membership can take effect.   To check if the group membership is correct, the user can use the shell command `id`.
+Once a user has been added to the `fpgaqla` group, they need to logout/login so the group membership can take effect.   To check if the group membership is correct, the user can use the shell command `id`.
 
 # Testing connectivity
 
