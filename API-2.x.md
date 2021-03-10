@@ -28,19 +28,21 @@ Each component of the dVRK described in the [software architecture](/jhu-dvrk/sa
 
 In general, we try to expose most C++ commands and events as ROS topics or services under the same name.  Starting with the dVRK release 2.0, we are using the [CRTK naming conventions](https://github.com/collaborative-robotics/documentation/wiki/Robot-API).  There are also some commands very specific to the dVRK not covered by CRTK.  These can be found in [`dvrk_console.cpp`](https://github.com/jhu-dvrk/dvrk-ros/blob/master/dvrk_robot/src/dvrk_console.cpp).  
 
+To determine the payloads on ROS, use `rostopic info`.
+
 # Arms
 
 ## All
 
 ### Operating state
 
-* `state_command`: see CRTK
-* `operating_state`: see CRTK
-* `desired_state`: dVRK specific.  Uses the CRTK state whenever possible
-* `error`: dVRK specific.  Error messages, can be used for custom GUI.  For ROS, these messages are also sent as errors for ROS log.
-* `warning`: dVRK specific.  Warning messages, can be used for custom GUI.  For ROS, these messages are also sent as warnings for ROS log.
-* `status`:  dVRK specific.  Status messages, can be used for custom GUI.  For ROS, these messages are also sent as status messages for ROS log.
-* `goal_reached`: dVRK specific.  Boolean that indicates if the last `move_` command was completed successfuly or not.  It is possible to used the CRTK `operating_state` fields `is_busy` and `state` instead.  This is provided for backward compatibility with dVRK 1.x applications.
+* `state_command`:<br>*cisst* write commands, *ROS* subscriber<br>See CRTK
+* `operating_state`:<br>*cisst* event and read command, *ROS* publisher<br>See CRTK
+* `desired_state`:<br>dVRK specific.  Uses the CRTK state whenever possible
+* `error`:<br>dVRK specific.  Error messages, can be used for custom GUI.  For ROS, these messages are also sent as errors for ROS log.
+* `warning`:<br>dVRK specific.  Warning messages, can be used for custom GUI.  For ROS, these messages are also sent as warnings for ROS log.
+* `status`: <br>dVRK specific.  Status messages, can be used for custom GUI.  For ROS, these messages are also sent as status messages for ROS log.
+* `goal_reached`:<br>dVRK specific.  Boolean that indicates if the last `move_` command was completed successfuly or not.  It is possible to used the CRTK `operating_state` fields `is_busy` and `state` instead.  This is provided for backward compatibility with dVRK 1.x applications.
 
 ### Motion queries
 
