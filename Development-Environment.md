@@ -15,8 +15,9 @@
 
 <!--te-->
 
-Development Environment Setup 
-The current software is written in C/C++ and uses the libraw1394 library under Linux. See http://www.dennedy.org/libraw1394/ for libraw1394 documentation. 
+# Development Environment Setup
+
+The current software is written in C/C++ and uses the libraw1394 library under Linux. See http://www.dennedy.org/libraw1394/ for libraw1394 documentation. Starting with dVRK Software Version 2.0, Ethernet UDP is also supported, provided that there is at least one FPGA V2.x board (with Ethernet jack). 
 
 # FireWire Adapter
 The dVRK controllers use FireWire as the fieldbus, and you will need a FireWire adapter. Due to the fact that FireWire is a sophisticated protocol, some chipset implementations are not fully functional and have various issues such as dropping packets and supporting a limited number of FireWire nodes. We **STRONGLY** recommend adapters with chipsets from Texas Instruments (see links below).
@@ -208,3 +209,4 @@ The output will include the info provided by `dmesg` and more:
     ATTR{vendor}=="0xfa610e"
     ATTR{vendor_name}=="JHU LCSR"
 ```
+The above indicates that `fw1` has FPGA V1.x (no Ethernet). For FPGA V2.x (Ethernet), the `model` will be 2 and the `model_name` will be `"FPGA2/QLA"`.
