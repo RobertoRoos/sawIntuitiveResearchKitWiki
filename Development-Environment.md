@@ -182,7 +182,7 @@ The example above shows the output for firmware 7+.  With older firmware version
 ```
 
 For firmware 7, the output is quite useful:
-  * **fa610e**3f00000007: **fa610e** is the vendor Id, i.e. JHU/dVRK
+  * **fa610e**3f00000007: **fa610e** is the vendor Id, i.e. [JHU LCSR](https://www.lcsr.jhu.edu)
   * fa610e**3**f00000007: **3** is the board Id
   * fa610e3**f**00000007: **f** is the FPGA board type, i.e. **f** for FireWire only, **e** for boards with Ethernet adapter (see [controller versions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Board-Versions))
   * fa610e3f0000000**7**: **7** is the firmware version
