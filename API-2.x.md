@@ -36,26 +36,77 @@ To determine the payloads on ROS, use `rostopic info`.
 
 ### Operating state
 
-* `state_command`:<br>*cisst* write commands, *ROS* subscriber<br>See CRTK
-* `operating_state`:<br>*cisst* event and read command, *ROS* publisher<br>See CRTK
-* `desired_state`:<br>dVRK specific.  Uses the CRTK state whenever possible
-* `error`:<br>dVRK specific.  Error messages, can be used for custom GUI.  For ROS, these messages are also sent as errors for ROS log.
-* `warning`:<br>dVRK specific.  Warning messages, can be used for custom GUI.  For ROS, these messages are also sent as warnings for ROS log.
-* `status`: <br>dVRK specific.  Status messages, can be used for custom GUI.  For ROS, these messages are also sent as status messages for ROS log.
-* `goal_reached`:<br>dVRK specific.  Boolean that indicates if the last `move_` command was completed successfuly or not.  It is possible to used the CRTK `operating_state` fields `is_busy` and `state` instead.  This is provided for backward compatibility with dVRK 1.x applications.
+* `state_command`
+  * *cisst*: write command
+  * *ROS*: subscriber
+  * CRTK
+* `operating_state`
+  * *cisst*: write event and read command
+  * *ROS*: publisher
+  * CRTK
+* `desired_state`
+  * *cisst*: write event
+  * *ROS*: publisher
+  * dVRK specific.  Uses the CRTK state whenever possible
+* `error`
+  * *cisst*: write event
+  * *ROS*: publisher
+  * dVRK specific.  Error messages, can be used for custom GUI.  For ROS, these messages are also sent as errors for ROS log.
+* `warning`
+  * *cisst*: write event
+  * *ROS*: publisher
+  * dVRK specific.  Warning messages, can be used for custom GUI.  For ROS, these messages are also sent as warnings for ROS log.
+* `status`
+  * *cisst*: write event
+  * *ROS*: publisher
+  * dVRK specific.  Status messages, can be used for custom GUI.  For ROS, these messages are also sent as status messages for ROS log.
+* `goal_reached`:
+  * *cisst*: write event
+  * *ROS*: publisher
+  * dVRK specific.  Boolean that indicates if the last `move_` command was completed successfuly or not.  It is possible to used the CRTK `operating_state` fields `is_busy` and `state` instead.  This is provided for backward compatibility with dVRK 1.x applications.
 
 ### Motion queries
 
 * `measured_cp`
+  * *cisst*: read command
+  * *ROS*: publisher
+  * CRTK
 * `measured_cv`
+  * *cisst*: read command
+  * *ROS*: publisher
+  * CRTK
 * `measured_js`
+  * *cisst*: read command
+  * *ROS*: publisher
+  * CRTK
 * `setpoint_cp`
+  * *cisst*: read command
+  * *ROS*: publisher
+  * CRTK
 * `setpoint_js`
+  * *cisst*: read command
+  * *ROS*: publisher
+  * CRTK
 * `local/measured_cp`
+  * *cisst*: read command
+  * *ROS*: publisher
+  * dVRK specific.  Measured cartesian position relative to the first frame of the kinematic chain.  This doesn't include any base frame.  For the PSMs and ECM, the first frame of the kinematic chain is centered on the RCM point.  For the MTMs, the first frame of the kinematic chain is centered near the mounting point.   The non "local" `measured_cp` includes the base frame.  For example, MTM cartesian positions are defined with respect to the stereo display and the PSM cartesian positions are defined with respect to the endoscope (i.e. ECM tip).  See also [Coordinate Systems](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Coordinate-Systems).
 * `local/setpoint_cp`
+  * *cisst*: read command
+  * *ROS*: publisher
+  * dVRK specific.  Cartesian set point relative to the first frame of the kinematic chain.  See notes for `local/measured_cp`.
 * `body/jacobian`
+  * *cisst*: read command
+  * *ROS*: publisher
+  * dVRK specific.  Body jacobian, i.e. relative to end effector.
 * `body/measured_cf`
+  * *cisst*: read command
+  * *ROS*: publisher
+  * dVRK specific.  Estimated forces on the end effector.  These are computed using the current feedback on the actuators.  From there, the joint efforts are estimated using the actuator to joint coupling matrix.  Finally, the cartesian effort is computed using the jacobian.  This is not a very rough cartesian force emulation as the computations don't gravity compensation nor any other dynamic model or the arm. 
 * `spatial/jacobian`
+  * *cisst*: read command
+  * *ROS*: publisher
+  * dVRK specific.  Body jacobian, i.e. relative to the base frame (first frame in kinematic chain).
 * `spatial/measured_cf`
 
 ### Motion commands
