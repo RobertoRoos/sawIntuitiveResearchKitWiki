@@ -112,69 +112,69 @@ To determine the payloads on ROS, use `rostopic info`.
 ### Motion commands
 
 * `servo_cp`
-  * *cisst*:write command
+  * *cisst*: write command
   * *ROS*: subscriber
   * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion)
 * `servo_jf`
-  * *cisst*:write command
+  * *cisst*: write command
   * *ROS*: subscriber
   * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion)
 * `servo_jp`
-  * *cisst*:write command
+  * *cisst*: write command
   * *ROS*: subscriber
   * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion)
 * `servo_jr`
-  * *cisst*:write command
+  * *cisst*: write command
   * *ROS*: subscriber
   * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion)
 * `spatial/servo_cf`
-  * *cisst*:write command
+  * *cisst*: write command
   * *ROS*: subscriber
   * dVRK specific.
 * `body/servo_cf`
-  * *cisst*:write command
+  * *cisst*: write command
   * *ROS*: subscriber
   * dVRK specific.
 * `set_cartesian_impedance_gains`
-  * *cisst*:write command
+  * *cisst*: write command
   * *ROS*: subscriber
   * dVRK specific.
 * `move_cp`
-  * *cisst*:write command
+  * *cisst*: write command
   * *ROS*: subscriber
   * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion)
 * `move_jp`
-  * *cisst*:write command
+  * *cisst*: write command
   * *ROS*: subscriber
   * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion)
 * `move_jr`
-  * *cisst*:write command
+  * *cisst*: write command
   * *ROS*: subscriber
   * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion)
 
 ### Configuration
 
 * `use_gravity_compensation`
-  * *cisst*:write command
+  * *cisst*: write command
   * *ROS*: subscriber
   * dVRK specific.
 * `body/set_cf_orientation_absolute`
-  * *cisst*:write command
+  * *cisst*: write command
   * *ROS*: subscriber
   * dVRK specific.
 * `trajectory_j/ratio`
 * `trajectory_j/ratio_a`
 * `trajectory_j/ratio_v`
 * `trajectory_j/set_ratio`
-  * *cisst*:write command
+  * *cisst*: write command
   * *ROS*: subscriber
   * dVRK specific.
 * `trajectory_j/set_ratio_a`
-  * *cisst*:write command
+  * *cisst*: write command
   * *ROS*: subscriber
   * dVRK specific.
 * `trajectory_j/set_ratio_v`
-  * *cisst*:write command
+  * *cisst*: write command
   * *ROS*: subscriber
   * dVRK specific.
 
@@ -183,7 +183,7 @@ To determine the payloads on ROS, use `rostopic info`.
 * `manip_clutch`
 * `endoscope_type`
 * `set_endoscope_type`
-  * *cisst*:write command
+  * *cisst*: write command
   * *ROS*: subscriber
   * dVRK specific.
 
@@ -194,11 +194,11 @@ To determine the payloads on ROS, use `rostopic info`.
 * `gripper/pinch`
 * `orientation_locked`
 * `lock_orientation`
-  * *cisst*:write command
+  * *cisst*: write command
   * *ROS*: subscriber
   * dVRK specific.
 * `unlock_orientation`
-  * *cisst*:write command
+  * *cisst*: write command
   * *ROS*: subscriber
   * dVRK specific.
 
@@ -212,15 +212,15 @@ To determine the payloads on ROS, use `rostopic info`.
 * `tool_type`
 * `tool_type_request`
 * `set_tool_type`
-  * *cisst*:write command
+  * *cisst*: write command
   * *ROS*: subscriber
   * dVRK specific.
 * `set_adapter_present`
-  * *cisst*:write command
+  * *cisst*: write command
   * *ROS*: subscriber
   * dVRK specific.
 * `set_tool_present`
-  * *cisst*:write command
+  * *cisst*: write command
   * *ROS*: subscriber
   * dVRK specific.
 * `io/adapter`
@@ -237,29 +237,29 @@ To determine the payloads on ROS, use `rostopic info`.
 * `current_state`
 * `desired_state`
 * `state_command`
-  * *cisst*:write command
+  * *cisst*: write command
   * *ROS*: subscriber
   * dVRK specific.
 * `following`
 * `scale`
 * `set_scale`
-  * *cisst*:write command
+  * *cisst*: write command
   * *ROS*: subscriber
   * dVRK specific.
 * `align_mtm`
 * `alignment_offset`
 * `set_align_mtm`
-  * *cisst*:write command
+  * *cisst*: write command
   * *ROS*: subscriber
   * dVRK specific.
 * `rotation_locked`
 * `lock_rotation`
-  * *cisst*:write command
+  * *cisst*: write command
   * *ROS*: subscriber
   * dVRK specific.
 * `translation_locked`
 * `lock_translation`
-  * *cisst*:write command
+  * *cisst*: write command
   * *ROS*: subscriber
   * dVRK specific.
 * `set_registration_rotation` (obsolete)
@@ -269,13 +269,13 @@ To determine the payloads on ROS, use `rostopic info`.
 * `current_state`
 * `desired_state`
 * `state_command`
-  * *cisst*:write command
+  * *cisst*: write command
   * *ROS*: subscriber
   * dVRK specific.
 * `following`
 * `scale`
 * `set_scale`
-  * *cisst*:write command
+  * *cisst*: write command
   * *ROS*: subscriber
   * dVRK specific.
 
@@ -290,28 +290,28 @@ To determine the payloads on ROS, use `rostopic info`.
 * `console/clutch`
 * `console/operator_present`
 * `console/emulate_camera`
-  * *cisst*:write command
+  * *cisst*: write command
   * *ROS*: subscriber
   * dVRK specific.
 * `console/emulate_clutch`
-  * *cisst*:write command
+  * *cisst*: write command
   * *ROS*: subscriber
   * dVRK specific.
 * `console/emulate_operator_present`
-  * *cisst*:write command
+  * *cisst*: write command
   * *ROS*: subscriber
   * dVRK specific.
 * `console/volume`
 * `console/set_volume`
-  * *cisst*:write command
+  * *cisst*: write command
   * *ROS*: subscriber
   * dVRK specific.
 * `console/string_to_speech`
-  * *cisst*:write command
+  * *cisst*: write command
   * *ROS*: subscriber
   * dVRK specific.
 * `console/beep`
-  * *cisst*:write command
+  * *cisst*: write command
   * *ROS*: subscriber
   * dVRK specific.
 
@@ -319,22 +319,22 @@ To determine the payloads on ROS, use `rostopic info`.
 
 * `console/teleop/enabled`
 * `console/teleop/enable`
-  * *cisst*:write command
+  * *cisst*: write command
   * *ROS*: subscriber
   * dVRK specific.
 * `console/teleop/scale`
 * `console/teleop/set_scale`
-  * *cisst*:write command
+  * *cisst*: write command
   * *ROS*: subscriber
   * dVRK specific.
 * `console/teleop/teleop_psm_selected`
 * `console/teleop/teleop_psm_unselected`
 * `console/teleop/cycle_teleop_psm_by_mtm`
-  * *cisst*:write command
+  * *cisst*: write command
   * *ROS*: subscriber
   * dVRK specific.
 * `console/teleop/select_teleop_psm`
-  * *cisst*:write command
+  * *cisst*: write command
   * *ROS*: subscriber
   * dVRK specific.
 
