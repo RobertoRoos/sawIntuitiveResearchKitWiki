@@ -34,6 +34,8 @@ To determine the payloads on ROS, use `rostopic info`.
 
 ## All
 
+C++ class is `mtsIntuitiveResearchKitArm`.
+
 ### Operating state
 
 * `state_command`
@@ -102,12 +104,15 @@ To determine the payloads on ROS, use `rostopic info`.
 * `body/measured_cf`
   * *cisst*: read command
   * *ROS*: publisher
-  * dVRK specific.  Estimated forces on the end effector.  These are computed using the current feedback on the actuators.  From there, the joint efforts are estimated using the actuator to joint coupling matrix.  Finally, the cartesian effort is computed using the jacobian.  This is not a very rough cartesian force emulation as the computations don't gravity compensation nor any other dynamic model or the arm. 
+  * dVRK specific.  Estimated forces on the end effector.  These are computed using the current feedback on the actuators.  From there, the joint efforts are estimated using the actuator to joint coupling matrix.  See also `body/set_cf_orientation_absolute`.  Finally, the cartesian effort is computed using the jacobian.  This is not a very rough cartesian force emulation as the computations don't gravity compensation nor any other dynamic model or the arm. 
 * `spatial/jacobian`
   * *cisst*: read command
   * *ROS*: publisher
   * dVRK specific.  Body jacobian, i.e. relative to the base frame (first frame in kinematic chain).
 * `spatial/measured_cf`
+  * *cisst*: read command
+  * *ROS*: publisher
+  * dVRK specific.  See `body/measured_cf`.
 
 ### Motion commands
 
@@ -130,15 +135,15 @@ To determine the payloads on ROS, use `rostopic info`.
 * `spatial/servo_cf`
   * *cisst*: write command
   * *ROS*: subscriber
-  * dVRK specific.
+  * dVRK specific.  Apply wrench using `spatial/jacobian`.  For most application, use `body/servo_cf`.  Gravity compensation will be added based on last call to `use_gravity_compensation` (for MTMs and ECM).
 * `body/servo_cf`
   * *cisst*: write command
   * *ROS*: subscriber
-  * dVRK specific.
+  * dVRK specific.  Apply wrench using `body/jacobian`.  Useful for haptic on MTM.  By default direction of force is defined by the orientation of the end effector.  To use the absolute orientation, toggle on/off using `body/set_cf_orientation_absolute`.  Gravity compensation will be added based on last call to `use_gravity_compensation` (for MTMs and ECM).  
 * `set_cartesian_impedance_gains`
   * *cisst*: write command
   * *ROS*: subscriber
-  * dVRK specific.
+  * dVRK specific.  Apply wrench based on difference between measured and goal cartesian positions as well as twist (cartesian velocity).  The cartesian space is divided in 12 cases: negative and positive (**2**) error in position and orientation (**x 2**) along axes X, Y and Z (**x 3 = 12**).  The payload for this command includes 3 parameters for each case: a linear gain, a damping gain and an offset.  This command can be used to define a simple haptic virtual fixture (plane, line, point, box corner...).
 * `move_cp`
   * *cisst*: write command
   * *ROS*: subscriber
@@ -157,14 +162,23 @@ To determine the payloads on ROS, use `rostopic info`.
 * `use_gravity_compensation`
   * *cisst*: write command
   * *ROS*: subscriber
-  * dVRK specific.
+  * dVRK specific.  Turn on or off gravity compensation.  As of dVRK 1.7, gravity compensation is well supported for [MTMs](/jhu-dvrk/dvrk-gravity-compensation/blob/master/README.md).  ECM gravity compensation has been introduced in dVRK 2.0 but is roughly tuned.  It is used to help the low level controller (PID) and when the arm is in manual mode ("clutched"). 
 * `body/set_cf_orientation_absolute`
   * *cisst*: write command
   * *ROS*: subscriber
   * dVRK specific.
 * `trajectory_j/ratio`
+  * *cisst*: event write
+  * *ROS*: publisher
+  * dVRK specific.
 * `trajectory_j/ratio_a`
+  * *cisst*: event write
+  * *ROS*: publisher
+  * dVRK specific.
 * `trajectory_j/ratio_v`
+  * *cisst*: event write
+  * *ROS*: publisher
+  * dVRK specific.
 * `trajectory_j/set_ratio`
   * *cisst*: write command
   * *ROS*: subscriber
@@ -180,8 +194,16 @@ To determine the payloads on ROS, use `rostopic info`.
 
 ## ECM
 
+C++ class is `mtsIntuitiveResearchKitArmECM`.
+
 * `manip_clutch`
+  * *cisst*: event write
+  * *ROS*: publisher
+  * dVRK specific.
 * `endoscope_type`
+  * *cisst*: event write
+  * *ROS*: publisher
+  * dVRK specific.
 * `set_endoscope_type`
   * *cisst*: write command
   * *ROS*: subscriber
@@ -189,10 +211,24 @@ To determine the payloads on ROS, use `rostopic info`.
 
 ## MTM
 
+C++ class is `mtsIntuitiveResearchKitArmMTM`.
+
 * `gripper/measured_js`
-* `gripper/closed`
+  * *cisst*: read command
+  * *ROS*: publisher
+  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion).  `measured_js` for the MTM gripper.  The only field available is the position of the gripper.  These is no measurement available for velocity or effort.  
+* `gripper/closed`:
+  * *cisst*: event write
+  * *ROS*: publisher
+  * dVRK specific.
 * `gripper/pinch`
+  * *cisst*: event void
+  * *ROS*: publisher
+  * dVRK specific.  Provided for backward compatibility.  Same as `gripper/closed` is `true`. 
 * `orientation_locked`
+  * *cisst*: event write
+  * *ROS*: publisher
+  * dVRK specific.
 * `lock_orientation`
   * *cisst*: write command
   * *ROS*: subscriber
@@ -204,13 +240,36 @@ To determine the payloads on ROS, use `rostopic info`.
 
 ## PSM
 
+C++ class is `mtsIntuitiveResearchKitArmPSM`.
+
 * `jaw/measured_js`
+  * *cisst*: read command
+  * *ROS*: publisher
+  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion).  `measured_js` for the PSM jaws.  Position, velocity and effort are provided.  Effort is based on the current feedback and can be affected by multiple factors so it is not an exact torque applied on the jaws.
 * `jaw/setpoint_js`
+  * *cisst*: read command
+  * *ROS*: publisher
+  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion).  `setpoint_js` for the PSM jaws.  
 * `jaw/servo_jf`
+  * *cisst*: write command
+  * *ROS*: subscriber
+  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion).  `servo_jf` for the PSM jaws.
 * `jaw/servo_jp`
+  * *cisst*: write command
+  * *ROS*: subscriber
+  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion).  `servo_jp` for the PSM jaws.
 * `jaw/move_jp`
+  * *cisst*: write command
+  * *ROS*: subscriber
+  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion).  `move_jp` for the PSM jaws.
 * `tool_type`
+  * *cisst*: event write
+  * *ROS*: publisher
+  * dVRK specific.
 * `tool_type_request`
+  * *cisst*: event void
+  * *ROS*: publisher
+  * dVRK specific.
 * `set_tool_type`
   * *cisst*: write command
   * *ROS*: subscriber
@@ -224,9 +283,21 @@ To determine the payloads on ROS, use `rostopic info`.
   * *ROS*: subscriber
   * dVRK specific.
 * `io/adapter`
+  * *cisst*: event write
+  * *ROS*: publisher
+  * dVRK specific.
 * `io/tool`
+  * *cisst*: event write
+  * *ROS*: publisher
+  * dVRK specific.
 * `io/manip_clutch`
+  * *cisst*: event write
+  * *ROS*: publisher
+  * dVRK specific.
 * `io/suj_clutch`
+  * *cisst*: event write
+  * *ROS*: publisher
+  * dVRK specific.
 
 ## SUJ
 
@@ -234,30 +305,56 @@ To determine the payloads on ROS, use `rostopic info`.
 
 ## PSM Tele-operation
 
+C++ class is `mtsTeleOperationPSM`.
+
 * `current_state`
+  * *cisst*: event write
+  * *ROS*: publisher
+  * dVRK specific.
 * `desired_state`
-* `state_command`
+  * *cisst*: event write
+  * *ROS*: publisher
+  * dVRK specific.
+* `state_command`  Gravity compensation will be added based on last call to `use_gravity_compensation` (for MTMs and ECM).
   * *cisst*: write command
   * *ROS*: subscriber
   * dVRK specific.
 * `following`
+  * *cisst*: event write
+  * *ROS*: publisher
+  * dVRK specific.
 * `scale`
+  * *cisst*: event write
+  * *ROS*: publisher
+  * dVRK specific.
 * `set_scale`
   * *cisst*: write command
   * *ROS*: subscriber
   * dVRK specific.
 * `align_mtm`
+* *cisst*: event write
+  * *ROS*: publisher
+  * dVRK specific.
 * `alignment_offset`
+  * *cisst*: read command
+  * *ROS*: publisher
+  * dVRK specific.
 * `set_align_mtm`
   * *cisst*: write command
   * *ROS*: subscriber
   * dVRK specific.
 * `rotation_locked`
+  * *cisst*: event write
+  * *ROS*: publisher
+  * dVRK specific.
 * `lock_rotation`
   * *cisst*: write command
   * *ROS*: subscriber
   * dVRK specific.
 * `translation_locked`
+  * *cisst*: event write
+  * *ROS*: publisher
+  * dVRK specific.
 * `lock_translation`
   * *cisst*: write command
   * *ROS*: subscriber
@@ -266,14 +363,28 @@ To determine the payloads on ROS, use `rostopic info`.
 
 ## ECM Tele-operation
 
+C++ class is `mtsTeleOperationECM`.
+
 * `current_state`
+  * *cisst*: event write
+  * *ROS*: publisher
+  * dVRK specific.
 * `desired_state`
+  * *cisst*: event write
+  * *ROS*: publisher
+  * dVRK specific.
 * `state_command`
   * *cisst*: write command
   * *ROS*: subscriber
   * dVRK specific.
 * `following`
+  * *cisst*: event write
+  * *ROS*: publisher
+  * dVRK specific.
 * `scale`
+  * *cisst*: event write
+  * *ROS*: publisher
+  * dVRK specific.
 * `set_scale`
   * *cisst*: write command
   * *ROS*: subscriber
@@ -281,14 +392,34 @@ To determine the payloads on ROS, use `rostopic info`.
 
 # Console
 
+C++ class is `mtsIntuitiveResearchKitConsole`.
+
 ## General
 
 * `console/power_off`
+  * *cisst*: void command
+  * *ROS*: subscriber
+  * dVRK specific.
 * `console/power_on`
+  * *cisst*: void command
+  * *ROS*: subscriber
+  * dVRK specific.
 * `console/home`
+  * *cisst*: void command
+  * *ROS*: subscriber
+  * dVRK specific.
 * `console/camera`
+  * *cisst*: event write
+  * *ROS*: publisher
+  * dVRK specific.
 * `console/clutch`
+  * *cisst*: event write
+  * *ROS*: publisher
+  * dVRK specific.
 * `console/operator_present`
+  * *cisst*: event write
+  * *ROS*: publisher
+  * dVRK specific.
 * `console/emulate_camera`
   * *cisst*: write command
   * *ROS*: subscriber
@@ -302,6 +433,9 @@ To determine the payloads on ROS, use `rostopic info`.
   * *ROS*: subscriber
   * dVRK specific.
 * `console/volume`
+  * *cisst*: event write
+  * *ROS*: publisher
+  * dVRK specific.
 * `console/set_volume`
   * *cisst*: write command
   * *ROS*: subscriber
@@ -318,17 +452,29 @@ To determine the payloads on ROS, use `rostopic info`.
 ## Tele-operation
 
 * `console/teleop/enabled`
+  * *cisst*: event write
+  * *ROS*: publisher
+  * dVRK specific.
 * `console/teleop/enable`
   * *cisst*: write command
   * *ROS*: subscriber
   * dVRK specific.
 * `console/teleop/scale`
+  * *cisst*: event write
+  * *ROS*: publisher
+  * dVRK specific.
 * `console/teleop/set_scale`
   * *cisst*: write command
   * *ROS*: subscriber
   * dVRK specific.
 * `console/teleop/teleop_psm_selected`
+  * *cisst*: event write
+  * *ROS*: publisher
+  * dVRK specific.
 * `console/teleop/teleop_psm_unselected`
+  * *cisst*: event write
+  * *ROS*: publisher
+  * dVRK specific.
 * `console/teleop/cycle_teleop_psm_by_mtm`
   * *cisst*: write command
   * *ROS*: subscriber
@@ -341,8 +487,26 @@ To determine the payloads on ROS, use `rostopic info`.
 ## Foot pedals
 
 * `footpedals/clutch`
+  * *cisst*: event write
+  * *ROS*: publisher
+  * dVRK specific.
 * `footpedals/camera`
+  * *cisst*: event write
+  * *ROS*: publisher
+  * dVRK specific.
 * `footpedals/cam_minus`
+  * *cisst*: event write
+  * *ROS*: publisher
+  * dVRK specific.
 * `footpedals/cam_plus`
+  * *cisst*: event write
+  * *ROS*: publisher
+  * dVRK specific.
 * `footpedals/bicoag`
+  * *cisst*: event write
+  * *ROS*: publisher
+  * dVRK specific.
 * `footpedals/coag`
+  * *cisst*: event write
+  * *ROS*: publisher
+  * dVRK specific.
