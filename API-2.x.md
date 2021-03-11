@@ -39,11 +39,11 @@ To determine the payloads on ROS, use `rostopic info`.
 * `state_command`
   * *cisst*: write command
   * *ROS*: subscriber
-  * CRTK
+  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-status)
 * `operating_state`
   * *cisst*: write event and read command
   * *ROS*: publisher
-  * CRTK
+  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-status)
 * `desired_state`
   * *cisst*: write event
   * *ROS*: publisher
@@ -63,30 +63,30 @@ To determine the payloads on ROS, use `rostopic info`.
 * `goal_reached`:
   * *cisst*: write event
   * *ROS*: publisher
-  * dVRK specific.  Boolean that indicates if the last `move_` command was completed successfuly or not.  It is possible to used the CRTK `operating_state` fields `is_busy` and `state` instead.  This is provided for backward compatibility with dVRK 1.x applications.
+  * dVRK specific.  Boolean that indicates if the last `move_` command was completed successfully or not.  It is possible to used the CRTK `operating_state` fields `is_busy` and `state` instead.  This is provided for backward compatibility with dVRK 1.x applications.
 
 ### Motion queries
 
 * `measured_cp`
   * *cisst*: read command
   * *ROS*: publisher
-  * CRTK
+  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion)
 * `measured_cv`
   * *cisst*: read command
   * *ROS*: publisher
-  * CRTK
+  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion)
 * `measured_js`
   * *cisst*: read command
   * *ROS*: publisher
-  * CRTK
+  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion)
 * `setpoint_cp`
   * *cisst*: read command
   * *ROS*: publisher
-  * CRTK
+  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion)
 * `setpoint_js`
   * *cisst*: read command
   * *ROS*: publisher
-  * CRTK
+  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion)
 * `local/measured_cp`
   * *cisst*: read command
   * *ROS*: publisher
@@ -112,32 +112,80 @@ To determine the payloads on ROS, use `rostopic info`.
 ### Motion commands
 
 * `servo_cp`
+  * *cisst*:write command
+  * *ROS*: subscriber
+  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion)
 * `servo_jf`
+  * *cisst*:write command
+  * *ROS*: subscriber
+  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion)
 * `servo_jp`
+  * *cisst*:write command
+  * *ROS*: subscriber
+  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion)
 * `servo_jr`
+  * *cisst*:write command
+  * *ROS*: subscriber
+  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion)
 * `spatial/servo_cf`
+  * *cisst*:write command
+  * *ROS*: subscriber
+  * dVRK specific.
 * `body/servo_cf`
+  * *cisst*:write command
+  * *ROS*: subscriber
+  * dVRK specific.
 * `set_cartesian_impedance_gains`
+  * *cisst*:write command
+  * *ROS*: subscriber
+  * dVRK specific.
 * `move_cp`
+  * *cisst*:write command
+  * *ROS*: subscriber
+  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion)
 * `move_jp`
+  * *cisst*:write command
+  * *ROS*: subscriber
+  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion)
 * `move_jr`
+  * *cisst*:write command
+  * *ROS*: subscriber
+  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion)
 
 ### Configuration
 
 * `use_gravity_compensation`
+  * *cisst*:write command
+  * *ROS*: subscriber
+  * dVRK specific.
 * `body/set_cf_orientation_absolute`
+  * *cisst*:write command
+  * *ROS*: subscriber
+  * dVRK specific.
 * `trajectory_j/ratio`
 * `trajectory_j/ratio_a`
 * `trajectory_j/ratio_v`
 * `trajectory_j/set_ratio`
+  * *cisst*:write command
+  * *ROS*: subscriber
+  * dVRK specific.
 * `trajectory_j/set_ratio_a`
+  * *cisst*:write command
+  * *ROS*: subscriber
+  * dVRK specific.
 * `trajectory_j/set_ratio_v`
+  * *cisst*:write command
+  * *ROS*: subscriber
+  * dVRK specific.
 
 ## ECM
 
 * `manip_clutch`
 * `endoscope_type`
 * `set_endoscope_type`
+  * *cisst*:write command
+  * *ROS*: subscriber
+  * dVRK specific.
 
 ## MTM
 
@@ -146,7 +194,13 @@ To determine the payloads on ROS, use `rostopic info`.
 * `gripper/pinch`
 * `orientation_locked`
 * `lock_orientation`
+  * *cisst*:write command
+  * *ROS*: subscriber
+  * dVRK specific.
 * `unlock_orientation`
+  * *cisst*:write command
+  * *ROS*: subscriber
+  * dVRK specific.
 
 ## PSM
 
@@ -158,8 +212,17 @@ To determine the payloads on ROS, use `rostopic info`.
 * `tool_type`
 * `tool_type_request`
 * `set_tool_type`
+  * *cisst*:write command
+  * *ROS*: subscriber
+  * dVRK specific.
 * `set_adapter_present`
+  * *cisst*:write command
+  * *ROS*: subscriber
+  * dVRK specific.
 * `set_tool_present`
+  * *cisst*:write command
+  * *ROS*: subscriber
+  * dVRK specific.
 * `io/adapter`
 * `io/tool`
 * `io/manip_clutch`
@@ -174,16 +237,31 @@ To determine the payloads on ROS, use `rostopic info`.
 * `current_state`
 * `desired_state`
 * `state_command`
+  * *cisst*:write command
+  * *ROS*: subscriber
+  * dVRK specific.
 * `following`
 * `scale`
 * `set_scale`
+  * *cisst*:write command
+  * *ROS*: subscriber
+  * dVRK specific.
 * `align_mtm`
 * `alignment_offset`
 * `set_align_mtm`
+  * *cisst*:write command
+  * *ROS*: subscriber
+  * dVRK specific.
 * `rotation_locked`
 * `lock_rotation`
+  * *cisst*:write command
+  * *ROS*: subscriber
+  * dVRK specific.
 * `translation_locked`
 * `lock_translation`
+  * *cisst*:write command
+  * *ROS*: subscriber
+  * dVRK specific.
 * `set_registration_rotation` (obsolete)
 
 ## ECM Tele-operation
@@ -191,9 +269,15 @@ To determine the payloads on ROS, use `rostopic info`.
 * `current_state`
 * `desired_state`
 * `state_command`
+  * *cisst*:write command
+  * *ROS*: subscriber
+  * dVRK specific.
 * `following`
 * `scale`
 * `set_scale`
+  * *cisst*:write command
+  * *ROS*: subscriber
+  * dVRK specific.
 
 # Console
 
@@ -206,23 +290,53 @@ To determine the payloads on ROS, use `rostopic info`.
 * `console/clutch`
 * `console/operator_present`
 * `console/emulate_camera`
+  * *cisst*:write command
+  * *ROS*: subscriber
+  * dVRK specific.
 * `console/emulate_clutch`
+  * *cisst*:write command
+  * *ROS*: subscriber
+  * dVRK specific.
 * `console/emulate_operator_present`
+  * *cisst*:write command
+  * *ROS*: subscriber
+  * dVRK specific.
 * `console/volume`
 * `console/set_volume`
+  * *cisst*:write command
+  * *ROS*: subscriber
+  * dVRK specific.
 * `console/string_to_speech`
+  * *cisst*:write command
+  * *ROS*: subscriber
+  * dVRK specific.
 * `console/beep`
+  * *cisst*:write command
+  * *ROS*: subscriber
+  * dVRK specific.
 
 ## Tele-operation
 
 * `console/teleop/enabled`
 * `console/teleop/enable`
+  * *cisst*:write command
+  * *ROS*: subscriber
+  * dVRK specific.
 * `console/teleop/scale`
 * `console/teleop/set_scale`
+  * *cisst*:write command
+  * *ROS*: subscriber
+  * dVRK specific.
 * `console/teleop/teleop_psm_selected`
 * `console/teleop/teleop_psm_unselected`
 * `console/teleop/cycle_teleop_psm_by_mtm`
+  * *cisst*:write command
+  * *ROS*: subscriber
+  * dVRK specific.
 * `console/teleop/select_teleop_psm`
+  * *cisst*:write command
+  * *ROS*: subscriber
+  * dVRK specific.
 
 ## Foot pedals
 
