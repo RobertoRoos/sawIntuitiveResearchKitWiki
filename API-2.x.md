@@ -510,3 +510,38 @@ C++ class is `mtsIntuitiveResearchKitConsole`.
   * *cisst*: event write `prmEventButton`
   * *ROS*: publisher `sensor_msgs/Joy`
   * dVRK specific.
+
+# Miscellaneous
+
+## ISI focus controller
+
+Using original focus controller from Intuitive Surgical.
+
+* `endoscope_focus/locked`
+  * *cisst*: event write `bool`
+  * *ROS*: publisher `std_msgs/Bool`
+  * dVRK specific.
+* `endoscope_focus/focusing_in`
+  * *cisst*: event write `bool`
+  * *ROS*: publisher `std_msgs/Bool`
+  * dVRK specific
+* `endoscope_focus/focusing_out`
+  * *cisst*: event write `bool`
+  * *ROS*: publisher `std_msgs/Bool`
+  * dVRK specific
+* `endoscope_focus/lock`
+  * *cisst*: command write `bool`
+  * *ROS*: subscriber `std_msgs/Bool`
+  * dVRK specific.
+* `endoscope_focus/focus_in`
+  * *cisst*: command write `bool`
+  * *ROS*: subscriber `std_msgs/Bool`
+  * dVRK specific
+* `endoscope_focus/focus_out`
+  * *cisst*: command write `bool`
+  * *ROS*: subscriber `std_msgs/Bool`
+  * dVRK specific
+
+## dVRK focus controller
+
+Using custom hardware and QLA/FPGA to control focus.
