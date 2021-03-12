@@ -28,7 +28,7 @@ Each component of the dVRK described in the [software architecture](/jhu-dvrk/sa
 
 In general, we try to expose most C++ commands and events as ROS topics or services under the same name.  Starting with the dVRK release 2.0, we are using the [CRTK naming conventions](https://github.com/collaborative-robotics/documentation/wiki/Robot-API).  There are also some commands very specific to the dVRK not covered by CRTK.  These can be found in [`dvrk_console.cpp`](https://github.com/jhu-dvrk/dvrk-ros/blob/master/dvrk_robot/src/dvrk_console.cpp).  
 
-To determine the payloads on ROS, use `rostopic info`.
+If you are migrating your *cisstMultiTask* or ROS code from the dVRK 1.7, you can find some porting information in the [`crtk-port`](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/tree/devel/crtk-port).
 
 # Arms
 
