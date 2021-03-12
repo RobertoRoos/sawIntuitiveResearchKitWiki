@@ -70,74 +70,74 @@ C++ class is `mtsIntuitiveResearchKitArm`.
 ### Motion queries
 
 * `measured_cp`
-  * *cisst*: read command
+  * *cisst*: read command `prmPositionCartesianGet`
   * *ROS*: publisher `geometry_msgs/TransformStamped`
   * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion)
 * `measured_cv`
-  * *cisst*: read command
+  * *cisst*: read command `prmVelocityCartesianGet`
   * *ROS*: publisher `geometry_msgs/TwistStamped`
   * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion)
 * `measured_js`
-  * *cisst*: read command
+  * *cisst*: read command `prmStateJoint`
   * *ROS*: publisher `sensor_msgs/JointState`
   * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion)
 * `setpoint_cp`
-  * *cisst*: read command
+  * *cisst*: read command `prmPositionCartesianGet`
   * *ROS*: publisher `geometry_msgs/TransformStamped`
   * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion)
 * `setpoint_js`
-  * *cisst*: read command
+  * *cisst*: read command `prmStateJoint`
   * *ROS*: publisher `sensor_msgs/JointState`
   * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion)
 * `local/measured_cp`
-  * *cisst*: read command
+  * *cisst*: read command `prmPositionCartesianGet`
   * *ROS*: publisher `geometry_msgs/TransformStamped`
   * dVRK specific.  Measured cartesian position relative to the first frame of the kinematic chain.  This doesn't include any base frame.  For the PSMs and ECM, the first frame of the kinematic chain is centered on the RCM point.  For the MTMs, the first frame of the kinematic chain is centered near the mounting point.   The non "local" `measured_cp` includes the base frame.  For example, MTM cartesian positions are defined with respect to the stereo display and the PSM cartesian positions are defined with respect to the endoscope (i.e. ECM tip).  See also [Coordinate Systems](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Coordinate-Systems).
 * `local/setpoint_cp`
-  * *cisst*: read command
+  * *cisst*: read command `prmPositionCartesianGet`
   * *ROS*: publisher `geometry_msgs/TransformStamped`
   * dVRK specific.  Cartesian set point relative to the first frame of the kinematic chain.  See notes for `local/measured_cp`.
 * `body/jacobian`
-  * *cisst*: read command
+  * *cisst*: read command `vctDoubleMat`
   * *ROS*: publisher `std_msgs/Float64MultiArray`
   * dVRK specific.  Body jacobian, i.e. relative to end effector.
 * `body/measured_cf`
-  * *cisst*: read command
+  * *cisst*: read command `prmForceCartesianGet`
   * *ROS*: publisher `geometry_msgs/WrenchStamped`
   * dVRK specific.  Estimated forces on the end effector.  These are computed using the current feedback on the actuators.  From there, the joint efforts are estimated using the actuator to joint coupling matrix.  See also `body/set_cf_orientation_absolute`.  Finally, the cartesian effort is computed using the jacobian.  This is not a very rough cartesian force emulation as the computations don't gravity compensation nor any other dynamic model or the arm. 
 * `spatial/jacobian`
-  * *cisst*: read command
+  * *cisst*: read command `vctDoubleMat`
   * *ROS*: publisher `std_msgs/Float64MultiArray`
   * dVRK specific.  Body jacobian, i.e. relative to the base frame (first frame in kinematic chain).
 * `spatial/measured_cf`
-  * *cisst*: read command
+  * *cisst*: read command `prmForceCartesianGet`
   * *ROS*: publisher `geometry_msgs/WrenchStamped`
   * dVRK specific.  See `body/measured_cf`.
 
 ### Motion commands
 
 * `servo_cp`
-  * *cisst*: write command
+  * *cisst*: write command `prmPositionCartesianSet`
   * *ROS*: subscriber `geometry_msgs/TransformStamped`
   * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion)
 * `servo_jf`
-  * *cisst*: write command
+  * *cisst*: write command `prmForceTorqueJointSet`
   * *ROS*: subscriber `sensor_msgs/JointState`
   * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion)
 * `servo_jp`
-  * *cisst*: write command
+  * *cisst*: write command `prmPositionJointSet`
   * *ROS*: subscriber `sensor_msgs/JointState`
   * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion)
 * `servo_jr`
-  * *cisst*: write command
+  * *cisst*: write command `prmPositionJointSet`
   * *ROS*: subscriber `sensor_msgs/JointState`
   * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion)
 * `spatial/servo_cf`
-  * *cisst*: write command
+  * *cisst*: write command `prmForceCartesianSet`
   * *ROS*: subscriber `geometry_msgs/WrenchStamped`
   * dVRK specific.  Apply wrench using `spatial/jacobian`.  For most application, use `body/servo_cf`.  Gravity compensation will be added based on last call to `use_gravity_compensation` (for MTMs and ECM).
 * `body/servo_cf`
-  * *cisst*: write command
+  * *cisst*: write command `prmForceCartesianSet`
   * *ROS*: subscriber `geometry_msgs/WrenchStamped`
   * dVRK specific.  Apply wrench using `body/jacobian`.  Useful for haptic on MTM.  By default direction of force is defined by the orientation of the end effector.  To use the absolute orientation, toggle on/off using `body/set_cf_orientation_absolute`.  Gravity compensation will be added based on last call to `use_gravity_compensation` (for MTMs and ECM).  
 * `set_cartesian_impedance_gains`
@@ -145,50 +145,50 @@ C++ class is `mtsIntuitiveResearchKitArm`.
   * *ROS*: subscriber `cisst_msgs/prmCartesianImpedanceGains`
   * dVRK specific.  Apply wrench based on difference between measured and goal cartesian positions as well as twist (cartesian velocity).  The cartesian space is divided in 12 cases: negative and positive (**2**) error in position and orientation (**x 2**) along axes X, Y and Z (**x 3 = 12**).  The payload for this command includes 3 parameters for each case: a linear gain, a damping gain and an offset.  This command can be used to define a simple haptic virtual fixture (plane, line, point, box corner...).
 * `move_cp`
-  * *cisst*: write command
+  * *cisst*: write command `prmPositionCartesianSet`
   * *ROS*: subscriber `geometry_msgs/TransformStamped`
   * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion)
 * `move_jp`
-  * *cisst*: write command
+  * *cisst*: write command `prmPositionJointSet`
   * *ROS*: subscriber `sensor_msgs/JointState`
   * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion)
 * `move_jr`
-  * *cisst*: write command
+  * *cisst*: write command `prmPositionJointSet`
   * *ROS*: subscriber `sensor_msgs/JointState`
   * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion)
 
 ### Configuration
 
 * `use_gravity_compensation`
-  * *cisst*: write command
+  * *cisst*: write command `bool`
   * *ROS*: subscriber `std_msgs/Bool`
   * dVRK specific.  Turn on or off gravity compensation.  As of dVRK 1.7, gravity compensation is well supported for [MTMs](/jhu-dvrk/dvrk-gravity-compensation/blob/master/README.md).  ECM gravity compensation has been introduced in dVRK 2.0 but is roughly tuned.  It is used to help the low level controller (PID) and when the arm is in manual mode ("clutched"). 
 * `body/set_cf_orientation_absolute`
-  * *cisst*: write command
+  * *cisst*: write command `bool`
   * *ROS*: subscriber `std_msgs/Bool`
   * dVRK specific.
 * `trajectory_j/ratio`
-  * *cisst*: event write
+  * *cisst*: event write `double`
   * *ROS*: publisher `std_msgs/Float64`
   * dVRK specific.
 * `trajectory_j/ratio_a`
-  * *cisst*: event write
+  * *cisst*: event write `double`
   * *ROS*: publisher `std_msgs/Float64`
   * dVRK specific.
 * `trajectory_j/ratio_v`
-  * *cisst*: event write
+  * *cisst*: event write `double`
   * *ROS*: publisher `std_msgs/Float64`
   * dVRK specific.
 * `trajectory_j/set_ratio`
-  * *cisst*: write command
+  * *cisst*: write command `double`
   * *ROS*: subscriber `std_msgs/Float64`
   * dVRK specific.
 * `trajectory_j/set_ratio_a`
-  * *cisst*: write command
+  * *cisst*: write command `double`
   * *ROS*: subscriber `std_msgs/Float64`
   * dVRK specific.
 * `trajectory_j/set_ratio_v`
-  * *cisst*: write command
+  * *cisst*: write command `double`
   * *ROS*: subscriber `std_msgs/Float64`
   * dVRK specific.
 
@@ -197,16 +197,16 @@ C++ class is `mtsIntuitiveResearchKitArm`.
 C++ class is `mtsIntuitiveResearchKitArmECM`.
 
 * `manip_clutch`
-  * *cisst*: event write
-  * *ROS*: publisher
+  * *cisst*: event write `prmEventButton`
+  * *ROS*: publisher `sensor_msgs::Joy`
   * dVRK specific.
 * `endoscope_type`
-  * *cisst*: event write
-  * *ROS*: publisher
+  * *cisst*: event write `std::string`
+  * *ROS*: publisher `std_msgs::String`
   * dVRK specific.
 * `set_endoscope_type`
-  * *cisst*: write command
-  * *ROS*: subscriber
+  * *cisst*: write command `std::string`
+  * *ROS*: subscriber `std_msgs::String`
   * dVRK specific.
 
 ## MTM
@@ -214,11 +214,11 @@ C++ class is `mtsIntuitiveResearchKitArmECM`.
 C++ class is `mtsIntuitiveResearchKitArmMTM`.
 
 * `gripper/measured_js`
-  * *cisst*: read command
+  * *cisst*: read command `prmStateJoint`
   * *ROS*: publisher `sensor_msgs/JointState`
   * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion).  `measured_js` for the MTM gripper.  The only field available is the position of the gripper.  These is no measurement available for velocity or effort.  
 * `gripper/closed`:
-  * *cisst*: event write
+  * *cisst*: event write `bool`
   * *ROS*: publisher `std_msgs/Bool`
   * dVRK specific.
 * `gripper/pinch`
@@ -226,15 +226,15 @@ C++ class is `mtsIntuitiveResearchKitArmMTM`.
   * *ROS*: publisher `std_msgs/Empty`
   * dVRK specific.  Provided for backward compatibility.  Same as `gripper/closed` is `true`. 
 * `orientation_locked`
-  * *cisst*: event write
+  * *cisst*: event write `bool`
   * *ROS*: publisher `std_msgs/Bool`
   * dVRK specific.
 * `lock_orientation`
-  * *cisst*: write command
+  * *cisst*: write command `vctMatRot3`
   * *ROS*: subscriber `geometry_msgs/Quaternion`
   * dVRK specific.
 * `unlock_orientation`
-  * *cisst*: write command
+  * *cisst*: void command
   * *ROS*: subscriber `std_msgs/Empty`
   * dVRK specific.
 
@@ -243,27 +243,27 @@ C++ class is `mtsIntuitiveResearchKitArmMTM`.
 C++ class is `mtsIntuitiveResearchKitArmPSM`.
 
 * `jaw/measured_js`
-  * *cisst*: read command
+  * *cisst*: read command `prmStateJoint`
   * *ROS*: publisher `sensor_msgs/JointState`
   * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion).  `measured_js` for the PSM jaws.  Position, velocity and effort are provided.  Effort is based on the current feedback and can be affected by multiple factors so it is not an exact torque applied on the jaws.
 * `jaw/setpoint_js`
-  * *cisst*: read command
+  * *cisst*: read command `prmStateJoint`
   * *ROS*: publisher `sensor_msgs/JointState`
   * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion).  `setpoint_js` for the PSM jaws.  
 * `jaw/servo_jf`
-  * *cisst*: write command
+  * *cisst*: write command `prmForceTorqueJointSet`
   * *ROS*: subscriber `sensor_msgs/JointState`
   * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion).  `servo_jf` for the PSM jaws.
 * `jaw/servo_jp`
-  * *cisst*: write command
+  * *cisst*: write command `prmPositionJointSet`
   * *ROS*: subscriber `sensor_msgs/JointState`
   * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion).  `servo_jp` for the PSM jaws.
 * `jaw/move_jp`
-  * *cisst*: write command
+  * *cisst*: write command `prmPositionJointSet`
   * *ROS*: subscriber `sensor_msgs/JointState`
   * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion).  `move_jp` for the PSM jaws.
 * `tool_type`
-  * *cisst*: event write
+  * *cisst*: event write `std::string`
   * *ROS*: publisher `std_msgs/String`
   * dVRK specific.
 * `tool_type_request`
@@ -271,31 +271,31 @@ C++ class is `mtsIntuitiveResearchKitArmPSM`.
   * *ROS*: publisher `std_msgs/Empty`
   * dVRK specific.
 * `set_tool_type`
-  * *cisst*: write command
+  * *cisst*: write command `std::string`
   * *ROS*: subscriber `std_msgs/String`
   * dVRK specific.
 * `set_adapter_present`
-  * *cisst*: write command
+  * *cisst*: write command `bool`
   * *ROS*: subscriber `std_msgs/Bool`
   * dVRK specific.
 * `set_tool_present`
-  * *cisst*: write command
+  * *cisst*: write command `bool`
   * *ROS*: subscriber `std_msgs/Bool`
   * dVRK specific.
 * `io/adapter`
-  * *cisst*: event write
-  * *ROS*: publisher
+  * *cisst*: event write `prmEventButton`
+  * *ROS*: publisher `sensor_msgs/Joy`
   * dVRK specific.
 * `io/tool`
-  * *cisst*: event write
+  * *cisst*: event write `prmEventButton`
   * *ROS*: publisher `sensor_msgs/Joy`
   * dVRK specific.
 * `io/manip_clutch`
-  * *cisst*: event write
+  * *cisst*: event write `prmEventButton`
   * *ROS*: publisher `sensor_msgs/Joy`
   * dVRK specific.
 * `io/suj_clutch`
-  * *cisst*: event write
+  * *cisst*: event write `prmEventButton`
   * *ROS*: publisher `sensor_msgs/Joy`
   * dVRK specific.
 
@@ -308,55 +308,55 @@ C++ class is `mtsIntuitiveResearchKitArmPSM`.
 C++ class is `mtsTeleOperationPSM`.  Tele-operation topics for ROS are published under the "namespace" `MTMx_PSMx` (e.g. `MTML_PSM1`, `MTMR_PSM3`...).
 
 * `current_state`
-  * *cisst*: event write
+  * *cisst*: event write `std::string`
   * *ROS*: publisher `std_msgs/String`
   * dVRK specific.
 * `desired_state`
-  * *cisst*: event write
+  * *cisst*: event write `std::string`
   * *ROS*: publisher `std_msgs/String`
   * dVRK specific.
 * `state_command`  Gravity compensation will be added based on last call to `use_gravity_compensation` (for MTMs and ECM).
-  * *cisst*: write command
+  * *cisst*: write command `std::string`
   * *ROS*: subscriber `crtk_msgs/StringStamped`
   * dVRK specific.
 * `following`
-  * *cisst*: event write
+  * *cisst*: event write `bool`
   * *ROS*: publisher `std_msgs/Bool`
   * dVRK specific.
 * `scale`
-  * *cisst*: event write
+  * *cisst*: event write `double`
   * *ROS*: publisher `std_msgs/Float64`
   * dVRK specific.
 * `set_scale`
-  * *cisst*: write command
+  * *cisst*: write command `double`
   * *ROS*: subscriber `std_msgs/Float64`
   * dVRK specific.
 * `align_mtm`
-  * *cisst*: event write
-  * *ROS*: publisher `sensor_msgs/Joy`
+  * *cisst*: event write `bool` 
+  * *ROS*: publisher `std_msgs/Bool`
   * dVRK specific.
 * `alignment_offset`
-  * *cisst*: read command
+  * *cisst*: read command `vctMatRot3`
   * *ROS*: publisher `geometry_msgs/QuaternionStamped`
   * dVRK specific.
 * `set_align_mtm`
-  * *cisst*: write command
+  * *cisst*: write command `bool`
   * *ROS*: subscriber `std_msgs/Bool`
   * dVRK specific.
 * `rotation_locked`
-  * *cisst*: event write
+  * *cisst*: event write `bool`
   * *ROS*: publisher `sensor_msgs/Joy`
   * dVRK specific.
 * `lock_rotation`
-  * *cisst*: write command
+  * *cisst*: write command `bool`
   * *ROS*: subscriber `std_msgs/Bool`
   * dVRK specific.
 * `translation_locked`
-  * *cisst*: event write
+  * *cisst*: event write `bool`
   * *ROS*: publisher `sensor_msgs/Joy`
   * dVRK specific.
 * `lock_translation`
-  * *cisst*: write command
+  * *cisst*: write command `bool`
   * *ROS*: subscriber `std_msgs/Bool`
   * dVRK specific.
 * `set_registration_rotation` (obsolete)
@@ -366,29 +366,29 @@ C++ class is `mtsTeleOperationPSM`.  Tele-operation topics for ROS are published
 C++ class is `mtsTeleOperationECM`.
 
 * `current_state`
-  * *cisst*: event write
-  * *ROS*: publisher
+  * *cisst*: event write `std::string`
+  * *ROS*: publisher `std_msgs::String`
   * dVRK specific.
 * `desired_state`
-  * *cisst*: event write
-  * *ROS*: publisher
+  * *cisst*: event write `std::string`
+  * *ROS*: publisher `std_msgs::String`
   * dVRK specific.
 * `state_command`
-  * *cisst*: write command
-  * *ROS*: subscriber
+  * *cisst*: write command `std::string`
+  * *ROS*: subscriber `std_msgs::String`
   * dVRK specific.
 * `following`
-  * *cisst*: event write
-  * *ROS*: publisher
+  * *cisst*: event write `bool`
+  * *ROS*: publisher `std_msgs::Bool`
   * dVRK specific.
 * `scale`
-  * *cisst*: event write
-  * *ROS*: publisher
+  * *cisst*: event write `double`
+  * *ROS*: publisher `std_msgs::Float64`
   * dVRK specific.
 * `set_scale`
-  * *cisst*: write command
-  * *ROS*: subscriber
-  * dVRK specific.
+  * *cisst*: write command `double`
+  * *ROS*: subscriber `std_msgs::Float64`
+  * dVRK specific. Applies to translation only.
 
 # Console
 
@@ -409,104 +409,104 @@ C++ class is `mtsIntuitiveResearchKitConsole`.
   * *ROS*: subscriber `std_msgs/Empty`
   * dVRK specific.
 * `console/camera`
-  * *cisst*: event write
+  * *cisst*: event write `prmEventButton`
   * *ROS*: publisher `sensor_msgs/Joy`
   * dVRK specific.
 * `console/clutch`
-  * *cisst*: event write
+  * *cisst*: event write `prmEventButton`
   * *ROS*: publisher `sensor_msgs/Joy`
   * dVRK specific.
 * `console/operator_present`
-  * *cisst*: event write
+  * *cisst*: event write `prmEventButton`
   * *ROS*: publisher `sensor_msgs/Joy`
   * dVRK specific.
 * `console/emulate_camera`
-  * *cisst*: write command
+  * *cisst*: write command `prmEventButton`
   * *ROS*: subscriber `sensor_msgs/Joy`
   * dVRK specific.
 * `console/emulate_clutch`
-  * *cisst*: write command
+  * *cisst*: write command `prmEventButton`
   * *ROS*: subscriber `sensor_msgs/Joy`
   * dVRK specific.
 * `console/emulate_operator_present`
-  * *cisst*: write command
+  * *cisst*: write command `prmEventButton`
   * *ROS*: subscriber `sensor_msgs/Joy`
   * dVRK specific.
 * `console/volume`
-  * *cisst*: event write
+  * *cisst*: event write `double`
   * *ROS*: publisher `std_msgs/Float64`
   * dVRK specific.
 * `console/set_volume`
-  * *cisst*: write command
+  * *cisst*: write command `double`
   * *ROS*: subscriber `std_msgs/Float64`
   * dVRK specific.
 * `console/string_to_speech`
-  * *cisst*: write command
+  * *cisst*: write command `std::string`
   * *ROS*: subscriber `std_msgs/String`
   * dVRK specific.
 * `console/beep`
-  * *cisst*: write command
+  * *cisst*: write command `vctDoubleVec`
   * *ROS*: subscriber `std_msgs/Float64MultiArray`
   * dVRK specific.
 
 ## Tele-operation
 
 * `console/teleop/enabled`
-  * *cisst*: event write
-  * *ROS*: publisher `sensor_msgs/Joy`
+  * *cisst*: event write `bool`
+  * *ROS*: publisher `std_msgs/Bool`
   * dVRK specific.
 * `console/teleop/enable`
-  * *cisst*: write command
+  * *cisst*: write command `bool`
   * *ROS*: subscriber `std_msgs/Bool`
   * dVRK specific.
 * `console/teleop/scale`
-  * *cisst*: event write
-  * *ROS*: publisher
+  * *cisst*: event write `double`
+  * *ROS*: publisher `std_msgs::Float64`
   * dVRK specific.
 * `console/teleop/set_scale`
-  * *cisst*: write command
+  * *cisst*: write command `double`
   * *ROS*: subscriber `std_msgs/Float64`
   * dVRK specific.
 * `console/teleop/teleop_psm_selected`
-  * *cisst*: event write
+  * *cisst*: event write `prmKeyValue`
   * *ROS*: publisher `diagnostic_msgs/KeyValue`
   * dVRK specific.
 * `console/teleop/teleop_psm_unselected`
-  * *cisst*: event write
+  * *cisst*: event write `prmKeyValue`
   * *ROS*: publisher `diagnostic_msgs/KeyValue`
   * dVRK specific.
 * `console/teleop/cycle_teleop_psm_by_mtm`
-  * *cisst*: write command
+  * *cisst*: write command `std::string`
   * *ROS*: subscriber `std_msgs/String`
   * dVRK specific.
 * `console/teleop/select_teleop_psm`
-  * *cisst*: write command
+  * *cisst*: write command `prmKeyValue`
   * *ROS*: subscriber `diagnostic_msgs/KeyValue`
   * dVRK specific.
 
 ## Foot pedals
 
 * `footpedals/clutch`
-  * *cisst*: event write
+  * *cisst*: event write `prmEventButton`
   * *ROS*: publisher `sensor_msgs/Joy`
   * dVRK specific.
 * `footpedals/camera`
-  * *cisst*: event write
+  * *cisst*: event write `prmEventButton`
   * *ROS*: publisher `sensor_msgs/Joy`
   * dVRK specific.
 * `footpedals/cam_minus`
-  * *cisst*: event write
+  * *cisst*: event write `prmEventButton`
   * *ROS*: publisher `sensor_msgs/Joy`
   * dVRK specific.
 * `footpedals/cam_plus`
-  * *cisst*: event write
+  * *cisst*: event write `prmEventButton`
   * *ROS*: publisher `sensor_msgs/Joy`
   * dVRK specific.
 * `footpedals/bicoag`
-  * *cisst*: event write
+  * *cisst*: event write `prmEventButton`
   * *ROS*: publisher `sensor_msgs/Joy`
   * dVRK specific.
 * `footpedals/coag`
-  * *cisst*: event write
+  * *cisst*: event write `prmEventButton`
   * *ROS*: publisher `sensor_msgs/Joy`
   * dVRK specific.
