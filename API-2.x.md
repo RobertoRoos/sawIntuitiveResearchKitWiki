@@ -108,7 +108,7 @@ C++ class is `mtsIntuitiveResearchKitArm`.
 * `spatial/jacobian`
   * *cisst*: read command `vctDoubleMat`
   * *ROS*: publisher `std_msgs/Float64MultiArray`
-  * dVRK specific.  Body jacobian, i.e. relative to the base frame (first frame in kinematic chain).  See [cisstRobot](https://github.com/jhu-cisst/cisst/wiki/cisstRobot-robManipulator).
+  * dVRK specific.  Spatial jacobian, i.e. relative to the base frame (first frame in kinematic chain).  See [cisstRobot](https://github.com/jhu-cisst/cisst/wiki/cisstRobot-robManipulator).
 * `spatial/measured_cf`
   * *cisst*: read command `prmForceCartesianGet`
   * *ROS*: publisher `geometry_msgs/WrenchStamped`
