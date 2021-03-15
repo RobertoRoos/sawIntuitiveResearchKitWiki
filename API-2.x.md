@@ -170,31 +170,31 @@ C++ class is `mtsIntuitiveResearchKitArm`.
 * `body/set_cf_orientation_absolute`
   * *cisst*: write command `bool`
   * *ROS*: subscriber `std_msgs/Bool`
-  * dVRK specific.
+  * dVRK specific.  When using `body/servo_cf`, reference frame to apply the wrench is the end effector frame.  This makes sense for the position but can be confusing for the orientation.  For example, using the MTM, applying a contant force in Z direction feels like holding a rocket in your hand, the direction of the force will change as the user rotates the gripper.  To feel a force in a constant direction, independently of the hand's orientation, use `set_cf_orientation_absolute`.
 * `trajectory_j/ratio`
   * *cisst*: event write `double`
   * *ROS*: publisher `std_msgs/Float64`
-  * dVRK specific.
+  * dVRK specific.  Ratio applied to both maximum velocity and acceleration used for joint trajectory generation.  If a user overrides the ratio using either the velocity or acceleration specific ratio, this value in undefined.  See `trajectory_j/set_ratio`.
 * `trajectory_j/ratio_a`
   * *cisst*: event write `double`
   * *ROS*: publisher `std_msgs/Float64`
-  * dVRK specific.
+  * dVRK specific.  Ratio applied to maximum acceleration used for joint trajectory generation.  See `trajectory_j/set_ratio_a`.
 * `trajectory_j/ratio_v`
   * *cisst*: event write `double`
   * *ROS*: publisher `std_msgs/Float64`
-  * dVRK specific.
+  * dVRK specific.  Ratio applied to maximum velocity used for joint trajectory generation.  See `trajectory_j/set_ratio_v`.
 * `trajectory_j/set_ratio`
   * *cisst*: write command `double`
   * *ROS*: subscriber `std_msgs/Float64`
-  * dVRK specific.
+  * dVRK specific.  Set ratio applied to both maximum velocity and acceleration used for joint trajectory generation.  Ratio must be in range **]0, 1]**.  Default ratio is 1.  This is the recommended way to slow down arm trajectories.
 * `trajectory_j/set_ratio_a`
   * *cisst*: write command `double`
   * *ROS*: subscriber `std_msgs/Float64`
-  * dVRK specific.
+  * dVRK specific.  Set ratio applied to maximum acceleration used for joint trajectory generation.  This is provided for backward compatibility and fine tunning but the recommend approach is to use `trajectory_j/set_ratio`.
 * `trajectory_j/set_ratio_v`
   * *cisst*: write command `double`
   * *ROS*: subscriber `std_msgs/Float64`
-  * dVRK specific.
+  * dVRK specific.  Set ratio applied to maximum velocity used for joint trajectory generation.  This is provided for backward compatibility and fine tunning but the recommend approach is to use `trajectory_j/set_ratio`.
 
 ## ECM
 
@@ -203,7 +203,7 @@ C++ class is `mtsIntuitiveResearchKitArmECM`.
 * `manip_clutch`
   * *cisst*: event write `prmEventButton`
   * *ROS*: publisher `sensor_msgs::Joy`
-  * dVRK specific.
+  * dVRK specific.  Indicates if the clutch button on the ECM (located on top of the translation/insertion stage) is pressed or not.
 * `endoscope_type`
   * *cisst*: event write `std::string`
   * *ROS*: publisher `std_msgs::String`
