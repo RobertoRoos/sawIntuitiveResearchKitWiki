@@ -62,33 +62,33 @@ C++ class is `mtsIntuitiveResearchKitArm`.
   * *cisst*: write event `std::string`
   * *ROS*: publisher `std_msgs/String`
   * dVRK specific.  Status messages, can be used for custom GUI.  For ROS, these messages are also sent as status messages for ROS log.
-* `goal_reached`:
+* `goal_reached`
   * *cisst*: write event `bool`
   * *ROS*: publisher `std_msgs/Bool`
-  * dVRK specific.  Boolean that indicates if the last `move_` command was completed successfully or not.  It is possible to used the CRTK `operating_state` fields `is_busy` and `state` instead.  This is provided for backward compatibility with dVRK 1.x applications.
+  * dVRK specific.  Boolean that indicates if the last `move_{jc}{pr}` command was completed successfully or not.  It is possible to use the CRTK `operating_state` fields `is_busy` and `state` instead.  This is provided for backward compatibility with dVRK 1.x applications.
 
 ### Motion queries
 
 * `measured_cp`
   * *cisst*: read command `prmPositionCartesianGet`
   * *ROS*: publisher `geometry_msgs/TransformStamped`
-  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion)
+  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion).  Measured cartesian position.
 * `measured_cv`
   * *cisst*: read command `prmVelocityCartesianGet`
   * *ROS*: publisher `geometry_msgs/TwistStamped`
-  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion)
+  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion).  Measured cartesian velocity.
 * `measured_js`
   * *cisst*: read command `prmStateJoint`
   * *ROS*: publisher `sensor_msgs/JointState`
-  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion)
+  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion).  Measured joint state (position, velocity, effort).
 * `setpoint_cp`
   * *cisst*: read command `prmPositionCartesianGet`
   * *ROS*: publisher `geometry_msgs/TransformStamped`
-  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion)
+  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion).  Cartesian position setpoint.
 * `setpoint_js`
   * *cisst*: read command `prmStateJoint`
   * *ROS*: publisher `sensor_msgs/JointState`
-  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion)
+  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion).  Joint setpoint (either position or effort).
 * `local/measured_cp`
   * *cisst*: read command `prmPositionCartesianGet`
   * *ROS*: publisher `geometry_msgs/TransformStamped`
@@ -96,19 +96,19 @@ C++ class is `mtsIntuitiveResearchKitArm`.
 * `local/setpoint_cp`
   * *cisst*: read command `prmPositionCartesianGet`
   * *ROS*: publisher `geometry_msgs/TransformStamped`
-  * dVRK specific.  Cartesian set point relative to the first frame of the kinematic chain.  See notes for `local/measured_cp`.
+  * dVRK specific.  Cartesian setpoint relative to the first frame of the kinematic chain.  See notes for `local/measured_cp`.
 * `body/jacobian`
   * *cisst*: read command `vctDoubleMat`
   * *ROS*: publisher `std_msgs/Float64MultiArray`
-  * dVRK specific.  Body jacobian, i.e. relative to end effector.
+  * dVRK specific.  Body jacobian, i.e. relative to end effector.  See [cisstRobot](https://github.com/jhu-cisst/cisst/wiki/cisstRobot-robManipulator).
 * `body/measured_cf`
   * *cisst*: read command `prmForceCartesianGet`
   * *ROS*: publisher `geometry_msgs/WrenchStamped`
-  * dVRK specific.  Estimated forces on the end effector.  These are computed using the current feedback on the actuators.  From there, the joint efforts are estimated using the actuator to joint coupling matrix.  See also `body/set_cf_orientation_absolute`.  Finally, the cartesian effort is computed using the jacobian.  This is not a very rough cartesian force emulation as the computations don't gravity compensation nor any other dynamic model or the arm. 
+  * dVRK specific.  Estimated forces on the end effector.  These are computed using the current feedback on the actuators.  From there, the joint efforts are estimated using the actuator to joint coupling matrix.  See also `body/set_cf_orientation_absolute` and [cisstRobot](https://github.com/jhu-cisst/cisst/wiki/cisstRobot-robManipulator).  Finally, the cartesian effort is computed using the jacobian.  This is a rough cartesian force emulation as the computations don't take into account gravity compensation nor any other dynamic model or the arm. 
 * `spatial/jacobian`
   * *cisst*: read command `vctDoubleMat`
   * *ROS*: publisher `std_msgs/Float64MultiArray`
-  * dVRK specific.  Body jacobian, i.e. relative to the base frame (first frame in kinematic chain).
+  * dVRK specific.  Body jacobian, i.e. relative to the base frame (first frame in kinematic chain).  See [cisstRobot](https://github.com/jhu-cisst/cisst/wiki/cisstRobot-robManipulator).
 * `spatial/measured_cf`
   * *cisst*: read command `prmForceCartesianGet`
   * *ROS*: publisher `geometry_msgs/WrenchStamped`
@@ -119,43 +119,47 @@ C++ class is `mtsIntuitiveResearchKitArm`.
 * `servo_cp`
   * *cisst*: write command `prmPositionCartesianSet`
   * *ROS*: subscriber `geometry_msgs/TransformStamped`
-  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion)
+  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion).  Set cartesian position goal for low-level controller (PID).  Use with caution, goals should be reachable withing a single clock tick (< 1 ms).  Use `move_cp` for large motions.
 * `servo_jf`
   * *cisst*: write command `prmForceTorqueJointSet`
   * *ROS*: subscriber `sensor_msgs/JointState`
-  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion)
+  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion).  Set joint effort goal for low-level controller (direct current control).  Use with caution since the only safety mechanism built-in is the cap on maximum motor current.
 * `servo_jp`
   * *cisst*: write command `prmPositionJointSet`
   * *ROS*: subscriber `sensor_msgs/JointState`
-  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion)
+  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion).  Set joint position goal for low-level controller (PID).  Use with caution, goals should be reachable withing a single clock tick (< 1 ms).  Use `move_jp` or `move_jr` for large motions.
 * `servo_jr`
   * *cisst*: write command `prmPositionJointSet`
   * *ROS*: subscriber `sensor_msgs/JointState`
-  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion)
+  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion). Set joint relative position goal for low-level controller (PID).  The goal is defined as an increment that will be added to the current `setpoint_jp`.  See also notes for `servo_jp`.
 * `spatial/servo_cf`
   * *cisst*: write command `prmForceCartesianSet`
   * *ROS*: subscriber `geometry_msgs/WrenchStamped`
-  * dVRK specific.  Apply wrench using `spatial/jacobian`.  For most application, use `body/servo_cf`.  Gravity compensation will be added based on last call to `use_gravity_compensation` (for MTMs and ECM).
+  * dVRK specific.  Set cartesian effort goal for low-level controller using `spatial/jacobian` (direct current control).  Use with caution since the only safety mechanism built-in is the cap on maximum motor current.  For most application, use `body/servo_cf`.  Gravity compensation will be added based on last call to `use_gravity_compensation` (for MTMs and ECM).  See [cisstRobot](https://github.com/jhu-cisst/cisst/wiki/cisstRobot-robManipulator).
 * `body/servo_cf`
   * *cisst*: write command `prmForceCartesianSet`
   * *ROS*: subscriber `geometry_msgs/WrenchStamped`
-  * dVRK specific.  Apply wrench using `body/jacobian`.  Useful for haptic on MTM.  By default direction of force is defined by the orientation of the end effector.  To use the absolute orientation, toggle on/off using `body/set_cf_orientation_absolute`.  Gravity compensation will be added based on last call to `use_gravity_compensation` (for MTMs and ECM).  
+  * dVRK specific.  Set cartesian effort goal for low-level controller using `body/jacobian` (direct current control).  Use with caution since the only safety mechanism built-in is the cap on maximum motor current.  Useful for haptic on MTM.  By default direction of force is defined by the orientation of the end effector.  To use the absolute orientation, toggle on/off using `body/set_cf_orientation_absolute`.  Gravity compensation will be added based on last call to `use_gravity_compensation` (for MTMs and ECM).  See [cisstRobot](https://github.com/jhu-cisst/cisst/wiki/cisstRobot-robManipulator).  
 * `set_cartesian_impedance_gains`
   * *cisst*: write command `prmCartesianImpedanceGains`
   * *ROS*: subscriber `cisst_msgs/prmCartesianImpedanceGains`
-  * dVRK specific.  Apply wrench based on difference between measured and goal cartesian positions as well as twist (cartesian velocity).  The cartesian space is divided in 12 cases: negative and positive (**2**) error in position and orientation (**x 2**) along axes X, Y and Z (**x 3 = 12**).  The payload for this command includes 3 parameters for each case: a linear gain, a damping gain and an offset.  This command can be used to define a simple haptic virtual fixture (plane, line, point, box corner...).
+  * dVRK specific.  Apply wrench based on difference between measured and goal cartesian positions as well as twist (cartesian velocity).  The cartesian space is divided in 12 cases: negative and positive (**2**) error in position and orientation (**x 2**) along axes X, Y and Z (**x 3 = 12**).  The payload for this command includes 3 parameters for each case: a linear gain, a damping gain and an offset.  This command can be used to define a simple haptic virtual fixture (plane, line, point, box corner...).  Internally the dVRK code uses the class `osaCartesianImpedanceController` from the package [*sawControllers*](https://github.com/jhu-saw/sawControllers).
 * `move_cp`
   * *cisst*: write command `prmPositionCartesianSet`
   * *ROS*: subscriber `geometry_msgs/TransformStamped`
-  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion)
+  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion).  Set cartesian trajectory goal.  The current implementation converts the cartesian goal into a joint trajectory goal and then execute the trajectory in joint space.  Therefore the current controller doesn't generate straight lines in cartesian space. See `move_jp`.
 * `move_jp`
   * *cisst*: write command `prmPositionJointSet`
   * *ROS*: subscriber `sensor_msgs/JointState`
-  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion)
+  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion).  Set joint trajectory goal.
+    * Goal can be changed before the trajectory is completed.  The trajectory generator will use the current joint velocities and accelerations to smooth the trajectory.
+    * User can check if the trajectory is completed using `is_busy` from the `operating_state` 
+    * The current implementation assumes the final velocity is zero.  Sending a fast succession of goals can generate a stop-and-go motion
+    * Internally, the dVRK code uses the class `robReflexxes` from [*cisstRobot*](https://github.com/jhu-cisst/cisst/tree/master/cisstRobot) (wrapper for [Reflexxes Type II Library](www.reflexxes.com))
 * `move_jr`
   * *cisst*: write command `prmPositionJointSet`
   * *ROS*: subscriber `sensor_msgs/JointState`
-  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion)
+  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion).  Set relative joint trajectory goal.  See `move_jp`.
 
 ### Configuration
 
