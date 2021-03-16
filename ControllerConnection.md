@@ -79,7 +79,7 @@ If you installed linux recently, you are likely to have Kernel 3.x with the new 
 
 ### Convenient solution
 
-If you or your institution doesn't care about who can access the FireWire devices on your system, you can grant anyone to have read and write permissions on all FireWire devices.  This is simpler to manage but not as safe as the solution described in the next section.
+If you or your institution doesn't care about who can access the FireWire devices on your system, you can grant anyone to have read and write permissions on all FireWire devices.  This is simpler to manage and should satisfy the requirements of most if not all dVRK users.
 
 The following script should be run only once per computer:
 ```sh
@@ -93,7 +93,7 @@ The following script should be run only once per computer:
 
 ### Safer solution
 
-If you or your institution cares about who can access the FireWire devices on your computer you can create a dedicated unix group to control who can access the FireWire devices.
+If you or your institution really, really cares about who can access the FireWire devices on your computer you can create a dedicated unix group to control who can access the FireWire devices.
 
 The following script should be run only once per computer and performs the steps described above:
 ```sh
@@ -116,7 +116,7 @@ Once a user has been added to the `fpgaqla` group, they need to logout/login so 
 
 ### `qladisp`
 
-**Note:** `qladisp` is part of the dVRK software, so you will to build the software first.  See -------------------------
+**Note:** `qladisp` is part of the dVRK software, so you will to build the software first.  See [Build with ROS](/jhu-dvrk/sawIntuitiveResearchKit/wiki/CatkinBuild).
 
 There are a few ways to test that your controllers are properly connected.  You can start with the command line application provided with the dVRK software `qladisp`.  Just type `qladisp` in a terminal (without options) and the output should show the list of boards found with their board Id and firmware version.  For example:
 ```sh
