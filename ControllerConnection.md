@@ -146,15 +146,7 @@ BasePort::ScanNodes: building node map for 13 nodes:
   Node 1, BoardId = a, Firmware Version = 7
   Node 2, BoardId = b, Firmware Version = 7
   Node 3, BoardId = 5, Firmware Version = 7
-  Node 4, BoardId = 4, Firmware Version = 7
-  Node 5, BoardId = 8, Firmware Version = 7
-  Node 6, BoardId = 9, Firmware Version = 7
-  Node 7, BoardId = 6, Firmware Version = 7
-  Node 8, BoardId = 7, Firmware Version = 7
-  Node 9, BoardId = 3, Firmware Version = 7
-  Node a, BoardId = 2, Firmware Version = 7
-  Node b, BoardId = 1, Firmware Version = 7
-  Node c, BoardId = 0, Firmware Version = 7
+  ...
 ```
 This is the output for a full system.  For most systems, you should see two boards per controller/arm.
 
@@ -164,18 +156,10 @@ If `qladisp` doesn't work, check that all FireWire devices have been found and c
 ```sh
 crw-rw-rw- 1 root fpgaqla 243,  0 Feb 12 09:31 /dev/fw0
 crw-rw-rw- 1 root fpgaqla 243,  1 Mar  2 11:45 /dev/fw1
-crw-rw-rw- 1 root fpgaqla 243, 10 Mar  2 11:45 /dev/fw10
-crw-rw-rw- 1 root fpgaqla 243, 11 Mar  2 11:45 /dev/fw11
-crw-rw-rw- 1 root fpgaqla 243, 12 Mar  2 11:45 /dev/fw12
-crw-rw-rw- 1 root fpgaqla 243, 13 Mar  2 11:45 /dev/fw13
 crw-rw-rw- 1 root fpgaqla 243,  2 Mar  2 11:45 /dev/fw2
 crw-rw-rw- 1 root fpgaqla 243,  3 Mar  2 11:45 /dev/fw3
 crw-rw-rw- 1 root fpgaqla 243,  4 Mar  2 11:45 /dev/fw4
-crw-rw-rw- 1 root fpgaqla 243,  5 Mar  2 11:45 /dev/fw5
-crw-rw-rw- 1 root fpgaqla 243,  6 Mar  2 11:45 /dev/fw6
-crw-rw-rw- 1 root fpgaqla 243,  7 Mar  2 11:45 /dev/fw7
-crw-rw-rw- 1 root fpgaqla 243,  8 Mar  2 11:45 /dev/fw8
-crw-rw-rw- 1 root fpgaqla 243,  9 Mar  2 11:45 /dev/fw9
+...
 ```
 
 You should have two `fw` devices created for each controllers (except 1 for SUJ controller).  Note that `fw0` is the FireWire adapter on the PC itself.  If you have multiple FireWire cards on your PC, the first nodes will correspond to the cards on the PC (e.g. for 2 cards, `fw0` and `fw1`).
@@ -188,8 +172,7 @@ You can also monitor the kernel messages using the command `dmesg -w`.  Start th
 ```sh
 [2413623.229296] firewire_core 0000:09:04.0: created device fw8: GUID fa610e3f00000007, S400
 [2413623.229365] firewire_core 0000:09:04.0: created device fw11: GUID fa610e2f00000007, S400
-[2413623.229382] firewire_core 0000:09:04.0: created device fw9: GUID fa610e7e00000007, S400
-[2413623.229398] firewire_core 0000:09:04.0: created device fw6: GUID fa610e8f00000007, S400
+...
 ```
 
 The example above shows the output for firmware 7+.  With older firmware versions, you will get some warnings/errors you can ignore:
