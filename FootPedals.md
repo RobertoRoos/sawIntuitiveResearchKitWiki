@@ -1,9 +1,14 @@
 <!--ts-->
    * [Introduction](#introduction)
-   * [Material](#material)
-   * [Wiring](#wiring)
+   * [dVRK controller compatible foot pedals](#dvrk-controller-compatible-foot-pedals)
+      * [Material](#material)
+      * [Wiring](#wiring)
+      * [Software configuration](#software-configuration)
+   * [USB foot pedals](#usb-foot-pedals)
+      * [Compilation](#compilation)
+      * [Configuration](#configuration)
 
-<!-- Added by: anton, at: 2021-01-28T16:11-05:00 -->
+<!-- Added by: adeguet1, at: 2021-03-16T13:02-04:00 -->
 
 <!--te-->
 
