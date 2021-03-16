@@ -202,8 +202,31 @@ The above indicates that `fw1` has FPGA V1.x (no Ethernet). For FPGA V2.x (Ether
 
 ## Adapter and configuration
 
+You will need a network adapter dedicated to the communication with the dVRK controller (e.g. a PCIe Ethernet adapter), it can't be plugged in a router or hub and used to access Internet.  Therefore we recommend to install 2 network adapters on your computer, one for the LAN/WAN and one for the dVRK.  The dVRK dedicated network adapter will be directly connected to one of the dVRK controllers on the FireWire chain.  Please avoid having dVRK controllers connected to 2 different PCs through Ethernet.
+
+We recommend a built-in network adapter (e.g. a PCIe Ethernet adapter).  We don't have any specific recommendation for the chipset, just make sure it is supported by Linux.  USB3/USB-C network adapters might work too but we don't have any extensive experience with these.
+
+We also recommend a native OS (as opposed to a VM).  If you succeed at running the dVRK software in a VM, let us know.
+
+Finally, you will need to configure the dVRK dedicated network adapter to use " Link-Local Only"
+
+### Ubuntu
+
+Start the application `sudo nm-connection-editor` (this should work on Ubuntu 16.04, 18.04 and 20.04).  Select the Ethernet adapter you want to configure:
+* In tab "Ethernet", change MTU to 3000.  The default is 1500 and is not enough if you have a full daVinci (2 MTMS, 3 PSMs, ECM and SUJ).
+* In tab "IPv4 Settings", change "method" to "Link-Local Only"
+
+### MacOS
+
+Running the dVRK on MacOS is experimental and not that useful.  This being said, there is no network configuration required on MacOS.  Somehow the OS figures out the adpater should be Link-Local by itself. 
+
+### Windows
+
 ## Testing connectivity
 
 ### `qladisp`
 
+`-pudp`
+
 ### `ping`
+
