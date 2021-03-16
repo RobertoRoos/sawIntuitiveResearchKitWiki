@@ -20,7 +20,7 @@ You will need to create two accounts to access some privates resources:
 Make sure you read all the documentation on the ISI maintained wiki, including [unboxing the arms](http://research.intusurg.com/dvrkwiki/index.php?title=DVRK:Docs:Main).
 
 You can browse the dVRK wiki using the side menu.  The main steps are:
-* [Setting up Environment](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Development-Environment) - This has to be performed once per computer.  The goal is to make sure you have the proper hardware and OS configuration to communicate with the controllers over FireWire.
+* [Controller Connectivity](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ControllerConnection) - This has to be performed once per computer.  The goal is to make sure you have the proper hardware and OS configuration to communicate with the controllers over FireWire.
 * [Build with ROS](/jhu-dvrk/sawIntuitiveResearchKit/wiki/CatkinBuild) - This has to be performed once per user, each user will likely maintain their own version of the software in their home directory.  The core software for the dVRK can be built without ROS but we strongly recommend you use ROS and the catkin build tools.
 * [XML Configuration](/jhu-dvrk/sawIntuitiveResearchKit/wiki/XMLConfig) - This step has to be performed once per robotic arm.  Once the configuration has been generated, we strongly recommend to save the files in a safe place (e.g. github, feel free to contact Anton Deguet @ JHU for help)
 * [Hardware Setup](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Hardware) - This section describes the few hardware modifications required  and physical connections between the controllers and the arms as well as between the controllers and the PC.

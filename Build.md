@@ -176,7 +176,7 @@ Notes:
 
 * More info can be found on the [cisst wiki](/jhu-cisst/cisst/wiki/Compiling-cisst-and-SAW-with-CMake)
 
-* If you still have some issues with your firewire permissions and need to use `sudo` to start any dVRK program, the `cisstvars.sh` won't work since `sudo` starts a new shell that won't inherit the current shell's variables.   So, fix the firewire permissions first (see https://github.com/jhu-cisst/mechatronics-software/wiki/Development-Environment)
+* If you still have some issues with your firewire permissions and need to use `sudo` to start any dVRK program, the `cisstvars.sh` won't work since `sudo` starts a new shell that won't inherit the current shell's variables.   So, fix the firewire permissions first (see https://github.com/jhu-cisst/mechatronics-software/wiki/ControllerConnection)
 
 # 6. Using Qt Creator
 
