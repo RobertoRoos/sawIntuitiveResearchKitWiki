@@ -69,25 +69,35 @@ First you will need to configure the dVRK console to use the *sawJoystick* compo
                 "constructor-arg": {
                     "Name": "joystick"
                 },
-                "configure-parameter": "sawJoystickConfiguration.json"
+                "configure-parameter": "misc/sawJoystickConfiguration.json"
             }
         ]
     }
     ,
     "console-inputs":
     {
-        "clutch": {
+        "operator-present": {
+            "component": "joystick",
+            "interface": "OperatorPresent"
+        }
+        ,   "clutch": {
             "component": "joystick",
             "interface": "Clutch"
         }
     }
 ```
 
-Then you need to configure the *sawJoystick* component so that buttons are mapped to names that match the dVRK foot pedal names (e.g. "Clutch").  In the `sawJoystickConfiguration.json` file, you should have something like:
+Then you need to configure the *sawJoystick* component so that buttons are mapped to names that match the dVRK foot pedal names (e.g. "Clutch").  We provide an example of *sawJoystick* for the dVRK in `share/misc/sawJoystickConfiguration.json`:
 ```json
 {
     "converters":
     [
+        {
+            "type": "interface-provided-button",
+	    "index-input": 1,
+            "interface-name": "OperatorPresent"
+        }
+	,
         {
             "type": "interface-provided-button",
 	    "index-input": 0,
@@ -98,3 +108,5 @@ Then you need to configure the *sawJoystick* component so that buttons are mappe
     "device": "/dev/input/js0"
 }
 ```  
+
+To test which "device" and "index-input" to use, you can run the example application that comes with *sawJoystick*: `sawJoystickQtExample`.  To test different devices, you can use the `-d` option (e.g. `-d /dev/input/js0`).
