@@ -3,8 +3,7 @@
    * [FireWire](#firewire)
       * [FireWire Adapter](#firewire-adapter)
       * [Install Ubuntu](#install-ubuntu)
-      * [Install <em>libraw1394</em> on Ubuntu](#install-libraw1394-on-ubuntu)
-      * [Set permission for FireWire devices](#set-permission-for-firewire-devices)
+      * [Set permissions for FireWire devices](#set-permission-for-firewire-devices)
          * [Convenient solution](#convenient-solution)
          * [Safer solution](#safer-solution)
       * [Testing connectivity](#testing-connectivity)
@@ -62,16 +61,12 @@ Example FireWire Section:
 
 We recommend Ubuntu 18.04 LTS but one can also use 16.04 or 20.04 with the latest dVRK (2020).  For ROS, we recommend Kinetic on 16.04, Melodic on 18.04 and Noetic on 20.04.
 
-##  Install *libraw1394* on Ubuntu
+You can then install *libraw1394*.  This has to be done only once by a user with sudo privileges
+```sh
+ sudo apt-get install libraw1394-dev
+```
 
-This has to be done only once by a user with sudo privileges.  You can use Synaptic to install packages or the command line.
- * **Synaptic:** Search for raw1394 and install the libraw1394-dev package.
- * **Terminal:** On the command line, install it with:
-   ```sh
-   sudo apt-get install libraw1394-dev
-   ```
-
-## Set permission for FireWire devices
+## Set permissions for FireWire devices
 
 If you installed linux recently, you are likely to have Kernel 3.x with the new Juju firewire driver stack, which means the firewire device would be /dev/fw* instead of the old /dev/raw1394*. In order to run the control software without root permission, please do the following steps:
  * Create `/etc/udev/rules.d` folder if it's not there
