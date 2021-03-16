@@ -21,7 +21,7 @@
 # 1. How to run the examples
 
 The following sections assumes that you performed every step in:
-* [Controller connectivity](https://github.com/jhu-cisst/mechatronics-software/wiki/ControllerConnection)
+* [Controller connectivity](/jhu-dVRK/sawIntuitiveResearchKit/wiki/ControllerConnection)
 * [Software build instructions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Build)
 * [Generating XML configuration files](/jhu-dvrk/sawIntuitiveResearchKit/wiki/XMLConfig)
 * [Hardware setup and testing](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Hardware)
