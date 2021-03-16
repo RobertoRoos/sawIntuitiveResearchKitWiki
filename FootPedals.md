@@ -58,5 +58,43 @@ To compile the *sawJoystick* component, we strongly recommend to use `wstool` to
  
 ## Configuration
 
+First you will need to configure the dVRK console to use the *sawJoystick* component so your `console.json` file should contain:
+```json
+    "component-manager": {
+        "components":
+        [
+            {
+                "shared-library": "sawJoystick",
+                "class-name": "mtsJoystick",
+                "constructor-arg": {
+                    "Name": "joystick"
+                },
+                "configure-parameter": "sawJoystickConfiguration.json"
+            }
+        ]
+    }
+    ,
+    "console-inputs":
+    {
+        "clutch": {
+            "component": "joystick",
+            "interface": "Clutch"
+        }
+    }
+```
 
-  
+Then you need to configure the *sawJoystick* component so that buttons are mapped to names that match the dVRK foot pedal names (e.g. "Clutch").  In the `sawJoystickConfiguration.json` file, you should have something like:
+```json
+{
+    "converters":
+    [
+        {
+            "type": "interface-provided-button",
+	    "index-input": 0,
+            "interface-name": "Clutch"
+        }
+    ]
+    ,
+    "device": "/dev/input/js0"
+}
+```  
