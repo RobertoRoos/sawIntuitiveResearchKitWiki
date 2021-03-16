@@ -50,7 +50,7 @@ There is no software specific configuration, just use the IO files used with the
 
 # USB foot pedals
 
-**Note:** not all foot pedals are supported at that point.  To easily integrate the foot pedal with cisst/SAW, we're using the [sawJoystick](https://github.com/jhu-saw/sawJoystick) component.
+**Note:** not all USB foot pedals are supported at that point.  To easily integrate the foot pedal with cisst/SAW, we're using the [sawJoystick](https://github.com/jhu-saw/sawJoystick) component.  See README.md for the *sawJoystick* for more information. 
 
 ## Compilation
 
@@ -58,7 +58,7 @@ To compile the *sawJoystick* component, we strongly recommend to use `wstool` to
  
 ## Configuration
 
-First you will need to configure the dVRK console to use the *sawJoystick* component so your `console.json` file should contain:
+First you will need to configure the dVRK console to use the *sawJoystick* component.  Your `console.json` file should contain:
 ```json
     "component-manager": {
         "components":
@@ -87,7 +87,7 @@ First you will need to configure the dVRK console to use the *sawJoystick* compo
     }
 ```
 
-Then you need to configure the *sawJoystick* component so that buttons are mapped to names that match the dVRK foot pedal names (e.g. "Clutch").  We provide an example of *sawJoystick* for the dVRK in `share/misc/sawJoystickConfiguration.json`:
+Then you need to configure the *sawJoystick* component so that buttons are mapped to names that match the dVRK foot pedal names (e.g. "OperatorPresent", "Clutch"...).  We provide an example of *sawJoystick* configure for the dVRK in `share/misc/sawJoystickConfiguration.json`:
 ```json
 {
     "converters":
