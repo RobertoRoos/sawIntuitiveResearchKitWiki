@@ -17,8 +17,11 @@
       * [General](#general)
       * [Tele-operation](#tele-operation-1)
       * [Foot pedals](#foot-pedals)
+   * [Miscellaneous](#miscellaneous)
+      * [ISI focus controller](#isi-focus-controller)
+      * [dVRK focus controller](#dvrk-focus-controller)
 
-<!-- Added by: anton, at: 2021-02-10T11:36-05:00 -->
+<!-- Added by: anton, at: 2021-03-16T17:51-04:00 -->
 
 <!--te-->
 
