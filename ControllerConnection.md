@@ -41,7 +41,7 @@ Starting with dVRK Software Version 2.0, Ethernet/UDP is also supported.  To use
 
 ## FireWire Adapter
 
-The dVRK controllers use FireWire as the fieldbus, and you will need a FireWire adapter. Due to the fact that FireWire is a sophisticated protocol, some chipset implementations are not fully functional and have various issues such as dropping packets and supporting a limited number of FireWire nodes. We recommend adapters with chipsets from Texas Instruments (see PC configuration in [FAQ](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FAQ)).
+If you are using FireWire as the fieldbus, you will need a FireWire adapter on the PC. Due to the fact that FireWire is a sophisticated protocol, some chipset implementations are not fully functional and have various issues such as dropping packets and supporting a limited number of FireWire nodes. We recommend adapters with chipsets from Texas Instruments (see PC configuration in [FAQ](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FAQ)).
 
 To get the chipset model of your FireWire card: 
 ```sh
@@ -67,7 +67,7 @@ You have to install *libraw1394*.  This has to be done only once per computer by
 
 ## Set permissions for FireWire devices
 
-If you installed linux recently, you are likely to have a kernel version higher that 3 with the new Juju firewire driver stack, which means the firewire device would be /dev/fw* instead of the old /dev/raw1394*. In order to run the control software without root/sudo permissions, please follow the following steps:
+If you installed Linux recently, you are likely to have a kernel version higher than 3 with the new Juju firewire driver stack, which means the firewire device would be /dev/fw* instead of the old /dev/raw1394*. In order to run the control software without root/sudo permissions, please follow the following steps:
  * Create `/etc/udev/rules.d` folder if it's not there
  * Add rules for `/dev/fw*` devices (or `/dev/raw1394*` for Ubuntu versions prior to 10.04)
  * Optionally create group **fpgaqla**
@@ -128,9 +128,9 @@ Using libraw1394 version 2.1.2
 FirewirePort::Init: successfully disabled cycle start packet
 FirewirePort::InitNodes: base node id = ffc0
 BasePort::ScanNodes: building node map for 13 nodes:
-  Node 0, BoardId = c, Firmware Version = 7
-  Node 1, BoardId = a, Firmware Version = 7
-  Node 2, BoardId = b, Firmware Version = 7
+  Node 0, BoardId = 12, Firmware Version = 7
+  Node 1, BoardId = 10, Firmware Version = 7
+  Node 2, BoardId = 11, Firmware Version = 7
   Node 3, BoardId = 5, Firmware Version = 7
   ...
 ```
@@ -200,19 +200,19 @@ The above indicates that `fw1` has FPGA V1.x (no Ethernet). For FPGA V2.x (Ether
 # Ethernet UDP
 
 **Important Notes:**
-* The Ethernet adapter on the computer must be configured for "Link Local" (not static IP nor DHCP)
+* The Ethernet adapter on the computer must be configured for "Link Local" on Linux (not static IP nor DHCP)
 * The network cable goes directly from the computer to the "bridge" controller (no hub nor switch)
 * The software then communicates using UDP, the "bridge" controller is a UDP server and the computer is a UDP client
 
 ## Adapter and configuration
 
-You will need a network adapter dedicated to the communication with the dVRK controllers (e.g. a PCIe Ethernet adapter).  The dVRK network port on the computer can't be plugged in a router or hub and used to access Internet.  Therefore we recommend to install 2 network adapters on your computer, one for the LAN/WAN and one for the dVRK.  The dVRK dedicated network adapter will be directly connected to one of the dVRK controllers on the FireWire chain.  Please avoid having dVRK controllers connected to 2 different computers through Ethernet.
+You will need a network adapter dedicated to the communication with the dVRK controllers (e.g., a PCIe Ethernet adapter).  The dVRK network port on the computer can't be plugged in to a router or hub and used to access the Internet.  Therefore, we recommend to install 2 network adapters on your computer, one for the LAN/WAN and one for the dVRK.  The dVRK dedicated network adapter will be directly connected to one of the dVRK controllers on the FireWire chain.  Please avoid having dVRK controllers connected to 2 different computers through Ethernet.
 
-We recommend a built-in network adapter (e.g. a PCIe Ethernet adapter).  We don't have any specific recommendation for the chipset, just make sure it is supported by Linux.  USB3/USB-C network adapters might work too but we don't have any extensive experience with these.
+We recommend a built-in network adapter (e.g., a PCIe Ethernet adapter).  We don't have any specific recommendation for the chipset, just make sure it is supported by Linux.  USB3/USB-C network adapters might work too but we don't have extensive experience with these.
 
 We also recommend a native OS (as opposed to a virtual machine guest OS).  If you succeed at running the dVRK software in a VM, let us know.
 
-Finally, you will need to configure the dVRK dedicated network adapter to use " Link-Local Only"
+Finally, you will need to configure the dVRK dedicated network adapter to use "Link-Local Only"
 
 ### Ubuntu
 
@@ -222,9 +222,11 @@ Start the application `sudo nm-connection-editor` (this should work on Ubuntu 16
 
 ### MacOS
 
-Running the dVRK on MacOS is experimental and not that useful.  This being said, there is no network configuration required on MacOS.  Somehow the OS figures out the adapter should be configured for Link-Local by itself. 
+Running the dVRK on MacOS is experimental and not that useful.  This being said, there is no network configuration required on MacOS.  Somehow the OS figures out that the adapter should be configured for Link-Local by itself. 
 
 ### Windows
+
+Running the dVRK on Windows is experimental and currently not very stable. There is no network configuration required because it defaults to "Link-Local" if it cannot be configured using DHCP.
 
 ## Testing connectivity
 
@@ -259,13 +261,13 @@ BasePort::ScanNodes: found 4 boards
 `qladisp` provides some feedback specific to the UDP port (as opposed to FireWire):
 * Name of interface used: `eno1`
 * MTU: `3000` (or whatever you set)
-* UDP server IP: `169.254.0.100` (hard coded on firmware)
-* UDP server port: `1394` (hard coded on firmware, picked for no other reason than it's the other name for FireWire)
-* Message `node 4 is not a QLA board` indicates that another FireWire device is connected to the FireWire chain (i.e. not a dVRK controller).  In this case, a PC is still connected.  This can lead to issues so it is recommended to unplug the computer from FireWire chain.
+* UDP server IP: `169.254.0.100` (default in software, but can be changed, for example by specifying `-pudp:169.254.0.50`)
+* UDP server port: `1394` (hard coded in firmware, picked for no other reason than it's the other name for FireWire)
+* Message `node 4 is not a QLA board` indicates that another FireWire device is connected to the FireWire chain (i.e. not a dVRK controller).  In this case, a PC is still connected.  This can lead to issues so it is recommended to unplug the computer from the FireWire chain.
  
 ### `ping`
 
-The dVRK controllers (with firmware 7+) also support ICMP requests.  To test the communication, you can `ping` the controllers using `ping 169.254.0.100`.  The output should look like:
+The dVRK controllers (with firmware 7+) also support ICMP requests.  To test the communication, you can `ping` the controllers using `ping 169.254.0.100` (or whatever IP address has been configured).  The output should look like:
 ```
 PING 169.254.0.100 (169.254.0.100) 56(84) bytes of data.
 64 bytes from 169.254.0.100: icmp_seq=1 ttl=64 time=0.247 ms
