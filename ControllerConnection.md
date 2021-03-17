@@ -23,11 +23,14 @@
 
 # Introduction
 
-The current software is written in C/C++ and uses the libraw1394 library under Linux (FireWire is also known as 1394). See http://www.dennedy.org/libraw1394/ for libraw1394 documentation.  FireWire is the preferred way to communicate between the dVRK controllers and the PC.  In this scenario, the controllers are daisy-chained using FireWire **and** the computer is also on the FireWire chain.
+The current software is written in C/C++ and uses the libraw1394 library under Linux (FireWire is also known as 1394). See http://www.dennedy.org/libraw1394/ for libraw1394 documentation.  **FireWire is the preferred way to communicate between the dVRK controllers and the computer**.  In this scenario, the controllers are daisy-chained using FireWire **and** the computer is also on the FireWire chain.
 
 <a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/communication/PC-FireWire-Controllers.png"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/communication/PC-FireWire-Controllers.png" width="350"></a>
 
-Starting with dVRK Software Version 2.0, Ethernet UDP is also supported.  To use UDP, you will need to use firmware 7+ on all your dVRK controllers and you will need at least one FPGA V2.x board (with Ethernet jack, see [FPGA versions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Board-Versions)).  This approach is not as heavily tested as FireWire so make sure your computer also has a FireWire adapter for backup.  In this scenario, the controllers are daisy-chained using FireWire **but** the computer is **NOT** on the FireWire chain.  Instead, the computer is connected via Ethernet to one of the dVRK controller.  Said dVRK controller becomes the "bridge" between the computer and all the dVRK controllers.  The Ethernet adapter on the computer must be configured for "Link Local", the network cable goes directly from the computer to the "bridge" controller.  The software then communicates using UDP, the computer being the UDP client.
+Starting with dVRK Software Version 2.0, Ethernet UDP is also supported.  To use UDP, you will need to use firmware 7+ on all your dVRK controllers and you will need at least one FPGA V2.x board (with Ethernet jack, see [FPGA versions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Board-Versions)).  **This approach is not as heavily tested as FireWire so make sure your computer also has a FireWire adapter for backup**.  In this scenario, the controllers are daisy-chained using FireWire but the computer is **not** on the FireWire chain.  Instead, the computer is connected via Ethernet to one of the dVRK controllers.  Said dVRK controller becomes the "bridge" between the computer and all the dVRK controllers.
+* The Ethernet adapter on the computer must be configured for "Link Local" (not static IP nor DHCP)
+* The network cable goes directly from the computer to the "bridge" controller (no hub nor switch)
+* The software then communicates using UDP, the "bridge" controller is a UDP server and the computer is a UDP client
 
 <a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/communication/PC-Ethernet-Controllers.png"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/communication/PC-Ethernet-Controllers.png" width="350"></a>
 
