@@ -23,11 +23,11 @@
 
 # Introduction
 
-The current software is written in C/C++ and uses the libraw1394 library under Linux (FireWire is also known as 1394). See http://www.dennedy.org/libraw1394/ for libraw1394 documentation.  FireWire is the preferred way to communicate with the dVRK controllers.
+The current software is written in C/C++ and uses the libraw1394 library under Linux (FireWire is also known as 1394). See http://www.dennedy.org/libraw1394/ for libraw1394 documentation.  FireWire is the preferred way to communicate between the dVRK controllers and the PC.  In this scenario, the controllers are daisy-chained using FireWire **and** the computer is also on the FireWire chain.
 
 <a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/communication/PC-FireWire-Controllers.png"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/communication/PC-FireWire-Controllers.png" width="350"></a>
 
-Starting with dVRK Software Version 2.0, Ethernet UDP is also supported, provided that there is at least one FPGA V2.x board (with Ethernet jack).  This approach is not as heavily tested as FireWire so make sure your computer also has a FireWire adapter.
+Starting with dVRK Software Version 2.0, Ethernet UDP is also supported.  To use UDP, you will need to use firmware 7+ on all your dVRK controllers and you will need at least one FPGA V2.x board (with Ethernet jack, see [FPGA versions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Board-Versions)).  This approach is not as heavily tested as FireWire so make sure your computer also has a FireWire adapter for backup.  In this scenario, the controllers are daisy-chained using FireWire **but** the computer is **NOT** on the FireWire chain.  Instead, the computer is connected via Ethernet to one of the dVRK controller.  Said dVRK controller becomes the "bridge" between the computer and all the dVRK controllers.  The Ethernet adapter on the computer must be configured for "Link Local", the network cable goes directly from the computer to the "bridge" controller.  The software then communicates using UDP, the computer being the UDP client.
 
 <a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/communication/PC-Ethernet-Controllers.png"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/communication/PC-Ethernet-Controllers.png" width="350"></a>
 
@@ -53,28 +53,21 @@ Example FireWire Section:
                 description: FireWire (IEEE 1394)
                 product: TSB12LV23 IEEE-1394 Controller
                 vendor: Texas Instruments
-                physical id: 0
-                bus info: pci@0000:03:00.0
-                version: 00
-                width: 32 bits
-                clock: 33MHz
-                capabilities: ohci bus_master cap_list
-                configuration: driver=firewire_ohci latency=32 maxlatency=4 mingnt=3
-                resources: irq:21 memory:fe404000-fe4047ff memory:fe400000-fe403fff
+...
 ```
 
 ## Install Ubuntu
 
 We recommend Ubuntu 18.04 LTS but one can also use 16.04 or 20.04 with the latest dVRK (2020).  For ROS, we recommend Kinetic on 16.04, Melodic on 18.04 and Noetic on 20.04.
 
-You can then install *libraw1394*.  This has to be done only once by a user with sudo privileges
+You have to install *libraw1394*.  This has to be done only once per computer by a user with sudo privileges:
 ```sh
  sudo apt-get install libraw1394-dev
 ```
 
 ## Set permissions for FireWire devices
 
-If you installed linux recently, you are likely to have Kernel 3.x with the new Juju firewire driver stack, which means the firewire device would be /dev/fw* instead of the old /dev/raw1394*. In order to run the control software without root permission, please do the following steps:
+If you installed linux recently, you are likely to have a kernel version higher that 3 with the new Juju firewire driver stack, which means the firewire device would be /dev/fw* instead of the old /dev/raw1394*. In order to run the control software without root/sudo permissions, please follow the following steps:
  * Create `/etc/udev/rules.d` folder if it's not there
  * Add rules for `/dev/fw*` devices (or `/dev/raw1394*` for Ubuntu versions prior to 10.04)
  * Optionally create group **fpgaqla**
@@ -99,7 +92,7 @@ The following script should be run only once per computer:
 
 ### Safer solution
 
-If you or your institution really, really cares about who can access the FireWire devices on your computer you can create a dedicated Unix group to control who can access the FireWire devices.
+If you or your institution really, really cares about who can access the FireWire devices on your computer, you can create a dedicated Unix group to control who can access the FireWire devices.
 
 The following script should be run only once per computer and performs the steps described above:
 ```sh
@@ -112,17 +105,17 @@ The following script should be run only once per computer and performs the steps
    sudo adduser `whoami` fpgaqla  # add current user to the group
 ```
 
-For all additional users, you will need to add the new user to the group.   To find the user id, one can either use the command `id` or do an `ls /home`.   Once the user id is known, someone with sudo privileges should do:
+For all additional users, you will need to add the new user to the group.  To find the user id, one can either use the command `id` or do an `ls /home`.   Once the user id is known, someone with sudo privileges should do:
 ```sh
    sudo adduser put_the_new_user_id_here fpgaqla
 ```
-Once a user has been added to the `fpgaqla` group, they need to logout/login so the group membership can take effect.   To check if the group membership is correct, the user can use the shell command `id`.
+Once a user has been added to the `fpgaqla` group, they need to logout/login so the group membership can take effect.   To check if the group membership is correct, the user can use the shell command `id`.  See!  It's a mess so you should really use the convient solution instead.
 
 ## Testing connectivity
 
 ### `qladisp`
 
-**Note:** `qladisp` is part of the dVRK software, so you will to build the software first.  See [Build with ROS](/jhu-dvrk/sawIntuitiveResearchKit/wiki/CatkinBuild).
+**Note:** `qladisp` is part of the dVRK software, so you will have to build the software first.  See [Build with ROS](/jhu-dvrk/sawIntuitiveResearchKit/wiki/CatkinBuild).
 
 There are a few ways to test that your controllers are properly connected.  You can start with the command line application provided with the dVRK software `qladisp`.  Just type `qladisp` in a terminal (without options) and the output should show the list of boards found with their board Id and firmware version.  For example:
 ```sh
@@ -155,9 +148,9 @@ crw-rw-rw- 1 root fpgaqla 243,  4 Mar  2 11:45 /dev/fw4
 ...
 ```
 
-You should have two `fw` devices created for each controllers (except 1 for SUJ controller).  Note that `fw0` is the FireWire adapter on the PC itself.  If you have multiple FireWire cards on your PC, the first nodes will correspond to the cards on the PC (e.g. for 2 cards, `fw0` and `fw1`).
+You should have two `fw` devices created for each controller (except 1 for the SUJ controller).  Note that `fw0` is the FireWire adapter on the PC itself.  If you have multiple FireWire cards on your PC, the first nodes will correspond to the cards on the PC (e.g. for 2 cards, `fw0` and `fw1`).
 
-**Very important note:** The `fw` devices should be numbered contiguously, i.e. there shouldn't be any gap between the numbers.  It there are some gaps, the FireWire bus initialization likely failed.  This can happen when FireWire cables are unplugged and re-plugged too fast for the kernel, make sure you wait a few seconds between steps.  If this happens, you can force a bus reset by unplugging, waiting 5 seconds and re-plugging the FireWire cable on your PC.
+**Very important note:** The `fw` devices should be numbered contiguously, i.e. there shouldn't be any gap between the numbers.  If there are some gaps, the FireWire bus initialization likely failed.  This can happen when FireWire cables are unplugged and re-plugged too fast for the kernel so make sure you wait a few seconds between steps.  If this happens, you can force a bus reset by unplugging, waiting 5 seconds and re-plugging the FireWire cable on your PC.
 
 ### `dmesg -w`
 
@@ -208,23 +201,23 @@ The above indicates that `fw1` has FPGA V1.x (no Ethernet). For FPGA V2.x (Ether
 
 ## Adapter and configuration
 
-You will need a network adapter dedicated to the communication with the dVRK controller (e.g. a PCIe Ethernet adapter), it can't be plugged in a router or hub and used to access Internet.  Therefore we recommend to install 2 network adapters on your computer, one for the LAN/WAN and one for the dVRK.  The dVRK dedicated network adapter will be directly connected to one of the dVRK controllers on the FireWire chain.  Please avoid having dVRK controllers connected to 2 different PCs through Ethernet.
+You will need a network adapter dedicated to the communication with the dVRK controllers (e.g. a PCIe Ethernet adapter).  The dVRK network port on the computer can't be plugged in a router or hub and used to access Internet.  Therefore we recommend to install 2 network adapters on your computer, one for the LAN/WAN and one for the dVRK.  The dVRK dedicated network adapter will be directly connected to one of the dVRK controllers on the FireWire chain.  Please avoid having dVRK controllers connected to 2 different computers through Ethernet.
 
 We recommend a built-in network adapter (e.g. a PCIe Ethernet adapter).  We don't have any specific recommendation for the chipset, just make sure it is supported by Linux.  USB3/USB-C network adapters might work too but we don't have any extensive experience with these.
 
-We also recommend a native OS (as opposed to a VM).  If you succeed at running the dVRK software in a VM, let us know.
+We also recommend a native OS (as opposed to a virtual machine guest OS).  If you succeed at running the dVRK software in a VM, let us know.
 
 Finally, you will need to configure the dVRK dedicated network adapter to use " Link-Local Only"
 
 ### Ubuntu
 
-Start the application `sudo nm-connection-editor` (this should work on Ubuntu 16.04, 18.04 and 20.04).  Select the Ethernet adapter you want to configure:
-* In tab "Ethernet", change MTU to 3000.  The default is 1500 and is not enough if you have a full daVinci (2 MTMS, 3 PSMs, ECM and SUJ).
+Start the application `sudo nm-connection-editor` (this should work on Ubuntu 16.04, 18.04 and 20.04).  Select the Ethernet adapter you want to configure for the dVRK:
+* In tab "Ethernet", change MTU to 3000.  The default is 1500 and is not enough if you have a full da Vinci (2 MTMS, 3 PSMs, ECM and SUJ).
 * In tab "IPv4 Settings", change "method" to "Link-Local Only"
 
 ### MacOS
 
-Running the dVRK on MacOS is experimental and not that useful.  This being said, there is no network configuration required on MacOS.  Somehow the OS figures out the adpater should be Link-Local by itself. 
+Running the dVRK on MacOS is experimental and not that useful.  This being said, there is no network configuration required on MacOS.  Somehow the OS figures out the adapter should be configured for Link-Local by itself. 
 
 ### Windows
 
@@ -236,7 +229,7 @@ eno1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 3000
         inet 169.254.62.229  netmask 255.255.0.0  broadcast 169.254.255.255
         inet6 fe80::902e:58f9:b2c9:dec3  prefixlen 64  scopeid 0x20<link>
 ```
-The IP address (`inet`) should start with `169.254.` for "Link Local".  The netmask should be 255.255.0.0.
+The IP address (`inet`) should start with `169.254` for "Link Local".  The netmask should be `255.255.0.0`.
 
 ### `qladisp`
 
