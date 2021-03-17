@@ -25,13 +25,19 @@
 
 The current software is written in C/C++ and uses the libraw1394 library under Linux (FireWire is also known as 1394). See http://www.dennedy.org/libraw1394/ for libraw1394 documentation.  FireWire is the preferred way to communicate with the dVRK controllers.
 
+<a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/communication/PC-FireWire-Controllers.png"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/communication/PC-FireWire-Controllers.png" width="350"></a>
+
 Starting with dVRK Software Version 2.0, Ethernet UDP is also supported, provided that there is at least one FPGA V2.x board (with Ethernet jack).  This approach is not as heavily tested as FireWire so make sure your computer also has a FireWire adapter.
+
+<a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/communication/PC-Ethernet-Controllers.png"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/communication/PC-Ethernet-Controllers.png" width="350"></a>
 
 # FireWire
 
 **Important Notes:**
 * There is no such thing as a FireWire to USB adapter so you will need a computer with a FireWire adapter
 * FireWire is not supported by virtualization software (VMWare Fusion, Parallel...) so you will need to use a native Linux OS (we strongly recommend Ubuntu LTS)
+* You should never have two PCs connected to the same FireWire chain
+* Avoid mixing dVRK controllers and other FireWire devices on the same bus (e.g. older Sensable Phantom Omni, FireWire cameras...)
 
 ## FireWire Adapter
 
@@ -93,7 +99,7 @@ The following script should be run only once per computer:
 
 ### Safer solution
 
-If you or your institution really, really cares about who can access the FireWire devices on your computer you can create a dedicated unix group to control who can access the FireWire devices.
+If you or your institution really, really cares about who can access the FireWire devices on your computer you can create a dedicated Unix group to control who can access the FireWire devices.
 
 The following script should be run only once per computer and performs the steps described above:
 ```sh
@@ -224,9 +230,49 @@ Running the dVRK on MacOS is experimental and not that useful.  This being said,
 
 ## Testing connectivity
 
+First you should make sure your Ethernet port is properly configured.  On Linux and MacOS you can use `ifconfig`.  The output for the dVRK dedicated adapter should look like:
+```
+eno1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 3000
+        inet 169.254.62.229  netmask 255.255.0.0  broadcast 169.254.255.255
+        inet6 fe80::902e:58f9:b2c9:dec3  prefixlen 64  scopeid 0x20<link>
+```
+The IP address (`inet`) should start with `169.254.` for "Link Local".  The netmask should be 255.255.0.0.
+
 ### `qladisp`
 
-`-pudp`
+The dVRK utility `qladisp` can communicate with the controllers over UDP using the command line option `-pudp`.  For example `qladisp -pudp` should return something like:
+```
+Trying to detect boards on port:
+Server IP: 169.254.0.100, Port: 1394
+Broadcast IP: 169.254.255.255, Port: 1394
+Using interface eno1 (2), MTU: 3000
+Firewire bus reset, FPGA = 25, PC = 0
+InitNodes: Firewire bus generation = 25
+InitNodes: found hub board: 7
+BasePort::ScanNodes: building node map for 16 nodes:
+  Node 0, BoardId = 6, Firmware Version = 7
+  Node 1, BoardId = 7, Firmware Version = 7
+  Node 2, BoardId = 0, Firmware Version = 7
+  Node 3, BoardId = 1, Firmware Version = 7
+BasePort::ScanNodes: node 4 is not a QLA board (data = 0)
+BasePort::ScanNodes: found 4 boards
+```
 
+`qladisp` provides some feedback specific to the UDP port (as opposed to FireWire):
+* Name of interface used: `eno1`
+* MTU: `3000` (or whatever you set)
+* UDP server IP: `169.254.0.100` (hard coded on firmware)
+* UDP server port: `1394` (hard coded on firmware, picked for no other reason than it's the other name for FireWire)
+* Message `node 4 is not a QLA board` indicates that another FireWire device is connected to the FireWire chain.  In this case, a PC is still connected.  This can lead to issues so it is recommended to unplug the FireWire chain from the PC.
+ 
 ### `ping`
 
+The dVRK controllers (with firmware 7+) also support ICMP requests.  To test the communication, you can `ping` the controllers using `ping 169.254.0.100`.  The output should look like:
+```
+PING 169.254.0.100 (169.254.0.100) 56(84) bytes of data.
+64 bytes from 169.254.0.100: icmp_seq=1 ttl=64 time=0.247 ms
+64 bytes from 169.254.0.100: icmp_seq=2 ttl=64 time=0.308 ms
+...
+```
+
+This allows to check that you can communicate with the controllers and that the loop time is reasonable (~0.3 ms).
