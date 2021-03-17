@@ -44,7 +44,7 @@ Starting with dVRK Software Version 2.0, Ethernet UDP is also supported.  To use
 
 ## FireWire Adapter
 
-The dVRK controllers use FireWire as the fieldbus, and you will need a FireWire adapter. Due to the fact that FireWire is a sophisticated protocol, some chipset implementations are not fully functional and have various issues such as dropping packets and supporting a limited number of FireWire nodes. We **STRONGLY** recommend adapters with chipsets from Texas Instruments (see PC configuration in [FAQ](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FAQ)).
+The dVRK controllers use FireWire as the fieldbus, and you will need a FireWire adapter. Due to the fact that FireWire is a sophisticated protocol, some chipset implementations are not fully functional and have various issues such as dropping packets and supporting a limited number of FireWire nodes. We recommend adapters with chipsets from Texas Instruments (see PC configuration in [FAQ](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FAQ)).
 
 To get the chipset model of your FireWire card: 
 ```sh
