@@ -122,15 +122,15 @@ C++ class is `mtsIntuitiveResearchKitArm`.
 * `servo_cp`
   * *cisst*: write command `prmPositionCartesianSet`
   * *ROS*: subscriber `geometry_msgs/TransformStamped`
-  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion).  Set cartesian position goal for low-level controller (PID).  Use with caution, goals should be reachable withing a single clock tick (< 1 ms).  Use `move_cp` for large motions.
+  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion).  Set cartesian position goal for low-level controller (PID).  Use with caution, goals should be reachable within a single clock tick (< 1 ms).  Use `move_cp` for large motions.
 * `servo_jf`
   * *cisst*: write command `prmForceTorqueJointSet`
   * *ROS*: subscriber `sensor_msgs/JointState`
-  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion).  Set joint effort goal for low-level controller (direct current control).  Use with caution since the only safety mechanism built-in is the cap on maximum motor current.
+  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion).  Set joint effort goal for low-level controller (direct current control).  Use with caution since the only safety mechanism built in is the cap on maximum motor current.
 * `servo_jp`
   * *cisst*: write command `prmPositionJointSet`
   * *ROS*: subscriber `sensor_msgs/JointState`
-  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion).  Set joint position goal for low-level controller (PID).  Use with caution, goals should be reachable withing a single clock tick (< 1 ms).  Use `move_jp` or `move_jr` for large motions.
+  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion).  Set joint position goal for low-level controller (PID).  Use with caution, goals should be reachable within a single clock tick (< 1 ms).  Use `move_jp` or `move_jr` for large motions.
 * `servo_jr`
   * *cisst*: write command `prmPositionJointSet`
   * *ROS*: subscriber `sensor_msgs/JointState`
@@ -142,11 +142,11 @@ C++ class is `mtsIntuitiveResearchKitArm`.
 * `body/servo_cf`
   * *cisst*: write command `prmForceCartesianSet`
   * *ROS*: subscriber `geometry_msgs/WrenchStamped`
-  * dVRK specific.  Set cartesian effort goal for low-level controller using `body/jacobian` (direct current control).  Use with caution since the only safety mechanism built-in is the cap on maximum motor current.  Useful for haptic on MTM.  By default direction of force is defined by the orientation of the end effector.  To use the absolute orientation, toggle on/off using `body/set_cf_orientation_absolute`.  Gravity compensation will be added based on last call to `use_gravity_compensation` (for MTMs and ECM).  See [cisstRobot](https://github.com/jhu-cisst/cisst/wiki/cisstRobot-robManipulator).  
+  * dVRK specific.  Set cartesian effort goal for low-level controller using `body/jacobian` (direct current control).  Use with caution since the only safety mechanism built in is the cap on maximum motor current.  Useful for haptic on MTM.  By default direction of force is defined by the orientation of the end effector.  To use the absolute orientation, toggle on/off using `body/set_cf_orientation_absolute`.  Gravity compensation will be added based on last call to `use_gravity_compensation` (for MTMs and ECM).  See [cisstRobot](https://github.com/jhu-cisst/cisst/wiki/cisstRobot-robManipulator).  
 * `set_cartesian_impedance_gains`
   * *cisst*: write command `prmCartesianImpedanceGains`
   * *ROS*: subscriber `cisst_msgs/prmCartesianImpedanceGains`
-  * dVRK specific.  Apply wrench based on difference between measured and goal cartesian positions as well as twist (cartesian velocity).  The cartesian space is divided in 12 cases: negative and positive (**2**) error in position and orientation (**x 2**) along axes X, Y and Z (**x 3 = 12**).  The payload for this command includes 3 parameters for each case: a linear gain, a damping gain and an offset.  This command can be used to define a simple haptic virtual fixture (plane, line, point, box corner...).  Internally the dVRK code uses the class `osaCartesianImpedanceController` from the package [*sawControllers*](https://github.com/jhu-saw/sawControllers).
+  * dVRK specific.  Apply wrench based on difference between measured and goal cartesian positions as well as twist (cartesian velocity).  The cartesian space is divided in 12 cases: negative and positive (**2**) error in position and orientation (**x 2**) along axes X, Y and Z (**x 3 = 12**).  The payload for this command includes 3 parameters for each case: a linear gain, a damping gain and an offset.  This command can be used to define a simple haptic virtual fixture (plane, line, point, box corner...).  Use with caution, specially if the frame used to compute the cartesian impedance is far from the current arm position as this could lead to strong forces applied to the arm.  Internally the dVRK code uses the class `osaCartesianImpedanceController` from the package [*sawControllers*](https://github.com/jhu-saw/sawControllers).
 * `move_cp`
   * *cisst*: write command `prmPositionCartesianSet`
   * *ROS*: subscriber `geometry_msgs/TransformStamped`
