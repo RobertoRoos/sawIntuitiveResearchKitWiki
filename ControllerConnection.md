@@ -112,7 +112,7 @@ For all additional users, you will need to add the new user to the group.  To fi
 ```sh
    sudo adduser put_the_new_user_id_here fpgaqla
 ```
-Once a user has been added to the `fpgaqla` group, they need to logout/login so the group membership can take effect.   To check if the group membership is correct, the user can use the shell command `id`.  See!  It's a mess so you should really use the convient solution instead.
+Once a user has been added to the `fpgaqla` group, they need to logout/login so the group membership can take effect.   To check if the group membership is correct, the user can use the shell command `id`.  See!  It's a mess so you should really use the convenient solution instead.
 
 ## Testing connectivity
 
