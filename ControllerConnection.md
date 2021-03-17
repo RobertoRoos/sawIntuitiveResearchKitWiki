@@ -23,14 +23,11 @@
 
 # Introduction
 
-The current software is written in C/C++ and uses the libraw1394 library under Linux (FireWire is also known as 1394). See http://www.dennedy.org/libraw1394/ for libraw1394 documentation.  **FireWire is the preferred way to communicate between the dVRK controllers and the computer**.  In this scenario, the controllers are daisy-chained using FireWire **and** the computer is also on the FireWire chain.
+From the beginning, the dVRK software and mechatronics have used the IEEE 1394 interface standard with the [libraw1394](http://www.dennedy.org/libraw1394/) library under Linux to communicate between the computer and the dVRK controllers.  The interface standard IEEE 1394 is also known as FireWire ([Wikipedia entry](https://en.wikipedia.org/wiki/IEEE_1394)).  In this scenario, the controllers are daisy-chained using FireWire **and** the computer is also on the FireWire chain.
 
 <a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/communication/PC-FireWire-Controllers.png"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/communication/PC-FireWire-Controllers.png" width="350"></a>
 
-Starting with dVRK Software Version 2.0, Ethernet UDP is also supported.  To use UDP, you will need to use firmware 7+ on all your dVRK controllers and you will need at least one FPGA V2.x board (with Ethernet jack, see [FPGA versions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Board-Versions)).  **This approach is not as heavily tested as FireWire so make sure your computer also has a FireWire adapter for backup**.  In this scenario, the controllers are daisy-chained using FireWire but the computer is **not** on the FireWire chain.  Instead, the computer is connected via Ethernet to one of the dVRK controllers.  Said dVRK controller becomes the "bridge" between the computer and all the dVRK controllers.
-* The Ethernet adapter on the computer must be configured for "Link Local" (not static IP nor DHCP)
-* The network cable goes directly from the computer to the "bridge" controller (no hub nor switch)
-* The software then communicates using UDP, the "bridge" controller is a UDP server and the computer is a UDP client
+Starting with dVRK Software Version 2.0, Ethernet/UDP is also supported.  To use Ethernet/UDP, you will need to use firmware 7+ on all your dVRK controllers and you will need at least one FPGA V2.x board (with Ethernet jack, see [FPGA versions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Board-Versions)).  **This approach has not been as heavily tested as FireWire so make sure your computer also has a FireWire adapter for backup**.  In this scenario, the controllers are daisy-chained using FireWire but the computer is **not** on the FireWire chain.  Instead, the computer is connected via Ethernet to one of the dVRK controllers.  Said dVRK controller becomes the "bridge" between the computer and all the dVRK controllers.
 
 <a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/communication/PC-Ethernet-Controllers.png"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/communication/PC-Ethernet-Controllers.png" width="350"></a>
 
@@ -202,6 +199,11 @@ The above indicates that `fw1` has FPGA V1.x (no Ethernet). For FPGA V2.x (Ether
 
 # Ethernet UDP
 
+**Important Notes:**
+* The Ethernet adapter on the computer must be configured for "Link Local" (not static IP nor DHCP)
+* The network cable goes directly from the computer to the "bridge" controller (no hub nor switch)
+* The software then communicates using UDP, the "bridge" controller is a UDP server and the computer is a UDP client
+
 ## Adapter and configuration
 
 You will need a network adapter dedicated to the communication with the dVRK controllers (e.g. a PCIe Ethernet adapter).  The dVRK network port on the computer can't be plugged in a router or hub and used to access Internet.  Therefore we recommend to install 2 network adapters on your computer, one for the LAN/WAN and one for the dVRK.  The dVRK dedicated network adapter will be directly connected to one of the dVRK controllers on the FireWire chain.  Please avoid having dVRK controllers connected to 2 different computers through Ethernet.
@@ -259,7 +261,7 @@ BasePort::ScanNodes: found 4 boards
 * MTU: `3000` (or whatever you set)
 * UDP server IP: `169.254.0.100` (hard coded on firmware)
 * UDP server port: `1394` (hard coded on firmware, picked for no other reason than it's the other name for FireWire)
-* Message `node 4 is not a QLA board` indicates that another FireWire device is connected to the FireWire chain.  In this case, a PC is still connected.  This can lead to issues so it is recommended to unplug the FireWire chain from the PC.
+* Message `node 4 is not a QLA board` indicates that another FireWire device is connected to the FireWire chain (i.e. not a dVRK controller).  In this case, a PC is still connected.  This can lead to issues so it is recommended to unplug the computer from FireWire chain.
  
 ### `ping`
 
@@ -271,4 +273,4 @@ PING 169.254.0.100 (169.254.0.100) 56(84) bytes of data.
 ...
 ```
 
-This allows to check that you can communicate with the controllers and that the loop time is reasonable (~0.3 ms).
+This allows to check that you can reach the controllers over Ethernet and that the loop time is reasonable (~0.3 ms).
