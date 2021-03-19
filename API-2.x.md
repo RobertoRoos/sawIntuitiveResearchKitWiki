@@ -122,15 +122,15 @@ C++ class is `mtsIntuitiveResearchKitArm`.
 * `servo_cp`
   * *cisst*: write command `prmPositionCartesianSet`
   * *ROS*: subscriber `geometry_msgs/TransformStamped`
-  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion).  Set cartesian position goal for low-level controller (PID).  Use with caution, goals should be reachable within a single clock tick (< 1 ms).  Use `move_cp` for large motions.
+  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion).  Set cartesian position goal for low-level controller (PID).  **Use with caution**, goals should be reachable within a single clock tick (< 1 ms).  Use `move_cp` for large motions.
 * `servo_jf`
   * *cisst*: write command `prmForceTorqueJointSet`
   * *ROS*: subscriber `sensor_msgs/JointState`
-  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion).  Set joint effort goal for low-level controller (direct current control).  Use with caution since the only safety mechanism built in is the cap on maximum motor current.
+  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion).  Set joint effort goal for low-level controller (direct current control).  **Use with caution**, the only safety mechanism built in is the cap on maximum motor current.
 * `servo_jp`
   * *cisst*: write command `prmPositionJointSet`
   * *ROS*: subscriber `sensor_msgs/JointState`
-  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion).  Set joint position goal for low-level controller (PID).  Use with caution, goals should be reachable within a single clock tick (< 1 ms).  Use `move_jp` or `move_jr` for large motions.
+  * [CRTK](https://github.com/collaborative-robotics/documentation/wiki/Robot-API-motion).  Set joint position goal for low-level controller (PID).  **Use with caution**, goals should be reachable within a single clock tick (< 1 ms).  Use `move_jp` or `move_jr` for large motions.
 * `servo_jr`
   * *cisst*: write command `prmPositionJointSet`
   * *ROS*: subscriber `sensor_msgs/JointState`
@@ -138,15 +138,15 @@ C++ class is `mtsIntuitiveResearchKitArm`.
 * `spatial/servo_cf`
   * *cisst*: write command `prmForceCartesianSet`
   * *ROS*: subscriber `geometry_msgs/WrenchStamped`
-  * dVRK specific.  Set cartesian effort goal for low-level controller using `spatial/jacobian` (direct current control).  Use with caution since the only safety mechanism built-in is the cap on maximum motor current.  For most application, use `body/servo_cf`.  Gravity compensation will be added based on last call to `use_gravity_compensation` (for MTMs and ECM).  See [cisstRobot](https://github.com/jhu-cisst/cisst/wiki/cisstRobot-robManipulator).
+  * dVRK specific.  Set cartesian effort goal for low-level controller using `spatial/jacobian` (direct current control).  **Use with caution**, the only safety mechanism built-in is the cap on maximum motor current.  For most application, use `body/servo_cf`.  Gravity compensation will be added based on last call to `use_gravity_compensation` (for MTMs and ECM).  See [cisstRobot](https://github.com/jhu-cisst/cisst/wiki/cisstRobot-robManipulator).
 * `body/servo_cf`
   * *cisst*: write command `prmForceCartesianSet`
   * *ROS*: subscriber `geometry_msgs/WrenchStamped`
-  * dVRK specific.  Set cartesian effort goal for low-level controller using `body/jacobian` (direct current control).  Use with caution since the only safety mechanism built in is the cap on maximum motor current.  Useful for haptic on MTM.  By default direction of force is defined by the orientation of the end effector.  To use the absolute orientation, toggle on/off using `body/set_cf_orientation_absolute`.  Gravity compensation will be added based on last call to `use_gravity_compensation` (for MTMs and ECM).  See [cisstRobot](https://github.com/jhu-cisst/cisst/wiki/cisstRobot-robManipulator).  
+  * dVRK specific.  Set cartesian effort goal for low-level controller using `body/jacobian` (direct current control).  **Use with caution**, the only safety mechanism built in is the cap on maximum motor current.  Useful for haptic on MTM.  By default direction of force is defined by the orientation of the end effector.  To use the absolute orientation, toggle on/off using `body/set_cf_orientation_absolute`.  Gravity compensation will be added based on last call to `use_gravity_compensation` (for MTMs and ECM).  See [cisstRobot](https://github.com/jhu-cisst/cisst/wiki/cisstRobot-robManipulator).  
 * `set_cartesian_impedance_gains`
   * *cisst*: write command `prmCartesianImpedanceGains`
   * *ROS*: subscriber `cisst_msgs/prmCartesianImpedanceGains`
-  * dVRK specific.  Apply wrench based on difference between measured and goal cartesian positions as well as twist (cartesian velocity).  The cartesian space is divided in 12 cases: negative and positive (**2**) error in position and orientation (**x 2**) along axes X, Y and Z (**x 3 = 12**).  The payload for this command includes 3 parameters for each case: a linear gain, a damping gain and an offset.  This command can be used to define a simple haptic virtual fixture (plane, line, point, box corner...).  Use with caution, specially if the frame used to compute the cartesian impedance is far from the current arm position as this could lead to strong forces applied to the arm.  Internally the dVRK code uses the class `osaCartesianImpedanceController` from the package [*sawControllers*](https://github.com/jhu-saw/sawControllers).
+  * dVRK specific.  Apply wrench based on difference between measured and goal cartesian positions as well as twist (cartesian velocity).  The cartesian space is divided in 12 cases: negative and positive (**2**) error in position and orientation (**x 2**) along axes X, Y and Z (**x 3 = 12**).  The payload for this command includes 3 parameters for each case: a linear gain, a damping gain and an offset.  This command can be used to define a simple haptic virtual fixture (plane, line, point, box corner...).  **Use with caution**, specially if the frame used to compute the cartesian impedance is far from the current arm position as this could lead to strong forces applied to the arm.  Internally the dVRK code uses the class `osaCartesianImpedanceController` from the package [*sawControllers*](https://github.com/jhu-saw/sawControllers).
 * `move_cp`
   * *cisst*: write command `prmPositionCartesianSet`
   * *ROS*: subscriber `geometry_msgs/TransformStamped`
@@ -227,7 +227,7 @@ C++ class is `mtsIntuitiveResearchKitArmMTM`.
 * `gripper/closed`:
   * *cisst*: event write `bool`
   * *ROS*: publisher `std_msgs/Bool`
-  * dVRK specific.
+  * dVRK specific.  Indicates if the gripper is closed or not based on a hard coded threshold (0.0).  This is provided for convenience and backward compatibility but users can instead use `gripper/measured_js`, `position[0]` with their own threshold and logic to determine if the gripper is closed or not.
 * `gripper/pinch`
   * *cisst*: event void
   * *ROS*: publisher `std_msgs/Empty`
@@ -235,15 +235,15 @@ C++ class is `mtsIntuitiveResearchKitArmMTM`.
 * `orientation_locked`
   * *cisst*: event write `bool`
   * *ROS*: publisher `std_msgs/Bool`
-  * dVRK specific.
+  * dVRK specific.  Indicates if the orientation is locked or not.  See `lock_orientation`.
 * `lock_orientation`
   * *cisst*: write command `vctMatRot3`
   * *ROS*: subscriber `geometry_msgs/Quaternion`
-  * dVRK specific.
+  * dVRK specific.  This sends an orientation goal for the orientation of the MTM with respect to its base frame.  A joint trajectory is used to reach the orientation goal.  Once the MTM has reached the desired orientation, it will maintain said orientation even when the arm moves.  This command has no effect if the MTM is not controlled in effort mode (i.e. `servo_cf`).  The best example of usage is to lock the MTM orientation (~wrist) when in clutch mode.  The operator can move around freely but the absolute orientation remains constant so the MTM is still aligned to the PSM when the user restart the tele operation.
 * `unlock_orientation`
   * *cisst*: void command
   * *ROS*: subscriber `std_msgs/Empty`
-  * dVRK specific.
+  * dVRK specific.  Free the orientation.  This is used when the operator ends the MTM to PSM clutch.
 
 ## PSM
 
@@ -272,39 +272,39 @@ C++ class is `mtsIntuitiveResearchKitArmPSM`.
 * `tool_type`
   * *cisst*: event write `std::string`
   * *ROS*: publisher `std_msgs/String`
-  * dVRK specific.
+  * dVRK specific.  Indicates which tool is currently in use.  Note that the tool type can be determine in different ways depending on your hardware and configuration files.  See [Tool Detection](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Tool-Detection).
 * `tool_type_request`
   * *cisst*: event void
   * *ROS*: publisher `std_msgs/Empty`
-  * dVRK specific.
+  * dVRK specific.  When using `MANUAL` [tool detection](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Tool-Detection), event that indicates that a new tool has been detected and the software needs to know which type of tool it is.  The tool type can also be set using the dropdown menu on the GUI PSM widget.
 * `set_tool_type`
   * *cisst*: write command `std::string`
   * *ROS*: subscriber `std_msgs/String`
-  * dVRK specific.
+  * dVRK specific.  When using `MANUAL` [tool detection](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Tool-Detection), set the tool type.  Possible values are defined in file `components/code/mtsIntuitiveResearchKitToolTypes.cdg` ([cisstDataGenerator](https://github.com/jhu-cisst/cisst/wiki/cisstCommon-Data-Generator)).  A tool description file with a filename matching the tool name needs to be provided as well.  Description files can be found in `share/tools` for many common da Vinci tools.  The tool type can also be set using the dropdown menu on the GUI PSM widget.
 * `set_adapter_present`
   * *cisst*: write command `bool`
   * *ROS*: subscriber `std_msgs/Bool`
-  * dVRK specific.
+  * dVRK specific.  Tells the controller that the sterile adapter is present without any actual hardware detection.  This can be used to force engaging a non-dVRK modified sterile adapter (see [hardware modification](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Hardware)).  **Use with caution**, this can lead to undesired motions if a tool is also inserted.  The vast majority of users should **not**, **ever** use this command.
 * `set_tool_present`
   * *cisst*: write command `bool`
   * *ROS*: subscriber `std_msgs/Bool`
-  * dVRK specific.
+  * dVRK specific.   Tells the controller that a tool is present without any actual hardware detection.  This can be used to force engaging a tool with a Dallas chip (see [tool detection](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Tool-Detection)).  **Use with caution**, this can lead to undesired motions if the wrong tool is inserted.  The vast majority of users should **not**, **ever** use this command.
 * `io/adapter`
   * *cisst*: event write `prmEventButton`
   * *ROS*: publisher `sensor_msgs/Joy`
-  * dVRK specific.
+  * dVRK specific.  Indicates if the sterile adapter is present or not.
 * `io/tool`
   * *cisst*: event write `prmEventButton`
   * *ROS*: publisher `sensor_msgs/Joy`
-  * dVRK specific.
+  * dVRK specific.  Indicates if a tool is present or not.
 * `io/manip_clutch`
   * *cisst*: event write `prmEventButton`
   * *ROS*: publisher `sensor_msgs/Joy`
-  * dVRK specific.
+  * dVRK specific.  Indicates if the manipulator clutch button is pressed or not.  This is the white button located on top of the translation stage on the PSM.
 * `io/suj_clutch`
   * *cisst*: event write `prmEventButton`
   * *ROS*: publisher `sensor_msgs/Joy`
-  * dVRK specific.
+  * dVRK specific.  Indicates if the manipulator SUJ (Set Up Joints) clutch button is pressed or not.  This is the white button located on the side of the "horizontal" link of the PSM. 
 
 ## SUJ
 
