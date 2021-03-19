@@ -214,7 +214,7 @@ C++ class is `mtsIntuitiveResearchKitArmECM`.
 * `set_endoscope_type`
   * *cisst*: write command `std::string`
   * *ROS*: subscriber `std_msgs::String`
-  * dVRK specific.  Set the type of endoscope mounted on the ECM.  The endoscope type is used for two things.  Up/down/straight is used to compute the tool tip transformation for the forward kinematic.  HD/SD is used for gravity compensation, the HD camera head happens to be a bit heavier than the SD one (see  [video pipeline](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Video-Pipeline)). 
+  * dVRK specific.  Set the type of endoscope mounted on the ECM.  The endoscope type is used for two things.  Up/down/straight is used to compute the tool tip transformation for the forward kinematic.  HD/SD is used for gravity compensation, the HD camera head happens to be a bit heavier than the SD one (see  [video pipeline](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Video-Pipeline)).  Possible values are defined in file `components/code/mtsIntuitiveResearchKitEndoscopeTypes.cdg` ([cisstDataGenerator](https://github.com/jhu-cisst/cisst/wiki/cisstCommon-Data-Generator)): `NONE`, `SD_STRAIGHT`, `SD_UP`, `SD_DOWN`, `HD_STRAIGHT`, `HD_UP`, `HD_DOWN`.
 
 ## MTM
 
