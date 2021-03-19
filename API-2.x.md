@@ -272,7 +272,7 @@ C++ class is `mtsIntuitiveResearchKitArmPSM`.
 * `tool_type`
   * *cisst*: event write `std::string`
   * *ROS*: publisher `std_msgs/String`
-  * dVRK specific.  Indicates which tool is currently in use.  Note that the tool type can be determine in different ways depending on your hardware and configuration files.  See [Tool Detection](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Tool-Detection).
+  * dVRK specific.  Indicates which tool is currently in use.  Note that the tool type can be determined in different ways depending on your hardware and configuration files.  See [Tool Detection](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Tool-Detection).
 * `tool_type_request`
   * *cisst*: event void
   * *ROS*: publisher `std_msgs/Empty`
@@ -280,15 +280,15 @@ C++ class is `mtsIntuitiveResearchKitArmPSM`.
 * `set_tool_type`
   * *cisst*: write command `std::string`
   * *ROS*: subscriber `std_msgs/String`
-  * dVRK specific.  When using `MANUAL` [tool detection](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Tool-Detection), set the tool type.  Possible values are defined in file `components/code/mtsIntuitiveResearchKitToolTypes.cdg` ([cisstDataGenerator](https://github.com/jhu-cisst/cisst/wiki/cisstCommon-Data-Generator)).  A tool description file with a filename matching the tool name needs to be provided as well.  Description files can be found in `share/tools` for many common da Vinci tools.  The tool type can also be set using the dropdown menu on the GUI PSM widget.
+  * dVRK specific.  When using `MANUAL` [tool detection](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Tool-Detection), set the tool type.  Possible values are defined in file `components/code/mtsIntuitiveResearchKitToolTypes.cdg` ([cisstDataGenerator](https://github.com/jhu-cisst/cisst/wiki/cisstCommon-Data-Generator)).  A tool description file with a filename matching the tool name needs to be provided as well.  Description files can be found in `share/tool` for many common da Vinci tools.  The tool type can also be set using the dropdown menu on the GUI PSM widget.
 * `set_adapter_present`
   * *cisst*: write command `bool`
   * *ROS*: subscriber `std_msgs/Bool`
-  * dVRK specific.  Tells the controller that the sterile adapter is present without any actual hardware detection.  This can be used to force engaging a non-dVRK modified sterile adapter (see [hardware modification](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Hardware)).  **Use with caution**, this can lead to undesired motions if a tool is also inserted.  The vast majority of users should **not**, **ever** use this command.
+  * dVRK specific.  Tells the console that the sterile adapter is present without any actual hardware detection of the adapter.  This can be used to force engaging a non-dVRK modified sterile adapter (see [hardware modification](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Hardware)).  **Use with caution**, this can lead to undesired motions if a tool is also inserted.  The vast majority of users should **not**, **ever** use this command.
 * `set_tool_present`
   * *cisst*: write command `bool`
   * *ROS*: subscriber `std_msgs/Bool`
-  * dVRK specific.   Tells the controller that a tool is present without any actual hardware detection.  This can be used to force engaging a tool with a Dallas chip (see [tool detection](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Tool-Detection)).  **Use with caution**, this can lead to undesired motions if the wrong tool is inserted.  The vast majority of users should **not**, **ever** use this command.
+  * dVRK specific.   Tells the controller that a tool is present without any actual hardware detection of the tool.  This can be used to force engaging a tool without a Dallas chip (see [tool detection](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Tool-Detection)).  **Use with caution**, this can lead to undesired motions if the wrong tool is inserted.  The vast majority of users should **not**, **ever** use this command.
 * `io/adapter`
   * *cisst*: event write `prmEventButton`
   * *ROS*: publisher `sensor_msgs/Joy`
@@ -300,11 +300,11 @@ C++ class is `mtsIntuitiveResearchKitArmPSM`.
 * `io/manip_clutch`
   * *cisst*: event write `prmEventButton`
   * *ROS*: publisher `sensor_msgs/Joy`
-  * dVRK specific.  Indicates if the manipulator clutch button is pressed or not.  This is the white button located on top of the translation stage on the PSM.
+  * dVRK specific.  Indicates if the manipulator clutch button is pressed or not.  This is the white button located on top of the translation stage on the PSM.  This button is used to release the PID on the arm and move it manually.
 * `io/suj_clutch`
   * *cisst*: event write `prmEventButton`
   * *ROS*: publisher `sensor_msgs/Joy`
-  * dVRK specific.  Indicates if the manipulator SUJ (Set Up Joints) clutch button is pressed or not.  This is the white button located on the side of the "horizontal" link of the PSM. 
+  * dVRK specific.  Indicates if the manipulator SUJ (Set Up Joints) clutch button is pressed or not.  This is the white button located on the side of the "horizontal" link of the PSM.  This button is used to release the brakes on the arm's SUJ if you happen to have the [dVRK SUJ controller](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Controller-Boxes#da-vinci-classic-setup-joint-controller).
 
 ## SUJ
 
