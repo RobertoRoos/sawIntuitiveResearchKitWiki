@@ -193,11 +193,11 @@ C++ class is `mtsIntuitiveResearchKitArm`.
 * `trajectory_j/set_ratio_a`
   * *cisst*: write command `double`
   * *ROS*: subscriber `std_msgs/Float64`
-  * dVRK specific.  Set ratio applied to maximum acceleration used for joint trajectory generation.  This is provided for backward compatibility and fine tunning but the recommend approach is to use `trajectory_j/set_ratio`.
+  * dVRK specific.  Set ratio applied to maximum acceleration used for joint trajectory generation.  This is provided for backward compatibility and fine tuning but the recommended approach is to use `trajectory_j/set_ratio`.
 * `trajectory_j/set_ratio_v`
   * *cisst*: write command `double`
   * *ROS*: subscriber `std_msgs/Float64`
-  * dVRK specific.  Set ratio applied to maximum velocity used for joint trajectory generation.  This is provided for backward compatibility and fine tunning but the recommend approach is to use `trajectory_j/set_ratio`.
+  * dVRK specific.  Set ratio applied to maximum velocity used for joint trajectory generation.  This is provided for backward compatibility and fine tuning but the recommended approach is to use `trajectory_j/set_ratio`.
 
 ## ECM
 
