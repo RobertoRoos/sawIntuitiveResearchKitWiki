@@ -29,7 +29,7 @@
 
 Each component of the dVRK described in the [software architecture](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Software-Architecture) provides a set of functionalities, i.e. commands/events for a [cisstMultiTask](https://github.com/jhu-cisst/cisst/wiki/cisstMultiTask-tutorial) component or topic/service for a ROS node (see [`dvrk_ros`](https://github.com/jhu-dvrk/dvrk-ros)`/dvrk_robot`).
 
-In general, we try to expose most C++ commands and events as ROS topics or services under the same name.  Starting with the dVRK release 2.0, we are using the [CRTK naming conventions](https://github.com/collaborative-robotics/documentation/wiki/Robot-API).  There are also some commands very specific to the dVRK not covered by CRTK.  These can be found in [`dvrk_console.cpp`](https://github.com/jhu-dvrk/dvrk-ros/blob/master/dvrk_robot/src/dvrk_console.cpp).  
+In general, we try to expose most C++ commands and events as ROS topics or services under the same name.  Starting with the dVRK release 2.0, we are using the [CRTK naming convention](https://github.com/collaborative-robotics/documentation/wiki/Robot-API).  There are also some commands very specific to the dVRK not covered by CRTK.  ROS bridge for the dVRK specific commands can be found in [`dvrk_console.cpp`](https://github.com/jhu-dvrk/dvrk-ros/blob/master/dvrk_robot/src/dvrk_console.cpp).  For the CRTK commands, the [cisst to ROS CRTK bridge](https://github.com/jhu-cisst/cisst-ros) is used.
 
 If you are migrating your *cisstMultiTask* or ROS code from the dVRK 1.7, you can find some porting information in the [`crtk-port`](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/tree/devel/crtk-port).
 
@@ -317,31 +317,31 @@ C++ class is `mtsTeleOperationPSM`.  Tele-operation topics for ROS are published
 * `current_state`
   * *cisst*: event write `std::string`
   * *ROS*: publisher `std_msgs/String`
-  * dVRK specific.
+  * dVRK specific.  Current state.  Possible values are defined in `components/code/mtsTeleOperationPSM.cpp`: `DISABLED`, `SETTING_ARMS_STATE`, `ALIGNING_MTM` and `ENABLED`.
 * `desired_state`
   * *cisst*: event write `std::string`
   * *ROS*: publisher `std_msgs/String`
-  * dVRK specific.
+  * dVRK specific.  Desired state.  Possible values are defined in `components/code/mtsTeleOperationPSM.cpp`: `DISABLED`, `ALIGNING_MTM` and `ENABLED`.
 * `state_command`  Gravity compensation will be added based on last call to `use_gravity_compensation` (for MTMs and ECM).
   * *cisst*: write command `std::string`
   * *ROS*: subscriber `crtk_msgs/StringStamped`
-  * dVRK specific.
+  * dVRK specific.  Send command to change desired state.  Possible values are: `enable`, `disable` and `align_mtm`
 * `following`
   * *cisst*: event write `bool`
   * *ROS*: publisher `std_msgs/Bool`
-  * dVRK specific.
+  * dVRK specific.  Indicates if the PSM is following the MTM.  This can only happen if the tele-operation is `ENABLED`, the user has engaged the MTM abd the tele-operation is not clutched.  This can can be used to detect when the tele-operation component is actually sending commands to the PSM (using a combination of `servo_cp` and `jaw/servo_jp`).
 * `scale`
   * *cisst*: event write `double`
   * *ROS*: publisher `std_msgs/Float64`
-  * dVRK specific.
+  * dVRK specific.  Indicates what is the current scaling factor between the MTM and PSM translations.
 * `set_scale`
   * *cisst*: write command `double`
   * *ROS*: subscriber `std_msgs/Float64`
-  * dVRK specific.
+  * dVRK specific.  Set the scaling factor between the MTM and PSM translations.  This command changes the scale for this tele-operation component only.  Use with caution, it might be confusing for a user if both hands are not using the same scale.  User should most likely use the `console/teleop/set_scale` command instead.
 * `align_mtm`
   * *cisst*: event write `bool` 
   * *ROS*: publisher `std_msgs/Bool`
-  * dVRK specific.
+  * dVRK specific.  -----------------
 * `alignment_offset`
   * *cisst*: read command `vctMatRot3`
   * *ROS*: publisher `geometry_msgs/QuaternionStamped`
