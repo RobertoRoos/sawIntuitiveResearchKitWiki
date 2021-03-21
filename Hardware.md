@@ -7,7 +7,7 @@
     - [1.1. Arms](#11-arms)
     - [1.2. Sterile adapter](#12-sterile-adapter)
     - [1.3. Controllers](#13-controllers)
-  - [2. Firewire](#2-firewire)
+  - [2. FireWire](#2-firewire)
     - [2.1. FPGA Power](#21-fpga-power)
     - [2.2. Testing with `qladisp`](#22-testing-with-qladisp)
     - [2.3. Testing the connections](#23-testing-the-connections)
@@ -27,7 +27,7 @@ Acronyms used in this document are defined in the [FAQ](jhu-dvrk/sawIntuitiveRes
 
 Please read the unboxing instructions provided by ISI at http://research.intusurg.com/dvrkwiki/index.php?title=DVRK:Docs:Main
 
-The arms need to be connected directly to the controllers.   If you have a research kit (i.e. not the full patient cart) it is very easy.   If you have a full patient cart, the controllers for the PSMs and ECM need to be connected to the cables that come from the arms.   To do so, disconnect the arms (PSMs and ECM) from the back of the patient cart and plug them in the dVRK controllers.   Do not use the long cables that connect the patient cart to the master console.   See also the [full daVinci page](jhu-dvrk/sawIntuitiveResearchKit/wiki/full-da-Vinci)(Introduction section).
+The arms need to be connected directly to the controllers.   If you have a research kit (i.e. not the full patient cart) it is very easy.   If you have a full patient cart, the controllers for the PSMs and ECM need to be connected to the cables that come from the arms.   To do so, disconnect the arms (PSMs and ECM) from the back of the patient cart and plug them in the dVRK controllers.   Do not use the long cables that connect the patient cart to the master console.   See also the [full daVinci page](jhu-dvrk/sawIntuitiveResearchKit/wiki/full-da-Vinci) (Introduction section).
 
 ### 1.2. Sterile adapter
 
@@ -41,7 +41,7 @@ Make sure you place the wire to short the two pins as deep as possible and keep 
 
 1. There are three types of controllers, MTM, PSM and ECM.  It is important not to mix them as the MTM controllers use a 24V power supply for the first 4 actuators and a 12V power supply for the last 3 actuators while the PSM controllers use a 24V power supply for all 7 actuators.  For the ECM, there's a single 36V power supply for the 4 motors and 3 brakes.  You can verify which one is which by opening the controllers.  See also [Controller Boxes](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Controller-Boxes).
 
-1. We strongly recommend to label the controllers with the name of the arm you plan to control along with the board IDs.   The board IDs should follow the convention described in the [XML configuration page](/jhu-dvrk/sawIntuitiveResearchKit/wiki/XMLConfig).   Each controller contains two sets of boards.    Each set is composed of a lower board (aka QLA for quad linear amps) and the upper board (FPGA + firewire connections).   The upper board (FPGA) has a rotary dial to set the board ID.   Using a small screw driver you can change the Id for each board. For example, the controller dedicated to the MTM Right should have a label with:
+1. We strongly recommend to label the controllers with the name of the arm you plan to control along with the board IDs.   The board IDs should follow the convention described in the [XML configuration page](/jhu-dvrk/sawIntuitiveResearchKit/wiki/XMLConfig).   Each controller contains two sets of boards.    Each set is composed of a lower board (aka QLA for quad linear amps) and the upper board (FPGA + FireWire connections).   The upper board (FPGA) has a rotary dial to set the board ID.   Using a small screw driver you can change the Id for each board. For example, the controller dedicated to the MTM Right should have a label with:
    ```
    MTMR (board IDs 2 - 3) 
    ```
@@ -51,7 +51,7 @@ Make sure you place the wire to short the two pins as deep as possible and keep 
 1. We recommend plugging all your controllers to a single power strip with a switch.  This will ensure that all controllers can be turned on or off using a single button.
 
 
-## 2. Firewire
+## 2. FireWire
 
 ***Note:*** the following steps should be performed without connecting the arms to the controllers.
 
@@ -59,11 +59,11 @@ Make sure you place the wire to short the two pins as deep as possible and keep 
 
 **This only applies to the first generation of controllers, i.e. 2012 model.**
 
-For the Rev 1 controllers, there is a minor issue with the controllers and power provided via the Firewire cable.  If there are too many controllers on the daisy chain, there won't be enough power the FPGA boards properly and they might get stuck in an unstable state.  This is due to the fact that the Rev 1.1 FPGA boards (inside the Rev 1 controller box) can obtain power from the 6-pin Firewire cable or from its internal power supply -- specifically, the boards will use whichever voltage is higher. If the Firewire cable is connected to a box that is switched off, the FPGA boards will draw power from the PC via the Firewire cable.  This problem does not occur with the Rev 2 controllers, which contain Rev 1.2 FPGA boards, because those boards have a jumper (J10) to enable/disable power from  the 6-pin Firewire connector. By default, this jumper is not installed, so the FPGA boards cannot obtain power from the Firewire cable.
+For the Rev 1 controllers, there is a minor issue with the controllers and power provided via the FireWire cable.  If there are too many controllers on the daisy chain, there won't be enough power the FPGA boards properly and they might get stuck in an unstable state.  This is due to the fact that the Rev 1.1 FPGA boards (inside the Rev 1 controller box) can obtain power from the 6-pin FireWire cable or from its internal power supply -- specifically, the boards will use whichever voltage is higher. If the FireWire cable is connected to a box that is switched off, the FPGA boards will draw power from the PC via the FireWire cable.  This problem does not occur with the Rev 2 controllers, which contain Rev 1.2 FPGA boards, because those boards have a jumper (J10) to enable/disable power from  the 6-pin FireWire connector. By default, this jumper is not installed, so the FPGA boards cannot obtain power from the FireWire cable.
 
-* For the Rev 1 controllers, if you are using a 6 pin firewire A cable, we strongly recommend to unplug the firewire cable from the PC, power on the controllers and then re-plug the firewire cable on the PC.  This way, the controllers start using their own power supplies.
+* For the Rev 1 controllers, if you are using a 6 pin FireWire A cable, we strongly recommend to unplug the FireWire cable from the PC, power on the controllers and then re-plug the FireWire cable on the PC.  This way, the controllers start using their own power supplies.
 
-* If you are using a 4 pin firewire A cable (this is often the case on PC laptops), you won't have any issue since these cables don't provide power over firewire.
+* If you are using a 4 pin FireWire A cable (this is often the case on PC laptops), you won't have any issue since these cables don't provide power over FireWire.
 
 * This is also not an issue with the Rev 2 and above controllers, unless you install jumper J10 on the FPGA boards.
 
@@ -77,13 +77,13 @@ Note that the FireWire card in your PC shows as a FireWire node.   So even if yo
 
 ***Note:*** If you want to check what the Linux kernel is doing while plugging/unplugging the FireWire cable, open a separate shell and start `dmsg -w`. 
 
-To test the firewire communication, the simplest solution is to use the command line tool `qladisp`.   Assuming that you have [built the software](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Build), `qladisp` can be found in the cisst build tree, subdirectory `build/bin`.  The program requires one or more board IDs.  The user can optionally specify a port number:
+To test the FireWire communication, the simplest solution is to use the command line tool `qladisp`.   Assuming that you have [built the software](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Build), `qladisp` can be found in the cisst build tree, subdirectory `build/bin`.  The program requires one or more board IDs.  The user can optionally specify a port number:
 
   ```
   qladisp b1 [b2] [-pP]
   ```
 
-For example, to display basic information related to the board with Id 3 on firewire port 0, launch:
+For example, to display basic information related to the board with Id 3 on FireWire port 0, launch:
 
   ```
   qladisp 3
@@ -95,12 +95,12 @@ You can monitor up to two boards.  Here is a screen shot for `qladisp` using boa
 
 ### 2.3. Testing the connections
 
-Verify that the Firewire cables you use are good, i.e. of good quality and not too long.  We found that external cables longer that 4 meters often cause problems.  To quickly check if your Firewire chain is healthy, start the `qladisp` utility and make sure:
+Verify that the FireWire cables you use are good, i.e. of good quality and not too long.  We found that external cables longer that 4 meters often cause problems.  To quickly check if your FireWire chain is healthy, start the `qladisp` utility and make sure:
 * all boards are listed.  You can verify the board IDs and firmware versions as well.
-* the display doesn't freeze intermittently.  The `dt` value displayed on the first row is the maximum time in milliseconds between packets since the application started.  The value should remain low (i.e. a few milliseconds).  It will increase by about 80 milliseconds when you try powering the controllers.   Values above 1 second usually indicate issues with the firewire chain.
+* the display doesn't freeze intermittently.  The `dt` value displayed on the first row is the maximum time in milliseconds between packets since the application started.  The value should remain low (i.e. a few milliseconds).  It will increase by about 80 milliseconds when you try powering the controllers.   Values above 1 second usually indicate issues with the FireWire chain.
 
 You should proceed methodically and add components one by one:
-1. Test with a single controller.  Use a single firewire cable between the PC and the controller and run `qladisp` for each board in the controller (each controller box contains two boards).  Test both firewire port on the back of the controller.  Test each controller individually.
+1. Test with a single controller.  Use a single FireWire cable between the PC and the controller and run `qladisp` for each board in the controller (each controller box contains two boards).  Test both FireWire port on the back of the controller.  Test each controller individually.
 2. Test with a second controller.  Again, test each board on each controller connected.
 3. If you are running into issues (missing board or freezing display), try different cables.
 
@@ -171,7 +171,7 @@ Pressing buttons and inserting sterile adapter or tool:
 
 Motor power can be disabled by hardware interlocks (relays, e-stop) or by software, so it is necessary to first inspect the hardware setup. Specifically, the e-stop cable harness is usually designed to daisy-chain the safety circuit between multiple controllers. Thus, if you wish to individually test controllers, you may need to temporarily modify your e-stop cable harness. See [this page](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ESTOP) for further instructions.
 
-Once the e-stop cable harness is suitably modified, the simplest solution is to use the QLA utility `qladisp` ([Mechatronics Examples](https://github.com/jhu-cisst/mechatronics-software/wiki/Example-Programs)) for each board on your hardware and try to enable/disable power(press `p` key) with and without your wired E-stop engaged.
+Once the e-stop cable harness is suitably modified, the simplest solution is to use the QLA utility `qladisp` ([Mechatronics Examples](https://github.com/jhu-cisst/mechatronics-software/wiki/Example-Programs)) for each board on your hardware and try to enable/disable power (press `p` key) with and without your wired E-stop engaged.
 
 * When the power is ON you should have:
  * `MV` LED should be green (MV stands for motor voltage)
