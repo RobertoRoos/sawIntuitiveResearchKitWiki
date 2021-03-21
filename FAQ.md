@@ -50,8 +50,14 @@ This is a high level description of the different generations of da Vinci system
 
 # What does QLA-FPGA, qladisp, ... mean?
 
+General:
+ * **dVRK**: da Vinci Research Kit.
+ * **JHU**: [Johns Hopkins University](https://www.jhu.edu).
+ * **LCSR**: [Laboratory for Computational Sensing and Robotics](https://lcsr.jhu.edu/) (at Johns Hopkins).
+ * **ROS**: [Robotic Operating System](https://www.ros.org).
+ * **CRTK**: [Collaborative Robotics ToolKit](https://collaborative-robotics.github.io/).
+
 Some JHU acronyms:
- * **JHU**: Johns Hopkins University.
  * **QLA**: quad linear amplifier, JHU designed board with power for up to 4 axis.
  * **FPGA**: logic board designed by JHU, mounted on top of the QLA.  Provides 2 firewire connector to daisy chain and connect to PC. Version 2+ also includes an Ethernet connector.
  * **QLA-FPGA**: board set including a QLA and FPGA board.
