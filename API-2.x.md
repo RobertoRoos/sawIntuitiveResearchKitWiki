@@ -37,7 +37,7 @@ If you are migrating your *cisstMultiTask* or ROS code from the dVRK 1.7, you ca
 
 ## All
 
-C++ class is `mtsIntuitiveResearchKitArm`.
+C++ class is `mtsIntuitiveResearchKitArm`.  Arm names are typically all upper case and follow the da Vinci naming convention: MTML and MTMR for MTM left and right, PSM1, PSM2 and PSM3 for PSMs and finally ECM.  ROS topics are organized in a namespace using the arm's name (e.g. `MTMR/setpoint_cp`). 
 
 ### Operating state
 
@@ -312,7 +312,7 @@ C++ class is `mtsIntuitiveResearchKitArmPSM`.
 
 ## PSM Tele-operation
 
-C++ class is `mtsTeleOperationPSM`.  Tele-operation topics for ROS are published under the "namespace" `MTMx_PSMx` (e.g. `MTML_PSM1`, `MTMR_PSM3`...).
+C++ class is `mtsTeleOperationPSM`.  Tele-operation components names are typically all upper case use the name of the MTM and PSM (e.g. for the cisst component: `MTMR-PSM1`).  Topics for ROS are published under the namespace `MTMx_PSMx` (e.g. `MTML_PSM1`, `MTMR_PSM3`...).  Note that the `-` is replaced by `_` as ROS doesn't support the minus character in namespaces and topics.
 
 * `current_state`
   * *cisst*: event write `std::string`
