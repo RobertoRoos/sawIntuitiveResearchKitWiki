@@ -116,6 +116,22 @@ C++ class is `mtsIntuitiveResearchKitArm`.  Arm names are typically all upper ca
   * *cisst*: read command `prmForceCartesianGet`
   * *ROS*: publisher `geometry_msgs/WrenchStamped`
   * dVRK specific.  See `body/measured_cf`.
+* `query_cp`:
+  * *cisst*: qualified read command
+    * `vctDoubleVec`
+    * `vctFrm4x4`
+  * *ROS*: service `cisst_msgs/QueryForwardKinematics`
+    * `sensor_msgs/JointState jp`
+    * `geometry_msgs/PoseStamped cp
+  * dVRK specific.  Compute forward kinematic based on joint values provided.  The length of the vector of joint positions determines which frame should be computed along the kinematic chain.  For ROS, the field `position` is used to store joint positions.  This method prepends the base frame for the arm to the result.
+* `local/query_cp`:
+  * *cisst*: qualified read command
+    * `vctDoubleVec`
+    * `vctFrm4x4`
+  * *ROS*: service `cisst_msgs/QueryForwardKinematics`
+    * `sensor_msgs/JointState jp`
+    * `geometry_msgs/PoseStamped cp
+  * dVRK specific.  Compute forward kinematic based on joint values provided.  The length of the vector of joint positions determines which frame should be computed along the kinematic chain.  For ROS, the field `position` is used to store joint positions.
 
 ### Motion commands
 
@@ -206,11 +222,11 @@ C++ class is `mtsIntuitiveResearchKitArmECM`.
 * `manip_clutch`
   * *cisst*: event write `prmEventButton`
   * *ROS*: publisher `sensor_msgs::Joy`
-  * dVRK specific.  Indicates if the clutch button on the ECM (located on top of the translation/insertion stage) is pressed or not.
+  * dVRK specific.  Indicate if the clutch button on the ECM (located on top of the translation/insertion stage) is pressed or not.
 * `endoscope_type`
   * *cisst*: event write `std::string`
   * *ROS*: publisher `std_msgs::String`
-  * dVRK specific.  Indicates which endoscope is currently in use.  Note that the endoscope type is not detected automatically so this setting depends on the user.  It can be modified using the GUI or programmatically.
+  * dVRK specific.  Indicate which endoscope is currently in use.  Note that the endoscope type is not detected automatically so this setting depends on the user.  It can be modified using the GUI or programmatically.
 * `set_endoscope_type`
   * *cisst*: write command `std::string`
   * *ROS*: subscriber `std_msgs::String`
@@ -227,7 +243,7 @@ C++ class is `mtsIntuitiveResearchKitArmMTM`.
 * `gripper/closed`:
   * *cisst*: event write `bool`
   * *ROS*: publisher `std_msgs/Bool`
-  * dVRK specific.  Indicates if the gripper is closed or not based on a hard coded threshold (0.0).  This is provided for convenience and backward compatibility but users can instead use `gripper/measured_js`, `position[0]` with their own threshold and logic to determine if the gripper is closed or not.
+  * dVRK specific.  Indicate if the gripper is closed or not based on a hard coded threshold (0.0).  This is provided for convenience and backward compatibility but users can instead use `gripper/measured_js`, `position[0]` with their own threshold and logic to determine if the gripper is closed or not.
 * `gripper/pinch`
   * *cisst*: event void
   * *ROS*: publisher `std_msgs/Empty`
@@ -235,11 +251,11 @@ C++ class is `mtsIntuitiveResearchKitArmMTM`.
 * `orientation_locked`
   * *cisst*: event write `bool`
   * *ROS*: publisher `std_msgs/Bool`
-  * dVRK specific.  Indicates if the orientation is locked or not.  See `lock_orientation`.
+  * dVRK specific.  Indicate if the orientation is locked or not.  See `lock_orientation`.
 * `lock_orientation`
   * *cisst*: write command `vctMatRot3`
   * *ROS*: subscriber `geometry_msgs/Quaternion`
-  * dVRK specific.  This sends an orientation goal for the orientation of the MTM with respect to its base frame.  A joint trajectory is used to reach the orientation goal.  Once the MTM has reached the desired orientation, it will maintain said orientation even when the arm moves.  This command has no effect if the MTM is not controlled in effort mode (i.e. `servo_cf`).  The best example of usage is to lock the MTM orientation (~wrist) when in clutch mode.  The operator can move around freely but the absolute orientation remains constant so the MTM is still aligned to the PSM when the user restart the tele operation.
+  * dVRK specific.  Send an orientation goal for the orientation of the MTM with respect to its base frame.  A joint trajectory is used to reach the orientation goal.  Once the MTM has reached the desired orientation, it will maintain said orientation even when the arm moves.  This command has no effect if the MTM is not controlled in effort mode (i.e. `servo_cf`).  The best example of usage is to lock the MTM orientation (~wrist) when in clutch mode.  The operator can move around freely but the absolute orientation remains constant so the MTM is still aligned to the PSM when the user restart the tele-operation.
 * `unlock_orientation`
   * *cisst*: void command
   * *ROS*: subscriber `std_msgs/Empty`
@@ -272,7 +288,7 @@ C++ class is `mtsIntuitiveResearchKitArmPSM`.
 * `tool_type`
   * *cisst*: event write `std::string`
   * *ROS*: publisher `std_msgs/String`
-  * dVRK specific.  Indicates which tool is currently in use.  Note that the tool type can be determined in different ways depending on your hardware and configuration files.  See [Tool Detection](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Tool-Detection).
+  * dVRK specific.  Indicate which tool is currently in use.  Note that the tool type can be determined in different ways depending on your hardware and configuration files.  See [Tool Detection](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Tool-Detection).
 * `tool_type_request`
   * *cisst*: event void
   * *ROS*: publisher `std_msgs/Empty`
@@ -284,27 +300,27 @@ C++ class is `mtsIntuitiveResearchKitArmPSM`.
 * `set_adapter_present`
   * *cisst*: write command `bool`
   * *ROS*: subscriber `std_msgs/Bool`
-  * dVRK specific.  Tells the console that the sterile adapter is present without any actual hardware detection of the adapter.  This can be used to force engaging a non-dVRK modified sterile adapter (see [hardware modification](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Hardware)).  **Use with caution**, this can lead to undesired motions if a tool is also inserted.  The vast majority of users should **not**, **ever** use this command.
+  * dVRK specific.  Tell the console that the sterile adapter is present without any actual hardware detection of the adapter.  This can be used to force engaging a non-dVRK modified sterile adapter (see [hardware modification](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Hardware)).  **Use with caution**, this can lead to undesired motions if a tool is also inserted.  The vast majority of users should **not**, **ever** use this command.
 * `set_tool_present`
   * *cisst*: write command `bool`
   * *ROS*: subscriber `std_msgs/Bool`
-  * dVRK specific.   Tells the controller that a tool is present without any actual hardware detection of the tool.  This can be used to force engaging a tool without a Dallas chip (see [tool detection](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Tool-Detection)).  **Use with caution**, this can lead to undesired motions if the wrong tool is inserted.  The vast majority of users should **not**, **ever** use this command.
+  * dVRK specific.   Tell the controller that a tool is present without any actual hardware detection of the tool.  This can be used to force engaging a tool without a Dallas chip (see [tool detection](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Tool-Detection)).  **Use with caution**, this can lead to undesired motions if the wrong tool is inserted.  The vast majority of users should **not**, **ever** use this command.
 * `io/adapter`
   * *cisst*: event write `prmEventButton`
   * *ROS*: publisher `sensor_msgs/Joy`
-  * dVRK specific.  Indicates if the sterile adapter is present or not.
+  * dVRK specific.  Indicate if the sterile adapter is present or not.
 * `io/tool`
   * *cisst*: event write `prmEventButton`
   * *ROS*: publisher `sensor_msgs/Joy`
-  * dVRK specific.  Indicates if a tool is present or not.
+  * dVRK specific.  Indicate if a tool is present or not.
 * `io/manip_clutch`
   * *cisst*: event write `prmEventButton`
   * *ROS*: publisher `sensor_msgs/Joy`
-  * dVRK specific.  Indicates if the manipulator clutch button is pressed or not.  This is the white button located on top of the translation stage on the PSM.  This button is used to release the PID on the arm and move it manually.
+  * dVRK specific.  Indicate if the manipulator clutch button is pressed or not.  This is the white button located on top of the translation stage on the PSM.  This button is used to release the PID on the arm and move it manually.
 * `io/suj_clutch`
   * *cisst*: event write `prmEventButton`
   * *ROS*: publisher `sensor_msgs/Joy`
-  * dVRK specific.  Indicates if the manipulator SUJ (Set Up Joints) clutch button is pressed or not.  This is the white button located on the side of the "horizontal" link of the PSM.  This button is used to release the brakes on the arm's SUJ if you happen to have the [dVRK SUJ controller](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Controller-Boxes#da-vinci-classic-setup-joint-controller).
+  * dVRK specific.  Indicate if the manipulator SUJ (Set Up Joints) clutch button is pressed or not.  This is the white button located on the side of the "horizontal" link of the PSM.  This button is used to release the brakes on the arm's SUJ if you happen to have the [dVRK SUJ controller](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Controller-Boxes#da-vinci-classic-setup-joint-controller).
 
 ## SUJ
 
@@ -329,43 +345,43 @@ C++ class is `mtsTeleOperationPSM`.  Tele-operation components names are typical
 * `following`
   * *cisst*: event write `bool`
   * *ROS*: publisher `std_msgs/Bool`
-  * dVRK specific.  Indicates if the PSM is following the MTM.  This can only happen if the tele operation is `ENABLED`, the user has engaged the MTM and the tele operation is not clutched.  This can can be used to detect when the tele operation component is actually sending commands to the PSM (using a combination of `servo_cp` and `jaw/servo_jp`).
+  * dVRK specific.  Indicate if the PSM is following the MTM.  This can only happen if the tele-operation is `ENABLED`, the user has engaged the MTM and the tele-operation is not clutched.  This can can be used to detect when the tele-operation component is actually sending commands to the PSM (using a combination of `servo_cp` and `jaw/servo_jp`).
 * `scale`
   * *cisst*: event write `double`
   * *ROS*: publisher `std_msgs/Float64`
-  * dVRK specific.  Indicates what is the current scaling factor between the MTM and PSM translations.
+  * dVRK specific.  Indicate what is the current scaling factor between the MTM and PSM translations.
 * `set_scale`
   * *cisst*: write command `double`
   * *ROS*: subscriber `std_msgs/Float64`
-  * dVRK specific.  Set the scaling factor between the MTM and PSM translations.  This command changes the scale for this tele-operation component only.  Use with caution, it might be confusing for a user if both hands are not using the same scale.  User should most likely use the `console/teleop/set_scale` command instead.  This setting can also be changed using the GUI.
+  * dVRK specific.  Set the scaling factor between the MTM and PSM translations.  This command changes the scale for this tele-operation component only.  **Use with caution**, it might be confusing for a user if both hands are not using the same scale.  User should most likely use the `console/teleop/set_scale` command instead.  This setting can also be changed using the GUI.
 * `align_mtm`
   * *cisst*: event write `bool` 
   * *ROS*: publisher `std_msgs/Bool`
-  * dVRK specific.  Indicates if the tele operation component will attempt to align the MTM orientation (with respect to the stereo display) to the orientation of the PSM end effector (with respect to the camera).  See `set_align_mtm`.
+  * dVRK specific.  Indicates if the tele-operation component will attempt to align the MTM orientation (with respect to the stereo display) to the orientation of the PSM end effector (with respect to the camera).  See `set_align_mtm`.
 * `alignment_offset`
   * *cisst*: read command `vctMatRot3`
   * *ROS*: publisher `geometry_msgs/QuaternionStamped`
-  * dVRK specific.  Difference between the MTM orientation and PSM orientation.  When `align_mtm` is set, the difference is capped by the maximum threshold allowed to engage (i.e. start following mode).  The default threshold is defined in `components/include/sawIntuitiveResearchKit/mtsIntuitiveResearchKit.h` and is set to 5 degrees.  When `align_mtm` is set to `false`, this allows to track the difference of orientation between MTM and PSM when the operator starts tele operating.
+  * dVRK specific.  Difference between the MTM orientation and PSM orientation.  When `align_mtm` is set, the difference is capped by the maximum threshold allowed to engage (i.e. start following mode).  The default threshold is defined in `components/include/sawIntuitiveResearchKit/mtsIntuitiveResearchKit.h` and is set to 5 degrees.  When `align_mtm` is set to `false`, this allows to track the difference of orientation between MTM and PSM when the operator starts tele-operating.
 * `set_align_mtm`
   * *cisst*: write command `bool`
   * *ROS*: subscriber `std_msgs/Bool`
-  * dVRK specific.  Set wether the tele operation component requires the MTM orientation to match the PSM orientation to start the following mode.  When set, the tele operation component will attempt to orient the MTM to match the PSM orientation.   For alternate MTMs without motorized wrist, the operator will have to manually re-orient the MTM to match the PSM orientation.  Also when set, in clutch mode, the component will lock the MTM orientation and leave the position (x, y, z) free so the operator can re-position their hands while preserving the orientation.  By default `align_mtm` is set to `true` and it mimics the behavior of the clinical da Vinci systems.  Setting `align_mtm` to false allows relative orientation between the MTM and the PSM.  This can be useful for alternate MTMs with a smaller SO3 space (e.g. ForceDimension haptic systems or Phanton Omni).  This setting can also be changed using the GUI.
+  * dVRK specific.  Set wether the tele-operation component requires the MTM orientation to match the PSM orientation to start the following mode.  When set, the tele-operation component will attempt to orient the MTM to match the PSM orientation.   For alternate MTMs without motorized wrist, the operator will have to manually re-orient the MTM to match the PSM orientation.  Also when set, in clutch mode, the component will lock the MTM orientation and leave the position (x, y, z) free so the operator can re-position their hands while preserving the orientation.  By default `align_mtm` is set to `true` and it mimics the behavior of the clinical da Vinci systems.  Setting `align_mtm` to false allows relative orientation between the MTM and the PSM.  This can be useful for alternate MTMs with a smaller SO3 space (e.g. ForceDimension haptic systems or Phanton Omni).  This setting can also be changed using the GUI.
 * `rotation_locked`
   * *cisst*: event write `bool`
   * *ROS*: publisher `sensor_msgs/Joy`
-  * dVRK specific.  Indicates if the rotation is locked.  See `lock_rotation`.
+  * dVRK specific.  Indicate if the rotation is locked.  See `lock_rotation`.
 * `lock_rotation`
   * *cisst*: write command `bool`
   * *ROS*: subscriber `std_msgs/Bool`
-  * dVRK specific.  Lock the orientation.  On the PSM side, the tele operation component will only send translation commands and will not change the orientation of the tool tip.  On the MTM side, the component will lock the wrist (similar to clutch in following mode when `align-mtm` is set).  This setting can also be changed using the GUI.
+  * dVRK specific.  Lock the orientation.  On the PSM side, the tele-operation component will only send translation commands and will not change the orientation of the tool tip.  On the MTM side, the component will lock the wrist (similar to clutch in following mode when `align-mtm` is set).  This setting can also be changed using the GUI.
 * `translation_locked`
   * *cisst*: event write `bool`
-  * *ROS*: publisher `sensor_msgs/Joy`
+  * *ROS*: publisher `sensor_msgs/Joy`Triggers power off sequence for the whole system.
   * dVRK specific.  Indicates if the translation is locked.  See `lock_translation`.
 * `lock_translation`
   * *cisst*: write command `bool`
   * *ROS*: subscriber `std_msgs/Bool`
-  * dVRK specific.  Lock the orientation.  On the PSM side, the tele operation component will only send rotation commands and will not change the position of the tool tip.  There is no effect on the MTM side.  This setting can also be changed using the GUI.
+  * dVRK specific.  Lock the orientation.  On the PSM side, the tele-operation component will only send rotation commands and will not change the position of the tool tip.  There is no effect on the MTM side.  This setting can also be changed using the GUI.
 * `set_registration_rotation` (obsolete): 
 
 ## ECM Tele-operation
@@ -375,27 +391,27 @@ C++ class is `mtsTeleOperationECM`.
 * `current_state`
   * *cisst*: event write `std::string`
   * *ROS*: publisher `std_msgs::String`
-  * dVRK specific.  See similar command for PSM Tele-operation.
+  * dVRK specific.  See similar command for PSM tele-operation.
 * `desired_state`
   * *cisst*: event write `std::string`
   * *ROS*: publisher `std_msgs::String`
-  * dVRK specific.  See similar command for PSM Tele-operation.
+  * dVRK specific.  See similar command for PSM tele-operation.
 * `state_command`
   * *cisst*: write command `std::string`
   * *ROS*: subscriber `std_msgs::String`
-  * dVRK specific.  See similar command for PSM Tele-operation.
+  * dVRK specific.  See similar command for PSM tele-operation.
 * `following`
   * *cisst*: event write `bool`
   * *ROS*: publisher `std_msgs::Bool`
-  * dVRK specific.  See similar command for PSM Tele-operation.
+  * dVRK specific.  See similar command for PSM tele-operation.
 * `scale`
   * *cisst*: event write `double`
   * *ROS*: publisher `std_msgs::Float64`
-  * dVRK specific.  See similar command for PSM Tele-operation.
+  * dVRK specific.  See similar command for PSM tele-operation.
 * `set_scale`
   * *cisst*: write command `double`
   * *ROS*: subscriber `std_msgs::Float64`
-  * dVRK specific.  See similar command for PSM Tele-operation.
+  * dVRK specific.  See similar command for PSM tele-operation.
 
 # Console
 
@@ -406,47 +422,47 @@ C++ class is `mtsIntuitiveResearchKitConsole`.
 * `console/power_off`
   * *cisst*: void command
   * *ROS*: subscriber `std_msgs/Empty`
-  * dVRK specific.
+  * dVRK specific.  Trigger power off sequence for the whole system.
 * `console/power_on`
   * *cisst*: void command
   * *ROS*: subscriber `std_msgs/Empty`
-  * dVRK specific.
+  * dVRK specific.  Trigger power on sequence for the whole system.  If some arms are in `FAULT` state, this method will first `disable` them. 
 * `console/home`
   * *cisst*: void command
   * *ROS*: subscriber `std_msgs/Empty`
-  * dVRK specific.
+  * dVRK specific.  Triggers homing procedure for the whole system, including powering if the system is not yet powered.
 * `console/camera`
   * *cisst*: event write `prmEventButton`
   * *ROS*: publisher `sensor_msgs/Joy`
-  * dVRK specific.
+  * dVRK specific.  Indicate if the console assumes it should tele-operate the ECM if all conditions are met: operator is present and tele-operation is enabled.  When in camera mode, the console disables the PSM tele-operation components (if any) and enables the ECM tele-operation component (if present).
 * `console/clutch`
   * *cisst*: event write `prmEventButton`
   * *ROS*: publisher `sensor_msgs/Joy`
-  * dVRK specific.
+  * dVRK specific.  Indicate if the console assumes it should clutch the active tele-operation components.  The console component simple passes the clutch state to the tele-operation components who then have to handle the clutch.
 * `console/operator_present`
   * *cisst*: event write `prmEventButton`
   * *ROS*: publisher `sensor_msgs/Joy`
-  * dVRK specific.
+  * dVRK specific.  Indicate if the console assumes the operator is present (either through a dead man switch/foot pedal, head sensor or emulated).
 * `console/emulate_camera`
   * *cisst*: write command `prmEventButton`
   * *ROS*: subscriber `sensor_msgs/Joy`
-  * dVRK specific.
+  * dVRK specific.  Emulate the camera pedal press.
 * `console/emulate_clutch`
   * *cisst*: write command `prmEventButton`
   * *ROS*: subscriber `sensor_msgs/Joy`
-  * dVRK specific.
+  * dVRK specific.  Emulate the clutch pedal press.
 * `console/emulate_operator_present`
   * *cisst*: write command `prmEventButton`
   * *ROS*: subscriber `sensor_msgs/Joy`
-  * dVRK specific.
+  * dVRK specific.  Emulate the operator presence sensor.
 * `console/volume`
   * *cisst*: event write `double`
   * *ROS*: publisher `std_msgs/Float64`
-  * dVRK specific.
+  * dVRK specific.  Indicates the current volume for beeps generated by the console.
 * `console/set_volume`
   * *cisst*: write command `double`
   * *ROS*: subscriber `std_msgs/Float64`
-  * dVRK specific.
+  * dVRK specific.  Set the 
 * `console/string_to_speech`
   * *cisst*: write command `std::string`
   * *ROS*: subscriber `std_msgs/String`
