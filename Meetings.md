@@ -2,7 +2,7 @@
 
 Held online on January 28 2021.
 
-* [PowerPoint presentation](https://github.com/jhu-dvrk/dvrk-presentations/raw/main/dVRK_2.0_2021_01.pptx)
+* [PowerPoint presentation](https://dvrk.lcsr.jhu.edu/downloads/presentations/dVRK_2.0_2021_01.pptx)
 
 # 2020 PI meeting
 
