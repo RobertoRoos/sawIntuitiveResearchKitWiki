@@ -50,6 +50,9 @@ https://github.com/jhu-dvrk/sawIntuitiveResearchKit/tree/master/share
 
 **Pay close attention to units as we used different ones in different sections!**
 
+Starting with the dVRK **version 2.0**, the documentation for JSON based configuration files is generated using JSON schemas.  Schemas can be found in the directory `share/schemas`.  Documentation for:
+* Main console file: [2.0](https://dvrk.lcsr.jhu.edu/documentation/schemas/v2.0/dvrk-console.html)
+
 # Robot IO (XML)
 
 These files are used to configure the IOs for each arm identified by its serial number.  They include the board IDs, digital inputs/outputs to use, conversion factors for the encoders, potentiometers, commanded current and current feedback as well as some safety parameters and coupling matrices (for MTMs).
