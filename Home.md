@@ -18,7 +18,7 @@
 
 The da Vinci Research Kit (**dVRK**) is an “open-source mechatronics” system, consisting of electronics, firmware, and software that is being used to control research systems based on the now retired first-generation da Vinci system from [Intuitive Surgical Inc](https://www.intuitive.com/).  The da Vinci system is designed for Robot-Assisted Minimally Invasive Surgery (RAMIS).
 
-![Full da Vinci system with dVRK controllers at Johns Hopkins](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/general/full-daVinci-B08-03-2021.png)
+![Full da Vinci system with dVRK controllers at the Johns Hopkins University (LCSR)](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/general/full-daVinci-B08-03-2021.png)
 
 The sawIntuitiveResearchKit folder provides several example applications for controlling the Research Kit for the da Vinci System using the [IEEE-1394 (FireWire) controller](http://jhu-cisst.github.io/mechatronics/). The picture above shows two Controllers connected to two da Vinci Patient Side Manipulators (PSMs) at Worcester Polytechnic Institute (WPI).
 
