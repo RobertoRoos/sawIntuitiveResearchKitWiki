@@ -19,24 +19,24 @@ Details regarding the different builds can be found in the [board versions page]
 | 3, 7<br>da Vinci | 2014, 2019 | Univ. College, London | Dan Stoyanov | 13 |
 | 3<br>dVRK | 2014 | [Scuola Superiore Sant'Anna](https://www.santannapisa.it/en/institute/biorobotics/surgical-robotics-and-allied-technologies-area) | Arianna Menciassi | 14 |
 | 3<br>dVRK | 2014 | Seoul National Univ. | Sungwan Kim | 15 |
-| 3<br>da Vinci | 2014 | Óbuda Univ., Budapest | Tamás Haidegger | 16 |
-| 4<br>da Vinci | 2015 | Wayne State Univ. | Abhilash Pandya | 17 |
-| 4<br>da Vinci | 2015 | University of Texas at Austin<br>(originally CNMC) | Farshid Alambeigi | 18 |
-| 4<br>da Vinci | 2015 | University of Verona | Paolo Fiorini | 19 |
+| 3<br>da Vinci | 2014 | [Óbuda Univ., Budapest](http://irob.uni-obuda.hu/?q=en) | Tamás Haidegger | 16 |
+| 4<br>da Vinci | 2015 | Wayne State Univ. | [Abhilash Pandya](http://webpages.eng.wayne.edu/~af8262/) | 17 |
+| 4<br>da Vinci | 2015 | [University of Texas at Austin](http://sites.utexas.edu/arts-lab/)<br>(originally CNMC) | Farshid Alambeigi | 18 |
+| 4<br>da Vinci | 2015 | [University of Verona](https://metropolis.scienze.univr.it) | Paolo Fiorini | 19 |
 | 4<br>da Vinci | 2015 | National Institutes of Health | Sheng Xu | 20 |
 | -<br>da Vinci | 2016 | Management Center Innsbruck | Yeongmi Kim | 21 |
-| 5<br>da Vinci | 2016 | Case Western Reserve Univ. | Cenk Cavusoglu | 22 |
-| 5, 7, 8<br>da Vinci | 2016, 2019<br>2020 | U.C. San Diego | Michael Yip<br>Tania Morimoto | 23 |
-| 5<br>dVRK | 2016 | Ben Gurion Univ. | Ilana Nisky | 24 |
+| 5<br>da Vinci | 2016 | Case Western Reserve Univ. | [Cenk Cavusoglu](http://engr.case.edu/cavusoglu_cenk/Home.html) | 22 |
+| 5, 7, 8<br>da Vinci | 2016, 2019<br>2020 | [U.C. San Diego](https://www.ucsdarclab.com) | [Michael Yip](https://yip.eng.ucsd.edu)<br>[Tania Morimoto](https://sites.google.com/eng.ucsd.edu/taniamorimoto/about-me) | 23 |
+| 5<br>dVRK | 2016 | [Ben Gurion Univ.](http://bioroblab.weebly.com) | Ilana Nisky | 24 |
 | 5<br>da Vinci | 2016 | Univ. of Naples | Bruno Siciliano | 25 |
 | 5<br>da Vinci | 2016 | Cleveland Clinic | Robb Colbrunn | 26 |
-| 5<br>da Vinci | 2016 | Politecnico di Milano | Elena De Momi | 27 |
+| 5<br>da Vinci | 2016 | [Politecnico di Milano](https://nearlab.polimi.it/medical/) | Elena De Momi | 27 |
 | 5, 6<br>dVRK, da Vinci | 2016, 2017 | Chinese Univ. of Hong Kong | Yunhui Liu, Philip Chiu, Samuel Au | 28 |
 | 6<br>dVRK | 2017 | University of Texas, Dallas | Ann Majewicz Fey | 29 |
-| 6<br>da Vinci | 2017 | University of Leeds | Pietro Valdastri | 30 |
+| 6<br>da Vinci | 2017 | [University of Leeds](https://www.stormlabuk.com) | Pietro Valdastri | 30 |
 | 6<br>da Vinci | 2017 | Hochschule Reutlingen | Lars Schmidt | 31 |
 | 7<br>da Vinci | 2019 | University of Maryland | Axel Krieger | 32 |
-| 7<br>dVRK | 2019 | University of Alberta | Mahdi Tavakoli | 33 |
+| 7<br>dVRK | 2019 | [University of Alberta](http://www.ece.ualberta.ca/~tbs/pmwiki/) | Mahdi Tavakoli | 33 |
 | 7<br>da Vinci | 2019 | Purdue University | Juan Wachs, Denny Yu | 34 |
 | 7<br>da Vinci | 2019 | Wake Forest | Philip Brown | 35 |
 | 7<br>da Vinci S MTMs | 2019 | surgnova.com | Jindi Zhang | 36 |
