@@ -5,19 +5,19 @@ Details regarding the different builds can be found in the [board versions page]
 | Hardware batch | Year | University | PIs | # | 
 | -------------- | ---- | ---------- | ------| ---- |
 | 0, 1, 3, SUJ<br>dVRK, da Vinci | 2004-2014 | [Johns Hopkins Univ.](https://lcsr.jhu.edu) | Peter Kazanzides  & Russell Taylor | 1 |
-| 1, SUJ<br>dVRK, da Vinci | 2012 | Worcester Polytechnic Inst. | Greg Fischer | 2 | 
-| 1<br>dVRK | 2012 | Stanford Univ. | Allison Okamura | 3 |
+| 1, SUJ<br>dVRK, da Vinci | 2012 | [Worcester Polytechnic Inst.](http://aimlab.wpi.edu/research/projects/daVinci_Robot_Research_System) | Greg Fischer | 2 | 
+| 1<br>dVRK | 2012 | [Stanford Univ.](http://charm.stanford.edu) | Allison Okamura | 3 |
 | 1<br>da Vinci | 2012 | Univ. of British Columbia | Tim Salcudean | 4 |
 | 2<br>dVRK | 2013 | [U.C. Berkeley](http://bair.berkeley.edu/blog/2017/10/17/lfd-surgical-robots/) | Ken Goldberg & Pieter Abbeel | 5 |
-| 2<br>dVRK | 2013 | Carnegie Mellon Univ. | Howie Choset | 6 |
-| 2<br>dVRK | 2013 | Vanderbilt Univ. | Nabil Simaan | 7 |
+| 2<br>dVRK | 2013 | [Carnegie Mellon Univ.](http://biorobotics.ri.cmu.edu/robots/daVinci.php) | Howie Choset | 6 |
+| 2<br>dVRK | 2013 | [Vanderbilt Univ.](http://arma.vuse.vanderbilt.edu/index.php) | Nabil Simaan | 7 |
 | 2<br>dVRK | 2013 | Clemson University<br>(originally SUNY Buffalo) | Venkat Krovi | 8 |
-| 2<br>da Vinci | 2013 | Univ. W. Ontario/CSTAR | Rajni Patel | 9 |
+| 2<br>da Vinci | 2013 | [Univ. W. Ontario/CSTAR](https://www.eng.uwo.ca/cstar/about_us/index.html) | Rajni Patel | 9 |
 | 2<br>dVRK | 2013 | Hospital for Sick Kids, Toronto | Jim Drake, M.D. | 10 |
 | 2<br>da Vinci | 2013 | Intuitive Surgical Research | Simon DiMaio | 11 |
-| 3, 5<br>da Vinci | 2014, 2016 | Imperial College | Guang-Zhong Yang & Philip Pratt | 12 |
+| 3, 5<br>da Vinci | 2014, 2016 | [Imperial College](https://www.imperial.ac.uk/hamlyn-centre/about-us/) | Guang-Zhong Yang & Philip Pratt | 12 |
 | 3, 7<br>da Vinci | 2014, 2019 | Univ. College, London | Dan Stoyanov | 13 |
-| 3<br>dVRK | 2014 | Scuola Superiore Sant'Anna | Arianna Menciassi | 14 |
+| 3<br>dVRK | 2014 | [Scuola Superiore Sant'Anna](https://www.santannapisa.it/en/institute/biorobotics/surgical-robotics-and-allied-technologies-area) | Arianna Menciassi | 14 |
 | 3<br>dVRK | 2014 | Seoul National Univ. | Sungwan Kim | 15 |
 | 3<br>da Vinci | 2014 | Óbuda Univ., Budapest | Tamás Haidegger | 16 |
 | 4<br>da Vinci | 2015 | Wayne State Univ. | Abhilash Pandya | 17 |
