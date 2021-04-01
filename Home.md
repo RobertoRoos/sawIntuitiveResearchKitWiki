@@ -20,7 +20,7 @@ The da Vinci Research Kit (**dVRK**) is an “open-source mechatronics” system
 
 ![Full da Vinci system with dVRK controllers at the Johns Hopkins University (LCSR)](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/general/full-daVinci-B08-03-2021.png)
 
-The sawIntuitiveResearchKit folder provides several example applications for controlling the Research Kit for the da Vinci System using the [IEEE-1394 (FireWire) controller](http://jhu-cisst.github.io/mechatronics/). The picture above shows two Controllers connected to two da Vinci Patient Side Manipulators (PSMs) at Worcester Polytechnic Institute (WPI).
+The sawIntuitiveResearchKit folder provides several example applications for controlling the Research Kit for the da Vinci System using the [IEEE-1394 (FireWire) controller](http://jhu-cisst.github.io/mechatronics/). The picture above shows a full da Vinci system at JHU that uses the dVRK controllers.
 
 # Credit / Citation
 
