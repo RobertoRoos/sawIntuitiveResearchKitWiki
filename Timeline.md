@@ -40,6 +40,6 @@ Details regarding the different builds can be found in the [board versions page]
 | 7<br>da Vinci | 2019 | Purdue University | Juan Wachs, Denny Yu | 34 |
 | 7<br>da Vinci | 2019 | Wake Forest | Philip Brown | 35 |
 | 7<br>da Vinci S MTMs | 2019 | surgnova.com | Jindi Zhang | 36 |
-| 8<br>da Vinci | 2020 | University of Illinois, Chicago | Liaohai Leo Chen  | 37 |
-| 8<br>dVRK | 2020 | University of Twente | Sarthak Misra | 38 |
-| 8<br>da Vinci | 2020 | University of Torino | Alberto Arezzo | 39 |
+| 8<br>da Vinci | 2021 | University of Illinois, Chicago | Liaohai Leo Chen  | 37 |
+| 8<br>dVRK | 2021 | University of Twente | Sarthak Misra | 38 |
+| 8<br>da Vinci | 2021 | University of Torino | Alberto Arezzo | 39 |
