@@ -3,7 +3,7 @@ P. Kazanzides, Z. Chen, A. Deguet, G. S. Fischer, R. H. Taylor, and S. P. DiMaio
 ```bibtex
 @inproceedings{kazanzides-chen-etal-icra-2014,
   title = {An Open-Source Research Kit for the da Vinci Surgical System},
-  author = {Peter Kazanzides and Zihan Chen and Anton Deguet and Fischer, Gregory S. and Taylor, Russell H. and DiMaio, Simon P.},
+  author = {Peter Kazanzides and Zihan Chen and Anton Deguet and Gregory S. Fischer and Russell H. Taylor and Simon P. DiMaio },
   year = {2014},
   date = {2014-06-01},
   booktitle = {IEEE Intl. Conf. on Robotics and Auto. (ICRA)},
