@@ -4,8 +4,8 @@ Details regarding the different builds can be found in the [board versions page]
 
 | Hardware batch | Year | University | PIs | # | 
 | -------------- | ---- | ---------- | ------| ---- |
-| 0, 1, 3<br>dVRK, da Vinci | 2004-2014 | [Johns Hopkins Univ.](https://lcsr.jhu.edu) | Peter Kazanzides  & Russell Taylor | 1 |
-| 1<br>dVRK, da Vinci | 2012 | Worcester Polytechnic Inst. | Greg Fischer | 2 | 
+| 0, 1, 3, SUJ<br>dVRK, da Vinci | 2004-2014 | [Johns Hopkins Univ.](https://lcsr.jhu.edu) | Peter Kazanzides  & Russell Taylor | 1 |
+| 1, SUJ<br>dVRK, da Vinci | 2012 | Worcester Polytechnic Inst. | Greg Fischer | 2 | 
 | 1<br>dVRK | 2012 | Stanford Univ. | Allison Okamura | 3 |
 | 1<br>da Vinci | 2012 | Univ. of British Columbia | Tim Salcudean | 4 |
 | 2<br>dVRK | 2013 | [U.C. Berkeley](http://bair.berkeley.edu/blog/2017/10/17/lfd-surgical-robots/) | Ken Goldberg & Pieter Abbeel | 5 |
