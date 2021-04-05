@@ -52,6 +52,9 @@ https://github.com/jhu-dvrk/sawIntuitiveResearchKit/tree/master/share
 
 Starting with the dVRK **version 2.0**, the documentation for JSON based configuration files is generated using JSON schemas.  Schemas can be found in the directory `share/schemas`.  Documentation for:
 * Main console file: [2.0](https://dvrk.lcsr.jhu.edu/documentation/schemas/v2.0/dvrk-console.html)
+* ECM file: [2.0](https://dvrk.lcsr.jhu.edu/documentation/schemas/v2.0/dvrk-ecm.html)
+* MTM file: [2.0](https://dvrk.lcsr.jhu.edu/documentation/schemas/v2.0/dvrk-mtm.html)
+* PSM file: [2.0](https://dvrk.lcsr.jhu.edu/documentation/schemas/v2.0/dvrk-psm.html)
 
 # Robot IO (XML)
 
