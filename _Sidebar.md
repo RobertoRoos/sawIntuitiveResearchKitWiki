@@ -19,9 +19,7 @@ Getting Started
 Advanced
 * [Software Architecture](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Software-Architecture)
 * [Config File formats](Configuration-File-Formats)
-* APIs
-  * [API 1.x](/jhu-dvrk/sawIntuitiveResearchKit/wiki/API-1.x)
-  * [API 2.x](/jhu-dvrk/sawIntuitiveResearchKit/wiki/API-2.x)
+* APIs [1.x](/jhu-dvrk/sawIntuitiveResearchKit/wiki/API-1.x) [2.x](/jhu-dvrk/sawIntuitiveResearchKit/wiki/API-2.x)
   * [Coordinate Systems](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Coordinate-Systems)
 * [UI Customization](/jhu-dvrk/sawIntuitiveResearchKit/wiki/UI-Customization)
 * [Teleoperation](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Teleoperation)
