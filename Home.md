@@ -95,7 +95,7 @@ Several groups have developed software modules that integrate with the dVRK and 
 
 ## Firmware
 
-Firmware version 6.0 or 7.0 is now required (dVRK 2.0), please upgrade your firmware to Rev7.  Version 7.0 adds support for Ethernet/UDP for [FPGA 2+](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/wiki/Board-Versions). See
+Firmware version 6.0 or 7.0 is now required (dVRK 2.0), please upgrade your firmware to Rev7.  Version 7.0 adds support for Ethernet/UDP for [FPGA 2+](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/wiki/Board-Versions) and many [other changes](https://github.com/jhu-cisst/mechatronics-firmware/compare/Rev6...Rev7). See
 https://github.com/jhu-cisst/mechatronics-firmware/wiki/FPGA-Program for step-by-step instructions to upgrade your firmware.
 
 ## Software
