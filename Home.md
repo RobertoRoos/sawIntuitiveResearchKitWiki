@@ -95,7 +95,7 @@ Several groups have developed software modules that integrate with the dVRK and 
 
 ## Firmware
 
-Firmware version 4.0, 5.0 or 6.0 is now required (dVRK 1.6), please upgrade your firmware to Rev6.  Version 6.0 adds support for FPGA based velocity estimation. See
+Firmware version 6.0 or 7.0 is now required (dVRK 2.0), please upgrade your firmware to Rev7.  Version 7.0 adds support for Ethernet/UDP for [FPGA 2+](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/wiki/Board-Versions). See
 https://github.com/jhu-cisst/mechatronics-firmware/wiki/FPGA-Program for step-by-step instructions to upgrade your firmware.
 
 ## Software
