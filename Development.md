@@ -17,6 +17,7 @@ Starting with version 2.0, you should use the `.rosintall` file in the *dvrk-ros
 
 * Bigger projects
   * Trajectory in cartesian space
+  * dVRK focus controller
   * Controller class:
     * Separate control PSM from PSM jaws
     * Add different controllers: velocity, interpolate...
