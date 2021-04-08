@@ -30,7 +30,7 @@ The calibration steps are required to fine tune the XML configuration file gener
 
 ## 2.0 Prerequisite
 Please read the [ESTOP debugging](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ESTOP#8-debugging) section before you start.   
-When you are calibrating motor current, it might be simpler to have a single controller on the ESTOP chain.   If you prefer to keep all your controllers on the ESTOP chain, make sure all the controllers are also connected to the FireWire chain and you will have to use the `qlacloserelays` utility program to enable power.
+When you are calibrating motor current, it might be simpler to have a single controller on the ESTOP chain.   If you prefer to keep all your controllers on the ESTOP chain, make sure all the controllers are also connected to the FireWire chain and you will have to use the `qlacommand -c close-relays` utility program to enable power.
 
 ## 2.1. Introduction
 
@@ -243,7 +243,7 @@ rosrun dvrk_robot dvrk_console_json -j <my-config-dir>/console-PSM2.json -i ros-
 ```
 The file `console-PSM2.json` is specific to each system since it points to your `sawRobotIO1394-PSM2-00000.xml` file.  On the other hand, the file `ros-io-PSM2.json` can be found in the `sawIntuitiveResearchKit/share` directory since it isn't system specific.
 
-Once `dvrk_console_json` is started, make sure you can home the arm.  After you homed the arm, in the GUI, IO tab, select _Direct control_ and unselect _Use pot/encoder check_.  If you have multiple controllers connected to the same safety chain/e-stop, you can use the utility `qlacloserelays` to close all safety relays.
+Once `dvrk_console_json` is started, make sure you can home the arm.  After you homed the arm, in the GUI, IO tab, select _Direct control_ and unselect _Use pot/encoder check_.  If you have multiple controllers connected to the same safety chain/e-stop, you can use the utility `qlacommand -c close-relays` to close all safety relays.
 
 In a separate shell, start the calibration script using the following command line for dVRK 1.x:
 ```sh

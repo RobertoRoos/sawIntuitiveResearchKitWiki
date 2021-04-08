@@ -52,7 +52,7 @@ C low level library:
   * Runs on the PC sides on top of Linux/libraw1394
   * Packs/unpacks data to/from FPGA, i.e. convert bits to usable numbers (integers)
   * Handles multiple FPGA and treat them as single controller (
-  * Simple text based programs to test hardware (`qladisp`, `qlatest`, `qlacloserelays`, ...)
+  * Simple text based programs to test hardware (`qladisp`, `qlatest`, `qlacommand`, ...)
   * See:
     * https://github.com/jhu-cisst/mechatronics-software/wiki
     * https://github.com/jhu-dvrk/sawIntuitiveResearchKit/wiki/Hardware
@@ -151,7 +151,7 @@ The console class, `mtsIntuitiveResearchKitConsole` is part of the [sawIntuitive
   * centralized error handling
   * manage state of arms and controllers
   * handle and dispatch foot pedal events to arms and controllers
- 
+
 The console class also manages all the connections between the _cisstMultiTask_ components which can be tedious when done manually.  The console class is used in `sawIntuitiveResearchKitQtConsoleJSON` and in the ROS application `dvrk_robot/dvrk_console_json`.  Using one of these two applications and a custom console configuration file, one should be able to configure pretty much any system without any C++ programming nor compilation; e.g. just one arm, one pair of arms with or without tele-operation, all arms...
 
 The configuration files are JSON based, see `console*.json` files in sawIntuitiveResearchKit [shared directory](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/tree/master/share).  The subdirectory `jhu-dVRK` contains files for a research kit (i.e. just MTMs and PSMs) while the directory `jhu-daVinci` contains examples for a full system, including setup joints and ECM.
@@ -161,7 +161,7 @@ The configuration files are JSON based, see `console*.json` files in sawIntuitiv
 All the Qt widgets used for the dVRK are derived from the `mtsComponent` class and either `QObject` or `QWidget`.  This way, they can have both _cisstMultiTask_ interfaces and Qt slots and signals.  There is a couple of things to pay attention to when developing or modifying these widgets:
  * Event handlers are not queued so they must be thread safe.  In most case the event handler should _emit_ a Qt signal
  * Widgets should check if they are hidden or not before performing any computation, specially timer based refreshes
- 
+
 ## Robot IOs
 
 The class `mtsRobotIO1394QtWidget` is part of the [sawRobotIO1394](https://github.com/jhu-saw/sawRobotIO1394) library.  Since there is usually a single IO component for multiple robots, we use an object factory to create as many widgets as necessary (see class `mtsRobotIO1394QtWidgetFactory`).
@@ -199,7 +199,7 @@ The class `mtsIntuitiveResearchKitConsoleQtWidget` is part of the [sawIntuitiveR
 # ROS
 
 To interface with ROS, we use the `mtsROSBridge` class from the _cisst_ros_bridge_ library (part of the [dvrk_ros](https://github.com/jhu-cisst/cisst-ros) package).  This class allows to interface ROS topics (subscribers and publishers) to _cisstMultiTask_ commands and events.  This library also provides conversion methods between _cisst_ data types and ROS messages.  Finally, we can forward the dVRK messages (status, warning and errors) to the ROS log system.
-  
+
 ## Topics
 
 To standardize the ROS topics for the dVRK components (io, arms, foot pedal, tele-operation), one should use the helper functions from the _dvrk_ros_ repository, _dvrk_robot_ package, [dvrk_add_topics_functions](https://github.com/jhu-dvrk/dvrk-ros/blob/master/dvrk_robot/src/dvrk_add_topics_functions.cpp).  To configure a whole system, i.e. multiple arms, tele-operations... one should use the `dvrk_console` class.  This class can be configured using the `mtsIntuitiveResearchKitConsole` component to figure out which bridges are required.

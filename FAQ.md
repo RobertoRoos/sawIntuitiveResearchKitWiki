@@ -4,7 +4,7 @@
    * [What does QLA-FPGA, qladisp, ... mean?](#what-does-qla-fpga-qladisp--mean)
    * [What PC configuration do you suggest?](#what-pc-configuration-do-you-suggest)
    * [The PSMs aren't moving](#the-psms-arent-moving)
-   * [Where are qladisp and qlacloserelays, everything else has been compiled](#where-are-qladisp-and-qlacloserelays-everything-else-has-been-compiled)
+   * [I can't find qladisp but everything else has been compiled](#i-cant-find-qladisp-but-everything-else-has-been-compiled)
    * [All signals freeze for a couple seconds](#all-signals-freeze-for-a-couple-seconds)
    * [Some intermittent signals](#some-intermittent-signals)
    * [Power issues](#power-issues)
@@ -13,7 +13,7 @@
       * [Firewire cables](#firewire-cables)
    * [I plugged my PC to the stereo display but I get no image?](#i-plugged-my-pc-to-the-stereo-display-but-i-get-no-image)
 
-<!-- Added by: anton, at:  -->
+<!-- Added by: anton, at: 2021-04-08T17:45-04:00 -->
 
 <!--te-->
 
@@ -75,7 +75,10 @@ Some JHU acronyms:
       * 48 V for SUJ, for brakes and PWM units to lift/lower the PSM3 SUJ
    * Safety relays
  * `qladisp`: text based application used to test up to 2 QLA-FPGA boards.  See [testing hardware with `qladisp`](/jhu-dvrk/sawIntuitiveResearchKit/wiki//Hardware#22-testing-with-qladisp)
- * `qlacloserelays`: text based application used to close safety relays for all the controllers connected through FireWire, very useful if you're not using all the controllers connected through the FireWire and e-stop chain and don't want to re-configure all your wiring.
+ * `qlacommand`: text based application used to send commands to all controllers:
+   * `qlacommand -c close-relays`: close safety relays for all the controllers connected through FireWire, very useful if you're not using all the controllers connected through the FireWire and e-stop chain and don't want to re-configure all your wiring.
+   * `qlacommand -c reboot`: reboot all controllers, useful after upgrading firmware
+   * `qlacommand -c reset-encoder-preload`: reset all encoder preloads, useful if homing has been interrupted or failed
 
 See JHU Mechatronics for more details: http://jhu-cisst.github.io/mechatronics regarding the QLA-FPGA (JHU public page).
 
@@ -105,7 +108,7 @@ You will need a PC running Linux:
 
 All manipulators should be completely back drivable when not powered.  If your PSMs are stiff and you can't move all the joints by hand, make sure you have removed all the brackets and zip ties used to protect the arm during transportation.   Please read the unpacking guide: [ISI private wiki](http://research.intusurg.com/dvrkwiki/index.php?title=DVRK:Docs:Main).
 
-# Where are `qladisp` and `qlacloserelays`, everything else has been compiled
+# I can't find `qladisp` but everything else has been compiled
 
 You're probably missing the curses development libraries.  Install them, re-run CMake or just `catkin build` if you're a ROS user.   To install on Ubuntu:
 ```sh
