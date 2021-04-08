@@ -11,98 +11,32 @@
 
 ## Compatible development branches
 
-For each component, `git checkout <branch_name>`:
-
-| Components               | Branches      | Branches     |
-| ------------------------ | ------------- |------------- |
-| cisst                    | devel         |         |
-| cisst-ros                | devel         |         |
-| sawKeyboard              | devel         |         |
-| sawTextToSpeech          | devel         |         |
-| sawRobotIO1394           | devel         |         |
-| sawControllers           | devel         |         |
-| sawConstraintControllers | devel         |         |
-| sawIntuitiveResearchKit  | devel         |         |
-| dvrk-ros                 | devel         |         |
-
-When switching from `devel` to `master` branch, it is recommended to do a full `catkin clean` since the file structure and CMake external projects might be different.
-
-If you don't want to checkout out those repositories one by one, just checkout all the repositories within `cisst-saw`. Note that, don't forget to checkout `dvrk-ros`, which is not located in `cisst-saw`.
-
-If it's your first time, follow this
-
-```bash
-mkdir -p ~/catkin_ws/src
-cd ~/catkin_ws/src
-git clone https://github.com/jhu-cisst/cisst-saw --recursive
-cd ~/catkin_ws/src/cisst-saw
-git submodule foreach git checkout devel
-git submodule foreach git submodule init
-git submodule foreach git submodule update
-cd ~/catkin_ws/src
-git clone https://github.com/jhu-dvrk/dvrk-ros
-cd ~/catkin_ws/src/dvrk-ros
-git checkout devel
-cd ~/catkin_ws/src
-git clone https://github.com/jhu-dvrk/dvrk-gravity-compensation
-cd ~/catkin_ws/src/dvrk-gravity-compensation
-git checkout devel
-```
-
-Afterwards, follow this
-
-```bash
-cd ~/catkin_ws/src/cisst-saw
-git submodule foreach git checkout devel
-git submodule foreach git pull origin devel
-git submodule foreach git submodule init
-git submodule foreach git submodule update
-cd ~/catkin_ws/src/dvrk-ros
-git checkout devel
-git pull origin devel
-cd ~/catkin_ws/src/dvrk-gravity-compensation
-git checkout devel
-git pull origin devel
-```
+Starting with version 2.0, you should use the `.rosintall` file in the *dvrk-ros* repository to pull all the dependencies required for the `master` or `devel` branches. 
 
 ## Changes
 
 ### `devel`
 
-## Roadmap for 1.8
+## Roadmap for 2.1
 
-Definitively:
-* ~~ECM gravity compensation~~
-* ~~Teleop with clutch/relative orientation~~
-* ~~#35, last issue is to control multiple slaves with one master~~
-* ~~Automatic tool type discovery, dynamically change tool type~~
-* ~~Temperature checks with warning and errors~~
-* ~~Check IO/PID periodicity and stops if overloaded~~
-* ~~Closed kinematics for ECM with unit tests~~
-* ~~Closed kinematics for MTM with unit tests~~
-* Better handling of redundant joints in MTMs #2 and #56
-* ~~TeleopPSM scale gripper/jaw based on joint limits~~
-* ~~Allow teleop-psm to continue while ECM moves~~
-* ~~Add joint goal from Qt Arm widget~~ and test with SUJs
-* ~~Fix cisst-ros to expose ROS node and pass arguments to node (e.g. namespace)~~
-* ~~Update SUJ doc + example with simulated SUJ~~
-* Update Teleop doc
-* ~~Fix ctrl+c hangs with ROS/cisstMultiTask/Qt~~
-* Add default SUJ values in suj.json for simulated mode
+* Small projects
+  * Update Teleop doc
+  * #121, add cap on maximum difference between PID goals
+  * IK with joint limits for PSMs
+  * #54, save content of `.cal` file in generated XML file (for debug, retrieval, ...)
+  * Add alert when SUJ are moved without brakes released
+  * Autonomous ECM motion
+  * Documentation and scripts for stereo camera calibration
 
-Maybe:
-* #121, add cap on maximum difference between PID goals
-* Trajectory in cartesian space
-* Fix relative joint move, maybe relative cartesian move
-* UDP support?
-* IK with joint limits for PSMs
-* #54, save content of `.cal` file in generated XML file (for debug, retrieval, ...)
-* ~~Add dvrk-openigt to cisst-saw~~
-* Add optional for ROS bridge topics
-* Add alert when SUJ are moved without brakes released
-* Add test function on user Id and permission on `/dev/fw*`?
-
-## Roadmap for 2.0
-
-* ~~CRTK compliance for C++ command/method and ROS topics~~
-* MoveIt! (via CRTK)
+* Bigger projects
+  * Trajectory in cartesian space
+  * Controller class:
+    * Separate control PSM from PSM jaws
+    * Add different controllers: velocity, interpolate...
+  * 3D User Interface, ideally with RViz + endoscopic stereo stream
+  * Better teleop PSM:
+    * Use symmetry of MTM to set orientation and optimize roll
+    * Force feedback on MTM based on error in orientation between MTM and PSM
+  * MoveIt! (via CRTK)
+  * Binary packages with repository on dvrk.lcsr.jhu.edu
+  * ROS 2 (would likely require binary packages)
