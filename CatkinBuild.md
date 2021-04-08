@@ -40,7 +40,7 @@ wstool init src                    # we're going to use wstool to pull all the c
 catkin init                        # create files for catkin build tool
 catkin config --cmake-args -DCMAKE_BUILD_TYPE=Release # all code should be compiled in release mode
 cd src                             # go in source directory to pull code
-wstool merge https://raw.githubusercontent.com/jhu-dvrk/dvrk-ros/devel/dvrk_ros.rosinstall # or replace devel by master
+wstool merge https://raw.githubusercontent.com/jhu-dvrk/dvrk-ros/master/dvrk_ros.rosinstall # or replace master by devel
 wstool up                          # now wstool knows which repositories to pull, let's get the code
 catkin build --summary             # ... and finally compile everything
 ```
