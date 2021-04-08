@@ -133,13 +133,14 @@ Most power issues are related to the emergency stop: [E-Stop](/jhu-dvrk/sawIntui
 
 # Firewire connection
 
+See  [Controller Connectivity](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ControllerConnection).
+ 
 ## Symptom
  * Can't even connect to controllers
  * See some of the QLA-FPGA but not all
  * `qladisp` seems to be working but the display freezes for a couple of seconds
 
 ## Firewire cables
-
 Cheap cables tend to have more quality issues.  We strongly recommend to buy your FireWire cables from Unibrain.
 
 For a more detailed description of the cables used for our controllers (at JHU), see [ISI private wiki](http://research.intusurg.com/dvrkwiki/index.php?title=DVRK:GroupPages:JHU#Mechatronics).  The best way to test your setup is to start with a single cable and single QLA-FPGA and then add the extra boards one by one to the daisy chain.   This requires to open the controller enclosures.
