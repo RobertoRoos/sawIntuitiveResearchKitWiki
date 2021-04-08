@@ -30,7 +30,7 @@ This section assumes you already have ROS installed (see https://www.ros.org).  
 
 ## Catkin workspace, clone and build
 
-If you're using ROS Melodic and the devel branch, you can just copy/paste the following block of commands in a terminal.   For other configurations, make sure your replace `melodic` by `noetic` or whatever version of ROS you're using.  For the `master` branch, replace `devel` by `master`.
+If you're using ROS Melodic and the devel branch, you can just copy/paste the following block of commands in a terminal.   For other configurations, make sure your replace `melodic` by `noetic` or whatever version of ROS you're using.  For the `devel` branches, replace `master` by `devel`.
 
 ```sh
 source /opt/ros/melodic/setup.bash # or use whatever version of ROS is installed!
