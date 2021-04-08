@@ -9,7 +9,7 @@ Community
 
 Getting Started
 * [First Steps](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FirstSteps)
-* [Build with ROS](/jhu-dvrk/sawIntuitiveResearchKit/wiki/CatkinBuild)
+* [Software build with ROS](/jhu-dvrk/sawIntuitiveResearchKit/wiki/CatkinBuild)
 * [Controller Connectivity](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ControllerConnection)
 * [XML Configuration](/jhu-dvrk/sawIntuitiveResearchKit/wiki/XMLConfig)
 * [Hardware Setup](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Hardware)
