@@ -1,21 +1,8 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
-
-- [Compatible development branches](#compatible-development-branches)
-- [Changes](#changes)
-  - [`devel`](#devel)
-- [Todo](#todo)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-## Compatible development branches
+# Compatible development branches
 
 Starting with version 2.0, you should use the `.rosintall` file in the *dvrk-ros* repository to pull all the dependencies required for the `master` or `devel` branches. 
 
-## Changes
-
-### `devel`
+# Changes
 
 ## Roadmap for 2.1
 
