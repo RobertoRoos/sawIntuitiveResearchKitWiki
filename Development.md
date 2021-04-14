@@ -28,3 +28,5 @@ Starting with version 2.0, you should use the `.rosintall` file in the *dvrk-ros
   * MoveIt! (via CRTK)
   * Binary packages with repository on dvrk.lcsr.jhu.edu
   * ROS 2 (would likely require binary packages)
+  * rosparam
+
