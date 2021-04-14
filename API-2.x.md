@@ -122,7 +122,7 @@ C++ class is `mtsIntuitiveResearchKitArm`.  Arm names are typically all upper ca
     * `vctFrm4x4`
   * *ROS*: service `cisst_msgs/QueryForwardKinematics`
     * `sensor_msgs/JointState jp`
-    * `geometry_msgs/PoseStamped cp
+    * `geometry_msgs/PoseStamped cp`
   * dVRK specific.  Compute forward kinematic based on joint values provided.  The length of the vector of joint positions determines which frame should be computed along the kinematic chain.  For ROS, the field `position` is used to store joint positions.  This method prepends the base frame for the arm to the result.
 * `local/query_cp`:
   * *cisst*: qualified read command
@@ -130,7 +130,7 @@ C++ class is `mtsIntuitiveResearchKitArm`.  Arm names are typically all upper ca
     * `vctFrm4x4`
   * *ROS*: service `cisst_msgs/QueryForwardKinematics`
     * `sensor_msgs/JointState jp`
-    * `geometry_msgs/PoseStamped cp
+    * `geometry_msgs/PoseStamped cp`
   * dVRK specific.  Compute forward kinematic based on joint values provided.  The length of the vector of joint positions determines which frame should be computed along the kinematic chain.  For ROS, the field `position` is used to store joint positions.
 
 ### Motion commands
