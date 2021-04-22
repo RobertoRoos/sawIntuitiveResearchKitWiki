@@ -1,6 +1,7 @@
 <!--ts-->
    * [Introduction](#introduction)
-   * [Endoscope focus controller](#endoscope-focus-controller)
+   * [da Vinci focus controller](#da-vinci-focus-controller)
+   * [dVRK focus controller](#dvrk-focus-controller)
 
 <!-- Added by: adeguet1, at: 2019-08-06T12:19-04:00 -->
 
@@ -10,15 +11,19 @@
 
 Acronyms used in this page are defined in [Frequently Asked Questions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FAQ).
 
-This page describes how to use the Setup Joints (SUJs) with the dVRK.  This is useful only for the groups with a [full da Vinci](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Full-da-Vinci.md)
+This page describes how to use the endoscopic camera focus with the dVRK.  This is useful only for the groups with an Intuitive Surgical camera (see also [Video Pipeline](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Video-Pipeline)).
 
-# Endoscope focus controller
+We offer two different ways to control the camera focus with the dVRK:
+* **da Vinci focus controller**: Use the original Intuitive Surgical da Vinci focus controller using the dVRK arm controller to trigger the +/- digital inputs from the foot pedals.  This is the simplest approach and it replicates the features of the clinical system. 
+* **dVRK focus controller**: bypass the original controller and use the dVRK arm controller to control the motor in the camera stereo head.  This requires a more complex adapter but gives access to more information (e.g. encoder position of the focus stage). 
+
+# daVinci focus controller
 
 The goal of this section is to describe how to control the camera focus using the foot pedals through the dVRK controllers/software.
 
-![Focus controller front](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/focus/camera-focus-front.jpg)
+<a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/focus/camera-focus-front.jpg"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/focus/camera-focus-front.jpg" width="350"></a>
 
-* Focus controller
+* da Vinci focus controller
   * Back of endoscope focus controller, male DSUB 15 pins
   * Focus +, short pin 1 with pin 9, power comes from pin 1 (floating high, 5V)
   * Focus -, short pin 4 with pin 9, power comes from pin 4 (floating high, 5V)
@@ -39,8 +44,8 @@ The goal of this section is to describe how to control the camera focus using th
     * Focus - signal: dMIB `DOF 2` pin 14 <-> Focus controller pin 1
     * Ground: dMIB `DOF 1` pin 10 and/or `DOF 2` pin 10 <-> Focus controller pin 9 (dMIB share ground between `DOF 1` and `DOF2`)
 
-![dVRK focus controller cable](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/focus/dvrk-focus-control-cable.jpg)
-![Focus controller back](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/focus/camera-focus-back.jpg)
+<a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/focus/dvrk-focus-control-cable.jpg"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/focus/dvrk-focus-control-cable.jpg" width="350"></a>
+<a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/focus/camera-focus-back.jpg"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/focus/camera-focus-back.jpg" width="350"></a>
 
 Once you've build your cable, you can modify your console JSON configuration file and add:
 ```json
@@ -56,4 +61,8 @@ The example above assumes that:
 At that point, you should be able to control the camera focus using the foot pedals.  When pressing the +/- pedal you should:
   * See the focus change
   * See the "Focus In"/"Focus Out" LED turn on/off on the vision cart
-  * Hear the motor on the camera head 
+  * Hear the motor on the camera head
+
+# dVRK focus controller
+
+<a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/focus/dvrk-focus-controller-adapter.png"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/focus/dvrk-focus-controller-adapter.png" width="350"></a>
