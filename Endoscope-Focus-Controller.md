@@ -17,11 +17,13 @@ We offer two different ways to control the camera focus with the dVRK:
 * **da Vinci focus controller**: Use the original Intuitive Surgical da Vinci focus controller using the dVRK arm controller to trigger the +/- digital inputs from the foot pedals.  This is the simplest approach and it replicates the features of the clinical system. 
 * **dVRK focus controller**: bypass the original controller and use the dVRK arm controller to control the motor in the camera stereo head.  This requires a more complex adapter but gives access to more information (e.g. encoder position of the focus stage). 
 
-# daVinci focus controller
+# da Vinci focus controller
 
 The goal of this section is to describe how to control the camera focus using the foot pedals through the dVRK controllers/software.
 
 <a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/focus/camera-focus-front.jpg"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/focus/camera-focus-front.jpg" width="350"></a>
+
+## Adapter
 
 * da Vinci focus controller
   * Back of endoscope focus controller, male DSUB 15 pins
@@ -47,6 +49,8 @@ The goal of this section is to describe how to control the camera focus using th
 <a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/focus/dvrk-focus-control-cable.jpg"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/focus/dvrk-focus-control-cable.jpg" width="350"></a>
 <a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/focus/camera-focus-back.jpg"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/focus/camera-focus-back.jpg" width="350"></a>
 
+## Software
+
 Once you've build your cable, you can modify your console JSON configuration file and add:
 ```json
     "endoscope-focus": {
@@ -65,4 +69,8 @@ At that point, you should be able to control the camera focus using the foot ped
 
 # dVRK focus controller
 
+## Adapter
+
 <a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/focus/dvrk-focus-controller-adapter.png"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/focus/dvrk-focus-controller-adapter.png" width="350"></a>
+
+## Software
