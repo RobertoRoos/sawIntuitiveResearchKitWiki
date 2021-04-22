@@ -54,7 +54,7 @@ The goal of this section is to describe how to control the camera focus using th
 Once you've build your cable, you can modify your console JSON configuration file and add:
 ```json
     "endoscope-focus": {
-        "io": "sawRobotIO1394-MTML-dv-endoscope-focus.xml"
+        "io": "io/sawRobotIO1394-MTML-dv-endoscope-focus.xml"
     }
 ```
 The example above assumes that:
