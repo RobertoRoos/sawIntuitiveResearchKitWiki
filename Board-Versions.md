@@ -14,7 +14,7 @@ A list of sites for each build can be found in the [timeline](/jhu-dvrk/sawIntui
 | 5     | 2016 | 2.1  | 4981 | 1.4  | 4980 | x    |
 | 6     | 2017 | 2.1  | 5496 | 1.4a | 5495 | x    |
 | 7     | 2019 | 2.1  | 6007 | 1.4b | 6006 | x    |
-| 8     | 2020 | 2.1  | 6547 | 1.4b | 6557 | x    |
+| 8     | 2020 | 2.1  | 6547 | 1.4b | 6557 | F    |
 
 The FPGA and QLA serial number (S/N) have the form `BBBB-xx` or `BBBB-xxx`, where `BBBB` denotes the build number (see table above) and `xx` or `xxx` is the board number, starting with `01` or `001`. For example, the first FPGA and QLA built have S/N `3116-01` and `3174-01`, respectively. The S/N is physically labeled on each board (white sticker) and can be programmed into the board EEPROM, which is accessible via software. Since Build 4, the S/N has been programmed during manufacturing. For older builds, the S/N can be programmed using the `pgm1394` utility.
 
