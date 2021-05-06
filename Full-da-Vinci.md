@@ -33,7 +33,7 @@ You can also access the head sensor and control the endoscope focus using custom
 * Camera focus: [endoscope focus page](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Endoscope-Focus-Controller)
 
 You will be able to switch back and forth between the mechatronics from ISI and the dVRK controllers but this requires to unplug and replug a few cables.  The user has to connect the arms, setup joints and foot pedal directly to the dVRK controllers:
-* MTM cables can be found on the back of the master console, grey plastic covers need to be removed.
+* MTM cables can be found on the back of the master console, grey plastic covers need to be removed.  These cables are a bit short so you will have to keep the MTM controllers really close to the surgeon's console.
   ![Masters connectors](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/full/master-console-arm-cables.jpg)
 * Foot pedal cable can be found on the front of the master console, under the stereo display and the cover needs to be removed.  Unplug the bottom part and connect it to the dVRK controller.  This cable is rather short so one might consider investing in an extension cable (e.g. https://smile.amazon.com/Monoprice-6ft-DB15-Molded-Cable/dp/B002LWJ7TA).
   ![Foot pedals connector](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/full/master-console-pedals-cable.jpg)
