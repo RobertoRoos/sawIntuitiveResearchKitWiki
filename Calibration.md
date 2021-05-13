@@ -134,20 +134,20 @@ Steps:
 
 ## 3.1. Introduction
 
-The grippers on the MTM use a Hall Effect sensor to measure the opening.  The analog values are converted to an approximative angle using a linear equation.  The goal of the calibration procedure is to define the scale and offset used for the conversion.  The da Vinci MTM gripper used two small springs, one weak outer spring to keep the gripper opened and a stronger inner spring (but shorter one) used to create some resistance when the gripper is almost closed.  From the user point of view, we have 3 different repeatable positions:
+The grippers on the MTM use a Hall Effect sensor to measure the opening.  The analog values are converted to an approximate angle using a linear equation.  The goal of the calibration procedure is to define the scale and offset used for the conversion.  The da Vinci MTM gripper used two small springs, one weak outer spring to keep the gripper opened and a stronger inner spring (but shorter one) used to create some resistance when the gripper is almost closed.  From the user point of view, we have 3 different repeatable positions:
 * gripper fully opened, this happens when the gripper is left alone.  The position is defined by the mechanical limit.
-* gripper closed but not tight.  When the user closes the gripper with very little force, he or she should feel the moment where the stronger spring.
+* gripper closed but not tight.  When the user closes the gripper with very little force, he or she should feel the moment where the stronger spring engages.
 * gripper closed and tight.  This position is defined by the mechanical limit when maximum force is applied to close the gripper.
 
-Ideally the slave tool should close when the master gripper is close but not tight.   Closing the master gripper more should:
-* apply more force on the slave side to reduce the risk of slippage
+Ideally, the PSM tool should close when the master gripper is closed but not tight.   Closing the master gripper more should:
+* apply more force on the PSM side to reduce the risk of slippage
 * give a feeling of force feedback on the master side using the strong inner spring
 
 ## 3.2. Procedure
 
 For the calibration procedure, we use the fully opened position and the closed-but-not-tight position.  The user should practice with the gripper (the robot doesn't have to be turned on) before starting the calibration to learn how strong the two springs are and repeatedly find the closed-but-not-tight position.  
 
-The gripper calibration program used the same parameters as the current calibration program.  A typical run looks like:
+The gripper calibration program uses the same parameters as the current calibration program.  A typical run looks like:
 
    ```
   > sawIntuitiveResearchKitGripperCalibration -c sawRobotIO1394-MTML-00000.xml 
@@ -179,7 +179,7 @@ The gripper calibration program used the same parameters as the current calibrat
 
   Press any key to start collecting data.
   Fully open and close the gripper up to the second spring on the MTM multiple times.
-  NOTE: It is very important to not close the gripper all the way, stop when you feel some resitance from the second spring.
+  NOTE: It is very important to not close the gripper all the way; stop when you feel some resistance from the second spring.
   + indicates a new maximum, - indicates a new minimum.
   Press any key to stop collecting data.
   +-+++++----++++++++++-----------------------------------------------------------------------------------------------------------
@@ -303,9 +303,9 @@ There is usually no point to save the results of the second pass.
 
 ## 4.3. Calibrating offsets
 
-These instructions are for all arms but we only know how to properly hold the joints at their zero position for the last 4 joints of the **PSMs**.  If you need to calibrate offsets on different arms (MTM, ECM), you will need to figure out a way to constraint the arm to its zero position (mechanical zero).
+These instructions are for all arms but we only know how to properly hold the joints at their zero position for the last 4 joints of the **PSMs**.  If you need to calibrate offsets on different arms (MTM, ECM), you will need to figure out a way to constrain the arm to its zero position (mechanical zero).
 
-For the scales calibration, you first need to start the console application and power the arm.  If the arm can power with the existing potentiometer offsets, home the arm.  You can then either keep the arm powered and use the motors to position it close to it's mechanical zero.   For the ECM and PSM, when the arm is maintained in position using its motors, you can use the "clutch" button to release the PID controller and position the arm manually.  For all arms, you can also use the ROS topics to send `move` goals or use the Qt GUI (dVRK 2.0 and above).  Once the arm is close to its mechanical zero position, you can use the script below.
+For the scales calibration, you first need to start the console application and power the arm.  If the arm can power with the existing potentiometer offsets, home the arm.  You can then either keep the arm powered and use the motors to position it close to its mechanical zero.   For the ECM and PSM, when the arm is maintained in position using its motors, you can use the "clutch" button to release the PID controller and position the arm manually.  For all arms, you can also use the ROS topics to send `move` goals or use the Qt GUI (dVRK 2.0 and above).  Once the arm is close to its mechanical zero position, you can use the script below.
 
 In a separate shell, start the calibration script using the following command line for dVRK 1.x:
 ```sh
@@ -348,4 +348,4 @@ Similar to the scales, there is usually no point to save the results of the seco
 
 There is a potential egg and chicken issue.   While trying to calibrate the potentiometers, the safety checks using the potentiometers are still active.   So if the original calibration (from `.cal` files) is way off, there will likely be some safety checks triggered while the robot arms are moving.
 
-To avoid this, you can disable the pot/encoder safety checks but you MUST first visually check that the potentiometers and potentiometers work fine (see https://github.com/jhu-dvrk/sawIntuitiveResearchKit/wiki/Debugging-Potentiometer-Issues#visual-checks), you can disable the pots/encoder safety checks manually during the calibration process.   To do so, “Home” the arm and then switch to the IO Qt Widget, check the “Direct control” box and approve.  Then uncheck “Use pot/encoder check” box.   At that point, you can start the scale calibration using the Python script.
+To avoid this, you can disable the pot/encoder safety checks but you MUST first visually check that the encoders and potentiometers work fine (see https://github.com/jhu-dvrk/sawIntuitiveResearchKit/wiki/Debugging-Potentiometer-Issues#visual-checks), you can disable the pots/encoder safety checks manually during the calibration process.   To do so, “Home” the arm and then switch to the IO Qt Widget, check the “Direct control” box and approve.  Then uncheck “Use pot/encoder check” box.   At that point, you can start the scale calibration using the Python script.
