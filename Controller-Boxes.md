@@ -97,3 +97,25 @@ The dVRK SUJ controller should be mounted on the back of the vertical column of 
 * Connect the SUJ connectors.  There should be enough space below the controller to run the SUJ-PSM1 and SUJ-ECM cables under it.
 
   <a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/suj-controller-mount.jpgg"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/suj-controller-mount.jpg" width="350"></a>
+
+# LEDs
+
+The dVRK controllers have LEDs grouped in different sections, Power and Card(s).
+
+## Power
+
+The LEDs are:
+* Logic: power used for the FPGA board, i.e. on board computing/logic
+* Rail A/B: power supplies used for motor control (see details above).  MTM controllers have two different motor power supplies so the Rail A and B LEDs are meaningful, PSM, ECM and SUJ controllers use a single motor power supply so the only meaningfull LED is Rail A.  Rail A/B, i.e. motor power, can be turned on/off using a PC and need the [safety chain](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ESTOP) to be closed.
+
+In general, the LEDs for power follow the following convention:
+* Flashing Red - no power V<1V
+* Solid Red - voltage present but too low, below VS_min
+* Solid Green - voltage present, between VS_min & VS_max
+* Solid Orange (Red & Green) - voltage present but too high, above VS_max
+
+## Cards A and B
+
+* The LEDs A/B (or C/D for the second card) are used to show that the firmware is fully loaded.  When the firmware is fully loaded both LEDs will go back and forth between red and green
+* The LED MV is for Motor Voltage.  It should turn to green when motor power is requested
+* The 8 LEDs (4 for Card A and 4 for card B) labelled either "Fault" (older controllers) or "Axis" (recent controllers) turn red when an axis is powered 
