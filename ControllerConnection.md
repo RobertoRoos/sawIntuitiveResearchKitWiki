@@ -39,8 +39,8 @@ Starting with dVRK Software Version 2.0, Ethernet/UDP is also supported.  To use
 * You should never have two PCs connected to the same FireWire chain
 * Avoid mixing dVRK controllers and other FireWire devices on the same bus (e.g. older Sensable Phantom Omni, FireWire cameras...)
 * Board Id and FireWire node number are different ways to identify the FPGA boards on the FireWire bus.  These numbers usually don't match (you can use `qladisp` without options to see the mapping of nodes/board Ids) 
-  * The node number is determined by the OS and the numbers should be sequential.  Node 0 usually corresponds to `/dev/fw1`, 1 to `/dev/fw2`, etc.  If you have multiple FireWire adapters, the numbering for `/dev/fw*` might start higher, i.e. node 0 would be associated to `/dev/fw2`, etc.
-  * The board Id is determined by the physical dial on the FPGA board and is used to determined which controller is being used.
+  * The node number is determined by the Firewire bus (physical layer, or PHY) and the numbers should be sequential.  Node 0 usually corresponds to `/dev/fw1`, 1 to `/dev/fw2`, etc.  If you have multiple FireWire adapters, the numbering for `/dev/fw*` might start higher, i.e. node 0 would be associated to `/dev/fw2`, etc.
+  * The board Id is determined by the physical dial on the FPGA board and is used to determine which controller is being used.
 
 ## FireWire Adapter
 
