@@ -75,7 +75,7 @@ For more details regarding the software features and configuration, see the [SUJ
 * One AC power connector, with on/off switch
 * 4 156-pin connectors (one per SUJ arm)
 * Two FireWire connectors
-* One Ethernet connecttor
+* One Ethernet connector
 * Two 5-pin safety chain connectors; see [ESTOP page](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ESTOP)
 
  ![SUJ controller exterior](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/suj-controller-exterior.png)
