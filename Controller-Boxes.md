@@ -8,8 +8,9 @@
    * [da Vinci Classic Setup Joint Controller](#da-vinci-classic-setup-joint-controller)
       * [Exterior Connectors](#exterior-connectors-1)
       * [Internal Components](#internal-components-1)
+      * [Installation](#installation)
 
-<!-- Added by: anton, at: 2021-03-01T15:40-05:00 -->
+<!-- Added by: anton, at:  -->
 
 <!--te-->
 
