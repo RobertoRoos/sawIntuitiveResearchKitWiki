@@ -9,6 +9,9 @@
       * [Exterior Connectors](#exterior-connectors-1)
       * [Internal Components](#internal-components-1)
       * [Installation](#installation)
+   * [LEDs](#leds)
+      * [Power](#power)
+      * [Cards A and B](#cards-a-and-b)
 
 <!-- Added by: anton, at:  -->
 
