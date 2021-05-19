@@ -86,3 +86,13 @@ Internally, each controller box contains one FPGA/QLA board set, one dSIB (da Vi
 * Brake power supply connected to the QLA (48V)
 
   ![SUJ controller interior](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/suj-controller-interior.png)
+
+## Installation
+
+The dVRK SUJ controller should be mounted on the back of the vertical column of the patient cart.   The enclosure comes with 4 holes that should match existing screw holes on the column.  You should:
+* Remove the existing plate
+* Leave the 4 thin grey cables untouched (these are for the potentiometers measuring the up/down translations for the SUJ) 
+* Use spacers between the column and the dVRK SUJ controller to prevent crushing the cables
+* Connect the SUJ connectors.  There should be enough space below the controller to run the SUJ-PSM1 and SUJ-ECM cables under it.
+
+ ![SUJ controller mount](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/suj-controller-mount.jpg)
