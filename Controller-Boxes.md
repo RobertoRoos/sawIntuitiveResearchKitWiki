@@ -121,4 +121,4 @@ In general, the LEDs for power follow the following convention:
 
 * The LEDs A/B (or C/D for the second card) are used to show that the firmware is fully loaded.  When the firmware is fully loaded both LEDs will go back and forth between red and green
 * The LED MV is for Motor Voltage.  It should turn to green when motor power is requested
-* The 8 LEDs (4 for Card A and 4 for card B) labelled either "Fault" (older controllers) or "Axis" (recent controllers) turn red when an axis is powered 
+* The 8 LEDs (4 for Card A and 4 for card B) labelled either "Fault" (older controllers) or "Status" (recent controllers) turn red when an axis is powered.  When powered on, there should be 7 red LEDs for the MTM, PSM and ECM controllers and 4 for the SUJ controller.  With software version 1.7 and lower, there should be 8 red LEDs for MTM controllers
