@@ -96,4 +96,4 @@ The dVRK SUJ controller should be mounted on the back of the vertical column of 
 * Use spacers between the column and the dVRK SUJ controller to prevent crushing the cables
 * Connect the SUJ connectors.  There should be enough space below the controller to run the SUJ-PSM1 and SUJ-ECM cables under it.
 
- ![SUJ controller mount](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/suj-controller-mount.jpg)
+  <a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/suj-controller-mount.jpgg"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/suj/suj-controller-mount.jpg" width="350"></a>
