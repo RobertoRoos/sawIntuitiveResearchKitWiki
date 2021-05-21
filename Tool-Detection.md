@@ -46,7 +46,7 @@ For recent dMIBs, one can either the dMIB Dallas driver or the 1-wire FPGA appro
 
 <a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/tool-detection/dmib-tool-jumper-empty.jpg"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/tool-detection/dmib-tool-jumper-empty.jpg" width="350"></a>
 
-To configure the dMIB to use the 1-wire FPGA based approach, you need to jump the first 2 pins (see picture).
+To configure the dMIB to use the 1-wire FPGA based approach, you need to jump the first 2 pins (see picture below).
 
 <a href="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/tool-detection/dmib-tool-jumper-12-FPGA.jpg"><img src="/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/tool-detection/dmib-tool-jumper-12-FPGA.jpg" width="350"></a>
 
@@ -97,4 +97,4 @@ This requires the dVRK stack rev 2.0 or higher.  In your PSM configuration file,
 The different options for `tool-detection` are:
 * `AUTOMATIC`: this will rely on the Dallas chip query
 * `MANUAL`: when a tool is inserted, the user or application has to specify which tool to use.  This can be done using the Arm GUI with a drop down menu or using a programmatic interface (e.g. ROS topic).
-* `FIXED`: fixed type of tool, i.e. there is only one type of tool used.  The configuration file must then define the tool type using `tool`.  Tools definitions can be found in `share/tool`.
+* `FIXED`: fixed type of tool, i.e. there is only one type of tool used.  To change tool, you will need to stop the program, change the configuration file and restart the program.  The configuration file must then define the tool type using `tool`.  Tool definitions can be found in `share/tool`.
