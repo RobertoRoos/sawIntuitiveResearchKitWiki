@@ -40,6 +40,7 @@ Advanced
 * [Foot Pedals](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FootPedals)
 * [Video Pipeline](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Video-Pipeline)
 * Tools
+  * [Classic vs S/Si](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Tool-Generations)
   * [Tool Detection](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Tool-Detection)
   * [Special Tools](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Special-Tools)
 
