@@ -239,8 +239,11 @@ These instructions are for all arms, PSMs, MTMs and ECM.  For the calibration, o
 ```sh
 # In directory ~/catkin_ws/src/cisst-saw/sawIntuitiveResearchKit/share
 # <my-config-dir> is the directory with your sawRobotIO1394-PSM2-00000.xml configuration files 
-rosrun dvrk_robot dvrk_console_json -j <my-config-dir>/console-PSM2.json -i ros-io-PSM2.json
+rosrun dvrk_robot dvrk_console_json -j <my-config-dir>/console-PSM2.json -i ros-io-PSM2.json -C
 ```
+
+**Note:** the `-C` command line option has been added in release 2.0.1 and allows to run the dVRK console without the potentiometer safety checks.  Otherwise, with very poorly calibrated potentiometer parameters, the application would keep shutting down, preventing users to calibrate their potentiometer parameters.  With `-C`, the console application also resets the encoder preloads on exit.  This is to avoid using bad encoder preloaded values (based on poor potentiometer values) on the next run.
+
 The file `console-PSM2.json` is specific to each system since it points to your `sawRobotIO1394-PSM2-00000.xml` file.  On the other hand, the file `ros-io-PSM2.json` can be found in the `sawIntuitiveResearchKit/share` directory since it isn't system specific.
 
 Once `dvrk_console_json` is started, make sure you can home the arm.  After you homed the arm, in the GUI, IO tab, select _Direct control_ and unselect _Use pot/encoder check_.  If you have multiple controllers connected to the same safety chain/e-stop, you can use the utility `qlacommand -c close-relays` to close all safety relays.
