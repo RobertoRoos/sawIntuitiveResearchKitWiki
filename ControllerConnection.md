@@ -3,7 +3,7 @@
    * [FireWire](#firewire)
       * [FireWire Adapter](#firewire-adapter)
       * [Install Ubuntu](#install-ubuntu)
-      * [Set permissions for FireWire devices](#set-permission-for-firewire-devices)
+      * [Set permissions for FireWire devices](#set-permissions-for-firewire-devices)
          * [Convenient solution](#convenient-solution)
          * [Safer solution](#safer-solution)
       * [Testing connectivity](#testing-connectivity)
@@ -13,11 +13,15 @@
          * [udevadm](#udevadm)
    * [Ethernet UDP](#ethernet-udp)
       * [Adapter and configuration](#adapter-and-configuration)
+         * [Ubuntu](#ubuntu)
+         * [MacOS](#macos)
+         * [Windows](#windows)
+         * [Virtual machines](#virtual-machines)
       * [Testing connectivity](#testing-connectivity-1)
          * [qladisp](#qladisp-1)
          * [ping](#ping)
 
-<!-- Added by: anton, at: 2021-03-16T18:17-04:00 -->
+<!-- Added by: anton, at:  -->
 
 <!--te-->
 
