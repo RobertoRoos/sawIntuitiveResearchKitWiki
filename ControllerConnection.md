@@ -213,8 +213,6 @@ You will need a network adapter dedicated to the communication with the dVRK con
 
 We recommend a built-in network adapter (e.g., a PCIe Ethernet adapter).  We don't have any specific recommendation for the chipset, just make sure it is supported by Linux.  USB3/USB-C network adapters might work too but we don't have extensive experience with these.
 
-We also recommend a native OS (as opposed to a virtual machine guest OS).  If you succeed at running the dVRK software in a VM, let us know.
-
 Finally, you will need to configure the dVRK dedicated network adapter to use "Link-Local Only"
 
 ### Ubuntu
@@ -230,6 +228,12 @@ Running the dVRK on MacOS is experimental and not that useful.  This being said,
 ### Windows
 
 Running the dVRK on Windows is experimental and currently not very stable. There is no network configuration required because it defaults to "Link-Local" if it cannot be configured using DHCP.
+
+### Virtual machines
+
+We recommend a native OS (as opposed to a virtual machine guest OS) as we're not totally sure how the VM network adapter would impact performances.  If you need to use a VM, the following has been used for a Linux guest with a Windows host using VMWare:
+* Select "Bridged" in virtual machine network settings and check the box "connected directly to the physical network"
+* Follow instructions from https://kb.vmware.com/s/article/1020359
 
 ## Testing connectivity
 
