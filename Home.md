@@ -128,3 +128,5 @@ The *dVRK Consortium*, based at JHU, has been organized by members of the dVRK c
 
 The National Science Foundation is supporting a network of networks, including the dVRK network, via the AccelNet program, as part of the collaborative project "International Collaboration to Accelerate Research in Robotic Surgery" led by The Johns Hopkins University (OISE 1927354, 2019-2024) and Worcester Polytechnic Institute (OISE 1927275, 2019-2024).
 
+Starting with Version 2.0.0, the dVRK software has also been supported by the Multi-Scale Medical Robotics Center (MRC), InnoHK, Hong Kong, China.
+
