@@ -43,7 +43,7 @@ Advanced
   * [Classic vs S/Si](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Tool-Generations)
   * [Tool Detection](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Tool-Detection)
   * [Special Tools](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Special-Tools)
-  * Catalog [Classic/S/Si](https://dvrk.lcsr.jhu.edu/downloads/manuals/davinci-classic-s-si-instrument-accessory-catalog.pdf) [X/Xi](https://dvrk.lcsr.jhu.edu/downloads/manuals/davinci-x-xi-instrument-accessory-catalog.pdf)
+  * Catalogs [Classic/S](https://dvrk.lcsr.jhu.edu/downloads/manuals/davinci-classic-s-si-instrument-accessory-catalog.pdf) [X](https://dvrk.lcsr.jhu.edu/downloads/manuals/davinci-x-xi-instrument-accessory-catalog.pdf)
 
 Miscellaneous
 * [Frequently Asked Questions](/jhu-dvrk/sawIntuitiveResearchKit/wiki/FAQ)
