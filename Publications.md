@@ -9,4 +9,4 @@
 
 # Applications
 
-Considering the exponential growth of dVRK related publications, these are now compiled in a BibTeX files hosted on GitHub: https://github.com/jhu-dvrk/community-publications.
+Considering the exponential growth of dVRK related publications, these are now compiled in a BibTeX file hosted on GitHub: https://github.com/jhu-dvrk/community-publications.
