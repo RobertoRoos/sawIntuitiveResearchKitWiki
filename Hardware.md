@@ -33,7 +33,7 @@ The arms need to be connected directly to the controllers.   If you have a resea
 
 ***IMPORTANT:*** The PSMs have the ability to detect when a sterile adapter or tool is installed using digital inputs.   For this to work, you will need to short a couple of pins on your sterile adapters (left two pins on the photo).
 
-Make sure you place the wire to short the two pins as deep as possible and keep the extremities of the pins as clean as possible.   If the tip of the pins are covered with soldering, you might have issues with the electric contact when inserting the adapter.
+Make sure you place the wire to short the two pins as deep as possible and keep the extremities of the pins as clean as possible.   If the tip of the pins are covered with soldering, you might have issues with the electric contact when inserting the adapter.  This also affects the ability to read the instrument's Dallas chip (this applies to more recent systems, see [Automatic Tool Detection](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Tool-Detection)).  The dVRK controller should be able to detect the sterile adapter even if you don't press it against the PSM arm.  To check if the sterile adapter is properly detected, monitor the *Buttons* widget in the *IO* tab of the dVRK console GUI (see [Widget examples](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Examples)).
 
 ![Modified sterile adapter](/jhu-dvrk/sawIntuitiveResearchKit/wiki/modified-sterile-adapter.jpg)
 
