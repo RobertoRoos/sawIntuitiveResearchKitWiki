@@ -217,7 +217,7 @@ The potentiometer values are read as voltages and converted to SI positions (rad
 
 The problem is that these values are partially based on the electronics used during the calibration.  As such, they are a bit off.   We developed two different strategies to calibrate the scales and offsets.
  * For the scales, the simplest solution is to rely on the encoders.  We generate a large motion on each actuator and collect both the encoder and potentiometer values. 
- * For the offsets, it is a bit more challenging since we need to identify a zero position based on mechanical properties.
+ * For the offsets, it is a bit more challenging since we need to identify a zero position based on mechanical properties.  The zero position can be visualized using the dVRK in kinematic simulation mode with rViz.   To do so, launch `roslaunch dvrk_robot dvrk_arm_rviz.launch arm:=ECM` for the ECM zero.  You can replace `ECM` by `PSM1` or `MTMR` to visualize the zero position of different arms.  Note that in dVRK 2.0, you can also use the GUI arm widget to control the joints position directly.
 
 ## 4.2. Requirements
 
