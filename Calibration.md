@@ -242,6 +242,8 @@ These instructions are for all arms, PSMs, MTMs and ECM.  For the calibration, o
 rosrun dvrk_robot dvrk_console_json -j <my-config-dir>/console-PSM2.json -i ros-io-PSM2.json -C
 ```
 
+**Note:** like for any `rosrun` command, the ROS master has to be running first. In another terminal, activate your workspace and execute `$ roscore`. Leave this terminal running while you run your applications.
+
 **Note:** the `-C` command line option has been added in release 2.0.1 and allows to run the dVRK console without the potentiometer safety checks.  Otherwise, with very poorly calibrated potentiometer parameters, the application would keep shutting down, preventing users to calibrate their potentiometer parameters.  With `-C`, the console application also resets the encoder preloads on exit.  This is to avoid using bad encoder preloaded values (based on poor potentiometer values) on the next run.
 
 The file `console-PSM2.json` is specific to each system since it points to your `sawRobotIO1394-PSM2-00000.xml` file.  On the other hand, the file `ros-io-PSM2.json` can be found in the `sawIntuitiveResearchKit/share` directory since it isn't system specific.
