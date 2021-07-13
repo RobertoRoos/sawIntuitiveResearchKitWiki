@@ -13,6 +13,7 @@
       * [4.3. Calibrating scales](#43-calibrating-scales)
       * [4.3. Calibrating offsets](#43-calibrating-offsets)
       * [4.4. Errors during the potentiometer calibration](#44-errors-during-the-potentiometer-calibration)
+   * [5. Testing calibration](#5-testing-calibration)
 
 <!-- Added by: anton, at: 2021-01-28T15:58-05:00 -->
 
@@ -25,6 +26,17 @@ The following sections assumes that you performed every step in:
 * [Hardware setup and testing](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Hardware)
 
 The calibration steps are required to fine tune the XML configuration file generated from the `.cal` file provided by ISI.  It also requires a fully functional controller, i.e. the arm must be connected to the controller and the controller must be connected to the PC.  You must also make sure that you can power on/off the actuator amplifiers as described in the [hardware setup and testing](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/wiki/Hardware#3-motor-power) page.
+
+There are a number of different calibrations to perform, different for each type of actuator. The relevant calibrations for each arm are listed below.
+
+|                      | PSM1,2,3 | MTM-L,R | ECM |
+|----------------------|:--------:|:-------:|:---:|
+| Motor current offset |     x    |    x    |  x  |
+| Brake current offset |          |         |  x  |
+| Potentiometer scale  |     x    |    x    |  x  |
+| Potentiometer offset |     x    |    x    |  x  |
+| Gripper close        |          |    x    |     |
+| Brake release        |          |         |  x  |
 
 # 2. Current offsets
 
@@ -354,3 +366,8 @@ Similar to the scales, there is usually no point to save the results of the seco
 There is a potential egg and chicken issue.   While trying to calibrate the potentiometers, the safety checks using the potentiometers are still active.   So if the original calibration (from `.cal` files) is way off, there will likely be some safety checks triggered while the robot arms are moving.
 
 To avoid this, you can disable the pot/encoder safety checks but you MUST first visually check that the encoders and potentiometers work fine (see https://github.com/jhu-dvrk/sawIntuitiveResearchKit/wiki/Debugging-Potentiometer-Issues#visual-checks), you can disable the pots/encoder safety checks manually during the calibration process.   To do so, “Home” the arm and then switch to the IO Qt Widget, check the “Direct control” box and approve.  Then uncheck “Use pot/encoder check” box.   At that point, you can start the scale calibration using the Python script.
+
+
+# 5. Testing calibration
+
+When finished calibrating, run any of the [examples](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Examples) to test your actuator ([dvrk_arm_test.py](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Examples#2-arm-test) is useful in particular).

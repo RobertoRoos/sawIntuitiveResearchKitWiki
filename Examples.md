@@ -1,18 +1,19 @@
 <!--ts-->
    * [1. How to run the examples](#1-how-to-run-the-examples)
-   * [2. sawRobotIO1394QtConsole](#2-sawrobotio1394qtconsole)
-      * [2.1. Usage](#21-usage)
-      * [2.2. Widgets](#22-widgets)
-      * [2.3. Testing the digital inputs](#23-testing-the-digital-inputs)
-      * [2.4. Testing sensors](#24-testing-sensors)
-      * [2.5. Testing motor current](#25-testing-motor-current)
-   * [3. sawIntuitiveResearchKitQtPID](#3-sawintuitiveresearchkitqtpid)
+   * [2. ArmTest](#2-arm-test)
+   * [3. sawRobotIO1394QtConsole](#3-sawrobotio1394qtconsole)
       * [3.1. Usage](#31-usage)
       * [3.2. Widgets](#32-widgets)
-   * [4. sawIntuitiveResearchKitQtConsoleJSON (<strong>and</strong> ROS dvrk_robot dvrk_console_json)](#4-sawintuitiveresearchkitqtconsolejson-and-ros-dvrk_robot-dvrk_console_json)
+      * [3.3. Testing the digital inputs](#33-testing-the-digital-inputs)
+      * [3.4. Testing sensors](#34-testing-sensors)
+      * [3.5. Testing motor current](#35-testing-motor-current)
+   * [4. sawIntuitiveResearchKitQtPID](#4-sawintuitiveresearchkitqtpid)
       * [4.1. Usage](#41-usage)
       * [4.2. Widgets](#42-widgets)
-         * [4.3. Instructions](#43-instructions)
+   * [5. sawIntuitiveResearchKitQtConsoleJSON (<strong>and</strong> ROS dvrk_robot dvrk_console_json)](#5-sawintuitiveresearchkitqtconsolejson-and-ros-dvrk_robot-dvrk_console_json)
+      * [5.1. Usage](#51-usage)
+      * [5.2. Widgets](#52-widgets)
+      * [5.3. Instructions](#53-instructions)
 
 <!-- Added by: anton, at: 2021-01-28T16:02-05:00 -->
 
@@ -44,9 +45,24 @@ There are three ways to run the software.  The first one is the most common (_an
 
 The latter two options require the software to be built using `shared` libraries (see CMake options, set by default if you build the dVRK software using ROS catkin build). The last option also requires that cisst be built with Python support, which adds a dependency on SWIG, Python, and numpy. Note that the script files and the XML files are in the `sawIntuitiveResearchKit/share` sub-directory.
 
-# 2. sawRobotIO1394QtConsole
+# 2. ArmTest
 
-## 2.1. Usage
+Use `dvrk_arm_test.py` to let your actuator go through a little predetermined dance, testing all the degrees of freedom.  
+Run it like:
+
+```bash
+rosrun dvrk_python dvrk_arm_test.py -a ECM
+```
+
+```bash
+dvrk_arm_test.py
+ -a <value>, --arm <value> : name of the arm to test ('ECM', 'MTML', 'MTMR', 'PSM1', 'PSM2', 'PSM3')
+ -i <value>, --interval <value> : expected interval in seconds between messages sent by the device (default: 0.01)
+```
+
+# 3. sawRobotIO1394QtConsole
+
+## 3.1. Usage
 
 Use `sawRobotIO1394QtConsole` to test your configuration files and connections.  The command line parameters can be found using `sawRobotIO1394QtConsole` without options:
 ```bash
@@ -61,7 +77,7 @@ The only required parameter is the `sawRobotIO1394` XML configuration file gener
 sawRobotIO1394QtConsole -c sawRobotIO1394-PSM1-12345.xml
 ```
 
-## 2.2. Widgets
+## 3.2. Widgets
 
 This program relies on two Qt widgets, one for all the digital inputs and one for the IO per axis.
 
@@ -82,7 +98,7 @@ The top sections of the IO widget are:
 * Current.  The checkbox allows you to turn on or off direct current control, i.e. allows you to set the desired current from the IO widget using either the text boxes or sliders.
 * Timing.  This is a standard cisst widget used to report the timing performance of the underlying component.
 
-## 2.3. Testing the digital inputs
+## 3.3. Testing the digital inputs
 
 1. Foot pedals.  Please note that the second foot pedal from the right is not wired.  All other foot pedals should be connected to a dVRK controllers (since rev. 1.5, there's a separate configuration files for each controller dissociated from the arm configuration file).  Test the foot pedal using the XML file for that specific controller (i.e. MTML or MTMR).  The foot pedals to test are, from left to right:
    * `Clutch`
@@ -96,7 +112,7 @@ The top sections of the IO widget are:
    * `Adapter`.  Triggered when the sterile adapter is engaged or removed.  Make sure you have shorted the two first pins as described in [the hardware page](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Hardware)
    * `Tool`.  Triggered when the tool is inserted or removed.   Please note that the tool can NOT be inserted until the sterile adapter's gears are matched with the arm's gears.   DO NOT force the tool in the sterile adapter!
 
-## 2.4. Testing sensors
+## 3.4. Testing sensors
 
 ***NOTE:*** you should have to the power off using the e-stop.
 
@@ -105,7 +121,7 @@ The top sections of the IO widget are:
 1. Check the encoders direction.   Again, using the ISI user manual, verify for each joint that the direction is correct, i.e. angles increase with motion in the positive direction.
 1. Check the home value, i.e. move the MTM/PSM by hand and find the zero position (as displayed in the GUI).   The pose should match with the drawings in the ISI user manual (if you have the proper ".cal" files).
 
-## 2.5. Testing motor current
+## 3.5. Testing motor current
 
 ***NOTE:*** you should turn the power on using the e-stop.
 
@@ -117,9 +133,9 @@ Once everything has been checked all the sensors, you can power the controllers.
 1. You should see all current feedback values hovering close to zero.  If not, you might have to redo the current calibration as described in [Calibrating and updating XML configuration files](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Calibration).
 1. Joint by joint, apply a very small current (in GUI request current), something in the order of 100 mA.   You should feel a torque/force on the arm AND the current feedback should match the requested current value.  Make sure each joint moves in the correct direction, i.e. if you apply a positive current the joint position increases and if you apply a negative current the joint position decreases.
 
-# 3. sawIntuitiveResearchKitQtPID
+# 4. sawIntuitiveResearchKitQtPID
 
-## 3.1. Usage
+## 4.1. Usage
 
 **For most users, skip this section**.  We provide default configuration files for the PID parameters that should be perfectly fine.  Furthermore, we might need to update some of the parameters to reflect future PID implementations so maintaining your own configuration files for the PID would force you to merge new versions manually.
 
@@ -137,7 +153,7 @@ Assuming that you have set your path correctly and you are in the directory that
  sawIntuitiveResearchKitQtPID -i sawRobotIO1394-MTML-12345.xml -p sawControllersPID-MTM.xml -a MTML
 ```
 
-## 3.2. Widgets
+## 4.2. Widgets
 
 This program uses the IO, Buttons and PID widgets.
 
@@ -155,9 +171,9 @@ The `Index` spin box can be used to change which axis is used for the plotting a
 
 Also to note, the PID gains you are setting will not be saved so take a screenshot and edit your XML PID configuration file by hand.
 
-# 4. sawIntuitiveResearchKitQtConsoleJSON (**and** ROS dvrk_robot dvrk_console_json)
+# 5. sawIntuitiveResearchKitQtConsoleJSON (**and** ROS dvrk_robot dvrk_console_json)
 
-## 4.1. Usage
+## 5.1. Usage
 
 Use `sawIntuitiveResearchKitQtConsoleJSON` to test the whole system with a position based tele-operation controller.  The command line parameters can be found using `sawIntuitiveResearchKitQtConsoleJSON` without options:
 ```
@@ -173,7 +189,7 @@ Assuming that you have set your path correctly and you are in the directory that
 
 The file `console.json` contains a description of your system, i.e. how many arms and which configuration files to use for your arms as well as teleoperation components (see [file formats](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Configuration-File-Formats)).  Since the `console-xyz.json` files depend on your system, you will have to create your own so they can reference the correct arm serial numbers.  Many examples can be found in the `share` directory.  `sawIntuitiveResearchKitQtConsoleJSON` will parse the JSON console configuration file to determine which components should be created, including Qt Widgets.  This allows to handle many different configurations without writing any C++ code nor re-compile.  Note that a "sister" application is available for ROS in `dvrk_robot`, `dvrk_console_json`.  The ROS topics will also be automatically populated based on the content of the JSON configuration file.
 
-## 4.2. Widgets
+## 5.2. Widgets
 
 The application introduces a few new widgets.   Please note that all the homing logic is implemented in the high level components so the IO and PID widgets should only be used for monitoring and debugging.   You do not need to use the IO widget to power the boards, reset the encoders or bias the current based on current feedback.   These steps are all triggered in sequence when you hit the `Home` button on the console widget.      
 
@@ -190,7 +206,7 @@ The arm widget can be used to monitor messages specific to an arm, current 3D po
 
 The widgets for PSM and ECM tele-operation will show the current state of the corresponding components.
 
-### 4.3. Instructions
+### 5.3. Instructions
 
 You will first need to power and home the whole system.  To do so, just check the `Home` box on the first tab.  We recommend to remove the tools before homing but this is not necessary.   If the system doesn't power on properly (check message in the first GUI tab), make sure your E-Stop button is released.
 
