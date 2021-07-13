@@ -67,6 +67,8 @@ There are 4 important values that will need to be tweaked to your hardware:
 * `ReleasedCurrent`: current required to maintain the brakes released.  This value should be significantly lower than the current to initially release the brakes.
 * `EngagedCurrent`: current required to engage (lock) the brakes.  On the ECM, always zero.
 
+![Brake current graph](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/ecm/brake_current_graph.png)
+
 Please note that the values provided on this page are hardware specific and you must adjust them to your system.  Ideally, you want to find the lowest possible current that still work reliably on your hardware, see below.
 
 ## Current feedback calibration
