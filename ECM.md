@@ -7,7 +7,7 @@
       * [dMIB modification for setup joints switch](#dmib-modification-for-setup-joints-switch)
       * [Testing the whole arm](#testing-the-whole-arm)
 
-<!-- Added by: adeguet1, at: 2019-08-06T12:14-04:00 -->
+<!-- Added by: anton, at: 2021-07-13T09:35-04:00 -->
 
 <!--te-->
 
@@ -87,7 +87,7 @@ This is a **VERY IMPORTANT PROCEDURE**.  At that point, we don't have a utility 
 * `ReleasedCurrent`
 * `EngagedCurrent`, though this one is easy, it should be set to 0.
 
-For this procedure we will use the [sawRobotIO1394QtConsole](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Examples#2-sawrobotio1394qtconsole) program along with the ECM XML configuration file for your arm.  You will need to manually edit the XML file and between changes, test using the `sawRobotIO1394QtConsole` program.
+For this procedure we will use the [sawRobotIO1394QtConsole](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Examples#3-sawrobotio1394qtconsole) program along with the ECM XML configuration file for your arm.  You will need to manually edit the XML file and between changes, test using the `sawRobotIO1394QtConsole` program.
 
 ![sawRobotIO1394QtConsole with brakes](/jhu-dvrk/sawIntuitiveResearchKit/wiki/assets/gui/dvrk-gui-ecm-console.png)
 
