@@ -1,24 +1,25 @@
 <!--ts-->
-   * [1. Calibration](#1-calibration)
-   * [2. Current offsets](#2-current-offsets)
-      * [2.0 Prerequisite](#20-prerequisite)
-      * [2.1. Introduction](#21-introduction)
-      * [2.2. Procedure](#22-procedure)
-   * [3. Gripper on MTMs](#3-gripper-on-mtms)
-      * [3.1. Introduction](#31-introduction)
-      * [3.2. Procedure](#32-procedure)
-   * [4. Potentiometers](#4-potentiometers)
-      * [4.1. Introduction](#41-introduction)
-      * [4.2. Requirements](#42-requirements)
-      * [4.3. Calibrating scales](#43-calibrating-scales)
-      * [4.3. Calibrating offsets](#43-calibrating-offsets)
-      * [4.4. Errors during the potentiometer calibration](#44-errors-during-the-potentiometer-calibration)
+   * [Calibration](#calibration)
+   * [Current offsets](#current-offsets)
+      * [Prerequisite](#prerequisite)
+      * [Introduction](#introduction)
+      * [Procedure](#procedure)
+   * [Gripper on MTMs](#gripper-on-mtms)
+      * [Introduction](#introduction-1)
+      * [Procedure](#procedure-1)
+   * [Potentiometers](#potentiometers)
+      * [Introduction](#introduction-2)
+      * [Requirements](#requirements)
+      * [Calibrating scales](#calibrating-scales)
+      * [Calibrating offsets](#calibrating-offsets)
+      * [Errors during the potentiometer calibration](#errors-during-the-potentiometer-calibration)
+   * [Testing calibration](#testing-calibration)
 
-<!-- Added by: anton, at: 2021-01-28T15:58-05:00 -->
+<!-- Added by: anton, at: 2021-07-13T09:35-04:00 -->
 
 <!--te-->
 
-# 1. Calibration
+# Calibration
 
 The following sections assumes that you performed every step in: 
 * [Generating XML configuration files](/jhu-dvrk/sawIntuitiveResearchKit/wiki/XMLConfig)
@@ -26,13 +27,24 @@ The following sections assumes that you performed every step in:
 
 The calibration steps are required to fine tune the XML configuration file generated from the `.cal` file provided by ISI.  It also requires a fully functional controller, i.e. the arm must be connected to the controller and the controller must be connected to the PC.  You must also make sure that you can power on/off the actuator amplifiers as described in the [hardware setup and testing](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/wiki/Hardware#3-motor-power) page.
 
-# 2. Current offsets
+There are a number of different calibrations to perform, different for each type of actuator. The relevant calibrations for each arm are listed below.
 
-## 2.0 Prerequisite
+|                       | PSM1,2,3 | MTM-L,R | ECM |
+|-----------------------|:--------:|:-------:|:---:|
+| Motor current offset  |     x    |    x    |  x  |
+| Brake current offset  |          |         |  x  |
+| Potentiometer scale   |     x    |    x    |  x  |
+| Potentiometer offset  |     x    |    x    |  x  |
+| Gripper close         |          |    x    |     |
+| Brake release current |          |         |  x  |
+
+# Current offsets
+
+## Prerequisite
 Please read the [ESTOP debugging](/jhu-dvrk/sawIntuitiveResearchKit/wiki/ESTOP#8-debugging) section before you start.   
 When you are calibrating motor current, it might be simpler to have a single controller on the ESTOP chain.   If you prefer to keep all your controllers on the ESTOP chain, make sure all the controllers are also connected to the FireWire chain and you will have to use the `qlacommand -c close-relays` utility program to enable power.
 
-## 2.1. Introduction
+## Introduction
 
 The FPGA/QLA controllers specify the current between an upper and a lower bound represented by an integer between 0 and 65,535.  The actual values requested by the users are specified in amperes.  The conversion factors (scales and offsets per actuator) are specified in the XML config file.   The default offset is 65,535 divided by two, i.e. 32,768.
 
@@ -49,7 +61,7 @@ Unfortunately the requested current is not perfect and there is an offset caused
 * update the requested current offsets based on the difference between requested and measured current
 * save the new offsets in the XML configuration file
 
-## 2.2. Procedure
+## Procedure
 
 The program to calibrate the requested current is called `sawRobotIO1394CurrentCalibration`.  To use it you will need an existing XML configuration file.  The command line options are:
 
@@ -130,9 +142,9 @@ Steps:
   ```
 * Once the calibration is finished, make sure you copy your new XML configuration file to your configuration directory and rename it if needed.
 
-# 3. Gripper on MTMs
+# Gripper on MTMs
 
-## 3.1. Introduction
+## Introduction
 
 The grippers on the MTM use a Hall Effect sensor to measure the opening.  The analog values are converted to an approximate angle using a linear equation.  The goal of the calibration procedure is to define the scale and offset used for the conversion.  The da Vinci MTM gripper used two small springs, one weak outer spring to keep the gripper opened and a stronger inner spring (but shorter one) used to create some resistance when the gripper is almost closed.  From the user point of view, we have 3 different repeatable positions:
 * gripper fully opened, this happens when the gripper is left alone.  The position is defined by the mechanical limit.
@@ -143,7 +155,7 @@ Ideally, the PSM tool should close when the master gripper is closed but not tig
 * apply more force on the PSM side to reduce the risk of slippage
 * give a feeling of force feedback on the master side using the strong inner spring
 
-## 3.2. Procedure
+## Procedure
 
 For the calibration procedure, we use the fully opened position and the closed-but-not-tight position.  The user should practice with the gripper (the robot doesn't have to be turned on) before starting the calibration to learn how strong the two springs are and repeatedly find the closed-but-not-tight position.  
 
@@ -205,9 +217,9 @@ Notes:
 * Since the closed-but-not-tight position depends on the user, it is not perfectly repeatable.  You will need some trials and errors to fine tune the calibration.
 
 
-# 4. Potentiometers
+# Potentiometers
 
-## 4.1. Introduction
+## Introduction
 
 The potentiometers on the dVRK are used for:
 * Homing, i.e. they provide an absolute reference to define the zero position
@@ -219,7 +231,7 @@ The problem is that these values are partially based on the electronics used dur
  * For the scales, the simplest solution is to rely on the encoders.  We generate a large motion on each actuator and collect both the encoder and potentiometer values. 
  * For the offsets, it is a bit more challenging since we need to identify a zero position based on mechanical properties.  The zero position can be visualized using the dVRK in kinematic simulation mode with rViz.   To do so, launch `roslaunch dvrk_robot dvrk_arm_rviz.launch arm:=ECM` for the ECM zero.  You can replace `ECM` by `PSM1` or `MTMR` to visualize the zero position of different arms.  Note that in dVRK 2.0, you can also use the GUI arm widget to control the joints position directly.
 
-## 4.2. Requirements
+## Requirements
 
 **For the ECM**, make sure the brakes are properly calibrated.   This requires to calibrate both the controller current (see above) and the power to release the brakes, see [Full da Vinci system](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Full-da-Vinci).
 
@@ -233,7 +245,7 @@ For the offsets, we need a physical mechanism to maintain the arm in zero positi
 
 * A design for laser cutting can be download: [DWG](https://github.com/hamlyn-centre/dVRK/blob/master/calibration_template.DWG), [Solidwork Part](https://github.com/hamlyn-centre/dVRK/blob/master/calibration_template.SLDPRT)
 
-## 4.3. Calibrating scales
+## Calibrating scales
 
 These instructions are for all arms, PSMs, MTMs and ECM.  For the calibration, one needs to start the `dvrk_console_json` application for the arm to be calibrated.  Since we also need the low level data (potentiometer values), we have to provide the `-i` option.  For example, to calibrate a PSM2, command line options for `dvrk_console_json` should look like:
 ```sh
@@ -306,7 +318,7 @@ index | old scale  | new scale  | correction
 ```
 There is usually no point to save the results of the second pass.
 
-## 4.3. Calibrating offsets
+## Calibrating offsets
 
 These instructions are for all arms but we only know how to properly hold the joints at their zero position for the last 4 joints of the **PSMs**.  If you need to calibrate offsets on different arms (MTM, ECM), you will need to figure out a way to constrain the arm to its zero position (mechanical zero).
 
@@ -349,8 +361,13 @@ index | old offset  | new offset  | correction
 ```
 Similar to the scales, there is usually no point to save the results of the second pass for the offsets.
 
-## 4.4. Errors during the potentiometer calibration
+## Errors during the potentiometer calibration
 
 There is a potential egg and chicken issue.   While trying to calibrate the potentiometers, the safety checks using the potentiometers are still active.   So if the original calibration (from `.cal` files) is way off, there will likely be some safety checks triggered while the robot arms are moving.
 
 To avoid this, you can disable the pot/encoder safety checks but you MUST first visually check that the encoders and potentiometers work fine (see https://github.com/jhu-dvrk/sawIntuitiveResearchKit/wiki/Debugging-Potentiometer-Issues#visual-checks), you can disable the pots/encoder safety checks manually during the calibration process.   To do so, “Home” the arm and then switch to the IO Qt Widget, check the “Direct control” box and approve.  Then uncheck “Use pot/encoder check” box.   At that point, you can start the scale calibration using the Python script.
+
+
+# Testing calibration
+
+When finished calibrating, run any of the [examples](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Examples) to test your actuator ([dvrk_arm_test.py](/jhu-dvrk/sawIntuitiveResearchKit/wiki/Examples#2-arm-test) is useful in particular).
