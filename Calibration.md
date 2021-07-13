@@ -27,6 +27,17 @@ The following sections assumes that you performed every step in:
 
 The calibration steps are required to fine tune the XML configuration file generated from the `.cal` file provided by ISI.  It also requires a fully functional controller, i.e. the arm must be connected to the controller and the controller must be connected to the PC.  You must also make sure that you can power on/off the actuator amplifiers as described in the [hardware setup and testing](https://github.com/jhu-dvrk/sawIntuitiveResearchKit/wiki/Hardware#3-motor-power) page.
 
+There are a number of different calibrations to perform, different for each type of actuator. The relevant calibrations for each arm are listed below.
+
+|                      | PSM1,2,3 | MTM-L,R | ECM |
+|----------------------|:--------:|:-------:|:---:|
+| Motor current offset |     x    |    x    |  x  |
+| Brake current offset |          |         |  x  |
+| Potentiometer scale  |     x    |    x    |  x  |
+| Potentiometer offset |     x    |    x    |  x  |
+| Gripper close        |          |    x    |     |
+| Brake release        |          |         |  x  |
+
 # 2. Current offsets
 
 ## 2.0 Prerequisite
